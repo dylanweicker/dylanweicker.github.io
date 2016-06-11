@@ -5,6 +5,14 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>Dylan Pride</title>
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+	  function getAge(){
+	    var birthday = new Date("1995-04-15");
+		return Math.floor((Date.now() - birthday)/ 31557600000);
+	  }
+  </script>
 </head>
 
 <style>
@@ -13,32 +21,40 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
   }
-  .rainbow-bar {
-    width: 100%
-	display: flex;
-	height: 20px;
+  
+  div {
+    margin: 0;
+	padding: 0;
   }
   
-  .rainbow-piece {
-    width: 16.66667%
-	display: inline;
-	height: 20px;
+  p img{
+    height: 24px;
+  }
+  
+  h1{
+    margin: 0;
+    padding-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
   }
   
   .section{
     min-height: 200px;
     width: 100%;
+	text-align: center;
   }
   
   .content{
-    margin: auto;
+    margin: 0 80px;
 	max-width: 1100px;
   }
   
   #social-media-holder{
     text-align: center;
     font-size: 6;
-    background: #CCC;
+    background: #DCA;
     position: fixed;
     right: 0;
     top: 20%;
@@ -48,6 +64,7 @@
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 5px;
+	opacity: 0.85;
   }
   
   .social-media{
@@ -58,22 +75,41 @@
   }
   
   .red{
-    background: #C00;
+    background: #C33;
   }
   .orange{
-    background: #f60;
+    background: #f63;
   }
   .yellow{
-    background: #fc0;
+    background: #fc3;
   }
   .green{
-    background: #6c0;
+    background: #6c3;
   }
   .blue{
-    background: #03f;
+    background: #36f;
   }
   .purple{
-    background: #60f;
+    background: #63f;
+  }
+  .rainbow{
+	 height: 5px;
+	 width:100%;
+     background-image: url('rainbow.png');
+	 background-repeat: none;
+	 background-size: cover;
+  }
+  
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+  
+  .two-col{
+	width: 50%;
+	margin: auto;
+	display: table-cell;
   }
 </style>
 
@@ -87,22 +123,43 @@
   </div>
 
   <div class="section">
-    <h1>Hello there!</h1>
-    <p>My name is Dylan and I am proud of everything I do.</p>
+  <center>
+    <div class="content">
+      <h1>Dylan Pride</h1>
+	  <div class="flex-container" style="margin-top: 30px;">
+		<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
+		  <img src="avatar.png" width="100%" style="vertical-align: bottom;">
+		</div>
+		<div class="two-col" style="vertical-align: middle;">
+		  <center> 
+		    <h2>Hello There!</h2>
+			<p>My name is Dylan and I am proud of everything I do.</p>
+			<p>Welcome to my website where you can see exactly who I am, what I love, and what I do.</p>
+			<br><br>
+		  </center>
+		</div>
+      </div>  
+	</div>
+  </center>
   </div>
+  <div class="rainbow"></div>
   <div class="red section">
+    <div class="content">
 	<h1>Who am I?</h1>
-	<p>This website exists to show you exactly who I am, what I love, and what I do.</p>
-	Who am I: I'm a 21(use javascript to generate my age.) year old software developer from Vancouver. I study at UBC. I'm a massive stickler for rules
+	<p>I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver <img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"><img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"><img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"><img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"></p>
+	I study at UBC. I'm a massive stickler for rules
 	use a lot of apple emojis and cutsie self-made lineart
 	
 	Goals, Technology, Social Media, Games, Pop Music, Social Equality, Education, Theatre, Fantasy, Cats
+	</div>
   </div>
+  <div class="rainbow"></div>
   <div class="section">
     <h1>Goals</h1>
 	Accomplished:<br>
 	To be obtained<br>
   </div>
+  <div class="rainbow"></div>
   <div class="orange section">
   <h1>Technology</h1>
   I work for Vision Critical.
@@ -110,24 +167,34 @@
   I am interested in these innovations.
   <h1></h1>
   </div>
+  <div class="rainbow"></div>
   <div class="section">
   Games
   </div>
+  <div class="rainbow"></div>
   <div class="yellow section">
   <h1>Social Media</h1>
+  I love being ever connected to my friends, family, and world around me. 
   Twitter, Tumblr, Instagram, Youtube
   Check out this twitter API tool I'm working on.
+  See that follow me panel that's following you around this page? It's like it's just begging you to follow me. Give me attention! 
+  It feeds my ever-expanding millenial ego.
+  <aside> I know I have a big ego, I really don't know why it's such a big deal though<br> -Marina and the Diamonds</aside>
   </div>
   <div class="section">
-  Pop Music
+  <h1>Pop Music</h1>
+  <p>In an ever-evolving society, it's important to stay up to date on what's hip and trendy in the modern world. Paying attention to the pop industry allows me to stay aware of what's popular and what isn't.</p>
+  <h2>My Pop Queens</h2>
+  <p>Check out this pop-music game I made.<p>
   </div>
   <div class="green section">
   <h1>Social Equality</h1>
-  I want to use my voice to make a change on a social level.<br>
-  <li>queer rights
-  <li>trans rights
-  <li>women's rights
-  <li>animal rights
+  I want to use any influence I gain in life to foster love, acceptance and equality.<br>
+  I will use my voice to make a change on a social level.<br>
+  <li>queer rights - I have a personal investment in this, ending social stigmas, ending discriminatory regulations
+  <li>trans rights - erase social stigmas, make washrooms accessable, right to gender affirming operations
+  <li>women's rights - equal work opportunities, ending sexual harrasmant, right to choose abortion.
+  <li>animal rights - veganism
   </div>
   <div class="section">
   Education
@@ -148,5 +215,3 @@
 </body>
 
 </html>
-
-

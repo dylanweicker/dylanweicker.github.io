@@ -4,9 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>Dylan Pride</title>
+	
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
-  
+	
   <script type="text/javascript">
 	  function getAge(){
 	    var birthday = new Date("1995-04-15");
@@ -31,6 +32,12 @@
     height: 24px;
   }
   
+  a {
+    color: inherit;
+	text-decoration: none;
+  }
+  
+  
   h1{
     margin: 0;
     padding-top: 40px;
@@ -47,8 +54,9 @@
   }
   
   .content{
-    margin: 0 80px;
-	max-width: 1100px;
+    margin: auto;
+	max-width: 1260px;
+	padding: 30px 80px;
   }
   
   #social-media-holder{
@@ -77,6 +85,12 @@
   .red{
     background: #C33;
   }
+  .red a:link, a:visited{
+    background: #E55959;
+  }
+  .red a:hover, a:active{
+    background: #FF8C8C;
+  }
   .orange{
     background: #f63;
   }
@@ -103,6 +117,7 @@
   .flex-container {
     display: -webkit-flex;
     display: flex;
+    justify-content: center;
     width: 100%;
 }
   
@@ -110,6 +125,42 @@
 	width: 50%;
 	margin: auto;
 	display: table-cell;
+  }
+  
+  .three-col-flex{
+	min-width: 300px;
+	width: 27%;
+	margin: 10px;
+	display: table-cell;
+    vertical-align: top;
+	-webkit-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
+	padding: 10px;
+  }
+  @media only screen and (max-width: 1196px){
+	.three-col-flex{
+	  width: 44%;
+	  min-width: 300px;
+	}
+  }
+  @media only screen and (max-width: 916px){
+	.three-col-flex{
+	  width: 100%;
+	  min-width: 250px;
+	}
+  }
+  
+  .five-col{
+	width: 19%;
+	min-width: 200px;
+	margin: 0 auto;
+	display: table-cell;
+    vertical-align: top;
+  }
+  
+  .icon{
+    width: 80px;
+	height: 80px;
   }
 </style>
 
@@ -123,70 +174,162 @@
   </div>
 
   <div class="section">
-  <center>
-    <div class="content">
-      <h1>Dylan Pride</h1>
-	  <div class="flex-container" style="margin-top: 30px;">
-		<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
-		  <img src="avatar.png" width="100%" style="vertical-align: bottom;">
-		</div>
-		<div class="two-col" style="vertical-align: middle;">
-		  <center> 
-		    <h2>Hello There!</h2>
-			<p>My name is Dylan and I am proud of everything I do.</p>
-			<p>Welcome to my website where you can see exactly who I am, what I love, and what I do.</p>
-			<br><br>
-		  </center>
-		</div>
-      </div>  
-	</div>
-  </center>
+		<center>
+			<div class="content" style="padding-bottom: 0 !important;">
+				<h1>Dylan Pride</h1>
+				<div class="flex-container" style="margin-top: 30px;">
+					<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
+						<img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
+					</div>
+					<div class="two-col" style="vertical-align: middle;">
+						<center> 
+							<h2>Hello There!</h2>
+						<p>My name is Dylan and I am proud of everything I do.</p>
+						<p>Welcome to my website where I illustrate who I am, what I love, and what I do.</p>
+						<br><br>
+						</center>
+					</div>
+				</div>  
+			</div>
+		</center>
   </div>
+	
   <div class="rainbow"></div>
+	
   <div class="red section">
     <div class="content">
-	<h1>Who am I?</h1>
-	<p>I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver <img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"><img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"><img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"><img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png"></p>
-	I study at UBC. I'm a massive stickler for rules
-	use a lot of apple emojis and cutsie self-made lineart
-	
-	Goals, Technology, Social Media, Games, Pop Music, Social Equality, Education, Theatre, Fantasy, Cats
-	</div>
+			<h1>Who am I?</h1>
+			<p>
+				I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver
+				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
+				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
+				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
+				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
+			</p>
+			I study at UBC. I'm a massive stickler for rules
+			use a lot of apple emojis and cutsie self-made lineart
+			<h2>These are a few of my favourite things:</h2>
+			<div class="flex-container" style="flex-wrap: wrap;">
+				<a class="three-col-flex" href="#goals">
+					<h3>Goals</h3>
+					<img src="die.png" class="icon">
+					<p>I like to dream big! To give my life a sense of purpose and to keep myself motived, I enjoy recording my major goals.</p>
+					<p>Read more about what I want to accomplish &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#tech">
+					<h3>Technology</h3>
+					<img src="die.png" class="icon">
+					<p>Technology can be used to solve many problems. My love of technology has driven me to become a computer programmer.</p>
+					<p>Read more about what I do with technology &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#games">
+					<h3>Games</h3>
+					<img src="die.png" class="icon">
+					<p>My favourite hobbies include: creating computer games, leading table-top role play games, and playing games of strategy.</p>
+					<p>Read more about the games I create &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#education">
+					<h3>Education</h3>
+					<img src="die.png" class="icon">
+					<p>I'm a life-long student, constantly seeking more knowledge. </p>
+					<p>Read more about my academic experience &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#media">
+					<h3>Social Media</h3>
+					<img src="die.png" class="icon">
+					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Read more about my cat obsession &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#pop">
+					<h3>Pop Music</h3>
+					<img src="die.png" class="icon">
+					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Read more about my cat obsession &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#equality">
+					<h3>Social Equality</h3>
+					<img src="die.png" class="icon">
+					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Read more about my cat obsession &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#theatre">
+					<h3>Theatre</h3>
+					<img src="die.png" class="icon">
+					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Read more about my cat obsession &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#fantasy">
+					<h3>Fantasy</h3>
+					<img src="die.png" class="icon">
+					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Read more about my cat obsession &gt;</p>
+				</a>
+				<a class="three-col-flex" href="#cats">
+					<h3>Cats</h3>
+					<img src="die.png" class="icon">
+					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Read more about my cat obsession &gt;</p>
+				</a>
+			</div>
+		</div>
   </div>
+	<a  name="goals">
   <div class="rainbow"></div>
   <div class="section">
-    <h1>Goals</h1>
-	Accomplished:<br>
-	To be obtained<br>
-  </div>
+		<div class="content">
+			<h1>Goals</h1>
+			<h2>Accomplished</h2><br>
+		
+		<h2>To be obtained:</h2><br>
+		Make some games
+		Work for planeshift
+		Become a TA
+		Make a youtube channel to encourage queer youth to be confident with themselves
+		</div>
+	</div>
+	
+	<a  name="tech">
   <div class="rainbow"></div>
   <div class="orange section">
-  <h1>Technology</h1>
-  I work for Vision Critical.
-  I know these programming languages.
-  I am interested in these innovations.
-  <h1></h1>
-  </div>
+		<div class="content">
+			<h1>Technology</h1>
+			I work for Vision Critical.
+			I have created these projects.
+			I know these programming languages.
+			I am interested in these innovations.
+		</div>
+	</div>
+	
+	<a  name="games">
   <div class="rainbow"></div>
   <div class="section">
-  Games
+		<div class="content">
+			<h1>Games</h1>
+		</div>
   </div>
+	
+	<a  name="media">
   <div class="rainbow"></div>
   <div class="yellow section">
-  <h1>Social Media</h1>
-  I love being ever connected to my friends, family, and world around me. 
-  Twitter, Tumblr, Instagram, Youtube
-  Check out this twitter API tool I'm working on.
-  See that follow me panel that's following you around this page? It's like it's just begging you to follow me. Give me attention! 
-  It feeds my ever-expanding millenial ego.
-  <aside> I know I have a big ego, I really don't know why it's such a big deal though<br> -Marina and the Diamonds</aside>
+		<div class="content">
+			<h1>Social Media</h1>
+			I love being ever connected to my friends, family, and world around me. 
+			Twitter, Tumblr, Instagram, Youtube
+			Check out this twitter API tool I'm working on.
+			See that follow me panel that's following you around this page? It's like it's just begging you to follow me. Give me attention! 
+			It feeds my ever-expanding millenial ego.
+			<aside>I know I have a big ego, I really don't know why it's such a big deal though<br> -Marina and the Diamonds</aside>
+		</div>
   </div>
+	
+  <div class="rainbow"></div>
   <div class="section">
   <h1>Pop Music</h1>
   <p>In an ever-evolving society, it's important to stay up to date on what's hip and trendy in the modern world. Paying attention to the pop industry allows me to stay aware of what's popular and what isn't.</p>
   <h2>My Pop Queens</h2>
-  <p>Check out this pop-music game I made.<p>
+  <p>Check out this pop music game I made, to celebrate Lady Gaga's 2008 hit single Just Dance.<p>
   </div>
+  <div class="rainbow"></div>
   <div class="green section">
   <h1>Social Equality</h1>
   I want to use any influence I gain in life to foster love, acceptance and equality.<br>
@@ -196,18 +339,24 @@
   <li>women's rights - equal work opportunities, ending sexual harrasmant, right to choose abortion.
   <li>animal rights - veganism
   </div>
+  <div class="rainbow"></div>
   <div class="section">
   Education
   </div>
+  <div class="rainbow"></div>
   <div class="blue section">
   Theatre
   </div>
+  <div class="rainbow"></div>
   <div class="section">
   Fantasy
   </div>
+  <div class="rainbow"></div>
   <div class="purple section">
   Cats
+  
   </div>
+  <div class="rainbow"></div>
   <div class="section">
   footer.
   credits and links.
@@ -215,3 +364,4 @@
 </body>
 
 </html>
+

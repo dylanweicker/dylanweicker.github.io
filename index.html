@@ -13,6 +13,15 @@
 	    var birthday = new Date("1995-04-15");
 		return Math.floor((Date.now() - birthday)/ 31557600000);
 	  }
+		
+		function hideSocialMedia(){
+		  var holder = document.getElementById("social-media-holder");
+			holder.style.paddingLeft = 0;
+			holder.style.paddingRight = 0;
+			holder.style.width = 0;
+			holder.style.overflow = "hidden";
+		}
+		
   </script>
 </head>
 
@@ -25,7 +34,11 @@
   
   div {
     margin: 0;
-	padding: 0;
+	  padding: 0;
+  }
+	
+	p{
+    font-size: 16px;
   }
   
   p img{
@@ -61,7 +74,7 @@
   
   #social-media-holder{
     text-align: center;
-    font-size: 6;
+    font-size: 6 !important;
     background: #DCA;
     position: fixed;
     right: 0;
@@ -72,11 +85,18 @@
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 5px;
-	opacity: 0.85;
+		opacity: 0.85;
+		box-sizing: border-box;
+	
+	  -webkit-transition:500ms ease-out;
+	  -moz-transition:500ms ease-out;
+	  -o-transition:500ms ease-out;
+	  -ms-transition:500ms ease-out;
+	  transition:500ms ease-out;
   }
   
   .social-media{
-    background: #00C;
+    background: #8af;
     height: 30px;
     width: 30px;
     margin: 10px;
@@ -115,16 +135,21 @@
   }
   
   .flex-container {
-    display: -webkit-flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
     justify-content: center;
     width: 100%;
+		max-width: 1100px;
 }
   
   .two-col{
 	width: 50%;
 	margin: auto;
 	display: table-cell;
+	min-width: 250px;
   }
   
   .three-col-flex{
@@ -135,15 +160,15 @@
     vertical-align: top;
 	-webkit-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
-	padding: 10px;
+	padding: 15px;
   }
-  @media only screen and (max-width: 1196px){
+  @media only screen and (max-width: 1201px){
 	.three-col-flex{
 	  width: 44%;
 	  min-width: 300px;
 	}
   }
-  @media only screen and (max-width: 916px){
+  @media only screen and (max-width: 926px){
 	.three-col-flex{
 	  width: 100%;
 	  min-width: 250px;
@@ -168,16 +193,21 @@
 
   <div id="social-media-holder">
   follow<br>me
-    <div class="social-media"></div>
-    <div class="social-media"></div>
-    <div class="social-media"></div>
+    <div class="social-media">face</div>
+    <div class="social-media">twit</div>
+    <div class="social-media">link</div>
+    <div class="social-media">yout</div>
+    <div class="social-media">insta</div>
+    <div class="social-media">tumb</div>
+		<a onclick="hideSocialMedia()">hide</button>
   </div>
 
   <div class="section">
 		<center>
 			<div class="content" style="padding-bottom: 0 !important;">
 				<h1>Dylan Pride</h1>
-				<div class="flex-container" style="margin-top: 30px;">
+				<div class="flex-container" style="margin-top: 30px; 
+    flex-flow: row wrap-reverse;">
 					<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
 						<img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
 					</div>
@@ -209,66 +239,56 @@
 			I study at UBC. I'm a massive stickler for rules
 			use a lot of apple emojis and cutsie self-made lineart
 			<h2>These are a few of my favourite things:</h2>
-			<div class="flex-container" style="flex-wrap: wrap;">
+			<div class="flex-container" style="flex-wrap: wrap; -webkit-flex-wrap: wrap;">
 				<a class="three-col-flex" href="#goals">
 					<h3>Goals</h3>
 					<img src="die.png" class="icon">
 					<p>I like to dream big! To give my life a sense of purpose and to keep myself motived, I enjoy recording my major goals.</p>
-					<p>Read more about what I want to accomplish &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#tech">
 					<h3>Technology</h3>
 					<img src="die.png" class="icon">
 					<p>Technology can be used to solve many problems. My love of technology has driven me to become a computer programmer.</p>
-					<p>Read more about what I do with technology &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#games">
 					<h3>Games</h3>
 					<img src="die.png" class="icon">
 					<p>My favourite hobbies include: creating computer games, leading table-top role play games, and playing games of strategy.</p>
-					<p>Read more about the games I create &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#education">
 					<h3>Education</h3>
 					<img src="die.png" class="icon">
 					<p>I'm a life-long student, constantly seeking more knowledge. </p>
-					<p>Read more about my academic experience &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#media">
 					<h3>Social Media</h3>
 					<img src="die.png" class="icon">
 					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-					<p>Read more about my cat obsession &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#pop">
 					<h3>Pop Music</h3>
 					<img src="die.png" class="icon">
 					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-					<p>Read more about my cat obsession &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#equality">
 					<h3>Social Equality</h3>
 					<img src="die.png" class="icon">
 					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-					<p>Read more about my cat obsession &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#theatre">
 					<h3>Theatre</h3>
 					<img src="die.png" class="icon">
 					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-					<p>Read more about my cat obsession &gt;</p>
 				</a>
 				<a class="three-col-flex" href="#fantasy">
 					<h3>Fantasy</h3>
 					<img src="die.png" class="icon">
-					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-					<p>Read more about my cat obsession &gt;</p>
+					<p>When the stress of the world becomes too much handle, the realm of fantasy provides a healthy escape from reality.</p>
 				</a>
 				<a class="three-col-flex" href="#cats">
 					<h3>Cats</h3>
 					<img src="die.png" class="icon">
 					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-					<p>Read more about my cat obsession &gt;</p>
 				</a>
 			</div>
 		</div>
@@ -293,9 +313,16 @@
   <div class="orange section">
 		<div class="content">
 			<h1>Technology</h1>
-			I work for Vision Critical.
+			I have ten months of experience working as a software engineer in test at Vision Critical.<br>
+			This involves testing APIs, writing acceptance tests using Specflow and Selenium, three amigos,<br>
+			Going above and beyond be doing development as well: Creating tools to automate API calls, creating a build script to update TT system user<br><br>
+			Technical Skills.<br>
+			Programming: C, C++, C#, Java, Racket<br>
+			Web design: HTML5, CSS3, JavaScript <br><br>
+			
+			
 			I have created these projects.
-			I know these programming languages.
+			
 			I am interested in these innovations.
 		</div>
 	</div>
@@ -334,7 +361,7 @@
   <h1>Social Equality</h1>
   I want to use any influence I gain in life to foster love, acceptance and equality.<br>
   I will use my voice to make a change on a social level.<br>
-  <li>queer rights - I have a personal investment in this, ending social stigmas, ending discriminatory regulations
+  <li>queer rights - I have a personal investment in this, ending social stigmas, ending discriminatory regulations, Orlando shooting demonstrates we are not out of the woods yet.
   <li>trans rights - erase social stigmas, make washrooms accessable, right to gender affirming operations
   <li>women's rights - equal work opportunities, ending sexual harrasmant, right to choose abortion.
   <li>animal rights - veganism

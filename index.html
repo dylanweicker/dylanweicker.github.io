@@ -31,11 +31,6 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
   }
-  
-  div {
-    margin: 0;
-	  padding: 0;
-  }
 	
 	p{
     font-size: 16px;
@@ -47,17 +42,31 @@
   
   a {
     color: inherit;
-	text-decoration: none;
+		text-decoration: none;
   }
-  
+	
+	table{
+		border-spacing: 40px 5px;
+		table-layout: fixed;
+	}
+	
+	th{
+		border-bottom: 3px solid #FFA533;
+	}
+	
+	td{
+		width: 15%;
+		text-align: left;
+		vertical-align: top;
+	}
   
   h1{
     margin: 0;
     padding-top: 40px;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-	font-weight: bold;
-	text-align: center;
+	  font-weight: bold;
+	  text-align: center;
   }
   
   .section{
@@ -68,8 +77,8 @@
   
   .content{
     margin: auto;
-	max-width: 1260px;
-	padding: 30px 80px;
+		max-width: 1100px;
+		padding: 30px 80px;
   }
   
   #social-media-holder{
@@ -86,7 +95,6 @@
     padding-left: 10px;
     padding-right: 5px;
 		opacity: 0.85;
-		box-sizing: border-box;
 	
 	  -webkit-transition:500ms ease-out;
 	  -moz-transition:500ms ease-out;
@@ -107,6 +115,8 @@
   }
   .red a:link, a:visited{
     background: #E55959;
+		box-shadow: 0 0 8px #a11;
+		border-bottom: 5px solid #a11;
   }
   .red a:hover, a:active{
     background: #FF8C8C;
@@ -142,8 +152,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-		max-width: 1100px;
-}
+  }
   
   .two-col{
 	width: 50%;
@@ -153,8 +162,9 @@
   }
   
   .three-col-flex{
+	box-sizing: border-box;
 	min-width: 300px;
-	width: 27%;
+	width: 30%;
 	margin: 10px;
 	display: table-cell;
     vertical-align: top;
@@ -164,7 +174,7 @@
   }
   @media only screen and (max-width: 1201px){
 	.three-col-flex{
-	  width: 44%;
+	  width: 47%;
 	  min-width: 300px;
 	}
   }
@@ -236,12 +246,11 @@
 				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
 				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
 			</p>
-			I study at UBC. I'm a massive stickler for rules
-			use a lot of apple emojis and cutsie self-made lineart
-			<h2>These are a few of my favourite things:</h2>
+			<p>I study at UBC. I'm a massive stickler for rules use a lot of apple emojis and cutsie self-made lineart</p>
+		<h2>These Are A Few Of My Favourite Things</h2>
 			<div class="flex-container" style="flex-wrap: wrap; -webkit-flex-wrap: wrap;">
 				<a class="three-col-flex" href="#goals">
-					<h3>Goals</h3>
+					<h3>Goal Setting</h3>
 					<img src="die.png" class="icon">
 					<p>I like to dream big! To give my life a sense of purpose and to keep myself motived, I enjoy recording my major goals.</p>
 				</a>
@@ -273,7 +282,7 @@
 				<a class="three-col-flex" href="#equality">
 					<h3>Social Equality</h3>
 					<img src="die.png" class="icon">
-					<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+					<p>Nothing gets me excited quite like a good conversation about human and animal rights. I am a self-proclaimed social justice warrior!</p>
 				</a>
 				<a class="three-col-flex" href="#theatre">
 					<h3>Theatre</h3>
@@ -316,9 +325,30 @@
 			I have ten months of experience working as a software engineer in test at Vision Critical.<br>
 			This involves testing APIs, writing acceptance tests using Specflow and Selenium, three amigos,<br>
 			Going above and beyond be doing development as well: Creating tools to automate API calls, creating a build script to update TT system user<br><br>
-			Technical Skills.<br>
-			Programming: C, C++, C#, Java, Racket<br>
-			Web design: HTML5, CSS3, JavaScript <br><br>
+			<h2>Technical Skills</h2>
+			<table>
+				<tr>
+					<th>Programming</th>
+					<th>Web Development</th>
+				</tr>
+				<tr>
+					<td>
+					  C, C++, C#<br>
+						Java<br>
+						Racket<br>
+						Visual Basic<br>
+						SQL<br>
+					</td>
+					<td>
+						HTML/HTML5<br>
+						CSS/CSS3<br>
+						Javascript<br>
+						PHP<br>
+					</td>
+				</tr>
+			</table>
+			<h2>Work Experience</h2>
+			<h2>Personal Projects</h2>
 			
 			
 			I have created these projects.

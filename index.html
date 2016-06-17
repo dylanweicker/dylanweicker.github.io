@@ -77,7 +77,7 @@
   
   .content{
     margin: auto;
-		max-width: 1100px;
+		max-width: 1200px;
 		padding: 30px 80px;
   }
   
@@ -153,6 +153,11 @@
     justify-content: center;
     width: 100%;
   }
+	
+	.wrap{
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+	}
   
   .two-col{
 	width: 50%;
@@ -185,12 +190,13 @@
 	}
   }
   
-  .five-col{
-	width: 19%;
-	min-width: 200px;
-	margin: 0 auto;
-	display: table-cell;
-    vertical-align: top;
+  .five-col-flex{
+		width: 18%;
+		min-width: 200px;
+		margin: 10px;
+		vertical-align: top;
+		box-sizing: border-box;
+		padding: 20px;
   }
   
   .icon{
@@ -201,7 +207,7 @@
 
 <body>
 
-  <div id="social-media-holder">
+  <div id="social-media-holder" style="display:none;">
   follow<br>me
     <div class="social-media">face</div>
     <div class="social-media">twit</div>
@@ -227,6 +233,7 @@
 						<p>My name is Dylan and I am proud of everything I do.</p>
 						<p>Welcome to my website where I illustrate who I am, what I love, and what I do.</p>
 						<br><br>
+						<p>face twit inst lnkn yout tumb git</p>
 						</center>
 					</div>
 				</div>  
@@ -246,9 +253,9 @@
 				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
 				<img src="http://emojipedia-us.s3.amazonaws.com/cache/26/06/26063776ae7483507079e42652e82ede.png">
 			</p>
-			<p>I study at UBC. I'm a massive stickler for rules use a lot of apple emojis and cutsie self-made lineart</p>
+			<p>I study at UBC. I'm a massive stickler for rules<br> use a lot of apple emojis and cutsie self-made lineart</p>
 		<h2>These Are A Few Of My Favourite Things</h2>
-			<div class="flex-container" style="flex-wrap: wrap; -webkit-flex-wrap: wrap;">
+			<div class="wrap flex-container">
 				<a class="three-col-flex" href="#goals">
 					<h3>Goal Setting</h3>
 					<img src="die.png" class="icon">
@@ -306,10 +313,67 @@
   <div class="rainbow"></div>
   <div class="section">
 		<div class="content">
-			<h1>Goals</h1>
-			<h2>Accomplished</h2><br>
+			<div class="flex-container">
+				<div class="two-col">
+					<h2>Accomplished Goals</h2>
+					<p>These are the accomplishments that I am most proud of!</p>
+				</div>
+					<img src="goal.png" width="100%">
+				<div class="two-col">
+				</div>
+			</div>
+			<div class="wrap flex-container">
+				<div class="red five-col-flex">
+					<h3>Career</h3>
+					<p>As part of my co-op program, I started working as an SET at Vision Critical in September 2015.</p>
+				</div>
+				<div class="yellow five-col-flex">
+					<h3>Education</h3>
+					<p>In September 2013 I began studying computer science at UBC.</p>
+				</div>
+				<div class="green five-col-flex">
+					<h3>Lifestyle</h3>
+					<p>For my 2016 New Years Resolution I gave up dairy and eggs and adopted a strict vegan diet.</p>
+				</div>
+				<div class="five-col-flex">
+					<div class="blue">
+						<h3>Social</h3>
+						<p>writeup about how I w bad. More than any fdfasfsdfdfdfasddas thing.</p>
+					</div>
+					<div class="blue">
+						<h3>Social</h3>
+						<p>writeup about how I w bad. More than any fdfasfsdfdfdfasddas thing.</p>
+					</div>
+				</div>
+				<div class="purple five-col-flex">
+					<h3>Personal</h3>
+					<p>In June of 2016 I began developing a website to illustrate my hobbies and skills.</p>
+				</div>
+			</div>
+			
+				<div class="two-col">
+					<img src="goal.png" width="100%">
+				</div>
+				<div class="two-col">
+					<h2>Current Goals</h2>
+					<p>These are the accomplishments that I am most proud of!</p>
+				</div>
+			</div>
+			<div class="wrap flex-container">
+				<div class="red five-col-flex">
+				
+				</div>
+				<div class="yellow five-col-flex">
+				</div>
+				<div class="green five-col-flex">
+				</div>
+				<div class="blue five-col-flex">
+				</div>
+				<div class="purple five-col-flex">
+				</div>
+			</div>
 		
-		<h2>To be obtained:</h2><br>
+		<h2>Future Goals</h2><br>
 		Make some games
 		Work for planeshift
 		Become a TA

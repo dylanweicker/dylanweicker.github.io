@@ -202,6 +202,15 @@
                 display: inline-block;
                 }
                 
+                .welcome{
+                    margin-top: 30px;
+                }
+                @media only screen and (max-width: 730px){
+                    .welcome{
+                        flex-flow: row wrap-reverse;
+                    }
+                }
+                
                 .icon{
                 width: 80px;
                 height: 80px;
@@ -319,8 +328,7 @@
                 <center>
                 <div class="content" style="padding-bottom: 0 !important;">
                 <h1>Dylan Pride</h1>
-                <div class="flex-container" style="margin-top: 30px;
-                flex-flow: row wrap-reverse;">
+                <div class="welcome flex-container">
                 <div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
                 <img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
                 </div>

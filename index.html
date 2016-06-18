@@ -3,6 +3,8 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="icon" href="rainbow-emoji.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="rainbow-emoji.ico" type="image/x-icon"/>
   <title>Dylan Pride</title>
 	
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -171,8 +173,8 @@
 	min-width: 300px;
 	width: 30%;
 	margin: 10px;
-	display: table-cell;
-    vertical-align: top;
+	display: inline-block;
+  vertical-align: top;
 	-webkit-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
 	padding: 15px;
@@ -197,12 +199,107 @@
 		vertical-align: top;
 		box-sizing: border-box;
 		padding: 20px;
+		display: inline-block;
   }
   
   .icon{
     width: 80px;
 	height: 80px;
   }
+	
+	.goal-container{
+		margin: 0;
+		display: flex;
+		flex-flow: row;
+	}	
+	.goal-category{
+		width: 16.6%;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0 5px;
+	}
+	.goal-title{
+		box-sizing: border-box;
+		vertical-align: middle;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 6px;
+	}
+	.goal-title h3{
+		margin: 0 10px;
+		padding: 8px;
+	}
+	.goal-internal-flex-container{
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+	}
+	.goal-box{
+		width: 100%;
+		height: 260px;
+		box-sizing: border-box;
+		padding: 20px;
+		padding-top:0px;
+		margin-top: 10px;
+		box-shadow: 0 0 5px #888888;
+	}
+	.goal-label{
+		vertical-align: top;
+		box-sizing: border-box;
+	}
+	.goal-top-left{
+		height: 38px;
+	}
+	
+	@media only screen and (max-width: 1100px){
+		.goal-container{
+			display: block;
+			flex-flow: row;
+		}
+		.goal-category{
+			width: auto;
+			margin: 0;
+		}
+		.goal-internal-flex-container{
+			display: flex;
+			flex-flow: row;
+		}
+		.goal-title{
+			margin: 10px;
+			margin-bottom: 0;
+		}
+		.goal-box{
+			height: auto;
+			margin: 10px;
+		}
+		.goal-top-left{
+			display: none;
+		}
+	}
+	@media only screen and (max-width: 730px){
+		.goal-internal-flex-container{
+			display: flex;
+			flex-flow: column;
+		}
+		.goal-title{
+			margin: 10px;
+			margin-top: 20px;
+		}
+		.goal-box{
+			width: auto;
+			height: auto;
+		}
+		.goal-top-left{
+			display: none;
+		}
+		.goal-label{
+			display: none;
+		}
+	}
+	
+	.no-shadow{
+		box-shadow: none;
+	}
+	
 </style>
 
 <body>
@@ -315,61 +412,129 @@
 		<div class="content">
 			<div class="flex-container">
 				<div class="two-col">
-					<h2>Accomplished Goals</h2>
+					<h2>Goals</h2>
 					<p>These are the accomplishments that I am most proud of!</p>
 				</div>
-					<img src="goal.png" width="100%">
 				<div class="two-col">
-				</div>
-			</div>
-			<div class="wrap flex-container">
-				<div class="red five-col-flex">
-					<h3>Career</h3>
-					<p>As part of my co-op program, I started working as an SET at Vision Critical in September 2015.</p>
-				</div>
-				<div class="yellow five-col-flex">
-					<h3>Education</h3>
-					<p>In September 2013 I began studying computer science at UBC.</p>
-				</div>
-				<div class="green five-col-flex">
-					<h3>Lifestyle</h3>
-					<p>For my 2016 New Years Resolution I gave up dairy and eggs and adopted a strict vegan diet.</p>
-				</div>
-				<div class="five-col-flex">
-					<div class="blue">
-						<h3>Social</h3>
-						<p>writeup about how I w bad. More than any fdfasfsdfdfdfasddas thing.</p>
-					</div>
-					<div class="blue">
-						<h3>Social</h3>
-						<p>writeup about how I w bad. More than any fdfasfsdfdfdfasddas thing.</p>
-					</div>
-				</div>
-				<div class="purple five-col-flex">
-					<h3>Personal</h3>
-					<p>In June of 2016 I began developing a website to illustrate my hobbies and skills.</p>
+					<img src="goal.png" width="100%">
 				</div>
 			</div>
 			
-				<div class="two-col">
-					<img src="goal.png" width="100%">
+			<div class="goal-container">
+				<div class="goal-category">
+					<div class="goal-top-left no-shadow">
+					</div>
+					<div class="goal-internal-flex-container">
+						<div class="goal-label goal-box no-shadow">
+						<h3>Achieved Goals</h3>
+						<p>I am most proud of these accomplishments</p>
+						</div>
+						<div class="goal-label goal-box no-shadow"><h3>Short-Term</h3>
+						<p>I am working to reach these goals soon<p>
+						</div>
+						<div class="goal-label goal-box no-shadow"><h3>Long-Term</h3>
+						<p>I am setting myself up to accomplish these in the future</p>
+						</div>
+					</div>
 				</div>
-				<div class="two-col">
-					<h2>Current Goals</h2>
-					<p>These are the accomplishments that I am most proud of!</p>
+				<div class="goal-category">
+					<div class="red goal-title">
+						<h3>Career</h3>
+					</div>
+					<div class="goal-internal-flex-container">
+						<div class="red goal-box">
+							<h4>Work at a Tech Company</h4>
+							<p>Sept 2015</P>
+							<p>Spent 12 months working as an SET at Vision Critical.</p>
+						</div>
+						<div class="red goal-box">
+							<h4>Assist at teaching at UBC</h4>
+							<p>Sept 2016</P>
+							<p>Work as a teaching assistant for a computer science course.</p>
+						</div>
+						<div class="red goal-box">
+							<h4>Build a Full Time Career</h4>
+							<p>June 2018</p>
+							<p>Work as a teaching assistant for a computer science course.</p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="wrap flex-container">
-				<div class="red five-col-flex">
-				
+				<div class="goal-category">
+					<div class="yellow goal-title">
+						<h3>Education</h3>
+					</div>
+					<div class="goal-internal-flex-container">
+						<div class="yellow goal-box">
+							<h4>Study Comp Sci at UBC</h4>
+							<p>Sept 2013</p>
+							<p>:)</p>
+						</div>
+						<div class="yellow goal-box">
+							<h4>Teach Myself Ruby on Rails</h4>
+							<p>I wanna learn!</p>
+						</div>
+						<div class="yellow goal-box">
+							<h4>Graduate with a Bachelor's of Science</h4>
+							<p>:D</p>
+						</div>
+					</div>
 				</div>
-				<div class="yellow five-col-flex">
+				<div class="goal-category">
+					<div class="green goal-title"><h3>Lifestyle</h3>
+					</div>
+					<div class="goal-internal-flex-container">
+						<div class="green goal-box">
+							<h4>Go Vegan!</h4>
+							<p>December 2015</p>
+							<p>:D</p>
+						</div>
+						<div class="green goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+						<div class="green goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+					</div>
 				</div>
-				<div class="green five-col-flex">
+				<div class="goal-category">
+					<div class="blue goal-title">
+						<h3>Social</h3>
+					</div>
+					<div class="goal-internal-flex-container">
+						<div class="blue goal-box">
+							<h4>Make a Website</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+						<div class="blue goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+						<div class="blue goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+					</div>
 				</div>
-				<div class="blue five-col-flex">
-				</div>
-				<div class="purple five-col-flex">
+				<div class="goal-category">
+					<div class="purple goal-title">
+						<h3>Personal</h3>
+					</div>
+					<div class="goal-internal-flex-container">
+						<div class="purple goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+						<div class="purple goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+						<div class="purple goal-box">
+							<h4>Hello</h4>
+							<p>These are the accomplishments that I am most proud of!</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		

@@ -1,3 +1,5 @@
+
+
 var str = 10;
 var dex = 10;
 var con = 10;
@@ -172,7 +174,7 @@ function updateStr(){
 	document.getElementById("wis-cost").innerHTML = "Cost: " + costMap[wis];
 	updatePointsSpent();
 }function updateCha(){
-	chaStr = cha + chaBonus;
+	totCha = cha + chaBonus;
 	var width = cha * 5;
 	document.getElementById('cha-bar').style.width = width + "%";
 	document.getElementById("cha-score").innerHTML = "Score: " + totCha + "  (" + calculateMod(totCha) + ")";
@@ -193,4 +195,75 @@ function updatePointsSpent(){
 		document.getElementById('continue-step-one').classList.remove('disabled');
 	}
 	document.getElementById("total-cost").innerHTML = "Total Cost: " + currCost;
+}
+
+function deselectRaces(){
+	document.getElementById('dwarf-selection-card').classList.remove('selected-card');
+	document.getElementById('elf-selection-card').classList.remove('selected-card');
+	document.getElementById('halfling-selection-card').classList.remove('selected-card');
+	document.getElementById('human-selection-card').classList.remove('selected-card');
+}
+
+function becomeDwarf(){
+	deselectRaces();
+	document.getElementById('dwarf-selection-card').classList.add('selected-card');
+}
+
+function becomeElf(){
+	deselectRaces();
+	document.getElementById('elf-selection-card').classList.add('selected-card');
+}
+
+function becomeHalfling(){
+	deselectRaces();
+	document.getElementById('halfling-selection-card').classList.add('selected-card');
+}
+
+function becomeHuman(){
+	deselectRaces();
+	document.getElementById('human-selection-card').classList.add('selected-card');
+}
+
+//Spell Section ---------------------------------------
+var MaxSpells = 0;
+var School = {abjuration: 1, conjuration: 2, divination: 3, enchantment: 4, evocation : 5, necromancy: 6, transmutation: 7, universal: 8};
+var specialtySchool = School.divination;
+var oppositionSchools = [School.abjuration, School.conjuration];
+
+
+function setupWizardSpells(){
+	if (iq > 10){
+		MaxSpells = 3 + iq;
+	}
+	displayCantrips();
+}
+
+var Spell = function (name, school, description){
+	this.name = name;
+	this.school = school;
+	this.description = description;
+}
+
+var cantrips = [
+	new Spell("Resistance", School.abjuration, "+1 to saving throws for 1 minute"),
+	new Spell("Acid Splash", School.conjuration, "+1 to saving throws for 1 minute"),
+	new Spell("Detect Magic", School.divination, "+1 to saving throws for 1 minute"),
+	new Spell("Read Magic", School.divination, "+1 to saving throws for 1 minute"),
+	new Spell("Daze", School.enchantment, "+1 to saving throws for 1 minute"),
+	new Spell("Dancing Lights", School.evocation, "+1 to saving throws for 1 minute"),
+	new Spell("Ghost Sound", School.illusion, "+1 to saving throws for 1 minute"),
+	new Spell("Disrupt Undead", School.necromancy, "+1 to saving throws for 1 minute"),
+	new Spell("Mage Hand", School.transmutation, "+1 to saving throws for 1 minute"),
+	new Spell("Prestidigitation", School.universal, "+1 to saving throws for 1 minute")
+	];
+
+function displayCantrips(){	
+	for (var c in cantrips) {
+		if (cantrips[c].school != oppositionSchools[0] && cantrips[c].school != oppositionSchools[1]){
+			var newElement = document.createElement('div');
+			newElement.className = "spell-card";
+			newElement.innerHTML = '<div class="spell-title">' + cantrips[c].name + '</div>';
+			document.getElementById('cantrips').appendChild(newElement);
+		}
+	} 
 }

@@ -52,28 +52,31 @@ b, strong {
 
 header{
     display: flex;
-    background: #FCFCFC;
+    background: royalblue;
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
-    padding: 1em;
+    padding: 8px;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 2em;
-}
-
-header b{
-    font-size: 24px;
-}
-
-header img{
-    width: 2em;
-    height: 2em;
-    vertical-align:middle;
 }
 
 .header{
     flex: 1;
     display: inline;
     vertical-align: middle;
+    font-size: 24px;
+	color: white;
+	font-weight: bold;
+}
+
+.header i{
+	font-size: 32px;
+}
+
+.header img{
+    width: 48px;
+    height: 48px;
+    vertical-align:middle;
 }
 
 .left{
@@ -166,15 +169,17 @@ header img{
     margin: 0;
 	transition: 300ms ease;
 }
-.one-ability:hover {
-    background: #FDFDFD;
-    border-right: none;
+.one-ability:hover h3{
+	color: dodgerblue;
 }
 
 .one-ability:hover i{
     color: dodgerblue;
 }
 
+.material-icons{
+	line-height: inherit !important;
+}
 
 .material-icons:hover {
     color: orange !important;
@@ -250,14 +255,62 @@ header img{
     cursor: pointer
 }
 
+.race-selection-card:hover h3{
+	color: dodgerblue;
+}
+
 .selected-card{
 	border-color: orange !important;
     cursor: auto !important;
-    box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.06);
+    box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.07);
+}
+
+.selected-card h3{
+	color: orange !important;
 }
 
 .racial-info{
     margin: 1.5em 0;
+}
+
+#stepper-banner{
+    margin-top: 2.5em; 
+    margin-bottom: 1.5em; 
+	width: 100%;
+	border: solid #e0e0e0 1px;
+	border-radius: 10px;
+	padding: 16px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.06);
+	background: white;
+}
+
+.step{
+	flex: 1;
+}
+
+.stepper-circle{
+	width: 25px;
+	height: 25px;
+	color: white;
+	background: dodgerblue;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 8px;
+	font-weight: normal !important;
+}
+
+.active-step{
+	font-weight: bold;
+}
+
+.inactive{
+	background: #666;
 }
 
 .continue{
@@ -281,4 +334,55 @@ header img{
     padding: 10px 50px;
     border: solid dodgerblue 1px;
     border-radius: 5px;
+}
+
+#cantrips{
+	display: flex-wrap;
+	max-width: 1000px;
+}
+
+.spell-card{
+	background-color: #fff;
+	height: 124px;
+	width: 100px;
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+	display: inline-block;	
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+}
+.spell-title{
+	background-color: #eee;
+	position: absolute;
+	bottom: 0;
+    left: 0;
+	font-size: 14px;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: center;
+}
+
+
+
+footer{
+	margin-top: 5em;
+	padding: 5em;
+	background-color: #333;
+	color: #fff;
+}
+
+.footer{
+	margin: auto;
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-col{
+	flex: 1;
+	text-align: left;
 }

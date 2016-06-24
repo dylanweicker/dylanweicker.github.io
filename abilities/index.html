@@ -11,20 +11,25 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     </head>
-    <body onload="setupAbilities();">
+    <body onload="setupAbilities(); setupWizardSpells();">
         <header>
             <div class="header left" style="vertical-align: center;">
-                <img src="images/dpsymbol.gif"><b>Pathfinder Character Creator</b>
+                <img src="images/dpsymbol.gif">Dylan Pride
             </div>
             <div class="header right">
-                <img src="images/dpsymbol.gif">
-                <img src="images/dpsymbol.gif">
-                <img src="images/dpsymbol.gif">
-                <img src="images/dpsymbol.gif">
+                <i class="material-icons">menu</i>
             </div>
         </header>
         <div class="content" id="step-one">
-            <h1>Step One: Ability Scores</h1>
+            <h1>Pathfinder: Character Generator</h1>
+			<div id="stepper-banner">
+				<div id="step-one" class="step active-step"><div class="stepper-circle">1</div>Abilities</div>
+				<div id="step-two" class="step"><div class="inactive stepper-circle">2</div>Race</div>
+				<div id="step-three" class="step"><div class="inactive stepper-circle">3</div>Class</div>
+				<div id="step-four" class="step"><div class="inactive stepper-circle">4</div>Skills</div>
+				<div id="step-five" class="step"><div class="inactive stepper-circle">5</div>Feats</div>
+				<div id="step-six" class="step"><div class="inactive stepper-circle">6</div>Equipment</div>
+			</div>
             <div class="flex">
                 <div class="all-abilities">
                     <div class="one-ability" onmouseover="displayStrInfo();">
@@ -229,28 +234,28 @@
                 </div>
             </div>
             <div id="continue-step-one" class="continue">
-                <a href="/index.html">Continue</a>
+                <a href="#top">Continue</a>
             </div>
         </div>    
         <div class="content" id="step-two">
             <h1>Step Two: Race</h1>
             <div class="space-between flex">
-                <div class="race-selection-card selected-card box">
+                <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
                     <div class="shaded-bottom">
                         <h3>Dwarf</h3>
                     </div>
                 </div>
-                <div class="race-selection-card box">
+                <div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
                     <div class="shaded-bottom">
                         <h3>Elf</h3>
                     </div>
                 </div>
-                <div class="race-selection-card box">
+                <div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
                     <div class="shaded-bottom">
                         <h3>Halfling</h3>
                     </div>
                 </div>
-                <div class="race-selection-card box">
+                <div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
                     <div class="shaded-bottom">
                         <h3>Human</h3>
                     </div>
@@ -300,8 +305,87 @@
 			    </div>
 			</div>
             <div class="continue">
+			
                 <a href="/index.html">Continue</a>
             </div>
+			<h1>Step Three: Class</h1><div class="space-between flex">
+                <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
+                    <div class="shaded-bottom">
+                        <h3>Cleric</h3>
+                    </div>
+                </div>
+                <div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
+                    <div class="shaded-bottom">
+                        <h3>Fighter</h3>
+                    </div>
+                </div>
+                <div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
+                    <div class="shaded-bottom">
+                        <h3>Rogue</h3>
+                    </div>
+                </div>
+                <div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
+                    <div class="shaded-bottom">
+                        <h3>Wizard</h3>
+                    </div>
+                </div>
+            </div>
+			<div id="wizard" class="box">
+				<h2>Wizard</h2>
+				<p>
+					These shrewd magic-users seek, collect, and covet esoteric knowledge, drawing on cultic arts to work wonders beyond the abilities of mere mortals. While some might choose a particular field of magical study and become masters of such powers, others embrace versatility, reveling in the unbounded wonders of all magic. In either case, wizards prove a cunning and potent lot, capable of smiting their foes, empowering their allies, and shaping the world to their every desire.
+				</p>
+				<!-- Description -->
+				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points-->
+				<!-- Scribe Scroll feat-->
+				<!-- OPTION Bonded Object or Familiar-->
+				<!-- OPTION Wizard School and spells-->
+				<div id="cantrips">
+				</div>
+			</div>
+			<div id="fighter" class="box">
+				<h2>Fighter</h2>
+				<p>
+					 Lords of the battlefield, fighters are a disparate lot, training with many weapons or just one, perfecting the uses of armor, learning the fighting techniques of exotic masters, and studying the art of combat, all to shape themselves into living weapons. Far more than mere thugs, these skilled warriors reveal the true deadliness of their weapons, turning hunks of metal into arms capable of taming kingdoms, slaughtering monsters, and rousing the hearts of armies.
+				</p>
+				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
+				<!-- Bonus feat explanation-->
+			</div>
+			<div id="cleric" class="box">
+				<h2>Cleric</h2>
+				<p>
+					More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies' prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. As their powers are influenced by their faith, all clerics must focus their worship upon a divine source.
+				</p>
+				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
+				<!-- Aura and Channel explanation-->
+				<!-- OPTION Deity and Domains-->
+			</div>
+			<div id="rogue" class="box">
+				<h2>Rogue</h2>
+				<p>
+					Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents.
+				</p>
+				<!-- Description -->
+				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
+				<!-- Sneak attack and Trapfinding-->
+			</div>
         </div>
+		<div id="continue-step-three" class="continue">
+            <a href="#top">Continue</a>
+        </div>
+		<footer>
+			<div class="footer">
+				<div class="footer-col">
+					Links
+				</div>
+				<div class="footer-col">
+					Rules made by Paizo<br>
+					UI Designed by Dylan<br>
+					HTML, CSS, and JavaScript by Dylan<br>
+					Icons by Good<br>
+				</div>
+				<div class="footer-col"></div>
+			</div>
+		</footer>
     </body>
 </html>

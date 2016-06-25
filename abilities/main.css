@@ -167,7 +167,6 @@ header{
     border-top: none;
 	box-sizing: border-box;
     margin: 0;
-	transition: 300ms ease;
 }
 .one-ability:hover h3{
 	color: dodgerblue;
@@ -186,7 +185,7 @@ header{
     cursor: pointer
 }
 
-.last-ability{
+.last{
     border-bottom: none;
 }
 
@@ -197,6 +196,11 @@ header{
     background: #eee;
     box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.06);
     margin: 10px;
+}
+
+.mini-bar{
+	width: 80% !important;
+	margin: auto !important;
 }
 
 .bar{
@@ -259,6 +263,12 @@ header{
 	color: dodgerblue;
 }
 
+.race-selection-card img{
+	width: 80%;
+	height: auto;
+	margin: auto;
+}
+
 .selected-card{
 	border-color: orange !important;
     cursor: auto !important;
@@ -271,6 +281,35 @@ header{
 
 .racial-info{
     margin: 1.5em 0;
+}
+
+.trait-section{
+	width: 720px;
+}
+
+
+.trait-section h3{
+	text-align: left;
+}
+
+.trait-table{
+    background: white;
+    border: #E0E0E0 solid 1px;
+    border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.trait-row{
+	display: flex;
+	border-bottom: 1px solid #eee;
+}
+
+.trait{
+	margin: 10px;
+}
+
+.trait-side-bar{
+	width: 180px;
 }
 
 #stepper-banner{
@@ -289,6 +328,8 @@ header{
 
 .step{
 	flex: 1;
+	font-weight: normal;
+	color: inherit;
 }
 
 .stepper-circle{
@@ -306,10 +347,19 @@ header{
 }
 
 .active-step{
-	font-weight: bold;
+	font-weight: bold !important;
+	color: black !important;
 }
 
-.inactive{
+.active-step .stepper-circle{
+	background: orange;
+}
+
+.completed-step{
+	font-weight: normal;
+}
+
+.inactive .stepper-circle{
 	background: #666;
 }
 

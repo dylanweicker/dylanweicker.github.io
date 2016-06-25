@@ -5,7 +5,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Pathfinder Character Creation</title>
-        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="icon" href="../images/rainbow-emoji.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="../images/rainbow-emoji.ico" type="image/x-icon"/>
+        <meta name="description" content="An interactive guide for creating a Pathfinder character.">
         <link rel="stylesheet" href="main.css">
         <script type="text/javascript" src="abilities.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -14,317 +16,368 @@
     <body onload="setupAbilities(); setupWizardSpells();">
         <header>
             <div class="header left" style="vertical-align: center;">
-                <img src="images/dpsymbol.gif">Dylan Pride
+                <img src="../images/dpsymbol.gif">Dylan Pride
             </div>
             <div class="header right">
                 <i class="material-icons">menu</i>
             </div>
         </header>
-        <div class="content" id="step-one">
-            <h1>Pathfinder: Character Generator</h1>
+		<h1>Pathfinder: Character Generator</h1>
+		<div class="content">
 			<div id="stepper-banner">
-				<div id="step-one" class="step active-step"><div class="stepper-circle">1</div>Abilities</div>
-				<div id="step-two" class="step"><div class="inactive stepper-circle">2</div>Race</div>
-				<div id="step-three" class="step"><div class="inactive stepper-circle">3</div>Class</div>
-				<div id="step-four" class="step"><div class="inactive stepper-circle">4</div>Skills</div>
-				<div id="step-five" class="step"><div class="inactive stepper-circle">5</div>Feats</div>
-				<div id="step-six" class="step"><div class="inactive stepper-circle">6</div>Equipment</div>
+				<div id="stepper-one" class="step active-step"><div class="stepper-circle">1</div>Abilities</div>
+				<div id="stepper-two" class="step inactive"><div class="stepper-circle">2</div>Race</div>
+				<div id="stepper-three" class="step inactive"><div class="stepper-circle">3</div>Class</div>
+				<div id="stepper-four" class="step inactive"><div class="stepper-circle">4</div>Skills</div>
+				<div id="stepper-five" class="step inactive"><div class="stepper-circle">5</div>Feats</div>
+				<div id="stepper-six" class="step inactive"><div class="stepper-circle">6</div>Equipment</div>
 			</div>
-            <div class="flex">
-                <div class="all-abilities">
-                    <div class="one-ability" onmouseover="displayStrInfo();">
-                        <h3>Strength</h3>
-                        <div class="justify-center valign-middle flex">
-                            <i class="material-icons" onclick="decStr();">remove</i>
-                            <div class="bar-background">
-                                <div class="bar" id="str-bar"></div>
-                            </div>
-                            <i class="material-icons" onclick="incStr();">add</i>
-                        </div>
-                        <div class="score-info">
-                            <div id="str-score">
-                                Score: 10 (0)
-                            </div>
-                            <div id="str-cost">
-                                Cost: 0
-                            </div>
-                        </div>
-                    </div>
-                    <div class="one-ability" onmouseover="displayDexInfo();">
-                        <h3>Dexterity</h3>
-                        <div class="justify-center valign-middle flex">
-                            <i class="material-icons" onclick="decDex();">remove</i>
-                            <div class="bar-background">
-                                <div class="bar" id="dex-bar"></div>
-                            </div>
-                            <i class="material-icons" onclick="incDex();">add</i>
-                        </div>
-                        <div class="score-info">
-                            <div id="dex-score">
-                                Score: 10 (0)
-                            </div>
-                            <div id="dex-cost">
-                                Cost: 0
-                            </div>
-                        </div>
-                    </div>
-                    <div class="one-ability" onmouseover="displayConInfo();">
-                        <h3>Constitution</h3>
-                        <div class="justify-center valign-middle flex">
-                            <i class="material-icons" onclick="decCon();">remove</i>
-                            <div class="bar-background">
-                                <div class="bar" id="con-bar"></div>
-                            </div>
-                            <i class="material-icons" onclick="incCon();">add</i>
-                        </div>
-                        <div class="score-info">
-                            <div id="con-score">
-                                Score: 10 (0)
-                            </div>
-                            <div id="con-cost">
-                                Cost: 0
-                            </div>
-                        </div>
-                    </div>
-                    <div class="one-ability" onmouseover="displayIqInfo();">
-                        <h3>Intelligence</h3>
-                        <div class="justify-center valign-middle flex">
-                            <i class="material-icons" onclick="decIq();">remove</i>
-                            <div class="bar-background">
-                                <div class="bar" id="iq-bar"></div>
-                            </div>
-                            <i class="material-icons" onclick="incIq();">add</i>
-                        </div>
-                        <div class="score-info">
-                            <div id="iq-score">
-                                Score: 10 (0)
-                            </div>
-                            <div id="iq-cost">
-                                Cost: 0
-                            </div>
-                        </div>
-                    </div>
-                    <div class="one-ability" onmouseover="displayWisInfo();">
-                        <h3>Wisdom</h3>
-                        <div class="justify-center valign-middle flex">
-                            <i class="material-icons" onclick="decWis();">remove</i>
-                            <div class="bar-background">
-                                <div class="bar" id="wis-bar"></div>
-                            </div>
-                            <i class="material-icons" onclick="incWis();">add</i>
-                        </div>
-                        <div class="score-info">
-                            <div id="wis-score">
-                                Score: 10 (0)
-                            </div>
-                            <div id="wis-cost">
-                                Cost: 0
-                            </div>
-                        </div>
-                    </div>
-                    <div class="one-ability last-ability" onmouseover="displayChaInfo();">
-                        <h3>Charisma</h3>
-                        <div class="justify-center valign-middle flex">
-                            <i class="material-icons" onclick="decCha();">remove</i>
-                            <div class="bar-background">
-                                <div class="bar" id="cha-bar"></div>
-                            </div>
-                            <i class="material-icons" onclick="incCha();">add</i>
-                        </div>
-                        <div class="score-info">
-                            <div id="cha-score">
-                                Score: 10 (0)
-                            </div>
-                            <div id="cha-cost">
-                                Cost: 0
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="side-bar">
-                    <div class="ability-info">
-                        <div id="str-info">
-                            <h2>Strength</h2>
-                            <p>
-                                Strength measures muscle and physical power. This ability is important for those who engage in hand-to-hand combat, such as fighters. Strength also sets the maximum amount of weight your character can carry.
-                            </p>
-                            <p>
-                                You apply your character's Strength modifier to:
-                                <li>Melee attack rolls</li>
-                                <li>Damage rolls when using a melee or thrown weapon</li>
-                                <li>Climb, Swim, and Strength checks</li>
-                                <li>Strength checks (for breaking down doors and the like)</li>
-                            </p>
-                        </div>
-                        <div id="dex-info">
-                            <h2>Dexterity</h2>
-                            <p>
-                                Dexterity measures agility, reflexes, and balance. This ability is the most important one for rogues, but it's also useful for characters who wear light or medium armor or no armor at all. This ability is vital for characters seeking to excel with ranged weapons.
-                            </p>
-                            <p>
-                                You apply your character's Dexterity modifier to:
-                                <li>Ranged attack rolls</li>
-                                <li>Armor Class (AC), provided your character can react to the attack</li>
-                                <li>Reflex saving throws</li>
-                                <li>Acrobatics, Disable Device, Escape Artist, Fly, Ride, Sleight of Hand, and Stealth checks</li>
-                            </p>
-                        </div>
-                        <div id="con-info">
-                            <h2>Constitution</h2>
-                            <p>
-                                Constitution represents your character's health and stamina. A Constitution bonus increases a character's hit points, so the ability is important for all classes.
-                            </p>
-                            <p>
-                                You apply your character's Constitution modifier to:
-                                <li>The number of hitpoints gained at each level</li>
-                                <li>Fortitude saving throws, for resisting poison, disease, and similar threats.</li>
-                            </p>
-                        </div>
-                        <div id="iq-info">
-                            <h2>Intelligence</h2>
-                            <p>
-                                Intelligence determines how well your character learns and reasons. This ability is important for wizards because it affects their spellcasting ability in many ways.
-                            </p>
-                            <p>
-                                You apply your character's Intelligence modifier to:
-                                <li>The number of bonus languages your character knows at the start of the game</li>
-                                <li>The number of skill points gained each level</li>
-                                <li>Appraise, Craft, Knowledge, Linguistics, and Spellcraft checks</li>
-                            </p>
-                        </div>
-                        <div id="wis-info">
-                            <h2>Wisdom</h2>
-                            <p>
-                                Wisdom describes a character's willpower, common sense, awareness, and intuition. Wisdom is the most important ability for clerics. If you want your character to have acute senses, put a high score in Wisdom.
-                            </p>
-                            <p>
-                                You apply your character's Wisdom modifier to:
-                                <li>Will saving throws (for negating the effects of compulsions, charms, and other spells)</li>
-                                <li>Heal, Perception, Profession, Sense Motive, and Survival checks</li>
-                            </p>
-                        </div>
-                        <div id="cha-info">
-                            <h2>Charisma</h2>
-                            <p>
-                                Charisma measures a character's personality, personal magnetism, ability to lead, and appearance. It is important for clerics, since it affects their ability to channel energy.
-                            </p>
-                            <p>
-                                You apply your character's Charisma modifier to:
-                                <li>Bluff, Diplomacy, Disguise, Handle Animal, Intimidate, Perform, and Use Magic Device checks.</li>
-                                <li>Checks that represent attempts to influence others.</li>
-                                <li>Channel energy DCs for clerics attempting to harm undead foes.</li>
-                            </p>
-                        </div>
+			<div id="step-one">
+				<div class="flex">
+					<div class="all-abilities">
+						<div class="one-ability" onmouseover="displayStrInfo();">
+							<h3>Strength</h3>
+							<div class="justify-center valign-middle flex">
+								<i class="material-icons" onclick="decStr();">remove</i>
+								<div class="bar-background">
+									<div class="bar" id="str-bar"></div>
+								</div>
+								<i class="material-icons" onclick="incStr();">add</i>
+							</div>
+							<div class="score-info">
+								<div id="str-score">
+									Score: 10 (0)
+								</div>
+								<div id="str-cost">
+									Cost: 0
+								</div>
+							</div>
+						</div>
+						<div class="one-ability" onmouseover="displayDexInfo();">
+							<h3>Dexterity</h3>
+							<div class="justify-center valign-middle flex">
+								<i class="material-icons" onclick="decDex();">remove</i>
+								<div class="bar-background">
+									<div class="bar" id="dex-bar"></div>
+								</div>
+								<i class="material-icons" onclick="incDex();">add</i>
+							</div>
+							<div class="score-info">
+								<div id="dex-score">
+									Score: 10 (0)
+								</div>
+								<div id="dex-cost">
+									Cost: 0
+								</div>
+							</div>
+						</div>
+						<div class="one-ability" onmouseover="displayConInfo();">
+							<h3>Constitution</h3>
+							<div class="justify-center valign-middle flex">
+								<i class="material-icons" onclick="decCon();">remove</i>
+								<div class="bar-background">
+									<div class="bar" id="con-bar"></div>
+								</div>
+								<i class="material-icons" onclick="incCon();">add</i>
+							</div>
+							<div class="score-info">
+								<div id="con-score">
+									Score: 10 (0)
+								</div>
+								<div id="con-cost">
+									Cost: 0
+								</div>
+							</div>
+						</div>
+						<div class="one-ability" onmouseover="displayIqInfo();">
+							<h3>Intelligence</h3>
+							<div class="justify-center valign-middle flex">
+								<i class="material-icons" onclick="decIq();">remove</i>
+								<div class="bar-background">
+									<div class="bar" id="iq-bar"></div>
+								</div>
+								<i class="material-icons" onclick="incIq();">add</i>
+							</div>
+							<div class="score-info">
+								<div id="iq-score">
+									Score: 10 (0)
+								</div>
+								<div id="iq-cost">
+									Cost: 0
+								</div>
+							</div>
+						</div>
+						<div class="one-ability" onmouseover="displayWisInfo();">
+							<h3>Wisdom</h3>
+							<div class="justify-center valign-middle flex">
+								<i class="material-icons" onclick="decWis();">remove</i>
+								<div class="bar-background">
+									<div class="bar" id="wis-bar"></div>
+								</div>
+								<i class="material-icons" onclick="incWis();">add</i>
+							</div>
+							<div class="score-info">
+								<div id="wis-score">
+									Score: 10 (0)
+								</div>
+								<div id="wis-cost">
+									Cost: 0
+								</div>
+							</div>
+						</div>
+						<div class="one-ability last" onmouseover="displayChaInfo();">
+							<h3>Charisma</h3>
+							<div class="justify-center valign-middle flex">
+								<i class="material-icons" onclick="decCha();">remove</i>
+								<div class="bar-background">
+									<div class="bar" id="cha-bar"></div>
+								</div>
+								<i class="material-icons" onclick="incCha();">add</i>
+							</div>
+							<div class="score-info">
+								<div id="cha-score">
+									Score: 10 (0)
+								</div>
+								<div id="cha-cost">
+									Cost: 0
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="side-bar">
+						<div class="ability-info">
+							<div id="str-info">
+								<h2>Strength</h2>
+								<p>
+									Strength measures muscle and physical power. This ability is important for those who engage in hand-to-hand combat, such as fighters. Strength also sets the maximum amount of weight your character can carry.
+								</p>
+								<p>
+									You apply your character's Strength modifier to:
+									<li>Melee attack rolls</li>
+									<li>Damage rolls when using a melee or thrown weapon</li>
+									<li>Climb, Swim, and Strength checks</li>
+									<li>Strength checks (for breaking down doors and the like)</li>
+								</p>
+							</div>
+							<div id="dex-info">
+								<h2>Dexterity</h2>
+								<p>
+									Dexterity measures agility, reflexes, and balance. This ability is the most important one for rogues, but it's also useful for characters who wear light or medium armor or no armor at all. This ability is vital for characters seeking to excel with ranged weapons.
+								</p>
+								<p>
+									You apply your character's Dexterity modifier to:
+									<li>Ranged attack rolls</li>
+									<li>Armor Class (AC), provided your character can react to the attack</li>
+									<li>Reflex saving throws</li>
+									<li>Acrobatics, Disable Device, Escape Artist, Fly, Ride, Sleight of Hand, and Stealth checks</li>
+								</p>
+							</div>
+							<div id="con-info">
+								<h2>Constitution</h2>
+								<p>
+									Constitution represents your character's health and stamina. A Constitution bonus increases a character's hit points, so the ability is important for all classes.
+								</p>
+								<p>
+									You apply your character's Constitution modifier to:
+									<li>The number of hitpoints gained at each level</li>
+									<li>Fortitude saving throws, for resisting poison, disease, and similar threats.</li>
+								</p>
+							</div>
+							<div id="iq-info">
+								<h2>Intelligence</h2>
+								<p>
+									Intelligence determines how well your character learns and reasons. This ability is important for wizards because it affects their spellcasting ability in many ways.
+								</p>
+								<p>
+									You apply your character's Intelligence modifier to:
+									<li>The number of bonus languages your character knows at the start of the game</li>
+									<li>The number of skill points gained each level</li>
+									<li>Appraise, Craft, Knowledge, Linguistics, and Spellcraft checks</li>
+								</p>
+							</div>
+							<div id="wis-info">
+								<h2>Wisdom</h2>
+								<p>
+									Wisdom describes a character's willpower, common sense, awareness, and intuition. Wisdom is the most important ability for clerics. If you want your character to have acute senses, put a high score in Wisdom.
+								</p>
+								<p>
+									You apply your character's Wisdom modifier to:
+									<li>Will saving throws (for negating the effects of compulsions, charms, and other spells)</li>
+									<li>Heal, Perception, Profession, Sense Motive, and Survival checks</li>
+								</p>
+							</div>
+							<div id="cha-info">
+								<h2>Charisma</h2>
+								<p>
+									Charisma measures a character's personality, personal magnetism, ability to lead, and appearance. It is important for clerics, since it affects their ability to channel energy.
+								</p>
+								<p>
+									You apply your character's Charisma modifier to:
+									<li>Bluff, Diplomacy, Disguise, Handle Animal, Intimidate, Perform, and Use Magic Device checks.</li>
+									<li>Checks that represent attempts to influence others.</li>
+									<li>Channel energy DCs for clerics attempting to harm undead foes.</li>
+								</p>
+							</div>
 
-                        <div class="shaded-bottom">
-                            <div class="space-between flex">
-                                <div id="total-cost">
-                                    Total Cost: 0 
-                                </div>
-                                <div id="maximum-cost">
-                                    Maximum Cost:
-                                    <input type="radio" id="radio-10" name="max-cost" value="10" onclick="setMaxCost(10);">10 
-                                    <input type="radio" id="radio-15" name="max-cost" value="15" onclick="setMaxCost(15);">15 
-                                    <input type="radio" id="radio-20" name="max-cost" value="20" onclick="setMaxCost(20);">20 
-                                    <input type="radio" id="radio-25" name="max-cost" value="25" onclick="setMaxCost(25);">25
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="continue-step-one" class="continue">
-                <a href="#top">Continue</a>
-            </div>
-        </div>    
-        <div class="content" id="step-two">
-            <h1>Step Two: Race</h1>
-            <div class="space-between flex">
-                <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
-                    <div class="shaded-bottom">
-                        <h3>Dwarf</h3>
-                    </div>
-                </div>
-                <div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
-                    <div class="shaded-bottom">
-                        <h3>Elf</h3>
-                    </div>
-                </div>
-                <div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
-                    <div class="shaded-bottom">
-                        <h3>Halfling</h3>
-                    </div>
-                </div>
-                <div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
-                    <div class="shaded-bottom">
-                        <h3>Human</h3>
-                    </div>
-                </div>
-            </div>
-			<div class="flex">
-		        <div class="racial-info box">
-				    <h2>Dwarf</h2>
-					<p>
-					    Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, dwarves have acquired a reputation as dour and humorless artisans of the earth. It could be said that their history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.
-					</p>
-					<div class="standard-racial-traits">
-					    <table>
-						    <tr>
-							    <th>Ability Score</th>
-								<td>+2 Constitution, +2 Wisdom, and -2 Charisma</td>
-							</tr>
-						    <tr>
-							    <th>Size</th>
-								<td>Medium</td>
-							    <th>Speed</th>
-								<td>20 feet</td>
-							    <th>Senses</th>
-								<td>Darkvision 60 feet</td>
-							</tr>
-							<tr>
-							    <th>Languages</th>
-								<td>Common, Dwarven and x additional languages:
-								Giant<input type="checkbox" name="dwarf-languages" value="giant"> 
-								Gnome<input type="checkbox" name="dwarf-languages" value="gnome"> 
-								Goblin<input type="checkbox" name="dwarf-languages" value="goblin"> 
-								Orc<input type="checkbox" name="dwarf-languages" value="orc"> 
-								Terran<input type="checkbox" name="dwarf-languages" value="terran"> 
-								Undercommon<input type="checkbox" name="dwarf-languages" value="undercommon"> </td>
-							</tr>
-						</table>
+							<div class="shaded-bottom">
+								<div class="space-between flex">
+									<div id="total-cost">
+										Total Cost: 0 
+									</div>
+									<div id="maximum-cost">
+										Maximum Cost:
+										<input type="radio" id="radio-10" name="max-cost" value="10" onclick="setMaxCost(10);">10 
+										<input type="radio" id="radio-15" name="max-cost" value="15" onclick="setMaxCost(15);">15 
+										<input type="radio" id="radio-20" name="max-cost" value="20" onclick="setMaxCost(20);">20 
+										<input type="radio" id="radio-25" name="max-cost" value="25" onclick="setMaxCost(25);">25
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="offense-racial-traits">
-					    <h3>Offense<h3>
-					</div>
-					<div class="defense-racial-traits">
-					    <h3>Defense<h3>
-					</div>
-					<div class="defense-racial-traits">
-					    <h3>Skills<h3>
-					</div>
-			    </div>
+				</div>
 			</div>
-            <div class="continue">
-			
-                <a href="/index.html">Continue</a>
-            </div>
+			<div id="step-two">
+				<h1>Step Two: Race</h1>
+				<div class="space-between flex">
+					<div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
+						<img src="../images/Dwarf.jpg">
+						<div class="shaded-bottom">
+							<h3>Dwarf</h3>
+						</div>
+					</div>
+					<div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
+						<img src="../images/Elf.jpg">
+						<div class="shaded-bottom">
+							<h3>Elf</h3>
+						</div>
+					</div>
+					<div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
+						<img src="../images/Halfling.jpg">
+						<div class="shaded-bottom">
+							<h3>Halfling</h3>
+						</div>
+					</div>
+					<div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
+						<img src="../images/Human.jpg">
+						<div class="shaded-bottom">
+							<h3>Human</h3>
+						</div>
+					</div>
+				</div>
+				<div class="racial-info box">
+					<h2>Dwarf</h2>
+					<p>
+						Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, dwarves have acquired a reputation as dour and humorless artisans of the earth. It could be said that their history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.
+					</p>
+				</div>
+				<div class="space-between flex">
+					<div class="trait-section box">
+						<h3>Standard Traits</h3>
+						<div class="trait-table">
+							<div class="trait-row">
+								<div class="trait">
+									<b>Ability Score:</b> +2 Constitution, +2 Wisdom, and -2 Charisma
+								</div>
+							</div>
+							<div class="trait-row">
+								<div class="trait">
+									<b>Size:</b> Medium
+								</div>
+								<div class="trait">
+									<b>Speed:</b> 20 feet
+								</div>
+								<div class="trait">
+									<b>Senses:</b> Darkvision 60 feet
+								</div>
+							</div>
+							<div class="last trait-row">
+								<div class="trait">
+									<b>Languages:</b> 
+									Common, Dwarven <span id="dwarf-bonus-languages"></span>
+								</div>
+							</div>
+						</div>
+						
+						<h3>Offensive Traits</h3>
+						<div class="trait-table">
+							<div class="trait-row">
+								<div class="last trait">
+									<b>Hatred:</b> +1 on attack rolls against orcs and goblinoids
+								</div>
+							</div>
+						</div>
+						
+						<h3>Defensive Traits</h3>
+						<div class="trait-table">
+							<div class="trait-row">
+								<div class="trait">
+									<b>Defensive Training:</b> +4 to armor class against giants
+								</div>
+							</div>
+							<div class="trait-row">
+								<div class="trait">
+									<b>Hardy:</b> +2 on saving throws against poison, spells, and spell-like abilities
+								</div>
+							</div>
+							<div class="trait-row">
+								<div class="trait">
+									<b>Stability:</b> +4 to combat manuevour defence against bull rush and trip attempts
+								</div>
+							</div>
+						</div>
+						
+						<h3>Skill Traits</h3>
+						<div class="trait-table">
+							<div class="trait-row">
+								<div class="trait">
+									<b>Greed:</b> +2 racial bonus on Appraise checks made to determine the price of nonmagical goods that contain precious metals or gemstones
+								</div>
+							</div>
+							<div class="trait-row">
+								<div class="trait">
+									<b>Stonecunning:</b> +2 bonus on Perception checks to notice unusual stonework even when not actively looking
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="trait-side-bar box">
+							<h3>Abilities</h3>
+							Str: 10
+							<div class="bar-background mini-bar"></div>
+							Dex: 10
+							<div class="bar-background mini-bar"></div>
+							Con: 10
+							<div class="bar-background mini-bar"></div>
+							Int: 10
+							<div class="bar-background mini-bar"></div>
+							Wis: 10
+							<div class="bar-background mini-bar"></div>
+							Cha: 10
+							<div class="bar-background mini-bar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="step-three">
 			<h1>Step Three: Class</h1><div class="space-between flex">
-                <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
+                <div id="cleric-selection-card" class="race-selection-card selected-card box" onclick="becomeCleric();">
                     <div class="shaded-bottom">
                         <h3>Cleric</h3>
                     </div>
                 </div>
-                <div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
+                <div id="fighter-selection-card" class="race-selection-card box" onclick="becomeFighter();">
                     <div class="shaded-bottom">
                         <h3>Fighter</h3>
                     </div>
                 </div>
-                <div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
+                <div id="rogue-selection-card" class="race-selection-card box" onclick="becomeRogue();">
                     <div class="shaded-bottom">
                         <h3>Rogue</h3>
                     </div>
                 </div>
-                <div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
+                <div id="wizard-selection-card" class="race-selection-card box" onclick="becomeWizard();">
                     <div class="shaded-bottom">
                         <h3>Wizard</h3>
                     </div>
@@ -369,10 +422,19 @@
 				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
 				<!-- Sneak attack and Trapfinding-->
 			</div>
-        </div>
-		<div id="continue-step-three" class="continue">
-            <a href="#top">Continue</a>
-        </div>
+			</div>
+			<div id="step-four">
+				
+			</div>
+			<div id="step-five">
+				
+			</div>
+			<div id="step-six">
+			</div>
+            <div class="continue">
+                <a href="#top" onclick="advance();">Continue</a>
+            </div>
+		</div>
 		<footer>
 			<div class="footer">
 				<div class="footer-col">

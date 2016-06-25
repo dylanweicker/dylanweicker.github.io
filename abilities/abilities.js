@@ -1,5 +1,61 @@
 
+var step = 0;
+function advance(){
+	step++;
+	hideAllSteps();
+	switch (step){
+		case 0:
+			document.getElementById('step-one').style.display = "block";
+			document.getElementById('stepper-one').classList.add('active-step');
+			break;
+		case 1:
+			document.getElementById('step-two').style.display = "block";
+			document.getElementById('stepper-one').classList.remove('active-step');
+			document.getElementById('stepper-one').classList.add('completed-step');
+			document.getElementById('stepper-two').classList.remove('inactive');
+			document.getElementById('stepper-two').classList.add('active-step');
+			break;
+		case 2:
+			document.getElementById('step-three').style.display = "block";
+			document.getElementById('stepper-two').classList.remove('active-step');
+			document.getElementById('stepper-two').classList.add('completed-step');
+			document.getElementById('stepper-three').classList.remove('inactive');
+			document.getElementById('stepper-three').classList.add('active-step');
+			break;
+		case 3:
+			document.getElementById('step-four').style.display = "block";
+			document.getElementById('stepper-three').classList.remove('active-step');
+			document.getElementById('stepper-three').classList.add('completed-step');
+			document.getElementById('stepper-four').classList.remove('inactive');
+			document.getElementById('stepper-four').classList.add('active-step');
+			break;
+		case 4:
+			document.getElementById('step-five').style.display = "block";
+			document.getElementById('stepper-four').classList.remove('active-step');
+			document.getElementById('stepper-four').classList.add('completed-step');
+			document.getElementById('stepper-five').classList.remove('inactive');
+			document.getElementById('stepper-five').classList.add('active-step');
+			break;
+		case 5:
+			document.getElementById('step-six').style.display = "block";
+			document.getElementById('stepper-five').classList.remove('active-step');
+			document.getElementById('stepper-five').classList.add('completed-step');
+			document.getElementById('stepper-six').classList.remove('inactive');
+			document.getElementById('stepper-six').classList.add('active-step');
+			break;
+	}
+ }
 
+function hideAllSteps(){
+	document.getElementById('step-one').style.display = 'none';
+	document.getElementById('step-two').style.display = 'none';
+	document.getElementById('step-three').style.display = 'none';
+	document.getElementById('step-four').style.display = 'none';
+	document.getElementById('step-five').style.display = 'none';
+	document.getElementById('step-six').style.display = 'none';
+}
+ 
+//--- Abilities Section --------
 var str = 10;
 var dex = 10;
 var con = 10;
@@ -28,14 +84,20 @@ function updateStats(){
 }
 
 function calculateMod(score){
-	var mod = Math.floor((score - 10) / 2);
+	var mod = calculateUnsignedMod(score);
 	if (mod >= 0) {
 		mod = "+" + mod;
 	}
 	return mod;
 }
 
+function calculateUnsignedMod(score){
+	return mod = Math.floor((score - 10) / 2);
+}
+
 function setupAbilities(){
+	hideAllSteps();
+	document.getElementById('step-one').style.display = "block";
     displayStrInfo();
     document.getElementById('radio-20').checked = true;
     setMaxCost(20);
@@ -166,6 +228,7 @@ function updateStr(){
 	document.getElementById("iq-score").innerHTML = "Score: " + totIq + "  (" + calculateMod(totIq) + ")";
 	document.getElementById("iq-cost").innerHTML = "Cost: " + costMap[iq];
 	updatePointsSpent();
+	updateBonusLanguages();
 }function updateWis(){
 	totWis = wis + wisBonus;
 	var width = wis * 5;
@@ -197,6 +260,10 @@ function updatePointsSpent(){
 	document.getElementById("total-cost").innerHTML = "Total Cost: " + currCost;
 }
 
+//--- Races Section --------
+var races = {dwarf: 1, elf: 2, halfling: 3, human: 4};
+var myRace;
+
 function deselectRaces(){
 	document.getElementById('dwarf-selection-card').classList.remove('selected-card');
 	document.getElementById('elf-selection-card').classList.remove('selected-card');
@@ -207,21 +274,69 @@ function deselectRaces(){
 function becomeDwarf(){
 	deselectRaces();
 	document.getElementById('dwarf-selection-card').classList.add('selected-card');
+	myRace = races.dwarf;
 }
 
 function becomeElf(){
 	deselectRaces();
 	document.getElementById('elf-selection-card').classList.add('selected-card');
+	myRace = races.elf;
 }
 
 function becomeHalfling(){
 	deselectRaces();
 	document.getElementById('halfling-selection-card').classList.add('selected-card');
+	myRace = races.halfling;
 }
 
 function becomeHuman(){
 	deselectRaces();
 	document.getElementById('human-selection-card').classList.add('selected-card');
+	myRace = races.human;
+}
+
+function updateBonusLanguages(){
+	if (iq > 11){
+		document.getElementById('dwarf-bonus-languages').innerHTML = 'and ' + calculateUnsignedMod(wis + wisBonus) + ' bonus languages:<br>Giant<input type="checkbox" name="dwarf-languages" value="giant"> Gnome<input type="checkbox" name="dwarf-languages" value="gnome"> Goblin<input type="checkbox" name="dwarf-languages" value="goblin"> Orc<input type="checkbox" name="dwarf-languages" value="orc"> Terran<input type="checkbox" name="dwarf-languages" value="terran"> Undercommon<input type="checkbox" name="dwarf-languages" value="undercommon">';
+	}
+	else{
+		document.getElementById('dwarf-bonus-languages').innerHTML = "";
+	}
+}
+								
+//--- Classes Section ------
+var classes = {cleric: 1, fighter: 2, rogue: 3, wizard: 4};
+var myClass;
+
+function deselectClasses(){
+	document.getElementById('cleric-selection-card').classList.remove('selected-card');
+	document.getElementById('fighter-selection-card').classList.remove('selected-card');
+	document.getElementById('rogue-selection-card').classList.remove('selected-card');
+	document.getElementById('wizard-selection-card').classList.remove('selected-card');
+}
+
+function becomeCleric(){
+	deselectClasses();
+	document.getElementById('cleric-selection-card').classList.add('selected-card');
+	myClass = classes.cleric;
+}
+
+function becomeFighter(){
+	deselectClasses();
+	document.getElementById('fighter-selection-card').classList.add('selected-card');
+	myClass = classes.fighter;
+}
+
+function becomeRogue(){
+	deselectClasses();
+	document.getElementById('rogue-selection-card').classList.add('selected-card');
+	myClass = classes.rogue;
+}
+
+function becomeWizard(){
+	deselectClasses();
+	document.getElementById('wizard-selection-card').classList.add('selected-card');
+	myClass = classes.wizard;
 }
 
 //Spell Section ---------------------------------------

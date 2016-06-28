@@ -73,10 +73,24 @@ header{
 	font-size: 32px;
 }
 
+.header b{
+	padding-top: 10px;
+    padding-left: 10px;
+}
+
 .header img{
     width: 48px;
     height: 48px;
     vertical-align:middle;
+}
+
+.header a{
+	color: white;
+	text-decoration: none;
+}
+.header a:hover{
+	color: orange;
+	text-decoration: none;
 }
 
 .left{
@@ -99,6 +113,11 @@ header{
 .flex{
     display: flex;
 }
+.flex-wrap{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
 
 .space-between{
 	justify-content: space-between;
@@ -112,6 +131,36 @@ header{
 
 .valign-middle{
     vertical-align: middle;
+}
+
+.tooltip{
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-top: 20px;
+    margin-left: -80px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip:hover .disabled {
+    visibility: hidden !important;
 }
 
 .side-bar{
@@ -160,6 +209,7 @@ header{
     border-radius: 5px;
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.05);
 	padding: 1em;
+    transition: 200ms linear;
 }
 
 .one-ability{
@@ -204,40 +254,40 @@ header{
 }
 
 .bar{
-    width: 50%;
     height: 100%;
     border-radius: 10px;
 	transition: 300ms linear;
 }
 
-#str-bar{
+/* TODO: turn these into classes; make a call to get all elements with that class and change width
+you can then reuse these bars as a reference throughout each step*/
+.str-bar{
     background-color: #C66;
+    width: 50%;
 }
-#dex-bar{
+.dex-bar{
     background-color: #CC6;
+    width: 50%;
 }
-#con-bar{
+.con-bar{
     background-color: #6c6;
+    width: 50%;
 }
-#iq-bar{
+.iq-bar{
     background-color: #6CC;
+    width: 50%;
 }
-#wis-bar{
+.wis-bar{
     background-color: #66C;
+    width: 50%;
 }
-#cha-bar{
+.cha-bar{
     background-color: #C6C;
+    width: 50%;
 }
 
 #total-cost{
 	transition: 300ms ease;
-}
-
-.disabled a, .disabled a:hover{
-	color: #999 !important;
-	background: inherit !important;
-	border-color: #999 !important;
-	cursor:not-allowed !important;
 }
 
 .score-info{
@@ -249,9 +299,10 @@ header{
 }
 
 .race-selection-card{
-    height: 260px;
-    width: 180px;
+    height: 280px;
+    width: 200px;
     position: relative;
+    text-align: center;
 }
 
 .race-selection-card:hover{
@@ -264,9 +315,7 @@ header{
 }
 
 .race-selection-card img{
-	width: 80%;
-	height: auto;
-	margin: auto;
+	height: 220px;
 }
 
 .selected-card{
@@ -279,12 +328,12 @@ header{
 	color: orange !important;
 }
 
-.racial-info{
+.vertical-margin{
     margin: 1.5em 0;
 }
 
 .trait-section{
-	width: 720px;
+	width: 740px;
 }
 
 
@@ -299,17 +348,37 @@ header{
 	margin-bottom: 20px;
 }
 
+.trait-table:last-child{
+   border-bottom: none;
+}
+
 .trait-row{
 	display: flex;
 	border-bottom: 1px solid #eee;
+    padding: 10px;
 }
 
 .trait{
-	margin: 10px;
+	margin-right: 10px;
 }
 
 .trait-side-bar{
 	width: 180px;
+}
+
+.trait-side-bar h4{
+    font-size: 12;
+    font-weight: normal;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.trait-side-bar h5{
+    font-size: 12;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0;
 }
 
 #stepper-banner{
@@ -364,26 +433,44 @@ header{
 }
 
 .continue{
-    margin: 1.5em 0 3.5em 0;
-    width: 100%;
-    text-align: right;
+    margin: 1.5em 0;
 }
 
 .continue a{
-    color: dodgerblue;
-    text-decoration: none;
-    padding: 10px 50px;
-    border: solid dodgerblue 1px;
-    border-radius: 5px;
+    margin: 0 !important;
+    padding: 10px 50px !important;
 }
 
-.continue a:hover{
-    background: dodgerblue;
-    color: #FAFAFA;
+.ghost-button a{
+    color: dodgerblue;
     text-decoration: none;
-    padding: 10px 50px;
     border: solid dodgerblue 1px;
     border-radius: 5px;
+    padding: 10px 40px;
+    text-align: center;
+    flex: 1;
+    width: 90px;
+    margin: 10px;
+}
+
+.ghost-button a:hover{
+    background: dodgerblue;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
+.selected, .selected:hover{
+    color: orange !important;
+    border-color: orange !important;
+    background-color: inherit !important;
+    cursor: inherit !important;
+}
+
+.disabled a, .disabled a:hover{
+	color: #999 !important;
+	background: inherit !important;
+	border-color: #999 !important;
+	cursor: inherit !important;
 }
 
 #cantrips{
@@ -422,7 +509,22 @@ footer{
 	margin-top: 5em;
 	padding: 5em;
 	background-color: #333;
-	color: #fff;
+	color: #eee;
+}
+
+footer h3{
+    color: #fff;
+    text-align: left;
+    padding-left: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+footer a:hover{
+    text-decoration: none;
+    color: orange;
 }
 
 .footer{
@@ -433,6 +535,7 @@ footer{
 }
 
 .footer-col{
-	flex: 1;
+    padding-right: 50px;
+    min-width: 180px;
 	text-align: left;
 }

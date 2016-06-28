@@ -10,13 +10,12 @@
         <meta name="description" content="An interactive guide for creating a Pathfinder character.">
         <link rel="stylesheet" href="main.css">
         <script type="text/javascript" src="abilities.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body onload="setupAbilities(); setupWizardSpells();">
+    <body onload="setupAbilities(); becomeHuman(); setupWizardSpells();">
         <header>
             <div class="header left" style="vertical-align: center;">
-                <img src="../images/dpsymbol.gif">Dylan Pride
+                <a href="../"><img src="../images/dplogo.png"><b>Dylan Pride</b></a>
             </div>
             <div class="header right">
                 <i class="material-icons">menu</i>
@@ -40,7 +39,7 @@
 							<div class="justify-center valign-middle flex">
 								<i class="material-icons" onclick="decStr();">remove</i>
 								<div class="bar-background">
-									<div class="bar" id="str-bar"></div>
+									<div class="bar str-bar"></div>
 								</div>
 								<i class="material-icons" onclick="incStr();">add</i>
 							</div>
@@ -58,7 +57,7 @@
 							<div class="justify-center valign-middle flex">
 								<i class="material-icons" onclick="decDex();">remove</i>
 								<div class="bar-background">
-									<div class="bar" id="dex-bar"></div>
+									<div class="bar dex-bar"></div>
 								</div>
 								<i class="material-icons" onclick="incDex();">add</i>
 							</div>
@@ -76,7 +75,7 @@
 							<div class="justify-center valign-middle flex">
 								<i class="material-icons" onclick="decCon();">remove</i>
 								<div class="bar-background">
-									<div class="bar" id="con-bar"></div>
+									<div class="bar con-bar"></div>
 								</div>
 								<i class="material-icons" onclick="incCon();">add</i>
 							</div>
@@ -94,7 +93,7 @@
 							<div class="justify-center valign-middle flex">
 								<i class="material-icons" onclick="decIq();">remove</i>
 								<div class="bar-background">
-									<div class="bar" id="iq-bar"></div>
+									<div class="bar iq-bar"></div>
 								</div>
 								<i class="material-icons" onclick="incIq();">add</i>
 							</div>
@@ -112,7 +111,7 @@
 							<div class="justify-center valign-middle flex">
 								<i class="material-icons" onclick="decWis();">remove</i>
 								<div class="bar-background">
-									<div class="bar" id="wis-bar"></div>
+									<div class="bar wis-bar"></div>
 								</div>
 								<i class="material-icons" onclick="incWis();">add</i>
 							</div>
@@ -130,7 +129,7 @@
 							<div class="justify-center valign-middle flex">
 								<i class="material-icons" onclick="decCha();">remove</i>
 								<div class="bar-background">
-									<div class="bar" id="cha-bar"></div>
+									<div class="bar cha-bar"></div>
 								</div>
 								<i class="material-icons" onclick="incCha();">add</i>
 							</div>
@@ -238,151 +237,154 @@
 				</div>
 			</div>
 			<div id="step-two">
-				<h1>Step Two: Race</h1>
-				<div class="space-between flex">
-					<div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
-						<img src="../images/Dwarf.jpg">
-						<div class="shaded-bottom">
-							<h3>Dwarf</h3>
-						</div>
-					</div>
-					<div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
-						<img src="../images/Elf.jpg">
-						<div class="shaded-bottom">
-							<h3>Elf</h3>
-						</div>
-					</div>
-					<div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
-						<img src="../images/Halfling.jpg">
-						<div class="shaded-bottom">
-							<h3>Halfling</h3>
-						</div>
-					</div>
-					<div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
-						<img src="../images/Human.jpg">
-						<div class="shaded-bottom">
-							<h3>Human</h3>
-						</div>
-					</div>
+				<div id="race-selection">
+                    <div class="space-between flex">
+                        <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
+                            <img src="../images/Dwarf.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Dwarf</h3>
+                            </div>
+                        </div>
+                        <div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
+                            <img src="../images/Elf.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Elf</h3>
+                            </div>
+                        </div>
+                        <div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
+                            <img src="../images/Halfling.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Halfling</h3>
+                            </div>
+                        </div>
+                        <div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
+                            <img src="../images/Human.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Human</h3>
+                            </div>
+                        </div>
+                    </div>
 				</div>
-				<div class="racial-info box">
-					<h2>Dwarf</h2>
-					<p>
-						Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, dwarves have acquired a reputation as dour and humorless artisans of the earth. It could be said that their history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.
-					</p>
-				</div>
+                <div id="class-selection">
+                    <div class="space-between flex">
+                        <div id="cleric-selection-card" class="race-selection-card selected-card box" onclick="becomeCleric();">
+                            <div class="shaded-bottom">
+                                <h3>Cleric</h3>
+                            </div>
+                        </div>
+                        <div id="fighter-selection-card" class="race-selection-card box" onclick="becomeFighter();">
+                            <div class="shaded-bottom">
+                                <h3>Fighter</h3>
+                            </div>
+                        </div>
+                        <div id="rogue-selection-card" class="race-selection-card box" onclick="becomeRogue();">
+                            <div class="shaded-bottom">
+                                <h3>Rogue</h3>
+                            </div>
+                        </div>
+                        <div id="wizard-selection-card" class="race-selection-card box" onclick="becomeWizard();">
+                            <div class="shaded-bottom">
+                                <h3>Wizard</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 				<div class="space-between flex">
-					<div class="trait-section box">
-						<h3>Standard Traits</h3>
-						<div class="trait-table">
-							<div class="trait-row">
-								<div class="trait">
-									<b>Ability Score:</b> +2 Constitution, +2 Wisdom, and -2 Charisma
-								</div>
-							</div>
-							<div class="trait-row">
-								<div class="trait">
-									<b>Size:</b> Medium
-								</div>
-								<div class="trait">
-									<b>Speed:</b> 20 feet
-								</div>
-								<div class="trait">
-									<b>Senses:</b> Darkvision 60 feet
-								</div>
-							</div>
-							<div class="last trait-row">
-								<div class="trait">
-									<b>Languages:</b> 
-									Common, Dwarven <span id="dwarf-bonus-languages"></span>
-								</div>
-							</div>
-						</div>
-						
-						<h3>Offensive Traits</h3>
-						<div class="trait-table">
-							<div class="trait-row">
-								<div class="last trait">
-									<b>Hatred:</b> +1 on attack rolls against orcs and goblinoids
-								</div>
-							</div>
-						</div>
-						
-						<h3>Defensive Traits</h3>
-						<div class="trait-table">
-							<div class="trait-row">
-								<div class="trait">
-									<b>Defensive Training:</b> +4 to armor class against giants
-								</div>
-							</div>
-							<div class="trait-row">
-								<div class="trait">
-									<b>Hardy:</b> +2 on saving throws against poison, spells, and spell-like abilities
-								</div>
-							</div>
-							<div class="trait-row">
-								<div class="trait">
-									<b>Stability:</b> +4 to combat manuevour defence against bull rush and trip attempts
-								</div>
-							</div>
-						</div>
-						
-						<h3>Skill Traits</h3>
-						<div class="trait-table">
-							<div class="trait-row">
-								<div class="trait">
-									<b>Greed:</b> +2 racial bonus on Appraise checks made to determine the price of nonmagical goods that contain precious metals or gemstones
-								</div>
-							</div>
-							<div class="trait-row">
-								<div class="trait">
-									<b>Stonecunning:</b> +2 bonus on Perception checks to notice unusual stonework even when not actively looking
-								</div>
-							</div>
-						</div>
-					</div>
+                    <div class="trait-section">
+                        <div id="race-description-container" class="vertical-margin box">
+                            <h2 id="race-name"></h2>
+                            <p id="race-description"></p>
+                        </div>
+                        <div id="racial-traits" class="box">
+                            <h3>Standard Traits</h3>
+                            <div class="trait-table">
+                                <div class="trait-row">
+                                    <div class="trait">
+                                        <b>Ability Score:</b> <span id="racial-ability-score"></span>
+                                    </div>
+                                </div>
+                                <div class="trait-row">
+                                    <div class="trait">
+                                        <b>Size:</b> <span id="racial-size"></span>
+                                    </div>
+                                    <div class="trait">
+                                        <b>Speed:</b> <span id="racial-speed"></span>
+                                    </div>
+                                    <div class="trait">
+                                        <b>Senses:</b> <span id="racial-senses"></span>
+                                    </div>
+                                </div>
+                                <div class="last trait-row">
+                                    <div class="trait">
+                                        <b>Languages:</b><span id="racial-languages"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="offensive-traits-container">
+                                <h3>Offensive Traits</h3>
+                                <div id="offensive-traits" class="trait-table">
+                                </div>
+                            </div>
+
+
+                            <div id="defensive-traits-container">
+                                <h3>Defensive Traits</h3>
+                                <div id="defensive-traits" class="trait-table">
+                                </div>
+                            </div>
+                            
+                            <div id="magical-traits-container">
+                                <h3>Magical Traits</h3>
+                                <div id="magical-traits" class="trait-table">
+                                </div>
+                            </div>
+                            
+                            <div id="skill-traits-container">
+                                <h3>Skill Traits</h3>
+                                <div id="skill-traits" class="trait-table">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					<div>
-						<div class="trait-side-bar box">
-							<h3>Abilities</h3>
-							Str: 10
-							<div class="bar-background mini-bar"></div>
-							Dex: 10
-							<div class="bar-background mini-bar"></div>
-							Con: 10
-							<div class="bar-background mini-bar"></div>
-							Int: 10
-							<div class="bar-background mini-bar"></div>
-							Wis: 10
-							<div class="bar-background mini-bar"></div>
-							Cha: 10
-							<div class="bar-background mini-bar"></div>
-						</div>
+						<div class="trait-side-bar vertical-margin box">
+                            <h3>Abilities</h3>
+                            <h4 id="str-score-mini">Str: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar str-bar"></div>
+                            </div>
+                            <h4 id="dex-score-mini">Dex: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar dex-bar"></div>
+                            </div>
+                            <h4 id="con-score-mini">Con: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar con-bar"></div>
+                            </div>
+                            <h4 id="iq-score-mini">Int: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar iq-bar"></div>
+                            </div>
+                            <h4 id="wis-score-mini">Wis: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar wis-bar"></div>
+                            </div>
+                            <h4 id="cha-score-mini">Cha: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar cha-bar"></div>
+                            </div>
+                        </div>
+                            
+						<div class="trait-side-bar vertical-margin box">
+                            <h3>Dwarf</h3>
+                            <h5>Languages</h5>Common, Dwarven, Orc
+                            <h5>Traits</h5>Hatred, Greed, Stonebreaker, Hardy, Surefooted
+                        </div>
 					</div>
 				</div>
 			</div>
 			<div id="step-three">
-			<h1>Step Three: Class</h1><div class="space-between flex">
-                <div id="cleric-selection-card" class="race-selection-card selected-card box" onclick="becomeCleric();">
-                    <div class="shaded-bottom">
-                        <h3>Cleric</h3>
-                    </div>
-                </div>
-                <div id="fighter-selection-card" class="race-selection-card box" onclick="becomeFighter();">
-                    <div class="shaded-bottom">
-                        <h3>Fighter</h3>
-                    </div>
-                </div>
-                <div id="rogue-selection-card" class="race-selection-card box" onclick="becomeRogue();">
-                    <div class="shaded-bottom">
-                        <h3>Rogue</h3>
-                    </div>
-                </div>
-                <div id="wizard-selection-card" class="race-selection-card box" onclick="becomeWizard();">
-                    <div class="shaded-bottom">
-                        <h3>Wizard</h3>
-                    </div>
-                </div>
-            </div>
 			<div id="wizard" class="box">
 				<h2>Wizard</h2>
 				<p>
@@ -431,22 +433,62 @@
 			</div>
 			<div id="step-six">
 			</div>
-            <div class="continue">
-                <a href="#top" onclick="advance();">Continue</a>
+                        
+            
+            <div class="space-between flex">
+                <div id="previous" class="disabled ghost-button continue">
+                    <a onclick="previous();">Previous</a>
+                </div>
+                <div id="continue" class="right ghost-button continue">
+                        <a onclick="next();">Continue</a>
+                </div>
             </div>
+            
 		</div>
 		<footer>
 			<div class="footer">
 				<div class="footer-col">
-					Links
+					<h3>
+                        About This App
+                    </h3>
+                    <p>
+                        This Pathfinder Character Creator is designed to allow a new player to quickly and easily create a first level character.
+                    </p>
+                    <p>
+                        I have been a Pathfinder fanatic since 2013 and I understand how overwhelming character creation can be for a first-timer. I created this app to ease the confusion of newbies and allow them to swiftly customize their first character.
+                    </p>
+                    <h3>
+                        Credits
+                    </h3>
+                    <p>
+					   The Pathfinder Roleplaying Game is created by Paizo and released under the Open Game License, meaning the core rules that drive the Pathfinder RPG system are available to anyone to use for free under the terms of the OGL.
+                    </p>
+                    <p>
+                        This character creation web application was designed and implemented wholly by Dylan Weicker.
+                    </p>
 				</div>
 				<div class="footer-col">
-					Rules made by Paizo<br>
-					UI Designed by Dylan<br>
-					HTML, CSS, and JavaScript by Dylan<br>
-					Icons by Good<br>
+                    <h3>
+                        About Me
+                    </h3>
+                    <p>My name is Dylan! I'm a 21 year-old computer science student from UBC. I have a huge interest in UI, software engineering, and table-top role playing. This app was created as a hobby-project in my free time.</p>
+                    <h3>
+                        Social Media
+                    </h3>
+                    <li><a href="https://facebook.com/dylan.weicker">Facebook</a></li>
+                    <li><a href="https://twitter.com/nifflr">Twitter</a></li>
+                    <li><a href="https://instagram.com/nifflr">Instagram</a></li>
+                    <li><a href="https://youtube.com/user/nifflr">Youtube</a></li>
+                    <li><a href="https://dylanpride.tumblr.com">Tumblr</a></li>
+                    <li><a href="https://www.linkedin.com/in/dylan-weicker-3b9809111">LinkedIn</a></li>
+                    <li><a href="https://github.com/DylanPride">GitHub</a></li>
 				</div>
-				<div class="footer-col"></div>
+				<div class="footer-col">
+                    <h3>
+                        Site Map
+                    </h3>
+                    <a href="../">Home</a>
+                </div>
 			</div>
 		</footer>
     </body>

@@ -144,7 +144,8 @@ header{
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px;
+	box-sizing: border-box;
     
     /* Position the tooltip */
     position: absolute;
@@ -286,6 +287,25 @@ you can then reuse these bars as a reference throughout each step*/
     width: 50%;
 }
 
+.str-text{
+    color: #C66;
+}
+.dex-text{
+    color: #CC6;
+}
+.con-text{
+    color: #6c6;
+}
+.iq-text{
+    color: #6CC;
+}
+.wis-text{
+    color: #66C;
+}
+.cha-text{
+    color: #C6C;
+}
+
 #total-cost{
 	transition: 300ms ease;
 }
@@ -332,7 +352,7 @@ you can then reuse these bars as a reference throughout each step*/
     margin: 1.5em 0;
 }
 
-.trait-section{
+.main-content{
 	width: 740px;
 }
 

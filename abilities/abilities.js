@@ -24,6 +24,8 @@ function showCurrentStep(){
 			document.getElementById('step-two').style.display = "block";
 			document.getElementById('race-selection').style.display = "block";
 			document.getElementById('class-selection').style.display = "none";
+			document.getElementById('race-content').style.display = "block";
+			document.getElementById('class-content').style.display = "none";
 			document.getElementById('stepper-one').classList.remove('active-step');
 			document.getElementById('stepper-one').classList.add('completed-step');
 			document.getElementById('stepper-two').classList.remove('inactive');
@@ -34,6 +36,8 @@ function showCurrentStep(){
 		case 2:
 			document.getElementById('race-selection').style.display = "none";
 			document.getElementById('class-selection').style.display = "block";
+			document.getElementById('race-content').style.display = "none";
+			document.getElementById('class-content').style.display = "block";
 			document.getElementById('step-two').style.display = "block";
 			document.getElementById('stepper-two').classList.remove('active-step');
 			document.getElementById('stepper-two').classList.add('completed-step');
@@ -97,12 +101,12 @@ var iq = 10;
 var wis = 10;
 var cha = 10;
 
-var strBonus = 0;
-var dexBonus = 0;
-var conBonus = 0;
-var iqBonus = 0;
-var wisBonus = 0;
-var chaBonus = 0;
+var racialStr = 0;
+var racialDex = 0;
+var racialCon = 0;
+var racialIq = 0;
+var racialWis = 0;
+var racialCha = 0;
 
 var costMap = {'7': -4, '8': -2, '9': -1, '10': 0, '11': 1, '12': 2, '13': 3, '14': 5, '15': 7, '16': 10, '17': 13, '18': 17};
 var currCost;
@@ -129,7 +133,7 @@ function calculateUnsignedMod(score){
 	return mod = Math.floor((score - 10) / 2);
 }
 
-function setupAbilities(){
+function setupAbilities() {
 	hideAllSteps();
 	document.getElementById('step-one').style.display = "block";
     displayStrInfo();
@@ -250,12 +254,12 @@ function decCha(){
 }
 
 function resetAbilityBonuses(){
-    strBonus = 0;
-    dexBonus = 0;
-    conBonus = 0;
-    iqBonus = 0;
-    wisBonus = 0;
-    chaBonus = 0;
+    racialStr = 0;
+    racialDex = 0;
+    racialCon = 0;
+    racialIq = 0;
+    racialWis = 0;
+    racialCha = 0;
 }
 
 function updateAllAbilities(){
@@ -279,42 +283,42 @@ function deselectFlexAbilities(){
 function flexStr(){
     resetAbilityBonuses();
     deselectFlexAbilities();
-    strBonus = 2;
+    racialStr = 2;
     document.getElementById("str-flex").classList.add('selected');
     updateAllAbilities();
 }
 function flexDex(){
     resetAbilityBonuses();
     deselectFlexAbilities();
-    dexBonus = 2;
+    racialDex = 2;
     document.getElementById("dex-flex").classList.add('selected');
     updateAllAbilities();
 }
 function flexCon(){
     resetAbilityBonuses();
     deselectFlexAbilities();
-    conBonus = 2;
+    racialCon = 2;
     document.getElementById("con-flex").classList.add('selected');
     updateAllAbilities();
 }
 function flexIq(){
     resetAbilityBonuses();
     deselectFlexAbilities();
-    iqBonus = 2;
+    racialIq = 2;
     document.getElementById("iq-flex").classList.add('selected');
     updateAllAbilities();
 }
 function flexWis(){
     resetAbilityBonuses();
     deselectFlexAbilities();
-    wisBonus = 2;
+    racialWis = 2;
     document.getElementById("wis-flex").classList.add('selected');
     updateAllAbilities();
 }
 function flexCha(){
     resetAbilityBonuses();
     deselectFlexAbilities();
-    chaBonus = 2;
+    racialCha = 2;
     document.getElementById("cha-flex").classList.add('selected');
     updateAllAbilities();
 }
@@ -328,7 +332,7 @@ function updateBarWidth(bar, width) {
 }
 
 function updateStr(){
-	totStr = str + strBonus;
+	totStr = str + racialStr;
 	var width = totStr * 5;
 	updateBarWidth('str-bar', width);
 	document.getElementById("str-score").innerHTML = "Score: " + totStr + "  (" + calculateMod(totStr) + ")";
@@ -337,7 +341,7 @@ function updateStr(){
 	updatePointsSpent();
 }
 function updateDex(){
-	totDex = dex + dexBonus;
+	totDex = dex + racialDex;
 	var width = totDex * 5;
 	updateBarWidth('dex-bar', width);
 	document.getElementById("dex-score").innerHTML = "Score: " + totDex + "  (" + calculateMod(totDex) + ")";
@@ -346,7 +350,7 @@ function updateDex(){
 	updatePointsSpent();
 }
 function updateCon(){
-	totCon = con + conBonus;
+	totCon = con + racialCon;
 	var width = totCon * 5;
 	updateBarWidth('con-bar', width);
 	document.getElementById("con-score").innerHTML = "Score: " + totCon + "  (" + calculateMod(totCon) + ")";
@@ -355,7 +359,7 @@ function updateCon(){
 	updatePointsSpent();
 }
 function updateIq(){
-	totIq = iq + iqBonus;
+	totIq = iq + racialIq;
 	var width = totIq * 5;
 	updateBarWidth('iq-bar', width);
 	document.getElementById("iq-score").innerHTML = "Score: " + totIq + "  (" + calculateMod(totIq) + ")";
@@ -365,7 +369,7 @@ function updateIq(){
 	updateBonusLanguages(myRace);
 }
 function updateWis(){
-	totWis = wis + wisBonus;
+	totWis = wis + racialWis;
 	var width = totWis * 5;
 	updateBarWidth('wis-bar', width);
 	document.getElementById("wis-score").innerHTML = "Score: " + totWis + "  (" + calculateMod(totWis) + ")";
@@ -374,7 +378,7 @@ function updateWis(){
 	updatePointsSpent();
 }
 function updateCha(){
-	totCha = cha + chaBonus;
+	totCha = cha + racialCha;
 	var width = totCha * 5;
 	updateBarWidth('cha-bar', width);
 	document.getElementById("cha-score").innerHTML = "Score: " + totCha + "  (" + calculateMod(totCha) + ")";
@@ -524,12 +528,12 @@ function changeRace(raceCard, race){
 }
 
 function updateRacialAbilityBonuses(s, d, co, i, w, ch){
-    strBonus = s;
-    dexBonus = d;
-    conBonus = co;
-    iqBonus = i;
-    wisBonus = w;
-    chaBonus = ch;
+    racialStr = s;
+    racialDex = d;
+    racialCon = co;
+    racialIq = i;
+    racialWis = w;
+    racialCha = ch;
     
     updateStr();
     updateDex();
@@ -561,8 +565,8 @@ function becomeHuman(){
 
 function updateBonusLanguages(race){
     var languages = race.languages;
-	if ((iq + iqBonus) > 11){
-        languages += ' and ' + calculateUnsignedMod(iq + iqBonus) + ' bonus languages:<br>';
+	if ((iq + racialIq) > 11){
+        languages += ' and ' + calculateUnsignedMod(iq + racialIq) + ' bonus languages:<br>';
         for (var lang in race.bonusLanguages) {
             languages += race.bonusLanguages[lang] + '<input type="checkbox" name="bonus-languages" value=race.language[lang]>&nbsp';
         }
@@ -615,41 +619,6 @@ function displayRacialTraits(traits){
         document.getElementById('skill-traits-container').style.display = 'block';
     }
 }
-								
-//--- Classes Section ------
-var classes = {cleric: 1, fighter: 2, rogue: 3, wizard: 4};
-var myClass;
-
-function deselectClasses(){
-	document.getElementById('cleric-selection-card').classList.remove('selected-card');
-	document.getElementById('fighter-selection-card').classList.remove('selected-card');
-	document.getElementById('rogue-selection-card').classList.remove('selected-card');
-	document.getElementById('wizard-selection-card').classList.remove('selected-card');
-}
-
-function becomeCleric(){
-	deselectClasses();
-	document.getElementById('cleric-selection-card').classList.add('selected-card');
-	myClass = classes.cleric;
-}
-
-function becomeFighter(){
-	deselectClasses();
-	document.getElementById('fighter-selection-card').classList.add('selected-card');
-	myClass = classes.fighter;
-}
-
-function becomeRogue(){
-	deselectClasses();
-	document.getElementById('rogue-selection-card').classList.add('selected-card');
-	myClass = classes.rogue;
-}
-
-function becomeWizard(){
-	deselectClasses();
-	document.getElementById('wizard-selection-card').classList.add('selected-card');
-	myClass = classes.wizard;
-}
 
 //Spell Section ---------------------------------------
 var MaxSpells = 0;
@@ -693,4 +662,153 @@ function displayCantrips(){
 			document.getElementById('cantrips').appendChild(newElement);
 		}
 	} 
+}
+
+//---Skill Section ------
+var ability = {str: 1, dex: 2, con: 3, iq: 4, wis: 5, cha: 6};
+
+var skill = function(name, abilityScore, trainedOnly) {	//add description argument
+	this.name = name;
+	this.abilityScore = abilityScore;
+	this.trainedOnly = trainedOnly;
+	this.trained = false;
+}
+
+var wizardSkills =[];
+var clericSkills =[];
+var rogueSkills =[];
+var fighterSkills =[];
+
+var acrobatics = new skill("Acrobatics", ability.dex, false);
+var appraise = new skill("Appraise", ability.dex, false);
+var bluff = new skill("Acrobatics", ability.dex, false);
+var climb = new skill("Acrobatics", ability.dex, false);
+var craft = new skill("Acrobatics", ability.dex, false);
+
+
+//--- Equipment Section ------
+
+var weapon = function(name, price, melee, twoHand, light, damageLarge, damageSmall, crit, type, weight){
+	this.name = name;
+	this.price = price;
+	this.melee = melee;
+	this.twoHand = twoHand;
+	this.damageLarge = damageLarge;
+	this.damageSmall = damageSmall;
+	this.crit = crit;
+	this.weight = weight;
+}
+
+//simple light
+var dagger = new weapon("dagger", 2, true, false, true, "1d4", "1d3", "19-20 x2", "P", 1);
+var mace = new weapon("mace", 5, true, false, true, "1d6", "1d4", "x2", "B", 4);
+//simple one hand
+var club = new weapon("club", 0, true, false, false, "1d6", "1d4", "x2", "B", 6);
+var morningstar = new weapon("morningstar", 8, true, false, false, "1d8", "1d6", "x2", "B", 4);
+//simple two hand
+var quarterstaff = new weapon("quarterstaff", 0, true, true, false, "1d6", "1d4", "x2", "B", 4);
+var spear = new weapon("spear", 2, true, true, false, "1d8", "1d6", "x3", "P", 6);
+//simple ranged
+var lightCrossbow = new weapon("light crossbow", 35, false, true, false, "1d10", "1d8", "19-20 x2", "P", 8);
+var heavyCrossbow = new weapon("heavy crossbow", 50, false, true, false, "1d8", "1d6", "19-20 x2", "P", 4);
+
+//martial light
+var shortSword = new weapon("short sword", 10, true, false, true, "1d6", "1d4", "19-20 x2", "P", 2);
+//martial one hand
+var battleaxe;
+var longsword;
+var rapier;
+var scimitar;
+//martial two hand
+var falchion;
+var greataxe;
+var greatsword;
+var scythe;
+//martial ranged
+var shortbow;
+var longbow;
+//exotic
+var dwarvenWaraxe;
+var elevenCurveBlade;
+var handCrossbow;
+
+var simpleWeapons = [dagger, mace, club, morningstar, quarterstaff, spear, lightCrossbow, heavyCrossbow];
+var martialWeapons = [shortSword, battleaxe, longsword, rapier, scimitar, falchion, greataxe, greatsword, scythe, shortbow, longbow];
+
+var wizardWeapons = [club, dagger, heavyCrossbow, lightCrossbow, quarterstaff];
+var clericWeapons = simpleWeapons;
+var rogueWeapons = simpleWeapons.concat([shortSword, rapier, shortbow, handCrossbow])
+var fighterWeapons = simpleWeapons.concat(martialWeapons);
+
+var towerShield;
+
+var lightArmor = [];
+var mediumArmor = [];
+var heavyArmor = [];
+var shields = [];
+
+var wizardArmor;
+var rogueArmor = lightArmor;
+var clericArmor = lightArmor.concat(mediumArmor);
+var fighterArmor = lightArmor.concat(mediumArmor, heavyArmor);
+								
+//--- Classes Section ------
+var classes = {cleric: 1, fighter: 2, rogue: 3, wizard: 4};
+var myClass;
+
+var characterClass = function(name, hp, bab, fort, ref, will, skillPoints, classSkills, weapons, armor, shield, wealth){
+	this.name = name;
+	this.hp = hp;
+	this.bab = bab;
+	this.fort = fort;
+	this.ref = ref;
+	this.will = will;
+	this.skillPoints = skillPoints;
+	this.classSkills = classSkills;
+	this.weapons = weapons;
+	this.armor = armor;
+	this.shield = shield;
+	this.wealth = wealth;
+}
+
+var wizard = new characterClass("Wizard", 6, 0, 0, 0, 2, 2, wizardSkills, wizardWeapons, [], [], 70);
+wizard.description = "";
+
+var cleric = new characterClass("Cleric", 8, 0, 0, 0, 2, 2, clericSkills, clericWeapons, clericArmor, shields, 70);
+cleric.description = "";
+
+var rogue = new characterClass("Rogue", 8, 0, 0, 2, 0, 8, rogueSkills, rogueWeapons, rogueArmor, shields, 70);
+rogue.description = "";
+
+var fighter = new characterClass("Fighter", 10, 1, 2, 0, 0, 2, fighterSkills, fighterWeapons, fighterArmor, shields.concat([towerShield]), 175);
+fighter.description = "";
+
+function deselectClasses(){
+	document.getElementById('cleric-selection-card').classList.remove('selected-card');
+	document.getElementById('fighter-selection-card').classList.remove('selected-card');
+	document.getElementById('rogue-selection-card').classList.remove('selected-card');
+	document.getElementById('wizard-selection-card').classList.remove('selected-card');
+}
+
+function changeClass(classCard, newClass){
+    deselectRaces();
+	document.getElementById(classCard).classList.add('selected-card');
+    displayClassDescription(newClass.name, newClass.description);
+    myClass = race;
+}
+
+function becomeCleric(){
+	changeClass('cleric-selection-card', wizard);
+}
+
+function becomeFighter(){
+	changeClass('fighter-selection-card', cleric);
+}
+
+function becomeRogue(){
+	changeClass('rogue-selection-card', rogue);
+}
+
+function becomeWizard(){
+	changeClass('wizard-selection-card', wizard);
 }

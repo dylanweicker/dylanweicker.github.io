@@ -1,17 +1,39 @@
-Technology
-	->href Technological Experience
+Who am I?		- Red
+	-Welcome to my site
+	- About me:
+	- Interests <Technology> <Social Justice> <Games> <Pop Culture> <Goals(Education?)>
+
+Technology		- Orange
+	->href Technological Experience/resume/skills
 	->games That I've made
-Activism
+	->interesting innovations
+	-> Why is it significant
+	-> What can be done with it?
+	
+Activism		- Yellow
 	-> Queer Rights
 	-> Trans Rights
 	-> Women's Rights
 	-> Animal Rights
-Games
-	-> 
-Pop Culture
-	-> Pop music
+	
+Games			- Green
+	-> Pathfinder -> Campaign website, character generator.
+	
+Pop Culture		- Cyan
+	-> Pop music (Spotify integration?)
 	-> Memes
-Education
-My Mission
+	-> Social Media
+
+My Mission/Education		- Blue
 	-> Educating People About Marginalized Groups through technology, games, and pop culture
-Social Media
+	
+Footer			- Purple
+
+
+Red
+Orange
+Yellow
+Green
+Cyan
+Blue
+Purple

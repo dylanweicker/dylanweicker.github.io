@@ -12,7 +12,7 @@
         <script type="text/javascript" src="abilities.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body onload="setupAbilities(); becomeHuman(); setupWizardSpells();">
+    <body onload="setupAbilities(); becomeHuman(); becomeFighter();">
         <header>
             <div class="header left" style="vertical-align: center;">
                 <a href="../"><img src="../images/dplogo.png"><b>Dylan Pride</b></a>
@@ -32,7 +32,26 @@
 				<div id="stepper-six" class="step inactive"><div class="stepper-circle">6</div>Equipment</div>
 			</div>
 			<div id="step-one">
-				<div class="flex">
+                <div class="box vertical-margin">
+                    <h2>Step One: Ability Scores</h2>
+                    <p>Each character has six ability scores that represent his character's most basic attributes. They are his raw talent and prowess. While a character rarely rolls a check using just an ability score, these scores, and the modifiers they create, affect nearly every aspect of a character's skills and abilities.</p>
+                    <h3 class="left">Point Buy</h3>
+                    <p>Each character receives a number of points to spend on increasing his basic attributes. In this method, all attributes start at a base of 10. A character can increase an individual score by spending some of his points. Likewise, he can gain more points to spend on other scores by decreasing one or more of his ability scores. No score can be reduced below 7 or raised above 18 using this method.</p>
+                    <h3 class="left">Campain Type:</h3>
+                    <p>The number of points you have to spend using the purchase method depends on the type of campaign you are playing. The standard value for a character is 15 points.</p>
+                    <center>
+                        <div class="flex space-between">
+                            <div class="ghost-button space-between">
+                                <a id="low-fantasy" class="ability-score-button" onclick="setMaxCost(10, 'low-fantasy');">Low Fantasy</a>
+                                <a id="standard-fantasy" class="ability-score-button" onclick="setMaxCost(15, 'standard-fantasy');">Standard Fantasy</a>
+                                <a id="high-fantasy" class="ability-score-button" onclick="setMaxCost(20, 'high-fantasy');">High Fantasy</a>
+                                <a id="epic-fantasy" class="ability-score-button" onclick="setMaxCost(25, 'epic-fantasy');">Epic Fantasy</a>
+                            </div>
+                        </div>
+                    </center>
+                    <h2>Points Spent: <span id="total-cost">0</span>/<span id="max-cost">0</span></h2>
+                </div>
+				<div class="flex space-between">
 					<div class="all-abilities">
 						<div class="one-ability" onmouseover="displayStrInfo();">
 							<h3>Strength</h3>
@@ -143,7 +162,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="side-bar">
+					<div class="box">
 						<div class="ability-info">
 							<div id="str-info">
 								<h2>Strength</h2>
@@ -217,27 +236,16 @@
 									<li>Channel energy DCs for clerics attempting to harm undead foes.</li>
 								</p>
 							</div>
-
-							<div class="shaded-bottom">
-								<div class="space-between flex">
-									<div id="total-cost">
-										Total Cost: 0 
-									</div>
-									<div id="maximum-cost">
-										Maximum Cost:
-										<input type="radio" id="radio-10" name="max-cost" value="10" onclick="setMaxCost(10);">10 
-										<input type="radio" id="radio-15" name="max-cost" value="15" onclick="setMaxCost(15);">15 
-										<input type="radio" id="radio-20" name="max-cost" value="20" onclick="setMaxCost(20);">20 
-										<input type="radio" id="radio-25" name="max-cost" value="25" onclick="setMaxCost(25);">25
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="step-two">
 				<div id="race-selection">
+                    <div class="vertical-margin box">
+                        <h2>Step Two: Race</h2>
+                        <p>In fantasy roleplaying games, race is fundamental. It both provides a starting point for character creation and sets the tone for a character as it progresses. Race mixes biology and culture, then translates those concepts into racial traits.  A race's traits, its history, its relations with other races, and the culture that all of these things imply—all of these frame your character. This is true whether you play to or against the stereotypes. To some players, choosing a race is simply a matter of finding which racial modifiers best fit a character's class. Yet there's so much more to race than that. By exploring the cultures and traditions of a character's race, we can better understand where she comes from and what makes her tick, thus immersing ourselves that much deeper in the campaign world.</p>
+                    </div>
                     <div class="space-between flex">
                         <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
                             <img src="../images/Dwarf.jpg">
@@ -268,21 +276,25 @@
                 <div id="class-selection">
                     <div class="space-between flex">
                         <div id="cleric-selection-card" class="race-selection-card selected-card box" onclick="becomeCleric();">
+                            <img src="../images/Cleric.jpg">
                             <div class="shaded-bottom">
                                 <h3>Cleric</h3>
                             </div>
                         </div>
                         <div id="fighter-selection-card" class="race-selection-card box" onclick="becomeFighter();">
+                            <img src="../images/Fighter.jpg">
                             <div class="shaded-bottom">
                                 <h3>Fighter</h3>
                             </div>
                         </div>
                         <div id="rogue-selection-card" class="race-selection-card box" onclick="becomeRogue();">
+                            <img src="../images/Rogue.jpg">
                             <div class="shaded-bottom">
                                 <h3>Rogue</h3>
                             </div>
                         </div>
                         <div id="wizard-selection-card" class="race-selection-card box" onclick="becomeWizard();">
+                            <img src="../images/Wizard.jpg">
                             <div class="shaded-bottom">
                                 <h3>Wizard</h3>
                             </div>
@@ -292,7 +304,7 @@
 				<div class="space-between flex">
                     <div id="race-content" class="main-content">
                         <div id="race-description-container" class="vertical-margin box">
-                            <h2 id="race-name"></h2>
+                            <h2 class="race-name"></h2>
                             <p id="race-description"></p>
                         </div>
                         <div id="racial-traits" class="box">
@@ -350,7 +362,7 @@
                     <div id="class-content" class="main-content">
 						<div id="class-description-container" class="vertical-margin box">
 							<h2 id="class-name">Wizard</h2>
-							<p id="class-description"></h2>
+							<p id="class-description">
 								These shrewd magic-users seek, collect, and covet esoteric knowledge, drawing on cultic arts to work wonders beyond the abilities of mere mortals. While some might choose a particular field of magical study and become masters of such powers, others embrace versatility, reveling in the unbounded wonders of all magic. In either case, wizards prove a cunning and potent lot, capable of smiting their foes, empowering their allies, and shaping the world to their every desire.
 							</p>
 						</div>
@@ -366,7 +378,7 @@
                                         <b>Base Attack Bonus:</b> <span class="bab">0</span>
                                     </div>
                                     <div class="trait">
-                                        <b>Starting Wealth:</b><span class="skill-ranks">70 gp</span>
+                                        <b>Starting Wealth:</b><span class="wealth">70 gp</span>
                                     </div>
                                 </div>
                                 <div class="trait-row">
@@ -395,6 +407,116 @@
 						<div id="fighter-traits" class="vertical-margin box">
 							<h3>Bonus Feat</h3>
 							<p>A fighter gets to select a bonus combat feat during in addition to the other feat(s) gained at level one. This will be done during step five of this character creator.</p>
+						</div>
+                        
+						<div id="cleric-traits">
+                            <div  class="vertical-margin box">
+                                <h3>Channel Energy</h3>
+                            </div>
+                            <div  class="vertical-margin box">
+                                <h3>Deity</h3>
+                                <p>A cleric's deity influences her alignment, what magic she can perform, her values, and how others see her. A cleric chooses two domains from among those belonging to her deity.</p>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">LG</div>
+                                    <div class="deity-title">
+                                        <b>Iomedae</b>
+                                        <br>God of Justice and Honor</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">NG</div>
+                                    <div class="deity-title">
+                                        <b>Sarenrae</b>
+                                        <br>Godess of the Sun and Healing</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">NG</div>
+                                    <div class="deity-title">
+                                        <b>Shelyn</b>
+                                        <br>Godess of Beauty and Art</div>
+                                </div>
+                                <div class="selected deity-card">
+                                    <div class="deity-alignment">CG</div>
+                                    <div class="deity-title">
+                                        <b>Desna</b>
+                                        <br>Godess of Dreams and Travels</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">CG</div>
+                                    <div class="deity-title">
+                                        <b>Cayden Cailean</b>
+                                        <br>God of Alcohol and Freedom</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">CN</div>
+                                    <div class="deity-title">
+                                        <b>Calistria</b>
+                                        <br>Godess of Lust and Revenge</div>
+                                </div>
+                            </div>
+                            <div id="cleric-domain" class="vertical-margin box">
+                                <h3>Domains</h3>
+                                <p>Select two of the domains belonging to your deity. Each domain grants a domain power, as well as a bonus spell. A cleric gains one domain spell slot. Each day, a cleric can prepare one of the spells from her two domains in that slot. If a domain spell is not on the cleric spell list, a cleric can prepare it only in her domain spell slot. Domain spells cannot be used to cast spells spontaneously.</p>
+                                <div class="domain-card selected">
+                                    <div class="spell-title">
+                                        Chaos
+                                    </div>
+                                </div>
+                                <div class="domain-card">
+                                    <div class="spell-title">
+                                        Good
+                                    </div>
+                                </div>
+                                <div class="domain-card selected">
+                                    <div class="spell-title">
+                                        Charm
+                                    </div>
+                                </div>
+                                <div class="domain-card">
+                                    <div class="spell-title">
+                                        Luck
+                                    </div>
+                                </div>
+                                <div class="domain-card">
+                                    <div class="spell-title">
+                                        Travel
+                                    </div>
+                                </div>
+
+                                <h4>Chaos Domain</h4>
+                                <p>Your touch infuses life and weapons with chaos, and you revel in all things anarchic.</p>
+                                <div class="flex box">
+                                    <span style="margin-right: 20px;">
+                                        <b  style="margin-left: 10px;">Bonus Spell</b><br>
+                                        <div class="spell-card">
+                                            <div class="spell-title">
+                                                Protection from Law
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <b>Domain Power</b><br>
+                                        <i>Touch of Chaos: </i> You can imbue a target with chaos as a melee touch attack. For the next round, anytime the target rolls a d20, he must roll twice and take the less favorable result. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.<br>
+                                    </span>
+                                </div>
+                                
+                                
+                                <h4>Charm Domain</h4>
+                                <p>You can baffle and befuddle foes with a touch or a smile, and your beauty and grace are divine.</p><div class="flex box">
+                                    <span style="margin-right: 20px;">
+                                        <b  style="margin-left: 10px;">Bonus Spell</b><br>
+                                        <div class="spell-card">
+                                            <div class="spell-title">
+                                                Charm Person
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <b>Domain Power</b><br>
+                                        <i>Dazing Touch: </i> You can cause a living creature to become dazed for 1 round as a melee touch attack. Creatures with more Hit Dice than your cleric level are unaffected. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.<br>
+                                    </span>
+                                </div>
+                            </div>
+                            
 						</div>
 						<div id="wizard-traits" class="vertical-margin box">
 							<h3>Cantrips</h3>
@@ -433,40 +555,12 @@
                         </div>
                             
 						<div class="trait-side-bar vertical-margin box">
-                            <h3>Dwarf</h3>
-                            <h5>Languages</h5>Common, Dwarven, Orc
-                            <h5>Traits</h5>Hatred, Greed, Stonebreaker, Hardy, Surefooted
+                            <h3 class="race-name">Dwarf</h3>
+                            <h5>Languages</h5><p id="my-languages">ommon, Dwarven, Orc</p>
+                            <h5>Traits</h5><p id="race-traits">Hatred, Greed, Stonebreaker, Hardy, Surefooted</p>
                         </div>
 					</div>
 				</div>
-			</div>
-			<div id="step-three">
-			<div id="fighter" class="box">
-				<h2>Fighter</h2>
-				<p>
-					 Lords of the battlefield, fighters are a disparate lot, training with many weapons or just one, perfecting the uses of armor, learning the fighting techniques of exotic masters, and studying the art of combat, all to shape themselves into living weapons. Far more than mere thugs, these skilled warriors reveal the true deadliness of their weapons, turning hunks of metal into arms capable of taming kingdoms, slaughtering monsters, and rousing the hearts of armies.
-				</p>
-				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
-				<!-- Bonus feat explanation-->
-			</div>
-			<div id="cleric" class="box">
-				<h2>Cleric</h2>
-				<p>
-					More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies' prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. As their powers are influenced by their faith, all clerics must focus their worship upon a divine source.
-				</p>
-				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
-				<!-- Aura and Channel explanation-->
-				<!-- OPTION Deity and Domains-->
-			</div>
-			<div id="rogue" class="box">
-				<h2>Rogue</h2>
-				<p>
-					Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents.
-				</p>
-				<!-- Description -->
-				<!-- Saves, Base attack bonus, Wealth, Skills, Hit Points, proficiencies-->
-				<!-- Sneak attack and Trapfinding-->
-			</div>
 			</div>
 			<div id="step-four">
 				

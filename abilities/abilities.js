@@ -4,7 +4,6 @@ var step = 0;
 function hideAllSteps(){
 	document.getElementById('step-one').style.display = 'none';
 	document.getElementById('step-two').style.display = 'none';
-	document.getElementById('step-three').style.display = 'none';
 	document.getElementById('step-four').style.display = 'none';
 	document.getElementById('step-five').style.display = 'none';
 	document.getElementById('step-six').style.display = 'none';
@@ -133,17 +132,23 @@ function calculateUnsignedMod(score){
 	return mod = Math.floor((score - 10) / 2);
 }
 
+
+function  setMaxCost(cost, button){
+    var buttons = document.getElementsByClassName('ability-score-button');
+    for (var i = 0; i < buttons.length; ++i) {
+        var item = buttons[i];  
+        item.classList.remove('selected');
+    }
+    document.getElementById(button).classList.add('selected');
+    maxCost = cost;
+	updatePointsSpent();
+}
+
 function setupAbilities() {
 	hideAllSteps();
 	document.getElementById('step-one').style.display = "block";
     displayStrInfo();
-    document.getElementById('radio-20').checked = true;
-    setMaxCost(20);
-}
-
-function setMaxCost(cost){
-    maxCost = cost;
-	updatePointsSpent();
+    setMaxCost(15, 'standard-fantasy');
 }
 
 function hideAllInfo(){
@@ -366,7 +371,7 @@ function updateIq(){
 	document.getElementById("iq-score-mini").innerHTML = "Int: " + totIq + "  (" + calculateMod(totIq) + ")";
 	document.getElementById("iq-cost").innerHTML = "Cost: " + costMap[iq];
 	updatePointsSpent();
-	updateBonusLanguages(myRace);
+	updateLanguages(myRace);
 }
 function updateWis(){
 	totWis = wis + racialWis;
@@ -401,7 +406,8 @@ function updatePointsSpent(){
     else{
 	    document.getElementById("total-cost").style.color = "green";	document.getElementById('continue').classList.remove('disabled');
 	}
-	document.getElementById("total-cost").innerHTML = "Total Cost: " + currCost;
+	document.getElementById("total-cost").innerHTML = currCost;
+	document.getElementById("max-cost").innerHTML = maxCost;
 }
 
 //--- Races Section --------
@@ -499,7 +505,12 @@ var human = {
 };
 
 function displayRaceDescription(name, description){
-    document.getElementById('race-name').innerHTML = name;
+    
+    var raceName = document.getElementsByClassName('race-name');
+    for (var i = 0; i < raceName.length; ++i) {
+        var item = raceName[i];  
+        item.innerHTML = name;
+    }
     document.getElementById('race-description').innerHTML = description;
 }
 
@@ -524,7 +535,7 @@ function changeRace(raceCard, race){
     displayStandardRacialTraits(race);
     displayRaceDescription(race.name, race.description);
     myRace = race;
-    updateBonusLanguages(race);
+    updateLanguages(race);
 }
 
 function updateRacialAbilityBonuses(s, d, co, i, w, ch){
@@ -563,22 +574,93 @@ function becomeHuman(){
     updateRacialAbilityBonuses(0, 0, 0, 0, 0, 0);
 }
 
-function updateBonusLanguages(race){
-    var languages = race.languages;
+
+
+var myRacialLanguages= ["Common"];
+var myBonusLanguages = [];
+
+var Draconic = "Draconic";
+
+function updateLanguages(race){
+    myRacialLanguages = race.languages;
+    var languages = myRacialLanguages;
+    displayLanguages();
 	if ((iq + racialIq) > 11){
-        languages += ' and ' + calculateUnsignedMod(iq + racialIq) + ' bonus languages:<br>';
+        languages += ' and ' + calculateUnsignedMod(iq + racialIq) + ' bonus languages: <div class="flex-wrap ghost-button" style="justify-content: flex-start;">';
         for (var lang in race.bonusLanguages) {
-            languages += race.bonusLanguages[lang] + '<input type="checkbox" name="bonus-languages" value=race.language[lang]>&nbsp';
+            var language = race.bonusLanguages[lang].trim();
+            var button = '<a class="language-button" style="width: 146px; flex: none; padding-left: 0; padding-right: 0; text-align:center;" onclick="addOrRemoveLanguage("' + language +'")">' + race.bonusLanguages[lang] + '</a>';
+            languages += button;
         }
+        languages += '</div> *Bonus languages are not currently supported by this tool. Make a note of which '  + calculateUnsignedMod(iq + racialIq) + ' bonus languages you would like your character to know.';
 	}
     document.getElementById('racial-languages').innerHTML = languages;
 }
+
+function addLanguage(language){
+    var languageButtons = document.getElementsByClassName('language-button');
+    if (myBonusLanguages.length < calculateUnsignedMod(iq + racialIq)){
+        myBonusLanguages.concat(language);
+        for (var i = 0; i < languageButtons.length; ++i) {
+            var button = languageButtons[i];
+            if (!button.innerHTML == language){
+                button.classList.add('selected');
+            }
+        }
+    }
+    if (myBonusLanguages.length >= calculateUnsignedMod(iq + racialIq)){
+        for (var i = 0; i < languageButtons.length; ++i) {
+            var button = languageButtons[i];
+            if (!button.classList.contains('selected')){
+                button.classList.add('disabled');
+            }
+        }
+    }
+}
+
+function removeLanguage(language){
+    for (var i=myBonusLanguages.length-1; i>=0; i--) {
+    if (array[i] === language) {
+        array.splice(i, 1);
+        break;
+        }
+    }
+    var languageButtons = document.getElementsByClassName('language-button');
+    for (var i = 0; i < languageButtons.length; ++i) {
+        var button = languageButtons[i];
+        if (!button.classList.contains('disabled')){
+            button.classList.remove('disabled');
+        }
+        if (!button.innerHTML == language){
+            button.classList.remove('selected');
+        }
+    }
+}
+
+function displayLanguages(){
+    var languages = document.getElementById('my-languages');
+    var allMyLanguages = myRacialLanguages.concat(myBonusLanguages);
+    languages.innerHTML = allMyLanguages.toString();
+}
+
+function addOrRemoveLanguage(language) {
+    if (myBonusLanguages.contains(language)) {
+        removeLanguage(language);
+    }
+    else{
+        addLanguage(language);
+    }
+    displayLanguages();
+}
+
 
 function displayRacialTraits(traits){	
     document.getElementById('offensive-traits').innerHTML= "";
     document.getElementById('defensive-traits').innerHTML= "";
     document.getElementById('magical-traits').innerHTML= "";
     document.getElementById('skill-traits').innerHTML= "";
+    
+    var listOfTraits = [];
     
 	for (var t in traits) {
         var newElement = document.createElement('div');
@@ -596,7 +678,11 @@ function displayRacialTraits(traits){
         else if (traits[t].type == traitTypes.skill){
 			document.getElementById('skill-traits').appendChild(newElement);
         }
+        
+        listOfTraits.push(" " + traits[t].name);
 	} 
+
+    document.getElementById('race-traits').innerHTML= listOfTraits.toString();
     
     if (document.getElementById('offensive-traits').innerHTML == ""){
         document.getElementById('offensive-traits-container').style.display = 'none';
@@ -672,10 +758,11 @@ var skill = function(name, abilityScore, trainedOnly) {	//add description argume
 	this.abilityScore = abilityScore;
 	this.trainedOnly = trainedOnly;
 	this.trained = false;
+    this.featBonus = 0;
 }
 
 var wizardSkills =[];
-var clericSkills =[];
+var clericSkills =[appraise, craft];
 var rogueSkills =[];
 var fighterSkills =[];
 
@@ -753,17 +840,22 @@ var clericArmor = lightArmor.concat(mediumArmor);
 var fighterArmor = lightArmor.concat(mediumArmor, heavyArmor);
 								
 //--- Classes Section ------
-var classes = {cleric: 1, fighter: 2, rogue: 3, wizard: 4};
 var myClass;
 
-var characterClass = function(name, hp, bab, fort, ref, will, skillPoints, classSkills, weapons, armor, shield, wealth){
+wizardDescription = "These shrewd magic-users seek, collect, and covet esoteric knowledge, drawing on cultic arts to work wonders beyond the abilities of mere mortals. While some might choose a particular field of magical study and become masters of such powers, others embrace versatility, reveling in the unbounded wonders of all magic. In either case, wizards prove a cunning and potent lot, capable of smiting their foes, empowering their allies, and shaping the world to their every desire.";
+clericDescription = "More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies' prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. As their powers are influenced by their faith, all clerics must focus their worship upon a divine source.";
+rogueDescription = "Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents.";
+fighterDescription = "Lords of the battlefield, fighters are a disparate lot, training with many weapons or just one, perfecting the uses of armor, learning the fighting techniques of exotic masters, and studying the art of combat, all to shape themselves into living weapons. Far more than mere thugs, these skilled warriors reveal the true deadliness of their weapons, turning hunks of metal into arms capable of taming kingdoms, slaughtering monsters, and rousing the hearts of armies.";
+
+var characterClass = function(name, description, hp, bab, fort, ref, will, skillRanks, classSkills, weapons, armor, shield, wealth){
 	this.name = name;
+    this.description = description;
 	this.hp = hp;
 	this.bab = bab;
 	this.fort = fort;
 	this.ref = ref;
 	this.will = will;
-	this.skillPoints = skillPoints;
+	this.skillRanks = skillRanks;
 	this.classSkills = classSkills;
 	this.weapons = weapons;
 	this.armor = armor;
@@ -771,17 +863,13 @@ var characterClass = function(name, hp, bab, fort, ref, will, skillPoints, class
 	this.wealth = wealth;
 }
 
-var wizard = new characterClass("Wizard", 6, 0, 0, 0, 2, 2, wizardSkills, wizardWeapons, [], [], 70);
-wizard.description = "";
+var wizard = new characterClass("Wizard", wizardDescription, 6, 0, 0, 0, 2, 2, wizardSkills, wizardWeapons, [], [], 70);
 
-var cleric = new characterClass("Cleric", 8, 0, 0, 0, 2, 2, clericSkills, clericWeapons, clericArmor, shields, 70);
-cleric.description = "";
+var cleric = new characterClass("Cleric", clericDescription, 8, 0, 0, 0, 2, 2, clericSkills, clericWeapons, clericArmor, shields, 140);
 
-var rogue = new characterClass("Rogue", 8, 0, 0, 2, 0, 8, rogueSkills, rogueWeapons, rogueArmor, shields, 70);
-rogue.description = "";
+var rogue = new characterClass("Rogue", rogueDescription, 8, 0, 0, 2, 0, 8, rogueSkills, rogueWeapons, rogueArmor, shields, 140);
 
-var fighter = new characterClass("Fighter", 10, 1, 2, 0, 0, 2, fighterSkills, fighterWeapons, fighterArmor, shields.concat([towerShield]), 175);
-fighter.description = "";
+var fighter = new characterClass("Fighter", fighterDescription, 10, 1, 2, 0, 0, 2, fighterSkills, fighterWeapons, fighterArmor, shields.concat([towerShield]), 175);
 
 function deselectClasses(){
 	document.getElementById('cleric-selection-card').classList.remove('selected-card');
@@ -790,19 +878,86 @@ function deselectClasses(){
 	document.getElementById('wizard-selection-card').classList.remove('selected-card');
 }
 
+function displayClassDescription(name, description){
+    document.getElementById('class-name').innerHTML = name;
+    document.getElementById('class-description').innerHTML = description;
+}
+
+function updateStandardClassFeatures(){
+    var hp = document.getElementsByClassName('hp');
+    for (var i = 0; i < hp.length; ++i) {
+        var item = hp[i];  
+        item.innerHTML = myClass.hp + calculateUnsignedMod(con + racialCon);
+    }
+    var bab = document.getElementsByClassName('bab');
+    for (var i = 0; i < bab.length; ++i) {
+        var item = bab[i];  
+        item.innerHTML = myClass.bab;
+    }
+    var wealth = document.getElementsByClassName('wealth');
+    for (var i = 0; i < wealth.length; ++i) {
+        var item = wealth[i];  
+        item.innerHTML = myClass.wealth + " gp";
+    }
+    var ref = document.getElementsByClassName('ref');
+    for (var i = 0; i < ref.length; ++i) {
+        var item = ref[i];  
+        item.innerHTML = myClass.ref + calculateUnsignedMod(dex + racialDex);
+    }
+    var fort = document.getElementsByClassName('fort');
+    for (var i = 0; i < fort.length; ++i) {
+        var item = fort[i];  
+        item.innerHTML = myClass.fort + calculateUnsignedMod(con + racialCon);
+    }
+    var will = document.getElementsByClassName('will');
+    for (var i = 0; i < will.length; ++i) {
+        var item = will[i];  
+        item.innerHTML = myClass.will + calculateUnsignedMod(wis + racialWis);
+    }
+    var skillRanks = document.getElementsByClassName('skill-ranks');
+    for (var i = 0; i < skillRanks.length; ++i) {
+        var item = skillRanks[i];  
+        item.innerHTML = myClass.skillRanks + calculateUnsignedMod(iq + racialIq);
+    }
+    var classSkills = document.getElementsByClassName('class-skills');
+    for (var i = 0; i < classSkills.length; ++i) {
+        var item = classSkills[i];  
+        item.innerHTML = myClass.classSkills;
+    }
+}
+
+function updateAdvancedClassFeatures(newClass){
+	document.getElementById('fighter-traits').style.display = "none";
+	document.getElementById('cleric-traits').style.display = "none";
+	document.getElementById('wizard-traits').style.display = "none";
+    switch (newClass){
+        case fighter:
+            document.getElementById('fighter-traits').style.display = "block";
+            break;
+        case cleric:
+            document.getElementById('cleric-traits').style.display = "block";
+            break;
+        case wizard:
+            document.getElementById('wizard-traits').style.display = "block";
+            break;
+    }
+}
+
 function changeClass(classCard, newClass){
-    deselectRaces();
+    deselectClasses();
 	document.getElementById(classCard).classList.add('selected-card');
-    displayClassDescription(newClass.name, newClass.description);
-    myClass = race;
+    myClass = newClass;
+    displayClassDescription(myClass.name, myClass.description);
+    updateStandardClassFeatures();
+    updateAdvancedClassFeatures(newClass)
 }
 
 function becomeCleric(){
-	changeClass('cleric-selection-card', wizard);
+	changeClass('cleric-selection-card', cleric);
 }
 
 function becomeFighter(){
-	changeClass('fighter-selection-card', cleric);
+	changeClass('fighter-selection-card', fighter);
 }
 
 function becomeRogue(){

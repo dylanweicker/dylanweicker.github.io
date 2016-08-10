@@ -1,14 +1,33 @@
-Who am I?		- Red
-	-Welcome to my site
-	- About me:
-	- Interests <Technology> <Social Justice> <Games> <Pop Culture> <Goals(Education?)>
+Header
+Menu:
+	Home
+	Technology
+	Activism
+	Games
+		Pathfinder
+			Character Generator
+			Campaign Website
+	Pop Culture
 
-Technology		- Orange
-	->href Technological Experience/resume/skills
-	->games That I've made
-	->interesting innovations
-	-> Why is it significant
-	-> What can be done with it?
+RED
+	<h1>Hello There!<h1> (Or some culturally relevent salutation)
+	- Drawing of me to the left				- <h2>Welcome to my site<h2>
+												- quick description of what this site is about.
+												- social media links
+	- White floating box
+		About me: Pull from dating/tumblr bios Add lots of emojis.
+		
+	- These are a few of my favourite things 
+	-	<Technology> <Social Justice> <Games> <Pop Culture> <Goals(Education?)/cats/theatre>
+
+ORANGE
+	Technology		- Orange
+		-> Technology is omnipresent. Millenials are addicted to technology.
+		->href Technological Experience/resume/skills
+		->games That I've made
+		->interesting innovations
+		-> Why is it significant
+		-> What can be done with it?
 	
 Activism		- Yellow
 	-> Queer Rights
@@ -20,6 +39,7 @@ Games			- Green
 	-> Pathfinder -> Campaign website, character generator.
 	
 Pop Culture		- Cyan
+	-> Pop culture is somethign that people can relate to instanty. It's everywhere -- it's hard to avoid exposure to it.
 	-> Pop music (Spotify integration?)
 	-> Memes
 	-> Social Media

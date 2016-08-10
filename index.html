@@ -8,6 +8,7 @@
             
             <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
                 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                 
                 <script type="text/javascript">
                 function getAge(){
@@ -70,11 +71,77 @@
                 text-align: center;
                 }
                 
+				header{
+				display: flex;
+				box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
+				padding: 8px;
+				width: 100%;
+				box-sizing: border-box;
+				}
+
+				.header{
+					flex: 1;
+					display: inline;
+					vertical-align: middle;
+					font-size: 28px;
+					color: white;
+					font-weight: bold;
+				}
+
+				.header i{
+					font-size: 32px;
+				}
+
+				.header b{
+					padding-top: 12px;
+					padding-left: 10px;
+					font-family: 'Lobster', sans-serif;
+				}
+
+				.header img{
+					width: 48px;
+					height: 48px;
+					vertical-align:middle;
+				}
+
+				.header a{
+					color: white;
+					text-decoration: none;
+				}
+				.header a:hover{
+					color: #fb0;
+					text-decoration: none;
+				}
+				
+				#about-me{
+				margin-top: 0; 
+				margin-bottom: 1.5em; 
+				width: 100%;
+				border: solid #e0e0e0 1px;
+				border-radius: 5px;
+				padding: 16px;
+				box-sizing: border-box;
+				box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.06);
+				background: white;
+				}
+				
                 .section{
                 min-height: 200px;
                 width: 100%;
                 text-align: center;
                 }
+
+				.left{
+					text-align: left;
+				}
+
+				.center{
+					text-align: center;
+				}
+
+				.right{
+					text-align: right;
+				}
                 
                 .content{
                 margin: auto;
@@ -85,17 +152,14 @@
                 #social-media-holder{
                 text-align: center;
                 font-size: 6 !important;
-                background: #DCA;
+                background: #85f;
                 position: fixed;
                 right: 0;
-                top: 20%;
+                bottom: 0;
                 border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-left: 10px;
-                padding-right: 5px;
+                padding: 4px;
                 opacity: 0.85;
+				display: flex;
                 
                 -webkit-transition:500ms ease-out;
                 -moz-transition:500ms ease-out;
@@ -106,21 +170,22 @@
                 
                 .social-media{
                 background: #8af;
-                height: 30px;
-                width: 30px;
+                height: 24px;
+                width: 24px;
                 margin: 10px;
                 }
                 
                 .red{
                 background: #D44;
+				color: white;
                 }
-                .red a:link, a:visited{
+                .red-link-section a:link, a:visited{
                 background: #FA6E6E;
                 box-shadow: 0 0 8px #a11;
                 border-bottom: 5px solid #C22;
                 border-right: 2px solid #C22;
                 }
-                .red a:hover, a:active{
+                .red-link-section a:hover, a:active{
                 background: #FF9A9A;
                 }
                 .orange{
@@ -313,47 +378,82 @@
                 
                 <body>
                 
-                <div id="social-media-holder" style="display:none;">
-                follow<br>me
-                <div class="social-media">face</div>
-                <div class="social-media">twit</div>
-                <div class="social-media">link</div>
-                <div class="social-media">yout</div>
-                <div class="social-media">insta</div>
-                <div class="social-media">tumb</div>
-                <a onclick="hideSocialMedia()">hide</button>
+                <div id="social-media-holder">
+					follow me
+					<span>
+						<a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
+						<a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
+						<a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
+						<a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
+						<a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
+						<a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>
+					</span>
                 </div>
-                
-                <div class="section">
-                <center>
-                <div class="content" style="padding-bottom: 0 !important;">
-                <h1>Dylan Pride</h1>
-                <div class="welcome flex-container">
-                <div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
-                <img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
-                </div>
-                <div class="two-col" style="vertical-align: middle;">
-                <center>
-                <h2>Hello There!</h2>
-                <p>Welcome to my personal website! My name is Dylan and I am proud of everything I do.</p>
-                <p>I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver. Scrolling through this rainbow will reveal my skills and interests as well as some personal projects I have created.</p>
-                <span>
-                  <a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
-                  <a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
-                  <a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
-                  <a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
-                  <a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
-                  <a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>           </span>
-                </center>
-                </div>
-                </div>
-                </div>
-                </center>
+				
+                <header class="red">
+					<div class="header left" style="vertical-align: center;">
+						<a href="/"><img src="images/dplogo.png"><b>Dylan Pride</b></a>
+					</div>
+					<div class="header right">
+						<i class="material-icons">menu</i>
+					</div>
+				</header>
+				
+                <div class="red section">
+					<center>
+						<div class="content" style="padding-bottom: 0 !important;">
+						<h1>Hello There !</h1>
+						<div class="welcome flex-container">
+							<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
+								<img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
+							</div>
+							<div class="two-col" style="vertical-align: middle;">
+								<center>
+								<h3>My name is Dylan and I am proud of everything I do.</h3>
+								<p>I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver. Scrolling through this rainbow will reveal my skills and interests as well as some personal projects I have created.</p>
+								<span>
+								  <a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
+								  <a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
+								  <a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
+								  <a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
+								  <a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
+								  <a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>          
+								</span>
+								</center>
+							</div>
+						</div>
+						<div id="about-me">
+							<h2>About me</h2>
+						</div>
+						<h2>These Are A Few Of My Favourite Things</h2>
+						<div class="flex-container red-link-section">
+							<a class="five-col-flex" href="#goals">
+								<h3>Technology</h3>
+								<img src="die.png" class="icon">
+							</a>
+							<a class="five-col-flex" href="#goals">
+								<h3>Games</h3>
+								<img src="die.png" class="icon">
+							</a>
+							<a class="five-col-flex" href="#goals">
+								<h3>Social Justice</h3>
+								<img src="die.png" class="icon">
+							</a>
+							<a class="five-col-flex" href="#goals">
+								<h3>Pop Culture</h3>
+								<img src="die.png" class="icon">
+							</a>
+							<a class="five-col-flex" href="#goals">
+								<h3>Goals</h3>
+								<img src="die.png" class="icon">
+							</a>
+						</div>
+					</center>
                 </div>
                 
                 <div class="rainbow"></div>
                 
-                <div class="red section">
+                <div class="red section red-link-section">
                 <div class="content">
                                 <h2>These Are A Few Of My Favourite Things</h2>
                                 <div class="wrap flex-container">

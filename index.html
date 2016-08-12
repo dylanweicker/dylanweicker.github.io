@@ -2,762 +2,775 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-            <link rel="icon" href="rainbow-emoji.ico" type="image/x-icon"/>
-            <link rel="shortcut icon" href="rainbow-emoji.ico" type="image/x-icon"/>
-            <title>Dylan Pride</title>
+		<link rel="icon" href="rainbow-emoji.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="rainbow-emoji.ico" type="image/x-icon"/>
+		<title>Dylan Pride</title>
             
-            <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-                <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-				<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
                 
-                <script type="text/javascript">
-                function getAge(){
-                var birthday = new Date("1995-04-15");
-                return Math.floor((Date.now() - birthday)/ 31557600000);
-                }
+		<script type="text/javascript">
+			function getAge(){
+				var birthday = new Date("1995-04-15");
+				return Math.floor((Date.now() - birthday)/ 31557600000);
+			}
+			
+			function hideSocialMedia(){
+				var holder = document.getElementById("social-media-holder");
+				holder.style.paddingLeft = 0;
+				holder.style.paddingRight = 0;
+				holder.style.width = 0;
+				holder.style.overflow = "hidden";
+			}
+		</script>
+    </head>
                 
-                function hideSocialMedia(){
-                var holder = document.getElementById("social-media-holder");
-                holder.style.paddingLeft = 0;
-                holder.style.paddingRight = 0;
-                holder.style.width = 0;
-                holder.style.overflow = "hidden";
-                }
-                
-                </script>
-                </head>
-                
-                <style>
-                body {
-                padding: 0;
-                margin: 0;
-                font-family: 'Lato', sans-serif;
-                }
-                
-                p{
-                font-size: 16px;
-                }
-                
-                p img{
-                height: 24px;
-                }
-                
-                a {
-                color: inherit;
-                text-decoration: none;
-                }
-                
-                table{
-                border-spacing: 40px 5px;
-                table-layout: fixed;
-                }
-                
-                th{
-                border-bottom: 3px solid #FFA533;
-                }
-                
-                td{
-                width: 15%;
-                text-align: left;
-                vertical-align: top;
-                }
-                
-                h1{
-                margin: 0;
-                font-size: 3em;
-                padding-top: 68px;
-				padding-bottom: 17px;
-                font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-				font-weight: 300;
-                text-align: center;
-                }
-				.red h2{
-				color: #f8fcf8;
-				font-weight: 400;
-				font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-				margin: 0;
-				padding: 0;
-				}
-                
-				header{
-				position: fixed;
-				top: 0;
-				display: flex;
-				box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
-				padding: 8px;
-				width: 100%;
-				box-sizing: border-box;
-				}
+	<style>
+		body {
+		padding: 0;
+		margin: 0;
+		font-family: 'Lato', sans-serif;
+		}
+		
+		p{
+		font-size: 16px;
+		}
+		
+		p img{
+		height: 24px;
+		}
+		
+		a {
+		color: inherit;
+		text-decoration: none;
+		}
+		
+		table{
+		border-spacing: 40px 5px;
+		table-layout: fixed;
+		}
+		
+		th{
+		border-bottom: 3px solid #FFA533;
+		}
+		
+		td{
+		width: 15%;
+		text-align: left;
+		vertical-align: top;
+		}
+		
+		h1{
+		margin: 0;
+		font-size: 3em;
+		padding-top: 68px;
+		padding-bottom: 17px;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 300;
+		text-align: center;
+		}
+		.red h2{
+		color: #f8fcf8;
+		font-weight: 400;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		}
+		
+		header{
+		position: fixed;
+		top: 0;
+		display: flex;
+		box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
+		padding: 8px;
+		width: 100%;
+		box-sizing: border-box;
+		}
 
-				.header{
-					flex: 1;
-					display: inline;
-					vertical-align: middle;
-					font-size: 28px;
-					color: white;
-					font-weight: bold;
-				}
+		.header{
+			flex: 1;
+			display: inline;
+			vertical-align: middle;
+			font-size: 28px;
+			color: white;
+			font-weight: bold;
+		}
 
-				.header i{
-					font-size: 32px;
-				}
+		.header i{
+			font-size: 32px;
+		}
 
-				.header b{
-					padding-top: 12px;
-					padding-left: 10px;
-					font-family: 'Lobster', sans-serif;
-				}
+		.header b{
+			padding-top: 12px;
+			padding-left: 10px;
+			font-family: 'Lobster', sans-serif;
+		}
 
-				.header img{
-					width: 48px;
-					height: 48px;
-					vertical-align:middle;
-				}
+		.header img{
+			width: 48px;
+			height: 48px;
+			vertical-align:middle;
+		}
 
-				.header a{
-					color: white;
-					text-decoration: none;
-				}
-				.header a:hover{
-					color: #fb0;
-					text-decoration: none;
-				}
-				
-				#about-me{
-				margin-top: 0; 
-				margin-bottom: 1.5em; 
-				width: 100%;
-				border: solid #e0e0e0 1px;
-				border-radius: 5px;
-				padding: 16px;
-				box-sizing: border-box;
-				box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.06);
-				background: white;
-				}
-				
-                .section{
-                min-height: 200px;
-                width: 100%;
-                text-align: center;
-                }
+		.header a{
+			color: white;
+			text-decoration: none;
+		}
+		.header a:hover{
+			color: #fb0;
+			text-decoration: none;
+		}
+		
+		#about-me{
+		margin-top: 0; 
+		margin-bottom: 1.5em; 
+		width: 100%;
+		border: solid #e0e0e0 1px;
+		border-radius: 5px;
+		padding: 16px;
+		box-sizing: border-box;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.06);
+		background: white;
+		color: black;
+		text-align: left;
+		}
+		#about-me h2{
+		color: black;
+		text-align: left;
+		}
+		
+		.section{
+		min-height: 200px;
+		width: 100%;
+		text-align: center;
+		}
 
-				.left{
-					text-align: left;
-				}
+		.left{
+			text-align: left;
+		}
 
-				.center{
-					text-align: center;
-				}
+		.center{
+			text-align: center;
+		}
 
-				.right{
-					text-align: right;
-				}
+		.right{
+			text-align: right;
+		}
+		
+		.content{
+		margin: auto;
+		max-width: 1200px;
+		padding: 30px 80px;
+		}
+		
+		#social-media-holder{
+		text-align: center;
+		vertical-align: middle;
+		font-size: 6 !important;
+		background: #85f;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		border-top-left-radius: 20px;
+		padding: 4px;
+		opacity: 0.85;
+		display: flex;
+		
+		-webkit-transition:500ms ease-out;
+		-moz-transition:500ms ease-out;
+		-o-transition:500ms ease-out;
+		-ms-transition:500ms ease-out;
+		transition:500ms ease-out;
+		}
+		
+		#social-media-holder span{
+			vertical-align: middle;
+		}
+		
+		.social-media{
+		background: #8af;
+		height: 24px;
+		width: 24px;
+		margin: 10px;
+		}
+		
+		.red{
+		background: #D44;
+		color: white;
+		}
+		.red-link-section a:link, a:visited{
+		background: #FA6E6E;
+		box-shadow: 0 0 8px #a11;
+		border-bottom: 5px solid #C22;
+		border-right: 2px solid #C22;
+		}
+		.red-link-section a:hover, a:active{
+		background: #FF9A9A;
+		}
+		.orange{
+		background: #f63;
+		}
+		.yellow{
+		background: #fc3;
+		}
+		.green{
+		background: #6c3;
+		}
+		.blue{
+		background: #39f;
+		}
+		.purple{
+		background: #85f;
+		}
+		.rainbow{
+		height: 5px;
+		width:100%;
+		background-image: url('rainbow.png');
+		background-repeat: none;
+		background-size: cover;
+		}
+		
+		.flex-container {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		}
+		
+		.wrap{
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		}
+		
+		.two-col{
+		width: 50%;
+		margin: auto;
+		display: table-cell;
+		min-width: 250px;
+		}
+		
+		.three-col-flex{
+		box-sizing: border-box;
+		min-width: 300px;
+		width: 30%;
+		margin: 10px;
+		display: inline-block;
+		vertical-align: top;
+		-webkit-transition: background-color 0.5s ease;
+		transition: background-color 0.5s ease;
+		padding: 15px;
+		}
+		@media only screen and (max-width: 1201px){
+		.three-col-flex{
+		width: 47%;
+		min-width: 300px;
+		}
+		}
+		@media only screen and (max-width: 926px){
+		.three-col-flex{
+		width: 100%;
+		min-width: 250px;
+		}
+		}
+		
+		.five-col-flex{
+		width: 18%;
+		min-width: 200px;
+		margin: 10px;
+		vertical-align: top;
+		box-sizing: border-box;
+		padding: 20px;
+		display: inline-block;
+		}
+		
+		.welcome{
+			margin-top: 30px;
+		}
+		@media only screen and (max-width: 730px){
+			.welcome{
+				flex-flow: row wrap-reverse;
+			}
+		}
+		
+		.icon{
+		width: 80px;
+		height: 80px;
+		}
+		
+		.goal-container{
+		margin: 0;
+		display: flex;
+		flex-flow: row;
+		}
+		.goal-category{
+		width: 16.6%;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0 5px;
+		}
+		.goal-title{
+		box-sizing: border-box;
+		vertical-align: middle;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 6px;
+		}
+		.goal-title h3{
+		margin: 0 10px;
+		padding: 8px;
+		}
+		.goal-internal-flex-container{
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+		}
+		.goal-box{
+		width: 100%;
+		height: 260px;
+		box-sizing: border-box;
+		padding: 20px;
+		padding-top:0px;
+		margin-top: 10px;
+		box-shadow: 0 0 5px 1px #999;
+		}
+		.goal-label{
+		vertical-align: top;
+		box-sizing: border-box;
+		}
+		.goal-top-left{
+		height: 38px;
+		}
+		
+		@media only screen and (max-width: 1100px){
+		.goal-container{
+		display: block;
+		flex-flow: row;
+		}
+		.goal-category{
+		width: auto;
+		margin: 0;
+		}
+		.goal-internal-flex-container{
+		display: flex;
+		flex-flow: row;
+		}
+		.goal-title{
+		margin: 10px;
+		margin-bottom: 0;
+		}
+		.goal-box{
+		height: auto;
+		margin: 10px;
+		}
+		.goal-top-left{
+		display: none;
+		}
+		}
+		@media only screen and (max-width: 730px){
+		.goal-internal-flex-container{
+		display: flex;
+		flex-flow: column;
+		}
+		.goal-title{
+		margin: 10px;
+		margin-top: 20px;
+		}
+		.goal-box{
+		width: auto;
+		height: auto;
+		}
+		.goal-top-left{
+		display: none;
+		}
+		.goal-label{
+		display: none;
+		}
+		}
+		
+		.no-shadow{
+		box-shadow: none;
+		}
+		
+	</style>
                 
-                .content{
-                margin: auto;
-                max-width: 1200px;
-                padding: 30px 80px;
-                }
-                
-                #social-media-holder{
-                text-align: center;
-                font-size: 6 !important;
-                background: #85f;
-                position: fixed;
-                right: 0;
-                bottom: 0;
-                border-top-left-radius: 20px;
-                padding: 4px;
-                opacity: 0.85;
-				display: flex;
-                
-                -webkit-transition:500ms ease-out;
-                -moz-transition:500ms ease-out;
-                -o-transition:500ms ease-out;
-                -ms-transition:500ms ease-out;
-                transition:500ms ease-out;
-                }
-                
-                .social-media{
-                background: #8af;
-                height: 24px;
-                width: 24px;
-                margin: 10px;
-                }
-                
-                .red{
-                background: #D44;
-				color: white;
-                }
-                .red-link-section a:link, a:visited{
-                background: #FA6E6E;
-                box-shadow: 0 0 8px #a11;
-                border-bottom: 5px solid #C22;
-                border-right: 2px solid #C22;
-                }
-                .red-link-section a:hover, a:active{
-                background: #FF9A9A;
-                }
-                .orange{
-                background: #f63;
-                }
-                .yellow{
-                background: #fc3;
-                }
-                .green{
-                background: #6c3;
-                }
-                .blue{
-                background: #39f;
-                }
-                .purple{
-                background: #85f;
-                }
-                .rainbow{
-                height: 5px;
-                width:100%;
-                background-image: url('rainbow.png');
-                background-repeat: none;
-                background-size: cover;
-                }
-                
-                .flex-container {
-                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-                display: -ms-flexbox;      /* TWEENER - IE 10 */
-                display: -webkit-flex;     /* NEW - Chrome */
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                }
-                
-                .wrap{
-                flex-wrap: wrap;
-                -webkit-flex-wrap: wrap;
-                }
-                
-                .two-col{
-                width: 50%;
-                margin: auto;
-                display: table-cell;
-                min-width: 250px;
-                }
-                
-                .three-col-flex{
-                box-sizing: border-box;
-                min-width: 300px;
-                width: 30%;
-                margin: 10px;
-                display: inline-block;
-                vertical-align: top;
-                -webkit-transition: background-color 0.5s ease;
-                transition: background-color 0.5s ease;
-                padding: 15px;
-                }
-                @media only screen and (max-width: 1201px){
-                .three-col-flex{
-                width: 47%;
-                min-width: 300px;
-                }
-                }
-                @media only screen and (max-width: 926px){
-                .three-col-flex{
-                width: 100%;
-                min-width: 250px;
-                }
-                }
-                
-                .five-col-flex{
-                width: 18%;
-                min-width: 200px;
-                margin: 10px;
-                vertical-align: top;
-                box-sizing: border-box;
-                padding: 20px;
-                display: inline-block;
-                }
-                
-                .welcome{
-                    margin-top: 30px;
-                }
-                @media only screen and (max-width: 730px){
-                    .welcome{
-                        flex-flow: row wrap-reverse;
-                    }
-                }
-                
-                .icon{
-                width: 80px;
-                height: 80px;
-                }
-                
-                .goal-container{
-                margin: 0;
-                display: flex;
-                flex-flow: row;
-                }
-                .goal-category{
-                width: 16.6%;
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0 5px;
-                }
-                .goal-title{
-                box-sizing: border-box;
-                vertical-align: middle;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 6px;
-                }
-                .goal-title h3{
-                margin: 0 10px;
-                padding: 8px;
-                }
-                .goal-internal-flex-container{
-                width: 100%;
-                display: flex;
-                flex-flow: column;
-                }
-                .goal-box{
-                width: 100%;
-                height: 260px;
-                box-sizing: border-box;
-                padding: 20px;
-                padding-top:0px;
-                margin-top: 10px;
-                box-shadow: 0 0 5px 1px #999;
-                }
-                .goal-label{
-                vertical-align: top;
-                box-sizing: border-box;
-                }
-                .goal-top-left{
-                height: 38px;
-                }
-                
-                @media only screen and (max-width: 1100px){
-                .goal-container{
-                display: block;
-                flex-flow: row;
-                }
-                .goal-category{
-                width: auto;
-                margin: 0;
-                }
-                .goal-internal-flex-container{
-                display: flex;
-                flex-flow: row;
-                }
-                .goal-title{
-                margin: 10px;
-                margin-bottom: 0;
-                }
-                .goal-box{
-                height: auto;
-                margin: 10px;
-                }
-                .goal-top-left{
-                display: none;
-                }
-                }
-                @media only screen and (max-width: 730px){
-                .goal-internal-flex-container{
-                display: flex;
-                flex-flow: column;
-                }
-                .goal-title{
-                margin: 10px;
-                margin-top: 20px;
-                }
-                .goal-box{
-                width: auto;
-                height: auto;
-                }
-                .goal-top-left{
-                display: none;
-                }
-                .goal-label{
-                display: none;
-                }
-                }
-                
-                .no-shadow{
-                box-shadow: none;
-                }
-                
-                </style>
-                
-                <body>
-                
-                <div id="social-media-holder">
-					follow me
-					<span>
-						<a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
-						<a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
-						<a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
-						<a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
-						<a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
-						<a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>
-					</span>
-                </div>
-				
-                <header class="red">
-					<div class="header left" style="vertical-align: center;">
-						<a href="/"><img src="images/dplogo.png"><b>Dylan Pride</b></a>
-					</div>
-					<div class="header right">
-						<i class="material-icons">menu</i>
-					</div>
-				</header>
-				
-                <div class="red section">
+	<body>
+	
+	<div id="social-media-holder">
+		<span>
+			follow me
+		</span>
+		<span>
+			<a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
+			<a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
+			<a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
+			<a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
+			<a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
+			<a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>
+		</span>
+	</div>
+	
+	<header class="red">
+		<div class="header left" style="vertical-align: center;">
+			<a href="/"><img src="images/dplogo.png"><b>Dylan Pride</b></a>
+		</div>
+		<div class="header right">
+			<i class="material-icons">menu</i>
+		</div>
+	</header>
+	
+	<div class="red section">
+		<center>
+			<div class="content" style="padding-bottom: 0 !important;">
+			<h1>Hello There !</h1>
+			<h2>My name is Dylan and I take Pride in all I do.</h2>
+			<div class="welcome flex-container">
+				<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
+					<img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
+				</div>
+				<div class="two-col" style="vertical-align: middle;">
 					<center>
-						<div class="content" style="padding-bottom: 0 !important;">
-						<h1>Hello There !</h1>
-						<h2>My name is Dylan and I take Pride in all I do.</h2>
-						<div class="welcome flex-container">
-							<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
-								<img src="me-sketch.png" width="100%" style="vertical-align: bottom;">
-							</div>
-							<div class="two-col" style="vertical-align: middle;">
-								<center>
-								<p>This website is a personal project which serves as a portfolio of my achievements, skills, and interests.</p>
-								<p>I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver.</p>
-								<span>
-								  <a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
-								  <a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
-								  <a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
-								  <a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
-								  <a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
-								  <a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>          
-								</span>
-								</center>
-							</div>
-						</div>
-						<div id="about-me">
-							<h2>About me</h2>
-						</div>
-						<h2>These Are A Few Of My Favourite Things</h2>
-						<div class="flex-container red-link-section">
-							<a class="five-col-flex" href="#goals">
-								<h3>Technology</h3>
-								<img src="die.png" class="icon">
-							</a>
-							<a class="five-col-flex" href="#goals">
-								<h3>Games</h3>
-								<img src="die.png" class="icon">
-							</a>
-							<a class="five-col-flex" href="#goals">
-								<h3>Social Justice</h3>
-								<img src="die.png" class="icon">
-							</a>
-							<a class="five-col-flex" href="#goals">
-								<h3>Pop Culture</h3>
-								<img src="die.png" class="icon">
-							</a>
-							<a class="five-col-flex" href="#goals">
-								<h3>Goals</h3>
-								<img src="die.png" class="icon">
-							</a>
-						</div>
+					<p>This website is a personal project which serves as a portfolio of my achievements, skills, and interests.</p>
+					<p>I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer, born and raised in beautiful Vancouver.</p>
+					<span>
+					  <a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
+					  <a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
+					  <a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
+					  <a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
+					  <a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
+					  <a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>          
+					</span>
 					</center>
-                </div>
-                
-                <div class="rainbow"></div>
-                
-                <!-- div class="red section red-link-section">
-                <div class="content">
-                                <h2>These Are A Few Of My Favourite Things</h2>
-                                <div class="wrap flex-container">
-                                    <a class="three-col-flex" href="#goals">
-                                        <h3>Goal Setting</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>I like to dream big! To give my life a sense of purpose and to keep myself motived, I enjoy recording my major goals.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#tech">
-                                        <h3>Technology</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>Technology can be used to solve many problems. My love of technology has driven me to become a computer programmer.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#games">
-                                        <h3>Games</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>My favourite hobbies include: creating computer games, leading table-top role play games, and playing games of strategy.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#education">
-                                        <h3>Education</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>I'm a life-long student, constantly seeking more knowledge. </p>
-                                            </a>
-                                    <a class="three-col-flex" href="#media">
-                                        <h3>Social Media</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#pop">
-                                        <h3>Pop Music</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#equality">
-                                        <h3>Social Equality</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>Nothing gets me excited quite like a good conversation about human and animal rights. I am a self-proclaimed social justice warrior!</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#theatre">
-                                        <h3>Theatre</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#fantasy">
-                                        <h3>Fantasy</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>When the stress of the world becomes too much handle, the realm of fantasy provides a healthy escape from reality.</p>
-                                            </a>
-                                    <a class="three-col-flex" href="#cats">
-                                        <h3>Cats</h3>
-                                        <img src="die.png" class="icon">
-                                            <p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-                                            </a>
-                                </div>
-                                </div>
-                                </div>
-                                <a  name="goals">
-                                    <div class="rainbow"></div>
-                                    <div class="section">
-                                        <div class="content">
-                                            <div class="flex-container">
-                                                <div class="two-col">
-                                                    <h2>Goals</h2>
-                                                    <p>These are the accomplishments that I am most proud of!</p>
-                                                </div>
-                                                <div class="two-col">
-                                                    <img src="goal.png" width="100%">
-                                                        </div>
-                                            </div>
-                                            
-                                            <div class="goal-container">
-                                                <div class="goal-category">
-                                                    <div class="goal-top-left no-shadow">
-                                                    </div>
-                                                    <div class="goal-internal-flex-container">
-                                                        <div class="goal-label goal-box no-shadow">
-                                                            <h3>Achieved Goals</h3>
-                                                            <p>I pride myself in these recent accomplishments</p>
-                                                        </div>
-                                                        <div class="goal-label goal-box no-shadow"><h3>Short-Term</h3>
-                                                            <p>I am working to reach these goals by the end of 2016<p>
-                                                        </div>
-                                                        <div class="goal-label goal-box no-shadow"><h3>Long-Term</h3>
-                                                            <p>I am setting myself up to accomplish these goals when the time comes</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="goal-category">
-                                                    <div class="red goal-title">
-                                                        <h3>Career</h3>
-                                                    </div>
-                                                    <div class="goal-internal-flex-container">
-                                                        <div class="red goal-box">
-                                                            <h4>Vision Critical</h4>
-                                                            <p>Spent 12 months working as an SET at Vision Critical</p>
-                                                        </div>
-                                                        <div class="red goal-box">
-                                                            <h4>Teacher's Assistant</h4>
-                                                            <p>Become a TA for CPSC 121 to teach students about boolean algebra and logic circuits</p>
-                                                        </div>
-                                                        <div class="red goal-box">
-                                                            <h4>Full Time Career</h4>
-                                                            <p>I hope to build a career in software development following my 2018 graduation from UBC</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="goal-category">
-                                                    <div class="yellow goal-title">
-                                                        <h3>Education</h3>
-                                                    </div>
-                                                    <div class="goal-internal-flex-container">
-                                                        <div class="yellow goal-box">
-                                                            <h4>Computer Science</h4>
-                                                            <p>In 2013, my high school dream was realized when I was accepted into UBC's computer science program</p>
-                                                        </div>
-                                                        <div class="yellow goal-box">
-                                                            <h4>Ruby on Rails</h4>
-                                                            <p>Teach myself how to use Rails this summer!</p>
-                                                        </div>
-                                                        <div class="yellow goal-box">
-                                                            <h4>Honours Degree</h4>
-                                                            <p>In </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="goal-category">
-                                                    <div class="green goal-title"><h3>Lifestyle</h3>
-                                                    </div>
-                                                    <div class="goal-internal-flex-container">
-                                                        <div class="green goal-box">
-                                                            <h4>Go Vegan!</h4>
-                                                            <p>:D</p>
-                                                        </div>
-                                                        <div class="green goal-box">
-                                                            <h4>Exercise Routine</h4>
-                                                        </div>
-                                                        <div class="green goal-box">
-                                                            <h4>Illiminate Intoxicants</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="goal-category">
-                                                    <div class="blue goal-title">
-                                                        <h3>Social</h3>
-                                                    </div>
-                                                    <div class="goal-internal-flex-container">
-                                                        <div class="blue goal-box">
-                                                            <h4>Pathfinder</h4>
-                                                        </div>
-                                                        <div class="blue goal-box">
-                                                            <h4>Youtube</h4>
-                                                            <p>Revive my channel and create videos to inspire confidence and compassion in the queer youth of today</p>
-                                                        </div>
-                                                        <div class="blue goal-box">
-                                                            <h4>Artist</h4>
-                                                            <p>Share a collection of self-created poetry and multi-media art with the world</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="goal-category">
-                                                    <div class="purple goal-title">
-                                                        <h3>Projects</h3>
-                                                    </div>
-                                                    <div class="goal-internal-flex-container">
-                                                        <div class="purple goal-box">
-                                                            <h4>Personal Website</h4>
-                                                            <p>Armed with only a text editor, I designed and devloped this site to represent my skills and personality.</p>
-                                                        </div>
-                                                        <div class="purple goal-box">
-                                                            <h4>Planeshift</h4>
-                                                            <p>Planeshift is an mmorpg ran by volunteers. I would like to join their team.</p>
-                                                        </div>
-                                                        <div class="purple goal-box">
-                                                            <h4>Online Strategy Game</h4>
-                                                            <p>I have a dream to invent a multiplayer strategy game and develop it from scratch.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <h2>Aspirations and Inspirations</h2>
-                                        </div>
-                                    </div -->
-                                    
-                                    <a  name="tech">
-                                        <div class="rainbow"></div>
-                                        <div class="section">
-                                            <div class="content">
-                                                <h1>Technology</h1>
-                                                I have ten months of experience working as a software engineer in test at Vision Critical.<br>
-                                                This involves testing APIs, writing acceptance tests using Specflow and Selenium, three amigos,<br>
-                                                Going above and beyond be doing development as well: Creating tools to automate API calls, creating a build script to update TT system user<br><br>
-                                                <h2>Technical Skills</h2>
-                                                <table>
-                                                    <tr>
-                                                        <th>Programming</th>
-                                                        <th>Web Development</th>
-                                                        <th>Tools</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            C, C++, C#<br>
-                                                            Java<br>
-                                                            Racket<br>
-                                                            Visual Basic (minimal)<br>
-                                                            SQL (minimal)<br>
-                                                            Powershell (minimal)<br>
-                                                            
-                                                        </td>
-                                                        <td>
-                                                            HTML/HTML5<br>
-                                                            CSS/CSS3<br>
-                                                            Javascript<br>
-                                                            PHP (minimal)<br>
-                                                        </td>
-                                                        <td>
-                                                            Git<br>
-                                                            Visual Studio<br>
-                                                            IntelliJ<br>
-                                                            Oracle (minimal)<br>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                <h2>Work Experience</h2>
-                                                <h2>Personal Projects</h2>
-                                                <h2>Interesting Inovations</h2>
-                                            </div>
-                                        </div>
-                                        
-                                        <a  name="games">
-                                            <div class="rainbow"></div>
-                                            <div class="section">
-                                                <div class="content">
-                                                    <h1>Games</h1>
-                                                </div>
-                                            </div>
-                                            
-                                            <a  name="media">
-                                                <div class="rainbow"></div>
-                                                <div class="yellow section">
-                                                    <div class="content">
-                                                        <h1>Social Media</h1>
-                                                        I love being ever connected to my friends, family, and world around me. 
-                                                        Twitter, Tumblr, Instagram, Youtube
-                                                        Check out this twitter API tool I'm working on.
-                                                        See that follow me panel that's following you around this page? It's like it's just begging you to follow me. Give me attention! 
-                                                        It feeds my ever-expanding millenial ego.
-                                                        <aside>I know I have a big ego, I really don't know why it's such a big deal though<br> -Marina and the Diamonds</aside>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="rainbow"></div>
-                                                <div class="section">
-                                                    <h1>Pop Music</h1>
-                                                    <p>YAAAAASSS GAGA!! YOU LOOK SO GOOD!!! OH MY GOD YAAAAAASSSSS!!!!!</p>
-                                                    <p>In an ever-evolving society, it's important to stay up to date on what's hip and trendy in the modern world. Paying attention to the pop industry allows me to stay aware of what's popular and what isn't.</p>
-                                                    <h2>My Pop Queens</h2>
-                                                    <p>Check out this pop music game I made, to celebrate Lady Gaga's 2008 hit single Just Dance.<p>
-                                                </div>
-                                                <div class="rainbow"></div>
-                                                <div class="green section">
-                                                    <h1>Social Equality</h1>
-                                                    I want to use any influence I gain in life to foster love, acceptance and equality.<br>
-                                                    I will use my voice to make a change on a social level.<br>
-                                                    <li>queer rights - I have a personal investment in this, ending social stigmas, ending discriminatory regulations, Orlando shooting demonstrates we are not out of the woods yet.
-                                                        <li>trans rights - erase social stigmas, make washrooms accessable, right to gender affirming operations
-                                                            <li>women's rights - equal work opportunities, ending sexual harrasmant, right to choose abortion.
-                                                                <li>animal rights - veganism
-                                                                    </div>
-                                                <div class="rainbow"></div>
-                                                <div class="section">
-                                                    <h1>Education</h1>
-                                                    <p>A true Ravenclaw at heart, I love learning as much as I can. If I had infinite money and no need to work, I would spend the rest of my existance going to school.
-                                                </div>
-                                                <div class="rainbow"></div>
-                                                <div class="blue section">
-                                                    <h1>Theatre</h1>
-                                                </div>
-                                                <div class="rainbow"></div>
-                                                <div class="section">
-                                                    <h1>Fantasy</h1>
-                                                </div>
-                                                <div class="rainbow"></div>
-                                                <div class="purple section">
-                                                    <h1>Cats</h1>
-                                                    
-                                                </div>
-                                                <div class="rainbow"></div>
-                                                <div class="section">
-                                                    footer.
-                                                    credits and links.
-                                                </div>
-                                                </body>
+				</div>
+			</div>
+			<div id="about-me">
+				<h2>About Me</h2>
+				<hr>
+				<p>I was born, raised, and currently reside in beautiful Vancouver</p>
+				<p>I am a cat lover!</p>
+			</div>
+			<h2>These Are A Few Of My Favourite Things</h2>
+			<div class="flex-container red-link-section">
+				<a class="five-col-flex" href="#goals">
+					<h3>Technology</h3>
+					<img src="die.png" class="icon">
+				</a>
+				<a class="five-col-flex" href="#goals">
+					<h3>Games</h3>
+					<img src="die.png" class="icon">
+				</a>
+				<a class="five-col-flex" href="#goals">
+					<h3>Social Justice</h3>
+					<img src="die.png" class="icon">
+				</a>
+				<a class="five-col-flex" href="#goals">
+					<h3>Pop Culture</h3>
+					<img src="die.png" class="icon">
+				</a>
+				<a class="five-col-flex" href="#goals">
+					<h3>Goals</h3>
+					<img src="die.png" class="icon">
+				</a>
+			</div>
+		</center>
+	</div>
+	
+	<div class="rainbow"></div>
+	
+	<!-- div class="red section red-link-section">
+	<div class="content">
+					<h2>These Are A Few Of My Favourite Things</h2>
+					<div class="wrap flex-container">
+						<a class="three-col-flex" href="#goals">
+							<h3>Goal Setting</h3>
+							<img src="die.png" class="icon">
+								<p>I like to dream big! To give my life a sense of purpose and to keep myself motived, I enjoy recording my major goals.</p>
+								</a>
+						<a class="three-col-flex" href="#tech">
+							<h3>Technology</h3>
+							<img src="die.png" class="icon">
+								<p>Technology can be used to solve many problems. My love of technology has driven me to become a computer programmer.</p>
+								</a>
+						<a class="three-col-flex" href="#games">
+							<h3>Games</h3>
+							<img src="die.png" class="icon">
+								<p>My favourite hobbies include: creating computer games, leading table-top role play games, and playing games of strategy.</p>
+								</a>
+						<a class="three-col-flex" href="#education">
+							<h3>Education</h3>
+							<img src="die.png" class="icon">
+								<p>I'm a life-long student, constantly seeking more knowledge. </p>
+								</a>
+						<a class="three-col-flex" href="#media">
+							<h3>Social Media</h3>
+							<img src="die.png" class="icon">
+								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+								</a>
+						<a class="three-col-flex" href="#pop">
+							<h3>Pop Music</h3>
+							<img src="die.png" class="icon">
+								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+								</a>
+						<a class="three-col-flex" href="#equality">
+							<h3>Social Equality</h3>
+							<img src="die.png" class="icon">
+								<p>Nothing gets me excited quite like a good conversation about human and animal rights. I am a self-proclaimed social justice warrior!</p>
+								</a>
+						<a class="three-col-flex" href="#theatre">
+							<h3>Theatre</h3>
+							<img src="die.png" class="icon">
+								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+								</a>
+						<a class="three-col-flex" href="#fantasy">
+							<h3>Fantasy</h3>
+							<img src="die.png" class="icon">
+								<p>When the stress of the world becomes too much handle, the realm of fantasy provides a healthy escape from reality.</p>
+								</a>
+						<a class="three-col-flex" href="#cats">
+							<h3>Cats</h3>
+							<img src="die.png" class="icon">
+								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
+								</a>
+					</div>
+					</div>
+					</div>
+					<a  name="goals">
+						<div class="rainbow"></div>
+						<div class="section">
+							<div class="content">
+								<div class="flex-container">
+									<div class="two-col">
+										<h2>Goals</h2>
+										<p>These are the accomplishments that I am most proud of!</p>
+									</div>
+									<div class="two-col">
+										<img src="goal.png" width="100%">
+											</div>
+								</div>
+								
+								<div class="goal-container">
+									<div class="goal-category">
+										<div class="goal-top-left no-shadow">
+										</div>
+										<div class="goal-internal-flex-container">
+											<div class="goal-label goal-box no-shadow">
+												<h3>Achieved Goals</h3>
+												<p>I pride myself in these recent accomplishments</p>
+											</div>
+											<div class="goal-label goal-box no-shadow"><h3>Short-Term</h3>
+												<p>I am working to reach these goals by the end of 2016<p>
+											</div>
+											<div class="goal-label goal-box no-shadow"><h3>Long-Term</h3>
+												<p>I am setting myself up to accomplish these goals when the time comes</p>
+											</div>
+										</div>
+									</div>
+									<div class="goal-category">
+										<div class="red goal-title">
+											<h3>Career</h3>
+										</div>
+										<div class="goal-internal-flex-container">
+											<div class="red goal-box">
+												<h4>Vision Critical</h4>
+												<p>Spent 12 months working as an SET at Vision Critical</p>
+											</div>
+											<div class="red goal-box">
+												<h4>Teacher's Assistant</h4>
+												<p>Become a TA for CPSC 121 to teach students about boolean algebra and logic circuits</p>
+											</div>
+											<div class="red goal-box">
+												<h4>Full Time Career</h4>
+												<p>I hope to build a career in software development following my 2018 graduation from UBC</p>
+											</div>
+										</div>
+									</div>
+									<div class="goal-category">
+										<div class="yellow goal-title">
+											<h3>Education</h3>
+										</div>
+										<div class="goal-internal-flex-container">
+											<div class="yellow goal-box">
+												<h4>Computer Science</h4>
+												<p>In 2013, my high school dream was realized when I was accepted into UBC's computer science program</p>
+											</div>
+											<div class="yellow goal-box">
+												<h4>Ruby on Rails</h4>
+												<p>Teach myself how to use Rails this summer!</p>
+											</div>
+											<div class="yellow goal-box">
+												<h4>Honours Degree</h4>
+												<p>In </p>
+											</div>
+										</div>
+									</div>
+									<div class="goal-category">
+										<div class="green goal-title"><h3>Lifestyle</h3>
+										</div>
+										<div class="goal-internal-flex-container">
+											<div class="green goal-box">
+												<h4>Go Vegan!</h4>
+												<p>:D</p>
+											</div>
+											<div class="green goal-box">
+												<h4>Exercise Routine</h4>
+											</div>
+											<div class="green goal-box">
+												<h4>Illiminate Intoxicants</h4>
+											</div>
+										</div>
+									</div>
+									<div class="goal-category">
+										<div class="blue goal-title">
+											<h3>Social</h3>
+										</div>
+										<div class="goal-internal-flex-container">
+											<div class="blue goal-box">
+												<h4>Pathfinder</h4>
+											</div>
+											<div class="blue goal-box">
+												<h4>Youtube</h4>
+												<p>Revive my channel and create videos to inspire confidence and compassion in the queer youth of today</p>
+											</div>
+											<div class="blue goal-box">
+												<h4>Artist</h4>
+												<p>Share a collection of self-created poetry and multi-media art with the world</p>
+											</div>
+										</div>
+									</div>
+									<div class="goal-category">
+										<div class="purple goal-title">
+											<h3>Projects</h3>
+										</div>
+										<div class="goal-internal-flex-container">
+											<div class="purple goal-box">
+												<h4>Personal Website</h4>
+												<p>Armed with only a text editor, I designed and devloped this site to represent my skills and personality.</p>
+											</div>
+											<div class="purple goal-box">
+												<h4>Planeshift</h4>
+												<p>Planeshift is an mmorpg ran by volunteers. I would like to join their team.</p>
+											</div>
+											<div class="purple goal-box">
+												<h4>Online Strategy Game</h4>
+												<p>I have a dream to invent a multiplayer strategy game and develop it from scratch.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<h2>Aspirations and Inspirations</h2>
+							</div>
+						</div -->
+						
+						<a  name="tech">
+							<div class="rainbow"></div>
+							<div class="section">
+								<div class="content">
+									<h1>Technology</h1>
+									I have ten months of experience working as a software engineer in test at Vision Critical.<br>
+									This involves testing APIs, writing acceptance tests using Specflow and Selenium, three amigos,<br>
+									Going above and beyond be doing development as well: Creating tools to automate API calls, creating a build script to update TT system user<br><br>
+									<h2>Technical Skills</h2>
+									<table>
+										<tr>
+											<th>Programming</th>
+											<th>Web Development</th>
+											<th>Tools</th>
+										</tr>
+										<tr>
+											<td>
+												C, C++, C#<br>
+												Java<br>
+												Racket<br>
+												Visual Basic (minimal)<br>
+												SQL (minimal)<br>
+												Powershell (minimal)<br>
+												
+											</td>
+											<td>
+												HTML/HTML5<br>
+												CSS/CSS3<br>
+												Javascript<br>
+												PHP (minimal)<br>
+											</td>
+											<td>
+												Git<br>
+												Visual Studio<br>
+												IntelliJ<br>
+												Oracle (minimal)<br>
+											</td>
+										</tr>
+									</table>
+									<h2>Work Experience</h2>
+									<h2>Personal Projects</h2>
+									<h2>Interesting Inovations</h2>
+								</div>
+							</div>
+							
+							<a  name="games">
+							<div class="rainbow"></div>
+							<div class="yellow section">
+								<div class="content">
+									<h1>Games</h1>
+									<a href="/abilities">Pathfinder Character generator.</a>
+								</div>
+							</div>
+								
+							<div class="rainbow"></div>
+							<div class="green section">
+								<h1>Social Equality</h1>
+								I want to use any influence I gain in life to foster love, acceptance and equality.<br>
+								I will use my voice to make a change on a social level.<br>
+								<li>
+									queer rights - I have a personal investment in this, ending social stigmas, ending discriminatory regulations, Orlando shooting demonstrates we are not out of the woods yet.
+								</li>
+								<li>
+									trans rights - erase social stigmas, make washrooms accessable, right to gender affirming operations
+								</li>
+								<li>
+									women's rights - equal work opportunities, ending sexual harrasmant, right to choose abortion.
+								</li>
+								<li>
+									animal rights - veganism
+								</li>
+							</div>
+								
+							<a  name="pop-culture">
+							<div class="rainbow"></div>
+							<div class="blue section">
+								<div class="content">
+									<h1>Pop Culture</h1>
+									<h3> Social Media</h3>
+									I love being ever connected to my friends, family, and world around me. 
+									Twitter, Tumblr, Instagram, Youtube
+									Check out this twitter API tool I'm working on.
+									See that follow me panel that's following you around this page? It's like it's just begging you to follow me. Give me attention! 
+									It feeds my ever-expanding millenial ego.
+									<aside>I know I have a big ego, I really don't know why it's such a big deal though<br> -Marina and the Diamonds</aside>
+								
+									<h3>Pop Music</h3>
+									<p>YAAAAASSS GAGA!! YOU LOOK SO GOOD!!! OH MY GOD YAAAAAASSSSS!!!!!</p>
+									<p>In an ever-evolving society, it's important to stay up to date on what's hip and trendy in the modern world. Paying attention to the pop industry allows me to stay aware of what's popular and what isn't.</p>
+									<h2>My Pop Queens</h2>
+									<p>Check out this pop music game I made, to celebrate Lady Gaga's 2008 hit single Just Dance.<p>
+								</div>
+							</div>
+								
+									
+							<div class="rainbow"></div>
+							<div class="section">
+								<h1>Education</h1>
+								<p>A true Ravenclaw at heart, I love learning as much as I can. If I had infinite money and no need to work, I would spend the rest of my existance going to school.
+							</div>
+							
+							<div class="rainbow"></div>
+							<div class="purple section">
+								footer.
+								credits and links.
+							</div>
+	</body>
                                                 
 </html>

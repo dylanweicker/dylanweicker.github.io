@@ -167,26 +167,18 @@
 		
 		#social-media-holder{
 		text-align: center;
-		vertical-align: middle;
 		font-size: 6 !important;
-		background: #85f;
 		position: fixed;
 		right: 0;
 		bottom: 0;
-		border-top-left-radius: 20px;
 		padding: 4px;
-		opacity: 0.85;
-		display: flex;
-		
-		-webkit-transition:500ms ease-out;
-		-moz-transition:500ms ease-out;
-		-o-transition:500ms ease-out;
-		-ms-transition:500ms ease-out;
-		transition:500ms ease-out;
+		display: block;
 		}
 		
-		#social-media-holder span{
-			vertical-align: middle;
+		@media only screen and (max-width: 1600px){
+			#social-media-holder{
+			display: none;
+			}
 		}
 		
 		.social-media{
@@ -400,9 +392,8 @@
 	<body>
 	
 	<div id="social-media-holder">
-		<span>
-			follow me
-		</span>
+		follow me
+		<br>
 		<span>
 			<a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
 			<a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
@@ -446,14 +437,14 @@
 					</center>
 				</div>
 			</div>
-			<div id="about-me">
+			<div id="about-me" class="red-on-white">
 				<h2>About Me</h2>
 				<hr>
 				<p>I was born, raised, and currently reside in beautiful Vancouver</p>
 				<p>I am a cat lover!</p>
 			</div>
 			<h2>These Are A Few Of My Favourite Things</h2>
-			<div class="flex-container red-link-section">
+			<div class="wrap flex-container red-link-section">
 				<a class="five-col-flex" href="#goals">
 					<h3>Technology</h3>
 					<img src="die.png" class="icon">

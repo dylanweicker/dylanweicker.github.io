@@ -14,8 +14,28 @@ RED
 	- Drawing of me to the left				- <h2>Welcome to my site<h2>
 												- quick description of what this site is about.
 												- social media links
-	- White floating box
-		About me: Pull from dating/tumblr bios Add lots of emojis.
+	- White full-width section
+		Dylan At a Glance: Pull from dating/tumblr bios Add lots of emojis.
+			21 | He/Him | INTP
+			UBC | Vancouver
+			Computer Geek | Friendly Queer Vegan | Meme Master
+		Motives: (ambition, direction, goal, objective, aspiration)
+			Grow 	
+				Learn by asking others for knowledge and assistance
+				Pursue goals while being transparent about objectives
+				Reflect on personal achievements and find room for development
+			Practice	
+				Learn about computers
+				Continue to 
+			Entertain
+				Post dank memes on the interwebs, 
+				Develop interesting games of all kinds
+			Educate
+				Share knowledge and skills with others
+				Discuss methods to be an ally for marginalized people 
+				Take advantage of opportunities to demonstrate leadership.
+		Achievements
+			Vegan, Vision Critical, This Website
 		
 	- These are a few of my favourite things 
 	-	<Technology> <Social Justice> <Games> <Pop Culture> <Goals(Education?)/cats/theatre>

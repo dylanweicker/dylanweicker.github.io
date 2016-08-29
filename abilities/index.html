@@ -34,18 +34,17 @@
 			<div id="step-one">
                 <div class="box vertical-margin">
                     <h2>Step One: Ability Scores</h2>
-                    <p>Each character has six ability scores that represent his character's most basic attributes. They are his raw talent and prowess. While a character rarely rolls a check using just an ability score, these scores, and the modifiers they create, affect nearly every aspect of a character's skills and abilities.</p>
-                    <h3 class="left">Point Buy</h3>
-                    <p>Each character receives a number of points to spend on increasing his basic attributes. In this method, all attributes start at a base of 10. A character can increase an individual score by spending some of his points. Likewise, he can gain more points to spend on other scores by decreasing one or more of his ability scores. No score can be reduced below 7 or raised above 18 using this method.</p>
+                    <p>Your character has six ability scores that represent his or her most basic attributes. They are his or her raw talent and prowess. While your character will rarely roll a check using just an ability score, these scores, and the modifiers they create, affect nearly every aspect of your character's skills and abilities.</p>
+                    <p>You receive a number of points to spend on increasing your character's basic attributes. All attributes start at a base of 10. You can increase an individual score by spending some of your points. Likewise, you can gain more points to spend on other scores by decreasing one or more of your character's ability scores. No score can be reduced below 7 or raised above 18 using this method.</p>
                     <h3 class="left">Campain Type:</h3>
-                    <p>The number of points you have to spend using the purchase method depends on the type of campaign you are playing. The standard value for a character is 15 points.</p>
+                    <p>The campaign type determines the number of points you can spend on your ability scores. Check with your game master to see what campaign type he or she is using. A standard campaign lets you spend 15 points.</p>
                     <center>
                         <div class="flex space-between">
                             <div class="ghost-button space-between">
-                                <a id="low-fantasy" class="ability-score-button" onclick="setMaxCost(10, 'low-fantasy');">Low Fantasy</a>
-                                <a id="standard-fantasy" class="ability-score-button" onclick="setMaxCost(15, 'standard-fantasy');">Standard Fantasy</a>
-                                <a id="high-fantasy" class="ability-score-button" onclick="setMaxCost(20, 'high-fantasy');">High Fantasy</a>
-                                <a id="epic-fantasy" class="ability-score-button" onclick="setMaxCost(25, 'epic-fantasy');">Epic Fantasy</a>
+                                <a id="low-fantasy" class="ability-score-button" onclick="setMaxCost(10, 'low-fantasy');">Low Fantasy (10)</a>
+                                <a id="standard-fantasy" class="ability-score-button" onclick="setMaxCost(15, 'standard-fantasy');">Standard Fantasy (15)</a>
+                                <a id="high-fantasy" class="ability-score-button" onclick="setMaxCost(20, 'high-fantasy');">High Fantasy (20)</a>
+                                <a id="epic-fantasy" class="ability-score-button" onclick="setMaxCost(25, 'epic-fantasy');">Epic Fantasy (25)</a>
                             </div>
                         </div>
                     </center>
@@ -274,6 +273,10 @@
                     </div>
 				</div>
                 <div id="class-selection">
+                    <div class="vertical-margin box">
+                        <h2>Step Three: Class</h2>
+                        <p>In fantasy roleplaying games, race is fundamental. It both provides a starting point for character creation and sets the tone for a character as it progresses. Race mixes biology and culture, then translates those concepts into racial traits.  A race's traits, its history, its relations with other races, and the culture that all of these things imply—all of these frame your character. This is true whether you play to or against the stereotypes. To some players, choosing a race is simply a matter of finding which racial modifiers best fit a character's class. Yet there's so much more to race than that. By exploring the cultures and traditions of a character's race, we can better understand where she comes from and what makes her tick, thus immersing ourselves that much deeper in the campaign world.</p>
+                    </div>
                     <div class="space-between flex">
                         <div id="cleric-selection-card" class="race-selection-card selected-card box" onclick="becomeCleric();">
                             <img src="../images/Cleric.jpg">
@@ -374,39 +377,62 @@
                                         <b>Hit Points:</b> <span class="hp">7</span>
 										<span class="tooltiptext">the amount of damage your character can take</span>
                                     </div>
-                                    <div class="trait">
-                                        <b>Base Attack Bonus:</b> <span class="bab">0</span>
+                                    <div class="trait tooltip">
+                                        <b>Melee Attack Bonus:</b> <span class="mab">0</span>
+										<span class="tooltiptext">a bonus to accuracy in hand-to-hand combat</span>
                                     </div>
-                                    <div class="trait">
-                                        <b>Starting Wealth:</b><span class="wealth">70 gp</span>
+                                    <div class="trait tooltip">
+                                        <b>Ranged Attack Bonus:</b> <span class="rab">0</span>
+										<span class="tooltiptext">a bonus to accuracy in ranged combat</span>
                                     </div>
                                 </div>
                                 <div class="trait-row">
-                                    <div class="trait">
+                                    <div class="trait tooltip">
                                         <b>Fortitude:</b> <span class="fort">+1</span>
+										<span class="tooltiptext">ability to resist poison and disease</span>
                                     </div>
-                                    <div class="trait">
+                                    <div class="trait tooltip">
                                         <b>Reflex:</b> <span class="ref">+3</span>
+										<span class="tooltiptext">ability to dodge unexpected hazards</span>
                                     </div>
-                                    <div class="trait">
+                                    <div class="trait tooltip">
                                         <b>Will:</b> <span class="will">+4</span>
+										<span class="tooltiptext">ability to resist mental influence</span>
                                     </div>
                                 </div>
                                 <div class="trait-row">
-                                    <div class="trait">
-                                        <b>Skill Ranks:</b><span class="skill-ranks">3</span>
+                                    <div class="trait tooltip">
+                                        <b>Skill Ranks:</b> <span class="skill-ranks">3</span>
+										<span class="tooltiptext">the amount of skills that you can train</span>
+                                    </div>
+									<div class="trait"></div>
+                                    <div class="trait tooltip">
+                                        <b>Starting Wealth:</b><span class="wealth">70 gp</span>
+										<span class="tooltiptext">the amount of equipment your character can afford</span>
                                     </div>
                                 </div>
                                 <div class="last trait-row">
-                                    <div class="trait">
-                                        <b>Class Skills:</b><span class="class-skills">Acrobatics, Appraise, Bluff, Climb, Craft, Diplomacy, Disable Device, Disguise, Escape Artist, Intimidate, Knowledge (dungeoneering), Knowledge (local), Linguistics, Perception, Perform, Profession, Sense Motive, Sleight of Hand, Stealth, Swim, Use Magic Device</span>
-                                    </div>
+                                    <div class="trait tooltip">
+                                        <b>Class Skills:</b> <span class="class-skills">Acrobatics, Appraise, Bluff, Climb, Craft, Diplomacy, Disable Device, Disguise, Escape Artist, Intimidate, Knowledge (dungeoneering), Knowledge (local), Linguistics, Perception, Perform, Profession, Sense Motive, Sleight of Hand, Stealth, Swim, Use Magic Device</span>
+										<span class="tooltiptext">these skills are easier to train than others</span>
+									</div>
                                 </div>
                             </div>
 						</div>
 						<div id="fighter-traits" class="vertical-margin box">
 							<h3>Bonus Feat</h3>
 							<p>A fighter gets to select a bonus combat feat during in addition to the other feat(s) gained at level one. This will be done during step five of this character creator.</p>
+						</div>
+						
+						<div id="rogue-traits" class="vertical-margin box">
+							<h3>Sneak Attack</h3>
+							<p>
+								The rogue's attack deals +1d6 extra damage anytime her target would be denied a Dexterity bonus to AC or when the rogue flanks her target.
+							</p>
+							<h3>Trap Finding</h3>
+							<p>
+								+1 to Perception skill checks made to locate traps and to Disable Device skill checks. A rogue can use Disable Device to disarm magic traps.
+							</p>
 						</div>
                         
 						<div id="cleric-traits">
@@ -519,6 +545,61 @@
                             
 						</div>
 						<div id="wizard-traits" class="vertical-margin box">
+							<h3>Arcane Bond</h3>
+							<p>
+								Wizards form a powerful bond with an object or a creature. This bond can take one of two forms: a familiar or a bonded object. A familiar is a magical pet that enhances the wizard's skills and senses and can aid him in magic, while a bonded object is an item a wizard can use to cast additional spells or to serve as a magical item.
+							</p>
+							<center>
+								<div class="flex ghost-button space-between">
+									<a id="familiar-button" onclick="">Familiar</a>
+									<a id="bonded-item-button" onclick="">Bonded Item</a>
+								</div>
+							</center>
+							<div id="familiar">
+								<h4>Familiar</h4>
+								<center>
+									<div class="spell-card">
+										<div class="spell-title">
+											Cat<br>+3 Stealth
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Pig<br>+3 Diplomacy
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Raven<br>+3 Appraise<br>Can speak
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Hare<br>+4 Initiative
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Fox<br>+2 Reflex
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Rat<br>+2 Fortitude
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Hedgehog<br>+2 Will
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Turtle<br>+1 AC
+										</div>
+									</div>
+								</center>
+							</div>
 							<h3>Cantrips</h3>
 							<p>Cantrips are level 0 spells. Preprared cantrips can be cast unlimitted times each day. You can prepare three cantrips per day from the following list:</p>
 							<div id="cantrips">

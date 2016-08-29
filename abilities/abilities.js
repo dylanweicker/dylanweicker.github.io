@@ -490,7 +490,7 @@ var halfling = {
     traits: halflingTraits
 };
 
-var customizableAbilityScore = '+2 to any one ability score <div class="ghost-button flex-wrap"><a id="str-flex" onclick="flexStr();">Strength</a><a id="dex-flex" onclick="flexDex();">Dexterity</a><a id="con-flex" onclick="flexCon();">Constitution</a><a id="iq-flex" onclick="flexIq();">Intelligence</a><a id="wis-flex" onclick="flexWis();">Wisdom</a><a id="cha-flex" onclick="flexCha();">Charisma</a></div>'
+var customizableAbilityScore = '+2 to any one ability score <div class="ghost-button ghost-button-small flex-wrap"><a id="str-flex" onclick="flexStr();">Strength</a><a id="dex-flex" onclick="flexDex();">Dexterity</a><a id="con-flex" onclick="flexCon();">Constitution</a><a id="iq-flex" onclick="flexIq();">Intelligence</a><a id="wis-flex" onclick="flexWis();">Wisdom</a><a id="cha-flex" onclick="flexCha();">Charisma</a></div>'
 
 var human = {
     name: "Human",
@@ -592,7 +592,7 @@ function updateLanguages(race){
             var button = '<a class="language-button" style="width: 146px; flex: none; padding-left: 0; padding-right: 0; text-align:center;" onclick="addOrRemoveLanguage("' + language +'")">' + race.bonusLanguages[lang] + '</a>';
             languages += button;
         }
-        languages += '</div> *Bonus languages are not currently supported by this tool. Make a note of which '  + calculateUnsignedMod(iq + racialIq) + ' bonus languages you would like your character to know.';
+        languages += '</div> Known bug: Bonus languages are not currently supported by this tool. Make a note of which '  + calculateUnsignedMod(iq + racialIq) + ' bonus languages you would like your character to know.';
 	}
     document.getElementById('racial-languages').innerHTML = languages;
 }
@@ -761,16 +761,16 @@ var skill = function(name, abilityScore, trainedOnly) {	//add description argume
     this.featBonus = 0;
 }
 
-var wizardSkills =[];
-var clericSkills =[appraise, craft];
-var rogueSkills =[];
-var fighterSkills =[];
-
 var acrobatics = new skill("Acrobatics", ability.dex, false);
-var appraise = new skill("Appraise", ability.dex, false);
-var bluff = new skill("Acrobatics", ability.dex, false);
-var climb = new skill("Acrobatics", ability.dex, false);
-var craft = new skill("Acrobatics", ability.dex, false);
+var appraise = new skill("Appraise", ability.iq, false);
+var bluff = new skill("Bluff", ability.cha, false);
+var climb = new skill("Climb", ability.str, false);
+var craft = new skill("Craft", ability.iq, false);
+
+var wizardSkills =[appraise, craft];
+var clericSkills =[appraise, craft];
+var rogueSkills =[acrobatics, appraise, bluff, climb, craft];
+var fighterSkills =[appraise, climb];
 
 
 //--- Equipment Section ------
@@ -864,11 +864,8 @@ var characterClass = function(name, description, hp, bab, fort, ref, will, skill
 }
 
 var wizard = new characterClass("Wizard", wizardDescription, 6, 0, 0, 0, 2, 2, wizardSkills, wizardWeapons, [], [], 70);
-
 var cleric = new characterClass("Cleric", clericDescription, 8, 0, 0, 0, 2, 2, clericSkills, clericWeapons, clericArmor, shields, 140);
-
 var rogue = new characterClass("Rogue", rogueDescription, 8, 0, 0, 2, 0, 8, rogueSkills, rogueWeapons, rogueArmor, shields, 140);
-
 var fighter = new characterClass("Fighter", fighterDescription, 10, 1, 2, 0, 0, 2, fighterSkills, fighterWeapons, fighterArmor, shields.concat([towerShield]), 175);
 
 function deselectClasses(){
@@ -883,56 +880,37 @@ function displayClassDescription(name, description){
     document.getElementById('class-description').innerHTML = description;
 }
 
+function updateFeature(name, innerHtml){
+	var listOfElements = document.getElementsByClassName(name);
+    for (var i = 0; i < listOfElements.length; ++i) {
+        var element = listOfElements[i];  
+        element.innerHTML = innerHtml;
+    }
+}
+
 function updateStandardClassFeatures(){
-    var hp = document.getElementsByClassName('hp');
-    for (var i = 0; i < hp.length; ++i) {
-        var item = hp[i];  
-        item.innerHTML = myClass.hp + calculateUnsignedMod(con + racialCon);
-    }
-    var bab = document.getElementsByClassName('bab');
-    for (var i = 0; i < bab.length; ++i) {
-        var item = bab[i];  
-        item.innerHTML = myClass.bab;
-    }
-    var wealth = document.getElementsByClassName('wealth');
-    for (var i = 0; i < wealth.length; ++i) {
-        var item = wealth[i];  
-        item.innerHTML = myClass.wealth + " gp";
-    }
-    var ref = document.getElementsByClassName('ref');
-    for (var i = 0; i < ref.length; ++i) {
-        var item = ref[i];  
-        item.innerHTML = myClass.ref + calculateUnsignedMod(dex + racialDex);
-    }
-    var fort = document.getElementsByClassName('fort');
-    for (var i = 0; i < fort.length; ++i) {
-        var item = fort[i];  
-        item.innerHTML = myClass.fort + calculateUnsignedMod(con + racialCon);
-    }
-    var will = document.getElementsByClassName('will');
-    for (var i = 0; i < will.length; ++i) {
-        var item = will[i];  
-        item.innerHTML = myClass.will + calculateUnsignedMod(wis + racialWis);
-    }
-    var skillRanks = document.getElementsByClassName('skill-ranks');
-    for (var i = 0; i < skillRanks.length; ++i) {
-        var item = skillRanks[i];  
-        item.innerHTML = myClass.skillRanks + calculateUnsignedMod(iq + racialIq);
-    }
-    var classSkills = document.getElementsByClassName('class-skills');
-    for (var i = 0; i < classSkills.length; ++i) {
-        var item = classSkills[i];  
-        item.innerHTML = myClass.classSkills;
-    }
+	updateFeature('hp', myClass.hp + calculateUnsignedMod(con + racialCon));
+	updateFeature('mab', myClass.bab + calculateUnsignedMod(str + racialStr));
+	updateFeature('rab', myClass.bab + calculateUnsignedMod(dex + racialDex));
+	updateFeature('wealth', myClass.wealth + " gp");
+	updateFeature('ref', myClass.ref + calculateUnsignedMod(dex + racialDex));
+	updateFeature('fort', myClass.fort + calculateUnsignedMod(dex + racialCon));
+	updateFeature('will', myClass.will + calculateUnsignedMod(dex + racialWis));
+	updateFeature('skill-ranks', myClass.skillRanks + calculateUnsignedMod(iq + racialIq));
+	updateFeature('class-skills', myClass.classSkills.map(function(elem){return elem.name;}).join(", "));
 }
 
 function updateAdvancedClassFeatures(newClass){
 	document.getElementById('fighter-traits').style.display = "none";
 	document.getElementById('cleric-traits').style.display = "none";
 	document.getElementById('wizard-traits').style.display = "none";
+	document.getElementById('rogue-traits').style.display = "none";
     switch (newClass){
         case fighter:
             document.getElementById('fighter-traits').style.display = "block";
+            break;
+        case rogue:
+            document.getElementById('rogue-traits').style.display = "block";
             break;
         case cleric:
             document.getElementById('cleric-traits').style.display = "block";
@@ -967,3 +945,15 @@ function becomeRogue(){
 function becomeWizard(){
 	changeClass('wizard-selection-card', wizard);
 }
+
+
+//FEATS
+//Combat feats
+var agileManeuvers;
+var blindFight;
+var combatExpertise;
+var combatReflexes;
+var dodge;
+var pointBlankShot;
+var powerAttack;
+var throwAnything;

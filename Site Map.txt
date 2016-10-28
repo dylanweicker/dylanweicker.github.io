@@ -17,25 +17,46 @@ RED
 	- White full-width section
 		Dylan At a Glance: Pull from dating/tumblr bios Add lots of emojis.
 			21 | He/Him | INTP
-			UBC | Vancouver
-			Computer Geek | Friendly Queer Vegan | Meme Master
-		Motives: (ambition, direction, goal, objective, aspiration)
+			Vancouver | UBC Student
+			Software Developer | Technophile
+			Friendly Queer Vegan | Social Justice Warrior
+			Meme Master | Pop Culture Nerd | Lady Gaga Stan
+			Board Game Junkie | Cat Lover | Yogi | Thespian
+			Millennial | Selfie Addict | Narcissist | Hipster
+
+21
+INTP
+He/Him
+Vancouver
+UBC Student
+Software Developer
+
+		email; 
+		TIme line: school, work, acheivments
+
+		personality:
+
+		Skills
+		Objective: (ambition, direction, goal, objective, aspiration, motivation)
+
 			Grow 	
-				Learn by asking others for knowledge and assistance
-				Pursue goals while being transparent about objectives
-				Reflect on personal achievements and find room for development
+				Learn concepts and abilities by asking others for knowledge and assistance
+				Pursue goals while being transparently sharing objectives with others
+				Reflect on personal achievements and find room for further progress
 			Practice	
-				Learn about computers
-				Continue to 
+				Develop technical skills by creating websites and applications
+				Maintain communication skills by actively sharing written and spoken messages online
+				Cultivate compassion by using inclusive language and staying conscious of the space I occupy
 			Entertain
-				Post dank memes on the interwebs, 
-				Develop interesting games of all kinds
+				Post dank memes on the interwebs
+				Create interesting videos
+				Develop interesting games, both on the computer and on the table top
 			Educate
 				Share knowledge and skills with others
 				Discuss methods to be an ally for marginalized people 
 				Take advantage of opportunities to demonstrate leadership.
 		Achievements
-			Vegan, Vision Critical, This Website
+			Vegan, Vision Critical, This Website, Pathfinder Game Master
 		
 	- These are a few of my favourite things 
 	-	<Technology> <Social Justice> <Games> <Pop Culture> <Goals(Education?)/cats/theatre>
@@ -44,8 +65,8 @@ ORANGE
 	Technology		- Orange
 		-> Technology is omnipresent. Millenials are addicted to technology.
 		->href Technological Experience/resume/skills
-		->games That I've made
-		->interesting innovations
+		->games That I've made (my experience/portfolio)
+		->interesting innovations (what inspires me)
 		-> Why is it significant
 		-> What can be done with it?
 	
@@ -53,6 +74,8 @@ Activism		- Yellow
 	-> Queer Rights
 	-> Trans Rights
 	-> Women's Rights
+	-> Decolonization
+	-> Racism
 	-> Animal Rights
 	
 Games			- Green
@@ -63,6 +86,7 @@ Pop Culture		- Cyan
 	-> Pop music (Spotify integration?)
 	-> Memes
 	-> Social Media
+	-> selfie culture
 
 My Mission/Education		- Blue
 	-> Educating People About Marginalized Groups through technology, games, and pop culture

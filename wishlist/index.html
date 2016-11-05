@@ -1,0 +1,314 @@
+<html>
+    <head>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lobster');
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        @import url('https://fonts.googleapis.com/css?family=Material+Icons');
+        body {
+            background: #eee;
+            font-family: 'Roboto', calibri, sans-serif;
+            margin: 0;
+        }
+        
+        h1{
+            margin-top: 120px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 3em;
+            font-family: 'Open Sans', 'Roboto', Helvetica, Arial, sans-serif;
+            font-weight: 300;
+        }
+        
+        
+		h2{
+            color: dimgrey;
+            font-weight: 400;
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 20px;
+		}
+        
+        #container{
+                margin: auto;
+        }
+        
+        @media only screen and (max-width: 849px){
+            #container{
+                width: 420px;
+            }
+        }
+        
+        @media only screen and (min-width: 850px){
+            #container{
+                width: 850px;
+            }
+        }
+        
+        .item {
+            width: 400px;
+            margin: 10px;
+            border-radius: 4px;
+            box-shadow:  0 0 4px 2px rgba(0, 0, 0, 0.06);
+            display: inline-block;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .item:hover {
+            box-shadow:  0 0 4px 4px rgba(255, 140, 0, 0.50);
+        }
+        
+        .item:hover .item-read-more {
+            right: 0;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .item-img{
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+        .item-img img{
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+        
+        .item-content{
+            height: 115px;
+        }
+        
+        .item-content h1{
+            font-size: 24px;
+            margin: 8px;
+            color: black;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .item-content p{
+            color: dimgrey;
+            margin: 8px;
+        }
+        
+        .item-bottom{
+            margin: 8px;
+            height: 20px;
+            color: darkorange;
+            display: flex;
+        }
+        
+        .item-price{
+            flex: auto;
+            
+        }
+        
+        .item-read-more{
+            font-family: calibri, sans-serif;
+            flex: auto;
+            text-align: right;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            right: -120px;
+        }
+        
+        header{
+		position: fixed;
+		top: 0;
+		display: flex;
+		box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
+		padding: 8px;
+		width: 100%;
+		box-sizing: border-box;
+		}
+
+		.header{
+			flex: 1;
+			display: inline;
+			font-size: 24px;
+			color: white;
+			font-weight: bold;
+            position: relative;
+		}
+
+		.header i{
+            padding-top: 4px;
+			font-size: 32px;
+		}
+
+		.header b{
+			padding-left: 10px;
+			font-family: 'Lobster', sans-serif;
+			vertical-align: middle;
+		}
+
+		.header img{
+			width: 40px;
+			height: 40px;
+			vertical-align: middle;
+		}
+
+		.header a{
+			color: white;
+			text-decoration: none;
+		}
+		.header a:hover{
+			color: #fb0;
+			text-decoration: none;
+		}
+
+		.left{
+			text-align: left;
+		}
+
+		.center{
+			text-align: center;
+		}
+
+		.right{
+			text-align: right;
+		}
+        
+		.red{
+		background: #D44;
+		color: white;
+		}
+        
+    </style>
+    
+    <body>
+        
+        <template id="item-template">
+            <a class="item-link" href="/" target="_blank">
+            <div class="item">
+                <div class="item-img">
+                    <img src="">
+                </div>
+                <div class="item-content">
+                    <h1 class="item-name"></h1>
+                    <p class=item-description></p>
+                </div>
+                <div class="item-bottom">
+                    <div class="item-price"></div>
+                    <div class="item-read-more">Read More</div>
+                </div>
+            </div>
+            </a>
+        </template>
+        
+        <header class="red">
+			<div class="header left" >
+				<a href=""><img src="images/dplogo.png"><b>Dylan Weicker</b></a>
+			</div>
+			<div class="header right">
+				<a href=""><i class="material-icons">menu</i></a>
+			</div>
+		</header>
+        
+        <h1>Dylan's Wishlist</h1>
+        <h2>A non-exhaustive guide of gifts that I would enjoy</h2>
+        
+        <div id="container">
+        </div>
+        
+        <script type="text/javascript">
+            var items = [
+                
+                {
+                "name" : "Fluxx",
+                "category" : "game",
+                "image" : "http://www.looneylabs.com/sites/default/files/Fluxx5.0-Box_3D_sm_0.jpg",
+                "description" : "A simple card game for 2-6 players, in which the rules and the object of the game are constantly changing.",
+                'price' : 21.33,
+                "link" : "http://www.looneylabs.com/games/fluxx",
+                },
+                {
+                "name" : "Hoax",
+                "category" : "game",
+                "image" : "https://cf.geekdo-images.com/images/pic2628115_md.jpg",
+                "description" : "In this game of bluffing and deduction, 3 to 6 players must both avoid accusations and judiciously make them, all the while making their opponents believe that all their lies are true.",
+                'price' : 23.38,
+                "link" : "https://boardgamegeek.com/boardgame/182218/hoax-second-edition",
+                },
+                {
+                "name" : "Bang",
+                "category" : "game",
+                "image" : "https://cf.geekdo-images.com/images/pic1170986_md.jpg",
+                "description" : "A bluffing an deduction card game, in which each player recieves a character with special abilities and a secret role card which determines their victory condition.",
+                'price' : 23.56,
+                "link" : "https://boardgamegeek.com/boardgame/3955/bang",
+                },
+                {
+                "name" : "Codenames",
+                "category" : "game",
+                "image" : "https://static.indigoimages.ca/covers/gifts/031/8594156310318_hi.jpg",
+                "description" : "In this party game, two teams compete to see who can make contact with all of their agents first by solving one-word clues given by their spymaster.",
+                'price' : 29.95,
+                "link" : "https://www.chapters.indigo.ca/en-ca/toys/codenames-party-game/8594156310318-item.html",
+                },
+                {
+                "name" : "Dominion",
+                "category" : "game",
+                "image" : "https://cf.geekdo-images.com/images/pic394356_md.jpg",
+                "description" : "A medieval strategy deck-building card game for 2-4 players. Players build a kingdom by buying more cards from the center of the table as they can afford them.",
+                'price' : 59.95,
+                "link" : "https://www.chapters.indigo.ca/en-ca/toys/dominion/655132003704-item.html",
+                },
+                {
+                "name" : "Lords of Waterdeep",
+                "category" : "game",
+                "image" : "http://dnd.wizards.com/sites/default/files/media/styles/product_tabletop_left/public/images/product/DnD_LOW.png?itok=YQe-QDer",
+                "description" : "A strategy board game for 2-5 players. You take on the role of one of the masked Lords of Waterdeep, secret rulers of the city. Through your agents, you recruit adventurers to go on quests on your behalf.",
+                'price' : 57.00,
+                "link" : "https://www.chapters.indigo.ca/en-ca/books/lords-of-waterdeep-a-dungeons/9780786959914-item.html",
+                },
+                {
+                "name" : "Smallworld",
+                "category" : "game",
+                "image" : "https://cf.geekdo-images.com/images/pic428828.jpg",
+                "description" : "In Small World, players vie for conquest and control of a fantasy world that is simply too small to accommodate them all.",
+                'price' : 69.95,
+                "link" : "https://www.chapters.indigo.ca/en-ca/toys/small-world/824968726914-item.html",
+                },
+                {
+                "name" : "Talisman",
+                "category" : "game",
+                "image" : "https://cf.geekdo-images.com/images/pic332870_md.jpg",
+                "description" : "Talisman is an adventure board game set in a high fantasy medieval world. Players have 14 characters to choose from all based on role playing archetypes, such as heroes, wizards, villains, and thieves.",
+                'price' : 88.29,
+                "link" : "https://boardgamegeek.com/boardgame/27627/talisman-revised-4th-edition",
+                }
+            ];
+            
+            function supportsTemplate() {
+              return 'content' in document.createElement('template');
+            }
+
+            if (supportsTemplate()) {
+               for (var i = 0; i < items.length; i++) {
+                  var item = items[i];
+                  var tmpl = document.getElementById("item-template").content.cloneNode(true);
+                  tmpl.querySelector('.item-name').innerText = item.name;
+                  tmpl.querySelector('.item-img').innerHTML = "<img src=" + item.image + ">";
+                  tmpl.querySelector('.item-description').innerText = item.description;
+                  tmpl.querySelector('.item-price').innerText = "$" + item.price.toString();
+                  tmpl.querySelector('.item-link').href = item.link;
+                  document.getElementById("container").appendChild(tmpl);
+                } 
+            }else {
+              document.getElementById(content).innerHTML = "Your browser does not support this page.";
+            }
+        </script>
+    </body>
+</html>

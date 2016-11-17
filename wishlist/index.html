@@ -37,7 +37,13 @@
             margin: auto;
         }
         
-        @media only screen and (max-width: 1099px){
+        @media only screen and (max-width: 669px){
+            #content{
+                width: 420px;
+            }
+        }
+        
+        @media only screen and (max-width: 1099px) and (min-width: 670px){
             #content{
                 width: 660px;
             }
@@ -225,8 +231,43 @@
         
         #side-bar-content{
             border-left: #BBB 3px solid; 
-            padding: 6px;
             padding-left: 12px;
+        }
+        
+        .side-bar-section{            
+            padding-top: 6px;    
+            padding-bottom: 8px;
+        }
+        
+        
+        @media only screen and (max-width: 669px){
+            .side-bar-section{
+                display: table-cell;
+                width: 200px;
+                vertical-align: top;
+            }
+            
+            #side-bar{
+                padding-left: 10px;
+                display: block;
+                width: 100%;
+            }
+            
+            #container{
+                display: block;
+            }
+        }
+        
+        @media only screen and (min-width: 670px){
+            .side-bar-section{
+                display: block;
+            }
+            #side-bar{
+                display: table-cell;
+            }
+            #container{
+                display: table-cell;
+            }
         }
     </style>
     
@@ -265,13 +306,16 @@
         <div id="content">
             <div id="side-bar">
                 <div id="side-bar-content">
-                    <h2>Sort</h2>    
-                    <p id="lowToHigh" onclick="sortAscendingPrice();">Price: Low to High</p>
-                    <p id="highToLow" onclick="sortDecendingPrice();">Price: High to Low</p>
-                    <br>
-                    <h2>Category</h2>
-                    <p id="gameToggle" onclick="toggleGames();">Games</p>
-                    <p id="fashionToggle" onclick="toggleFashion();">Fashion</p>
+                    <div class="side-bar-section">
+                        <h2>Sort</h2>    
+                        <p id="lowToHigh" onclick="sortAscendingPrice();">Price: Low to High</p>
+                        <p id="highToLow" onclick="sortDecendingPrice();">Price: High to Low</p>
+                        </div>
+                    <div class="side-bar-section">
+                        <h2>Category</h2>
+                        <p id="gameToggle" onclick="toggleGames();">Games</p>
+                        <p id="fashionToggle" onclick="toggleFashion();">Fashion</p>
+                    </div>
                 </div>
             </div>
             

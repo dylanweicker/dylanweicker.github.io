@@ -1,5 +1,6 @@
 <html>
     <head>
+        <script src="./jquery-3.1.1.slim.js"></script>
     </head>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lobster');
@@ -32,17 +33,35 @@
             margin-bottom: 20px;
 		}
         
-        #container{
-                margin: auto;
+        #content{
+            margin: auto;
         }
         
-        @media only screen and (max-width: 849px){
+        @media only screen and (max-width: 1099px){
+            #content{
+                width: 660px;
+            }
+        }
+        
+        
+        @media only screen and (min-width: 1100px){
+            #content{
+                width: 1090px;
+            }
+        }
+        
+        #container{
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        @media only screen and (max-width: 1099px){
             #container{
                 width: 420px;
             }
         }
         
-        @media only screen and (min-width: 850px){
+        @media only screen and (min-width: 1100px){
             #container{
                 width: 850px;
             }
@@ -75,7 +94,7 @@
         
         .item-img{
             width: 100%;
-            height: 240px;
+            height: 225px;
             overflow: hidden;
         }
         .item-img img{
@@ -185,6 +204,30 @@
 		color: white;
 		}
         
+        #side-bar{
+            width: 200px;
+            padding-left: 25px;
+            padding-top: 10px;
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        #side-bar h2, p {
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+        
+        #side-bar p:hover {
+            cursor: pointer;
+            color: #BBB;
+        }
+        
+        #side-bar-content{
+            border-left: #BBB 3px solid; 
+            padding: 6px;
+            padding-left: 12px;
+        }
     </style>
     
     <body>
@@ -219,15 +262,30 @@
         <h1>Dylan's Wishlist</h1>
         <h2>A non-exhaustive guide of gifts that I would enjoy</h2>
         
-        <div id="container">
+        <div id="content">
+            <div id="side-bar">
+                <div id="side-bar-content">
+                    <h2>Sort</h2>    
+                    <p id="lowToHigh" onclick="sortAscendingPrice();">Price: Low to High</p>
+                    <p id="highToLow" onclick="sortDecendingPrice();">Price: High to Low</p>
+                    <br>
+                    <h2>Category</h2>
+                    <p id="gameToggle" onclick="toggleGames();">Games</p>
+                    <p id="fashionToggle" onclick="toggleFashion();">Fashion</p>
+                </div>
+            </div>
+            
+            <div id="container">
+            </div>
         </div>
         
         <script type="text/javascript">
+            categories = {GAME : 0, FASHION : 1};
+            
             var items = [
-                
                 {
                 "name" : "Fluxx",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "http://www.looneylabs.com/sites/default/files/Fluxx5.0-Box_3D_sm_0.jpg",
                 "description" : "A simple card game for 2-6 players, in which the rules and the object of the game are constantly changing.",
                 'price' : 21.33,
@@ -235,7 +293,7 @@
                 },
                 {
                 "name" : "Hoax",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "https://cf.geekdo-images.com/images/pic2628115_md.jpg",
                 "description" : "In this game of bluffing and deduction, 3 to 6 players must both avoid accusations and judiciously make them, all the while making their opponents believe that all their lies are true.",
                 'price' : 23.38,
@@ -243,7 +301,7 @@
                 },
                 {
                 "name" : "Bang",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "https://cf.geekdo-images.com/images/pic1170986_md.jpg",
                 "description" : "A bluffing an deduction card game, in which each player recieves a character with special abilities and a secret role card which determines their victory condition.",
                 'price' : 23.56,
@@ -251,7 +309,7 @@
                 },
                 {
                 "name" : "Codenames",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "https://static.indigoimages.ca/covers/gifts/031/8594156310318_hi.jpg",
                 "description" : "In this party game, two teams compete to see who can make contact with all of their agents first by solving one-word clues given by their spymaster.",
                 'price' : 29.95,
@@ -259,7 +317,7 @@
                 },
                 {
                 "name" : "Dominion",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "https://cf.geekdo-images.com/images/pic394356_md.jpg",
                 "description" : "A medieval strategy deck-building card game for 2-4 players. Players build a kingdom by buying more cards from the center of the table as they can afford them.",
                 'price' : 59.95,
@@ -267,7 +325,7 @@
                 },
                 {
                 "name" : "Lords of Waterdeep",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "http://dnd.wizards.com/sites/default/files/media/styles/product_tabletop_left/public/images/product/DnD_LOW.png?itok=YQe-QDer",
                 "description" : "A strategy board game for 2-5 players. You take on the role of one of the masked Lords of Waterdeep, secret rulers of the city. Through your agents, you recruit adventurers to go on quests on your behalf.",
                 'price' : 57.00,
@@ -275,7 +333,7 @@
                 },
                 {
                 "name" : "Smallworld",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "https://cf.geekdo-images.com/images/pic428828.jpg",
                 "description" : "In Small World, players vie for conquest and control of a fantasy world that is simply too small to accommodate them all.",
                 'price' : 69.95,
@@ -283,32 +341,126 @@
                 },
                 {
                 "name" : "Talisman",
-                "category" : "game",
+                "category" : categories.GAME,
                 "image" : "https://cf.geekdo-images.com/images/pic332870_md.jpg",
                 "description" : "Talisman is an adventure board game set in a high fantasy medieval world. Players have 14 characters to choose from all based on role playing archetypes, such as heroes, wizards, villains, and thieves.",
                 'price' : 88.29,
                 "link" : "https://boardgamegeek.com/boardgame/27627/talisman-revised-4th-edition",
+                },
+                {
+                "name" : "Elasticated Fabric Belt",
+                "category" : categories.FASHION,
+                "image" : "",
+                "description" : "Braided elasticated fabric belt with imitation leather details and a metal buckle. Width approx. 3.5 cm.",
+                'price' : 19.99,
+                "link" : "http://www2.hm.com/en_ca/productpage.0397376006.html",
+                },
+                {
+                "name" : "Beige Pants",
+                "category" : categories.FASHION,
+                "image" : "",
+                "description" : "Beige skinny fit paints in size 30R",
+                'price' : 34.99,
+                "link" : "https://boardgamegeek.com/boardgame/27627/talisman-revised-4th-edition",
                 }
             ];
+            
+            var itemsSorted;
+            var ascending = true;
+            var showGame = true;
+            var showFashion = true;
+            
+            var filters = {
+                'game' : true,
+                'fashion' : true
+            }
+            
+            function removeElements(array, property, value){
+                return array.filter(function(item) { 
+                    return item[property] != value;  
+                });
+            }
+            
+            function sortResults(prop) {  
+                itemsSorted = items;
+                
+                if (!filters.game){
+                    itemsSorted = removeElements(itemsSorted, 'category', categories.GAME);
+                }
+                
+                if (!filters.fashion){
+                    itemsSorted = removeElements(itemsSorted, 'category', categories.FASHION);
+                }
+                
+                itemsSorted = itemsSorted.sort(function(a, b) {
+                    if (ascending) {
+                        return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+                    } else {
+                        return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+                    }
+                });
+            }
             
             function supportsTemplate() {
               return 'content' in document.createElement('template');
             }
-
-            if (supportsTemplate()) {
-               for (var i = 0; i < items.length; i++) {
-                  var item = items[i];
-                  var tmpl = document.getElementById("item-template").content.cloneNode(true);
-                  tmpl.querySelector('.item-name').innerText = item.name;
-                  tmpl.querySelector('.item-img').innerHTML = "<img src=" + item.image + ">";
-                  tmpl.querySelector('.item-description').innerText = item.description;
-                  tmpl.querySelector('.item-price').innerText = "$" + item.price.toString();
-                  tmpl.querySelector('.item-link').href = item.link;
-                  document.getElementById("container").appendChild(tmpl);
-                } 
-            }else {
-              document.getElementById(content).innerHTML = "Your browser does not support this page.";
+            
+            function displayItems(){
+                //reset list of displayed items
+                document.getElementById("container").innerHTML = "";
+                
+                //get filtered list of items to display in correct order
+                sortResults('price');
+                
+                //add correct items
+                if (supportsTemplate()) {
+                   for (var i = 0; i < itemsSorted.length; i++) {
+                      var item = itemsSorted[i];
+                      var tmpl = document.getElementById("item-template").content.cloneNode(true);
+                      tmpl.querySelector('.item-name').innerText = item.name;
+                      tmpl.querySelector('.item-img').innerHTML = "<img src=" + item.image + ">";
+                      tmpl.querySelector('.item-description').innerText = item.description;
+                      tmpl.querySelector('.item-price').innerText = "$" + item.price.toString();
+                      tmpl.querySelector('.item-link').href = item.link;
+                      document.getElementById("container").appendChild(tmpl);
+                    } 
+                }else {
+                  document.getElementById(content).innerHTML = "Your browser does not support this page.";
+                }
             }
+            
+            function toggleCategory(category, htmlElementId){
+                if (filters[category]){
+                    filters[category] = false;
+                    document.getElementById(htmlElementId).style.textDecoration = "line-through";
+                }
+                else{
+                    filters[category] = true;
+                    document.getElementById(htmlElementId).style.textDecoration = "none";
+                }
+                displayItems();
+            }
+            
+            function toggleGames(){
+                toggleCategory('game', "gameToggle");
+            }
+            function toggleFashion(){
+                toggleCategory('fashion', "fashionToggle");
+            }
+            
+            
+            function sortAscendingPrice(){
+                ascending = true;
+                displayItems();
+            }
+            function sortDecendingPrice(){
+                ascending = false;
+                displayItems();
+            }
+            
+            //run on init
+            displayItems();
+            
         </script>
     </body>
 </html>

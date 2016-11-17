@@ -37,9 +37,12 @@
             margin: auto;
         }
         
-        @media only screen and (max-width: 669px){
+        
+        
+        
+        @media only screen and (min-width: 1100px){
             #content{
-                width: 420px;
+                width: 1090px;
             }
         }
         
@@ -49,10 +52,9 @@
             }
         }
         
-        
-        @media only screen and (min-width: 1100px){
+        @media only screen and (max-width: 669px)  and (max-device-width: 480px){
             #content{
-                width: 1090px;
+                width: 420px;
             }
         }
         
@@ -61,15 +63,15 @@
             vertical-align: top;
         }
         
-        @media only screen and (max-width: 1099px){
-            #container{
-                width: 420px;
-            }
-        }
-        
         @media only screen and (min-width: 1100px){
             #container{
                 width: 850px;
+            }
+        }
+        
+        @media only screen and (max-width: 1099px){
+            #container{
+                width: 420px;
             }
         }
         
@@ -239,8 +241,19 @@
             padding-bottom: 8px;
         }
         
+        @media only screen and (min-width: 670px){
+            .side-bar-section{
+                display: block;
+            }
+            #side-bar{
+                display: table-cell;
+            }
+            #container{
+                display: table-cell;
+            }
+        }
         
-        @media only screen and (max-width: 669px){
+        @media only screen and (max-width: 669px) and (max-device-width: 480px) {
             .side-bar-section{
                 display: table-cell;
                 width: 200px;
@@ -258,17 +271,6 @@
             }
         }
         
-        @media only screen and (min-width: 670px){
-            .side-bar-section{
-                display: block;
-            }
-            #side-bar{
-                display: table-cell;
-            }
-            #container{
-                display: table-cell;
-            }
-        }
     </style>
     
     <body>

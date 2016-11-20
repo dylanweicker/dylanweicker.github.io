@@ -53,6 +53,23 @@ margin: 0;
 padding: 0;
 }
 
+h3{
+    font-weight: 400;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 2em;
+}
+
+h4{
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
 header{
 position: fixed;
 top: 0;
@@ -180,11 +197,10 @@ display: block;
     }
 }
 
-.social-media{
-background: #8af;
-height: 24px;
-width: 24px;
-margin: 10px;
+.social-media img{
+    height: 28px;
+    margin-top: 30px;
+    padding-right: 20px;
 }
 
 .red{
@@ -205,50 +221,26 @@ color: white;
     padding: 0;
 }
 
-.red-link-section a:link, a:visited{
-background: #FA6E6E;
-box-shadow: 0 0 8px #a11;
-border-bottom: 5px solid #C22;
-border-right: 2px solid #C22;
-}
-.red-link-section a:hover, a:active{
-background: #FF9A9A;
-}
-.red-on-white{
-    background: red;
-}
 .orange{
     background: #f60;
     color: white;
 }
-.orange h1, h3 {
+.orange h1{
     color: white;
 }
 .orange h2{
     color: #facc99;
 }
 
-.orange-link-section a:link, a:visited{
-    background: #ff8939;
-    box-shadow: 0 0 8px #9b3f00;
-    border-bottom: 5px solid #c6500;
-    border-right: 2px solid #c6500;
+.view-wishlist:link{
+    padding: 10px 30px; 
+    background: #26a892; 
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #c65000;
 }
- .orange-link-section a:hover, a:active{
-    background: #ffa264;
-}
-.orange-link{
-    width: 200px;
-    margin: 10px;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 5px;
-}
-.orange-link-img{
-    display: table-cell;
-}
-.orange-link-txt{
-    display: table-cell;
+
+.view-wishlist:hover{
+    background: #48b9a6;
 }
 
 
@@ -360,139 +352,8 @@ display: inline-block;
     }
 }
 
-.icon{
-width: 80px;
-height: 80px;
-}
 
-.goal-container{
-margin: 0;
-display: flex;
-flex-flow: row;
-}
-.goal-category{
-width: 16.6%;
-box-sizing: border-box;
-padding: 0;
-margin: 0 5px;
-}
-.goal-title{
-box-sizing: border-box;
-vertical-align: middle;
-border-top-left-radius: 5px;
-border-top-right-radius: 6px;
-}
-.goal-title h3{
-margin: 0 10px;
-padding: 8px;
-}
-.goal-internal-flex-container{
-width: 100%;
-display: flex;
-flex-flow: column;
-}
-.goal-box{
-width: 100%;
-height: 260px;
-box-sizing: border-box;
-padding: 20px;
-padding-top:0px;
-margin-top: 10px;
-box-shadow: 0 0 5px 1px #999;
-}
-.goal-label{
-vertical-align: top;
-box-sizing: border-box;
-}
-.goal-top-left{
-height: 38px;
-}
-
-@media only screen and (max-width: 1100px){
-.goal-container{
-display: block;
-flex-flow: row;
-}
-.goal-category{
-width: auto;
-margin: 0;
-}
-.goal-internal-flex-container{
-display: flex;
-flex-flow: row;
-}
-.goal-title{
-margin: 10px;
-margin-bottom: 0;
-}
-.goal-box{
-height: auto;
-margin: 10px;
-}
-.goal-top-left{
-display: none;
-}
-}
-@media only screen and (max-width: 730px){
-.goal-internal-flex-container{
-display: flex;
-flex-flow: column;
-}
-.goal-title{
-margin: 10px;
-margin-top: 20px;
-}
-.goal-box{
-width: auto;
-height: auto;
-}
-.goal-top-left{
-display: none;
-}
-.goal-label{
-display: none;
-}
-}
-
-.no-shadow{
-box-shadow: none;
-}
-
-.inline-block{
-    display: inline-block;
-}
-
-hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.favourite-thing{
-    width: 220px;
-    margin: 10px;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-
-
-.favourite-thing1 h3{
-    margin-top: 0;
-    padding-top: 0;
-}
-
-
-.favourite-things-section a:link, a:visited{
-border: 2px solid #C22;
-}
-.favourite-things-section a:hover, a:active{
-background: #C22;
-border: 2px solid #C22;
-color: white;
-}
-
-.objectives{
+.mantras{
     width: 48%;
     padding: 20px;
     padding-top: 0;
@@ -504,34 +365,34 @@ color: white;
 }
 
 @media only screen and (max-width: 926px){
-    .objectives{
+    .mantras{
     width: 100%;
     }
 }
 
-.objectives-img{
+.mantras-img{
     width: 98px;
     vertical-align: top;
     margin-right: 50px;
     display: table-cell;
 }
 
-.objectives-img img{
+.mantras-img img{
     width: 98px;
     height: auto;
     display: inline-block;
 }
 
-.objectives-text{
+.mantras-text{
     display: table-cell;
 }
 
-.objectives ul{
+.mantras ul{
     display: inline-block;
     margin-top: 0;
 }
 
-.objectives li{
+.mantras li{
     list-style-position: outside;
     margin-bottom: 5px;
 }

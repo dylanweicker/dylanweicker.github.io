@@ -165,3 +165,177 @@
                                     </a>
                                 </div>
                             </div>
+							
+							
+							
+
+.red-link-section a:link, a:visited{
+background: #FA6E6E;
+box-shadow: 0 0 8px #a11;
+border-bottom: 5px solid #C22;
+border-right: 2px solid #C22;
+}
+
+.red-link-section a:hover, a:active{
+background: #FF9A9A;
+}
+.red-on-white{
+    background: red;
+}
+
+
+.orange-link-section a:link, a:visited{
+    background: #ff8939;
+    box-shadow: 0 0 8px #9b3f00;
+    border-bottom: 5px solid #c6500;
+    border-right: 2px solid #c6500;
+}
+ .orange-link-section a:hover, a:active{
+    background: #ffa264;
+}
+
+.orange-link{
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.orange-link-img{
+    display: table-cell;
+}
+.orange-link-txt{
+    display: table-cell;
+}
+
+.icon{
+width: 80px;
+height: 80px;
+}
+
+.goal-container{
+margin: 0;
+display: flex;
+flex-flow: row;
+}
+.goal-category{
+width: 16.6%;
+box-sizing: border-box;
+padding: 0;
+margin: 0 5px;
+}
+.goal-title{
+box-sizing: border-box;
+vertical-align: middle;
+border-top-left-radius: 5px;
+border-top-right-radius: 6px;
+}
+.goal-title h4{
+margin: 0 10px;
+padding: 8px;
+}
+.goal-internal-flex-container{
+width: 100%;
+display: flex;
+flex-flow: column;
+}
+.goal-box{
+width: 100%;
+height: 260px;
+box-sizing: border-box;
+padding: 20px;
+padding-top:0px;
+margin-top: 10px;
+box-shadow: 0 0 5px 1px #999;
+}
+.goal-label{
+vertical-align: top;
+box-sizing: border-box;
+}
+.goal-top-left{
+height: 38px;
+}
+
+@media only screen and (max-width: 1100px){
+.goal-container{
+display: block;
+flex-flow: row;
+}
+.goal-category{
+width: auto;
+margin: 0;
+}
+.goal-internal-flex-container{
+display: flex;
+flex-flow: row;
+}
+.goal-title{
+margin: 10px;
+margin-bottom: 0;
+}
+.goal-box{
+height: auto;
+margin: 10px;
+}
+.goal-top-left{
+display: none;
+}
+}
+@media only screen and (max-width: 730px){
+.goal-internal-flex-container{
+display: flex;
+flex-flow: column;
+}
+.goal-title{
+margin: 10px;
+margin-top: 20px;
+}
+.goal-box{
+width: auto;
+height: auto;
+}
+.goal-top-left{
+display: none;
+}
+.goal-label{
+display: none;
+}
+}
+
+.no-shadow{
+box-shadow: none;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.favourite-thing{
+    width: 220px;
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
+
+.favourite-thing1 h4{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+.favourite-things-section a:link, a:visited{
+border: 2px solid #C22;
+}
+.favourite-things-section a:hover, a:active{
+background: #C22;
+border: 2px solid #C22;
+color: white;
+}

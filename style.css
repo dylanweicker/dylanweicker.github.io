@@ -352,11 +352,26 @@ display: inline-block;
     }
 }
 
+.mantra-container{
+    background: #ffeac0;
+    background: #f8d6b3;
+    color: black; 
+    border-radius: 4px; 
+    padding-top: 8px;
+}
+
+.mantra-container p{
+    margin: 20px;
+}
+
+
+.mantra-container h4{
+    margin-bottom: 12px;
+}
 
 .mantras{
     width: 48%;
-    padding: 20px;
-    padding-top: 0;
+    padding: 10px 20px;
     display: inline-block;
     vertical-align: top;
     text-align: left;
@@ -413,6 +428,17 @@ display: inline-block;
     text-align: center;
     display: table-cell;
     padding: 40px;
+}
+
+.ambitions{
+    display: table-cell;
+    padding-right: 30px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    width: 25%;
+}
+.ambitions h4{
+    text-align: center;
 }
 
 .experience img{

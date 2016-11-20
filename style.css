@@ -547,3 +547,14 @@ color: white;
     width: auto;
     margin-right: 5px;
 }
+
+.experience{
+    text-align: center;
+    display: table-cell;
+    padding: 40px;
+}
+
+.experience img{
+    height: 150px;
+    width: auto;
+}

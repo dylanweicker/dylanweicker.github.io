@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="style.css">
 		<link rel="icon" href="rainbow-emoji.ico" type="image/x-icon"/>
 		<link rel="shortcut icon" href="rainbow-emoji.ico" type="image/x-icon"/>
 		<title>Dylan Weicker</title>
@@ -27,650 +28,229 @@
 		</script>
     </head>
                 
-	<style>
-		body {
-		padding: 0;
-		margin: 0;
-		font-family: 'Lato', sans-serif;
-		}
-		
-		p{
-		font-size: 16px;
-		}
-		
-		p img{
-		height: 24px;
-		}
-		
-		a {
-		color: inherit;
-		text-decoration: none;
-		}
-		
-		table{
-		border-spacing: 40px 5px;
-		table-layout: fixed;
-		}
-		
-		th{
-		border-bottom: 3px solid #FFA533;
-		}
-		
-		td{
-		width: 15%;
-		text-align: left;
-		vertical-align: top;
-		}
-		
-		h1{
-		margin: 0;
-		font-size: 3em;
-		padding-top: 68px;
-		padding-bottom: 17px;
-		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-		font-weight: 300;
-		text-align: center;
-		}
-        
-		h2{
-		color: #f8fcf8;
-		font-weight: 400;
-		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-		margin: 0;
-		padding: 0;
-		}
-		
-		header{
-		position: fixed;
-		top: 0;
-		display: flex;
-		box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
-		padding: 8px;
-		width: 100%;
-		box-sizing: border-box;
-		}
-
-		.header{
-			flex: 1;
-			display: inline;
-			vertical-align: middle;
-			font-size: 28px;
-			color: white;
-			font-weight: bold;
-		}
-
-		.header i{
-			font-size: 32px;
-		}
-
-		.header b{
-			padding-top: 12px;
-			padding-left: 10px;
-			font-family: 'Lobster', sans-serif;
-		}
-
-		.header img{
-			width: 48px;
-			height: 48px;
-			vertical-align:middle;
-		}
-
-		.header a{
-			color: white;
-			text-decoration: none;
-		}
-		.header a:hover{
-			color: #fb0;
-			text-decoration: none;
-		}
-		
-		#about-me{
-		margin-top: 0; 
-		margin-bottom: 1.5em; 
-		width: 100%;
-		border-radius: 5px;
-		padding: 16px;
-		box-sizing: border-box;
-		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.06);
-		background: white;
-		color: black;
-		text-align: left;
-		}
-		#about-me h2{
-		color: black;
-		text-align: left;
-		}
-		
-		.section{
-		min-height: 200px;
-		width: 100%;
-		text-align: center;
-        min-width: 890px;
-		}
-
-		.left{
-			text-align: left;
-		}
-
-		.center{
-			text-align: center;
-		}
-
-		.right{
-			text-align: right;
-		}
-		
-		.content{
-		margin: auto;
-		max-width: 1200px;
-		padding: 30px 80px;
-		}
-		
-		#social-media-holder{
-		text-align: center;
-		font-size: 6 !important;
-		position: fixed;
-		right: 0;
-		bottom: 0;
-		padding: 4px;
-		display: block;
-		}
-		
-		@media only screen and (max-width: 1600px){
-			#social-media-holder{
-			display: none;
-			}
-		}
-		
-		.social-media{
-		background: #8af;
-		height: 24px;
-		width: 24px;
-		margin: 10px;
-		}
-		
-		.red{
-		background: #D44;
-		color: white;
-		}
-		.red-link-section a:link, a:visited{
-		background: #FA6E6E;
-		box-shadow: 0 0 8px #a11;
-		border-bottom: 5px solid #C22;
-		border-right: 2px solid #C22;
-		}
-		.red-link-section a:hover, a:active{
-		background: #FF9A9A;
-		}
-        .red-on-white{
-            background: red;
-        }
-		.orange{
-		background: #f63;
-		}
-		.yellow{
-		background: #fc3;
-		}
-		.green{
-		background: #6c3;
-		}
-		.blue{
-		background: #39f;
-		}
-		.purple{
-		background: #85f;
-		}
-		.rainbow{
-		height: 5px;
-		width:100%;
-		background-image: url('rainbow.png');
-		background-repeat: none;
-		background-size: cover;
-		}
-		
-		.flex-container {
-		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-		display: -ms-flexbox;      /* TWEENER - IE 10 */
-		display: -webkit-flex;     /* NEW - Chrome */
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		}
-		
-		.wrap{
-		flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		}
-		
-		.two-col{
-		width: 50%;
-		margin: auto;
-		display: table-cell;
-		min-width: 250px;
-		}
-		
-		.three-col-flex{
-		box-sizing: border-box;
-		min-width: 300px;
-		width: 30%;
-		margin: 10px;
-		display: inline-block;
-		vertical-align: top;
-		-webkit-transition: background-color 0.5s ease;
-		transition: background-color 0.5s ease;
-		padding: 15px;
-		}
-		@media only screen and (max-width: 1201px){
-		.three-col-flex{
-		width: 47%;
-		min-width: 300px;
-		}
-		}
-		@media only screen and (max-width: 926px){
-		.three-col-flex{
-		width: 100%;
-		min-width: 250px;
-		}
-		}
-		
-		.four-col-flex{
-		width: 23%;
-		min-width: 200px;
-		margin: 10px;
-		vertical-align: top;
-		box-sizing: border-box;
-		padding: 20px;
-		display: inline-block;
-		}
-		
-		.welcome{
-			margin-top: 30px;
-		}
-		@media only screen and (max-width: 730px){
-			.welcome{
-				flex-flow: row wrap-reverse;
-			}
-		}
-		
-		.icon{
-		width: 80px;
-		height: 80px;
-		}
-		
-		.goal-container{
-		margin: 0;
-		display: flex;
-		flex-flow: row;
-		}
-		.goal-category{
-		width: 16.6%;
-		box-sizing: border-box;
-		padding: 0;
-		margin: 0 5px;
-		}
-		.goal-title{
-		box-sizing: border-box;
-		vertical-align: middle;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 6px;
-		}
-		.goal-title h3{
-		margin: 0 10px;
-		padding: 8px;
-		}
-		.goal-internal-flex-container{
-		width: 100%;
-		display: flex;
-		flex-flow: column;
-		}
-		.goal-box{
-		width: 100%;
-		height: 260px;
-		box-sizing: border-box;
-		padding: 20px;
-		padding-top:0px;
-		margin-top: 10px;
-		box-shadow: 0 0 5px 1px #999;
-		}
-		.goal-label{
-		vertical-align: top;
-		box-sizing: border-box;
-		}
-		.goal-top-left{
-		height: 38px;
-		}
-		
-		@media only screen and (max-width: 1100px){
-		.goal-container{
-		display: block;
-		flex-flow: row;
-		}
-		.goal-category{
-		width: auto;
-		margin: 0;
-		}
-		.goal-internal-flex-container{
-		display: flex;
-		flex-flow: row;
-		}
-		.goal-title{
-		margin: 10px;
-		margin-bottom: 0;
-		}
-		.goal-box{
-		height: auto;
-		margin: 10px;
-		}
-		.goal-top-left{
-		display: none;
-		}
-		}
-		@media only screen and (max-width: 730px){
-		.goal-internal-flex-container{
-		display: flex;
-		flex-flow: column;
-		}
-		.goal-title{
-		margin: 10px;
-		margin-top: 20px;
-		}
-		.goal-box{
-		width: auto;
-		height: auto;
-		}
-		.goal-top-left{
-		display: none;
-		}
-		.goal-label{
-		display: none;
-		}
-		}
-		
-		.no-shadow{
-		box-shadow: none;
-		}
-        
-        .inline-block{
-            display: inline-block;
-        }
-        
-        hr{
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .favourite-thing{
-            width: 220px;
-            margin: 10px;
-            padding: 20px;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        
-        
-        .favourite-thing1{
-            width: 200px;
-            margin: 10px;
-            padding: 20px;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        
-        .favourite-thing1 h3{
-            margin-top: 0;
-            padding-top: 0;
-        }
-        
-        
-		.favourite-things-section a:link, a:visited{
-		border: 2px solid #C22;
-		}
-		.favourite-things-section a:hover, a:active{
-		background: #C22;
-		border: 2px solid #C22;
-        color: white;
-		}
-        
-        .objectives{
-            max-width: 510px;
-            margin: 20px;
-            margin-top: 0;
-            display: inline-block;
-            vertical-align: top;
-        }
-        
-        .objectives-img{
-            width: 98px;
-            vertical-align: top;
-            margin-right: 50px;
-            display: table-cell;
-        }
-        
-        .objectives-img img{
-            width: 98px;
-            height: auto;
-            display: inline-block;
-        }
-        
-        .objectives-text{
-            display: table-cell;
-        }
-        
-        .objectives ul{
-            display: inline-block;
-            margin-top: 0;
-        }
-        
-        .objectives li{
-            list-style-position: outside;
-            margin-bottom: 5px;
-        }
-        
-        .who-am-i{
-            margin: auto;
-            text-align: left;
-            width: 405px;
-        }
-        
-        .who-am-i img{
-            height: 24px;
-            width: auto;
-            margin-right: 5px;
-        }
-        
-		
-	</style>
+	
                 
 	<body>
 	
-		<header class="red">
-			<div class="header left" style="vertical-align: center;">
-				<a href="/"><img src="images/dplogo.png"><b>Dylan Weicker</b></a>
-			</div>
-			<div class="header right">
-				<i class="material-icons">menu</i>
-			</div>
+		<header class="red header">
+                <div class="content-no-vertical-padding">
+                    <div class="absolute-left" style="vertical-align: center;">
+                        <a href="/"><img src="images/dplogo.png"><b>Dylan Weicker</b></a>
+                    </div>
+                    <div class="absolute-right">
+
+                        <a class="navigation"><i class="material-icons">home</i><p>home</p></a>
+                        <a class="navigation"><i class="material-icons">assignment</i><p>goals</p></a>
+                        <a class="navigation"><i class="material-icons">laptop</i><p>technology</p></a>
+                        <a class="navigation"><i class="material-icons">movie</i><p>acting</p></a>
+                        <a class="navigation"><i class="material-icons">casino</i><p>games</p></a>
+                        <a class="navigation"><i class="material-icons">public</i><p>culture</p></a>
+                        <a class="navigation"><i class="material-icons">gavel</i><p>social</p></a>
+                        <a class="navigation"><i class="material-icons">people</i><p>network</p></a>
+                    </div>
+                </div>
 		</header>
-		
+        
+        
 		<div class="red section">
-			<center>
-				<div class="content" style="padding-bottom: 0 !important;">
-					<h1>Hello There !</h1>
-					<h2>My name is Dylan Weicker and this is my site</h2>
-					<div class="welcome flex-container">
-						<div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
-							<img src="./images/snapchatdog.jpg" width="100%" style="vertical-align: bottom;">
-						</div>
-						<div class="two-col" style="vertical-align: middle; padding-left: 20px;">
-                            <div class="who-am-i">
-                            <h2>Who am I ?</h2>
-                                I'm a <script type="text/javascript">document.write(getAge())</script> year old software developer and ametuer actor from Vancouver with a passion for games, pop culutre, and social justice.
-                            <!-- <p>
-                                <img src="./images/face.png">
-                                <script type="text/javascript">document.write(getAge())</script> | He/Him | INTP 
-                            </p>
-                            <p>                                
-                                <img src="./images/city.png">
-                                Vancouver | UBC Student 
-                            </p>
-                            <p> 
-                                <img src="./images/monitor.png">
-                                Software Developer | Technophile
-                            </p>
-                            <p>
-                                <img src="./images/queerpeace.png">
-                                Friendly Queer Vegan | Social Justice Warrior
-                            </p>
-                            <p>
-                                <img src="./images/entertain.png">
-                                Board Game Junkie | Cat Lover | Yogi | Thespian
-                            </p>
-                            <p>
-                                <img src="./images/tv.png">
-                                Meme Master | Pop Culture Nerd | Lady Gaga Stan
-                            </p>
-                            <p>
-                                <img src="./images/selfie.png">
-                                Millennial | Selfie Addict | Narcissist | Yuppie | Hipster
-                            </p>
-                            <center>
-                                <span>
-                                    <a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
-                                    <a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
-                                    <a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
-                                    <a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
-                                    <a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
-                                    <a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>          
-                                </span>
-							</center>
-                                -->
-                            </div>
-						</div>
-					</div>
-				</div>
-			</center>
-            <div class="content">
-			<div id="about-me" class="red-on-white">
-                <h2>These Are A Few Of My Favourite Things</h2>
-                <center>
-                    <div class="favourite-things-section">
-                        <div class="inline-block">
-                            <a class="favourite-thing1" href="#tech">
-                                <h3>Technology</h3>
-                                <img src="./images/laptop.png" class="icon">
-                            </a>
-                            <a class="favourite-thing1" href="#social">
-                                <h3>Social Justice</h3>
-                                <img src="./images/peace.png" class="icon">
-                            </a>
-                        </div>
-                        <div class="inline-block">
-                            <a class="favourite-thing1" href="#pop">
-                                <h3>Pop Culture</h3>
-                                <img src="./images/frog.png" class="icon">
-                            </a>
-                            <a class="favourite-thing1" href="#games">
-                                <h3>Games</h3>
-                                <img src="./images/d6.png" class="icon">
-                            </a>
+            <div class="content" style="padding-bottom: 0 !important;">
+                
+                <h1>Hello There !</h1>
+                <h2>"This is me on the regular so you know"</h2><h2> - Shamir Bailey</h2>
+                
+                <div class="welcome flex-container">
+                    
+                    <div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
+                        <img src="./images/snapchatdog3.png" width="100%" style="vertical-align: bottom;">
+                    </div>
+                    
+                    <div class="two-col" style="vertical-align: middle; padding-left: 20px;">
+                        <div class="who-am-i">
+                            <p>My name is Dylan Weicker.</p>
+                            <br>
+                            <p>I'm an ambitious, <script type="text/javascript">document.write(getAge())</script> year old software developer and actor from Vancouver with a passion for games, pop culture, and social justice.</p>
+                            <br>
                         </div>
                     </div>
-                </center>
-                <h2>Time Line</h2>
+                    
+                </div>
                 
-                <h2>Abstract Objectives</h2>
-						<div class="inline-block">
-                            <div class="objectives">
-                                <h3>Grow</h3>
-                                <div class="objectives-img">
-                                    <img src="./images/grow.png">
-                                </div>
-                                <div class="objectives-text">
-                                    <ul>
-                                        <li>Learn by <b>asking others for help</b> so I can gain knowledge and assistance</li>
-                                        <li>Transparently <b>explain my objectives</b> to others while I pursue my goals</li>
-                                        <li>Seek <b>areas for further improvement</b> by reflecting on previous achievements</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="objectives">
-                                <h3>Practice</h3>
-                                <div class="objectives-img">
-                                    <img src="./images/practice.png">
-                                </div>
-                                <div class="objectives-text">
-                                    <ul>
-                                        <li>Improve <b>technical skills</b> by developing and debugging websites and applications</li>
-                                        <li>Maintain <b>communication skills</b> by actively sharing written and spoken messages online</li>
-                                        <li>Exercise <b>compassion</b> by creating safe and inclusive spaces</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-						<div class="inline-block">
-                            <div class="objectives">
-                                <h3>Entertain</h3>
-                                <div class="objectives-img">
-                                    <img src="./images/entertain.png">
-                                </div>
-                                <div class="objectives-text">
-                                    <ul>
-                                        <li>Post <b>dank memes</b> and other pop culture references on the interwebs</li>
-                                        <li>Produce <b>YouTube videos</b> which inspire joy and action in others</li>
-                                        <li>Create <b>games</b>, both to be played on the computer and on the table top</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="objectives">
-                                <h3>Educate</h3>
-                                <div class="objectives-img">
-                                    <img src="./images/educate.png">
-                                </div>
-                                <div class="objectives-text">
-                                    <ul>
-                                        <li>Post <b>multimedia content</b> online to share my knowledge with others</li>
-                                        <li>Discuss <b>allyship</b> to teach people how to help oppressed people and animals</li>
-                                    <li>Offer to tutor others in fields where I excell, such as <b>math and science</b></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                <h2>Concrete Goals</h2>
-                
-			</div>
-		</div>
             </div>
-		<div class="red section">
-			<center>
-                <div class="content">
-                    <h2>These Are A Few Of My Favourite Things</h2>
-                    <div class="red-link-section">
-                        <div class="inline-block">
-                            <a class="favourite-thing" href="#tech">
-                                <h3>Technology</h3>
-                                <img src="./images/laptop.png" class="icon">
-                            </a>
-                            <a class="favourite-thing" href="#social">
-                                <h3>Social Justice</h3>
-                                <img src="./images/peace.png" class="icon">
-                            </a>
+        </div>
+        
+		<div class="orange section">
+            <h1>My Ambitions</h1>
+            <h2>"I know exactly what I want and who I want to be"</h2><h2>- Marina &amp; the Diamonds</h2>
+                    
+            <div class="content" style="text-align: left;">
+                <h2 style="color: white;">My Goals</h2>
+            </div>
+            
+            
+            <div class="content" style="text-align: left;">
+            <h2 style="color: white;">My Mantras</h2>
+                A mantra is a word or short phrase which is repeated often to oneself in times of reflection. I follow a set of self-made mantras to guide my daily activities. 
+                <div class="inline-block">
+                    <div class="objectives">
+                        <h3>I Grow.</h3>
+                        <div class="objectives-img">
+                            <img src="./images/grow.png">
                         </div>
-                        <div class="inline-block">
-                            <a class="favourite-thing" href="#pop">
-                                <h3>Pop Culture</h3>
-                                <img src="./images/frog.png" class="icon">
-                            </a>
-                            <a class="favourite-thing" href="#games">
-                                <h3>Games</h3>
-                                <img src="./images/d6.png" class="icon">
-                            </a>
+                        <div class="objectives-text">
+                            <ul>
+                                <li>Learn by <b>asking others for help</b> so I can gain knowledge and assistance</li>
+                                <li>Transparently <b>explain my objectives</b> to others while I pursue my goals</li>
+                                <li>Seek <b>areas for further improvement</b> by reflecting on previous achievements</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="objectives">
+                        <h3>I Practice.</h3>
+                        <div class="objectives-img">
+                            <img src="./images/practice.png">
+                        </div>
+                        <div class="objectives-text">
+                            <ul>
+                                <li>Improve <b>technical skills</b> by developing and debugging websites and applications</li>
+                                <li>Maintain <b>communication skills</b> by actively sharing written and spoken messages online</li>
+                                <li>Exercise <b>compassion</b> by creating safe and inclusive spaces</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-			</center>
-		</div>
-		<div class="rainbow"></div>
+                <div class="inline-block">
+                    <div class="objectives">
+                        <h3>I Entertain.</h3>
+                        <div class="objectives-img">
+                            <img src="./images/entertain.png">
+                        </div>
+                        <div class="objectives-text">
+                            <ul>
+                                <li>Post <b>dank memes</b> and other pop culture references on the interwebs</li>
+                                <li>Produce <b>YouTube videos</b> which inspire joy and action in others</li>
+                                <li>Create <b>games</b>, both to be played on the computer and on the table top</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="objectives">
+                        <h3>I Educate.</h3>
+                        <div class="objectives-img">
+                            <img src="./images/educate.png">
+                        </div>
+                        <div class="objectives-text">
+                            <ul>
+                                <li>Post <b>multimedia content</b> online to share my knowledge with others</li>
+                                <li>Discuss <b>allyship</b> to teach people how to help oppressed people and animals</li>
+                            <li>Offer to tutor others in fields where I excell, such as <b>math and science</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="text-align: left;">
+                <h2 style="color: white;">My Wishlist</h2>
+                <div class="flex-container">
+                    <div class="one-third-col">
+                        [Picture of a present]
+                    </div>
+                    <div class="two-thirds-col">
+                        <p>There are a lot of material possesions I fancy. <br>
+                        I created a simple <b>web application</b>to display my wishlist.<br>
+                        This should make it easier if you plan to buy me a present :)</p>
+                        <br>
+                        [View Wishlist]
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="yellow section">
+			<div class="content">
+                <h1>Technology</h1>
+                <h2>"Love me. Love me. Please retweet."</h2>
+                <h2>- Lady Gaga</h2>
+                <p>Technology is a pervasive force in our daily life.</p>
+                <h2>My Skill Set</h2>
+				<table>
+					<tr>
+						<th>Concepts</th>
+						<th>Programming</th>
+						<th>Web Development</th>
+						<th>Tools</th>
+					</tr>
+					<tr>
+						<td>
+							<li>Logical, Functional, and Object Oriented Programing
+                            <li>Behaviour Driven and Agile Development<br>
+                            <li>Parallel Programming with Mutexes and Semaphors<br>
+						</td>
+						<td>
+							C<br>
+							Java, C++, C#<br>
+							Racket, Haskell<br>
+                            Prologue<br>
+							Visual Basic<br>
+							SQL<br>
+							Powershell<br>
+							
+						</td>
+						<td>
+							HTML/HTML5<br>
+							CSS/CSS3<br>
+							Javascript<br>
+						</td>
+						<td>
+							Git<br>
+							Visual Studio<br>
+							IntelliJ<br>
+							Oracle<br>
+						</td>
+					</tr>
+				</table>
+                <h2>Experience</h2>
+                <p>Vision Critical Sept 2015-Aug 2016; UBC Sept 2013-present</p>
+                <h2>Personal Projects</h2>
+                Box Box Box Box<br>
+                View All<br>
+                <a href="./abilities/index.html">Pathfinder Character Generator</a>
+                <a href="./abilities/index.html">Pathfinder Campign Website</a>
+                <h2>My inspirations</h2>
+                Google<br>
+                Neopets<br>
+            </div>
+        </div>
+        
+        <div class="green section">
+			<div class="content">
+                <h1>Acting</h1>
+                <h2>"Life like a movie. She typing her own script"</h2>
+                <h2>- Azealia Banks</h2>
+                Improv - The Word Association<br>Theatre - Macbeth<br>Film
+            </div>
+        </div>
+        
+        <div class="cyan section">
+			<div class="content">
+                <h1>Games</h1>
+                <h2>:D :D</h2>
+            </div>
+        </div>
+        
+        <div class="blue section">
+			<div class="content">
+                <h1>Pop Culture</h1>
+                <h2>:D :D</h2>
+            </div>
+        </div>
+        
+        <div class="purple section">
+			<div class="content">
+                <h1>Social Equality</h1>
+                <h2>"It's not equal if it's sometimes"</h2>
+                <h2>- Lady Gaga</h2>
+            </div>
+        </div>
+		
 	<!-- div class="red section red-link-section">
 	<div class="content">
 					<h2>These Are A Few Of My Favourite Things</h2>
@@ -864,37 +444,7 @@
 				I have ten months of experience working as a software engineer in test at Vision Critical.<br>
 				This involves testing APIs, writing acceptance tests using Specflow and Selenium, three amigos,<br>
 				Going above and beyond be doing development as well: Creating tools to automate API calls, creating a build script to update TT system user<br><br>
-				<h2>Technical Skills</h2>
-				<table>
-					<tr>
-						<th>Programming</th>
-						<th>Web Development</th>
-						<th>Tools</th>
-					</tr>
-					<tr>
-						<td>
-							C, C++, C#<br>
-							Java<br>
-							Racket<br>
-							Visual Basic (minimal)<br>
-							SQL (minimal)<br>
-							Powershell (minimal)<br>
-							
-						</td>
-						<td>
-							HTML/HTML5<br>
-							CSS/CSS3<br>
-							Javascript<br>
-							PHP (minimal)<br>
-						</td>
-						<td>
-							Git<br>
-							Visual Studio<br>
-							IntelliJ<br>
-							Oracle (minimal)<br>
-						</td>
-					</tr>
-				</table>
+				
 				<h2>Work Experience</h2>
 				<h2>Personal Projects</h2>
 				<h2>Interesting Inovations</h2>
@@ -940,7 +490,6 @@
 		</div>
 								
             <a  name="games"></a>
-		<div class="rainbow"></div>
 		<div class="blue section">
 			<div class="content">
 				<h1>Games</h1>
@@ -951,7 +500,10 @@
 				See that follow me panel that's following you around this page? It's like it's just begging you to follow me. Give me attention! 
 				It feeds my ever-expanding millenial ego.
 				<aside>I know I have a big ego, I really don't know why it's such a big deal though<br> -Marina and the Diamonds</aside>
-			
+            </div>
+        </div>
+        <div class="purple section">
+            <div class="content">
 				<h3>Pop Music</h3>
 				<p>YAAAAASSS GAGA!! YOU LOOK SO GOOD!!! OH MY GOD YAAAAAASSSSS!!!!!</p>
 				<p>In an ever-evolving society, it's important to stay up to date on what's hip and trendy in the modern world. Paying attention to the pop industry allows me to stay aware of what's popular and what isn't.</p>
@@ -961,10 +513,40 @@
 			</div>
 		</div>
 		
-		<div class="rainbow"></div>
-		<div class="purple section">
-			footer.
-			credits and links.
-		</div>
+		<div class="black section">
+            <div class ="content">
+                <div class="flex-container">
+                    
+                    <div class="one-third-col">
+                        <h3>Credits</h3>
+                        <p>This website was designed and developed independently by Dylan Weicker.</p>
+                    </div>
+                    
+                    <div class="one-third-col">
+                        <h3>Navigation</h3>
+                        <p>Mantras</p>
+                        <p>Wishlist</p>
+                        <p>Pathfinder Character Generator</p>
+                        <p>Mantras</p>
+                    </div>
+                
+                    <div class="one-third-col">
+                        <h3>Social Media</h3>
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                        <p>YouTube</p>
+                        <p>Instagram</p>
+                        <p>Tumblr</p>
+                        <p>LinkedIn</p>
+                        <p>GitHub</p>
+                        <p>Email</p>
+                        doif (\x )
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
 	</body> 
 </html>

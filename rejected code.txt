@@ -1,0 +1,167 @@
+ <!-- <p>
+                                <img src="./images/face.png">
+                                <script type="text/javascript">document.write(getAge())</script> | He/Him | INTP 
+                            </p>
+                            <p>                                
+                                <img src="./images/city.png">
+                                Vancouver | UBC Student 
+                            </p>
+                            <p> 
+                                <img src="./images/monitor.png">
+                                Software Developer | Technophile
+                            </p>
+                            <p>
+                                <img src="./images/queerpeace.png">
+                                Friendly Queer Vegan | Social Justice Warrior
+                            </p>
+                            <p>
+                                <img src="./images/entertain.png">
+                                Board Game Junkie | Cat Lover | Yogi | Thespian
+                            </p>
+                            <p>
+                                <img src="./images/tv.png">
+                                Meme Master | Pop Culture Nerd | Lady Gaga Stan
+                            </p>
+                            <p>
+                                <img src="./images/selfie.png">
+                                Millennial | Selfie Addict | Narcissist | Yuppie | Hipster
+                            </p>
+                            <center>
+                                <span>
+                                    <a href="https://www.facebook.com/dylan.weicker"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-32.png"></a>
+                                    <a href="https://www.instagram.com/nifflr/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/78-instagram-32.png"></a>
+                                    <a href="https://ca.linkedin.com/in/dylan-weicker-3b9809111"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-32.png"></a>
+                                    <a href="https://www.youtube.com/channel/UCkdHp9NQS5SzvlmTBpDoMVA"><img src="https://cdn0.iconfinder.com/data/icons/rounded-solid-social-media-set-1/144/Youtube_Rounded_Solid-32.png"></a>
+                                    <a href="https://dylanpride.tumblr.com"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_tumblr-32.png"></a>
+                                    <a href="https://github.com/DylanPride"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-32.png"></a>          
+                                </span>
+							</center>
+                                -->
+								
+<div class="content">
+			<div id="about-me" class="red-on-white">
+                <h2>These Are A Few Of My Favourite Things</h2>
+                <center>
+                    <div class="favourite-things-section">
+                        <div class="inline-block">
+                            <a class="favourite-thing1" href="#tech">
+                                <h3>Technology</h3>
+                                <img src="./images/laptop.png" class="icon">
+                            </a>
+                            <a class="favourite-thing1" href="#social">
+                                <h3>Social Justice</h3>
+                                <img src="./images/peace.png" class="icon">
+                            </a>
+                        </div>
+                        <div class="inline-block">
+                            <a class="favourite-thing1" href="#pop">
+                                <h3>Pop Culture</h3>
+                                <img src="./images/frog.png" class="icon">
+                            </a>
+                            <a class="favourite-thing1" href="#games">
+                                <h3>Games</h3>
+                                <img src="./images/d6.png" class="icon">
+                            </a>
+                        </div>
+                    </div>
+                </center>
+                <h2>Time Line</h2>
+                
+                <h2>Abstract Objectives</h2>
+						<div class="inline-block">
+                            <div class="objectives">
+                                <h3>Grow</h3>
+                                <div class="objectives-img">
+                                    <img src="./images/grow.png">
+                                </div>
+                                <div class="objectives-text">
+                                    <ul>
+                                        <li>Learn by <b>asking others for help</b> so I can gain knowledge and assistance</li>
+                                        <li>Transparently <b>explain my objectives</b> to others while I pursue my goals</li>
+                                        <li>Seek <b>areas for further improvement</b> by reflecting on previous achievements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="objectives">
+                                <h3>Practice</h3>
+                                <div class="objectives-img">
+                                    <img src="./images/practice.png">
+                                </div>
+                                <div class="objectives-text">
+                                    <ul>
+                                        <li>Improve <b>technical skills</b> by developing and debugging websites and applications</li>
+                                        <li>Maintain <b>communication skills</b> by actively sharing written and spoken messages online</li>
+                                        <li>Exercise <b>compassion</b> by creating safe and inclusive spaces</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+						<div class="inline-block">
+                            <div class="objectives">
+                                <h3>Entertain</h3>
+                                <div class="objectives-img">
+                                    <img src="./images/entertain.png">
+                                </div>
+                                <div class="objectives-text">
+                                    <ul>
+                                        <li>Post <b>dank memes</b> and other pop culture references on the interwebs</li>
+                                        <li>Produce <b>YouTube videos</b> which inspire joy and action in others</li>
+                                        <li>Create <b>games</b>, both to be played on the computer and on the table top</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="objectives">
+                                <h3>Educate</h3>
+                                <div class="objectives-img">
+                                    <img src="./images/educate.png">
+                                </div>
+                                <div class="objectives-text">
+                                    <ul>
+                                        <li>Post <b>multimedia content</b> online to share my knowledge with others</li>
+                                        <li>Discuss <b>allyship</b> to teach people how to help oppressed people and animals</li>
+                                    <li>Offer to tutor others in fields where I excell, such as <b>math and science</b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                <h2>Concrete Goals</h2>
+                
+			</div>
+		</div>
+		
+		
+		<div class="orange-link-section">
+                                <div class="inline-block">
+                                    <a class="orange-link" href="#ambition">
+                                        <div class="orange-link-img">
+                                            <img src="./images/peace.png" class="icon">
+                                        </div>
+                                        <div class="orange-link-img">
+                                            Goal Driven
+                                        </div>
+                                    </a>
+                                    <a class="favourite-thing" href="#techn">
+                                        <h3>Software Developer</h3>
+                                        <img src="./images/laptop.png" class="icon">
+                                    </a>
+                                    <a class="favourite-thing" href="#theatre">
+                                        <h3>Amateur Actor</h3>
+                                        <img src="./images/entertain.png" class="icon">
+                                    </a>
+                                </div>
+                                <div class="inline-block">
+                                    <a class="favourite-thing" href="#games">
+                                        <h3>Game Enthusiast</h3>
+                                        <img src="./images/d6.png" class="icon">
+                                    </a>
+
+                                    <a class="favourite-thing" href="#pop">
+                                        <h3>Pop Culture Nerd</h3>
+                                        <img src="./images/frog.png" class="icon">
+                                    </a>
+                                    <a class="favourite-thing" href="#social">
+                                        <h3>Social Justice Warrior</h3>
+                                        <img src="./images/peace.png" class="icon">
+                                    </a>
+                                </div>
+                            </div>

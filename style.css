@@ -229,7 +229,22 @@ color: white;
     color: white;
 }
 .orange h2{
-    color: #facc99;
+    color: #FFD2B3;
+}
+
+.wishlist-img{
+    vertical-align: top;
+    padding-right: 48px;
+    display: table-cell;
+}
+
+.wishlist-img img{
+    width: 128px;
+}
+
+.wishlist-text{
+    display: table-cell;
+    padding-bottom: 60px;
 }
 
 .view-wishlist:link{

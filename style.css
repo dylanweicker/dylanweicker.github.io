@@ -67,7 +67,7 @@ h4{
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
+    font-size: 1.17em;
 }
 
 header{
@@ -447,13 +447,27 @@ display: inline-block;
 
 .ambitions{
     display: table-cell;
-    padding-right: 30px;
-    padding-top: 30px;
+    padding-right: 50px;
+    padding-top: 50px;
     box-sizing: border-box;
-    width: 25%;
+    width: 33%;
 }
 .ambitions h4{
     text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+.ambitions img{
+    width: 50%;
+}
+
+.bullet{
+    display: table-cell;
+    vertical-align: middle;
+}
+.bullet-point{
+    display: table-cell;
 }
 
 .experience img{

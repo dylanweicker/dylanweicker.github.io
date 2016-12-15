@@ -1,0 +1,54 @@
+333 Rubies site map
+
+All pages (5 in total): Home (fey woods in depth), Characters (all posses in seperate coloured div), Locations (countries in different coloured divs), Rubies, Adventures
+
+>Each page should have a side bar linking to an anchor for each section.
+
+
+==Characters ==
+Heroes and Villains
+
+	Party
+		Description.
+		<Grout>
+		<Kyna>
+		<Desmona>
+		<Gwynemyre>
+		<Kanaskis>
+
+	Duvain
+		Description only.
+------
+The Fey Woods
+
+	Werebears
+		Description only.
+
+	The Fey
+		Description only.
+
+-----
+Uruk
+	Children of Uruk
+		Description only.
+	The Dhampirs
+		Description only.
+----
+footer
+
+	
+
+<Locations>
+	Map of Ouestmia
+	Ouestmia
+	
+	Illane
+		Oakvale
+	Teluria
+		Uruk
+	Clypea
+	Fey Woods
+
+==Rubies==
+	Existing Ruby description
+	Infographic of how many rubies the party has

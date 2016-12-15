@@ -19,6 +19,10 @@ color: inherit;
 text-decoration: none;
 }
 
+b{
+    font-weight: 
+}
+
 table{
 border-spacing: 40px 5px;
 table-layout: fixed;
@@ -77,6 +81,7 @@ display: flex;
 box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
 width: 100%;
 box-sizing: border-box;
+z-index: 200;
 }
 
 .content-no-vertical-padding{
@@ -247,15 +252,39 @@ color: white;
     padding-bottom: 60px;
 }
 
-.view-wishlist:link{
+.mint-button{
+    color: mintcream;
+    margin: auto;
     padding: 10px 30px; 
     background: #26a892; 
     border-radius: 4px;
-    box-shadow: 2px 2px 4px #c65000;
+    box-shadow: 2px 2px 4px #c65000; 
 }
 
-.view-wishlist:hover{
+.mint-buttont:link{
+}
+
+.mint-button:hover{
     background: #48b9a6;
+}
+
+
+.ghost-button-holder{
+    margin: 60px;
+}
+
+.ghost-button:link{
+    padding: 10px 30px; 
+    border-radius: 4px;
+    border: #fff solid 2px;
+    margin: auto;
+    color: #fff;
+    font-size: 20px;
+}
+
+.orange .ghost-button:hover{
+    color: #ffd2b3;
+    border: #ffd2b3 solid 2px;
 }
 
 
@@ -447,14 +476,42 @@ display: inline-block;
 
 .ambitions{
     display: table-cell;
-    padding-right: 50px;
-    padding-top: 50px;
+    margin: 18px;
+    margin-top: 50px;
     box-sizing: border-box;
     width: 33%;
+    position: relative;
+    color: #753100;
+    border-radius: 4px;
+    background: #FAD2B3;
+    padding: 8px;
+    padding-top: 16px;
 }
+
+.ambitions-inner{
+    margin-bottom: 60px;
+}
+
+
+.ambitions-bottom {
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    color: #26a892;
+    padding: 8px 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.ambitions-bottom a{
+    border: 2px solid #26a892;
+    border-radius: 4px;
+}
+
 .ambitions h4{
     text-align: center;
-    border-bottom: 2px solid white;
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
@@ -468,9 +525,44 @@ display: inline-block;
 }
 .bullet-point{
     display: table-cell;
+    text-align: left;
 }
 
 .experience img{
     height: 150px;
     width: auto;
+}
+
+footer{
+	padding: 5em;
+	background-color: #333;
+	color: #eee;
+}
+
+footer h3{
+    color: #fff;
+    text-align: left;
+    padding-left: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+footer a:hover{
+    text-decoration: none;
+    color: orange;
+}
+
+.footer{
+	margin: auto;
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-col{
+    padding-right: 50px;
+    min-width: 180px;
+	text-align: left;
 }

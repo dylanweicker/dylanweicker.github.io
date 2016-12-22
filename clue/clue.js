@@ -1,154 +1,26 @@
-//CLUE DATA
+var player = scarlett;
+var one = peacock;
+var two = white;
+var npc3 = green;
+var npc4 = plum;
+var npc5 = mustard;
 
-var cardType = {suspect: 0, weapon: 1, room: 2};
+var turnType = {playerSelectMovementType: 0, playerMove: 1, playerGuess: 2, oneMove: 3, oneGuess: 4, playerDisproveOne: 5, twoMove: 6, twoGuess: 7, playerDisproveTwo: 8, playerAccuse: 9, playerWins: 10, playerLoses: 11};
+var turn = turnType.playerSelectMovementType;
 
-var scarlett = {
-    "name": "Druid",
-    "cardType": cardType.suspect,
-    "knownImage": new Image(),
-    "unknownImage": new Image(),
-    "knownSelectedImage": new Image(),
-    "unknownSelectedImage": new Image(),
-    "card": new Image()
-};
-scarlett.knownImage.src = "images/sorcererbutton_known.png";
-scarlett.unknownImage.src = "images/sorcererbutton_unknown.png";
-scarlett.knownSelectedImage.src = "images/sorcererbutton_knownselected.png";
-scarlett.unknownSelectedImage.src = "images/sorcererbutton_unknownselected.png";
-scarlett.card.src = "images/druidcard.png";
+var tabType = {notebook: 0, events: 1};
+var tab = tabType.notebook;
 
-var mustard = {
-    "name": "Ranger",
-    "cardType": cardType.suspect,
-    "card": new Image()
-};
-mustard.card.src = "images/rangercard.png";
-
-var green = {
-    "name": "Warrior",
-    "cardType": cardType.suspect,
-    "card": new Image()
-};
-green.card.src = "images/warriorcard.png";
-
-var peacock = {
-    "name": "Sorcerer",
-    "cardType": cardType.suspect,
-    "card": new Image()
-};
-peacock.card.src = "images/sorcerercard.png";
-
-var plum = {
-    "name": "Warlock",
-    "cardType": cardType.suspect,
-    "card": new Image()
-};
-plum.card.src = "images/sorcerercard.png";
-
-var white = {
-    "name": "Cleric",
-    "cardType": cardType.suspect,
-    "card": new Image()
-};
-white.card.src = "images/clericcard.png";
-
-
-//weapons
-var dagger = {
-    "name": "Dagger",
-    "cardType": cardType.weapon
-};
-var pipe = {
-    "name": "Pipe",
-    "cardType": cardType.weapon
-};
-var revolver = {
-    "name": "Revolver",
-    "cardType": cardType.weapon
-};
-var candlestick = {
-    "name": "Candlestick",
-    "cardType": cardType.weapon
-};
-var wrench = {
-    "name": "Wrench",
-    "cardType": cardType.weapon
-};
-var rope = {
-    "name": "Rope",
-    "cardType": cardType.weapon
-};
-
-//rooms
-var kitchen = {
-    "name": "Kitchen",
-    "cardType": cardType.room
-};
-var ballroom = {
-    "name": "Ballroom",
-    "cardType": cardType.room
-};
-var conservatory = {
-    "name": "Conservatory",
-    "cardType": cardType.room
-};
-var billiards = {
-    "name": "Billiards room",
-    "cardType": cardType.room
-};
-var library = {
-    "name": "Library",
-    "cardType": cardType.room
-};
-var hall = {
-    "name": "Hall",
-    "cardType": cardType.room
-};
-var lounge = {
-    "name": "Lounge",
-    "cardType": cardType.room
-};
-var study = {
-    "name": "Study",
-    "cardType": cardType.room
-};
-var dining = {
-    "name": "Dining room",
-    "cardType": cardType.room
-};
-
-var suspects = [scarlett, mustard, green, peacock, plum, white];
-var allSuspects = suspects.slice();
-var weapons = [dagger, pipe, wrench, rope, candlestick, revolver];
-var allWeapons = weapons.slice();
-var rooms = [kitchen, ballroom, conservatory, billiards, library, dining, study, lounge, hall];
-var allRooms = rooms.slice();
-
-var solutionSuspect;
-var solutionAnswer;
-var solutionRoom;
-
-var playerKnows = [];
-var playerHolds = [];
-var oneknows = [];
-var oneholds = [];
-var twoknows = [];
-var twoholds = [];
-
-var selectedSuspect = scarlett;
-var selectedWeapon = dagger;
-var selectedRoom = hall;
-
+var buttons = {rollButton: 0, accuseButton: 1, stayButton: 2, stairsButton: 3, notebookButton: 4, eventsButton: 5};
+var hover = null;
 
 //CANVAS DATA
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 
-var HEIGHT = 650;
-var WIDTH = 854;
-
 var mouseX;
 var mouseY;
+
 
 var selectX1 = 60;
 var selectSuspectY = 90;
@@ -156,19 +28,25 @@ var selectWeaponY = 190;
 var selectRoomY = 290;
 var guessY = 380;
 
-var selectButtonHeight = 50;
-var selectButtonWidth =50;
-var guessButtonWidth = 75;
-var selectButtonWidthAndMargin =60;
+var rollButtonY = 24;
+var stayButtonY = 30;
+var accuseButtonY = 150;
+var tabsY = 210;
+
+var notebookTabX = screenWidth + 6;
+var eventsTabX = screenWidth + 110;
+
 
 var information = [""];
 
 //Canvas functions
-var frames = 30;
+var frames = 15;
 var timerId = 0;
 timerId = setInterval(update, 1000/frames);
 
 c.addEventListener("mouseup", checkClick);
+document.addEventListener("keydown", checkKey, false);
+c.addEventListener("mousemove", checkPos);
 
 function clear(){
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
@@ -179,50 +57,333 @@ function update() {
     draw();
 }
 
+function checkPos(mouseEvent){
+    mouseX = mouseEvent.pageX - this.offsetLeft;
+    mouseY = mouseEvent.pageY - this.offsetTop;
+    hover = null;
+
+    if(mouseY > tabsY && mouseY < tabsY + notebookButton.height){
+            if(mouseX > notebookTabX && mouseX < notebookTabX + notebookButton.width)
+            {
+                hover = buttons.notebookButton;
+            }
+            else if(mouseX > eventsTabX && mouseX < eventsTabX + eventsButton.width)
+            {
+                hover = buttons.eventsButton;
+            }
+    }
+
+    if(turn == turnType.playerSelectMovementType){
+        if(mouseY > rollButtonY && mouseY < rollButtonY + rollButton.height){
+                if(mouseX > screenWidth + sidebarWidth/2 - rollButton.width/2 && mouseX < screenWidth + sidebarWidth/2 + rollButton.width/2)
+                {
+                    hover = buttons.rollButton;
+                }
+        }
+        if(mouseY > accuseButtonY && mouseY < accuseButtonY + accuseButton.height){
+                if(mouseX > screenWidth + sidebarWidth/2 - accuseButton.width/2 && mouseX < screenWidth + sidebarWidth/2 + accuseButton.width/2)
+                {
+                    hover = buttons.accuseButton;
+                }
+        }
+        if(player.room != null){
+            if(mouseY > stayButtonY && mouseY < stayButtonY + stayButton.height){
+                if(mouseX > screenWidth + 10 && mouseX < screenWidth + 10 + stayButton.width)
+                {
+                    hover = buttons.stayButton;
+                }
+                else if(player.room == kitchen || player.room == lounge || player.room == study || player.room == conservatory){
+                    if(mouseX > WIDTH - 10 - stairsButton.width && mouseX < WIDTH - 10)
+                    {
+                        hover = buttons.stairsButton;
+                    }
+                }
+            }
+        }
+
+    }
+
+    if (hover != null){
+        document.body.style.cursor = "pointer";
+    }
+    else{
+        document.body.style.cursor = "auto";
+    }
+}
+
 function checkClick(mouseEvent){
     mouseX = mouseEvent.pageX - this.offsetLeft;
     mouseY = mouseEvent.pageY - this.offsetTop;
 
-    for(i = 0; i < allSuspects.length; i++)
-        {
-        if(mouseY > selectSuspectY && mouseY < selectSuspectY + selectButtonHeight)
-        {
-            if(mouseX > selectX1 + i*(selectButtonWidthAndMargin) && mouseX < selectX1 + selectButtonWidth + i*(selectButtonWidthAndMargin))
+    if(mouseY > tabsY && mouseY < tabsY + notebookButton.height){
+            if(mouseX > notebookTabX && mouseX < notebookTabX + notebookButton.width)
             {
-                selectedSuspect = allSuspects[i];
+                tab = tabType.notebook;
+            }
+            else if(mouseX > eventsTabX && mouseX < eventsTabX + eventsButton.width)
+            {
+                tab = tabType.events;
+            }
+    }
+
+    if(turn == turnType.playerSelectMovementType){
+        if(mouseY > rollButtonY && mouseY < rollButtonY + rollButton.height){
+                if(mouseX > screenWidth + sidebarWidth/2 - rollButton.width/2 && mouseX < screenWidth + sidebarWidth/2 + rollButton.width/2)
+                {
+                    rollDie();
+                    turn = turnType.playerMove;
+                }
+        }
+
+        if(player.room != null){
+            if (mouseY > stayButtonY && mouseY < stayButtonY + stayButton.height){
+                if(mouseX > screenWidth+10 && mouseX < screenWidth+10 + stayButton.width){
+                    turn = turnType.playerGuess;
+                }
+            }
+        }
+
+        if (mouseY > stayButtonY && mouseY < stayButtonY + stairsButton.height){
+            if(mouseX > WIDTH-10-stayButton.width && mouseX < WIDTH-10){
+                playerUsePortal();
+            }
+        }
+
+        if(mouseY > accuseButtonY && mouseY < accuseButtonY + accuseButton.height){
+                if(mouseX > screenWidth + sidebarWidth/2 - accuseButton.width/2 && mouseX < screenWidth + sidebarWidth/2 + accuseButton.width/2)
+                {
+                    turn = turnType.playerAccuse;
+                }
+        }
+    }
+
+    if(turn == turnType.playerGuess || turn == turnType.playerAccuse){
+        for(i = 0; i < allSuspects.length; i++)
+            {
+            if(mouseY > selectSuspectY && mouseY < selectSuspectY + selectButtonHeight)
+            {
+                if(mouseX > selectX1 + i*(selectButtonWidthAndMargin) && mouseX < selectX1 + selectButtonWidth + i*(selectButtonWidthAndMargin))
+                {
+                    selectedSuspect = allSuspects[i];
+                }
+            }
+        }
+
+        for(i = 0; i < allWeapons.length; i++)
+            {
+            if(mouseY > selectWeaponY && mouseY < selectWeaponY + selectButtonHeight)
+            {
+                if(mouseX > selectX1 + i*(selectButtonWidthAndMargin) && mouseX < selectX1 + selectButtonWidth + i*(selectButtonWidthAndMargin))
+                {
+                    selectedWeapon = allWeapons[i];
+                }
             }
         }
     }
-    
-    for(i = 0; i < allWeapons.length; i++)
-        {
-        if(mouseY > selectWeaponY && mouseY < selectWeaponY + selectButtonHeight)
-        {
-            if(mouseX > selectX1 + i*(selectButtonWidthAndMargin) && mouseX < selectX1 + selectButtonWidth + i*(selectButtonWidthAndMargin))
+
+    if (turn == turnType.playerAccuse){
+        for(i = 0; i < allRooms.length; i++)
             {
-                selectedWeapon = allWeapons[i];
+            if(mouseY > selectRoomY && mouseY < selectRoomY + selectButtonHeight)
+            {
+                if(mouseX > selectX1 + i*(selectButtonWidthAndMargin) && mouseX < selectX1 + selectButtonWidth + i*(selectButtonWidthAndMargin))
+                {
+                    selectedRoom = allRooms[i];
+                }
             }
         }
     }
-    
-    for(i = 0; i < allRooms.length; i++)
-        {
-        if(mouseY > selectRoomY && mouseY < selectRoomY + selectButtonHeight)
-        {
-            if(mouseX > selectX1 + i*(selectButtonWidthAndMargin) && mouseX < selectX1 + selectButtonWidth + i*(selectButtonWidthAndMargin))
-            {
-                selectedRoom = allRooms[i];
-            }
-        }
-    }
-    
-    if(mouseY > guessY && mouseY < guessY + selectButtonHeight)
-        {
+
+    if (turn == turnType.playerGuess){
+        if(mouseY > guessY && mouseY < guessY + selectButtonHeight){
             if(mouseX > selectX1 && mouseX < selectX1 + guessButtonWidth)
             {
                 makeGuess();
             }
         }
+    }
+
+    if (turn == turnType.playerAccuse){
+        if(mouseY > guessY && mouseY < guessY + selectButtonHeight){
+            if(mouseX > selectX1 && mouseX < selectX1 + guessButtonWidth)
+            {
+                makeAccusation();
+            }
+        }
+    }
+}
+
+function playerUsePortal(){
+    if (player.room == conservatory){
+        player.room = lounge;
+        player.x = 24;
+        player.y = 18;
+        setTimeout( function(){
+            turn = turnType.playerGuess;
+        }, 400);
+    }
+    else if (player.room == lounge){
+        player.room = conservatory;
+        player.x = 3;
+        player.y = 2;
+
+        setTimeout( function(){
+            turn = turnType.playerGuess;
+        }, 400);
+    }
+    else if (player.room == kitchen){
+        player.room = study;
+        player.x = 24;
+        player.y = 2;
+
+        setTimeout( function(){
+            turn = turnType.playerGuess;
+        }, 400);
+    }
+    else if (player.room == study){
+        player.room = kitchen;
+        player.x = 5;
+        player.y = 18;
+        setTimeout( function(){
+            turn = turnType.playerGuess;
+        }, 400);
+    }
+}
+
+function leaveRoom(x,y){
+    player.x = x;
+    player.y = y;
+    player.room = null;
+    dieResult--;
+}
+
+function checkKey(keyEvent){
+    key = keyEvent.keyCode;
+    if(turn == turnType.playerMove){
+        switch(key){
+        case 37: //left
+            if(player.room == null){
+                if (map[player.y][player.x-1] < 4 && dieResult > 0){
+                    player.x--;
+                    dieResult--;
+                    checkPosition();
+                }
+            }
+            else if(player.room == hall){
+                leaveRoom(18,10);
+            }
+            break;
+        case 39: //right
+            if(player.room == null){
+                if (map[player.y][player.x+1] < 4  && dieResult > 0){
+                player.x++;
+                dieResult--;
+                checkPosition();
+                }
+            }
+            else if(player.room == ballroom){
+                leaveRoom(10,10);
+            }
+            else if(player.room == kitchen){
+                leaveRoom(8,17);
+            }
+            break;
+        case 38: //up
+            if(player.room == null){
+                if (map[player.y-1][player.x] < 4  && dieResult > 0){
+                    player.y--;
+                    dieResult--;
+                    checkPosition();
+                }
+            }
+            else if(player.room == hall){
+                leaveRoom(21,5);
+            }
+            else if(player.room == lounge){
+                leaveRoom(19,14);
+            }
+            else if(player.room == dining){
+                leaveRoom(13,13);
+            }
+            break;
+        case 40: //down
+            if(player.room == null){
+                if (map[player.y+1][player.x] < 4 && dieResult > 0 ){
+                player.y++;
+                dieResult--;
+                checkPosition();
+                }
+            }
+            else if(player.room == conservatory ||
+                player.room == billiards ||
+                player.room == library ||
+                player.room == study
+            ){
+                leaveRoom(player.room.exit[0].x,player.room.exit[0].y);
+            }
+            else if(player.room == ballroom){
+                leaveRoom(player.room.exit[1].x,player.room.exit[1].y);
+            }
+            break;
+        default:
+            break;
+        }
+    }
+    if (dieResult < 1 && turn == turnType.playerMove){
+        turn = turnType.oneMove;
+        aiOneMove();
+    }
+}
+
+function checkPosition(){
+    if (map[player.y][player.x] == 3){
+        dieResult = 0;
+        enterRoom(player);
+        setTimeout( function(){
+            turn = turnType.playerGuess;
+        }, 400);
+    }
+}
+
+function enterRoom(character, room){
+    if (room == null){
+        for (var i = 0; i < allRooms.length; i++){
+            for (var j = 0; j < allRooms[i].door.length; j++){
+                if (character.x == allRooms[i].door[j].x && character.y == allRooms[i].door[j].y){
+                    room = allRooms[i];
+                    break;
+                }
+            }
+        }
+    }
+
+    character.room = room;
+    selectedRoom = room;
+
+    if (character == player){
+        character.x = room.pos[0].x;
+        character.y = room.pos[0].y;
+    }
+    else if (character == one){
+        character.x = room.pos[1].x;
+        character.y = room.pos[1].y;
+    }
+    else if (character == two){
+        character.x = room.pos[2].x;
+        character.y = room.pos[2].y;
+    }
+    else if (character == npc3){
+        character.x = room.pos[3].x;
+        character.y = room.pos[3].y;
+    }
+    else if (character == npc4){
+        character.x = room.pos[4].x;
+        character.y = room.pos[4].y;
+    }
+    else if (character == npc5){
+        character.x = room.pos[5].x;
+        character.y = room.pos[5].y;
+    }
 }
 
 //Shuffle Function by Daplie/knuth-shuffle
@@ -249,28 +410,28 @@ function main(){
     //put one suspect into solution
     suspects = shuffle(suspects);
     solutionSuspect = suspects.pop();
-    
+
     //put one weapon into solution
     weapons = shuffle(weapons);
     solutionWeapon = weapons.pop();
-    
+
     //put one room into solution
     rooms = shuffle(rooms);
     solutionRoom = rooms.pop();
-    
+
     var deck = suspects.concat(weapons, rooms);
     deck = shuffle(deck);
-    
+
     //deal cards
     var handSize = deck.length/3;
     playerHolds = deck.slice(0, handSize);
     oneHolds = deck.slice(handSize, 2*handSize);
     twoHolds = deck.slice(2*handSize, 3*handSize);
-    
+
     playerKnows = playerHolds.slice();
     oneKnows = oneHolds.slice();
     twoKnows = twoHolds.slice();
-    
+
 }
 
 function includes(k) {
@@ -303,204 +464,10 @@ function getLines(ctx, text, maxWidth) {
     return lines;
 }
 
-function draw(){
-    ctx.beginPath();
-    ctx.rect(0, HEIGHT-160, WIDTH, 160);
-    ctx.fillStyle = 'grey';
-    ctx.fill();
-    
-    ctx.beginPath();
-    ctx.rect(HEIGHT, 0, WIDTH, HEIGHT);
-    ctx.fillStyle = 'lightgrey';
-    ctx.fill();
-    
-    drawMovementOptions();
-    
-    drawInformation();
-    
-    drawHand();
-    
-    //if it is time to make a guess then draw make guess
-    if(true){
-        drawMakeGuess();
-    }
-}
+var dieResult = 0;
 
-function drawInformation(){
-    y=80;
-    x= HEIGHT+10;
-    for(var i = information.length-1; i > -1; i--){
-         ctx.beginPath();
-        ctx.textAlign="left"; 
-        ctx.font = "12px Arial";
-        ctx.fillStyle = '#black';
-        ctx.fillText(information[i], HEIGHT+10, y);
-        ctx.fill();
-        y+=14;
-    }
-   
-}
-
-function drawMovementOptions(){
-    var width = WIDTH - HEIGHT;
-    
-    ctx.beginPath();
-    ctx.textAlign="left"; 
-    ctx.font = "12px Arial";
-    ctx.fillStyle = '#555555';
-    ctx.fillText("remain", WIDTH-width+15, 30);
-    ctx.fill();
-    
-    ctx.beginPath();
-    ctx.textAlign="center"; 
-    ctx.font = "12px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText("roll", WIDTH-width/2, 30);
-    ctx.fill();
-    
-    ctx.beginPath();
-    ctx.textAlign="right"; 
-    ctx.font = "12px Arial";
-    ctx.fillStyle = '#555555';
-    ctx.fillText("portal", WIDTH-15, 30);
-    ctx.fill();
-    
-    ctx.textAlign="left"; 
-}
-
-function drawHand(){
-    var x = 0;
-    for (var i = 0; i < playerHolds.length; i++){
-        if (playerHolds[i].cardType == cardType.suspect){
-            ctx.drawImage(playerHolds[i].card, x+6, HEIGHT-150);
-        }
-        else{
-            ctx.beginPath();
-            roundRect(ctx, x+6, HEIGHT-150, 94, 140);
-            //ctx.rect(x+10, 330, 85, 140);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-
-            ctx.font = "12px Arial";
-            ctx.fillStyle = 'black';
-            ctx.fillText(playerHolds[i].name, x+12,HEIGHT-40);
-        }
-        x+=108;
-    }
-}
-
-function drawSelectSuspectButtons(){
-    for (var i = 0; i < allSuspects.length; i++){
-        
-        x = selectX1 + i*selectButtonWidthAndMargin;
-        y = selectSuspectY;
-        
-        if(playerKnows.includes(allSuspects[i])){
-            if(selectedSuspect == allSuspects[i]){
-                ctx.drawImage(scarlett.knownSelectedImage,x,y);
-            }
-            else{
-            ctx.drawImage(scarlett.knownImage,x,y);
-            }
-        }
-        else{
-            
-            if(selectedSuspect == allSuspects[i]){
-                ctx.drawImage(scarlett.unknownSelectedImage,x,y);
-            }
-            else{
-            ctx.drawImage(scarlett.unknownImage,x,y);
-            }
-        }
-    }
-}
-
-
-
-function drawMakeGuess(){
-
-    
-    //draw guess box background
-    ctx.beginPath();
-    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
-    ctx.fillStyle = '#f1f1d4';
-    ctx.fill();
-    
-    //draw suspect boxes
-    x = selectX1;
-    y = selectSuspectY;
-    ctx.font = "18px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText("Suspect:", x,y-18);
-    drawSelectSuspectButtons();
-    
-    //draw weapon boxes
-    x = selectX1;
-    y = selectWeaponY;
-    ctx.font = "18px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText("Weapon:", x, y-18);
-    for (var i = 0; i < allWeapons.length; i++){
-        
-        if(playerKnows.includes(allWeapons[i])){
-            
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'lightgrey';
-            ctx.fill();
-        }
-        else{
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-        }
-            
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allWeapons[i].name, x+4, y+25);
-        x += 60;
-    }
-    
-    //draw first row of room buttons
-    x = selectX1;
-    y = selectRoomY;
-    ctx.font = "18px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText("Room:", x,y-18);
-    for (var i = 0; i < allRooms.length; i++){
-        if(playerKnows.includes(allRooms[i])){
-            
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'lightgrey';
-            ctx.fill();
-        }
-        else{
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-        }
-            
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allRooms[i].name, x+4, y+25);
-        x += 60;
-    }
-    
-    //draw guess button
-    x = selectX1;
-    y = guessY;
-    ctx.beginPath();
-    ctx.rect(x, y, guessButtonWidth, selectButtonHeight);
-    ctx.fillStyle = 'steelblue';
-    ctx.fill();
-    
-    ctx.font = "12px Arial";
-    ctx.fillStyle = 'white';
-    ctx.fillText("Guess!", x+8, y+25);
-    
+function rollDie(){
+    dieResult = Math.floor(Math.random()*5)+1;
 }
 
 function selectSuspect(suspect){
@@ -513,118 +480,406 @@ function selectRoom(room){
     selectedSuspect = suspect;
 }
 
-function makeGuess(){
-        
-    var text = "You have guessed " + selectedSuspect.name + " killed the king with the " + selectedWeapon.name + " in the " + selectedRoom.name + ".";
-    var lines = getLines(ctx, text, WIDTH-HEIGHT-20);
+function writeGuess(character){
+        var text = character.name + " has guessed " + selectedSuspect.name + " killed the king with the " + selectedWeapon.name + " in the " + selectedRoom.name + ".";
+        var lines = getLines(ctx, text, WIDTH-screenWidth-15);
+        lines.push("");
+        lines.reverse();
+        information = information.concat(lines);
+
+        while (information.length > 27){
+            information.pop();
+        }
+        tab = tabType.events;
+}
+
+function oneMakeGuess(){
+    var unknownSuspects = allSuspects.filter(function(e){
+        return (!oneKnows.includes(e));
+    });
+    shuffle(unknownSuspects);
+
+    var unknownWeapons = allWeapons.filter(function(e){
+        return (!oneKnows.includes(e));
+    });
+    shuffle(unknownWeapons);
+
+    selectedSuspect = unknownSuspects.pop();
+    selectedWeapon = unknownWeapons.pop();
+
+    enterRoom(selectedSuspect, one.room);
+    writeGuess(one);
+
+    var randomOrder = [1, 2, 3]
+    shuffle(randomOrder);
+    var originalLength = oneKnows.length;
+    var newLength = oneKnows.length;
+
+    for (var i = 0; i < 3; i++){
+         if (randomOrder[i] == 1){
+            if (twoHolds.includes(selectedSuspect)){
+                text = "AI Two has shown AI One a card.";
+                newLength = oneKnows.push(selectedSuspect);
+                break;
+            }
+        }
+        if (randomOrder[i] == 2){
+            if (twoHolds.includes(selectedWeapon)){
+                text = "AI Two has shown AI One a card.";
+                newLength = oneKnows.push(selectedWeapon);
+                break;
+            }
+        }
+        if (randomOrder[i] == 3){
+            if (twoHolds.includes(selectedRoom)){
+                text = "AI Two has shown AI One a card.";
+                newLength = oneKnows.push(selectedRoom);
+                break;
+            }
+        }
+    }
+    if (originalLength == newLength){
+        for (var i = 0; i < 3; i++){
+             if (randomOrder[i] == 1){
+                if (playerHolds.includes(selectedSuspect)){
+                    text = "You have shown AI One " + selectedSuspect.name + ".";
+                    newLength = oneKnows.push(selectedSuspect);
+                    break;
+                }
+            }
+            if (randomOrder[i] == 2){
+                if (playerHolds.includes(selectedWeapon)){
+                    text = "You have shown AI One " + selectedWeapon.name + ".";
+                    newLength = oneKnows.push(selectedWeapon);
+                    break;
+                }
+            }
+            if (randomOrder[i] == 3){
+                if (playerHolds.includes(selectedRoom)){
+                    text = "You have shown AI One " + selectedRoom.name + ".";
+                    newLength = oneKnows.push(selectedRoom);
+                    break;
+                }
+            }
+        }
+    }
+    if (originalLength == newLength){
+            text = "No one was able to disprove AI One.";
+    }
+
+    lines = getLines(ctx, text, WIDTH-screenWidth-20);
     lines.push("");
     lines.reverse();
-    
     information = information.concat(lines);
-    
-    
-    document.getElementById("output").innerHTML = "You have guessed " + selectedSuspect.name + " killed the king with the " + selectedWeapon.name + " in the " + selectedRoom.name + ".";
-    
-    //check if solution
-    if(selectedSuspect == solutionSuspect && selectedWeapon == solutionWeapon && selectedRoom == solutionRoom){
-    document.getElementById("output").innerHTML = "You win!";
+
+    turn = turnType.playerSelectMovementType;
+}
+
+function makeAccusation(){
+    if (selectedRoom == solutionRoom && selectedSuspect == solutionSuspect && selectedWeapon == solutionWeapon){
+        turn = turnType.playerWins;
     }
-        else{
+    else{
+        turn = turnType.playerLoses;
+    }
+}
 
-        var randomOrder = [1, 2, 3]
-        shuffle(randomOrder);
+function makeGuess(){
+    //Make Guess
+    writeGuess(player);
+    enterRoom(selectedSuspect, selectedRoom);
 
-        var originalLength = playerKnows.length;
-        var newLength = playerKnows.length;
+    //Disprove
+    var randomOrder = [1, 2, 3]
+    shuffle(randomOrder);
+    var originalLength = playerKnows.length;
+    var newLength = playerKnows.length;
 
-        //ask One to reveal a card to disprove
+    //ask One to reveal a card to disprove
+    for (var i = 0; i < 3; i++){
+        if (randomOrder[i] == 1){
+            if (oneHolds.includes(selectedSuspect)){
+                text = "AI One has shown you " + selectedSuspect.name + ".";
+                newLength = playerKnows.push(selectedSuspect);
+                break;
+            }
+        }
+        if (randomOrder[i] == 2){
+            if (oneHolds.includes(selectedWeapon)){
+                text = "AI One has shown you " + selectedWeapon.name + ".";
+                newLength = playerKnows.push(selectedWeapon);
+                break;
+            }
+        }
+        if (randomOrder[i] == 3){
+            if (oneHolds.includes(selectedRoom)){
+                text = "AI One has shown you " + selectedRoom.name + ".";
+                newLength = playerKnows.push(selectedRoom);
+                break;
+            }
+        }
+    }
+
+    //if One does not have a card to disprove, ask Two.
+    if (originalLength == newLength){
         for (var i = 0; i < 3; i++){
-            if (randomOrder[i] == 1){
-                if (oneHolds.includes(selectedSuspect)){
-                    document.getElementById("output").innerHTML = "AI One has shown you " + selectedSuspect.name + ".";
+             if (randomOrder[i] == 1){
+                if (twoHolds.includes(selectedSuspect)){
+                    text = "AI Two has shown you " + selectedSuspect.name + ".";
                     newLength = playerKnows.push(selectedSuspect);
                     break;
                 }
             }
             if (randomOrder[i] == 2){
-                if (oneHolds.includes(selectedWeapon)){
-                    document.getElementById("output").innerHTML = "AI One has shown you " + selectedWeapon.name + ".";
+                if (twoHolds.includes(selectedWeapon)){
+                    text = "AI Two has shown you " + selectedWeapon.name + ".";
                     newLength = playerKnows.push(selectedWeapon);
                     break;
                 }
             }
             if (randomOrder[i] == 3){
-                if (oneHolds.includes(selectedRoom)){
-                    document.getElementById("output").innerHTML = "AI One has shown you " + selectedRoom.name + ".";
+                if (twoHolds.includes(selectedRoom)){
+                    text = "AI Two has shown you " + selectedRoom.name + ".";
                     newLength = playerKnows.push(selectedRoom);
                     break;
                 }
-            }  
+            }
         }
+    }
 
-        //if One does not have a card to disprove, ask Two.
-        if (originalLength == newLength){
-            for (var i = 0; i < 3; i++){
-                 if (randomOrder[i] == 1){
-                    if (twoHolds.includes(selectedSuspect)){
-                        document.getElementById("output").innerHTML = "AI Two has shown you " + selectedSuspect.name + ".";
-                        newLength = playerKnows.push(selectedSuspect);
-                        break;
-                    }
-                }
-                if (randomOrder[i] == 2){
-                    if (twoHolds.includes(selectedWeapon)){
-                        document.getElementById("output").innerHTML = "AI Two has shown you " + selectedWeapon.name + ".";
-                        newLength = playerKnows.push(selectedWeapon);
-                        break;
-                    }
-                }
-                if (randomOrder[i] == 3){
-                    if (twoHolds.includes(selectedRoom)){
-                        document.getElementById("output").innerHTML = "AI Two has shown you " + selectedRoom.name + ".";
-                        newLength = playerKnows.push(selectedRoom);
-                        break;
-                    }
-                }
-            }  
-        }
-        if (originalLength == newLength){
-            document.getElementById("output").innerHTML = "No one was able to disprove you.";
+    //If two doesn't have a card to disprove, tell player
+    if (originalLength == newLength){
+            text = "No one was able to disprove you.";
+    }
+
+    lines = getLines(ctx, text, WIDTH-screenWidth-20);
+    lines.push("");
+    lines.reverse();
+    information = information.concat(lines);
+
+    turn = turnType.oneMove;
+    setTimeout(aiOneMove(), 1000);
+}
+
+function aiSelectMovementType(character, knowledge, guessTurn, nextTurn){
+    //if room is unknown, remain in room
+    if (!oneKnows.includes(character.room)){
+        turn = guessTurn;
+    }
+    //if room is corner and opposite corner is unknown, go to opposite room
+    else if (character.room == kitchen && !knowledge.includes(study)){
+        character.room = study;
+        character.x = 24;
+        character.y = 2;
+        turn = guessTurn;
+    }
+    else if (character.room == study && !knowledge.includes(kitchen)){
+        character.room = kitchen;
+        character.x = 5;
+        character.y = 18;
+        turn = guessTurn;
+    }
+    else if (character.room == lounge && !knowledge.includes(conservatory)){
+        character.room = conservatory;
+        character.x = 2;
+        character.y = 2;
+        turn = guessTurn;
+    }
+    else if (character.room == conservatory && !knowledge.includes(lounge)){
+        character.room = lounge;
+        character.x = 23;
+        character.y = 18;
+        turn = guessTurn;
+    }
+    //if room is known and corner is known, leave room.
+    else {
+        rollDie();
+        character.x = character.room.exit[0].x;
+        character.y = character.room.exit[0].y;
+        character.room = null;
+        dieResult--;
+
+        if(dieResult < 1){
+            turn = nextTurn;
         }
     }
 }
 
-function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
-  if (typeof stroke == 'undefined') {
-    stroke = true;
-  }
-  if (typeof radius === 'undefined') {
-    radius = 5;
-  }
-  if (typeof radius === 'number') {
-    radius = {tl: radius, tr: radius, br: radius, bl: radius};
-  } else {
-    var defaultRadius = {tl: 0, tr: 0, br: 0, bl: 0};
-    for (var side in defaultRadius) {
-      radius[side] = radius[side] || defaultRadius[side];
+function getUnknownDoors(knowledge){
+    var doors = Array();
+    for (var i = 0; i < allRooms.length; i++){
+        if (!knowledge.includes(allRooms[i])){
+            for (var j = 0; j < allRooms[i].door.length; j++){
+                doors.push(allRooms[i].door[j]);
+            }
+        }
     }
-  }
-  ctx.beginPath();
-  ctx.moveTo(x + radius.tl, y);
-  ctx.lineTo(x + width - radius.tr, y);
-  ctx.quadraticCurveTo(x + width, y, x + width, y + radius.tr);
-  ctx.lineTo(x + width, y + height - radius.br);
-  ctx.quadraticCurveTo(x + width, y + height, x + width - radius.br, y + height);
-  ctx.lineTo(x + radius.bl, y + height);
-  ctx.quadraticCurveTo(x, y + height, x, y + height - radius.bl);
-  ctx.lineTo(x, y + radius.tl);
-  ctx.quadraticCurveTo(x, y, x + radius.tl, y);
-  ctx.closePath();
-  if (fill) {
-    ctx.fill();
-  }
-  if (stroke) {
-    ctx.stroke();
-  }
+    return doors
+}
 
+function getBestPath(character, goals){
+    var bestPath = Array(mapWidth * mapHeight);
+
+    for (var i = 0; i < goals.length; i++){
+        var path = calculatePath([character.x, character.y], [goals[i].x, goals[i].y]);
+        if (path.length < bestPath.length){
+            bestPath = path;
+        }
+    }
+    //remove start node
+    bestPath.splice(0, 1);
+
+    return bestPath;
+}
+
+function aiStep(character, path){
+    character.x = path[0][0];
+    character.y = path[0][1];
+    path.splice(0, 1);
+    dieResult--;
+    if (dieResult > 0 && path.length > 0){
+        aiStep(character, path);
+    }
+}
+
+function aiTwoMove(){
+
+}
+
+function aiOneMove(){
+    //if in room decide what to do:
+    if (one.room != null){
+        aiSelectMovementType(one, oneknows, turnType.oneGuess, turnType.twoMove);
+    }
+    //roll die
+    if (turn == turnType.oneMove && dieResult < 1){
+        rollDie();
+    }
+
+    //go to closest unknown room
+    var unknownDoors = getUnknownDoors(oneKnows);
+    var bestPath = getBestPath(one, unknownDoors);
+
+    aiStep(one, bestPath);
+/*    while (dieResult > 0 && bestPath.length > 0){
+        one.x = bestPath[0][0];
+        one.y = bestPath[0][1];
+        bestPath.splice(0, 1);
+        dieResult--;
+    }
+    */
+    dieResult = 0;
+
+    //check if in room.
+    if (bestPath.length == 0){
+        enterRoom(one);
+        turn = turnType.oneGuess;
+    }
+    else{
+        turn = turnType.playerSelectMovementType;
+    }
+
+    if (turn == turnType.oneGuess){
+        setTimeout(oneMakeGuess(), 1000);
+    }
+
+}
+
+function manhattanDistance(point, goal){
+    return Math.abs(point.x - goal.x) +  Math.abs(point.y - goal.y);
+}
+
+function canWalkHere(x, y){
+    return (map[y] != null && map[y][x] != null && map[y][x] < 4); //todo make 4 a constant
+}
+
+function neighbours(x, y){
+    var  n = y-1;
+    var  s = y+1;
+    var  e = x+1;
+    var  w = x-1;
+    var myN = n > 0 && canWalkHere(x, n);
+    var myS = s < mapHeight && canWalkHere(x, s);
+    var myE = e < mapWidth && canWalkHere(e, y);
+    var myW = e > 0 && canWalkHere(w, y);
+
+    var result = [];
+    if (myN) result.push({"x":x, "y":n});
+    if (myS) result.push({"x":x, "y":s});
+    if (myE) result.push({"x":e, "y":y});
+    if (myW) result.push({"x":w, "y":y});
+    return result;
+}
+
+function node(parent, point){
+    var newNode = {
+        "parent": parent,
+        "value": point.x + (point.y * mapWidth),
+        "x": point.x,
+        "y": point.y,
+        //distance cost of this node to goal
+        "heuristic": 0,
+        //distance cost of this node from start
+        "cost": 0
+    }
+    return newNode;
+}
+
+function calculatePath(pathStart, pathEnd){
+    //create start and end nodes from given coordinates
+    var myPathStart = node(null, {"x": pathStart[0], "y": pathStart[1]});
+    var myPathEnd = node(null, {"x": pathEnd[0], y:pathEnd[1]});
+
+    //create an array to hold each tile of the map
+    var aStar = new Array(mapHeight * mapWidth);
+    //list of open nodes
+    var open = [myPathStart];
+    //list of closed nodes
+    var closed = [];
+    //final result
+    var result = [];
+
+
+    var myNeighbours;
+    var myNode;
+    var myPath;
+    var length, max, min, i, j;
+
+    while(length = open.length){
+        max = mapWidth * mapHeight;
+        min = -1;
+        for (i = 0; i < length; i++){
+            if (open[i].heuristic < max){
+                max = open[i].heuristic;
+                min = i;
+            }
+        }
+        myNode = open.splice(min, 1)[0];
+
+        if(myNode.value === myPathEnd.value){   //found destination
+            myPath = closed[closed.push(myNode) - 1];
+            do{
+                result.push([myPath.x, myPath.y]);
+            }
+            while (myPath = myPath.parent);
+
+            aStar = closed = open = [];
+            result.reverse();
+        }
+        else { //no destination
+            //find neighbours
+            myNeighbours = neighbours(myNode.x, myNode.y);
+            for (i = 0, j = myNeighbours.length; i < j; i++){
+                myPath = node(myNode, myNeighbours[i]);
+                if (!aStar[myPath.value]){
+                    myPath.cost = myNode.cost + manhattanDistance(myNeighbours[i], myNode); //can't this just be ++;
+                    myPath.heuristic = myPath.cost + manhattanDistance(myNeighbours[i], myPathEnd);
+                    open.push(myPath);
+                    aStar[myPath.value] = true;
+                }
+            }
+            closed.push(myNode);
+        }
+    }
+    return result;
 }

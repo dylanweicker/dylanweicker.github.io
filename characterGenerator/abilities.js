@@ -7,7 +7,7 @@ function hideAllSteps(){
 	document.getElementById('step-four').style.display = 'none';
 	document.getElementById('step-five').style.display = 'none';
 	document.getElementById('step-six').style.display = 'none';
-} 
+}
 
 function showCurrentStep(){
 	switch (step) {
@@ -91,7 +91,7 @@ function previous() {
     scroll(0,0);
     }
 }
- 
+
 //--- Abilities Section --------
 var str = 10;
 var dex = 10;
@@ -136,7 +136,7 @@ function calculateUnsignedMod(score){
 function  setMaxCost(cost, button){
     var buttons = document.getElementsByClassName('ability-score-button');
     for (var i = 0; i < buttons.length; ++i) {
-        var item = buttons[i];  
+        var item = buttons[i];
         item.classList.remove('selected');
     }
     document.getElementById(button).classList.add('selected');
@@ -331,7 +331,7 @@ function flexCha(){
 function updateBarWidth(bar, width) {
     var bars = document.getElementsByClassName(bar);
     for (var i = 0; i < bars.length; ++i) {
-        var item = bars[i];  
+        var item = bars[i];
         item.style.width = width + "%";
     }
 }
@@ -413,46 +413,33 @@ function updatePointsSpent(){
 //--- Races Section --------
 var myRace;
 
+var dwarfDescription = "Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, dwarves have acquired a reputation as dour and humorless artisans of the earth. It could be said that their history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.";
+var elfDescription = "The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, though with key differences. While fey are truly linked to the flora and fauna of their homes, existing as the nearly immortal voices and guardians of the wilderness, elves are instead mortals who are in tune with the natural world around them. Elves seek to live in balance with the wild and understand it better than most other mortals. Some of this understanding is mystical, but an equal part comes from the elves' long lifespans, which in turn gives them long-ranging outlooks. Elves can expect to remain active in the same locale for centuries. By necessity, they must learn to maintain sustainable lifestyles, and this is most easily done when they work with nature, rather than attempting to bend it to their will.";
+var halflingDescription = "Optimistic and cheerful by nature, blessed with uncanny luck, and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity. At once excitable and easy-going, halflings like to keep an even temper and a steady eye on opportunity, and are not as prone to violent or emotional outbursts as some of the more volatile races. Even in the jaws of catastrophe, halflings almost never lose their sense of humor. Their ability to find humor in the absurd, no matter how dire the situation, often allows halflings to distance themselves ever so slightly from the dangers that surround them. This sense of detachment can also help shield them from terrors that might immobilize their allies.";
+var humanDescription = "Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world. Their empires and nations are vast, sprawling things, and the citizens of these societies carve names for themselves with the strength of their sword arms and the power of their spells. Humanity is best characterized by its tumultuousness and diversity, and human cultures run the gamut from savage but honorable tribes to decadent, devil-worshiping noble families in the most cosmopolitan cities. Humans' curiosity and ambition often triumph over their predilection for a sedentary lifestyle, and many leave their homes to explore the innumerable forgotten corners of the world or lead mighty armies to conquer their neighbors, simply because they can.";
+
 //--- --- Trait SubSection ------
 var traitTypes = {offensive: 1, defensive: 2, magical: 3, skill: 4}
-
 var racialTrait = function (name, type, description){
 	this.name = name;
 	this.type = type;
 	this.description = description;
 }
-
-dwarfDescription = "Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, dwarves have acquired a reputation as dour and humorless artisans of the earth. It could be said that their history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.";
-
-elfDescription = "The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, though with key differences. While fey are truly linked to the flora and fauna of their homes, existing as the nearly immortal voices and guardians of the wilderness, elves are instead mortals who are in tune with the natural world around them. Elves seek to live in balance with the wild and understand it better than most other mortals. Some of this understanding is mystical, but an equal part comes from the elves' long lifespans, which in turn gives them long-ranging outlooks. Elves can expect to remain active in the same locale for centuries. By necessity, they must learn to maintain sustainable lifestyles, and this is most easily done when they work with nature, rather than attempting to bend it to their will.";
-
-halflingDescription = "Optimistic and cheerful by nature, blessed with uncanny luck, and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity. At once excitable and easy-going, halflings like to keep an even temper and a steady eye on opportunity, and are not as prone to violent or emotional outbursts as some of the more volatile races. Even in the jaws of catastrophe, halflings almost never lose their sense of humor. Their ability to find humor in the absurd, no matter how dire the situation, often allows halflings to distance themselves ever so slightly from the dangers that surround them. This sense of detachment can also help shield them from terrors that might immobilize their allies.";
-
-humanDescription = "Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world. Their empires and nations are vast, sprawling things, and the citizens of these societies carve names for themselves with the strength of their sword arms and the power of their spells. Humanity is best characterized by its tumultuousness and diversity, and human cultures run the gamut from savage but honorable tribes to decadent, devil-worshiping noble families in the most cosmopolitan cities. Humans' curiosity and ambition often triumph over their predilection for a sedentary lifestyle, and many leave their homes to explore the innumerable forgotten corners of the world or lead mighty armies to conquer their neighbors, simply because they can.";
-
-var dwarfTraits = [
-    new racialTrait("Hatred", traitTypes.offensive, "+1 on attack rolls against orcs and goblinoids"),
-    new racialTrait("Defensive Training", traitTypes.defensive, "+4 to armour class against giants"),
-    new racialTrait("Hardy", traitTypes.defensive, "+2 on saving throws against poison, spells, and spell-like abilities"),
-    new racialTrait("Stability", traitTypes.defensive, "+4 to  combat manuevour defense against bull rush and trip attempts"),
-    new racialTrait("Greed", traitTypes.skill, "+2 bonus on Appraise checks on nonmagical goods containing precious metals or gemstones"),
-    new racialTrait("Stonecunning", traitTypes.skill, "+2 bonus on Perception checks to notice unusual stonework")
-];
-var elfTraits = [
-    new racialTrait("Elven Immunities", traitTypes.defensive, "Immune to magic sleep effects <br>&nbsp;+2 on saving throws against enchantments"),
-    new racialTrait("Elven Magic", traitTypes.magical, "+2 on caster-level checks to overcome spell resistance <br>&nbsp;+2 on Spellcraft checks made to identify magical items"),
-    new racialTrait("Keen Senses", traitTypes.skill, "+2 on perception checks"),
-];
-var halflingTraits = [
-    new racialTrait("Fearless", traitTypes.offensive, "+2 on saving throws against fear"),
-    new racialTrait("Halfling Luck", traitTypes.offensive, "+1 on all saving throws"),
-    new racialTrait("Sure-Footed", traitTypes.skill, "+2 on Acrobatics and Climb checks"),
-    new racialTrait("Keen Senses", traitTypes.skill, "+2 on perception checks")
-];
-var humanTraits = [
-    new racialTrait("Bonus Feat", traitTypes.skill, "Select one extra feat at level one"),
-    new racialTrait("Skilled", traitTypes.skill, "Gain an additional skill rank at each level")
-];
+//create traits
+var hatred = new racialTrait("Hatred", traitTypes.offensive, "+1 on attack rolls against orcs and goblinoids");
+var defensiveTraining = new racialTrait("Defensive Training", traitTypes.defensive, "+4 to armour class against giants");
+var hardy = new racialTrait("Hardy", traitTypes.defensive, "+2 on saving throws against poison, spells, and spell-like abilities");
+var stability = new racialTrait("Stability", traitTypes.defensive, "+4 to  combat manuevour defense against bull rush and trip attempts");
+var greed = new racialTrait("Greed", traitTypes.skill, "+2 bonus on Appraise checks on nonmagical goods containing precious metals or gemstones");
+var stonecunning = new racialTrait("Stonecunning", traitTypes.skill, "+2 bonus on Perception checks to notice unusual stonework");
+var elvenImmunities =  new racialTrait("Elven Immunities", traitTypes.defensive, "Immune to magic sleep effects <br>&nbsp;+2 on saving throws against enchantments");
+var elvenMagic = new racialTrait("Elven Magic", traitTypes.magical, "+2 on caster-level checks to overcome spell resistance <br>&nbsp;+2 on Spellcraft checks made to identify magical items");
+var keenSenses = new racialTrait("Keen Senses", traitTypes.skill, "+2 on perception checks");
+var fearless = new racialTrait("Fearless", traitTypes.offensive, "+2 on saving throws against fear");
+var halflingLuck = new racialTrait("Halfling Luck", traitTypes.offensive, "+1 on all saving throws");
+var sureFooted = new racialTrait("Sure-Footed", traitTypes.skill, "+2 on Acrobatics and Climb checks");
+var bonusFeat = new racialTrait("Bonus Feat", traitTypes.skill, "Select one extra feat at level one");
+var skilled = new racialTrait("Skilled", traitTypes.skill, "Gain an additional skill rank at each level");
 
 var dwarf = {
     name: "Dwarf",
@@ -463,7 +450,7 @@ var dwarf = {
     senses: "Darkvision 60 feet",
     languages: "Common, Dwarven",
     bonusLanguages: ["Giant", "Gnome", "Goblin", "Orc", "Terran", "Undercommon"],
-    traits: dwarfTraits
+    traits: [hatred, defensiveTraining, hardy, stability, greed, stonecunning]
 };
 
 var elf = {
@@ -475,7 +462,7 @@ var elf = {
     senses: "Low-light vision",
     languages: "Common, Elven",
     bonusLanguages: ["Celestial", "Draconic", "Gnoll", "Gnome", "Goblin", "Orc", "Sylvan"],
-    traits: elfTraits
+    traits: [elvenImmunities, elvenMagic, keenSenses]
 };
 
 var halfling = {
@@ -487,7 +474,7 @@ var halfling = {
     senses: "Standard",
     languages: "Common, Halfling",
     bonusLanguages: ["Dwarven", "Elven", "Gnome", "Goblin"],
-    traits: halflingTraits
+    traits: [fearless, halflingLuck, sureFooted, keenSenses]
 };
 
 var customizableAbilityScore = '+2 to any one ability score <div class="ghost-button ghost-button-small flex-wrap"><a id="str-flex" onclick="flexStr();">Strength</a><a id="dex-flex" onclick="flexDex();">Dexterity</a><a id="con-flex" onclick="flexCon();">Constitution</a><a id="iq-flex" onclick="flexIq();">Intelligence</a><a id="wis-flex" onclick="flexWis();">Wisdom</a><a id="cha-flex" onclick="flexCha();">Charisma</a></div>'
@@ -501,14 +488,14 @@ var human = {
     senses: "Standard",
     languages: "Common",
     bonusLanguages: ["Abyssal", "Aklo", "Auran", "Celestial", "Common", "Draconic", "Dwarven", "Elven", "Giant", "Gnome", "Goblin", "Gnoll", "Halfling", "Ignan", "Infernal", "Orc", "Sylvan", "Terran", "Undercommon"],
-    traits: humanTraits
+    traits: [bonusFeat, skilled]
 };
 
 function displayRaceDescription(name, description){
-    
+
     var raceName = document.getElementsByClassName('race-name');
     for (var i = 0; i < raceName.length; ++i) {
-        var item = raceName[i];  
+        var item = raceName[i];
         item.innerHTML = name;
     }
     document.getElementById('race-description').innerHTML = description;
@@ -545,7 +532,7 @@ function updateRacialAbilityBonuses(s, d, co, i, w, ch){
     racialIq = i;
     racialWis = w;
     racialCha = ch;
-    
+
     updateStr();
     updateDex();
     updateCon();
@@ -654,14 +641,14 @@ function addOrRemoveLanguage(language) {
 }
 
 
-function displayRacialTraits(traits){	
+function displayRacialTraits(traits){
     document.getElementById('offensive-traits').innerHTML= "";
     document.getElementById('defensive-traits').innerHTML= "";
     document.getElementById('magical-traits').innerHTML= "";
     document.getElementById('skill-traits').innerHTML= "";
-    
+
     var listOfTraits = [];
-    
+
 	for (var t in traits) {
         var newElement = document.createElement('div');
         newElement.className = "trait-row";
@@ -678,12 +665,12 @@ function displayRacialTraits(traits){
         else if (traits[t].type == traitTypes.skill){
 			document.getElementById('skill-traits').appendChild(newElement);
         }
-        
+
         listOfTraits.push(" " + traits[t].name);
-	} 
+	}
 
     document.getElementById('race-traits').innerHTML= listOfTraits.toString();
-    
+
     if (document.getElementById('offensive-traits').innerHTML == ""){
         document.getElementById('offensive-traits-container').style.display = 'none';
     } else {
@@ -739,7 +726,7 @@ var cantrips = [
 	new Spell("Prestidigitation", School.universal, "+1 to saving throws for 1 minute")
 	];
 
-function displayCantrips(){	
+function displayCantrips(){
 	for (var c in cantrips) {
 		if (cantrips[c].school != oppositionSchools[0] && cantrips[c].school != oppositionSchools[1]){
 			var newElement = document.createElement('div');
@@ -747,7 +734,7 @@ function displayCantrips(){
 			newElement.innerHTML = '<div class="spell-title">' + cantrips[c].name + '</div>';
 			document.getElementById('cantrips').appendChild(newElement);
 		}
-	} 
+	}
 }
 
 //---Skill Section ------
@@ -838,7 +825,7 @@ var wizardArmor;
 var rogueArmor = lightArmor;
 var clericArmor = lightArmor.concat(mediumArmor);
 var fighterArmor = lightArmor.concat(mediumArmor, heavyArmor);
-								
+
 //--- Classes Section ------
 var myClass;
 
@@ -883,7 +870,7 @@ function displayClassDescription(name, description){
 function updateFeature(name, innerHtml){
 	var listOfElements = document.getElementsByClassName(name);
     for (var i = 0; i < listOfElements.length; ++i) {
-        var element = listOfElements[i];  
+        var element = listOfElements[i];
         element.innerHTML = innerHtml;
     }
 }

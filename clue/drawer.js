@@ -28,7 +28,7 @@ var rollButton = new Image();
 var rollButtonInactive = new Image();
 var rollButtonHover = new Image();
 rollButton.src = "./images/rollbutton.png";
-rollButtonInactive.src = "./images/rollbuttonInactive.png";
+rollButtonInactive.src = "./images/rollbuttoninactive.png";
 rollButtonHover.src = "./images/rollbuttonHover.png";
 
 var stayButton = new Image();
@@ -36,7 +36,7 @@ var stayButtonInactive = new Image();
 var stayButtonHover = new Image();
 stayButton.src = "./images/staybutton.png";
 stayButtonInactive.src = "./images/staybuttoninactive.png";
-stayButtonHover.src = "./images/stayButtonHover.png";
+stayButtonHover.src = "./images/staybuttonhover.png";
 
 var stairsButton = new Image();
 var stairsButtonInactive = new Image();
@@ -48,23 +48,23 @@ stairsButtonHover.src = "./images/stairsButtonHover.png";
 var accuseButton = new Image();
 var accuseButtonInactive = new Image();
 var accuseButtonHover = new Image();
-accuseButton.src = "./images/accuseButton.png";
-accuseButtonInactive.src = "./images/accuseButtonInactive.png";
-accuseButtonHover.src = "./images/accuseButtonHover.png";
+accuseButton.src = "./images/AccuseButton.png";
+accuseButtonInactive.src = "./images/AccuseButtonInactive.png";
+accuseButtonHover.src = "./images/AccuseButtonHover.png";
 
 var notebookButton = new Image();
 var notebookButtonSelected = new Image();
 var notebookButtonHover = new Image();
-notebookButton.src = "./images/notebookButton.png";
-notebookButtonSelected.src = "./images/notebookButtonSelected.png";
-notebookButtonHover.src = "./images/notebookButtonHover.png";
+notebookButton.src = "./images/NotebookButton.png";
+notebookButtonSelected.src = "./images/NotebookButtonSelected.png";
+notebookButtonHover.src = "./images/NotebookButtonHover.png";
 
 var eventsButton = new Image();
 var eventsButtonSelected = new Image();
 var eventsButtonHover = new Image();
-eventsButton.src = "./images/eventsButton.png";
-eventsButtonSelected.src = "./images/eventsButtonSelected.png";
-eventsButtonHover.src = "./images/eventsButtonHover.png";
+eventsButton.src = "./images/EventsButton.png";
+eventsButtonSelected.src = "./images/EventsButtonSelected.png";
+eventsButtonHover.src = "./images/EventsButtonHover.png";
 
 function draw(){
     drawUserInterface();

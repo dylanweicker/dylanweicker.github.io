@@ -78,11 +78,17 @@ function draw(){
         drawMakeAccusation();
     }
     else if (turn == turnType.playerWins){
-            drawWin();
-        }
+        drawWin();
+    }
     else if (turn == turnType.playerLoses){
-            drawLose();
+        drawLose();
+    }
+    else if (turn == turnType.oneWins){
+            drawAiWin(one);
         }
+    else if (turn == turnType.twoWins){
+        drawAiWin(two);
+    }
 }
 
 function clear(){
@@ -196,7 +202,7 @@ function drawEvents(){
 
 function drawMovementOptions(){
     //draw Stay Button
-    if(turn == turnType.playerSelectMovementType && player.room != null){
+    if(turn == turnType.playerSelectMovementType && player.character.room != null){
         if (hover == buttons.stayButton){
             ctx.drawImage(stayButtonHover, screenWidth + 10, stayButtonY);
         }
@@ -230,9 +236,9 @@ function drawMovementOptions(){
     }
 
         if(turn == turnType.playerSelectMovementType &&
-           (player.room == conservatory || player.room == kitchen ||
-            player.room == study || player.room == lounge)){
-            if(turn == turnType.playerSelectMovementType && player.room != null){
+           (player.character.room == conservatory || player.character.room == kitchen ||
+            player.character.room == study || player.character.room == lounge)){
+            if(turn == turnType.playerSelectMovementType && player.character.room != null){
                 if (hover == buttons.stairsButton){
                     ctx.drawImage(stairsButtonHover, WIDTH - 10 - stairsButton.width, stayButtonY);
                 }
@@ -500,6 +506,9 @@ function drawWin(){
     ctx.font = "32px Arial";
     ctx.fillStyle = 'black';
     ctx.fillText("You solved the mystery! You win!", x,y-18);
+    
+    drawSolution(x,y);
+    
 }
 
 function drawLose(){
@@ -514,6 +523,38 @@ function drawLose(){
     ctx.font = "32px Arial";
     ctx.fillStyle = 'black';
     ctx.fillText("You were wrong. You lose!", x,y);
+    
+    drawSolution(x,y);
+}
+
+
+function drawAiWin(ai){
+    ctx.beginPath();
+    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
+    ctx.fillStyle = '#f1f1d4';
+    ctx.fill();
+
+    x = selectX1;
+    y = selectSuspectY;
+
+    ctx.font = "32px Arial";
+    ctx.fillStyle = 'black';
+    ctx.fillText(ai.character.name + "Wins!", x,y);
+    
+    drawSolution(x,y);
+}
+
+function drawSolution(x, y){
+    y += 100;
+    ctx.fillText("The solution was:", x,y);
+    y += 34;
+    x += 12;
+    ctx.font = "24px Arial";
+    ctx.fillText("Suspect: " + solutionSuspect.name, x,y);
+    y += 30;
+    ctx.fillText("Weapon: " + solutionWeapon.name, x,y);
+    y += 30;
+    ctx.fillText("Room: " + solutionRoom.name, x,y);
 }
 
 function drawMakeGuess(){
@@ -536,7 +577,7 @@ function drawMakeGuess(){
     drawSelectWeaponButtons();
 
 
-    selectedRoom = player.room;
+    selectedRoom = player.character.room;
     x = selectX1;
     y = selectRoomY;
     ctx.font = "18px Arial";
@@ -593,7 +634,13 @@ function drawMakeAccusation(){
     ctx.fillStyle = 'black';
     ctx.fillText("Room:", x,y-18);
     for (var i = 0; i < allRooms.length; i++){
-        if(playerKnows.includes(allRooms[i])){
+        if(selectedRoom == allRooms[i]){
+            ctx.beginPath();
+            ctx.rect(x, y, 50, 50);
+            ctx.fillStyle = 'gold';
+            ctx.fill();
+        }
+        else if(playerKnows.includes(allRooms[i])){
 
             ctx.beginPath();
             ctx.rect(x, y, 50, 50);
@@ -617,12 +664,26 @@ function drawMakeAccusation(){
     y = guessY;
     ctx.beginPath();
     ctx.rect(x, y, guessButtonWidth, selectButtonHeight);
-    ctx.fillStyle = 'steelblue';
+    ctx.fillStyle = 'red';
     ctx.fill();
 
     ctx.font = "12px Arial";
     ctx.fillStyle = 'white';
     ctx.fillText("Accuse!", x+8, y+25);
+    
+    
+    //draw guess button
+    x += guessButtonWidth + 10;
+    ctx.beginPath();
+    ctx.rect(x, y, guessButtonWidth, selectButtonHeight);
+    ctx.fillStyle = 'grey';
+    ctx.fill();
+
+    ctx.font = "12px Arial";
+    ctx.fillStyle = 'white';
+    ctx.fillText("Cancel", x+8, y+25);
+    
+    
 }
 
 function roundRect(ctx, x, y, width, height, radius, fill, stroke) {

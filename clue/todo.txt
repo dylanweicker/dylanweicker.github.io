@@ -1,0 +1,33 @@
+If turn == select
+	Activate Remain if in room. && make it black
+	Activate Portal if in corner room. && make it black
+	
+Add Accuse button
+
+Add tab for Information on historical game events vs Known information
+
+Print the information that you have learned.
+
+Done:
+	After an event, flip to the event page.
+	Each player must stand in a seperate spot in the room.
+	When suspect is accused, they move to room.
+	Make AI two move
+	Make knowledge a part of each player
+		player: character, knowledge, hand.
+	Make AI two guess
+	Display the correct answer on the win and lose pages
+	Allow AI to make accusation
+	
+Defect:
+	Ai's are struggling to leave rooms. (fixed)
+	AI one does not enter room on landing on door. (fixed)
+	
+Todo:
+	Decorate rooms
+	Rename rooms
+	Add cards for rooms and weapons
+	Hover blue for guessing and accusing
+	Allow player to select which card to show
+	Use mousebuttons to move
+	allow movement selection with keyboard

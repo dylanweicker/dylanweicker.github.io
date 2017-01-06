@@ -282,10 +282,10 @@ var solutionRoom;
 
 var playerKnows = [];
 var playerHolds = [];
-var oneknows = [];
-var oneholds = [];
-var twoknows = [];
-var twoholds = [];
+var oneKnows = [];
+var oneHolds = [];
+var twoKnows = [];
+var twoHolds = [];
 
 var selectedSuspect = scarlett;
 var selectedWeapon = dagger;

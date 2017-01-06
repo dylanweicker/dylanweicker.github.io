@@ -42,7 +42,7 @@ var stairsButton = new Image();
 var stairsButtonInactive = new Image();
 var stairsButtonHover = new Image();
 stairsButton.src = "./images/stairsbutton.png";
-stairsButtonInactive.src = "./images/stairsbuttoninactive.png";
+stairsButtonInactive.src = "./images/stairsButtonInactive.png";
 stairsButtonHover.src = "./images/stairsButtonHover.png";
 
 var accuseButton = new Image();

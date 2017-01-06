@@ -41,7 +41,7 @@ stayButtonHover.src = "./images/staybuttonhover.png";
 var stairsButton = new Image();
 var stairsButtonInactive = new Image();
 var stairsButtonHover = new Image();
-stairsButton.src = "./images/stairsbutton.png";
+stairsButton.src = "./images/stairsButton.png";
 stairsButtonInactive.src = "./images/stairsButtonInactive.png";
 stairsButtonHover.src = "./images/stairsButtonHover.png";
 
@@ -56,7 +56,7 @@ var notebookButton = new Image();
 var notebookButtonSelected = new Image();
 var notebookButtonHover = new Image();
 notebookButton.src = "./images/NotebookButton.png";
-notebookButtonSelected.src = "./images/NotebookButtonSelected.png";
+notebookButtonSelected.src = "./images/NotebookButtonselected.png";
 notebookButtonHover.src = "./images/NotebookButtonHover.png";
 
 var eventsButton = new Image();

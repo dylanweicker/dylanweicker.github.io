@@ -22,8 +22,10 @@ Done:
 Defect:
 	Ai's are struggling to leave rooms. (fixed)
 	AI one does not enter room on landing on door. (fixed)
+	decrease x of dining room spots by one
 	
 Todo:
+	AI needs to guess the correct solution if no one can disprove them.
 	Decorate rooms
 	Rename rooms
 	Add cards for rooms and weapons

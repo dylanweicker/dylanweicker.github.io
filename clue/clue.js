@@ -6,12 +6,12 @@ var player = {
 var one = {
     character: peacock,
     hand: oneHolds,
-    knowledge: oneKnows
+    knowledge: []
 }
 var two = {
     character: white,
     hand: twoHolds,
-    knowledge: twoKnows
+    knowledge: []
 }
 var npc3 = green;
 var npc4 = plum;
@@ -442,11 +442,13 @@ function main(){
     var handSize = deck.length/3;
     playerHolds = deck.slice(0, handSize);
     oneHolds = deck.slice(handSize, 2*handSize);
+    one.hand = oneHolds;
     twoHolds = deck.slice(2*handSize, 3*handSize);
+    two.hand = twoHolds;
 
     playerKnows = playerHolds.slice();
-    oneKnows = oneHolds.slice();
-    twoKnows = twoHolds.slice();
+    one.knowledge = oneHolds.slice();
+    two.knowledge = twoHolds.slice();
 
 }
 
@@ -497,7 +499,16 @@ function selectRoom(room){
 }
 
 function writeGuess(guesser){
-        var text = guesser.character.name + " has guessed " + selectedSuspect.name + " killed the king with the " + selectedWeapon.name + " in the " + selectedRoom.name + ".";
+        var guesserName;
+        
+        if (guesser == player){
+            guesserName = "You have";
+        }
+        else{
+            guesserName = guesser.character.name + " has";
+        }
+    
+        var text = guesserName + " guessed " + selectedSuspect.name + " killed the king with the " + selectedWeapon.name + " in the " + selectedRoom.name + ".";
         var lines = getLines(ctx, text, WIDTH-screenWidth-15);
         lines.push("");
         lines.reverse();
@@ -518,6 +529,12 @@ function unknownCards(ai, cardList){
     });
 }
 
+function inHandCards(ai, cardList){
+    return cardList.filter(function(e){
+        return (ai.hand.includes(e));
+    });
+}
+
 function unknownSuspects(ai){
     return unknownCards(ai, allSuspects);
 }
@@ -529,8 +546,24 @@ function unknownRooms(ai){
 }
 
 function aiMakeGuess(ai){
-    selectedSuspect = shuffle(unknownSuspects(ai)).pop();
-    selectedWeapon = shuffle(unknownWeapons(ai)).pop();
+    selectedKnownSuspect = false;
+    selectedKnownWeapon = false;
+    
+    if (Math.random() < 0.15){
+        selectedSuspect = shuffle(inHandCards(ai, allSuspects)).pop();
+        selectedKnownSuspect = true;
+    }
+    else{
+        selectedSuspect = shuffle(unknownSuspects(ai)).pop();   
+    }
+    
+    if (Math.random() < 0.15){
+        selectedWeapon = shuffle(inHandCards(ai, allWeapons)).pop();
+        selectedKnownWeapon = true;   
+    }
+    else{
+        selectedWeapon = shuffle(unknownWeapons(ai)).pop();
+    }
 
     //bring selected suspect to room
     enterRoom(selectedSuspect, ai.character.room);
@@ -622,7 +655,29 @@ function aiMakeGuess(ai){
         }
     }
     if (originalLength == ai.knowledge.length){
-            text = "No one was able to disprove " + ai.character.name + ".";
+        text = "No one was able to disprove " + ai.character.name + ".";
+            
+        if (!selectedKnownSuspect){
+            for (var i = 0; i < allSuspects.length; i++){
+                if (allSuspects[i] != selectedSuspect){
+                    ai.knowledge.push(allSuspects[i]);
+                }
+            }
+        }
+        
+        if (!selectedKnownWeapon){
+            for (var i = 0; i < allWeapons.length; i++){
+                if (allWeapons[i] != selectedWeapon){
+                    ai.knowledge.push(allWeapons[i]);
+                }
+            }
+        }
+        
+        for (var i = 0; i < allRooms.length; i++){
+            if (allRooms[i] != selectedRoom){
+                ai.knowledge.push(allRooms[i]);
+            }
+        }
     }    
 
     lines = getLines(ctx, text, WIDTH-screenWidth-20);
@@ -669,21 +724,21 @@ function makeGuess(){
     for (var i = 0; i < 3; i++){
         if (randomOrder[i] == 1){
             if (oneHolds.includes(selectedSuspect)){
-                text = "AI One has shown you " + selectedSuspect.name + ".";
+                text = one.character.name + " has shown you " + selectedSuspect.name + ".";
                 newLength = playerKnows.push(selectedSuspect);
                 break;
             }
         }
         if (randomOrder[i] == 2){
             if (oneHolds.includes(selectedWeapon)){
-                text = "AI One has shown you " + selectedWeapon.name + ".";
+                text = one.character.name + " has shown you " + selectedWeapon.name + ".";
                 newLength = playerKnows.push(selectedWeapon);
                 break;
             }
         }
         if (randomOrder[i] == 3){
             if (oneHolds.includes(selectedRoom)){
-                text = "AI One has shown you " + selectedRoom.name + ".";
+                text = one.character.name + " has shown you " + selectedRoom.name + ".";
                 newLength = playerKnows.push(selectedRoom);
                 break;
             }
@@ -695,21 +750,21 @@ function makeGuess(){
         for (var i = 0; i < 3; i++){
              if (randomOrder[i] == 1){
                 if (twoHolds.includes(selectedSuspect)){
-                    text = "AI Two has shown you " + selectedSuspect.name + ".";
+                    text = two.character.name + " has shown you " + selectedSuspect.name + ".";
                     newLength = playerKnows.push(selectedSuspect);
                     break;
                 }
             }
             if (randomOrder[i] == 2){
                 if (twoHolds.includes(selectedWeapon)){
-                    text = "AI Two has shown you " + selectedWeapon.name + ".";
+                    text = two.character.name + " has shown you " + selectedWeapon.name + ".";
                     newLength = playerKnows.push(selectedWeapon);
                     break;
                 }
             }
             if (randomOrder[i] == 3){
                 if (twoHolds.includes(selectedRoom)){
-                    text = "AI Two has shown you " + selectedRoom.name + ".";
+                    text = two.character.name + " has shown you " + selectedRoom.name + ".";
                     newLength = playerKnows.push(selectedRoom);
                     break;
                 }
@@ -762,6 +817,92 @@ function aiSelectMovementType(character, knowledge){
     dieResult--;
 }
 
+function aiStep(ai, path){
+    if (path.length == 0){
+        enterRoom(ai.character);
+        if (ai == one){
+            turn = turnType.oneGuess;
+        }
+        else if (ai == two){
+            turn = turnType.twoGuess;
+        }
+        return;
+    }
+    
+    if (dieResult > 0){
+    ai.character.x = path[0][0];
+    ai.character.y = path[0][1];
+    path.splice(0, 1);
+    dieResult--;
+    aiStep(ai, path);
+    }
+}
+
+function aiTwoAccuse(){
+    turn = turnType.twoWins;
+}
+function aiOneAccuse(){
+    turn = turnType.oneWins;
+}
+
+function aiMove(ai){
+    //if in room decide what to stay or leave:
+    if (ai.character.room != null){
+        aiSelectMovementType(ai.character, ai.knowledge);
+    }
+    //otherwise we must roll the die
+    else{
+        rollDie();
+    }
+    
+    //if we are not in a room move to closest unknown room
+    if (ai.character.room == null && dieResult > 0){
+        var unknownDoors = getUnknownDoors(ai.knowledge);
+        var bestPath = getBestPath(ai, unknownDoors);
+        aiStep(ai, bestPath);
+        dieResult = 0;
+    }    
+}
+
+function aiTwoMove(){
+    //If one knows the solution, make an accusation
+    if(unknownSuspects(two).length == 1 && unknownWeapons(two).length == 1 && unknownRooms(two).length == 1){
+        aiTwoAccuse();
+        return;
+    }
+    
+    aiMove(two);
+    
+    //if we are still not in a room, proceed to Two's turn
+    if (two.character.room == null){
+        turn = turnType.playerSelectMovementType;
+    }
+    //otherwise make a guess
+    else{   
+        setTimeout(function(){twoMakeGuess()}, 1000);
+    }
+}
+
+function aiOneMove(){
+    //If one knows the solution, make an accusation
+    if(unknownSuspects(one).length == 1 && unknownWeapons(one).length == 1 && unknownRooms(one).length == 1){
+        aiOneAccuse();
+        return;
+    }
+    
+    aiMove(one);
+    
+    //if we are still not in a room, proceed to Two's turn
+    if (one.character.room == null){
+        setTimeout(function(){aiTwoMove()}, 1000);
+    }
+    //otherwise make a guess
+    else{   
+        setTimeout(function(){oneMakeGuess()}, 1000);
+    }
+
+}
+
 function getUnknownDoors(knowledge){
     var doors = Array();
     for (var i = 0; i < allRooms.length; i++){
@@ -789,91 +930,6 @@ function getBestPath(ai, goals){
     return bestPath;
 }
 
-function aiStep(ai, path){
-    if (path.length == 0){
-        enterRoom(ai.character);
-        if (ai == one){
-            turn = turnType.oneGuess;
-        }
-        else if (ai == two){
-            turn = turnType.twoGuess;
-        }
-        return;
-    }
-    
-    if (dieResult > 0){
-    ai.character.x = path[0][0];
-    ai.character.y = path[0][1];
-    path.splice(0, 1);
-    dieResult--;
-    aiStep(ai, path);
-    }
-}
-
-function aiTwoMove(){
-    //If one knows the solution, make an accusation
-    if(unknownSuspects(two).length == 1 && unknownWeapons(two).length == 1 && unknownRooms(two).length == 1){
-        aiTwoAccuse();
-        return;
-    }
-    
-    aiMove(two);
-    
-    //if we are still not in a room, proceed to Two's turn
-    if (two.character.room == null){
-        turn = turnType.playerSelectMovementType;
-    }
-    //otherwise make a guess
-    else{   
-        setTimeout(function(){twoMakeGuess()}, 1000);
-    }
-}
-
-function aiTwoAccuse(){
-    turn = turnType.twoWins;
-}
-function aiOneAccuse(){
-    turn = turnType.oneWins;
-}
-
-function aiOneMove(){
-    //If one knows the solution, make an accusation
-    if(unknownSuspects(one).length == 1 && unknownWeapons(one).length == 1 && unknownRooms(one).length == 1){
-        aiOneAccuse();
-        return;
-    }
-    
-    aiMove(one);
-    
-    //if we are still not in a room, proceed to Two's turn
-    if (one.character.room == null){
-        setTimeout(function(){aiTwoMove()}, 1000);
-    }
-    //otherwise make a guess
-    else{   
-        setTimeout(function(){oneMakeGuess()}, 1000);
-    }
-
-}
-
-function aiMove(ai){
-    //if in room decide what to stay or leave:
-    if (ai.character.room != null){
-        aiSelectMovementType(ai.character, ai.knowledge);
-    }
-    //otherwise we must roll the die
-    else{
-        rollDie();
-    }
-    
-    //if we are not in a room move to closest unknown room
-    if (ai.character.room == null && dieResult > 0){
-        var unknownDoors = getUnknownDoors(ai.knowledge);
-        var bestPath = getBestPath(ai, unknownDoors);
-        aiStep(ai, bestPath);
-        dieResult = 0;
-    }    
-}
 
 function manhattanDistance(point, goal){
     return Math.abs(point.x - goal.x) +  Math.abs(point.y - goal.y);

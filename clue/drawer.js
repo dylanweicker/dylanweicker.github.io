@@ -189,11 +189,26 @@ function drawDie(){
 function drawEvents(){
     y= knownSuspectY1;
     x= screenWidth+10;
+        
     for(var i = information.length-1; i > -1; i--){
         ctx.beginPath();
         ctx.textAlign="left";
         ctx.font = "10px Arial";
-        ctx.fillStyle = 'white';
+        
+        var firstWord = information[i].substr(0, information[i].indexOf(' '));;
+        if (firstWord == "You"){
+            ctx.fillStyle = "#f33";
+        }
+        else if (firstWord === peacock.name){
+            ctx.fillStyle = "#0af";
+        }
+        else if (firstWord === white.name){
+            ctx.fillStyle = "#fff";
+        }
+        else if (firstWord == "No"){
+            ctx.fillStyle = "#3f3";
+        }
+        
         ctx.fillText(information[i], screenWidth+15, y+5);
         ctx.fill();
         y+=14;

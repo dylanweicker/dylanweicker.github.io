@@ -1,5 +1,15 @@
 var cardType = {suspect: 0, weapon: 1, room: 2};
 
+var marker1 = new Image();
+marker1.src = "images/Marker1.png";
+var marker2 = new Image();
+marker2.src = "images/Marker2.png";
+var marker3 = new Image();
+marker3.src = "images/Marker3.png";
+var marker4 = new Image();
+marker4.src = "images/Marker4.png";
+var markers = [new Image(), marker1, marker2, marker3, marker4];
+
 var scarlett = {
     "name": "Druid",
     "cardType": cardType.suspect,
@@ -7,6 +17,7 @@ var scarlett = {
     "unknownImage": new Image(),
     "knownSelectedImage": new Image(),
     "unknownSelectedImage": new Image(),
+    "icon": new Image(),
     "card": new Image(),
     "tokenImage": new Image(),
     "x" : 25,
@@ -20,6 +31,7 @@ scarlett.knownSelectedImage.src = "images/druidbutton_knownselected.png";
 scarlett.unknownSelectedImage.src = "images/druidbutton_unknownselected.png";
 scarlett.card.src = "images/druidcard.png";
 scarlett.tokenImage.src = "images/druidtoken.png";
+scarlett.icon.src = "images/DruidIcon.png";
 
 var mustard = {
     "name": "Ranger",
@@ -28,6 +40,7 @@ var mustard = {
     "unknownImage": new Image(),
     "knownSelectedImage": new Image(),
     "unknownSelectedImage": new Image(),
+    "icon": new Image(),
     "card": new Image(),
     "tokenImage": new Image(),
     "x" : 17,
@@ -40,6 +53,7 @@ mustard.knownSelectedImage.src = "images/rangerbutton_knownselected.png";
 mustard.unknownSelectedImage.src = "images/rangerbutton_unknownselected.png";
 mustard.card.src = "images/rangercard.png";
 mustard.tokenImage.src = "images/rangertoken.png";
+mustard.icon.src = "images/RangerIcon.png";
 
 var green = {
     "name": "Paladin",
@@ -48,6 +62,7 @@ var green = {
     "unknownImage": new Image(),
     "knownSelectedImage": new Image(),
     "unknownSelectedImage": new Image(),
+    "icon": new Image(),
     "card": new Image(),
     "tokenImage": new Image(),
     "x" : 6,
@@ -60,6 +75,7 @@ green.unknownImage.src = "images/paladinbutton_unknown.png";
 green.knownSelectedImage.src = "images/paladinbutton_knownselected.png";
 green.unknownSelectedImage.src = "images/paladinbutton_unknownselected.png";
 green.tokenImage.src = "images/paladintoken.png";
+green.icon.src = "images/PaladinIcon.png";
 
 var peacock = {
     "name": "Sorcerer",
@@ -68,6 +84,7 @@ var peacock = {
     "unknownImage": new Image(),
     "knownSelectedImage": new Image(),
     "unknownSelectedImage": new Image(),
+    "icon": new Image(),
     "card": new Image(),
     "tokenImage": new Image(),
     "x" : 12,
@@ -80,6 +97,7 @@ peacock.unknownImage.src = "images/sorcererbutton_unknown.png";
 peacock.knownSelectedImage.src = "images/sorcererbutton_knownselected.png";
 peacock.unknownSelectedImage.src = "images/sorcererbutton_unknownselected.png";
 peacock.tokenImage.src = "images/sorcerertoken.png";
+peacock.icon.src = "images/SorcererIcon.png";
 
 var plum = {
     "name": "Warlock",
@@ -88,6 +106,7 @@ var plum = {
     "unknownImage": new Image(),
     "knownSelectedImage": new Image(),
     "unknownSelectedImage": new Image(),
+    "icon": new Image(),
     "card": new Image(),
     "tokenImage": new Image(),
     "x" : 19,
@@ -100,6 +119,7 @@ plum.unknownImage.src = "images/warlockbutton_unknown.png";
 plum.knownSelectedImage.src = "images/warlockbutton_knownselected.png";
 plum.unknownSelectedImage.src = "images/warlockbutton_unknownselected.png";
 plum.tokenImage.src = "images/warlocktoken.png";
+plum.icon.src = "images/WarlockIcon.png";
 
 var white = {
     "name": "Cleric",
@@ -108,6 +128,7 @@ var white = {
     "unknownImage": new Image(),
     "knownSelectedImage": new Image(),
     "unknownSelectedImage": new Image(),
+    "icon": new Image(),
     "card": new Image(),
     "tokenImage": new Image(),
     "x" : 1,
@@ -120,6 +141,7 @@ white.unknownImage.src = "images/clericbutton_unknown.png";
 white.knownSelectedImage.src = "images/clericbutton_knownselected.png";
 white.unknownSelectedImage.src = "images/clericbutton_unknownselected.png";
 white.tokenImage.src = "images/clerictoken.png";
+white.icon.src = "images/ClericIcon.png";
 
 
 //weapons
@@ -209,63 +231,77 @@ var conservatory = {
     "cardType": cardType.room,
     door: [{"x": 4 , "y": 5}],
     exit: [{"x": 4 , "y": 6}],
-    pos: [{"x": 2 , "y": 3},{"x": 1 , "y": 3},{"x": 3 , "y": 3},{"x": 1 , "y": 2},{"x": 2 , "y": 2},{"x": 3, "y": 2}]
+    pos: [{"x": 2 , "y": 3},{"x": 1 , "y": 3},{"x": 3 , "y": 3},{"x": 1 , "y": 2},{"x": 2 , "y": 2},{"x": 3, "y": 2}],
+    "card": new Image()
 };
 var billiards = {
     "name": "Billiards room",
     "cardType": cardType.room,
     door: [{"x": 10, "y": 5}],
     exit: [{"x": 10 , "y": 6}],
-    pos: [{"x": 8 , "y": 3},{"x": 9 , "y": 3},{"x": 10 , "y": 3},{"x": 8 , "y": 2},{"x": 9 , "y": 2},{"x": 10, "y": 2}]
+    pos: [{"x": 8 , "y": 3},{"x": 9 , "y": 3},{"x": 10 , "y": 3},{"x": 8 , "y": 2},{"x": 9 , "y": 2},{"x": 10, "y": 2}],
+    "card": new Image()
 };
 var study = {
     "name": "Study",
     "cardType": cardType.room,
     door: [{"x": 24, "y": 5}],
     exit: [{"x": 24 , "y": 6}],
-    pos: [{"x": 22 , "y": 3},{"x": 23 , "y": 3},{"x": 24 , "y": 3},{"x": 22 , "y": 2},{"x": 23 , "y": 2},{"x": 24, "y": 2}]
+    pos: [{"x": 22 , "y": 3},{"x": 23 , "y": 3},{"x": 24 , "y": 3},{"x": 22 , "y": 2},{"x": 23 , "y": 2},{"x": 24, "y": 2}],
+    "card": new Image()
 };
 var ballroom = {
     "name": "Ballroom",
     "cardType": cardType.room,
     door: [{"x": 9, "y": 10}, {"x": 6, "y": 13}],
     exit: [{"x": 10 , "y": 10}, {"x": 6, "y": 14}],
-    pos: [{"x": 4 , "y": 9},{"x": 6 , "y": 9},{"x": 3 , "y": 11},{"x": 7 , "y": 9},{"x": 2 , "y": 10},{"x": 5, "y": 11}]
+    pos: [{"x": 4 , "y": 9},{"x": 6 , "y": 9},{"x": 3 , "y": 11},{"x": 7 , "y": 9},{"x": 2 , "y": 10},{"x": 5, "y": 11}],
+    "card": new Image()
 };
 var library = {
     "name": "Library",
     "cardType": cardType.room,
     door: [{"x": 15, "y": 6}],
     exit: [{"x": 15 , "y": 7}],
-    pos: [{"x": 14 , "y": 3},{"x": 15 , "y": 3},{"x": 16 , "y": 3},{"x": 14 , "y": 2},{"x": 15, "y": 2},{"x": 16, "y": 2}]
+    pos: [{"x": 14 , "y": 3},{"x": 15 , "y": 3},{"x": 16 , "y": 3},{"x": 14 , "y": 2},{"x": 15, "y": 2},{"x": 16, "y": 2}],
+    "card": new Image(),
+    prop: new Image(),
+    propPos: {x: 14, y: 1}
 };
+library.prop.src = "./images/LibraryProp.png";
+library.card.src = "./images/LibraryCard.png";
+
 var hall = {
     "name": "Hall",
     "cardType": cardType.room,
     door: [{"x": 21, "y": 7}, {"x": 19, "y": 10}],
     exit: [{"x": 21 , "y": 6}, {"x":18 , "y": 10}],
-    pos: [{"x": 22 , "y": 9},{"x": 21 , "y": 10},{"x": 23 , "y": 11},{"x": 23 , "y": 9},{"x": 22 , "y": 10},{"x": 21, "y": 11}]
+    pos: [{"x": 22 , "y": 9},{"x": 21 , "y": 10},{"x": 23 , "y": 11},{"x": 23 , "y": 9},{"x": 22 , "y": 10},{"x": 21, "y": 11}],
+    "card": new Image()
 };
 var kitchen = {
     "name": "Kitchen",
     "cardType": cardType.room,
     door: [{"x": 7, "y": 17}],
     exit: [{"x": 8 , "y": 17}],
-    pos: [{"x": 2 , "y": 17},{"x": 3 , "y": 17},{"x": 4 , "y": 17},{"x": 5 , "y": 17},{"x": 6 , "y": 17},{"x": 1, "y": 17}]
+    pos: [{"x": 2 , "y": 17},{"x": 3 , "y": 17},{"x": 4 , "y": 17},{"x": 5 , "y": 17},{"x": 6 , "y": 17},{"x": 1, "y": 17}],
+    "card": new Image()
 };
 var dining = {
     "name": "Dining room",
     "cardType": cardType.room,
     door: [{"x": 13, "y": 14}],
     exit: [{"x": 13 , "y": 13}],
-    pos: [{"x": 14 , "y": 16},{"x": 15 , "y": 16},{"x": 13 , "y": 16},{"x": 14 , "y": 17},{"x": 15 , "y": 17},{"x": 13, "y": 17}]
+    pos: [{"x": 14 , "y": 16},{"x": 15 , "y": 16},{"x": 13 , "y": 16},{"x": 14 , "y": 17},{"x": 15 , "y": 17},{"x": 13, "y": 17}],
+    "card": new Image()
 };
 var lounge = {
     "name": "Lounge",
     "cardType": cardType.room,
     door: [{"x": 19, "y": 15}],
     exit: [{"x": 19 , "y": 14}],
-    pos: [{"x": 20 , "y": 17},{"x": 21 , "y": 17},{"x": 22 , "y": 17},{"x": 23 , "y": 17},{"x": 24 , "y": 17},{"x": 25, "y": 17}]
+    pos: [{"x": 20 , "y": 17},{"x": 21 , "y": 17},{"x": 22 , "y": 17},{"x": 23 , "y": 17},{"x": 24 , "y": 17},{"x": 25, "y": 17}],
+    "card": new Image()
 };
 
 

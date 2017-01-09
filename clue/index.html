@@ -6,15 +6,23 @@
         body{
             margin: 0;
             width: 100%;
+            background-color: #000;
         }
         #canvas {
             background-color: black;
+        }
+        .canvas-container{
+            height: 700px;
+            width: 900px;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 0;
         }
     </style>
     <body onload="main()">
         <center>
             <h1>Clue</h1>
-             <canvas id="canvas" height="650px" width="854px">
+             <canvas id="canvas" height="680px" width="900px">
              </canvas>
              <script src="cardData.js"></script>
              <script src="map.js"></script>
@@ -22,20 +30,20 @@
              <script src="clue.js"></script>
         </center>
         <div style="width: 854px; margin: auto;">
-            <h3>Instructions</h3>
-            <h4>Object</h4>
+            <h2>Instructions</h2>
+            <h4>Objective</h4>
             <ul>
             <li>The king has been murdered. You must figure out:
                 <ul>
-                <li>which Suspect is the murdererd</li>
+                <li>which Suspect is the murderer</li>
                 <li>which Weapon was used</li>
                 <li>which Room the crime occured in.</li>
                 </ul>
             </li>
             <li>You are dealt six cards, shown at the bottom. None of these cards are in the solution.</li>
-            <li>You two opponents have also been dealt six cards, which are not in the solution.</li>
-            <li>By process of elimination, you must determine the three card remaining cards that are in the solution.</li>
-            <li>If you are the first player to make accurately make an accusation, you win the game.</li>
+            <li>Your two opponents have also been dealt six cards, which are not in the solution.</li>
+            <li>By process of elimination, you must determine the three remaining cards that are in the solution.</li>
+            <li>If you are the first player to accurately make an accusation, you win the game.</li>
             </ul>
             
             <h4>Characters</h4>
@@ -46,10 +54,17 @@
             
             <h4>Movement</h4>
             <ul>
-            <li>On your turn, click "roll" to roll the die. This will allow you to walk through the corridors.
-            <li>If you start your turn in a room, you may click "stay" to remain in the room.</li>
-            <li>If you are in a corner room, you may click stairs to move to the room in the opposite corner.</li>
-            <li>If you choose to roll, use the Arrow Keys to move.</li>
+                <li>On your turn, click "roll" to roll the die. This will allow you to walk through the corridors.</li>    
+                <li>If you choose to roll, use the Arrow Keys or WASD to move.</li>
+                <li>If you start your turn in a room, you may click "stay" to remain in the room.</li>
+                <li>If you are in a corner room, you may click "stairs" to move to the room in the opposite corner.</li>
+            </ul>
+            
+            <h4>Notebook and Events</h4>
+             <ul>
+                <li>Click on the tabs to toggle between your notebook and event log.</li>
+                <li>Cards that have been disproven will appear greyed-out in your notebook.</li>
+                <li>Recent events will be displayed in your event log, color-coded corresponding to the character who performed the action.</li>
             </ul>
             
             <h4>Making a Suggestion</h4>
@@ -57,6 +72,7 @@
             <li>If you end your turn in a room, you may make a suggestion.</li>
             <li>Click on one Suspect and one Weapon to suggest them as the solution. You must suggest the room that you are in.</li>
             <li>The Sorcerer will try to disprove you first by showing you one of her cards. If she cannot disprove you, the cleric will try to disprove you.</li>
+            <li>When a suggestion is made, the suggested suspect will move to the suggested room.</li>
             </ul>
             
             <h4>Making an Accusation</h4>

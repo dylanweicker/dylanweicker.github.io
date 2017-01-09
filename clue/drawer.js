@@ -1,50 +1,99 @@
-var HEIGHT = 650;
-var WIDTH = 854;
+var HEIGHT = 680;
+var WIDTH = 900;
 var screenHeight = 480;
 var screenWidth = 648;
 var sidebarWidth = WIDTH-screenWidth;
 var mapRowLength = 27;
-
-var selectButtonHeight = 50;
-var selectButtonWidth =50;
-var guessButtonWidth = 75;
-var selectButtonWidthAndMargin =60;
-
-var knownSuspectY1 = 250;
-var knownSuspectY2 = knownSuspectY1+50;
-
-var knownWeaponY1 = knownSuspectY2+60;
-var knownWeaponY2 = knownWeaponY1+50;
-
-var knownRoomY1 = knownWeaponY2+60;
-var knownRoomY2 = knownRoomY1+50;
-var knownRoomY3 = knownRoomY2+50;
-
-var cardsY = HEIGHT-155;
-
 var tileSize = 24;
 
+
+
+var knownSuspectY1 = 230;
+var knownSuspectY2 = knownSuspectY1+55;
+
+var knownWeaponY1 = knownSuspectY2+75;
+var knownWeaponY2 = knownWeaponY1+55;
+
+var knownRoomY1 = knownWeaponY2+75;
+var knownRoomY2 = knownRoomY1+55;
+var knownRoomY3 = knownRoomY2+55;
+
+var cardsY = screenHeight + 40;
+
+
+// ----- POPUPS ----
+var popup = new Image();
+popup.src = "./images/Popup.png";
+
+//Select Suspect/Weapon/Room buttons
+var selectButton = new Image();
+selectButton.src = "./images/SelectButton.png";
+var selectedButton = new Image();
+selectedButton.src = "./images/SelectedButton.png";
+
+//Continue Button
+var continueButton = new Image();
+continueButton.src = "./images/ContinueButton.png";
+
+//Cancel Button
+var cancelButton = new Image();
+cancelButton.src = "./images/CancelButton.png";
+
+
+// ----- SIDEBAR -----
+//Side bar button positions
+var rollButtonY = 24;
+var accuseButtonY = 150;
+var tabsY = 210;
+var accuseButtonWidth = 92;
+
+var rollButtonPos = [screenWidth + 16, rollButtonY];
+var stairsButtonPos = [WIDTH - accuseButtonWidth - 16, rollButtonY];
+var guessButtonPos = [screenWidth + 16, accuseButtonY];
+var accuseButtonPos = [WIDTH - accuseButtonWidth - 16, accuseButtonY];
+
+//Roll die
 var rollButton = new Image();
 var rollButtonInactive = new Image();
 var rollButtonHover = new Image();
-rollButton.src = "./images/rollbutton.png";
-rollButtonInactive.src = "./images/rollbuttoninactive.png";
-rollButtonHover.src = "./images/rollbuttonHover.png";
+rollButton.src = "./images/RollButton.png";
+rollButtonInactive.src = "./images/RollButtonInactive.png";
+rollButtonHover.src = "./images/RollButtonHover.png";
 
-var stayButton = new Image();
-var stayButtonInactive = new Image();
-var stayButtonHover = new Image();
-stayButton.src = "./images/staybutton.png";
-stayButtonInactive.src = "./images/staybuttoninactive.png";
-stayButtonHover.src = "./images/staybuttonhover.png";
-
+//Use Secret Passage
 var stairsButton = new Image();
 var stairsButtonInactive = new Image();
 var stairsButtonHover = new Image();
-stairsButton.src = "./images/stairsButton.png";
-stairsButtonInactive.src = "./images/stairsButtonInactive.png";
-stairsButtonHover.src = "./images/stairsButtonHover.png";
+stairsButton.src = "./images/PassageButton.png";
+stairsButtonInactive.src = "./images/PassageButtonInactive.png";
+stairsButtonHover.src = "./images/PassageButtonHover.png";
 
+//Die Results
+var die0 = new Image();
+var die1 = new Image();
+var die2 = new Image();
+var die3 = new Image();
+var die4 = new Image();
+var die5 = new Image();
+var die6 = new Image();
+die0.src = "./images/DieZero.png";
+die1.src = "./images/DieOne.png";
+die2.src = "./images/DieTwo.png";
+die3.src = "./images/DieThree.png";
+die4.src = "./images/DieFour.png";
+die5.src = "./images/DieFive.png";
+die6.src = "./images/DieSix.png";
+var dice = [die0, die1, die2, die3, die4, die5, die6];
+
+//Make Suggestion
+var stayButton = new Image();
+var stayButtonInactive = new Image();
+var stayButtonHover = new Image();
+stayButton.src = "./images/SuggestButton.png";
+stayButtonInactive.src = "./images/SuggestButtonInactive.png";
+stayButtonHover.src = "./images/SuggestButtonHover.png";
+
+//Make Accusation
 var accuseButton = new Image();
 var accuseButtonInactive = new Image();
 var accuseButtonHover = new Image();
@@ -52,23 +101,40 @@ accuseButton.src = "./images/AccuseButton.png";
 accuseButtonInactive.src = "./images/AccuseButtonInactive.png";
 accuseButtonHover.src = "./images/AccuseButtonHover.png";
 
-var notebookButton = new Image();
-var notebookButtonSelected = new Image();
-var notebookButtonHover = new Image();
-notebookButton.src = "./images/NotebookButton.png";
-notebookButtonSelected.src = "./images/NotebookButtonselected.png";
-notebookButtonHover.src = "./images/NotebookButtonHover.png";
 
-var eventsButton = new Image();
-var eventsButtonSelected = new Image();
-var eventsButtonHover = new Image();
-eventsButton.src = "./images/EventsButton.png";
-eventsButtonSelected.src = "./images/EventsButtonSelected.png";
-eventsButtonHover.src = "./images/EventsButtonHover.png";
+// ----- Notebook -----
+var notebookButton = new Image();
+notebookButton.src = "./images/NotebookButton.png";
+
+
+// ----- CARDS -----
+var cardBack = new Image();
+cardBack.src = "./images/CardBack.png";
+
+var selectX1 = 60;
+var selectSuspectY = 90;
+var selectWeaponY = 190;
+var selectRoomY = 290;
+var closePopupY = 380;
+
+var selectButtonHeight = 50;
+var selectButtonWidth =50;
+var guessButtonWidth = 75;
+var selectButtonWidthAndMargin =60;
+
+
+
+
+//Display Guess
+var suggestion;
+var resolution;
+var shownCard = new Image();
+
 
 function draw(){
     drawUserInterface();
     drawMap();
+    drawProps();
     drawPlayer();
 
     if(turn == turnType.playerGuess){
@@ -76,6 +142,9 @@ function draw(){
     }
     else if(turn == turnType.playerAccuse){
         drawMakeAccusation();
+    }
+    else if(turn == turnType.playerDisplayGuess || turn == turnType.oneDisplayGuess || turn == turnType.twoDisplayGuess){
+        drawGuess();
     }
     else if (turn == turnType.playerWins){
         drawWin();
@@ -98,24 +167,26 @@ function clear(){
 function drawUserInterface(){
     ctx.beginPath();
     ctx.rect(0, screenHeight, WIDTH, HEIGHT-screenHeight);
-    ctx.fillStyle = 'grey';
+    ctx.fillStyle = '#eeeeee';
     ctx.fill();
 
     ctx.beginPath();
     ctx.rect(screenWidth, 0, sidebarWidth, HEIGHT);
-    ctx.fillStyle = 'grey';
+    ctx.fillStyle = '#eeeeee';
     ctx.fill();
 
     drawMovementOptions();
     drawDie();
-    drawTabs();
-    if (tab == tabType.notebook){
-        drawNotebook();
-    }
-    else{
-        drawEvents();
-    }
+    drawNotebook();
     drawHand();
+}
+
+function drawProps(){
+    for (var i = 0; i < allRooms.length; i++){
+        if (allRooms[i].prop != null){
+            ctx.drawImage(allRooms[i].prop, allRooms[i].propPos.x * tileSize, allRooms[i].propPos.y * tileSize);
+        }
+    }
 }
 
 function drawMap(){
@@ -173,17 +244,8 @@ function drawPlayer(){
 
 
 function drawDie(){
-    ctx.beginPath();
-    ctx.textAlign="center";
-    ctx.font = "36px Arial";
-    if(turn == turnType.playerMove){
-        ctx.fillStyle = 'black';
-    }
-    else{
-        ctx.fillStyle = '#555555';
-    }
-    ctx.fillText(dieResult, WIDTH-sidebarWidth/2, rollButtonY+90);
-    ctx.fill();
+    var diePos = [WIDTH-sidebarWidth/2-die0.width/2,  rollButtonY+64];
+    ctx.drawImage(dice[dieResult], diePos[0], diePos[1]);
 }
 
 function drawEvents(){
@@ -219,91 +281,125 @@ function drawMovementOptions(){
     //draw Stay Button
     if(turn == turnType.playerSelectMovementType && player.character.room != null){
         if (hover == buttons.stayButton){
-            ctx.drawImage(stayButtonHover, screenWidth + 10, stayButtonY);
+            ctx.drawImage(stayButtonHover, guessButtonPos[0], guessButtonPos[1]);
         }
         else{
-            ctx.drawImage(stayButton, screenWidth + 10, stayButtonY);
+            ctx.drawImage(stayButton, guessButtonPos[0], guessButtonPos[1]);
         }
     }
     else{
-        ctx.drawImage(stayButtonInactive, screenWidth + 10, stayButtonY);
+        ctx.drawImage(stayButtonInactive, guessButtonPos[0], guessButtonPos[1]);
     }
 
     //draw Roll Button
     if(turn == turnType.playerSelectMovementType){
         if (hover == buttons.rollButton){
-            ctx.drawImage(rollButtonHover, screenWidth + sidebarWidth/2 - rollButton.width/2, rollButtonY);
+            ctx.drawImage(rollButtonHover, rollButtonPos[0], rollButtonPos[1]);
         }
         else{
-            ctx.drawImage(rollButton, screenWidth + sidebarWidth/2 - rollButton.width/2, rollButtonY);
+            ctx.drawImage(rollButton, rollButtonPos[0], rollButtonPos[1]);
         }
-        if (hover == buttons.accuseButton){
-            ctx.drawImage(accuseButtonHover, screenWidth + sidebarWidth/2 - accuseButton.width/2, accuseButtonY);
-        }
-        else{
-            ctx.drawImage(accuseButton, screenWidth + sidebarWidth/2 - accuseButton.width/2, accuseButtonY);
-        }
-
     }
     else{
-    ctx.drawImage(rollButtonInactive, screenWidth + sidebarWidth/2 - rollButtonInactive.width/2, rollButtonY);
-        ctx.drawImage(accuseButtonInactive, screenWidth + sidebarWidth/2 - accuseButton.width/2, accuseButtonY);
+        ctx.drawImage(rollButtonInactive, rollButtonPos[0], rollButtonPos[1]);
     }
 
-        if(turn == turnType.playerSelectMovementType &&
-           (player.character.room == conservatory || player.character.room == kitchen ||
-            player.character.room == study || player.character.room == lounge)){
-            if(turn == turnType.playerSelectMovementType && player.character.room != null){
-                if (hover == buttons.stairsButton){
-                    ctx.drawImage(stairsButtonHover, WIDTH - 10 - stairsButton.width, stayButtonY);
-                }
-                else{
-                    ctx.drawImage(stairsButton, WIDTH - 10 - stairsButton.width, stayButtonY);
-                }
+    if(turn == turnType.playerSelectMovementType &&
+       (player.character.room == conservatory || player.character.room == kitchen ||
+        player.character.room == study || player.character.room == lounge)){
+        if(turn == turnType.playerSelectMovementType && player.character.room != null){
+            if (hover == buttons.stairsButton){
+                ctx.drawImage(stairsButtonHover, stairsButtonPos[0], stairsButtonPos[1]);
+            }
+            else{
+                ctx.drawImage(stairsButton, stairsButtonPos[0], stairsButtonPos[1]);
             }
         }
-        else{
-            ctx.drawImage(stairsButtonInactive, WIDTH - 10 - stairsButtonInactive.width, stayButtonY);
-        }
-}
-
-function drawTabs(){
-
-    ctx.beginPath();
-    ctx.fillStyle = "#a3a3a3";
-    roundRect(ctx, screenWidth+5, tabsY + notebookButton.height - 7, sidebarWidth - 10, HEIGHT - tabsY - notebookButton.height - 7, 5, true, false);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.fillStyle = "#3b3b3b";
-    roundRect(ctx, screenWidth+10, tabsY + notebookButton.height - 2, sidebarWidth - 20, HEIGHT - tabsY - notebookButton.height - 17, 5, true, false);
-    ctx.fill();
-
-    if (tab == tabType.notebook){
-        ctx.drawImage(notebookButtonSelected, notebookTabX, tabsY);
     }
     else{
-        if (hover == buttons.notebookButton){
-            ctx.drawImage(notebookButtonHover, notebookTabX, tabsY);
+        ctx.drawImage(stairsButtonInactive, stairsButtonPos[0], stairsButtonPos[1]);
+    }
+    
+    if (turn == turnType.playerSelectMovementType || turn == turnType.playerMove){
+        if (hover == buttons.accuseButton){
+            ctx.drawImage(accuseButtonHover, accuseButtonPos[0], accuseButtonPos[1]);
         }
         else{
-            ctx.drawImage(notebookButton, notebookTabX, tabsY);
+            ctx.drawImage(accuseButton, accuseButtonPos[0], accuseButtonPos[1]);
         }
-    }
-
-    if (tab == tabType.events){
-        ctx.drawImage(eventsButtonSelected, eventsTabX, tabsY);
     }
     else{
-        if (hover == buttons.eventsButton){
-            ctx.drawImage(eventsButtonHover, eventsTabX, tabsY);
+        ctx.drawImage(accuseButtonInactive, accuseButtonPos[0], accuseButtonPos[1]);
+    }
+}
+
+function drawNotebook(){
+    
+    x = screenWidth+sidebarWidth/2-90;
+    y = knownSuspectY1;
+
+    for (var i = 0; i < 6; i++){
+        ctx.drawImage(notebookButton,x,y);
+        ctx.drawImage(allSuspects[i].icon,x,y);
+        if(playerKnows.includes(allSuspects[i])){
+            ctx.drawImage(markers[1],x,y);
+        }
+        if (i == 2){
+            x = screenWidth+sidebarWidth/2-90;
+            y = knownSuspectY2;
         }
         else{
-            ctx.drawImage(eventsButton, eventsTabX, tabsY);
+            x+=60;
         }
     }
 
+    x = screenWidth+sidebarWidth/2-90;
+    y = knownWeaponY1;
+
+    for (var i = 0; i < 6; i++){
+        if(playerKnows.includes(allWeapons[i])){
+            ctx.drawImage(allWeapons[i].knownImage,x,y);
+            ctx.drawImage(markers[1],x,y);
+        }
+        else{
+            ctx.drawImage(allWeapons[i].unknownImage,x,y);
+        }
+        if (i == 2){
+            x = screenWidth+sidebarWidth/2-90;
+            y = knownWeaponY2;
+        }
+        else{
+            x+=60;
+        }
+    }
+
+    x = screenWidth+sidebarWidth/2-90;
+    y = knownRoomY1;
+    for (var i = 0; i < 9; i++){
+        ctx.drawImage(notebookButton,x,y);
+
+        ctx.beginPath();
+        ctx.textAlign="center";
+        ctx.font = "9px Arial";
+        ctx.fillStyle = 'black';
+        ctx.fillText(allRooms[i].name, x+25, y+25);
+        if(playerKnows.includes(allRooms[i])){
+            ctx.drawImage(markers[1],x,y);
+        }
+        if (i == 2){
+            x = screenWidth+sidebarWidth/2-90;
+            y = knownRoomY2;
+        }
+        else if (i == 5){
+            x = screenWidth+sidebarWidth/2-90;
+            y = knownRoomY3;
+        }
+        else{
+            x+=60;
+        }
+    }
 }
+
 
 function drawHand(){
     var x = 0;
@@ -330,27 +426,40 @@ function drawHand(){
     }
 }
 
+function drawGuess(){
+    ctx.drawImage(popup, 50, 50);
+    
+    ctx.font = "18px Arial";
+    ctx.fillStyle = 'black';
+    ctx.fillText(suggestion, 80, 80);
+    ctx.fillText(resolution, 80, 160);
+    ctx.drawImage(shownCard, 80, 240);
+    
+    x = selectX1;
+    y = closePopupY;
+    ctx.drawImage(continueButton, x, y);
+}
+
 function drawSelectSuspectButtons(){
     for (var i = 0; i < allSuspects.length; i++){
 
         x = selectX1 + i*selectButtonWidthAndMargin;
         y = selectSuspectY;
 
-        if(playerKnows.includes(allSuspects[i])){
-            if(selectedSuspect == allSuspects[i]){
-                ctx.drawImage(allSuspects[i].knownSelectedImage,x,y);
-            }
-            else{
-            ctx.drawImage(allSuspects[i].knownImage,x,y);
+        //If Selected
+        if(selectedSuspect == allSuspects[i]){
+            ctx.drawImage(selectedButton,x,y);
+            ctx.drawImage(allSuspects[i].icon,x,y);
+            if(playerKnows.includes(allSuspects[i])){
+                ctx.drawImage(markers[1],x,y);
             }
         }
+        //If not selected
         else{
-
-            if(selectedSuspect == allSuspects[i]){
-                ctx.drawImage(allSuspects[i].unknownSelectedImage,x,y);
-            }
-            else{
-            ctx.drawImage(allSuspects[i].unknownImage,x,y);
+            ctx.drawImage(selectButton,x,y);
+            ctx.drawImage(allSuspects[i].icon,x,y);
+            if(playerKnows.includes(allSuspects[i])){
+                ctx.drawImage(markers[1],x,y);
             }
         }
     }
@@ -383,201 +492,35 @@ function drawSelectWeaponButtons(){
     }
 }
 
-function drawNotebook(){
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownSuspectY1;
-
-    for (var i = 0; i < 3; i++){
-        if(playerKnows.includes(allSuspects[i])){
-            ctx.drawImage(allSuspects[i].knownImage,x,y);
-        }
-        else{
-            ctx.drawImage(allSuspects[i].unknownImage,x,y);
-        }
-        x = x+50;
-    }
-
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownSuspectY2;
-
-    for (var i = 3; i < 6; i++){
-        if(playerKnows.includes(allSuspects[i])){
-            ctx.drawImage(allSuspects[i].knownImage,x,y);
-        }
-        else{
-            ctx.drawImage(allSuspects[i].unknownImage,x,y);
-        }
-        x = x+50;
-    }
-
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownWeaponY1;
-
-    for (var i = 0; i < 3; i++){
-        if(playerKnows.includes(allWeapons[i])){
-            ctx.drawImage(allWeapons[i].knownImage,x,y);
-        }
-        else{
-            ctx.drawImage(allWeapons[i].unknownImage,x,y);
-        }
-        x = x+50;
-    }
-
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownWeaponY2;
-
-    for (var i = 3; i < 6; i++){
-        if(playerKnows.includes(allWeapons[i])){
-            ctx.drawImage(allWeapons[i].knownImage,x,y);
-        }
-        else{
-            ctx.drawImage(allWeapons[i].unknownImage,x,y);
-        }
-        x = x+50;
-    }
-
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownRoomY1;
-    for (var i = 0; i < 3; i++){
-
-        ctx.beginPath();
-        ctx.rect(x, y, 50, 50);
-
-        if(playerKnows.includes(allRooms[i])){
-            ctx.fillStyle = 'lightgrey';
-        }
-        else{
-            ctx.fillStyle = 'white';
-        }
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.textAlign="center";
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allRooms[i].name, x+25, y+25);
-
-        x = x+50;
-    }
-
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownRoomY2;
-    for (var i = 3; i < 6; i++){
-
-        ctx.beginPath();
-        ctx.rect(x, y, 50, 50);
-
-        if(playerKnows.includes(allRooms[i])){
-            ctx.fillStyle = 'lightgrey';
-        }
-        else{
-            ctx.fillStyle = 'white';
-        }
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.textAlign="center";
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allRooms[i].name, x+25, y+25);
-
-        x = x+50;
-    }
-
-    x = screenWidth+sidebarWidth/2-75;
-    y = knownRoomY3;
-    for (var i = 6; i < 9; i++){
-
-        ctx.beginPath();
-        ctx.rect(x, y, 50, 50);
-
-        if(playerKnows.includes(allRooms[i])){
-            ctx.fillStyle = 'lightgrey';
-        }
-        else{
-            ctx.fillStyle = 'white';
-        }
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.textAlign="center";
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allRooms[i].name, x+25, y+25);
-
-        x = x+50;
-    }
-}
-
-function drawWin(){
-    ctx.beginPath();
-    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
-    ctx.fillStyle = '#f1f1d4';
-    ctx.fill();
-
+function drawSelectRoomButtons(){
     x = selectX1;
-    y = selectSuspectY;
-
-    ctx.font = "32px Arial";
+    y = selectRoomY;
+    ctx.font = "18px Arial";
     ctx.fillStyle = 'black';
-    ctx.fillText("You solved the mystery! You win!", x,y-18);
-    
-    drawSolution(x,y);
-    
-}
+    ctx.fillText("Room:", x,y-18);
+    for (var i = 0; i < allRooms.length; i++){
+        if(selectedRoom == allRooms[i]){
+            ctx.drawImage(selectedButton, x, y);
+        }
+        else {
+            ctx.drawImage(selectButton, x, y);
+        }
 
-function drawLose(){
-    ctx.beginPath();
-    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
-    ctx.fillStyle = '#f1f1d4';
-    ctx.fill();
-
-    x = selectX1;
-    y = selectSuspectY;
-
-    ctx.font = "32px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText("You were wrong. You lose!", x,y);
-    
-    drawSolution(x,y);
-}
-
-
-function drawAiWin(ai){
-    ctx.beginPath();
-    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
-    ctx.fillStyle = '#f1f1d4';
-    ctx.fill();
-
-    x = selectX1;
-    y = selectSuspectY;
-
-    ctx.font = "32px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText(ai.character.name + "Wins!", x,y);
-    
-    drawSolution(x,y);
-}
-
-function drawSolution(x, y){
-    y += 100;
-    ctx.fillText("The solution was:", x,y);
-    y += 34;
-    x += 12;
-    ctx.font = "24px Arial";
-    ctx.fillText("Suspect: " + solutionSuspect.name, x,y);
-    y += 30;
-    ctx.fillText("Weapon: " + solutionWeapon.name, x,y);
-    y += 30;
-    ctx.fillText("Room: " + solutionRoom.name, x,y);
+        ctx.font = "9px Arial";
+        if(playerKnows.includes(allRooms[i])){
+            ctx.fillStyle = 'grey';
+        }
+        else{
+            ctx.fillStyle = 'black';
+        }
+        ctx.fillText(allRooms[i].name, x+4, y+25);
+        x += 60;
+    }
 }
 
 function drawMakeGuess(){
     //draw guess box background
-    ctx.beginPath();
-    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
-    ctx.fillStyle = '#f1f1d4';
-    ctx.fill();
+    ctx.drawImage(popup, 50, 50);
 
     //draw suspect boxes
     x = selectX1;
@@ -615,7 +558,7 @@ function drawMakeGuess(){
 
     //draw guess button
     x = selectX1;
-    y = guessY;
+    y = closePopupY;
     ctx.beginPath();
     ctx.rect(x, y, guessButtonWidth, selectButtonHeight);
     ctx.fillStyle = 'steelblue';
@@ -628,11 +571,8 @@ function drawMakeGuess(){
 
 function drawMakeAccusation(){
     //draw guess box background
-    ctx.beginPath();
-    ctx.rect(50, 50, HEIGHT-100, HEIGHT-260);
-    ctx.fillStyle = '#f1f1d4';
-    ctx.fill();
-
+    ctx.drawImage(popup, 50, 50);
+    
     //draw suspect boxes
     x = selectX1;
     y = selectSuspectY;
@@ -641,66 +581,59 @@ function drawMakeAccusation(){
     ctx.fillText("Suspect:", x,y-18);
     drawSelectSuspectButtons();
     drawSelectWeaponButtons();
-
-    //draw first row of room buttons
+    drawSelectRoomButtons();
+    
+    //draw Accuse button
     x = selectX1;
-    y = selectRoomY;
-    ctx.font = "18px Arial";
-    ctx.fillStyle = 'black';
-    ctx.fillText("Room:", x,y-18);
-    for (var i = 0; i < allRooms.length; i++){
-        if(selectedRoom == allRooms[i]){
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'gold';
-            ctx.fill();
-        }
-        else if(playerKnows.includes(allRooms[i])){
-
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'lightgrey';
-            ctx.fill();
-        }
-        else{
-            ctx.beginPath();
-            ctx.rect(x, y, 50, 50);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-        }
-
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allRooms[i].name, x+4, y+25);
-        x += 60;
-    }
-    //draw guess button
-    x = selectX1;
-    y = guessY;
-    ctx.beginPath();
-    ctx.rect(x, y, guessButtonWidth, selectButtonHeight);
-    ctx.fillStyle = 'red';
-    ctx.fill();
-
-    ctx.font = "12px Arial";
-    ctx.fillStyle = 'white';
-    ctx.fillText("Accuse!", x+8, y+25);
+    y = closePopupY;
+    ctx.drawImage(accuseButton, x, y);
     
-    
-    //draw guess button
-    x += guessButtonWidth + 10;
-    ctx.beginPath();
-    ctx.rect(x, y, guessButtonWidth, selectButtonHeight);
-    ctx.fillStyle = 'grey';
-    ctx.fill();
-
-    ctx.font = "12px Arial";
-    ctx.fillStyle = 'white';
-    ctx.fillText("Cancel", x+8, y+25);
-    
-    
+    //draw Cancel button
+    x += accuseButton.width + 10;
+    ctx.drawImage(cancelButton, x, y);
 }
 
+//End Game
+function drawSolution(x, y){
+    y += 100;
+    ctx.fillText("The solution was:", x,y);
+    y += 34;
+    x += 12;
+    ctx.font = "24px Arial";
+    ctx.fillText("Suspect: " + solutionSuspect.name, x,y);
+    y += 30;
+    ctx.fillText("Weapon: " + solutionWeapon.name, x,y);
+    y += 30;
+    ctx.fillText("Room: " + solutionRoom.name, x,y);
+}
+
+function drawEndGame(msg){
+    ctx.drawImage(popup, 50, 50);
+
+    x = selectX1;
+    y = selectSuspectY;
+
+    ctx.font = "32px Arial";
+    ctx.fillStyle = 'black';
+    ctx.fillText(msg, x, y);
+    
+    drawSolution(x,y);
+}
+
+function drawWin(){
+    drawEndGame("You solved the mystery! You win!");
+}
+
+function drawLose(){
+    drawEndGame("You were wrong. You lose!");
+}
+
+function drawAiWin(ai){
+    drawEndGame(ai.character.name + "Wins!");
+}
+
+
+//Helpers
 function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
     if (typeof stroke == 'undefined') {
         stroke = true;

@@ -6,18 +6,6 @@ var sidebarWidth = WIDTH-screenWidth;
 var mapRowLength = 27;
 var tileSize = 24;
 
-
-
-var knownSuspectY1 = 230;
-var knownSuspectY2 = knownSuspectY1+55;
-
-var knownWeaponY1 = knownSuspectY2+75;
-var knownWeaponY2 = knownWeaponY1+55;
-
-var knownRoomY1 = knownWeaponY2+75;
-var knownRoomY2 = knownRoomY1+55;
-var knownRoomY3 = knownRoomY2+55;
-
 var cardsY = screenHeight + 40;
 
 
@@ -42,9 +30,9 @@ cancelButton.src = "./images/CancelButton.png";
 
 // ----- SIDEBAR -----
 //Side bar button positions
-var rollButtonY = 24;
-var accuseButtonY = 150;
-var tabsY = 210;
+var rollButtonY = 16;
+var diePos = [WIDTH-sidebarWidth/2-25, rollButtonY+90];
+var accuseButtonY = 190;
 var accuseButtonWidth = 92;
 
 var rollButtonPos = [screenWidth + 16, rollButtonY];
@@ -56,8 +44,8 @@ var accuseButtonPos = [WIDTH - accuseButtonWidth - 16, accuseButtonY];
 var rollButton = new Image();
 var rollButtonInactive = new Image();
 var rollButtonHover = new Image();
-rollButton.src = "./images/RollButton.png";
-rollButtonInactive.src = "./images/RollButtonInactive.png";
+rollButton.src = "./images/rollbutton.png";
+rollButtonInactive.src = "./images/rollbuttoninactive.png";
 rollButtonHover.src = "./images/RollButtonHover.png";
 
 //Use Secret Passage
@@ -67,6 +55,22 @@ var stairsButtonHover = new Image();
 stairsButton.src = "./images/PassageButton.png";
 stairsButtonInactive.src = "./images/PassageButtonInactive.png";
 stairsButtonHover.src = "./images/PassageButtonHover.png";
+
+//Make Suggestion
+var stayButton = new Image();
+var stayButtonInactive = new Image();
+var stayButtonHover = new Image();
+stayButton.src = "./images/SuggestButton.png";
+stayButtonInactive.src = "./images/SuggestButtonInactive.png";
+stayButtonHover.src = "./images/SuggestButtonHover.png";
+
+//Make Accusation
+var accuseButton = new Image();
+var accuseButtonInactive = new Image();
+var accuseButtonHover = new Image();
+accuseButton.src = "./images/AccuseButton.png";
+accuseButtonInactive.src = "./images/AccuseButtonInactive.png";
+accuseButtonHover.src = "./images/AccuseButtonHover.png";
 
 //Die Results
 var die0 = new Image();
@@ -85,27 +89,48 @@ die5.src = "./images/DieFive.png";
 die6.src = "./images/DieSix.png";
 var dice = [die0, die1, die2, die3, die4, die5, die6];
 
-//Make Suggestion
-var stayButton = new Image();
-var stayButtonInactive = new Image();
-var stayButtonHover = new Image();
-stayButton.src = "./images/SuggestButton.png";
-stayButtonInactive.src = "./images/SuggestButtonInactive.png";
-stayButtonHover.src = "./images/SuggestButtonHover.png";
+//Navigation
+var upEnabled;
+var downEnabled;
+var leftEnabled;
+var rightEnabled;
 
-//Make Accusation
-var accuseButton = new Image();
-var accuseButtonInactive = new Image();
-var accuseButtonHover = new Image();
-accuseButton.src = "./images/AccuseButton.png";
-accuseButtonInactive.src = "./images/AccuseButtonInactive.png";
-accuseButtonHover.src = "./images/AccuseButtonHover.png";
+var moveUp = new Image();
+var moveDown = new Image();
+var moveLeft = new Image();
+var moveRight = new Image();
+var moveUpDisabled = new Image();
+var moveDownDisabled = new Image();
+var moveLeftDisabled = new Image();
+var moveRightDisabled = new Image();
+moveUp.src = "images/MoveUp.png";
+moveDown.src = "images/MoveDown.png";
+moveLeft.src = "images/MoveLeft.png";
+moveRight.src = "images/MoveRight.png";
+moveUpDisabled.src = "images/MoveUpDisabled.png";
+moveDownDisabled.src = "images/MoveDownDisabled.png";
+moveLeftDisabled.src = "images/MoveLeftDisabled.png";
+moveRightDisabled.src = "images/MoveRightDisabled.png";
+var navLength = 38;
+var navWidth = 28;
+var moveUpPos = [diePos[0]  + 10, diePos[1] - navLength - 8];
+var moveDownPos = [diePos[0] + 10, diePos[1] + 53];
+var moveLeftPos = [diePos[0] - navLength - 8, diePos[1] + 8];
+var moveRightPos = [diePos[0] + 58, diePos[1] + 8];
 
 
 // ----- Notebook -----
 var notebookButton = new Image();
 notebookButton.src = "./images/NotebookButton.png";
-
+var notebookButtonHand = new Image();
+notebookButtonHand.src = "./images/NotebookButtonHand.png";
+var notebookButtonDisproved = new Image();
+notebookButtonDisproved.src = "./images/NotebookButtonDisproved.png";
+var notebookMargin = 60;
+var notebookX = screenWidth+sidebarWidth/2-90;
+var notebookSuspectY = 255;
+var notebookWeaponY = notebookSuspectY+120;
+var notebookRoomY = notebookWeaponY+120;
 
 // ----- CARDS -----
 var cardBack = new Image();
@@ -135,7 +160,9 @@ function draw(){
     drawUserInterface();
     drawMap();
     drawProps();
-    drawPlayer();
+    drawCharacters();
+    drawMapLabels();
+    drawNavigation();
 
     if(turn == turnType.playerGuess){
         drawMakeGuess();
@@ -196,7 +223,6 @@ function drawMap(){
                drawTile(tileset, singleTileSpec[map[i][j]], j,i);
         }
     }
-    drawMapLabels();
 }
 
 function drawTile(sprite, singleTileSpec,x,y){
@@ -231,7 +257,7 @@ function drawMapLabels(){
     ctx.fill();
 }
 
-function drawPlayer(){
+function drawCharacters(){
     for (var i = 0; i < allSuspects.length; i++){
         drawTile(
             allSuspects[i].tokenImage,
@@ -244,36 +270,50 @@ function drawPlayer(){
 
 
 function drawDie(){
-    var diePos = [WIDTH-sidebarWidth/2-die0.width/2,  rollButtonY+64];
     ctx.drawImage(dice[dieResult], diePos[0], diePos[1]);
 }
 
-function drawEvents(){
-    y= knownSuspectY1;
-    x= screenWidth+10;
-        
-    for(var i = information.length-1; i > -1; i--){
-        ctx.beginPath();
-        ctx.textAlign="left";
-        ctx.font = "10px Arial";
-        
-        var firstWord = information[i].substr(0, information[i].indexOf(' '));;
-        if (firstWord == "You"){
-            ctx.fillStyle = "#f33";
-        }
-        else if (firstWord === peacock.name){
-            ctx.fillStyle = "#0af";
-        }
-        else if (firstWord === white.name){
-            ctx.fillStyle = "#fff";
-        }
-        else if (firstWord == "No"){
-            ctx.fillStyle = "#3f3";
-        }
-        
-        ctx.fillText(information[i], screenWidth+15, y+5);
-        ctx.fill();
-        y+=14;
+function checkNavigation(){
+    var playerMove = (turn == turnType.playerMove);
+    var inCorridor = (player.character.room == null);
+    var x = player.character.x;
+    var y = player.character.y;
+    
+    upEnabled = (playerMove && ((inCorridor && canWalkHere(x, y-1)) || player.character.room == dining || player.character.room == lounge || player.character.room == hall));
+    downEnabled = (playerMove &&  ((inCorridor && canWalkHere(x, y+1)) || player.character.room == ballroom || player.character.room == conservatory || player.character.room == billiards || player.character.room == library || player.character.room == study));
+    leftEnabled = (playerMove && ((inCorridor && canWalkHere(x-1, y)) || player.character.room == hall));
+    rightEnabled = (playerMove && ((inCorridor && canWalkHere(x+1, y)) || player.character.room == ballroom || player.character.room == kitchen));
+}
+
+function drawNavigation(){
+    checkNavigation();
+    
+    if (upEnabled){
+        ctx.drawImage(moveUp, moveUpPos[0], moveUpPos[1]);
+    }
+    else{
+        ctx.drawImage(moveUpDisabled, moveUpPos[0], moveUpPos[1]);  
+    }
+    
+    if (downEnabled){
+        ctx.drawImage(moveDown, moveDownPos[0], moveDownPos[1]);
+    }
+    else{
+        ctx.drawImage(moveDownDisabled, moveDownPos[0], moveDownPos[1]);
+    }
+    
+    if (leftEnabled){
+        ctx.drawImage(moveLeft, moveLeftPos[0], moveLeftPos[1]);
+    }
+    else{
+        ctx.drawImage(moveLeftDisabled, moveLeftPos[0], moveLeftPos[1]);
+    }
+    
+    if (rightEnabled){
+        ctx.drawImage(moveRight, moveRightPos[0], moveRightPos[1]);
+    }
+    else{
+        ctx.drawImage(moveRightDisabled, moveRightPos[0], moveRightPos[1]);
     }
 }
 
@@ -333,71 +373,69 @@ function drawMovementOptions(){
     }
 }
 
+function drawNotebookSection(x0, y0, arr){
+    x = x0;
+    y = y0;
+
+    for (var i = 0; i < arr.length; i++){
+        //drawbutton
+        /*if(playerHolds.includes(arr[i])){
+            ctx.drawImage(notebookButtonHand,x,y);
+        }
+        else*/ if (playerKnows.includes(arr[i])){
+            ctx.drawImage(notebookButtonDisproved,x,y);
+        }
+        else{
+            ctx.drawImage(notebookButton,x,y);
+        }
+        
+        //draw icon
+        if (arr[i].icon != null){
+            ctx.drawImage(arr[i].icon, x, y);
+        }
+        else{
+            ctx.font = "10px Arial";
+            ctx.fillStyle = 'black';
+            var lines = getLines(ctx, arr[i].name, 50)
+            for (var j = 0; j < lines.length; j++){
+                ctx.fillText(lines[j], x+6, y+25 + j*10);
+            }
+        }
+        
+        //draw marker        
+        if(arr[i].marker != null){
+            ctx.drawImage(markers[arr[i].marker],x,y);
+        }
+        if(hover == arr[i]){
+            if (arr[i].marker == 0){
+            ctx.drawImage(markerHoverBack,x,y);
+            }
+            else{
+                ctx.drawImage(markerHover,x,y);
+            }
+        }
+        
+        //iterate
+        if (i == 2 || i == 5){
+            x = x0;
+            y += notebookMargin;
+        }
+        else{
+            x+= notebookMargin;
+        }
+    }
+}
+
 function drawNotebook(){
+    x = notebookX;
+    y = notebookSuspectY;
+    drawNotebookSection(x, y, allSuspects);
     
-    x = screenWidth+sidebarWidth/2-90;
-    y = knownSuspectY1;
-
-    for (var i = 0; i < 6; i++){
-        ctx.drawImage(notebookButton,x,y);
-        ctx.drawImage(allSuspects[i].icon,x,y);
-        if(playerKnows.includes(allSuspects[i])){
-            ctx.drawImage(markers[1],x,y);
-        }
-        if (i == 2){
-            x = screenWidth+sidebarWidth/2-90;
-            y = knownSuspectY2;
-        }
-        else{
-            x+=60;
-        }
-    }
-
-    x = screenWidth+sidebarWidth/2-90;
-    y = knownWeaponY1;
-
-    for (var i = 0; i < 6; i++){
-        if(playerKnows.includes(allWeapons[i])){
-            ctx.drawImage(allWeapons[i].knownImage,x,y);
-            ctx.drawImage(markers[1],x,y);
-        }
-        else{
-            ctx.drawImage(allWeapons[i].unknownImage,x,y);
-        }
-        if (i == 2){
-            x = screenWidth+sidebarWidth/2-90;
-            y = knownWeaponY2;
-        }
-        else{
-            x+=60;
-        }
-    }
-
-    x = screenWidth+sidebarWidth/2-90;
-    y = knownRoomY1;
-    for (var i = 0; i < 9; i++){
-        ctx.drawImage(notebookButton,x,y);
-
-        ctx.beginPath();
-        ctx.textAlign="center";
-        ctx.font = "9px Arial";
-        ctx.fillStyle = 'black';
-        ctx.fillText(allRooms[i].name, x+25, y+25);
-        if(playerKnows.includes(allRooms[i])){
-            ctx.drawImage(markers[1],x,y);
-        }
-        if (i == 2){
-            x = screenWidth+sidebarWidth/2-90;
-            y = knownRoomY2;
-        }
-        else if (i == 5){
-            x = screenWidth+sidebarWidth/2-90;
-            y = knownRoomY3;
-        }
-        else{
-            x+=60;
-        }
-    }
+    y = notebookWeaponY;
+    drawNotebookSection(x, y, allWeapons);
+    
+    y = notebookRoomY;
+    drawNotebookSection(x, y, allRooms);
 }
 
 
@@ -426,15 +464,45 @@ function drawHand(){
     }
 }
 
+//return an array of text lines split according to width.
+function getLines(ctx, text, maxWidth) {
+    var words = text.split(" ");
+    var lines = [];
+    var currentLine = words[0];
+
+    for (var i = 1; i < words.length; i++) {
+        var word = words[i];
+        var width = ctx.measureText(currentLine + " " + word).width;
+        if (width < maxWidth) {
+            currentLine += " " + word;
+        } else {
+            lines.push(currentLine);
+            currentLine = word;
+        }
+    }
+    lines.push(currentLine);
+    return lines;
+}
+
 function drawGuess(){
+    //draw background
     ctx.drawImage(popup, 50, 50);
     
+    x = 80;
+    y = 80;
     ctx.font = "18px Arial";
     ctx.fillStyle = 'black';
-    ctx.fillText(suggestion, 80, 80);
-    ctx.fillText(resolution, 80, 160);
-    ctx.drawImage(shownCard, 80, 240);
+    var lines = getLines(ctx, suggestion, popup.width-2*x);
+    for (var i = 0; i < lines.length; i++){
+        ctx.fillText(lines[i], x, y);
+        y+=20;
+    }
     
+    //draw resolution of guess
+    ctx.fillText(resolution, x, 160);
+    ctx.drawImage(shownCard, (screenWidth - shownCard.width)/2, 240);
+    
+    //draw continue button;
     x = selectX1;
     y = closePopupY;
     ctx.drawImage(continueButton, x, y);
@@ -446,21 +514,21 @@ function drawSelectSuspectButtons(){
         x = selectX1 + i*selectButtonWidthAndMargin;
         y = selectSuspectY;
 
-        //If Selected
+        //Draw Button background
         if(selectedSuspect == allSuspects[i]){
             ctx.drawImage(selectedButton,x,y);
-            ctx.drawImage(allSuspects[i].icon,x,y);
-            if(playerKnows.includes(allSuspects[i])){
-                ctx.drawImage(markers[1],x,y);
-            }
         }
-        //If not selected
+        
         else{
             ctx.drawImage(selectButton,x,y);
-            ctx.drawImage(allSuspects[i].icon,x,y);
-            if(playerKnows.includes(allSuspects[i])){
-                ctx.drawImage(markers[1],x,y);
-            }
+        }
+        
+        //Draw icon
+        ctx.drawImage(allSuspects[i].icon,x,y);
+        
+        //Draw marker
+        if(allSuspects[i].marker != null){
+            ctx.drawImage(markers[allSuspects[i].marker],x,y);
         }
     }
 }
@@ -472,22 +540,20 @@ function drawSelectWeaponButtons(){
         x = selectX1 + i*selectButtonWidthAndMargin;
         y = selectWeaponY;
 
-        if(playerKnows.includes(allWeapons[i])){
-            if(selectedWeapon == allWeapons[i]){
-                ctx.drawImage(allWeapons[i].knownSelectedImage,x,y);
-            }
-            else{
-            ctx.drawImage(allWeapons[i].knownImage,x,y);
-            }
+        //Draw Button background
+        if(selectedWeapon == allWeapons[i]){
+            ctx.drawImage(selectedButton,x,y);
         }
         else{
-
-            if(selectedWeapon == allWeapons[i]){
-                ctx.drawImage(allWeapons[i].unknownSelectedImage,x,y);
-            }
-            else{
-            ctx.drawImage(allWeapons[i].unknownImage,x,y);
-            }
+            ctx.drawImage(selectButton,x,y);
+        }
+        
+        //Draw icon
+        ctx.drawImage(allWeapons[i].icon,x,y);
+        
+        //Draw marker
+        if(allWeapons[i].marker != null){
+            ctx.drawImage(markers[allWeapons[i].marker],x,y);
         }
     }
 }

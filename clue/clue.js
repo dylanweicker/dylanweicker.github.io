@@ -62,17 +62,6 @@ function checkPos(mouseEvent){
     mouseY = mouseEvent.pageY - this.offsetTop;
     hover = null;
 
-    if(mouseY > tabsY && mouseY < tabsY + notebookButton.height){
-            if(mouseX > notebookTabX && mouseX < notebookTabX + notebookButton.width)
-            {
-                hover = buttons.notebookButton;
-            }
-            else if(mouseX > eventsTabX && mouseX < eventsTabX + eventsButton.width)
-            {
-                hover = buttons.eventsButton;
-            }
-    }
-
     if(turn == turnType.playerSelectMovementType){
         if(mouseY > rollButtonPos[1] && mouseY < rollButtonPos[1] + rollButton.height){
                 if(mouseX > rollButtonPos[0] && mouseX < rollButtonPos[0] + rollButton.width)
@@ -103,7 +92,11 @@ function checkPos(mouseEvent){
                     hover = buttons.accuseButton;
                 }
         }
-    }
+    }    
+    
+    notebookHover(mouseX, mouseY, allSuspects, notebookSuspectY);
+    notebookHover(mouseX, mouseY, allWeapons, notebookWeaponY);
+    notebookHover(mouseX, mouseY, allRooms, notebookRoomY);
 
     if (hover != null){
         document.body.style.cursor = "pointer";
@@ -112,6 +105,26 @@ function checkPos(mouseEvent){
         document.body.style.cursor = "auto";
     }
 }
+
+
+function notebookHover(mouseX, mouseY, arr, y0){
+    var row = 0;
+    var col = 0;
+    
+    for (var i = 0; i < arr.length; i++){
+        if (mouseY > y0 + (col)*notebookMargin && mouseY < y0 + (1+col)*notebookMargin){
+            if (mouseX > notebookX + (row)*notebookMargin && mouseX < notebookX + (1+row)*notebookMargin){
+                hover = arr[i]
+            }
+        }
+        row++;
+        if (row > 2){
+            row = 0;
+            col++;
+        }
+    }
+}
+
 
 function checkClick(mouseEvent){
     mouseX = mouseEvent.pageX - this.offsetLeft;
@@ -150,6 +163,36 @@ function checkClick(mouseEvent){
                 {
                     turn = turnType.playerAccuse;
                 }
+        }
+    }
+    
+    //Move
+    if(upEnabled){
+        if (mouseY > moveUpPos[1] && mouseY < moveUpPos[1] + navLength){
+            if (mouseX > moveUpPos[0] && mouseY < moveUpPos[0] + navWidth){
+                goUp();
+            }
+        }
+    }
+    if(downEnabled){
+        if (mouseY > moveDownPos[1] && mouseY < moveDownPos[1] + navLength){
+            if (mouseX > moveDownPos[0] && mouseY < moveDownPos[0] + navWidth){
+                goDown();
+            }
+        }
+    }
+    if(leftEnabled){
+        if (mouseY > moveLeftPos[1] && mouseY < moveLeftPos[1] + navWidth){
+            if (mouseX > moveLeftPos[0] && mouseY < moveLeftPos[0] + navLength){
+                goLeft();
+            }
+        }
+    }
+    if(rightEnabled){
+        if (mouseY > moveRightPos[1] && mouseY < moveRightPos[1] + navWidth){
+            if (mouseX > moveRightPos[0] && mouseY < moveRightPos[0] + navLength){
+                goRight();
+            }
         }
     }
 
@@ -234,6 +277,36 @@ function checkClick(mouseEvent){
             }
         }
     }
+    
+    //Notebook
+    notebookClick(mouseX, mouseY, allSuspects, notebookSuspectY);
+    notebookClick(mouseX, mouseY, allWeapons, notebookWeaponY);
+    notebookClick(mouseX, mouseY, allRooms, notebookRoomY);
+    
+}
+
+function notebookClick(mouseX, mouseY, arr, y0){
+    var row = 0;
+    var col = 0;
+    
+    for (var i = 0; i < arr.length; i++){
+        if (mouseY > y0 + (col)*notebookMargin && mouseY < y0 + (1+col)*notebookMargin){
+            if (mouseX > notebookX + (row)*notebookMargin && mouseX < notebookX + (1+row)*notebookMargin){
+                if (arr[i].marker < markers.length - 2){
+                arr[i].marker++;
+                }
+                else{
+                    arr[i].marker = 0;
+                }
+            }
+        }
+        row++;
+        if (row > 2){
+            row = 0;
+            col++;
+        }
+    }
+    
 }
 
 function playerUsePortal(){
@@ -280,85 +353,108 @@ function leaveRoom(x,y){
     dieResult--;
 }
 
+function goRight(){
+    if(player.character.room == null){
+        if (map[player.character.y][player.character.x+1] < 4  && dieResult > 0){
+        player.character.x++;
+        dieResult--;
+        checkPosition();
+        }
+    }
+    else if(player.character.room == ballroom){
+        leaveRoom(10,10);
+    }
+    else if(player.character.room == kitchen){
+        leaveRoom(8,17);
+    }
+    checkDoneMovement();
+}
+
+function goLeft(){
+    if(player.character.room == null){
+        if (map[player.character.y][player.character.x-1] < 4 && dieResult > 0){
+            player.character.x--;
+            dieResult--;
+            checkPosition();
+        }
+    }
+    else if(player.character.room == hall){
+        leaveRoom(18,10);
+    }
+    checkDoneMovement();
+}
+
+function goUp(){
+    if(player.character.room == null){
+        if (map[player.character.y-1][player.character.x] < 4  && dieResult > 0){
+            player.character.y--;
+            dieResult--;
+            checkPosition();
+        }
+    }
+    else if(player.character.room == hall){
+        leaveRoom(21,5);
+    }
+    else if(player.character.room == lounge){
+        leaveRoom(19,14);
+    }
+    else if(player.character.room == dining){
+        leaveRoom(13,13);
+    }
+    checkDoneMovement();
+}
+
+function goDown(){
+    if(player.character.room == null){
+        if (map[player.character.y+1][player.character.x] < 4 && dieResult > 0 ){
+        player.character.y++;
+        dieResult--;
+        checkPosition();
+        }
+    }
+    else if(player.character.room == conservatory ||
+        player.character.room == billiards ||
+        player.character.room == library ||
+        player.character.room == study
+    ){
+        leaveRoom(player.character.room.exit[0].x,player.character.room.exit[0].y);
+    }
+    else if(player.character.room == ballroom){
+        leaveRoom(player.character.room.exit[1].x,player.character.room.exit[1].y);
+    }
+    checkDoneMovement();
+}
+
+function checkDoneMovement(){
+    if (dieResult < 1 && turn == turnType.playerMove && player.character.room == null){
+        turn = turnType.oneMove;
+        setTimeout(function(){aiOneMove()}, 1000);
+    }
+}
+
 function checkKey(keyEvent){
     key = keyEvent.keyCode;
     if(turn == turnType.playerMove){
         switch(key){
             case 65:
             case 37: //left
-                if(player.character.room == null){
-                    if (map[player.character.y][player.character.x-1] < 4 && dieResult > 0){
-                        player.character.x--;
-                        dieResult--;
-                        checkPosition();
-                    }
-                }
-                else if(player.character.room == hall){
-                    leaveRoom(18,10);
-                }
+                goLeft();
                 break;
             case 68:
             case 39: //right
-                if(player.character.room == null){
-                    if (map[player.character.y][player.character.x+1] < 4  && dieResult > 0){
-                    player.character.x++;
-                    dieResult--;
-                    checkPosition();
-                    }
-                }
-                else if(player.character.room == ballroom){
-                    leaveRoom(10,10);
-                }
-                else if(player.character.room == kitchen){
-                    leaveRoom(8,17);
-                }
+                goRight();
                 break;
             case 87:
             case 38: //up
-                if(player.character.room == null){
-                    if (map[player.character.y-1][player.character.x] < 4  && dieResult > 0){
-                        player.character.y--;
-                        dieResult--;
-                        checkPosition();
-                    }
-                }
-                else if(player.character.room == hall){
-                    leaveRoom(21,5);
-                }
-                else if(player.character.room == lounge){
-                    leaveRoom(19,14);
-                }
-                else if(player.character.room == dining){
-                    leaveRoom(13,13);
-                }
+                goUp();
                 break;
             case 83:
             case 40: //down
-                if(player.character.room == null){
-                    if (map[player.character.y+1][player.character.x] < 4 && dieResult > 0 ){
-                    player.character.y++;
-                    dieResult--;
-                    checkPosition();
-                    }
-                }
-                else if(player.character.room == conservatory ||
-                    player.character.room == billiards ||
-                    player.character.room == library ||
-                    player.character.room == study
-                ){
-                    leaveRoom(player.character.room.exit[0].x,player.character.room.exit[0].y);
-                }
-                else if(player.character.room == ballroom){
-                    leaveRoom(player.character.room.exit[1].x,player.character.room.exit[1].y);
-                }
+                goDown();
                 break;
             default:
                 break;
         }
-    }
-    if (dieResult < 1 && turn == turnType.playerMove && player.character.room == null){
-        turn = turnType.oneMove;
-        setTimeout(function(){aiOneMove()}, 1000);
     }
 }
 
@@ -366,6 +462,7 @@ function checkPosition(){
     if (map[player.character.y][player.character.x] == 3){
         dieResult = 0;
         enterRoom(player.character);
+        turn = turnType.none;
         setTimeout( function(){
             turn = turnType.playerGuess;
         }, 400);
@@ -472,27 +569,6 @@ function includes(k) {
   return false;
 }
 
-
-//return an array of text lines split according to width.
-function getLines(ctx, text, maxWidth) {
-    var words = text.split(" ");
-    var lines = [];
-    var currentLine = words[0];
-
-    for (var i = 1; i < words.length; i++) {
-        var word = words[i];
-        var width = ctx.measureText(currentLine + " " + word).width;
-        if (width < maxWidth) {
-            currentLine += " " + word;
-        } else {
-            lines.push(currentLine);
-            currentLine = word;
-        }
-    }
-    lines.push(currentLine);
-    return lines;
-}
-
 var dieResult = 0;
 
 function rollDie(){
@@ -520,11 +596,6 @@ function writeGuess(guesser){
         }
     
         var text = guesserName + " guessed " + selectedSuspect.name + " killed the king with the " + selectedWeapon.name + " in the " + selectedRoom.name + ".";
-        var lines = getLines(ctx, text, WIDTH-screenWidth-15);
-        lines.push("");
-        lines.reverse();
-        information = information.concat(lines);
-        purgeOldEvents();
 }
 
 function purgeOldEvents(){
@@ -814,7 +885,7 @@ function makeGuess(){
     }
     
     turn = turnType.none;
-    setTimeout(function(){turn = turnType.playerDisplayGuess;}, 1000);
+    setTimeout(function(){turn = turnType.playerDisplayGuess;}, 500);
 }
 
 function aiSelectMovementType(character, knowledge){

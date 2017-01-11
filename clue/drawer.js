@@ -3,8 +3,6 @@ var WIDTH = 900;
 var screenHeight = 480;
 var screenWidth = 648;
 var sidebarWidth = WIDTH-screenWidth;
-var mapRowLength = 27;
-var tileSize = 24;
 
 var cardsY = screenHeight + 40;
 
@@ -46,7 +44,7 @@ var rollButtonInactive = new Image();
 var rollButtonHover = new Image();
 rollButton.src = "./images/rollbutton.png";
 rollButtonInactive.src = "./images/rollbuttoninactive.png";
-rollButtonHover.src = "./images/RollButtonHover.png";
+rollButtonHover.src = "./images/rollbuttonHover.png";
 
 //Use Secret Passage
 var stairsButton = new Image();
@@ -236,25 +234,16 @@ function drawTile(sprite, singleTileSpec,x,y){
 function drawMapLabels(){
     ctx.textAlign="left";
     ctx.font = "12px Arial";
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = "#111144";
     ctx.fillText(allRooms[0].name, 32,72);
-    ctx.fill();
     ctx.fillText(allRooms[1].name, 192,72);
-    ctx.fill();
     ctx.fillText(allRooms[2].name, 540,72);
-    ctx.fill();
-    ctx.fillText(allRooms[3].name, 120,258);
-    ctx.fill();
+    ctx.fillText(allRooms[3].name, 120,236);
     ctx.fillText(allRooms[4].name, 364,72);
-    ctx.fill();
     ctx.fillText(allRooms[5].name, 500,258);
-    ctx.fill();
     ctx.fillText(allRooms[6].name, 72,438);
-    ctx.fill();
     ctx.fillText(allRooms[7].name, 300,438);
-    ctx.fill();
     ctx.fillText(allRooms[8].name, 500,438);
-    ctx.fill();
 }
 
 function drawCharacters(){
@@ -440,14 +429,14 @@ function drawNotebook(){
 
 
 function drawHand(){
-    var x = 0;
+    var x = 16;
     for (var i = 0; i < playerHolds.length; i++){
-        if (playerHolds[i].cardType == cardType.suspect){
-            ctx.drawImage(playerHolds[i].card, x+6, cardsY);
+        if (playerHolds[i].cardType == cardType.suspect || playerHolds[i].cardType == cardType.weapon || playerHolds[i] == ballroom || playerHolds[i] == library){
+            ctx.drawImage(playerHolds[i].card, x, cardsY);
         }
         else{
             ctx.beginPath();
-            roundRect(ctx, x+6, cardsY, 94, 140);
+            roundRect(ctx, x, cardsY, 94, 128);
             //ctx.rect(x+10, 330, 85, 140);
             ctx.fillStyle = 'white';
             ctx.fill();
@@ -457,10 +446,10 @@ function drawHand(){
             ctx.textAlign="center";
             ctx.font = "12px Arial";
             ctx.fillStyle = 'black';
-            ctx.fillText(playerHolds[i].name, x+50,HEIGHT-40);
+            ctx.fillText(playerHolds[i].name, x+50, cardsY+102);
             ctx.fill();
         }
-        x+=108;
+        x+=104;
     }
 }
 

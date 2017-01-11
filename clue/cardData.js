@@ -187,6 +187,7 @@ dagger.unknownImage.src = "images/daggerbutton_unknown.png";
 dagger.knownSelectedImage.src = "images/daggerbutton_knownselected.png";
 dagger.unknownSelectedImage.src = "images/daggerbutton_unknownselected.png";
 dagger.icon.src = "images/DaggerIcon.png";
+dagger.card.src = "images/DaggerCard.png";
 var pipe = {
     "name": "Sword",
     "cardType": cardType.weapon,
@@ -203,6 +204,7 @@ pipe.unknownImage.src = "images/swordbutton_unknown.png";
 pipe.knownSelectedImage.src = "images/swordbutton_knownselected.png";
 pipe.unknownSelectedImage.src = "images/swordbutton_unknownselected.png";
 pipe.icon.src = "images/SwordIcon.png";
+pipe.card.src = "images/SwordCard.png";
 
 var revolver = {
     "name": "Poison",
@@ -220,6 +222,7 @@ revolver.unknownImage.src = "images/poisonbutton_unknown.png";
 revolver.knownSelectedImage.src = "images/poisonbutton_knownselected.png";
 revolver.unknownSelectedImage.src = "images/poisonbutton_unknownselected.png";
 revolver.icon.src = "images/PoisonIcon.png";
+revolver.card.src = "images/PoisonCard.png";
 var candlestick = {
     "name": "Staff",
     "cardType": cardType.weapon,
@@ -236,6 +239,7 @@ candlestick.unknownImage.src = "images/staffbutton_unknown.png";
 candlestick.knownSelectedImage.src = "images/staffbutton_knownselected.png";
 candlestick.unknownSelectedImage.src = "images/staffbutton_unknownselected.png";
 candlestick.icon.src = "images/StaffIcon.png";
+candlestick.card.src = "images/StaffCard.png";
 var wrench = {
     "name": "Axe",
     "cardType": cardType.weapon,
@@ -252,6 +256,7 @@ wrench.unknownImage.src = "images/axebutton_unknown.png";
 wrench.knownSelectedImage.src = "images/axebutton_knownselected.png";
 wrench.unknownSelectedImage.src = "images/axebutton_unknownselected.png";
 wrench.icon.src = "images/AxeIcon.png";
+wrench.card.src = "images/AxeCard.png";
 var rope = {
     "name": "Flail",
     "cardType": cardType.weapon,
@@ -268,10 +273,11 @@ rope.unknownImage.src = "images/flailbutton_unknown.png";
 rope.knownSelectedImage.src = "images/flailbutton_knownselected.png";
 rope.unknownSelectedImage.src = "images/flailbutton_unknownselected.png";
 rope.icon.src = "images/FlailIcon.png";
+rope.card.src = "images/FlailCard.png";
 
 //rooms
 var conservatory = {
-    "name": "Conservatory",
+    "name": "Treasury",
     "cardType": cardType.room,
     door: [{"x": 4 , "y": 5}],
     exit: [{"x": 4 , "y": 6}],
@@ -280,7 +286,7 @@ var conservatory = {
     "marker" : 0,
 };
 var billiards = {
-    "name": "Billiards room",
+    "name": "Dungeon",
     "cardType": cardType.room,
     door: [{"x": 10, "y": 5}],
     exit: [{"x": 10 , "y": 6}],
@@ -298,14 +304,19 @@ var study = {
     "marker" : 0,
 };
 var ballroom = {
-    "name": "Ballroom",
+    "name": "Throne Room",
     "cardType": cardType.room,
     door: [{"x": 9, "y": 10}, {"x": 6, "y": 13}],
     exit: [{"x": 10 , "y": 10}, {"x": 6, "y": 14}],
     pos: [{"x": 4 , "y": 9},{"x": 6 , "y": 9},{"x": 3 , "y": 11},{"x": 7 , "y": 9},{"x": 2 , "y": 10},{"x": 5, "y": 11}],
     "card": new Image(),
     "marker" : 0,
+    prop: new Image(),
+    propPos: {x: 1, y: 10}
 };
+ballroom.prop.src = "./images/ThroneRoomProp.png";
+ballroom.card.src = "./images/ThroneRoomCard.png";
+
 var library = {
     "name": "Library",
     "cardType": cardType.room,
@@ -321,7 +332,7 @@ library.prop.src = "./images/LibraryProp.png";
 library.card.src = "./images/LibraryCard.png";
 
 var hall = {
-    "name": "Hall",
+    "name": "Gardens",
     "cardType": cardType.room,
     door: [{"x": 21, "y": 7}, {"x": 19, "y": 10}],
     exit: [{"x": 21 , "y": 6}, {"x":18 , "y": 10}],
@@ -348,7 +359,7 @@ var dining = {
     "marker" : 0,
 };
 var lounge = {
-    "name": "Lounge",
+    "name": "Bedroom",
     "cardType": cardType.room,
     door: [{"x": 19, "y": 15}],
     exit: [{"x": 19 , "y": 14}],

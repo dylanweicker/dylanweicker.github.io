@@ -1,13 +1,3 @@
-If turn == select
-	Activate Remain if in room. && make it black
-	Activate Portal if in corner room. && make it black
-	
-Add Accuse button
-
-Add tab for Information on historical game events vs Known information
-
-Print the information that you have learned.
-
 Done:
 	After an event, flip to the event page.
 	Each player must stand in a seperate spot in the room.
@@ -19,21 +9,23 @@ Done:
 	Display the correct answer on the win and lose pages
 	Allow AI to make accusation
 	AI needs to guess the correct solution if no one can disprove them.
-	
-Defect:
-	Ai's are struggling to leave rooms. (fixed)
-	AI one does noenter room on landing on door. (fixed)
-	decrease x of dining room spots by one
-	
-Todo: 
 	Use new UI
 	Allow mouse movement
-	Allow use to click to put markers on their notebook
+	Allow Marking:
+		When you hover over your notebook; display the hover image
+		When you click on your notebook; incrememnt the marker of the card
+		Display the marker of the card on the notebook and the guess page
+		Change the outline of the notebook icons based on if the card has been shown or is in hand
 	display events as pop ups that need confirmation to continue
+	
+	
+Todo: 
+	add coloured backgrounds behind notebook to distinguish sections.
+	new, brighter coloured map tiles
 	allow user to select what card to show, if multiple exist.
-	
-	
-Todo:
+	Markers appear on rooms in suggest/accused
+	suggest/accuse selection buttons can be hovered over
+	navigation buttons can be hovered over
 	Decorate rooms
 	Rename rooms
 	Add cards for rooms and weapons
@@ -41,11 +33,13 @@ Todo:
 	Allow player to select which card to show
 	Use mousebuttons to move
 	allow movement selection with keyboard
+	Display weapons on map in room they were most recently guessed in
 
 	
-Allow Marking:
-	When you hover over your notebook; display the hover image
-	When you click on your notebook; incrememnt the marker of the card
-	Display the marker of the card on the notebook and the guess page
 	
-	Change the outline of the notebook icons based on if the card has been shown or is in hand
+	
+Defect:
+	Ai's are struggling to leave rooms. (fixed)
+	AI one does noenter room on landing on door. (fixed)
+	decrease x of dining room spots by one (fixed)
+	

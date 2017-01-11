@@ -284,7 +284,10 @@ var conservatory = {
     pos: [{"x": 2 , "y": 3},{"x": 1 , "y": 3},{"x": 3 , "y": 3},{"x": 1 , "y": 2},{"x": 2 , "y": 2},{"x": 3, "y": 2}],
     "card": new Image(),
     "marker" : 0,
+    prop: new Image(),
+    propPos: {x: 1, y: 1}
 };
+conservatory.prop.src = "images/TreasuryProp.png";
 var billiards = {
     "name": "Dungeon",
     "cardType": cardType.room,

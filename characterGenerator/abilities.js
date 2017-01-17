@@ -1,95 +1,106 @@
 //--- Steps Section ------
 var step = 0;
+var substep = 0;
+var steps = ['step-one', 'step-two', 'step-three', 'step-four', 'step-five', 'step-six'];
+var steppers = ["stepper-one", "stepper-two", "stepper-three", "stepper-four", "stepper-five", "stepper-six"];
+var substeps = [['abilities-page-one', 'abilities-page-two', 'abilities-page-three', 'abilities-page-four'], ['race-page-one', 'race-page-two']];
 
 function hideAllSteps(){
-	document.getElementById('step-one').style.display = 'none';
-	document.getElementById('step-two').style.display = 'none';
-	document.getElementById('step-four').style.display = 'none';
-	document.getElementById('step-five').style.display = 'none';
-	document.getElementById('step-six').style.display = 'none';
+    for (var i = 0; i < steps.length; i++){
+	   document.getElementById(steps[i]).style.display = 'none';
+    }
+}
+
+function hideAllSubsteps(){
+    for (var i = 0; i < substeps[step].length; i ++){
+	   document.getElementById(substeps[step][i]).style.display = 'none';
+    }
+}
+
+function displaySubstep(s, ss){
+    step = s;
+    substep = ss;
+    var id = substeps[s][ss];
+    hideAllSubsteps();
+	document.getElementById(id).style.display = 'block';
+    scroll(0,120);
 }
 
 function showCurrentStep(){
-	switch (step) {
-		case 0:
-            document.getElementById('previous').classList.add('disabled');
-			document.getElementById('step-one').style.display = "block";
-			document.getElementById('stepper-one').classList.add('active-step');
-			document.getElementById('stepper-two').classList.add('inactive');
-			document.getElementById('stepper-two').classList.remove('active-step');
-			break;
+    //update stepper
+    for (var i  = 0; i < steppers.length; i++){
+        if (i < step){
+            document.getElementById(steppers[i]).classList.add('completed-step'); 
+			document.getElementById(steppers[i]).classList.remove('active-step');
+			document.getElementById(steppers[i]).classList.remove('inactive');
+        }
+        if (i == step){
+            document.getElementById(steppers[i]).classList.add('active-step'); 
+			document.getElementById(steppers[i]).classList.remove('inactive');
+			document.getElementById(steppers[i]).classList.remove('completed-step');
+        }
+        if (i > step){
+            document.getElementById(steppers[i]).classList.add('inactive'); 
+			document.getElementById(steppers[i]).classList.remove('active-step');
+			document.getElementById(steppers[i]).classList.remove('completed-step');
+        }
+    }
+    //flip to current step
+    hideAllSteps();
+    document.getElementById(steps[step]).style.display = "block";
+    
+    //flip to current substep
+    displaySubstep(step, substep);
+}
+
+function showCurrentSubstep(){
+	switch (substep) {
 		case 1:
-            document.getElementById('previous').classList.remove('disabled');
-			document.getElementById('step-two').style.display = "block";
-			document.getElementById('race-selection').style.display = "block";
-			document.getElementById('class-selection').style.display = "none";
-			document.getElementById('race-content').style.display = "block";
-			document.getElementById('class-content').style.display = "none";
-			document.getElementById('stepper-one').classList.remove('active-step');
-			document.getElementById('stepper-one').classList.add('completed-step');
-			document.getElementById('stepper-two').classList.remove('inactive');
-			document.getElementById('stepper-two').classList.add('active-step');
-			document.getElementById('stepper-three').classList.add('inactive');
-			document.getElementById('stepper-three').classList.remove('active-step');
-			break;
-		case 2:
-			document.getElementById('race-selection').style.display = "none";
-			document.getElementById('class-selection').style.display = "block";
-			document.getElementById('race-content').style.display = "none";
-			document.getElementById('class-content').style.display = "block";
-			document.getElementById('step-two').style.display = "block";
-			document.getElementById('stepper-two').classList.remove('active-step');
-			document.getElementById('stepper-two').classList.add('completed-step');
-			document.getElementById('stepper-three').classList.remove('inactive');
-			document.getElementById('stepper-three').classList.add('active-step');
-			document.getElementById('stepper-four').classList.add('inactive');
-			document.getElementById('stepper-four').classList.remove('active-step');
-			break;
-		case 3:
-			document.getElementById('step-four').style.display = "block";
-			document.getElementById('stepper-three').classList.remove('active-step');
-			document.getElementById('stepper-three').classList.add('completed-step');
-			document.getElementById('stepper-four').classList.remove('inactive');
-			document.getElementById('stepper-four').classList.add('active-step');
-			document.getElementById('stepper-five').classList.add('inactive');
-			document.getElementById('stepper-five').classList.remove('active-step');
-			break;
-		case 4:
-			document.getElementById('step-five').style.display = "block";
-			document.getElementById('stepper-four').classList.remove('active-step');
-			document.getElementById('stepper-four').classList.add('completed-step');
-			document.getElementById('stepper-five').classList.remove('inactive');
-			document.getElementById('stepper-five').classList.add('active-step');
-			document.getElementById('stepper-six').classList.add('inactive');
-			document.getElementById('stepper-six').classList.remove('active-step');
-			break;
-		case 5:
-			document.getElementById('step-six').style.display = "block";
-			document.getElementById('stepper-five').classList.remove('active-step');
-			document.getElementById('stepper-five').classList.add('completed-step');
-			document.getElementById('stepper-six').classList.remove('inactive');
-			document.getElementById('stepper-six').classList.add('active-step');
-			break;
+			document.getElementById('abilities-page-one').style.display = "block";
+			document.getElementById('abilities-page-two').style.display = "none";
+            break;
+        case 2:
+			document.getElementById('abilities-page-one').style.display = "none";
+			document.getElementById('abilities-page-two').style.display = "block";
+			document.getElementById('abilities-page-three').style.display = "none";
+            break;
+        case 3:
+			document.getElementById('abilities-page-two').style.display = "none";
+			document.getElementById('abilities-page-three').style.display = "block";
 	}
 }
 
 function next() {
-    if (step == 0 && currCost > maxCost){
-        return;
+    ///if substep is final substep in step
+    if (substep == substeps[step].length-1){
+        if (step == 0 && currCost > maxCost){
+            return;
+        }
+        //increment the step and reset the substep
+        step++;
+        substep = 0;
+        hideAllSteps();
+        showCurrentStep();
+        scroll(0,120);
     }
-	step++;
-	hideAllSteps();
-    showCurrentStep();
-    scroll(0,0);
+    else {
+        substep++;
+    }
+    displaySubstep(step, substep);
  }
 
 function previous() {
-    if (step > 0){
-	step--;
-	hideAllSteps();
-    showCurrentStep();
-    scroll(0,0);
+    
+    if (substep == 1){
+        if (step > 0){
+        step--;
+        hideAllSteps();
+        showCurrentStep();
+        scroll(0,0);
+        }
     }
+    else substep--;
+    showCurrentSubstep();
 }
 
 //--- Abilities Section --------
@@ -146,7 +157,9 @@ function  setMaxCost(cost, button){
 
 function setupAbilities() {
 	hideAllSteps();
+    hideAllSubsteps();
 	document.getElementById('step-one').style.display = "block";
+	document.getElementById('abilities-page-one').style.display = "block";
     displayStrInfo();
     setMaxCost(15, 'standard-fantasy');
 }
@@ -396,15 +409,15 @@ function updatePointsSpent(){
     currCost = costMap[str] + costMap[dex] + costMap[con] + costMap[iq] + costMap[wis] + costMap[cha];
 	if (currCost < maxCost){
 	    document.getElementById("total-cost").style.color = "inherit";
-		document.getElementById('continue').classList.remove('disabled');
+		document.getElementById('finish-step-one').classList.remove('disabled');
 	}
     else if (currCost > maxCost){
 	    document.getElementById("total-cost").style.color = "red";
-		document.getElementById('continue').classList.add('disabled');
+		document.getElementById('finish-step-one').classList.add('disabled');
 
 	}
     else{
-	    document.getElementById("total-cost").style.color = "green";	document.getElementById('continue').classList.remove('disabled');
+	    document.getElementById("total-cost").style.color = "green";	document.getElementById('finish-step-one').classList.remove('disabled');
 	}
 	document.getElementById("total-cost").innerHTML = currCost;
 	document.getElementById("max-cost").innerHTML = maxCost;
@@ -412,11 +425,19 @@ function updatePointsSpent(){
 
 //--- Races Section --------
 var myRace;
-
+/*
 var dwarfDescription = "Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins. More than any other race, dwarves have acquired a reputation as dour and humorless artisans of the earth. It could be said that their history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.";
 var elfDescription = "The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, though with key differences. While fey are truly linked to the flora and fauna of their homes, existing as the nearly immortal voices and guardians of the wilderness, elves are instead mortals who are in tune with the natural world around them. Elves seek to live in balance with the wild and understand it better than most other mortals. Some of this understanding is mystical, but an equal part comes from the elves' long lifespans, which in turn gives them long-ranging outlooks. Elves can expect to remain active in the same locale for centuries. By necessity, they must learn to maintain sustainable lifestyles, and this is most easily done when they work with nature, rather than attempting to bend it to their will.";
 var halflingDescription = "Optimistic and cheerful by nature, blessed with uncanny luck, and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity. At once excitable and easy-going, halflings like to keep an even temper and a steady eye on opportunity, and are not as prone to violent or emotional outbursts as some of the more volatile races. Even in the jaws of catastrophe, halflings almost never lose their sense of humor. Their ability to find humor in the absurd, no matter how dire the situation, often allows halflings to distance themselves ever so slightly from the dangers that surround them. This sense of detachment can also help shield them from terrors that might immobilize their allies.";
 var humanDescription = "Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world. Their empires and nations are vast, sprawling things, and the citizens of these societies carve names for themselves with the strength of their sword arms and the power of their spells. Humanity is best characterized by its tumultuousness and diversity, and human cultures run the gamut from savage but honorable tribes to decadent, devil-worshiping noble families in the most cosmopolitan cities. Humans' curiosity and ambition often triumph over their predilection for a sedentary lifestyle, and many leave their homes to explore the innumerable forgotten corners of the world or lead mighty armies to conquer their neighbors, simply because they can.";
+*/
+
+var dwarfDescription = "dwarf-description";
+var elfDescription = "elf-description";
+var humanDescription = "human-description";
+var halflingDescription = "halfling-description";
+var allRaceDescriptions = [dwarfDescription, elfDescription ,humanDescription, halflingDescription];
+
 
 //--- --- Trait SubSection ------
 var traitTypes = {offensive: 1, defensive: 2, magical: 3, skill: 4}
@@ -492,13 +513,15 @@ var human = {
 };
 
 function displayRaceDescription(name, description){
-
+    for (var i = 0; i < allRaceDescriptions.length; i++){
+        document.getElementById(allRaceDescriptions[i]).classList.add('hidden');
+    }
     var raceName = document.getElementsByClassName('race-name');
     for (var i = 0; i < raceName.length; ++i) {
         var item = raceName[i];
         item.innerHTML = name;
     }
-    document.getElementById('race-description').innerHTML = description;
+    document.getElementById(description).classList.remove('hidden');
 }
 
 function displayStandardRacialTraits(race){

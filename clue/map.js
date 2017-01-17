@@ -75,7 +75,7 @@ var singleTileSpec = {
 };
 
 var tileset = new Image();
-tileset.src = "./images/Tileset.png";
+tileset.src = "./images/tileset.png";
 
 /*var singleTileSpec = {
     0: {x: 0, y: 0}, //floor1

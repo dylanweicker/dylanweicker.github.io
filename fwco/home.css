@@ -1,0 +1,166 @@
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+i{
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1{
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.jumbotron{
+    padding: 150px 20px 200px;
+    margin-bottom: 0;
+}
+
+
+.container{
+    padding: 40px;
+}
+
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.card-deck{
+}
+
+.card-block{
+    padding: 1.25rem;
+}
+
+.card-img-top{
+    width: 100%;
+    height: auto;
+}
+
+.first{
+    margin-top: -20px;
+    margin-bottom: 0;
+}
+
+.black-phone{
+    background: url('./images/black-phone.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.black-phone h1,
+.black-phone h2,
+.black-phone h3{
+    text-align: left;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.black-phone h1,
+.black-phone h2{
+    color: #FFF;
+    font-family: 'Droid', serif;
+}
+.black-phone h1{
+    margin-bottom: 0;
+}
+
+.black-phone h2{
+    margin-top: 0;
+}
+.black-phone h3{
+    color: #FDFBB4;
+    font-family: 'Lato', sans-serif;
+}
+
+.cream{
+    background-color: #E3E1A2;
+}
+
+.cream p,
+.cream h1, 
+.cream h2, 
+.cream h3{
+    color: #4E6B00;
+    text-shadow: none;
+}
+
+.mint{
+    background-color: #C7D799;
+    color: #715A00;
+}
+
+.mint .card {
+     background-color: #E9F2CE;
+}
+
+.beige{
+    background-color: #E3D6A2;
+}
+
+.smartphone-stats{
+    background: url('./images/smartphone-stats.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    
+    color: #C7D799;
+    text-align: right;
+    text-shadow: 2px 2px 5px #333;
+}
+
+#growth h1{
+    text-align: center;
+    color: #715A00;
+}
+
+#values h2{
+    text-align: center;
+}
+
+#values i{
+    font-size: 8rem;
+    margin-top: 50px;
+}
+
+#values p{
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 992px){
+    .md-bottom-left{
+        position:absolute; bottom:0;  
+    }
+    .md-bottom-right{
+        position:absolute; bottom:0; right:0 
+    }
+}
+
+.midnight{
+    background-color: #333;
+    color: #E9F2CE;
+}
+
+.no-bullet{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.address{
+    margin-bottom: 20px;
+}
+
+.form-control{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

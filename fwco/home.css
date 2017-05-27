@@ -5,6 +5,7 @@ body{
 
 p{
     font-size: 1.6rem;
+    color: #414001;
 }
 
 i{
@@ -12,10 +13,22 @@ i{
     font-size: 2rem;
 }
 
+h1, h2, h3{
+    color: #27ae60;
+    text-shadow: none;
+    font-family: 'Droid Serif', serif;
+}
+
 h1{
     margin-top: 1.5rem;
     margin-bottom: 2rem;
     text-align: center;
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 300;
 }
 
 .jumbotron{
@@ -23,28 +36,16 @@ h1{
     margin-bottom: 0;
 }
 
+.jumbotron h1,
+.jumbotron h2,
+.jumbotron h3{
+    font-weight: 400;
+    text-align: left;
+    text-shadow: 2px 2px 5px #333;
+}
 
 .container{
     padding: 40px;
-}
-
-.card{
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 10px;
-    margin-bottom: 20px;
-}
-
-.card-deck{
-}
-
-.card-block{
-    padding: 1.25rem;
-}
-
-.card-img-top{
-    width: 100%;
-    height: auto;
 }
 
 .first{
@@ -52,20 +53,60 @@ h1{
     margin-bottom: 0;
 }
 
-.black-phone{
-    background: url('./images/black-phone.jpg');
+.first h1{
+    font-size: 8rem;
+    margin-bottom: 0;
+}
+
+.first h2{
+    margin-top: 0;
+}
+
+.bike-stone{
+    background: url('./images/happy-serve.jpg');
     background-repeat: no-repeat;
+    background-position: bottom; 
     background-size: cover;
 }
 
-.black-phone h1,
-.black-phone h2,
-.black-phone h3{
-    text-align: left;
-    text-shadow: 2px 2px 5px #333;
+.bike-stone h1,
+.bike-stone h2{
+    color: #FFF;
+    font-family: 'Droid Serif', serif;
 }
 
-.black-phone h1,
+.bike-stone h3, 
+.bike-stone p{
+    color: #FFEFA6;
+    font-family: 'Lato', sans-serif;
+}
+
+.card{
+    border-radius: 0;
+    overflow: hidden;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.card-block{
+    padding: 1.25rem;
+    padding-left: 0;
+}
+
+.card-title{
+    margin-top: 0;
+}
+
+.card-img-top{
+    width: 100%;
+    height: auto;
+    clip: rect(0,0,0 20px);
+}
+
+.black-phone{
+    background-color: #2c3e50;
+}
+
 .black-phone h2{
     color: #FFF;
     font-family: 'Droid', serif;
@@ -77,21 +118,22 @@ h1{
 .black-phone h2{
     margin-top: 0;
 }
-.black-phone h3{
-    color: #FDFBB4;
+.black-phone h3, 
+.black-phone p{
+    color: #FFEFA6;
     font-family: 'Lato', sans-serif;
 }
 
-.cream{
-    background-color: #E3E1A2;
+.black-phone ul{
+    color: white;
 }
 
-.cream p,
-.cream h1, 
-.cream h2, 
-.cream h3{
-    color: #4E6B00;
-    text-shadow: none;
+.cream{
+    background-color: #FFF59D;
+}
+
+.beige{
+    background-color: #E6EE9C;
 }
 
 .mint{
@@ -103,27 +145,23 @@ h1{
      background-color: #E9F2CE;
 }
 
-.beige{
-    background-color: #E3D6A2;
-}
-
 .smartphone-stats{
     background: url('./images/smartphone-stats.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
-    
-    color: #C7D799;
+}
+
+.stats h2{
+    color: #F0EFA6;
     text-align: right;
     text-shadow: 2px 2px 5px #333;
 }
 
 #growth h1{
     text-align: center;
-    color: #715A00;
 }
-
-#values h2{
+#values h2, #values h3{
     text-align: center;
 }
 
@@ -136,6 +174,14 @@ h1{
     font-size: 1.5rem;
 }
 
+#values{
+    padding-bottom: 20px;
+}
+
+.contact-us{
+    margin-right: 20px;
+}
+
 @media screen and (min-width: 992px){
     .md-bottom-left{
         position:absolute; bottom:0;  
@@ -143,11 +189,6 @@ h1{
     .md-bottom-right{
         position:absolute; bottom:0; right:0 
     }
-}
-
-.midnight{
-    background-color: #333;
-    color: #E9F2CE;
 }
 
 .no-bullet{

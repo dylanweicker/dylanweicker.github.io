@@ -1,0 +1,51 @@
+.first {
+    background: url('../images/happy-serve.jpeg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: cover;
+}
+
+#process{
+    margin-bottom: 50px;
+}
+
+.card h3{
+    margin-top: 8px;
+}
+
+.card{
+    background: #fff;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: -1;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.card-img-top img{
+    width: 100%;
+    height: auto;
+}
+
+.card-block{
+    padding: 8px;
+    min-height: 208px;
+    position: relative;
+}
+
+.card-block a{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #c0392b;
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    bottom: 8px;
+}
+

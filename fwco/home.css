@@ -1,150 +1,47 @@
-
-body{
-    font-family: 'Lato', sans-serif;
-}
-
-p{
-    font-size: 1.6rem;
-    color: #414001;
-}
-
-i{
-    text-align: center;
-    font-size: 2rem;
-}
-
-h1, h2, h3{
-    color: #27ae60;
-    text-shadow: none;
-    font-family: 'Droid Serif', serif;
-}
-
-h1{
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: 4rem;
-}
-
-h2{
-    font-size: 3rem;
-    font-weight: 300;
-}
-
-.jumbotron{
-    padding: 150px 20px 200px;
-    margin-bottom: 0;
-}
-
-.jumbotron h1,
-.jumbotron h2,
-.jumbotron h3{
-    font-weight: 400;
-    text-align: left;
-    text-shadow: 2px 2px 5px #333;
-}
-
-.container{
-    padding: 40px;
-}
-
-.first{
-    margin-top: -20px;
-    margin-bottom: 0;
-}
-
-.first h1{
-    font-size: 8rem;
-    margin-bottom: 0;
-}
-
-.first h2{
-    margin-top: 0;
-}
-
-.bike-stone{
-    background: url('./images/happy-serve.jpg');
+.first {
+    background: url('./images/blue-windows.jpeg');
     background-repeat: no-repeat;
-    background-position: bottom; 
+    background-position: top; 
     background-size: cover;
 }
 
-.bike-stone h1,
-.bike-stone h2{
-    color: #FFF;
-    font-family: 'Droid Serif', serif;
+/* THE LEAP */
+#the-leap .row{
+    margin: 20px;
 }
 
-.bike-stone h3, 
-.bike-stone p{
-    color: #FFEFA6;
-    font-family: 'Lato', sans-serif;
+
+/* GROWTH */
+#growth h1{
+    text-align: center;
 }
 
-.card{
+/* CARDS */
+#growth .card{
     border-radius: 0;
     overflow: hidden;
     margin: 10px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 
-.card-block{
+#growth .card-block{
     padding: 1.25rem;
     padding-left: 0;
 }
 
-.card-title{
+#growth .card-title{
     margin-top: 0;
 }
 
-.card-img-top{
+#growth .card-img-top{
     width: 100%;
     height: auto;
     clip: rect(0,0,0 20px);
 }
 
-.black-phone{
-    background-color: #2c3e50;
-}
 
-.black-phone h2{
-    color: #FFF;
-    font-family: 'Droid', serif;
-}
-.black-phone h1{
-    margin-bottom: 0;
-}
-
-.black-phone h2{
-    margin-top: 0;
-}
-.black-phone h3, 
-.black-phone p{
-    color: #FFEFA6;
-    font-family: 'Lato', sans-serif;
-}
-
-.black-phone ul{
-    color: white;
-}
-
-.cream{
-    background-color: #FFF59D;
-}
-
-.beige{
-    background-color: #E6EE9C;
-}
-
-.mint{
-    background-color: #C7D799;
-    color: #715A00;
-}
-
-.mint .card {
-     background-color: #E9F2CE;
-}
-
+/* STATS JUMBOTRON */
 .smartphone-stats{
     background: url('./images/smartphone-stats.jpg');
     background-repeat: no-repeat;
@@ -152,22 +49,14 @@ h2{
     background-position: center; 
 }
 
-.stats h2{
-    color: #F0EFA6;
+.stats h3{
     text-align: right;
-    text-shadow: 2px 2px 5px #333;
 }
 
-#growth h1{
-    text-align: center;
-}
+
+/* VALUES */
 #values h2, #values h3{
     text-align: center;
-}
-
-#values i{
-    font-size: 8rem;
-    margin-top: 50px;
 }
 
 #values p{
@@ -176,32 +65,4 @@ h2{
 
 #values{
     padding-bottom: 20px;
-}
-
-.contact-us{
-    margin-right: 20px;
-}
-
-@media screen and (min-width: 992px){
-    .md-bottom-left{
-        position:absolute; bottom:0;  
-    }
-    .md-bottom-right{
-        position:absolute; bottom:0; right:0 
-    }
-}
-
-.no-bullet{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.address{
-    margin-bottom: 20px;
-}
-
-.form-control{
-    margin-right: 20px;
-    margin-bottom: 20px;
 }

@@ -168,16 +168,25 @@ hr {
 }
 
 .midnight{
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    background-color: #2C3E50;
+    color: #ECF0F1;
 }
 
 .midnight p{
-    color: #2C3E50;
-    font-family: 'Georgia', serif;
+    color: #ECF0F1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.midnight li{
+    font-family: 'Open Sans', sans-serif;
 }
 
 .midnight h2{
     color: #3498DB;
     font-family: 'Open Sans', sans-serif;
+}
+
+.text-danger{
+    font-size: 12;
+    font-family: sans-serif;
 }

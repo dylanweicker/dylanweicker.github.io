@@ -1,0 +1,46 @@
+h3{
+    margin: 10px 0 15px;
+}
+
+.first{
+    background: url('../images/staff.jpeg');
+    background-repeat: no-repeat;
+    background-position: top right; 
+    background-size: cover;
+}
+
+.staff-photo{
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.staff-photo>img{
+    width:100%;
+}
+
+.fa-facebook-official{
+    color: #3b5998;
+}
+
+.fa-linkedin-square{
+    color: #0077B5
+}
+
+.social-media{
+    text-align: left;
+}
+
+.social-media a,
+.social-media i{
+    font-size: 36px!important;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.bio{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}

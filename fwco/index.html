@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie-edge">
-        <link rel="icon" type="image/ico"  href="./images/handshake.png">
+        <link rel="icon" type="image/ico"  href="./images/favicon.png">
         
         <!-- symbols -->
         <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="global.css">
 
+        <!-- Custom Scripts -->
+        <script src="./script.js"></script>
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
@@ -38,31 +41,45 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                <a class="navbar-brand" href="#"><strong>FWCO</strong> Management Consultants</a>
+                    <a class="navbar-brand" href="#"><strong>FWCO</strong> Management Consultants</a>
                 </div>
-                <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li class="dropdown">
-                    <a href="#">
-                        Careers <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Senior Staff</a></li>
-                        <li><a href="#">Join Us</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">
-                        Testimonials <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Why Us?</a></li>
-                        <li><a href="#">Past Studies</a></li>
-                        <li><a href="#">Our Customers</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact Us</a></li>
+                <ul class="nav navbar-nav navbar-right long-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="./services/index.html">Services</a></li>
+                    <li><a href="./why-us/index.html">Why Us?</a></li>
+                    <li class="dropdown">
+                        <a href="#">
+                            Careers <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./staff/index.html">Senior Staff</a></li>
+                            <li><a href="./join-us/index.html">Join Us!</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            Past Work <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./studies/index.html">Past Studies</a></li>
+                            <li><a href="./clients/index.html">Our Clients</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav float-right sandwich-nav">
+                    <li><a onclick="toggleHiddenMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+            <div id="hidden-menu" class="container-fluid" style="display: none;">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="./services/index.html">Services</a></li>
+                    <li><a href="./why-us/index.html">Why Us?</a></li>
+                    <li><a href="./staff/index.html">Senior Staff</a></li>
+                    <li><a href="./join-us/index.html">Join Us</a></li>
+                    <li><a href="./studies/index.html">Past Studies</a></li>
+                    <li><a href="./clients/index.html">Our Clients</a></li>
                 </ul>
             </div>
         </nav>
@@ -199,6 +216,7 @@
         </div>
 
         <div class="midnight" style="background-position: bottom;">
+            <a name="contact-us"></a>
             <div class="container">
                 <h2>Contact Us</h2>
                 

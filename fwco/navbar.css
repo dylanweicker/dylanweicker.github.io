@@ -66,6 +66,11 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     text-align: right;
 }
 
+.float-right{
+    float:right!important;
+    margin-right: 0;
+}
+
 .fa-bars{
     font-size: 22px!important;
     color: white;
@@ -75,8 +80,6 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 .sandwich-nav{
     display: none;
 }
-
-
 
 @media screen and (max-width: 892px){
     .sandwich-nav{
@@ -89,20 +92,8 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 
 @media screen and (min-width: 893px){
     #hidden-menu{
-        display: none;
+        display: none!important;
     }
-}
-
-.float-right{
-    float:right!important;
-    margin-right: 0;
-}
-
-#menu{
-    z-index: 1;
-    width: 100%;
-    position: fixed;
-    background: #2C3E50;
 }
 
 #hidden-menu li,

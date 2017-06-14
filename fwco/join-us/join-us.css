@@ -1,0 +1,22 @@
+.looking-for{
+    height: 300px;
+    max-width: 600px;
+}
+
+.young{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/young.jpg');
+}
+
+.old{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/old.jpg');
+}
+
+.apply-img{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}

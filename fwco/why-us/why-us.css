@@ -27,6 +27,12 @@ h3{
     margin: 0;
 }
 
+.first{
+    background-position: left;
+    background-size: cover;
+    background-image: url('../images/why-us.jpeg');
+}
+
 @media screen and (min-width: 768px){
     .green-200 .row,
     .yellow-200 .row{

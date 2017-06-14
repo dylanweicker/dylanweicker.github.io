@@ -33,6 +33,12 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     cursor: pointer;
 }
 
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:visited{
+    color: #ECF0F1;
+    border-bottom: 4px solid #2C3E50;
+}
+
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:active
 {
@@ -48,12 +54,6 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     background-color: #2980B9;
     border-bottom: 4px solid #E74C3C;
     color: #ECF0F1;
-}
-
-.navbar-default .navbar-nav>li>a,
-.navbar-default .navbar-nav>li>a:visited{
-    color: #ECF0F1;
-    border-bottom: 4px solid #2C3E50;
 }
 
 .navbar-default{

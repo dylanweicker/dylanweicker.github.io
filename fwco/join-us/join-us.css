@@ -15,6 +15,12 @@
     background-image: url('../images/old.jpg');
 }
 
+.laptop-background{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/coffee-laptop.jpg');
+}
+
 .apply-img{
     width: 100%;
     height: auto;

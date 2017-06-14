@@ -79,6 +79,7 @@ h3{
 .jumbotron{
     padding: 150px 20px 200px;
     margin-bottom: 0;
+    background-color: #2C3E50;
 }
 
 .jumbotron h1,
@@ -99,6 +100,7 @@ h3{
 .jumbotron h3{
     text-transform: none;
     font-weight: normal;
+    font-size: 2.2rem;
     color: #E74C3C;
 }
 
@@ -144,7 +146,9 @@ hr {
     background-color: #ECF0F1;
 }
 
-
+.container-small{
+    padding: 40px;
+}
 
 
 /* FOOTER */

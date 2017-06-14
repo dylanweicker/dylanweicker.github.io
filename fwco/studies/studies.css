@@ -1,0 +1,22 @@
+p{
+    text-align: justify;
+}
+
+.button-holder{
+    margin: 25px 0;
+}
+
+.button{
+    border-radius: 4px;
+    padding: 15px 30px;
+    color: white;
+    background: #2980B9;
+    font-family: 'Open-Sans', sans-serif;
+}
+
+.button:hover,
+.button:active{
+    background: #3498DB;
+    color: white;
+    text-decoration: none;
+}

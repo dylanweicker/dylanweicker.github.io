@@ -6,8 +6,12 @@
 }
 
 /* THE LEAP */
+#the-leap .container{
+    padding: 10px 40px;
+}
+
 #the-leap .row{
-    margin: 20px;
+    margin: 50px;
 }
 
 

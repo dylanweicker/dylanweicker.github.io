@@ -16,7 +16,7 @@ i{
     margin-bottom: 15px;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     text-shadow: none;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -40,6 +40,12 @@ h2{
 h3{
     color: #3498DB;
     font-size: 2rem;
+}
+
+h4{
+    color: #3498DB;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 .container{
@@ -193,4 +199,17 @@ hr {
 .text-danger{
     font-size: 12;
     font-family: sans-serif;
+}
+
+.text-jumbo{
+    font-size: 80px;
+    line-height: 84px;
+    color: #3498DB;
+    font-family: "Open-Sans", sans-serif;
+    margin-bottom: 0;
+}
+
+.icon-jumbo{
+    font-size: 100px!important;
+    margin: 0;
 }

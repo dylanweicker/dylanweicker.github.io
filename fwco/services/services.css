@@ -58,3 +58,29 @@
     width: 100%;
 }
 
+.v-center{
+    display: flex;
+    align-items: center;
+}
+
+.font-lg{
+    color: #3498DB;
+    font-size: 60px;
+    line-height: 64px;
+    font-family: "Open-Sans", sans-serif;
+    margin-bottom: 0;
+}
+
+.block{
+    margin: 40px 0;
+    border-left: 4px solid #3498DB;
+    padding-left: 8px;
+}
+
+.modal-body{
+    padding: 30px;
+}
+
+i{
+    margin-top: 10px;
+}

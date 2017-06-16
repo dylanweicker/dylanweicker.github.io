@@ -1,30 +1,18 @@
-.text-jumbo{
-    font-size: 80px;
-    line-height: 84px;
-    color: #3498DB;
-    font-family: "Open-Sans", sans-serif;
-    margin-bottom: 0;
-}
 
 h3{
     margin: 0;
     margin-bottom: 20px;
 }
 
-.green-200 .container .row,
-.yellow-200 .container .row,
-.green-200 .container-small .row,
-.yellow-200 .container-small .row{
+.grey .container .row,
+.white .container .row,
+.grey .container-small .row,
+.white .container-small .row{
     margin: 50px 10px;
 }
 
 .margin-vertical{
     margin: 50px 0;
-}
-
-.icon-jumbo{
-    font-size: 100px!important;
-    margin: 0;
 }
 
 .first{
@@ -34,8 +22,8 @@ h3{
 }
 
 @media screen and (min-width: 768px){
-    .green-200 .row,
-    .yellow-200 .row{
+    .grey .row,
+    .white .row{
         display: flex;
         align-items: center;
     }
@@ -49,10 +37,6 @@ h3{
 
 .side-section{
     background: white;
-}
-
-.container-small{
-    padding: 40px;
 }
 
 .lead{

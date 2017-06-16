@@ -48,6 +48,25 @@
     position: relative;
 }
 
+@media screen and (max-width: 1200px){
+    .card-block{
+        min-height: 268px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .card-block{
+        min-height: 178px;
+    }
+    .card-img-top{
+        position: relative;
+    }
+    .card-img-top img{
+        position: absolute;
+        bottom: -150px;
+    }
+}
+
 .card-block a{
     text-transform: uppercase;
     font-weight: bold;

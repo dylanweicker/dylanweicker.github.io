@@ -33,6 +33,7 @@
 .card-img-top img{
     width: 100%;
     height: auto;
+    min-height: 100%;
     cursor: pointer;
 }
 .card-img-top img:hover{
@@ -64,6 +65,17 @@
     .card-img-top img{
         position: absolute;
         bottom: -150px;
+    }
+}
+
+@media screen and (max-width: 565px){
+    .card-img-top img{
+        position: relative;
+        bottom: auto;
+    }
+    
+    .card-block{
+        min-height: 268px;
     }
 }
 
@@ -100,6 +112,22 @@
     padding: 30px;
 }
 
+.modal-header{
+    position: relative;
+}
+
 i{
     margin-top: 10px;
+}
+
+.x{
+    color: #E74C3C;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.x:hover {
+    color: #F75C4C;
 }

@@ -1,643 +1,661 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="style.css">
-		<link rel="icon" href="rainbow-emoji.ico" type="image/x-icon"/>
-		<link rel="shortcut icon" href="rainbow-emoji.ico" type="image/x-icon"/>
-		<title>Dylan Weicker</title>
-            
-		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-                
-		<script type="text/javascript">
-			function getAge(){
-				var birthday = new Date("1995-04-15");
-				return Math.floor((Date.now() - birthday)/ 31557600000);
-			}
-			
-			function hideSocialMedia(){
-				var holder = document.getElementById("social-media-holder");
-				holder.style.paddingLeft = 0;
-				holder.style.paddingRight = 0;
-				holder.style.width = 0;
-				holder.style.overflow = "hidden";
-			}
-		</script>
+        <title>Dylan Weicker</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie-edge">
+        <link rel="icon" type="image/ico"  href="./images/rainbow.png">
+        
+        <!-- symbols -->
+        <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./homepage.css">
+        
+
+        <!-- Custom Scripts -->
+        <script src="./script.js"></script>
+
+        <!-- Fonts -->
+        <!-- cursive header-->
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        
+        <!-- normal headers -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+        
+        <!-- body text -->
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
     </head>
-                
-	
-                
-	<body>
-	
-		<header class="red header">
-                <div class="content-no-vertical-padding">
-                    <div class="absolute-left" style="vertical-align: center;">
-                        <a href="/"><img src="images/dplogo.png"><b>Dylan Weicker</b></a>
+    <body>
+        <a  name="top"></a>
+        <div class="header">
+            <div class="container">
+                <h1>Dylan Weicker</h1>
+                <div class="row">
+                    <div class="col-md-6 header-img">
+                        <img src="./images/mushroom-cut-rainbow.jpg">
                     </div>
-                    <div class="absolute-right">
-                        <a href="#home" class="navigation"><i class="material-icons">home</i><p>home</p></a>
-                        <a  href="#goals" class="navigation"><i class="material-icons">assignment</i><p>goals</p></a>
-                        <a  href="#software" class="navigation"><i class="material-icons">laptop</i><p>software</p></a>
-                        <a href="#theatre" class="navigation"><i class="material-icons">local_play</i><p>theatre</p></a>
-                        <a href="#activism" class="navigation"><i class="material-icons">people</i><p>activism</p></a>
-                        <a href="#games" class="navigation"><i class="material-icons">casino</i><p>games</p></a><a href="#culture" class="navigation"><i class="material-icons">public</i><p>culture</p></a>
+                    <div class="col-md-6 header-text">
+                        <h3>Hello There !</h3>
+                        
+                        <p>My name is Dylan Weicker.</p> 
+                        
+                        <p>I'm an ambitious and optimistic <script type="text/javascript">document.write(getAge())</script> year old software developer based in Vancouver, BC. I am passionate about education, entertainment, and social equality.</p>
+                        
+                        <p>My fields of interest are web development, game development, UI design, and artificial intelligence.</p>
+                        
+                        <div class="social-media">
+                            <a href="http://www.facebook.com/dylan.weicker">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="http://www.instagram.com/dylanweicker">
+                                 <i class="fa fa-instagram"></i>
+                            </a>
+
+                            <a href="http://www.twitter.com/dylanweicker">
+                                 <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="http://github.com/dylanweicker">
+                                <i class="fa fa-github"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/dylan-weicker-3b9809111">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-		</header>
-        
-        		
-        <a  name="home"></a>
-		<div class="red section">
-            <div class="content" style="padding-bottom: 0 !important;">
-                    <h1>Hello There !</h1>
-                    <h2>Welcome to my online portfolio</h2>
-                
-                <div class="welcome flex-container">
-                    
-                    <div class="two-col" style="padding-bottom: 0; margin-bottom: 0;">
-                        <img src="./images/snapchatdog3.png" width="100%" style="vertical-align: bottom;">
-                    </div>
-                    
-                    <div class="two-col" style="vertical-align: middle; padding-left: 20px;">
-                        <div class="who-am-i">
-                            <p>My name is Dylan Weicker.</p>
-                            <br>
-                            <p>I'm an ambitious, <script type="text/javascript">document.write(getAge())</script> year old software developer and actor from Vancouver with a passion for games, pop culture, and social activism.</p>
-                            <div class="social-media">
-                                <a href="http://www.facebook.com/dylan.weicker">
-                                    <img src="./images/facebook.png">
-                                </a>
-                                <a href="http://www.twitter.com/dylanweicker">
-                                    <img src="./images/twitter.png">
-                                </a>
-                                <a href="http://www.instagram.com/dylanweicker">
-                                    <img src="./images/instagram.png">
-                                </a>
-                                <a href="http://youtube.com/user/Nifflr">
-                                    <img src="./images/youtube.png">
-                                </a>
-                                <a href="http://www.dylanweicker.tumblr.com">
-                                    <img src="./images/tumblr.png">
-                                </a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        <a  name="goals"></a>
-		<div class="orange section">
-            <div class="content">
-            <h1>My Goals</h1>
-            <h2>I am driven to accomplish my ambitions.</h2>
-                    
-                <div class="flex-container">
-                <div class="ambitions">
-                    <div class="ambitions-inner">
-                        <center><img src="./images/gamedevelopment.png"></center>
-                        <h4>Game Development</h4>
-                        <div>
-                            <p>To hone my software development skills, I am working to create a collection of javascript games. I am carefully writing maintainable code and aiming to create a high quality user experience. I hope to collaborate on larger projects soon.</p>
-                            <!--<div class="bullet">
-                                <i class="material-icons">chevron_right</i>
-                            </div>
-                            <div class="bullet-point">
-                                Create a collection of simple javascript games
-                            </div>
-                        </div>
-                        <div>
-                            <div class="bullet">
-                                <i class="material-icons">chevron_right</i>
-                            </div>
-                            <div class="bullet-point">
-                                Develop a dungeon adventure game
-                            </div>
-                        </div>
-                        <div>
-                            <div class="bullet">
-                                <i class="material-icons">chevron_right</i>
-                            </div>
-                            <div class="bullet-point">
-                                Volunteer as a Planeshift developer
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="ambitions-bottom">
-                        <a href="#software" class="mint-button">
-                            My Software
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="call-to-action" href="#">
+                            View Resume
                         </a>
                     </div>
                 </div>
-                <div class="ambitions">
-                    <div class="ambitions-inner">
-                        <center><img src="./images/entertain.png"></center>
-                        <h4>Theatre Troupe</h4>
-                        <div>
-                            <p>I have joined a theatre troupe called "The Word Association." It is our ambition to perform improv live on stage. We are also working to write and produce comedic sketches to post on YouTube.</p>
-                            <!--
-                            <div class="bullet">
-                                <i class="material-icons">check</i>
-                            </div>
-                            <div class="bullet-point">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="bullet">
-                                <i class="material-icons">chevron_right</i>
-                            </div>
-                            <div class="bullet-point">
-                                Perform improv with my troup on stage
-                            </div>
-                        </div>
-                        <div>
-                            <div class="bullet">
-                                <i class="material-icons">chevron_right</i>
-                            </div>
-                            <div class="bullet-point">
-                                Write and produce a comedic sketch
-                            </div>-->
-                        </div>
-                    </div>
-                    <div class="ambitions-bottom">
-                        <a href="/" class="mint-button">My Acting</a>
-                    </div>
-                </div>
-                <div class="ambitions">
-                    <div class="ambitions-inner">
-                        <center><img src="./images/pride.png"></center>
-                        <h4>LGBT Role Model</h4>
-                        <div>
-                            <p>I hope to educate youth about LGBT issues by facilitating Pridespeaks in highschools. By volunteering at LGBT youth centers and creating YouTube videos I hope to inspire LGBT youth to feel comfortable being themselves.</p>
-                        </div>
-                    </div>
-                    <div class="ambitions-bottom">
-                        <a href="/" class="mint-button">My Activism</a>
-                    </div>
-                </div>
-                </div>
-                <div class="ghost-button-holder">
-                    <a href="" class="ghost-button">
-                        Read More About My Goals
-                    </a>
-                </div>
-            </div>
-            </div>
-            
-            <!-- cut to main Ambition Page -->
-            <!-- div class="content" style="text-align: left;">
-                <h3>My Mantras</h3>
-                <div class="mantra-container">
-                    <p>A mantra is a word or short phrase which is repeated often to oneself in times of reflection. I follow a set of self-made mantras to guide my daily activities. </p>
-                    <div>
-                        <div class="mantras">
-                            <h4>I Grow.</h4>
-                            <div class="mantras-img">
-                                <img src="./images/grow.png">
-                            </div>
-                            <div class="mantras-text">
-                                <ul>
-                                    <li>Learn by <b>asking others for help</b> so I can gain knowledge and assistance</li>
-                                    <li>Transparently <b>explain my objectives</b> to others while I pursue my goals</li>
-                                    <li>Seek <b>areas for further improvement</b> by reflecting on previous achievements</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mantras">
-                            <h4>I Practice.</h4>
-                            <div class="mantras-img">
-                                <img src="./images/practice.png">
-                            </div>
-                            <div class="mantras-text">
-                                <ul>
-                                    <li>Improve <b>technical skills</b> by developing and debugging websites and applications</li>
-                                    <li>Maintain <b>communication skills</b> by actively sharing written and spoken messages online</li>
-                                    <li>Exercise <b>compassion</b> by creating safe and inclusive spaces</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mantras">
-                            <h4>I Entertain.</h4>
-                            <div class="mantras-img">
-                                <img src="./images/clown.png">
-                            </div>
-                            <div class="mantras-text">
-                                <ul>
-                                    <li>Post <b>dank memes</b> and other pop culture references on the interwebs</li>
-                                    <li>Produce <b>YouTube videos</b> which inspire joy and action in others</li>
-                                    <li>Create <b>games</b>, both to be played on the computer and on the table top</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mantras">
-                            <h4>I Educate.</h4>
-                            <div class="mantras-img">
-                                <img src="./images/educate.png">
-                            </div>
-                            <div class="mantras-text">
-                                <ul>
-                                    <li>Post <b>multimedia content</b> online to share my knowledge with others</li>
-                                    <li>Discuss <b>allyship</b> to teach people how to help oppressed people and animals</li>
-                                <li>Offer to tutor others in fields where I excell, such as <b>math and science</b></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div -->
-            <!-- cut to main Ambition Page -->
-            <!--  class="content" style="text-align: left;">
-                <h3>My Wishlist</h3>
-                <div class="wishlist-img">
-                    <img src="./images/present.png">
-                </div>
-                <div class="wishlist-text">
-                    <p>There are many material possesions I fancy. <br>
-                    I developered a very simple javascript application to display my wishlist.<br>
-                    This should make it easier if you plan to buy me a present. :D</p>
-                    <br>
-                    <a href="./wishlist/index.html" class="view-wishlist">
-                        View Wishlist
-                    </a>
-                </div>
-            </div>
-        </div -->
-        
-        
-        <a  name="software"></a>
-        <div class="yellow section">
-			<div class="content">
-                <h1>Software Development</h1>
-                <h2>I am refining my skills to become a master of technology.</h2>
-                
-                <div class="blurb">
-                    <img style="float: left;" src="./images/laptop.png">
-                    <p>My main interests are web design, user experience, and game development.</p> 
-                </div>
-                
-                <div class="content">
-                    <h3>Experience</h3>
-                    <center>
-                        <div class="experience">
-                            <img src="./images/ubc.png"><br>
-                            University of British Columbia<br>
-                            Sept 2013 - May 2018<br>
-                            <b>B.Sc. Computer Science Major</b>
-                        </div>
-                        <div class="experience">
-                            <img src="./images/vc.png"><br>
-                            Vision Critical<br>
-                            Sept 2015 - August 2016<br>
-                            <b>Quality Assurance Engineer Co-op</b>
-                        </div>
-                    </center>
-                </div>
-                
-                <h3>Skills</h3>
-				<table>
-					<tr>
-						<th>Concepts</th>
-						<th>Programming</th>
-						<th>Web Development</th>
-						<th>Tools</th>
-					</tr>
-					<tr>
-						<td>
-							<li>Logical, Functional, and Object Oriented Programing
-                            <li>Behaviour Driven and Agile Development<br>
-                            <li>Parallel Programming with Mutexes and Semaphors<br>
-						</td>
-						<td>
-							C<br>
-							Java, C++, C#<br>
-							Racket, Haskell<br>
-                            Prolog<br>
-							Visual Basic<br>
-							SQL<br>
-							Powershell<br>
-							
-						</td>
-						<td>
-							HTML/HTML5<br>
-							CSS/CSS3<br>
-							Javascript<br>
-						</td>
-						<td>
-							Git<br>
-							Visual Studio<br>
-							IntelliJ<br>
-							Oracle<br>
-						</td>
-					</tr>
-				</table>
-                
-                <div class="ghost-button-holder">
-                    <a href="" class ="ghost-button">Technical Experience</a>
-                    <a href="" class ="ghost-button">View Resume</a>
-                </div>
-                
-                <h3>Recent Personal Projects</h3>
-                <div class="flex-container">
-                    <a href="./clue/index.html">
-                        <div class="place-holder-box">Fantasy Clue</div>
-                    </a>
-                    <a href="./characterGenerator/index.html">
-                        <div class="place-holder-box">Pathfinder Character Generator</div>
-                    </a>
-                    <a href="./333rubies/index.html">
-                        <div class="place-holder-box">Pathfinder Campaign Website</div>
-                    </a>
-                </div>
             </div>
         </div>
-        
-        
-        <a  name="theatre"></a>
-        <div class="green section">
-			<div class="content">
-                <h1>Theatre</h1>
-                <h2>I engage individuals and inspire them through theatrical performances.</h2>
-                <h3>Live Improv</h3>
-                <h3>Staged Work</h3>
-                <h3>Sketch Comedy</h3>
-            </div>
-        </div>
-        
-        <a  name="activism"></a>
-        <div class="cyan section">
-			<div class="content">
-                <h1>Social Activism</h1>
-                <h2>I educate myself about social issues and create positive change.</h2>
-                <p>I will use my privilege to foster love, acceptance and equality. I hope to gain more influence so that I may use my voice to make a significant social change.</p>
-                <h3>Animal Rights</h2>
-                <h3>LGBT Rights</h2>
-                <h3>Gender Equality</h2>
-                <h3>Racism</h2>
-                <h3>Colonialism</h2>
-            </div>
-            
-            
-LGBT Issues - I have a personal investment in this, ending social stigmas, ending discriminatory regulations, Orlando shooting demonstrates we are not out of the woods yet. make washrooms accessable, right to gender affirming operations
-Animal Rights - veganism, leather/fur, poaching, bees.
-Gender Equality -
-Decolonialism - equal work opportunities, ending sexual harrasmant, right to choose abortion.
-Institutionalized Racism -
-Mental Health Stigmas -
-        </div>
-        
-        
-        
-        <a  name="games"></a>
-        <div class="purple section">
-			<div class="content">
-                <h1>Games</h1>
-                <h2>I appreciate games for their entertainment value, competitive nature, and methodical rules.</h2>
-                <h3>Pathfinder</h3>
-                <h3>My Games</h3>
-                <h3>Board Game club</h3>
-            </div>
-        </div>
-            
-        
-        <a  name="culture"></a>
-        <div class="blue section">
-			<div class="content">
-                <h1>Pop Culture</h1>
-                <h2>I stay relevent by keeping up with the latest trends.</h2>
+        <a  name="projects"></a>
+        <div class="section">
+            <div class="container">
+                <h2>Personal Projects</h2>
+                <hr>
                 
-                <p>In our ever-evolving society, people's interests are constantly changing. In order to put forward a message or a product, it is essential to captivate the attention of our intended audience. By paying attention to pop culture, we can stay up to date with what's hip and trendy in the modern world. These trends can show us what people currently care about.</p>
+                <div class="text-center lead text-muted">
+                    <p>My obsession with programming has driven me to independently develop each of these projects from scratch in my spare time.</p>
+                </div>
                 
-                <h3>Pop Music</h3>
-                    I recognize that pop music holds a lot of power amongst today's youth. Pop songs reflect the predominant values of the current times.
-                
-                <h3>Memes</h3>
-                    Memes a modern form of self-expression. They share truths about life in an easily relatable and often humorous way.
-                
-                <h3>Social Media</h3>
-                    Social Media allows for the rapid spread of ideas amongst peers. I strive to maintain a strong social media presense. 
-            </div>
-        </div>
-        <footer>
-                <div class="footer">
+                <h3>Web Development</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                         <div class="card">
+                          <img class="card-img-top" src="./images/fwco.jpg">
+                          <div class="card-block">
+                            <h4 class="card-title">Management Consultant Site</h4>
+                            <p class="card-text">My father owns a well-established  management consultant firm. As a Father's Day gift, I created a website to communicate his company's features and services to potential clients.</p>
+                            <div class="text-right">
+                                <a href="./fwco/index.html" class="btn btn-primary">View Site</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                         <div class="card">
+                          <img class="card-img-top" src="./images/333rubies.jpg">
+                          <div class="card-block">
+                            <h4 class="card-title">Pathfinder Campaign Site</h4>
+                            <p class="card-text">I run a Pathfinder tabletop role play campaign. I developed a website to allow my players to easily lookup information regarding the fantasy game world I generated.</p>
+                            <div class="text-right">
+                                <a href="www.333rubies.neocities.org" class="btn btn-primary">View Site</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                         <div class="card">
+                          <img class="card-img-top" src="./images/clue.jpg">
+                          <div class="card-block">
+                            <h4 class="card-title">Fantasy Clue Game</h4>
+                            <p class="card-text">Using HTML5's canvas element and JavaScript, I recreated Hasbro's classic boardgame Clue. The game includes 2 AI opponents who navigate the board and gain knowledge as the game progresses.</p>
+                            <div class="text-right">
+                                <a href="./clue/index.html" class="btn btn-primary">Play Game</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     
-                    <div class="footer-col">
-                        <h4>Credits</h4>
-                        <p>This website was designed and developed independently by Dylan Weicker.</p>
+                    <div class="col-md-4">
+                         <div class="card">
+                          <img class="card-img-top" src="./images/wishlist.jpg">
+                          <div class="card-block">
+                            <h4 class="card-title">My Wishlist</h4>
+                            <p class="card-text">To avoid having to manually update all my friends and family about the gifts I would enjoy receiving for Christmas or my birthday, I have compiled a JavaScript wishlist to put this data in one place.</p>
+                            <div class="text-right">
+                                <a href="./wishlist/index.html" class="btn btn-primary">View List</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                         <div class="card">
+                          <img class="card-img-top" src="./images/char-gen.jpg">
+                          <div class="card-block">
+                            <h4 class="card-title">Pathfinder Character Generator</h4>
+                            <p class="card-text">Creating a character can be one of the most arduous tasks for new players to Pathfinder. To reduce the strain on prospective players, I created this web app to streamline the process.</p>
+                            <div class="text-right">
+                                <a href="./wishlist/index.html" class="btn btn-primary">Create Character</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                         <div class="card">
+                          <img class="card-img-top" src="./images/towerbuilder.jpg">
+                          <div class="card-block">
+                            <h4 class="card-title">Tower Building Game</h4>
+                            <p class="card-text">Inspired by Santorini, I developed a simple strategy game using HTML5's canvas element and JavaScript. In this game, players build towers and compete to be the first to climb to the top of one. </p>
+                            <div class="text-right">
+                                <a href="#" class="btn btn-primary">Play Game</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a  name="work"></a>
+        <div class='section pink'>
+            <div class="container">
+                <h2>Work Experience</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4 no-gap">
+                        <h3>Web App Developer</h3>
+                        <img class="work-xp-img" src="./images/mazdis.png">
+                        <span>
+                            <h5>Mazdis Innovations</h5>
+                            <h5>May 2016 - Aug 2017</h5>
+                        </span>
+                    </div>
+                    <div class="col-md-8">
+                    <h4>Responsibilities</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/tdd.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>Choosing testing frameworks and being responsible for all of the automated testing</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/html.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>Creating new components</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/ui.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>Designing UI</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/firebase.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>Creating services to use Firebase backend</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/shared-understanding.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>Working in a team of two people with management who have very little programming knowledge. Having to define my own priorities and goals.</p>
+                            </div>
+                        </div>
+                    <h4>Skills Gained</h4>
+                        <div class="row text-center">
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/angular.png"><br>
+                                Angular
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/html.png"><br>
+                                HTML
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/css.png"><br>
+                                CSS
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/typescript.png"><br>
+                                TypeScript
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/karma.png"><br>
+                                Karma
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/jasmine.png"><br>
+                                Jasmine
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                Self Management
+                            </div>
+                            <div class="col-md-3">
+                                Goal Setting
+                            </div>
+                            <div class="col-md-3">
+                                UI Design
+                            </div>
+                            <div class="col-md-3">
+                                Resourcefulness
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 no-gap">
+                        <h3>Software Engineer in Test</h3>
+                        <img class="work-xp-img" src="./images/vc.png">
+                        <span>
+                            <h5>Vision Critical</h5>
+                            <h5>Sept 2015 - Aug 2016</h5>
+                        </span>
+                    </div>
+                    <div class="col-md-8">
+                    <h4>Responsibilities</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/shared-understanding.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>Before any project I worked on began development, I established a <b>mutual understanding of project requirements</b> amongst the involved developers, testers, and managers by <b>leading meetings</b> in which full expectations of the finished project were explicitly outlined.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/tdd.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>I prevented numerous code regressions and maintained an over <b>90% code coverage</b> by following a <b>test-driven development</b> process and implementing both high-level SpecFlow end-to-end tests and lower-level integration and unit tests.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/sso.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>To ensure the proper functionality of the company's <b>single sign-on</b> login, <b>global user storage</b>, and <b>authentication</b> systems, I performed manual tests and developed automated UI tests using Selenium.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/ui.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>I scrutinized <b>user interfaces</b> to ensure they were reactive, consistent across browsers, accessible, intuitive, and user-friendly.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/rest.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>I protected our <b>REST APIs</b> by testing them for unexpected use-cases, SQL injection, and backwards compatability.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/shared-understanding.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>To improve the efficiency of our manual testing, I developing visual tools in <b>Windows Forms</b> to allow testers and developers to make quick, configurable calls to our REST APIs.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/Octocat.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>I performed <b>code reviews</b> and suggested corrections to all pull requests made to our <b>Github repository</b>, which prevented a number of bugs from ever entering our code base.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="work-xp-img" src="./images/shared-understanding.png">
+                            </div>
+                            <div class="col-sm-11">
+                                <p>To <b>communicate</b> project progress to the managers, I created spreadsheets detailing the test coverage and performed <b>demos</b> upon a projects' completion.</p>
+                            </div>
+                        </div>
+                        
+                    <h4>Skills Gained</h4>
+                        <div class="row text-center">
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/c-sharp.png"><br>
+                                C#
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/visual-studio.png"><br>
+                                Visual Studio
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/specflow.png"><br>
+                                Specflow
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/selenium.png"><br>
+                                Selenium
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/powershell.png"><br>
+                                PowerShell
+                            </div>
+                            <div class="col-md-2">
+                                <img class="skills-img" src="./images/sql.png"><br>
+                                SQL
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                Critical Thinking
+                            </div>
+                            <div class="col-md-3">
+                                Attention to Detail
+                            </div>
+                            <div class="col-md-3">
+                               Test-Driven Development
+                            </div>
+                            <div class="col-md-3">
+                                Communication
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a  name="education"></a>
+        <div class='section'>
+            <div class="container">
+                <h2>Education</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="./images/ubc.png">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>University of British Columbia</h3>
+                        <h5>Bachelor of Science</h5>
+                        <h5>Computer Science Major</h5>
+                        <h5>Sept 2013 - May 2018</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <button id="view-courses" class="call-to-action" onclick="viewCourses();">
+                            View Course Summary
+                        </button>
+                    </div>
+                </div>
+                <div id="course-summary">
+                    <h3>Courses</h3>
+
+                    <h4>Software Development</h4> 
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>CPSC 110</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CPSC 210</h5>
+                        </div>
+                        <div class="col-md-3">
+                           <h5>CPSC 310</h5>
+                        </div>
+                        <div class="col-md-3">
+                           <h5>CPSC 312</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>CPSC 221</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CPSC 320</h5>
+                        </div>
+                    </div>
+
+                    <h4>Artificial Intelligence</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>CPSC 322</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>COGS 200</h5>
+                        </div>
+                    </div>
+                    <h4>Computer Infrastructure</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>CPSC 121</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CPSC 213</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CPSC 313</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CPSC 317</h5>
+                        </div>
+                    </div>
+                    <h4>Communications</h4> 
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>ENGL 111</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>ENGL 112</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CRWR 200</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CRWR 213</h5>
+                        </div>
+                    </div>
+                    <h4>Life &amp; Physical Sciences</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>BIOL 111</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>CHEM 121</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>PHYS 102</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>PHYS 103</h5>
+                        </div>
+                    </div>
+                    <h4>Math &amp; Statistics</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>MATH 100</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>MATH 105</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>MATH 200</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>MATH 221</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>STAT 200</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>STAT 304</h5>
+                        </div>
                     </div>
                     
-                    <div class="footer-col">
-                        <h4>Navigation</h4>
-                        <p>Mantras</p>
-                        <p>Wishlist</p>
-                        <p>Pathfinder Character Generator</p>
-                        <p>Mantras</p>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <button id="view-courses" class="call-to-action" onclick="hideCourses();">
+                                Hide Course Summary
+                            </button>
+                        </div>
                     </div>
-                
-                    <div class="footer-col">
-                        <h4>Social Media</h4>
-                        <p>Facebook</p>
-                        <p>Twitter</p>
-                        <p>YouTube</p>
-                        <p>Instagram</p>
-                        <p>Tumblr</p>
-                        <p>LinkedIn</p>
-                        <p>GitHub</p>
-                        <p>Email</p>
                     </div>
+                </div>
             </div>
-        </footer>
-		
-	<!-- div class="red section red-link-section">
-	<div class="content">
-					<h2>These Are A Few Of My Favourite Things</h2>
-					<div class="wrap flex-container">
-						<a class="three-col-flex" href="#goals">
-							<h4>Goal Setting</h4>
-							<img src="die.png" class="icon">
-								<p>I like to dream big! To give my life a sense of purpose and to keep myself motived, I enjoy recording my major goals.</p>
-								</a>
-						<a class="three-col-flex" href="#tech">
-							<h4>Technology</h4>
-							<img src="die.png" class="icon">
-								<p>Technology can be used to solve many problems. My love of technology has driven me to become a computer programmer.</p>
-								</a>
-						<a class="three-col-flex" href="#games">
-							<h4>Games</h4>
-							<img src="die.png" class="icon">
-								<p>My favourite hobbies include: creating computer games, leading table-top role play games, and playing games of strategy.</p>
-								</a>
-						<a class="three-col-flex" href="#education">
-							<h4>Education</h4>
-							<img src="die.png" class="icon">
-								<p>I'm a life-long student, constantly seeking more knowledge. </p>
-								</a>
-						<a class="three-col-flex" href="#media">
-							<h4>Social Media</h4>
-							<img src="die.png" class="icon">
-								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-								</a>
-						<a class="three-col-flex" href="#pop">
-							<h4>Pop Music</h4>
-							<img src="die.png" class="icon">
-								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-								</a>
-						<a class="three-col-flex" href="#equality">
-							<h4>Social Equality</h4>
-							<img src="die.png" class="icon">
-								<p>Nothing gets me excited quite like a good conversation about human and animal rights. I am a self-proclaimed social justice warrior!</p>
-								</a>
-						<a class="three-col-flex" href="#theatre">
-							<h4>Theatre</h4>
-							<img src="die.png" class="icon">
-								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-								</a>
-						<a class="three-col-flex" href="#fantasy">
-							<h4>Fantasy</h4>
-							<img src="die.png" class="icon">
-								<p>When the stress of the world becomes too much handle, the realm of fantasy provides a healthy escape from reality.</p>
-								</a>
-						<a class="three-col-flex" href="#cats">
-							<h4>Cats</h4>
-							<img src="die.png" class="icon">
-								<p>I love cats. I love every kind of cat. I just want to hug all of them, but I can't. I can't hug every cat.</p>
-								</a>
-					</div>
-					</div>
-					</div>
-					<a  name="goals">
-						<div class="rainbow"></div>
-						<div class="section">
-							<div class="content">
-								<div class="flex-container">
-									<div class="two-col">
-										<h2>Goals</h2>
-										<p>These are the accomplishments that I am most proud of!</p>
-									</div>
-									<div class="two-col">
-										<img src="goal.png" width="100%">
-											</div>
-								</div>
-								
-								<div class="goal-container">
-									<div class="goal-category">
-										<div class="goal-top-left no-shadow">
-										</div>
-										<div class="goal-internal-flex-container">
-											<div class="goal-label goal-box no-shadow">
-												<h4>Achieved Goals</h4>
-												<p>I pride myself in these recent accomplishments</p>
-											</div>
-											<div class="goal-label goal-box no-shadow"><h4>Short-Term</h4>
-												<p>I am working to reach these goals by the end of 2016<p>
-											</div>
-											<div class="goal-label goal-box no-shadow"><h4>Long-Term</h4>
-												<p>I am setting myself up to accomplish these goals when the time comes</p>
-											</div>
-										</div>
-									</div>
-									<div class="goal-category">
-										<div class="red goal-title">
-											<h4>Career</h4>
-										</div>
-										<div class="goal-internal-flex-container">
-											<div class="red goal-box">
-												<h4>Vision Critical</h4>
-												<p>Spent 12 months working as an SET at Vision Critical</p>
-											</div>
-											<div class="red goal-box">
-												<h4>Teacher's Assistant</h4>
-												<p>Become a TA for CPSC 121 to teach students about boolean algebra and logic circuits</p>
-											</div>
-											<div class="red goal-box">
-												<h4>Full Time Career</h4>
-												<p>I hope to build a career in software development following my 2018 graduation from UBC</p>
-											</div>
-										</div>
-									</div>
-									<div class="goal-category">
-										<div class="yellow goal-title">
-											<h4>Education</h4>
-										</div>
-										<div class="goal-internal-flex-container">
-											<div class="yellow goal-box">
-												<h4>Computer Science</h4>
-												<p>In 2013, my high school dream was realized when I was accepted into UBC's computer science program</p>
-											</div>
-											<div class="yellow goal-box">
-												<h4>Ruby on Rails</h4>
-												<p>Teach myself how to use Rails this summer!</p>
-											</div>
-											<div class="yellow goal-box">
-												<h4>Honours Degree</h4>
-												<p>In </p>
-											</div>
-										</div>
-									</div>
-									<div class="goal-category">
-										<div class="green goal-title"><h4>Lifestyle</h4>
-										</div>
-										<div class="goal-internal-flex-container">
-											<div class="green goal-box">
-												<h4>Go Vegan!</h4>
-												<p>:D</p>
-											</div>
-											<div class="green goal-box">
-												<h4>Exercise Routine</h4>
-											</div>
-											<div class="green goal-box">
-												<h4>Illiminate Intoxicants</h4>
-											</div>
-										</div>
-									</div>
-									<div class="goal-category">
-										<div class="blue goal-title">
-											<h4>Social</h4>
-										</div>
-										<div class="goal-internal-flex-container">
-											<div class="blue goal-box">
-												<h4>Pathfinder</h4>
-											</div>
-											<div class="blue goal-box">
-												<h4>Youtube</h4>
-												<p>Revive my channel and create videos to inspire confidence and compassion in the queer youth of today</p>
-											</div>
-											<div class="blue goal-box">
-												<h4>Artist</h4>
-												<p>Share a collection of self-created poetry and multi-media art with the world</p>
-											</div>
-										</div>
-									</div>
-									<div class="goal-category">
-										<div class="purple goal-title">
-											<h4>Projects</h4>
-										</div>
-										<div class="goal-internal-flex-container">
-											<div class="purple goal-box">
-												<h4>Personal Website</h4>
-												<p>Armed with only a text editor, I designed and devloped this site to represent my skills and personality.</p>
-											</div>
-											<div class="purple goal-box">
-												<h4>Planeshift</h4>
-												<p>Planeshift is an mmorpg ran by volunteers. I would like to join their team.</p>
-											</div>
-											<div class="purple goal-box">
-												<h4>Online Strategy Game</h4>
-												<p>I have a dream to invent a multiplayer strategy game and develop it from scratch.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<h2>Aspirations and Inspirations</h2>
-							</div>
-						</div -->        
-	</body> 
-</html>
+        </div>
+        
+        <a  name="values"></a>
+        <div class="section">
+            <div class="container-fluid double-peace-bg">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-6 pink">
+                        <div class="container-small">
+                            <h2>Values</h2>
+                            <hr>
+                            <h3>Education</h3>
+                            <p>Education is important. I am passionate about education.</p>
+                            <p>I contribute to education.</p>
+                            <p>I would like to further contribute to education.</p>
+
+                            <h3>Entertainment</h3>
+                            <p>Entertainment is a significant thing to care about. I care about entertainment.</p>
+                            <p>I contribute to the entertainment of others.</p>
+                            <p>I want to improve the ways I entertain people.</p>
+
+                            <h3>Equality</h3>
+                            <p>Social Equality is an important topic.</p>
+                            <p>I promote equality.</p>
+                            <p>I want to further my impact in promoting equality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <a  name="interests"></a>
+        <div class='section'>
+            <div class="container">
+                <h2>Interests</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Web Development</h3>
+                        <p>I am passionate about web development.</p>
+                        <p>Web development is important.</p>
+                        <p>I can do web development.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>UI Design</h3>
+                        <p>I am passionate about UI Design.</p>
+                        <p>UI Design is important.</p>
+                        <p>I can do web development.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Game Development</h3>
+                        <p>I am passionate about game development.</p>
+                        <p>Game development is important.</p>
+                        <p>I can do game development.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Artificial Intelligence</h3>
+                        <p>I am passionate about AI.</p>
+                        <p>AI is important.</p>
+                        <p>I can do AI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class='section footer'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 footer-img">
+                        <img src="./images/water-selfie.jpg">
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Site Map</h3>
+                        <h5><a href="#top">Top of Page</a></h5>
+                        <h5><a href="#projects">Personal Projects</a></h5>
+                        <h5><a href="#work">Work Experience</a></h5>
+                        <h5><a href="#education">Education</a></h5>
+                        <h5><a href="#values">Values</a></h5>
+                        <h5><a href="#interests">Interests</a></h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>Dylan Weicker</h3>
+                        <p>Email: dylanweicker@gmail.com</p>
+                        <p>Phone: (604) 323-4232</p>
+                        <div class="social-media">
+                            <a href="http://www.facebook.com/dylan.weicker">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="http://www.instagram.com/dylanweicker">
+                                 <i class="fa fa-instagram"></i>
+                            </a>
+
+                            <a href="http://www.twitter.com/dylanweicker">
+                                 <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="http://github.com/dylanweicker">
+                                <i class="fa fa-github"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/dylan-weicker-3b9809111">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <a class="call-to-action" href="#">View Resume</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html

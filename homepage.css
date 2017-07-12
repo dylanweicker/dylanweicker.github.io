@@ -1,0 +1,290 @@
+/* Palette
+Red: #c0392b
+Green: #27ae60
+Pink: #fcf0ec
+Lime: #9AEF9A
+
+*/
+
+/* Fonts */
+
+.header h1{
+    padding: 15px;
+    text-transform: uppercase;
+    margin: 64px auto;
+    text-align: center;
+    border: none;
+    font-size: 52px;
+    font-family: 'Lobster', cursive;
+    color: white;
+    text-shadow: 1px 2px 2px black;
+}
+
+.header-text h3{
+    color: white;
+}
+
+h2, h3, h4, h5{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2, h3{
+    color: #c0392b;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    margin: 48px 0 20px 0;
+}
+
+
+h3{
+    font-size: 28px;
+    margin: 42px 0 18px 0;
+}
+
+.no-gap h3{
+    margin-top: 0;
+}
+
+h4{
+    color: #27ae60;
+}
+
+p{
+    font-family: 'Lora', serif;
+    font-size: 14px;
+}
+
+/* Header section */
+.header{
+    background: #e74c3c;
+    color: white;
+}
+
+.row{
+    margin-bottom: 30px;
+}
+
+.header .row{
+    display: flex;
+    margin: 64px auto;
+}
+
+.header-img{
+    padding: 0 8%;
+}
+
+.header-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.header-text{
+    vertical-align: middle;
+    margin: auto;
+}
+
+.social-media a,
+.social-media a:active,
+.social-media a:visited{
+    font-size: 28px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media a:hover{
+    color: #EF9A9A;
+    text-decoration: none;
+}
+
+
+.footer .social-media a:hover{
+    color: #9AEF9A;
+    text-decoration: none;
+}
+
+.footer .social-media{
+    margin-bottom: 36px;
+}
+
+
+.call-to-action,
+.call-to-action:visited{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 14px 34px;
+    border-radius: 4px;
+    color: #c0392b;
+    border: #c0392b 2px solid;
+    text-decoration: none!important;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+    min-height: 44px;
+}
+
+.call-to-action:hover,
+.call-to-action:active{
+    color: #EF9A9A;
+    border-color: #EF9A9A;
+    outline: none;
+}
+
+.header .call-to-action,
+.header .call-to-action:visited{
+    color: white;
+    border-color: white;
+    outline: none;
+}
+
+.header .call-to-action:hover,
+.header.call-to-action:active{
+    color: #EF9A9A;
+    border-color: #EF9A9A;
+    outline: none;
+}
+
+
+.footer .call-to-action,
+.footer .call-to-action:visited{
+    margin-top: 14px;
+    color: white;
+    border-color: white;
+    outline: none;
+}
+
+.footer .call-to-action:hover,
+.footer.call-to-action:active{
+    color: #9AEF9A;
+    border-color: #9AEF9A;
+    outline: none;
+}
+
+/* body sections */
+
+.pink{
+    background: #fcf0ec;
+}
+
+hr{
+    width: 120px;
+    height: 2px;
+    background: #27ae60;
+    border-radius: 2px;
+    margin-bottom: 42px;
+}
+
+/* cards */
+.card{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-block{
+    padding: 1.25rem;
+}
+
+.card-img-top{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+
+/* buttons */
+.btn-primary,
+.btn-primary:visited{
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.btn-primary:hover,
+.btn-primary:active{
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+/* images */
+.work-xp-img{
+    width: 42px;
+    height: auto;
+    margin-right: 14px;
+    float: left;
+}
+
+.skills-img{
+    height: 42px;
+    width: auto;
+}
+
+#course-summary{
+    display: none;
+}
+
+li{
+    margin-bottom: 16px;
+}
+
+/*side img section */
+
+.container-fluid .row{
+    margin-bottom: 0;
+}
+
+.double-peace-bg{
+    background-image: url(./images/double-peace.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.side-section{
+    background: white;
+}
+
+
+/*footer */
+.footer{
+    background: #27ae60;
+}
+
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer p{
+    color: white;
+}
+
+.footer a,
+.footer a:visited{
+    color: white;
+}
+.footer a:hover,
+.footer a:active{
+    color: #9AEF9A;
+}
+
+.footer-img{
+    padding: 0 3%;
+    text-align: center;
+    margin-top: 42px;
+}
+
+@media screen and (max-width: 766px){
+    .footer-img{
+        padding: 0 10%;
+    }
+}
+
+.footer-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}

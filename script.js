@@ -14,3 +14,15 @@ function hideCourses(){
     window.location.href = "#education";
     //Todo Jump to top of education
 }
+
+
+function viewVisionCritical(){
+    document.getElementById('vision-critical-xp').style.display = "block";
+    document.getElementById('vision-critical-view').style.display = "none";
+}
+
+
+function viewMazdis(){
+    document.getElementById('mazdis-xp').style.display = "block";
+    document.getElementById('mazdis-view').style.display = "none";
+}

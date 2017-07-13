@@ -239,13 +239,39 @@ li{
 }
 
 .double-peace-bg{
-    background-image: url(./images/double-peace.jpg);
+    background-image: url(./images/double-peace.JPG);
     background-position: center;
     background-size: cover;
 }
 
 .side-section{
     background: white;
+}
+
+
+.view-more{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 80px;
+}
+
+.view-more>a,
+.view-more>a:visited{
+    text-decoration: none;
+}
+
+.view-more>a:hover,
+.view-more>a:active{
+    text-decoration: none;
+    color: #9AEF9A;
+    cursor: pointer;
+}
+
+#vision-critical-xp{
+    display: none;
+}
+#mazdis-xp{
+    display: none;
 }
 
 

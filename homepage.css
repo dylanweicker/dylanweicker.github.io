@@ -167,6 +167,10 @@ p{
 
 /* body sections */
 
+.container, .container-small{
+    padding-bottom: 30px;
+}
+
 .pink{
     background: #fcf0ec;
 }

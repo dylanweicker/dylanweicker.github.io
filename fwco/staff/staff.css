@@ -15,6 +15,8 @@ h3{
     margin-top: 20px;
     width: 80%;
     overflow: hidden;
+    border: white 4px solid;
+    box-shadow: 0 0 4px #3498DB;
 }
 
 .staff-photo>img{
@@ -42,5 +44,5 @@ h3{
 
 .bio{
     margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }

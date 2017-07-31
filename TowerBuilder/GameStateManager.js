@@ -1,4 +1,4 @@
-var states = {"play" : 0};
+var states = {"play" : 0, "win": 1};
 
 var phases = {"selectBuilder" : 0,
               "moveBuilder": 1,
@@ -14,13 +14,14 @@ class GameStateManager{
         turns = players;
         this.turn = players[0];
         this.phase = phases.selectBuilder;
+        this.state = states.play;
         mouseHandler = new BuilderSelector(this.turn);
         this.drawer = drawer;
         drawer.setPhase(this.turn, this.phase);
     }
     
     onMouseMove(){
-        c.style.cursor = "defualt";
+        c.style.cursor = "default";
         mouseHandler.onMouseMove(); 
         this.checkRotLeftHover();
         this.checkRotRightHover()
@@ -76,22 +77,43 @@ class GameStateManager{
             this.phase = 0;
             this.turn = this.turn == players[0] ? players[1] : players[0];
         }
+        this.checkWin();
         this.resetPhase();
     }
     
     resetPhase(){
         //updateMouseHandler
-        if (this.phase == phases.selectBuilder){
-            mouseHandler = new BuilderSelector(this.turn);
+        if (this.state == states.play){
+            if (this.phase == phases.selectBuilder){
+                mouseHandler = new BuilderSelector(this.turn);
+            }
+            else if (this.phase == phases.moveBuilder){
+                mouseHandler = new BuilderMover(this.turn);
+            }
+            else if (this.phase == phases.buildBuilding){
+                mouseHandler = new BuildingBuilder(this.turn);
+            }
         }
-        else if (this.phase == phases.moveBuilder){
-            mouseHandler = new BuilderMover(this.turn);
-        }
-        else if (this.phase == phases.buildBuilding){
-            mouseHandler = new BuildingBuilder(this.turn);
+        else{
+            mouseHandler = null;
         }
 
-        drawer.setPhase(this.turn, this.phase);
+        drawer.setPhase(this.turn, this.phase, this.state);
+    }
+    
+    checkWin(){
+        if(this.turn.builder1.getLevel() > 3 ||
+            this.turn.builder2.getLevel() > 3){
+            this.state = states.win;
+        }
+        else if(player1.isTrapped()){
+            this.turn = player2;
+            this.state = states.win;
+        }
+        else if(player2.isTrapped()){
+            this.turn = player1;
+            this.state = states.win;
+        }
     }
 }
 

@@ -34,6 +34,7 @@
         <!-- normal headers -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
         
         <!-- body text -->
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
@@ -46,7 +47,7 @@
                 <h1>Dylan Weicker</h1>
                 <div class="row">
                     <div class="col-md-6 header-img">
-                        <img src="./images/mushroom-cut-rainbow.jpg">
+                        <img src="./images/double-peace.JPG">
                     </div>
                     <div class="col-md-6 header-text">
                         <h3>Hello There !</h3>
@@ -82,10 +83,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <a class="call-to-action" href="#">
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-primary btn-lg">
                             View Resume
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -131,7 +132,7 @@
                           <img class="card-img-top" src="./images/clue.jpg">
                           <div class="card-block">
                             <h4 class="card-title">Fantasy Clue Game</h4>
-                            <p class="card-text">Using HTML5's canvas element and JavaScript, I recreated Hasbro's classic boardgame Clue. The game includes 2 AI opponents who navigate the board and gain knowledge as the game progresses.</p>
+                            <p class="card-text">Using HTML5's canvas element, I recreated Hasbro's classic boardgame Clue. The game includes 2 AI opponents who navigate the board and gain knowledge as the game progresses.</p>
                             <div class="text-right">
                                 <a href="./clue/index.html" class="btn btn-primary">Play Game</a>
                             </div>
@@ -181,7 +182,7 @@
             </div>
         </div>
         <a  name="work"></a>
-        <div class='section pink'>
+        <div class='section grey'>
             <div class="container">
                 <h2>Work Experience</h2>
                 <hr>
@@ -195,53 +196,17 @@
                         </span>
                     </div>
                     <div class="col-md-8">
-                        <div id="mazdis-view" class="view-more">
-                            <a onclick="viewMazdis();">
-                                <h4>View Experience <i class="fa fa-chevron-down"></i></h4>
-                            </a>
-                        </div>
                         <div id="mazdis-xp">
                         <h4>Responsibilities</h4>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/tdd.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>Independently created the entire suite of <b>unit tests</b> for an angular app using <b>Karma and Jasmine</b>.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/html.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>Implemented new features and <b>angular components</b> to an existing web app using <b>Typescript, HTML, and CSS</b>.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/ui.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>Lead meetings in which whiteboarded <b>UI designs</b> and then implemented those designs using HTML and CSS.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/firebase.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>Debugged, refactored, and added on to existing <b>angular services</b> which accessed <b>Google's Firebase</b> through an api.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/shared-understanding.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p><b>Defined my own priorities and goals</b> as I worked in a small team of two software developers without any technical managers.</p>
-                                </div>
-                            </div>
+                            <ul>
+                                <li>Independently created a complete suite of <b>unit tests</b> for an angular app using <b>Karma and Jasmine</b>.</li>
+                                <li>Implemented new features and <b>angular components</b> to an existing web app using <b>Typescript, HTML, and CSS</b>.</li>
+                                <li>Lead meetings in which we whiteboarded <b>UI designs</b> and then implemented those designs using HTML and CSS.</li>
+                                <li>Debugged, refactored, and improved existing <b>angular services</b> which accessed <b>Google's Firebase</b> through an api.</li>
+                                <li><b>Set my own goals & priorities</b> as I worked in a small team of two software developers without technical managers.</li>
+                                <li><b>Lead job interviews</b> and reviewed resumes to assess candidates levels of skills and abilities.</li>
+                                <li><b>Trained and on-boarded new employees</b> to get them up to speed with the project.</li>
+                            </ul>
                         <h4>Skills Gained</h4>
                             <div class="row text-center">
                                 <div class="col-md-2">
@@ -269,7 +234,7 @@
                                     Jasmine
                                 </div>
                             </div>
-                            <div class="row text-center">
+                            <!--div class="row text-center">
                                 <div class="col-md-3">
                                     Self Management
                                 </div>
@@ -282,7 +247,7 @@
                                 <div class="col-md-3">
                                     Resourcefulness
                                 </div>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                 </div>
@@ -296,76 +261,18 @@
                         </span>
                     </div>
                     <div class="col-md-8">
-                        <div id="vision-critical-view" class="view-more">
-                            <a onclick="viewVisionCritical();">
-                                <h4>View Experience <i class="fa fa-chevron-down"></i></h4>
-                            </a>
-                        </div>
                         <div id="vision-critical-xp">
                         <h4>Responsibilities</h4>
                             <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/shared-understanding.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>Before any project I worked on began development, I established a <b>mutual understanding of project requirements</b> amongst the involved developers, testers, and managers by <b>leading meetings</b> in which full expectations of the finished project were explicitly outlined.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/tdd.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>I prevented numerous code regressions and maintained an over <b>90% code coverage</b> by following a <b>test-driven development</b> process and implementing both high-level SpecFlow end-to-end tests and lower-level integration and unit tests.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/sso.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>To ensure the proper functionality of the company's <b>single sign-on</b> login, <b>global user storage</b>, and <b>authentication</b> systems, I performed manual tests and developed automated UI tests using Selenium.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/ui.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>I scrutinized <b>user interfaces</b> to ensure they were reactive, consistent across browsers, accessible, intuitive, and user-friendly.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/rest.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>I protected our <b>REST APIs</b> by testing them for unexpected use-cases, SQL injection, and backwards compatability.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/shared-understanding.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>To improve the efficiency of our manual testing, I developing visual tools in <b>Windows Forms</b> to allow testers and developers to make quick, configurable calls to our REST APIs.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/Octocat.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>I performed <b>code reviews</b> and suggested corrections to all pull requests made to our <b>Github repository</b>, which prevented a number of bugs from ever entering our code base.</p>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="work-xp-img" src="./images/shared-understanding.png">
-                                </div>
-                                <div class="col-sm-11">
-                                    <p>To <b>communicate</b> project progress to the managers, I created spreadsheets detailing the test coverage and performed <b>demos</b> upon a projects' completion.</p>
+                                <li>Established a <b>mutual understanding of project requirements</b> amongst the team by <b>leading meetings</b> in which expectations of the finished project were explicitly outlined.</li>
+                                <li>Prevented code regressions by following a <b>test-driven development</b> process.
+                                <li>Mainatined <b>over 90% code coverage</b> by implementing end-to end, integration, and unit tests</li>
+                                <li>Ensured the proper functionality of company's <b>single sign-on</b> login, <b>global user storage</b>, and <b>authentication</b> systems.</li>
+                                <li>Analyzed <b>user interfaces</b> to ensure they were reactive, consistent across browsers, accessible, intuitive, and user-friendly.</li>
+                                <li>Protected our <b>REST APIs</b> by testing them for unexpected use-cases, SQL injection, and backwards compatability.</li>
+                                <li>Developed visual tools in <b>Windows Forms</b> that allowed testers and developers to make efficient calls to our REST APIs.</li>
+                                <li>Performed <b>code reviews</b> and suggested corrections to pull requests made to our <b>GitHub repository</b>.
+                                    <li><b>Communicated</b> project progress to managers by creating detailed spreadsheets and performing <b>demos</b>.</p>
                                 </div>
                             </div>
 
@@ -396,7 +303,7 @@
                                     SQL
                                 </div>
                             </div>
-                            <div class="row text-center">
+                            <!--div class="row text-center">
                                 <div class="col-md-3">
                                     Critical Thinking
                                 </div>
@@ -408,7 +315,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     Communication
-                                </div>
+                                </div-->
                             </div>
                         </div>
                     </div>
@@ -422,19 +329,16 @@
                 <h2>Education</h2>
                 <hr>
                 <div class="row">
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-4 text-center">
                         <img src="./images/ubc.png">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <h3>University of British Columbia</h3>
                         <h5>Bachelor of Science</h5>
                         <h5>Computer Science Major</h5>
                         <h5>Sept 2013 - May 2018</h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <button id="view-courses" class="call-to-action" onclick="viewCourses();">
+                        
+                        <button id="view-courses" class="btn btn-primary" onclick="viewCourses();">
                             View Course Summary
                         </button>
                     </div>
@@ -546,7 +450,7 @@
                     
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <button id="view-courses" class="call-to-action" onclick="hideCourses();">
+                            <button id="view-courses" class="btn btn-primary" onclick="hideCourses();">
                                 Hide Course Summary
                             </button>
                         </div>
@@ -557,33 +461,37 @@
         </div>
         
         <a  name="values"></a>
-        <div class="section">
-            <div class="container-fluid double-peace-bg">
+        <div class="section grey">
+            <div class="container">
+                <h2>Values</h2>
+                <hr>
                 <div class="row">
-                    <div class="col-sm-6 col-sm-offset-6 pink">
-                        <div class="container-small">
-                            <h2>Values</h2>
-                            <hr>
-                            <h3>Education</h3>
-                            <p>"Give a man [an eggplant] and he'll eat for a day, teach a man to [tend an eggplant garden] and he'll eat for the rest of the life."</p>
+                    <div class="col-md-8 col-md-offset-4">
+                        <h3>Education</h3>
+                        <p>"Give a man [an eggplant] and he'll eat for a day, teach a man to [tend an eggplant garden] and he'll eat for the rest of the life."</p>
 
-                            <p>In my opinion, education is the most important asset to humanity. It builds a person's knowledge of the world and empowers them to perform incredible tasks such as sharing insightful new philosophies or creating innovative technologies.</p>
+                        <p>In my opinion, education is the most important asset to humanity. It builds a person's knowledge of the world and empowers them to perform incredible tasks such as sharing insightful new philosophies or creating innovative technologies.</p>
 
-                            <p>"To teach is to learn twice." That is why I love educating others. I like to create and post multimedia content online to share my knowledge with others. I discuss allyship with my peers to teach them how they can help people and animals who face oppression. And I am always willing to tutor others in fields where I excell, such as math and science.</p>
+                        <p>"To teach is to learn twice." That is why I love educating others. I like to create and post multimedia content online to share my knowledge with others. I discuss allyship with my peers to teach them how they can help people and animals who face oppression. And I am always willing to tutor others in fields where I excell, such as math and science.</p>
 
-                            <p>I hope to use my skills as a web developer to work on a project which helps to educate others.</p>
-
-                            <h3>Entertainment</h3>
-                            <p>The best way to engage a person is to entertain them. People are more willing to listen to what you have to say and learn from you if they're having fun along the way.</p>
-                            <p>There are many forms of entertainment that I appreciate. Theatre means a lot to me. I spent years volunteering my time as an actor and starred in three amatuer plays, including Shakespeare's Macbeth. I am obsessed with pop culture. Don't even get me started talking about pop music or the latest Netflix show, I'll never stop. And theres nothing I appreciate more than a dank meme. But the most rudimentary form of entertainment has to be games.</p>
-                            <p>Game development has always been a huge passion of mine. It's what drove me to get started in computer science when I was 12; I wanted to make computer games.</p>
-                            <p>It is my ambition to work as a professional game developer so that I can entertain a large audience.</p>
-
-                            <h3>Equality</h3>
-                            <p>Social Equality is an important topic.</p>
-                            <p>I promote equality.</p>
-                            <p>I want to further my impact in promoting equality.</p>
-                        </div>
+                        <p>I hope to use my skills as a web developer to work on a project which helps to educate others.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">
+                        <h3>Entertainment</h3>
+                        <p>The best way to engage a person is to entertain them. People are more willing to listen to what you have to say and learn from you if they're having fun along the way.</p>
+                        <p>There are many forms of entertainment that I appreciate. Theatre means a lot to me. I spent years volunteering my time as an actor and starred in three amatuer plays, including Shakespeare's Macbeth. I am obsessed with pop culture. Don't even get me started talking about pop music or the latest Netflix show, I'll never stop. And theres nothing I appreciate more than a dank meme. But the most rudimentary form of entertainment has to be games.</p>
+                        <p>Game development has always been a huge passion of mine. It's what drove me to get started in computer science when I was 12; I wanted to make computer games.</p>
+                        <p>It is my ambition to work as a professional game developer so that I can entertain a large audience.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">
+                       <h3>Equality</h3>
+                        <p>Social Equality is an important topic.</p>
+                        <p>I promote equality.</p>
+                        <p>I want to further my impact in promoting equality.</p>
                     </div>
                 </div>
             </div>
@@ -667,7 +575,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <a class="call-to-action" href="#">View Resume</a>
+                                <button class="btn btn-primary btn-lg">View Resume</button>
                             </div>
                         </div>
                     </div>

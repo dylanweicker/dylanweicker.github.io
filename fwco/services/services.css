@@ -17,17 +17,20 @@
     background: #fff;
     border: 1px solid #bdc3c7;
     border-radius: 4px;
-    margin: 20px 0;
     padding: -1;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.24);
+    
     overflow: hidden;
+    margin: 20px 0;
 }
 
 .card-img-top{
     width: 100%;
-    height: 160px;
+    height: 200px;
     overflow: hidden;
-    background: #2980B9;
+    background-image: url('../images/read-more.jpg');
+    background-size: contain;
+    background-position: center;
 }
 
 .card-img-top img{
@@ -37,10 +40,10 @@
     cursor: pointer;
 }
 .card-img-top img:hover{
-    opacity: 0.8;
-    width: 110%;
-    margin: -5%;
-    transition: 100ms ease;
+    opacity: 0.3;
+    /*width: 110%;*/
+    /*margin: -5%;*/
+    transition: 200ms ease;
 }
 
 .card-block{
@@ -89,11 +92,14 @@
     padding-right: 20px;
     width: 100%;
     text-align: right;
+    font-size: 16px;
+    outline: none!important
 }
 
 .v-center{
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .font-lg{
@@ -102,16 +108,21 @@
     line-height: 64px;
     font-family: "Open-Sans", sans-serif;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .block{
-    margin: 40px 0;
+    margin: 30px 0;
     border-left: 4px solid #3498DB;
     padding-left: 8px;
 }
 
 .modal-body{
     padding: 30px;
+}
+
+.modal-body h4{
+    text-align: center;
 }
 
 .modal-header{
@@ -132,4 +143,8 @@ i{
 }
 .x:hover {
     color: #F75C4C;
+}
+
+ul{
+    margin-bottom: 30px;
 }

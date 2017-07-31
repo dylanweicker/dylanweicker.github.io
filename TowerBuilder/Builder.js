@@ -32,10 +32,6 @@ class Builder{
         return (moves.length > 0);
     }
     
-    moveToLocation(x, y){
-    
-    }
-    
     findAvailableBuilds(){
         var availableBuilds = [];
         for (var x = this.x-1; x <= this.x+1; x++){
@@ -48,6 +44,10 @@ class Builder{
             }
         }
         return availableBuilds;
+    }
+    
+    getLevel(){
+        return this.level;
     }
     
     setInactive(){

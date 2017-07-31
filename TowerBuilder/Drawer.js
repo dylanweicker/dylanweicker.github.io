@@ -132,23 +132,33 @@ class Drawer{
                       rotRightButton.height);
     }
 
-    setPhase(turn, phase){
+    setPhase(turn, phase, state){
+        let playerName = "";
+        
         if (turn == player1){
             this.phaseX = 80;
             this.phaseColor = "green";
+            playerName = "Green";
         }
         else{
             this.phaseX = 500;
             this.phaseColor = "red";
+            playerName = "Red";
         }
-        if (phase == 0){
-            this.phaseText = "Select Builder";
+        
+        if (state == states.play){
+            if (phase == 0){
+                this.phaseText = "Select Builder";
+            }
+            else if(phase == 1){
+                this.phaseText = "Move";
+            }
+            else if(phase == 2){
+                this.phaseText = "Build";
+            }
         }
-        else if(phase == 1){
-            this.phaseText = "Move";
-        }
-        else if(phase == 2){
-            this.phaseText = "Build";
+        else if (state == states.win){
+                this.phaseText = playerName + " wins!";
         }
     }
 

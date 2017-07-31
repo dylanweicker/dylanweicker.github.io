@@ -1,0 +1,27 @@
+
+<html lang="en">
+    <head>
+        <script>
+        function foo(){
+            console.log('a');
+                bar().then(() =>{
+                console.log('b');
+            }).catch(() =>{
+                console.log('c');
+            });
+            console.log('d');
+        }
+        function bar() {
+            console.log('e');
+            return new Promise((fulfill) =>{
+                console.log('f');
+                fulfill();
+                console.log('g');
+            });
+            console.log('h');
+        }
+        </script>
+    </head> 
+    <body id="body" onload="foo();">
+    </body>
+</html>

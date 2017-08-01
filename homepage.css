@@ -151,7 +151,9 @@ hr{
 
 /* cards */
 .card{
-    border-radius: .25rem;
+    border-top: 2px solid #d52056;
+    border-bottom: 2px solid #d52056;
+    margin-bottom: 20px;
 }
 
 .card-block{
@@ -161,18 +163,18 @@ hr{
 .card-img-top{
     width: 100%;
     height: auto;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    border-bottom: 1px solid rgba(0,0,0,.125);
+    z-index: -1;
 }
 
 
 /* buttons */
 .btn{
-    border-radius:  16px;
+    border-radius:  4px;
     outline: none;
     box-shadow: none;
     box-shadow: 1px 2px 0px rgba(0,0,0,.125);
+    padding: 5px 18px;
+    margin: 5px 0;
 }
 
 .btn-primary,
@@ -229,6 +231,21 @@ hr{
     width: auto;
 }
 
+.dylan-photo{
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 40px;
+    width: 60%;
+    overflow: hidden;
+    border: #f7f7fb 6px solid;
+    box-shadow: 0 0 4px #00c09d;
+}
+
+.dylan-photo>img{
+    width:100%;
+}
+
+
 #course-summary{
     display: none;
 }
@@ -238,7 +255,7 @@ li{
 }
 
 ul{
-    padding-left: 0;
+    padding-left: 30px;
 }
 
 /*side img section */
@@ -281,7 +298,8 @@ ul{
 }
 
 .footer-img{
-    padding: 0 3%;
+    padding-right: 8%;
+    padding-left: 0;
     text-align: center;
     margin-top: 42px;
 }
@@ -293,7 +311,7 @@ ul{
 }
 
 .footer-img img{
-    width: 100%;
+    width: 75%;
     height: auto;
     border-radius: 50%;
 }

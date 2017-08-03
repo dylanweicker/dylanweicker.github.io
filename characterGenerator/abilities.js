@@ -3,7 +3,7 @@ var step = 0;
 var substep = 0;
 var steps = ['step-one', 'step-two', 'step-three', 'step-four', 'step-five', 'step-six'];
 var steppers = ["stepper-one", "stepper-two", "stepper-three", "stepper-four", "stepper-five", "stepper-six"];
-var substeps = [['abilities-page-one', 'abilities-page-two', 'abilities-page-three', 'abilities-page-four'], ['race-page-one', 'race-page-two']];
+var substeps = [['abilities-page-one', 'abilities-page-two', 'abilities-page-three', 'abilities-page-four'], ['race-page-one', 'race-page-two', 'race-page-three'], ['class-page-one']];
 
 function hideAllSteps(){
     for (var i = 0; i < steps.length; i++){

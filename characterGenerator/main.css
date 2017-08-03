@@ -704,6 +704,10 @@ you can then reuse these bars as a reference throughout each step*/
 	font-weight: bold;
 }
 
+#race-name{
+    text-align: left;
+    padding-left: 10px;
+}
 
 
 

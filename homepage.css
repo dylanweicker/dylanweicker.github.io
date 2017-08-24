@@ -231,7 +231,13 @@ hr{
     width: auto;
 }
 
-.dylan-photo{
+.values-photo{
+    margin: auto;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.circle-photo{
     border-radius: 50%;
     margin: auto;
     margin-top: 40px;
@@ -241,7 +247,8 @@ hr{
     box-shadow: 0 0 4px #00c09d;
 }
 
-.dylan-photo>img{
+.circle-photo>img,
+.values-photo>img{
     width:100%;
 }
 
@@ -314,4 +321,16 @@ ul{
     width: 75%;
     height: auto;
     border-radius: 50%;
+}
+
+.col-md-3{
+    position: relative;
+}
+
+.grade{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-weight: bold;
+    color: green;
 }

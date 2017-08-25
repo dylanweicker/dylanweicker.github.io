@@ -151,8 +151,9 @@ hr{
 
 /* cards */
 .card{
-    border-top: 2px solid #d52056;
-    border-bottom: 2px solid #d52056;
+    border-top: 3px solid #d52056;
+    border-bottom: 3px solid #d52056;
+    border-radius: 3px;
     margin-bottom: 20px;
 }
 
@@ -329,8 +330,8 @@ ul{
 
 .grade{
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 50px;
     font-weight: bold;
-    color: green;
+    color: #2d87b1;
 }

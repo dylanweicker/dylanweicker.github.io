@@ -176,20 +176,25 @@ hr{
     box-shadow: 1px 2px 0px rgba(0,0,0,.125);
     padding: 5px 18px;
     margin: 5px 0;
+    outline: none!important;
 }
 
 .btn-primary,
-.btn-primary:visited{
+.btn-primary:visited,
+.btn-primary:focus{
     background-color: #ef2964;
     border-color: #ef2964;
+    color: white;
 }
 
 .btn-primary:hover,
-.btn-primary:active{
+.btn-primary:active,
+.btn-primary:active:focus{
     transition: 100ms ease;
     background-color: #d52056;
     border-color: #d52056;
     box-shadow: 1px 2px 5px rgba(0,0,0,.25);
+    color: white!important;
 }
 
 .btn-lg{

@@ -111,10 +111,13 @@ h4{
 }
 
 /* BUTTONS */
+button{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .btn-primary{
     background-color: #1E6876;
     border-color: #1E6876;
-    font-family: 'Open Sans', sans-serif;
     margin-bottom: 16px;
 }
 

@@ -1,0 +1,245 @@
+
+body{
+    font-family: 'Georgia', serif;
+}
+
+p{
+    font-size: 1.6rem;
+    color: #253D4A;
+}
+
+i{
+    text-align: center;
+    color: #2A8194;
+    font-size: 8rem!important;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+h1, h2, h3, h4{
+    text-shadow: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h1{
+    color: #1E6876;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h2{
+    color: #2A8194;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h3{
+    color: #2A8194;
+    font-size: 2rem;
+}
+
+h4{
+    color: #2A8194;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.container{
+    padding: 40px;
+}
+
+/* HEADER JUMBOTRON */
+.first{
+    /*margin-top: -20px;*/
+    margin-bottom: 0;
+}
+
+.first h1,
+.first h2{
+    color: #FFF;
+    text-align: left;
+}
+
+.first h1{
+    font-size: 8rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed';
+}
+
+.first h2{
+    margin-top: 0;
+    padding-bottom: 10px;
+    font-family: 'Open Sans';
+}
+
+.first h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #c0392b!important;
+}
+
+.jumbotron{
+    padding: 290px 20px 10px;
+    margin-bottom: 0;
+    background-color: #1E6876;
+}
+
+.jumbotron h1,
+.jumbotron h2,
+.jumbotron h3{
+    font-weight: 400;
+}
+
+.jumbotron h1{
+    text-shadow: 1px 1px 1px #333;
+}
+
+.jumbotron h2{
+    text-transform: none;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.jumbotron h3{
+    text-transform: none;
+    font-weight: normal;
+    font-size: 2.2rem;
+    color: #E74C3C;
+}
+
+/* BUTTONS */
+.btn-primary{
+    background-color: #1E6876;
+    border-color: #1E6876;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 16px;
+}
+
+.btn-primary:hover,
+.btn-primary:active{
+    background-color: #2A8194;
+    border-color: #2A8194
+}
+
+/* Horizontal Rule*/
+hr {
+    width: 128px;
+    height: 4px;
+    background: #E74C3C;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+}
+
+
+ /* CARDS */
+
+.yellow-200{
+    background-color: #FFF;
+}
+
+.green-200{
+    background-color: #ECF0F1;
+}
+
+
+
+.white{
+    background-color: #FFF;
+}
+
+.grey{
+    background-color: #ECF0F1;
+}
+
+.container-small{
+    padding: 40px;
+}
+
+
+/* FOOTER */
+.contact-us{
+    margin-right: 20px;
+}
+
+.no-bullet{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.address{
+    margin-bottom: 20px;
+}
+
+.form-control{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.midnight{
+    background-color: #253D4A;
+    color: #ECF0F1;
+}
+
+.midnight p{
+    color: #ECF0F1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.midnight a.fal{
+    color: #1E6876;
+    margin-right: 48px;
+    margin-left: -16px;
+}
+.midnight a.fal:hover{
+    color: #2A8194;
+}
+
+.midnight li{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.midnight h2{
+    color: #ECF0F1;
+    margin-left: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-danger{
+    font-size: 12;
+    font-family: sans-serif;
+}
+
+.text-jumbo{
+    font-size: 80px;
+    line-height: 84px;
+    color: #3498DB;
+    font-family: "Open-Sans", sans-serif;
+    margin-bottom: 0;
+}
+
+.text-muted{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.icon-jumbo{
+    font-size: 100px!important;
+    margin: 0;
+}
+
+.credits{
+    font-size: 14px;
+    color: #ECF0F1;
+    font-family: 'Open Sans', sans-serif;
+}
+.credits a{
+    color: white;
+}
+.credits a:hover{
+    text-decoration: underline;
+    color: white;
+}

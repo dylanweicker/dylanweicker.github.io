@@ -62,11 +62,12 @@ h4{
 .first h2{
     color: #FFF;
     text-align: left;
+    text-transform: none;
 }
 
 .first h1{
-    font-size: 8rem;
-    margin-bottom: 0;
+    font-size: 7rem;
+    margin: 0;
     font-weight: bold;
     font-family: 'Open Sans Condensed';
 }
@@ -79,7 +80,7 @@ h4{
 
 .first h3{
     font-family: 'Open Sans', sans-serif;
-    color: #c0392b!important;
+    color: ##e67e22!important;
 }
 
 .jumbotron{
@@ -107,7 +108,7 @@ h4{
     text-transform: none;
     font-weight: normal;
     font-size: 2.2rem;
-    color: #E74C3C;
+    color: #e67e22;
 }
 
 /* BUTTONS */
@@ -127,11 +128,15 @@ button{
     border-color: #2A8194
 }
 
+.btn-long{
+    width: 80%;
+}
+
 /* Horizontal Rule*/
 hr {
     width: 128px;
     height: 4px;
-    background: #E74C3C;
+    background: #e67e22;
     border-radius: 2px;
     margin-bottom: 1.5rem;
 }
@@ -147,8 +152,6 @@ hr {
     background-color: #ECF0F1;
 }
 
-
-
 .white{
     background-color: #FFF;
 }
@@ -157,8 +160,31 @@ hr {
     background-color: #ECF0F1;
 }
 
+.icon {
+    color: #1E6876;
+}
+
 .container-small{
     padding: 40px;
+}
+
+.thin-pad{
+    padding: 20px;
+}
+
+.thin-pad .lead{
+    padding-top: 12px;
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.top-shadow{
+    border-top: 2px solid #1e6876;
+}
+
+.thin-pad button{
+    margin-bottom: 0;
 }
 
 
@@ -215,23 +241,9 @@ hr {
     font-size: 12;
     font-family: sans-serif;
 }
-
-.text-jumbo{
-    font-size: 80px;
-    line-height: 84px;
-    color: #3498DB;
-    font-family: "Open-Sans", sans-serif;
-    margin-bottom: 0;
-}
-
 .text-muted{
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
-}
-
-.icon-jumbo{
-    font-size: 100px!important;
-    margin: 0;
 }
 
 .credits{

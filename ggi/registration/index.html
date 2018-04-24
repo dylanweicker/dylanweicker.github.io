@@ -41,28 +41,36 @@
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
+                
+                <!-- brand -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="../"><strong>GGI</strong></a>
+                    <a class="navbar-brand" href="../"><img src="../images/green-logo.png"><strong>GGI Platform</strong></a>
                 </div>
-                <ul class="nav navbar-nav navbar-right long-nav">
-                    <li class="active"><a href="../">Home</a></li>
-                    <li><a href="../associates/">Prospective Associates</a></li>
-                    <li><a href="../registration/">Association Registration</a></li>
-                    <li><a href="../clients/">Prospective Clients</a></li>
+                
+                
+                <!--Navigation -->
+                <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../associates/">Join Us</a></li>
+                    <li><a href="../clients/">Hire Us</a></li>
                     <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
-                <ul class="nav navbar-nav float-right sandwich-nav">
-                    <li><a onclick="toggleHiddenMenu()"><i class="fa fa-bars"></i></a></li>
+                
+                <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                    <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
                 </ul>
             </div>
+            
+            <!--pop down-->
             <div id="hidden-menu" class="container-fluid" style="display: none;">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="../">Home</a></li>
-                    <li><a href="../associates/">Prospective Associates</a></li>
-                    <li><a href="../registration/">Association Registration</a></li>
-                    <li><a href="../clients/">Prospective Clients</a></li>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../associates/">Join Us</a></li>
+                    <li><a href="../clients/">Hire Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
             </div>
+            
         </nav>
 
         <div class="first jumbotron bike-stone">
@@ -200,7 +208,7 @@
                 <p class="text-center">You can register as both an individual and a firm, if you like.</p>
             </div>
         </div>
-        <div class="midnight" style="background-position: bottom;">
+       <div class="midnight" style="background-position: bottom;">
             <a name="contact-us"></a>
             <div class="container">
                  <div class="row">
@@ -228,8 +236,8 @@
                     <ul class="no-bullet address">
                         <li> Goss Gilroy Inc.</li>
                         <li>Management Consultants</li>
-                        <li>150 Metcalfe, Suite 900 </li>
-                        <li>Ottawa ON  K2P 1P1</li>
+                        <li>401 Empire Ave. </li>
+                        <li>St. John’s NL  A1E 1W6</li>
                         <li>Canada</li>
                         <li>Telephone - (709) 754-2065</li>
                         <li>Toll-free - (855) 805-2065</li>
@@ -242,8 +250,8 @@
                     <ul class="no-bullet address">
                         <li> Goss Gilroy Inc.</li>
                         <li>Management Consultants</li>
-                        <li>150 Metcalfe, Suite 900 </li>
-                        <li>Ottawa ON  K2P 1P1</li>
+                        <li>210-314 West Cordova</li>
+                        <li>Vancouver BC  V6B 1E8</li>
                         <li>Canada</li>
                         <li>Telephone - 778-379-5590</li>
                         <li>Toll-free - (844)-584-9343</li>
@@ -251,15 +259,63 @@
                     </ul>
                     </div>
                 </div>
-                <row>
-                <a class="fal" href="https://twitter.com/GossGilroyInc?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fab fa-twitter fa-5x"></i></a><a class="fal" href="http://www.linkedin.com/company/goss-gilroy-inc"><i class="fab fa-linkedin fa-5x"></i></a>
-                </row>
-
+                
+                <div class="row" style="margin-top: 3rem;">
+                    <div class="col-md-6">
+                        <form class="form-group contact-us" action="mailto:ggi@ggi.ca" method="post" enctype="text/plain">
+                            <div class="row">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name">
+                                <input type="text" class="form-control" name="email" placeholder="Your Email">
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" rows="4" name="message" id="message" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="row">
+                                <input id="mail-link" class="btn btn-primary text-xs-right" type="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="col-md-4 col-md-offset-1 text-center">
+                    <div class="col-sm-4 " style="padding-left: 0;">
+                        <a class="fal" href="http://ggi.ca" data-show-count="false">
+                            <center><i class="fa fa-globe fa-5x"></i><br>
+                            GGI Website</center>
+                        </a>
+                    </div>
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <a class="fal" href="https://twitter.com/GossGilroyInc?ref_src=twsrc%5Etfw" data-show-count="false">
+                            <center><i class="fab fa-twitter fa-5x"></i>
+                                Twitter</center>
+                        </a>
+                    </div>
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <a class="fal" href="http://www.linkedin.com/company/goss-gilroy-inc">
+                            <center><i class="fab fa-linkedin fa-5x"></i>
+                        Linked In</center>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    
+           
+                </div>
+                
+                <div class="row credits">
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <a href="../privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                        © Goss Gilroy Inc. 2018<br>
+                        Site created by <a href="http://dylanweicker.github.io"> <b>Dylan Weicker</b></a>
+                    </div>
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <br><br>
+                    </div>
+                    <div class="col-sm-4 credits" style="padding-left: 0;">
+                        <b></b>
+                    </div>
                 </div>
 
-                <div class="text-center credits">
-                Site created by <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
-                </div>
             </div>
+        </div>
     </body>
 </html>

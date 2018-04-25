@@ -1,154 +1,163 @@
-<html>
-    <head>
-        <title>GGI</title>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie-edge">
-        <link rel="shortcut icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
-        <link rel="icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
-        
-        <!-- symbols -->
-        <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified CSS -->
-        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
+    <link rel="icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
+	<title>GGI Platform</title>
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="../navbar.css">
-        <link rel="stylesheet" href="./page.css">
-        <link rel="stylesheet" href="../global.css">
 
-        <!-- Custom Scripts -->
-        <script src="../script.js"></script>
+    <!-- Scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+    
+           
+    <!-- symbols -->
+    <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
 
-    </head>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+    
+    <!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+	<link rel="stylesheet" type="text/css" href="../global.css" />
+	<link rel="stylesheet" type="text/css" href="./page.css" />
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                
-                <!-- brand -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="../"><img src="../images/green-logo.png"><strong>GGI Platform</strong></a>
-                </div>
-                
-                
-                <!--Navigation -->
-                <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../associates/">Join Us</a></li>
-                    <li class="active"><a href="../clients/">Hire Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-                
-                <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
-                    <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
-                </ul>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['top', 'you', 'response', "what-this-means", "services", "Testimonials", "contact-us"],
+				sectionsColor: [ 'undefined', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Hire Us', 'What You Told Us', 'How We\'re Responding', 'What This Means', "Our Services", "Testimonials", "Learn More", "Contact Us"]
+			});
+		});
+	</script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../"><img src="../images/green-logo.png"><strong>GGI Platform</strong></a>
             </div>
-            
-            <!--pop down-->
-            <div id="hidden-menu" class="container-fluid" style="display: none;">
-                <ul class="nav navbar-nav">
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../associates/">Join Us</a></li>
-                    <li  class="active"><a href="../clients/">Hire Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-            
-        </nav>
-        <div class="first jumbotron">
-            <div class="container">
-                <div class="col-md-6">
-                    <h1>Hire</h1>
-                    <h2>The GGI Platform</h2>
-                </div>
-            </div>
+            <!--Navigation -->
+            <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li class="active"><a href="../">Home</a></li>
+                <li><a href="../associates/">Join Us</a></li>
+                <li><a href="../clients/">Hire Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
         </div>
-        
-         <div class="grey top-shadow">
-            <div class="container thin-pad">
-                <div class="row">
-                    <div class="col-md-8">
-                        <p class="lead">Find out what the GGI Platform can do for you!</p>
-                    </div>
-                    <div class="col-md-4 text-right">                        
-                        <a href="../clients/">
-                            <button class="btn-primary btn-lg">
-                                Hire Us
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../">Home</a></li>
+                <li><a href="../associates/">Join Us</a></li>
+                <li><a href="../clients/">Hire Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+ </nav>
+
+<div id="fullpage">
+    
+	<div class="section " id="section0">
+		<div class="intro">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="text-box">
+                        <h1>Enhanced Services <br>Delivered Better And Faster</h1>
+                        <h2>Clients tell us that their world is changing. Quickly.<br> This is how we're responding.</h2>
+                        <a href="#you">
+                            <button class="btn-default btn-lg">
+                                Read More <i class="fas fa-caret-down"></i>
                             </button>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="white">
-            <div class="container">
-                <div class="row">
-                    <h2>We Understand Our Clients</h2>
-                    <p>The GGI Platform was established to respond to the significant changes occurring in the consulting industry. This industry will undergo more changes in the next five to ten years than it has in the past forty years.  We understand these changes and know what our clients care about.</p>
-                    <div class="row" style="padding-top: 2rem;">
-                        <div class="col-md-2 col-md-offset-1 text-right icon"><i class="fa fa-user-md fa-7x"></i></div>
-                        <div class="col-md-7" style="padding-top: 1em;">
-                            <b>Clients increasingly want specialists</b>, rather than generalists. However, you still prefer <b>seamless experiences</b> (not having to deal directly with four different consulting firms), which means that we need to be more adept at constructing teams involving people from inside and outside our firm. 
+		</div>
+	</div>
+    
+	<div class="section" id="section1">
+        <div class="intro container">
+            <div class="col-md-10">
+                <h3>What You Told Us</h3>
+               <div class="row">
+                        <div class="col-md-2 text-center icon"><i class="fa fa-user-md fa-5x"></i></div>
+                        <div class="col-md-10">
+                            <h4>Clients Prefer Specialists</h4>
+                            Clients increasingly want specialists, rather than generalists. However, you still prefer seamless experiences (not having to deal directly with four different consulting firms), which means that we need to be more adept at constructing teams involving people from inside and outside our firm. 
                         </div>
                     </div>
-                    <div class="row" style="padding-top: 4rem;">
-                        <div class="col-md-2 col-md-offset-1 text-right icon"><i class="fas fa-street-view fa-7x"></i></div>
-                        <div class="col-md-7" style="padding-top: 1em;">
-                            With the emergence of the <b>gig economy</b>, more and more consultants are working <b>independently or in small groups</b>.  This adds to the challenge we face in attracting and maintaining staff.  It can also make it difficult for clients to find consultants with the specific skills they are looking for. 
+                    <div class="row">
+                        <div class="col-md-2 text-center icon"><i class="fas fa-street-view fa-5x"></i></div>
+                        <div class="col-md-10">
+                            <h4>Finding Consultants with Specific Skills is Challenging</h4>
+                            With the emergence of the gig economy, more and more consultants are working independently or in small groups. This adds to the challenge consulting firms face in attracting and maintaining staff. It can also make it difficult for clients to find consultants with the specific skills they are looking for. 
                         </div>
                     </div>
-                    <div class="row" style="padding-top: 4rem;">
-                        <div class="col-md-2 col-md-offset-1 text-right icon"><i class="fa fa-rocket fa-7x"></i></div>
-                        <div class="col-md-7" style="padding-top: 1em;">
-                            <b>Technological change is accelerating</b> and will impact how we market our services, compile our project teams, deliver our services, and communicate.  The time and costs associated with keeping up with the latest technology (e.g. project management, survey, and text, social media, big data, and predictive analytics software, and infographics and visualization tools) are soaring.
+                    <div class="row">
+                        <div class="col-md-2 text-center icon"><i class="fa fa-rocket fa-5x"></i></div>
+                        <div class="col-md-10">
+                            <h4>Technological change is accelerating</h4>
+                            This technological change will impact how we market our services, compile our project teams, deliver our services, and communicate.  The time and costs associated with keeping up with the latest technology (e.g. project management, survey, and text, social media, big data, and predictive analytics software, and infographics and visualization tools) are soaring.
                         </div>
                     </div>
-                </div>
             </div>
-        </div>
-        <div class="grey">
-            <div class="container">
-                <h2>Benefits of Being a Client</h2>
-                <div class="row" style="padding-top: 4rem;">
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro container">
+            <div class="col-md-10">
+			<h3>How We're Responding</h3>
+            <div class="row" style="padding-top: 4rem;">
                     <div class="col-md-4 text-center">
-                        <div class="icon-o"><i class="fa fa-users fa-5x"></i></div>
-                        <p>Greater access to consultants with <b>highly specialized skills</b></p>
+                        <div class="icon"><i class="fa fa-users fa-5x"></i></div>
+                        <p>Greater access to consultants with highly specialized skills</p>
                     </div>
                     <div class="col-md-4 text-center">
-                        <div class="icon-o"><i class="fa fa-boxes fa-5x"></i></div>
-                        <p>Access to <b>new products and services</b>, launching within the next 12 to 18 months</p>
+                        <div class="icon"><i class="fa fa-boxes fa-5x"></i></div>
+                        <p>Access to new products and services, launching within the next 12 to 18 months</p>
                     </div>
                     <div class="col-md-4 text-center">
-                        <div class="icon-o"><i class="far fa-calendar-alt fa-5x"></i></div>
-                        <p><b>Shorter timelines</b> associated with development and implementation of the projects.</p>
+                        <div class="icon"><i class="far fa-calendar-alt fa-5x"></i></div>
+                        <p>Shorter timelines associated with development and implementation of the projects.</p>
                     </div>
                 </div>
                    <div class="row" style="padding-top: 4rem;">
                     <div class="col-md-4 col-md-offset-2 text-center">
-                        <div class="icon-o"><i class="fa fa-cogs fa-5x"></i></div>
-                        <p>More <b>seamless experiences</b>.  We can offer a wider range of services to you, tailored to meet your specific needs.</p>
+                        <div class="icon"><i class="fa fa-cogs fa-5x"></i></div>
+                        <p>More seamless experiences.  We can offer a wider range of services to you, tailored to meet your specific needs.</p>
                     </div>
                     <div class="col-md-4 text-center">
-                         <div class="icon-o"><i class="fa fa-wrench fa-5x"></i></div>
-                         <p>Access to <b>leading-edge</b> management, collaboration, communication, research and analytics <b>tools and resources</b> </p>
+                         <div class="icon"><i class="fa fa-wrench fa-5x"></i></div>
+                         <p>Access to leading-edge management, collaboration, communication, research and analytics tools and resources </p>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4rem;">
@@ -156,35 +165,66 @@
                 </div>
             </div>
         </div>
-        <div class="white" id="links">
-            <div class="container">
-                <div class="row">
-                   <div class="col-sm-12 text-center">
+	</div>
+    <div class="section" id="section3">
+		<div class="container">
+            <div class="col-md-10">
+			<h3>What This Means</h3>
+            </div>
+        </div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro container">
+            <div class="col-md-10">
+			<h3>Our Services</h3>
+            </div>
+        </div>
+	</div>
+    
+	<div class="section" id="section4">
+		<div class="intro container">
+             <div class="slide" id="slide1">
+			<div class="intro">
+				 <div class="col-md-10">
+			         <h3>Testimonials</h3>
+                     So Good.
+                </div>
+			</div>
+		</div>
+	    <div class="slide" id="slide2">
+			 <div class="col-md-10">
+			         <h3>Testimonials</h3>
+			         Amazing!
+                </div>
+		</div>
+           
+        </div>
+	</div>
+    
+    <div class="section" id="section5">
+		<div class="intro container">
+            <div class="col-md-6 text-box">
+			<h3>Learn More</h3>
+            <div class="row" style=" display: flex; align-items: flex-start; justify-content: space-between">
+                <a href="#">
                     <button class="btn-primary btn-lg">
-                       Request a Quote or Information
-                       </button>
-                    </div>
-                </div>
+                        Learn More
+                    </button>
+                </a>
+                <a href="https://www.research.net/r/B3RRQP6">
+                    <button class="btn-primary btn-lg">
+                        Register as a Company
+                    </button>
+                </a>
             </div>
-        </div>
-        <div class="grey">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                    <p>If you’d like to keep up-to-date with our progress in launching the GGI Platform as well as the introduction of new products and services, please subscribe to our newsletter.</p>
-                    
-                    <button class="btn-secondary btn-lg">
-                       Subscribe to Newsletter
-                       </button>
-                    </div>
                 </div>
-            </div>
         </div>
-
-       <div class="midnight" style="background-position: bottom;">
-            <a name="contact-us"></a>
-            <div class="container">
-                 <div class="row">
+	</div>
+    
+    
+    <div class="section footer" id="section6">
+		<div class="container">
+	                 <div class="row">
                         <h2>Contact Us</h2>
                 </div>
                 
@@ -276,7 +316,7 @@
                 
                 <div class="row credits">
                     <div class="col-sm-4" style="padding-left: 0;">
-                        <a href="../privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                        <a href="./privacy%20policy/"> <b>Privacy Policy</b></a><br>
                         © Goss Gilroy Inc. 2018<br>
                         Site created by <a href="http://dylanweicker.github.io"> <b>Dylan Weicker</b></a>
                     </div>
@@ -287,8 +327,10 @@
                         <b></b>
                     </div>
                 </div>
+		</div>
+	</div>
+</div>
 
-            </div>
-        </div>
-    </body>
+
+</body>
 </html>

@@ -1,11 +1,9 @@
-
-body{
-    font-family: 'Georgia', serif;
-}
-
-p{
+/*------ text ------*/
+body, p{
+    color: white;
+    font-family: 'Helvetica', 'Arial', 'Lato', sans-serif;
+    text-align: left;
     font-size: 1.6rem;
-    color: #253D4A;
 }
 
 i{
@@ -15,6 +13,8 @@ i{
     margin-top: 50px;
     margin-bottom: 15px;
 }
+
+/* ------- headers ------*/
 
 h1, h2, h3, h4{
     text-shadow: none;
@@ -27,7 +27,7 @@ h1{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
@@ -43,77 +43,105 @@ h3{
 }
 
 h4{
-    color: #2A8194;
+    color: #FB8C00;
     font-size: 1.5rem;
     margin: 0;
+    margin-top: 1rem;
 }
+
+
+/* ----- Boxes ----*/
 
 .container{
-    padding: 40px;
 }
 
-/* HEADER JUMBOTRON */
+.text-box{
+    background: #253D4A;
+    padding: 2rem 4rem;
+    color: white;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+
+
+/* SECTIONS */
 .first{
     /*margin-top: -20px;*/
     margin-bottom: 0;
 }
-
-.first h1,
-.first h2{
+.section{
+    text-align: center;
+    padding-top: 58px;
+}
+.section h1, .first h1,
+.section h2, .first h2{
     color: #FFF;
     text-align: left;
-    text-transform: none;
 }
 
-.first h1{
-    font-size: 7rem;
-    margin: 0;
+.section h1, .first h1{
     font-weight: bold;
     font-family: 'Open Sans Condensed';
+    margin: 0px;
 }
 
-.first h2{
+.section h2, .first h2{
     margin-top: 0;
     padding-bottom: 10px;
+    font-size: 2rem;
     font-family: 'Open Sans';
 }
 
-.first h3{
-    font-family: 'Open Sans', sans-serif;
-    color: ##e67e22!important;
-}
-
-.jumbotron{
-    padding: 290px 20px 10px;
-    margin-bottom: 0;
-    background-color: #1E6876;
-}
-
-.jumbotron h1,
-.jumbotron h2,
-.jumbotron h3{
+.section h1, .jumbotron h1,
+.section h2, .jumbotron h2,
+.section h3, .jumbotron h3{
     font-weight: 400;
 }
 
-.jumbotron h1{
+.section h1, .jumbotron h1{
     text-shadow: 1px 1px 1px #333;
 }
 
-.jumbotron h2{
+.section h2, .jumbotron h2{
     text-transform: none;
     text-shadow: 1px 1px 1px #333;
-}
-
-.jumbotron h3{
-    text-transform: none;
     font-weight: normal;
-    font-size: 2.2rem;
-    color: #e67e22;
 }
 
-/* BUTTONS */
-button{
+.section h3, .jumbotron h3{
     font-family: 'Open Sans', sans-serif;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+    text-align: left;
+}
+
+
+
+/* ------BUTTONS ------- */
+button, button:hover{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: none;
+    border-right: 3px solid #1a2a33;
+    border-bottom: 3px solid #154852;
+}
+
+.section .btn-primary{
+    background-color: #e67e22;
+    border-color: #e67e22;
+    margin-bottom: 16px;
+}
+
+.section .btn-primary:hover,
+.section .btn-primary:active,
+.section .btn-primary:focus,
+.section .btn-primary:focus:hover{
+    background-color: #FB8C00;
+    border-color: #FB8C00;
 }
 
 .btn-primary{
@@ -128,11 +156,33 @@ button{
     border-color: #2A8194
 }
 
+
+.btn-default{
+    color: #fff;
+    background-color: #1E6876;
+    border-color: #1E6876;
+    margin-bottom: 16px;
+    margin-right: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:focus:active{
+    color: #fff;
+    background-color: #2A8194;
+    border-color: #2A8194
+}
+
 .btn-long{
     width: 80%;
 }
 
-/* Horizontal Rule*/
+
+
+/* ------- Horizontal Rule -------*/
 hr {
     width: 128px;
     height: 4px;
@@ -142,57 +192,26 @@ hr {
 }
 
 
- /* CARDS */
 
-.yellow-200{
-    background-color: #FFF;
-}
-
-.green-200{
-    background-color: #ECF0F1;
-}
-
-.white{
-    background-color: #FFF;
-}
-
-.grey{
-    background-color: #ECF0F1;
-}
-
+/* ------- ICONS ------ */
 .icon {
-    color: #1E6876;
+    color: #fff;
 }
 
 .icon-o {
     color: #e67e22;
+}
+.icon-b {
+    color: #3498db;
 }
 
 .container-small{
     padding: 40px;
 }
 
-.thin-pad{
-    padding: 20px;
-}
-
-.thin-pad .lead{
-    padding-top: 12px;
-    margin-bottom: 0;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-}
-
-.top-shadow{
-    border-top: 2px solid #1e6876;
-}
-
-.thin-pad button{
-    margin-bottom: 0;
-}
 
 
-/* FOOTER */
+/* ----------- FOOTER --------------*/
 .contact-us{
     margin-right: 20px;
 }
@@ -212,48 +231,60 @@ hr {
     margin-bottom: 20px;
 }
 
-.midnight{
+.footer{
     background-color: #253D4A;
     color: #ECF0F1;
+    text-align: left!important;
 }
 
-.midnight p{
+.footer p, .footer li{
     color: #ECF0F1;
     font-family: 'Open Sans', sans-serif;
+    text-align: left;
 }
 
-.midnight a.fal{
-    color: #1E6876;
+a.fal, .footer a.fal:visited{
+    color: #e67e22;
     margin-right: 48px;
     margin-left: -16px;
-}
-.midnight a.fal:hover{
-    color: #2A8194;
+    text-decoration: none;
 }
 
-.midnight li{
+.footer a.fal:hover, .footer a.fal:active{
+    color: #FB8C00;
+    text-decoration: none;
+}
+
+.footer li{
     font-family: 'Open Sans', sans-serif;
 }
 
-.midnight h2{
+.footer h2{
     color: #ECF0F1;
     margin-left: 0;
     font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 4rem;
 }
 
-.text-danger{
-    font-size: 12;
-    font-family: sans-serif;
-}
-.text-muted{
-    font-size: 12px;
+.footer h3{
+    color: #ECF0F1;
+    margin-left: 0;
     font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 2.8rem;
+}
+
+.footer .row{
+    margin-top: 0rem;
+    padding: 0;
 }
 
 .credits{
     font-size: 14px;
     color: #ECF0F1;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 80px;
 }
 .credits a{
     color: white;
@@ -261,4 +292,22 @@ hr {
 .credits a:hover{
     text-decoration: underline;
     color: white;
+}
+
+
+.text-muted{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/* Overwriting styles for control arrows for slides
+* --------------------------------------- */
+.controlArrow.prev {
+    left: 50px;
+}
+.controlArrow.next{
+    right: 50px;
 }

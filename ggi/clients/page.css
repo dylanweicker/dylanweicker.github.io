@@ -1,7 +1,21 @@
-.first {
+#section0{
+    background-color: #253D4A;
     background: url('../images/hire-us.jpg');
     background-repeat: no-repeat;
-    background-position: top; 
+    background-position: bottom; 
     background-size: cover;
-    margin-top: 54px;
+}
+
+#section1{
+    text-align: left;
+}
+
+#section1 .icon{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#section1 .row{
+    
+    padding: 2rem 0;
 }

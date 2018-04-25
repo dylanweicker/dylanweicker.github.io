@@ -15,8 +15,12 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
 }
 
-.navbar{
-    background-color: #253D4A;
+nav {
+    background: #253D4A;
+}
+
+.navbar, .navbar-default{
+    background-color: #253D4A!important;
     font-family: 'Open Sans', sans-serif;
     z-index: 1;
 }

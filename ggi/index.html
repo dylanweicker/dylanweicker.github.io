@@ -1,150 +1,214 @@
-<html>
-    <head>
-        <title>GGI Platform</title>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie-edge">
-        <link rel="shortcut icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
-        <link rel="icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
-        
-        <!-- symbols -->
-        <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified CSS -->
-        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
+    <link rel="icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
+	<title>GGI Platform</title>
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="./navbar.css">
-        <link rel="stylesheet" href="./home.css">
-        <link rel="stylesheet" href="./global.css">
+	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./navbar.css">
+	<link rel="stylesheet" type="text/css" href="./global.css" />
+	<link rel="stylesheet" type="text/css" href="./home.css" />
 
-        <!-- Custom Scripts -->
-        <script src="./script.js"></script>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./vendors/scrolloverflow.js"></script>
+	<script type="text/javascript" src="./jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
+    
+           
+    <!-- symbols -->
+    <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    </head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./home.css">
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                
-                <!-- brand -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="./images/green-logo.png"><strong>GGI Platform</strong></a>
-                </div>
-                
-                
-                <!--Navigation -->
-                <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
-                    <li class="active"><a href="./">Home</a></li>
-                    <li><a href="./associates/">Join Us</a></li>
-                    <li><a href="./clients/">Hire Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-                
-                <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
-                    <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
-                </ul>
+    <!-- Custom Scripts -->
+    <script src="./script.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['welcome', 'who', 'what', "why", "contact-us"],
+				sectionsColor: [ 'undefined', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Welcome', 'Who\'s GGI?', 'What\'s GGI Platform?', "Why It\'s Needed?", "Contact Us"]
+			});
+		});
+	</script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./"><img src="./images/green-logo.png"><strong>GGI Platform</strong></a>
             </div>
-            
-            <!--pop down-->
-            <div id="hidden-menu" class="container-fluid" style="display: none;">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="./">Home</a></li>
-                    <li><a href="./associates/">Join Us</a></li>
-                    <li><a href="./clients/">Hire Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-            
-        </nav>
+            <!--Navigation -->
+            <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li class="active"><a href="./">Home</a></li>
+                <li><a href="./associates/">Join Us</a></li>
+                <li><a href="./clients/">Hire Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
 
-        <div class="first jumbotron">
-            <div class="container">
-                <div class="col-md-6">
-                    <h2>Welcome to the</h2>
-                    <h1>GGI Platform</h1>
-                </div>
-            </div>
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
         </div>
-        
-        <div class="grey top-shadow">
-            <div class="container thin-pad">
-                  <div class="row">
-                    <div class="col-md-8">
-                        <p class="lead" style="font-size:18px;">We've been listening to our clients. They've told us their world is changing. Quickly!</p>
-                    </div>
-                    <div class="col-md-4 text-right">  
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./">Home</a></li>
+                <li><a href="./associates/">Join Us</a></li>
+                <li><a href="./clients/">Hire Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+ </nav>
+
+<div id="fullpage">
+    
+	<div class="section " id="section0">
+		<div class="intro">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="text-box">
+                        <h1>Introducing The GGI Platform</h1>
+                        <h2>Linking clients, our associates and leading-edge research capabilities and tools.</h2>
                         <a href="./associates/">
-                            <button class="btn-primary btn-lg">
+                            <button class="btn-default btn-lg">
                                 Join Us
                             </button>
                         </a>
                         
                         <a href="./clients/">
-                            <button class="btn-primary btn-lg">
+                            <button class="btn-default btn-lg">
                                 Hire Us
+                            </button>
+                        </a>
+                        <a href="#who">
+                            <button class="btn-default btn-lg">
+                                Read More <i class="fas fa-caret-down"></i>
                             </button>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="white">
-            <div class="container">
-                <div class="row">
-                        <h2>GGI Platform</h2>
-                        <p>Goss Gilroy Inc. (GGI) is excited to formally introduce the GGI Platform.</p>
-                        <p>The management consulting industry is entering a period of unprecedented change.  Clients increasingly want teams of specialists, rather than generalists.  Consultants are under ever greater pressure to reduce timelines and costs.  At the same time, new technologies have the potential to significantly improve how we market our services, create our project teams, deliver our services, and communicate with clients and associates but often come at a significant cost. 
-                        </p>
-                    <p>The GGI Platform is designed to help us in responding to these changes by:</p>
-                    <ul>
-                        <li>Growing our network of Associates, which enables us to quickly create project teams that feature the range of technical and subject matter skills needed by our existing and prospective clients. </li>
-                        <li>Providing our clients and project teams with access to leading edge management, communication, research and analytical tools.</li>
-                        <li>Making significant investments in marketing and proposal development.</li>
-                    </ul>
-                    <p>GGI Platform will enable us to offer an ever-increasing range of high quality, leading-edge services to our clients and create significant new business opportunities our Associates and ourselves.</p>
-                    <p>GGI Platform is a new initiative for us, but one that is firmly rooted in the way we’ve always done business.  Most of our services already involve team members from outside of the firm and, in fact, many of our projects are led by our Associates.  What has changed is that we recognize this isn't just a preferred way of doing business, it is now an essential part of our business.
-                    </p>              
-                    </div>
+		</div>
+	</div>
+    
+	<div class="section" id="section1">
+        <div class="intro container">
+            <div class="col-md-11">
+                <h3>Who Is GGI?</h3>
+                <p>Since its establishment in 1981, Goss Gilroy Inc. (GGI) has grown into one of the leading independent management consulting firms in Canada. Through our offices across Canada, our team of 40 professionals, and our growing network of over 100 associates, we deliver a wide range of consulting services to government, the non-profit sector and industry in each province and territory as well as internationally.</p><p>
+                GGI Platform is a new initiative for us, but one that is firmly rooted in the way we’ve always done business. Most of our services involve team members from outside of the firm and, in fact, many of our projects are led by our Associates. What has changed is that we recognize this isn't just a preferred way of doing business, it is now an essential part of our business.
+                </p>
+            </div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro container">
+			<h3>What is the GGI Platform?</h3>
+            <div class="row">
+                <div class="col-md-2"><i class="far fa-handshake fa-5x"></i></div>
+                <div class="col-md-8">
+                    <p>The GGI Platform brings together our growing network of Associates with leading edge management, communication, research and analytical tools, and strong marketing to create opportunities for our Associates and offer an ever-increasing range of high quality, leading-edge services for our clients.</p>
                 </div>
             </div>
-        <div class="white" id="links">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-1 text-center">
-                        
-                        <a href="./associates/"><button class="btn btn-primary btn-lg  btn-long">Join Us</button></a>
-                        <p class="text-muted">If you are interested in becoming an associate and finding out what the GGI platform can do for you</p>
-                    </div>
-                    
-                    <div class="col-sm-4  col-sm-offset-2 text-center">
-                        <a href="./clients/"><button class="btn btn-primary btn-lg btn-long">Hire Us</button></a>
-                        <p class="text-muted">If you are interested in our services and finding out what the GGI Platform means for you</p>
-                    </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-database fa-5x"></i></div>
+                <div class="col-md-8">
+                    <p>The GGI Platform brings together our growing network of Associates with leading edge management, communication, research and analytical tools, and strong marketing to create opportunities for our Associates and offer an ever-increasing range of high quality, leading-edge services for our clients.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-chart-line fa-5x"></i></div>
+                <div class="col-md-8">
+                    <p>To support our Associates, we will be making significant investments in leading edge management, communication, research and analytical tools and resources as well as marketing programs and tools. Over the next year, we will also be developing a series of new products and services that will incorporate services delivered by our associates and ourselves.</p>
                 </div>
             </div>
         </div>
+	</div>
+    <div class="section" id="section3">
+		<div class="container">
+            <div class="col-md-10">
+			<h3>Why We Developed the GGI Platform</h3>
+                <div class="row">
+                    <p class="lead">The management consulting industry is entering a period of unprecedented change.</p>
+                 </div>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="icon-o"><i class="fa fa-user-md fa-6x"></i></div>
+                        Clients increasingly want <b>teams of specialists</b>, rather than generalists.
+                    </div>
 
-        <div class="midnight" style="background-position: bottom;">
-            <a name="contact-us"></a>
-            <div class="container">
-                 <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="icon-o"><i class="far fa-clock fa-6x"></i></div>
+                        Consultants are under ever greater pressure to reduce timelines and costs.
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <div class="icon-o"><i class="fa fa-tablet-alt fa-6x"></i></div>
+                        New technologies have the potential to significantly improve how we market and deliver services, create project teams, and communicate with clients.
+                    </div>
+                </div>
+                <div class="row">
+                    <p  class="lead">The GGI Platform is designed to help our clients, our Associates and ourselves respond to these changes by:</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="icon-o"><i class="fa fa-users fa-6x"></i></div>
+                       Growing our network of Associates, which enables us to quickly create project teams that feature the a wide range of skills needed by our clients.
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <div class="icon-o"><i class="fa fa-wrench fa-6x"></i></div>
+                        Providing our clients and project teams with access to <b>leading-edge</b> management, communication, research and analytical <b>tools</b>.
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <div class="icon-o"><i class="fa fa-money-bill-alt fa-6x"></i></div>
+                        Making significant investments in <b>marketing and proposal development</b>.
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+        <div class="section footer" id="section4">
+		<div class="container">
+	                 <div class="row">
                         <h2>Contact Us</h2>
                 </div>
                 
@@ -247,8 +311,10 @@
                         <b></b>
                     </div>
                 </div>
+		</div>
+	</div>
+</div>
 
-            </div>
-        </div>
-    </body>
+
+</body>
 </html>

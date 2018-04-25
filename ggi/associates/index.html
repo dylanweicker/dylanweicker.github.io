@@ -1,235 +1,265 @@
-<html>
-    <head>
-        <title>GGI Platform</title>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie-edge">
-        <link rel="shortcut icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
-        <link rel="icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
-        
-        <!-- symbols -->
-        <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified CSS -->
-        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
+    <link rel="icon" type="image/x-icon" href="http://www.ggi.ca/wordpress/wp-content/uploads/2013/09/favicon3.jpg" />
+	<title>GGI Platform</title>
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="../navbar.css">
-        <link rel="stylesheet" href="./page.css">
-        <link rel="stylesheet" href="../global.css">
 
-        <!-- Custom Scripts -->
-        <script src="../script.js"></script>
+    <!-- Scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+    
+           
+    <!-- symbols -->
+    <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
 
-    </head>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+    
+    <!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+	<link rel="stylesheet" type="text/css" href="../global.css" />
+	<link rel="stylesheet" type="text/css" href="./page.css" />
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                
-                <!-- brand -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="../"><img src="../images/green-logo.png"><strong>GGI Platform</strong></a>
-                </div>
-                
-                
-                <!--Navigation -->
-                <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
-                    <li><a href="../">Home</a></li>
-                    <li class="active"><a href="../associates/">Join Us</a></li>
-                    <li><a href="../clients/">Hire Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-                
-                <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
-                    <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
-                </ul>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['top', 'challenges', 'help', "together", "why-join", "contact-us"],
+				sectionsColor: [ 'undefined', '#1e6876', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Join Us', 'Your Challenges', 'How We Can Help', "We Work Together", "Why Join?", "Join Today", "Contact Us"]
+			});
+		});
+	</script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../"><img src="../images/green-logo.png"><strong>GGI Platform</strong></a>
             </div>
-            
-            <!--pop down-->
-            <div id="hidden-menu" class="container-fluid" style="display: none;">
-                <ul class="nav navbar-nav">
-                    <li><a href="../">Home</a></li>
-                    <li class="active"><a href="../associates/">Join Us</a></li>
-                    <li><a href="../clients/">Hire Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-            
-        </nav>
+            <!--Navigation -->
+            <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li class="active"><a href="../">Home</a></li>
+                <li><a href="../associates/">Join Us</a></li>
+                <li><a href="../clients/">Hire Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
 
-        <div class="first jumbotron">
-            <div class="container">
-                <div class="col-md-6">
-                    <h1>Join</h1>
-                    <h2>The GGI Platform</h2>
-                </div>
-            </div>
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
         </div>
-        
-         <div class="grey top-shadow">
-            <div class="container thin-pad">
-                <div class="row">
-                    <div class="col-md-8">
-                        <p class="lead">Isn't it time you joined our Network?</p>
-                    </div>
-                    <div class="col-md-4 text-right">                        
-                        <a href="../associates/">
-                            <button class="btn-primary btn-lg">
-                                Join Us
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../">Home</a></li>
+                <li><a href="../associates/">Join Us</a></li>
+                <li><a href="../clients/">Hire Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+ </nav>
+
+<div id="fullpage">
+    
+	<div class="section " id="section0">
+		<div class="intro">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="text-box">
+                        <h1>Grow Your Practice With the GGI Platform</h1>
+                        <h2>You enjoy working independently but face some challenges.<br> We can help.</h2>
+                        <a href="https://www.research.net/r/BGQG8Z5">
+                            <button class="btn-default btn-lg">
+                                Register as an Individual
+                            </button>
+                        </a>
+                        <a href="https://www.research.net/r/B3RRQP6">
+                            <button class="btn-default btn-lg">
+                                Register as a Company
                             </button>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="white">
-            <div class="container">
+		</div>
+	</div>
+    
+	<div class="section" id="section1">
+        <div class="intro container">
+            <div class="col-md-10">
+                <h3>Your Challenges</h3>
                 <div class="row">
-                    <h2>Register to Be an Associate</h2>
-                        <p>We are constantly expanding our group of high-calibre Associates.  Our Associates are people who have experience in various aspects of management consulting, have been senior managers in government, industry or the non-profit sector, and/or have specialized technical or subject skills which are relevant to clients.</p>
-
-                        <p>By joining with us as an Associate, these people continue to enjoy the benefits and life style that come with working independently or in a small firm while still having access to many of the benefits that can come with working with a larger firm such as GGI.</p>  
-
-                        <p>While some of our Associates look at the GGI Platform as simply an additional potential source of work, others are drawn by benefits such as:</p>
-                        <ul>
-                            <li>Being able to pursue larger-scale projects that they would otherwise not be able to access (for example, by being a member of member of multi-disciplinary project teams including representatives from GGI and other firms);</li>
-                            <li>Having access to leading edge management, collaboration, communication, research, analytical, visualization and presentation tools and resources;</li>
-                            <li>Having access to marketing support and assistance in proposal writing as well as other corporate support such as research, report generation, and project administration.</li>
-                        </ul>
+                    <div class="col-md-4">
+                    <i class="fas fa-search fa-5x"></i>
+                    <h4>Identifying Opportunities</h4>
+                        It's time consuming to track opportunities and make sure you're on the right lists.
+                    </div>
+                    <div class="col-md-4">
+                    <i class="far fa-file-alt fa-5x"></i>
+                    <h4>Proposal Writing</h4>
+                        RFPs are incresingly complex. You're having to spend more and more time writing proposals.
+                    </div>
+                    <div class="col-md-4">
+                    <i class="fas fa-chess fa-5x"></i>
+                    <h4>Competing for Big Projects</h4>
+                        Large firms are better able to demonstrate they have the resources and track record needed to win the big ones
                     </div>
                 </div>
-            </div>
-        <div class="grey" id="links">
-            <div class="container">
-                <h1>Register Now</h1>
-                <div class="row" style="margin:30px auto;">
-                   <div class="col-sm-4 col-sm-offset-2 text-center">
-                        <button class="btn btn-primary btn-lg" style="min-width: 218px">As an Individual</button>
-                    </div>
-                    
-                    <div class="col-sm-4 text-center">
-                        <button class="btn btn-primary btn-lg">As a Company or Firm</button>
-                    </div>
-                </div>
-                <p class="text-center">You can register as both an individual and a firm, if you like.</p>
-            </div>
-        </div>
-        <div class="white">
-             <div class="container">
                 <div class="row">
-                    <h2>Frequently Asked Questions</h2>
-                    <ul>
-                    <li><a href="#what">What is the GGI Platform?</a>
-                    <li><a href="#who">Who is GGI?</a>
-                    <li><a href="#why">Why Have We Developed the GGI Platform? </a>
-                    <li>What Are the Benefits of Being an Associate?
-                    <li><a href="#how">How Would We Work Together?  </a>
-                    <li><a href="#cost">What Does It Cost? </a>
-                    <li><a href="#commitment">Would I Be Committed to Work With GGI?</a>
-                    <li><a href="#requirements">What are the Requirements to Become an Associate?</a>
-                    <li><a href="#register">How Do I Register?</a>
-                    </ul>
-                    <hr>
-                    <h3>What is the GGI Platform?</h3>
-
-<p>The GGI Platform brings together our growing network of Associates with leading edge management, communication, research and analytical tools, and strong marketing to create opportunities for our Associates and offer an ever-increasing range of high quality, leading-edge services for our clients.  
-
-<p>At the foundation of GGI Platform is a searchable database that contains data on all of our associates. We draw from this database when developing effective project teams for our existing or proposed projects.  We can also use this database to link our associates to clients who approach us as well as to other associates who are constructing teams for their projects.
-
-<p>To support our Associates, we will be making significant investments in leading edge management, communication, research and analytical tools and resources as well as marketing programs and tools.  Over the next year, we will also be developing a series of new products and services that will incorporate services delivered by our associates and ourselves.
-
-                    <hr>
-                    <a name="who"></a> <h3>Who is GGI?</h3>
-
-<p>Since its establishment in 1981, Goss Gilroy Inc. (GGI) has grown into one of the leading independent management consulting firms in Canada.  Through our offices across Canada, our team of 40 professionals, and our growing network of over 100 associates, we deliver a wide range of consulting services to government, the non-profit sector and industry in each province and territory as well as internationally.
-
-<p>GGI Platform is a new initiative for us, but one that is firmly rooted in the way we’ve always done business.  Most of our services involve team members from outside of the firm and, in fact, many of our projects are led by our Associates.  What has changed is that we recognize this isn't just a preferred way of doing business, it is now an essential part of our business.
-
-                    <hr>
-                     <a name="why"></a> <h3>Why Have We Developed the GGI Platform? </h3>
-
-<p>We established the GGI Platform as a means to respond to the significant changes occurring in the consulting industry.  We anticipate that the industry will change more in the next five to ten years than it has in the past 40 years.  For example:
-<ul>
-<li>Clients increasingly want specialists, rather than generalists. However, they still prefer seamless experiences (not having to deal directly with four different consulting firms), which increases the importance of being able to develop teams involving people with a wide range of technical and subject matter skills from inside and outside of the firm.  
-<li>With the emergence of the Gig economy, more and more consultants are working independently or in small groups.  Attracting and maintaining staff is a major challenge for firms such as ours.
-<li>Technological change is accelerating and will impact how we market our services, compile our project teams, deliver our services, and communicate.  
-<li>The time and costs associated with keeping up with the latest technology (e.g. project management, survey, and text, social media, big data, and predictive analytics software, and infographics and visualization tools) are soaring.
-</ul>
-<p>The GGI Platform is designed to assist GGI in responding to that change by facilitating the development of project teams, increasing our access to the specialists, and giving us the critical mass needed to invest in leading edge management, communication and research tools and resources.  
-
-                    <hr>
-                     <a name="how"></a> <h3>How Would We Work Together?  </h3>
-
-<p>There are three ways that we commonly work with our Associates:
-                    <ul>
-                        <li>We may call on you to be a member of one of our project teams when your skills and experience best meet the requirements of a project we have landed or a proposed project on which we are bidding.  We may also link you directly to clients who approach us as well as to other associates who are constructing teams for their projects.
-
-                        <li>We can work with on project opportunities that you identify.  We can provide assistance to you in:
-
-                        <li>Building a winning project team, by referring you to other associates as well as to members of our staff;
-                        <li>Preparing the proposal.  We have a dedicated group of proposal writers that can assist.  Our brand and history may also improve your chances of being the winning bid; and 
-                        <li>Implementing the project.  We can provide you with access to our research team and leading-edge project management and analytical tools.  We are making significant investments into sophisticated software tools (project management, collaboration, survey, and text, social media, big data, and predictive analytics software, and infographics and visualization tools) and have access to leading-edge practitioners within both our research group and our network of associates.  We also have senior members on staff who can provide project management leadership or support, if and when needed.
-                        <li>We can work with you on joint marketing efforts.  We have a team of experts who are involved in marketing services to a wide range of prospective clients.
-                    </ul>
-                    <hr>
-                     <a name="cost"></a> <h3>What Does It Cost? </h3>
-
-<p>There is no cost to you of becoming a GGI Associate.  If we engage you to work on one of our projects, we would negotiate the fees with you and typically apply a small markup on those fees when invoicing the client.  If you engage our services to assist you in completing a project, we would first negotiate a price for those services with you.   
-
-                    <hr>
-                     <a name="commitment"></a> <h3>Would I Be Committed to Work With GGI?</h3>
-
-<p>You make no commitment to work with us or to be a member of any of our project teams (we first check with you before including you in a proposal or making client referrals). There are no restrictions whatsoever on your ability to pursue other work or work with other firms.
-
-                    <hr>
-                     <a name="requirements"></a> <h3>What are the Requirements to Become an Associate?</h3>
-
-<p>Decisions are made on a case-by-case basis.  In recruiting associates, we are generally looking for people who have at least two years experience in delivering management consulting or program evaluation services or have extensive experience in a senior position within government, a non-profit organization or industry.  We are also looking for people with highly specialized technical skills, such as skills related to new technology, software or methodologies.  
-
-                    <hr>
-                     <a name="register"></a> <h3>How Do I Register?</h3>
-
-<p>You can email us directly at TedWeicker@GGI.ca and we will get back to you. Or you can register by completing the form available through the following link.
+                    <div class="col-md-4">
+                        
+                    <i class="fa fa-users fa-5x"></i>
+                    <h4>Building Teams</h4>
+                        Clients want teams of consultants with specialized skills, not just generalists. It can be hard to find the team members you need.
+                    </div>
+                    <div class="col-md-4">                    
+                    <i class="fa fa-wrench fa-5x"></i>
+                    <h4>Accessing Tools and Technology</h4>
+                        New and useful tools & technologies are being introduced. But they can be very costly and difficult to implement.
+                    </div>
+                    <div class="col-md-4">
+                        <i class="far fa-edit fa-5x"></i>
+                    <h4>Focusing on Your Core Skills</h4>
+                        You spend more time than you'd like on basic research and project administration and not enough on areas where you really add value. 
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro container">
+			<h3>How We Can Help</h3>
+            <p>Here are six key ways the GGI Platform can help improve your practice.</p>
+            <div class="row">
+                <div class="col-md-2"><i class="fa fa-folder-open fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Find New Projects</h4>
+                    <p>Get in front of prospective clients and GGI Associates who are looking for your specialized skill set with ongoing marketing through the GGI Platform. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="far fa-handshake fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Close More Deals</h4>
+                    <p>Tap into GGI's proposal writing expertise and resoures to win complex projects. <br>(because you probably don't have 3 to 5 days to spend on each RFP)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-sitemap fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Work on Larger More Complex Projects</h4>
+                    <p>Participate in our project teams and lean on GGI's size, track record and ability to navigate complex purchasing requirements. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-book fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Access research capabilities</h4>
+                    <p>We can support you with a wide range of research services, delivered more quickly and cost-effectively than ever before. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-wrench fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Access the tools Large Firms Use</h4>
+                    <p>We've been upgrading our capabilities in areas ranging from project management, surveying, and visualization to text, social media, big data and predictive analytics.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="far fa-life-ring  fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Get More Support</h4>
+                    <p>Focus on what you do best -- consulting -- while the GGI team assists you with projects management administration.  </p>
                 </div>
             </div>
         </div>
-        <div class="grey" id="links">
-            <div class="container">
-                <h1>Register Now</h1>
-                <div class="row" style="margin:30px auto;">
-                   <div class="col-sm-4 col-sm-offset-2 text-center">
-                        <button class="btn btn-primary btn-lg" style="min-width: 218px">As an Individual</button>
-                    </div>
-                    
-                    <div class="col-sm-4 text-center">
-                        <button class="btn btn-primary btn-lg">As a Company or Firm</button>
-                    </div>
+	</div>
+    <div class="section" id="section3">
+		<div class="container">
+            <div class="col-md-10">
+			<h3>How We Work Together</h3>
+                <div class="row">
+                <div class="col-md-2"><h1>1.</h1></div>
+                <div class="col-md-10">
+                    <h4>You join our product teams.</h4>
+                    <p>We contact you when your skills/experience best meet the project requirements. </p>
                 </div>
-                <p class="text-center">You can register as both an individual and a firm, if you like.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><h1>2.</h1></div>
+                <div class="col-md-10">
+                    <h4>We work with you on opportunities you identify</h4>
+                    <p>We can help build a winning project team, prepare proposals, and implement projects.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><h1>3.</h1></div>
+                <div class="col-md-10">
+                    <h4>We joint market with you</h4>
+                    <p>We are experts in marketing services to prospective clients.</p>
+                </div>
+            </div>
             </div>
         </div>
-
-        <div class="midnight" style="background-position: bottom;">
-            <a name="contact-us"></a>
-            <div class="container">
-                 <div class="row">
+	</div>
+	<div class="section" id="section4">
+		<div class="intro container">
+            <div class="col-md-10">
+			<h3>Why Join?</h3>
+            <p>Some Associates look at the GGI Platform as simply an additional source of work. However, most are drawn by opportunities to pursue larger projects, access leading-edge tools and resources, get assistance in marketing, proposal development and project implementation, and become a member of the GGI community. There is no cost or obligation associated with becoming a GGI Associate. </p>
+            </div>
+        </div>
+	</div>
+    
+    <div class="section" id="section5">
+		<div class="intro container">
+            <div class="col-md-6 text-box">
+			<h3>Join Today</h3>
+            <div class="row" style=" display: flex; align-items: flex-start; justify-content: space-between">
+                <a href="https://www.research.net/r/BGQG8Z5">
+                    <button class="btn-primary btn-lg">
+                        Register as an Individual
+                    </button>
+                </a>
+                <a href="https://www.research.net/r/B3RRQP6">
+                    <button class="btn-primary btn-lg">
+                        Register as a Company
+                    </button>
+                </a>
+            </div>
+                </div>
+        </div>
+	</div>
+    
+    
+    <div class="section footer" id="section6">
+		<div class="container">
+	                 <div class="row">
                         <h2>Contact Us</h2>
                 </div>
                 
@@ -321,7 +351,7 @@
                 
                 <div class="row credits">
                     <div class="col-sm-4" style="padding-left: 0;">
-                        <a href="../privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                        <a href="./privacy%20policy/"> <b>Privacy Policy</b></a><br>
                         © Goss Gilroy Inc. 2018<br>
                         Site created by <a href="http://dylanweicker.github.io"> <b>Dylan Weicker</b></a>
                     </div>
@@ -332,8 +362,10 @@
                         <b></b>
                     </div>
                 </div>
+		</div>
+	</div>
+</div>
 
-            </div>
-        </div>
-    </body>
+
+</body>
 </html>

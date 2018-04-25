@@ -1,65 +1,43 @@
-.first {
-    background: url('./images/platform.jpeg');
-    opacity: 50%;
+/* rule */
+hr{
+    margin: 4rem auto;
+}
+
+
+/*Headers*/
+h1{
+    font-size: 4rem;
+}
+
+
+/* CUSTOM SECTIONS*/
+#section0{
+    background: url('./images/light-web.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;
-    margin-top: 54px;
 }
 
-
-/* GROWTH */
-#growth h1{
+#section3, #section3 p, #section3 h3 {
     text-align: center;
 }
 
-/* CARDS */
-#growth .card{
-    border-radius: 0;
-    overflow: hidden;
-    margin: 10px;
-    margin-top: 50px;
-    margin-bottom: 0;
-}
-
-#growth .card-block{
-    padding: 1.25rem;
-    padding-left: 0;
-}
-
-#growth .card-title{
-    margin-top: 0;
-}
-
-#growth .card-img-top{
-    width: 100%;
-    height: auto;
-    clip: rect(0,0,0 20px);
+.row{
+    margin-top: 4rem;
 }
 
 
-/* STATS JUMBOTRON */
-.smartphone-stats{
-    background: url('./images/smartphone-stats.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
+/* ICONS */
+.icon, .icon-o{
+    margin-top: 1rem;
 }
 
-.stats h3{
-    text-align: right;
+.icon {
+    color: #8DEDFF;
 }
-
-
-/* VALUES */
-#values h2, #values h3{
-    text-align: center;
+.icon-o {
+    color: #f39c12;
 }
-
-#values p{
-    font-size: 1.5rem;
-}
-
-#values{
-    padding-bottom: 20px;
+.icon-b {
+    color: #3498db;
 }

@@ -1,64 +1,31 @@
-.first {
+/* CUSTOM SECTIONS*/
+#section0{
+    background-color: #253D4A;
     background: url('../images/join-us.jpg');
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: bottom; 
     background-size: cover;
-    margin-top: 54px;
 }
 
 
-/* GROWTH */
-#growth h1{
+
+#section2 h4, #section3 h4{
+    text-align: left;
+}
+
+#section3 h1{
     text-align: center;
+    font-size: 5rem;
 }
 
-/* CARDS */
-#growth .card{
-    border-radius: 0;
-    overflow: hidden;
-    margin: 10px;
-    margin-top: 50px;
-    margin-bottom: 0;
-}
-
-#growth .card-block{
-    padding: 1.25rem;
-    padding-left: 0;
-}
-
-#growth .card-title{
-    margin-top: 0;
-}
-
-#growth .card-img-top{
-    width: 100%;
-    height: auto;
-    clip: rect(0,0,0 20px);
-}
-
-
-/* STATS JUMBOTRON */
-.smartphone-stats{
-    background: url('./images/smartphone-stats.jpg');
+#section5{
+    background-color: #253D4A;
+    background: url('../images/join-us.jpg');
     background-repeat: no-repeat;
+    background-position: bottom; 
     background-size: cover;
-    background-position: center; 
 }
 
-.stats h3{
-    text-align: right;
-}
-
-
-/* VALUES */
-#values h2, #values h3{
-    text-align: center;
-}
-
-#values p{
-    font-size: 1.5rem;
-}
-
-#values{
-    padding-bottom: 20px;
+.row{
+    padding: 2rem 0;
 }

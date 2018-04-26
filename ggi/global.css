@@ -130,6 +130,10 @@ button, button:hover{
     border-bottom: 3px solid #154852;
 }
 
+.btn-lg{
+    margin-right: 32px;
+}
+
 .section .btn-primary{
     background-color: #e67e22;
     border-color: #e67e22;
@@ -162,7 +166,6 @@ button, button:hover{
     background-color: #1E6876;
     border-color: #1E6876;
     margin-bottom: 16px;
-    margin-right: 32px;
     padding-left: 24px;
     padding-right: 24px;
 }

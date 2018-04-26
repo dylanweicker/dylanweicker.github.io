@@ -129,6 +129,7 @@ html.fp-enabled,
   margin: 0;
   padding: 0;
 }
+
 #fp-nav ul li,
 .fp-slidesNav ul li {
     display: block;
@@ -182,6 +183,18 @@ html.fp-enabled,
     height: 10px;
     margin: -5px 0px 0px -5px;
 }
+
+
+@media only screen and (max-width: 880px) {
+    #fp-nav ul li .fp-tooltip {
+        display: none;
+    }
+}
+@media only screen and (min-width: 881px) {
+    #fp-nav ul li .fp-tooltip{
+        display: block;
+    }
+}
 #fp-nav ul li .fp-tooltip {
     position: absolute;
     top: -2px;
@@ -191,7 +204,6 @@ html.fp-enabled,
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
-    display: block;
     opacity: .6;
     width: auto;
     cursor: pointer;

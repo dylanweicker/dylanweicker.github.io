@@ -6,6 +6,10 @@ body, p{
     font-size: 1.6rem;
 }
 
+.text-center p{
+    text-align: center;
+}
+
 i{
     text-align: center;
     color: #2A8194;
@@ -13,6 +17,8 @@ i{
     margin-top: 50px;
     margin-bottom: 15px;
 }
+
+
 
 /* ------- headers ------*/
 
@@ -53,14 +59,15 @@ h4{
 /* ----- Boxes ----*/
 
 .container{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 .text-box{
-    background: #253D4A;
+    background: rgba(37,61,74,0.8);
     padding: 2rem 4rem;
     color: white;
     text-align: left;
-    margin-bottom: 4rem;
 }
 
 
@@ -83,7 +90,6 @@ h4{
 .section h1, .first h1{
     font-weight: bold;
     font-family: 'Open Sans Condensed';
-    margin: 0px;
 }
 
 .section h2, .first h2{
@@ -225,10 +231,6 @@ hr {
     padding: 0;
 }
 
-.address{
-    margin-bottom: 20px;
-}
-
 .form-control{
     margin-right: 20px;
     margin-bottom: 20px;
@@ -267,7 +269,6 @@ a.fal, .footer a.fal:visited{
     margin-left: 0;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
-    font-size: 4rem;
 }
 
 .footer h3{

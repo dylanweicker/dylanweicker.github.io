@@ -107,7 +107,7 @@
             navigation: false,
             navigationPosition: 'right',
             navigationTooltips: [],
-            showActiveTooltip: false,
+            showActiveTooltip: true,
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
             scrollBar: false,
@@ -151,7 +151,7 @@
             controlArrowColor: '#fff',
             verticalCentered: true,
             sectionsColor : [],
-            paddingTop: 0,
+            paddingTop: 57,
             paddingBottom: 0,
             fixedElements: null,
             responsive: 0, //backwards compabitility with responsiveWiddth

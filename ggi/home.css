@@ -18,6 +18,10 @@ h1{
     background-size: cover;
 }
 
+#section2 h4{
+    text-align: left;
+}
+
 #section3, #section3 p, #section3 h3 {
     text-align: center;
 }

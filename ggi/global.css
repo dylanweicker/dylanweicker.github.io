@@ -29,7 +29,6 @@ h1, h2, h3, h4{
 }
 
 h1{
-    color: #1E6876;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -38,13 +37,11 @@ h1{
 }
 
 h2{
-    color: #2A8194;
     font-size: 3rem;
     font-weight: 300;
 }
 
 h3{
-    color: #2A8194;
     font-size: 2rem;
 }
 
@@ -236,7 +233,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.footer{
+.midnight, .footer{
     background-color: #253D4A;
     color: #ECF0F1;
     text-align: left!important;

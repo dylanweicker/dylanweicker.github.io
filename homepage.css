@@ -163,7 +163,6 @@ hr{
 .card-img-top{
     width: 100%;
     height: auto;
-    z-index: -1;
 }
 
 
@@ -338,4 +337,8 @@ ul{
     right: 50px;
     font-weight: bold;
     color: #2d87b1;
+}
+
+.credits a, .credits{
+    color: darkgray;
 }

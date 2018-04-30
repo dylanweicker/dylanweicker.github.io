@@ -228,36 +228,6 @@ display: block;
     margin-top: 30px;
     padding-right: 20px;
 }
-
-.red{
-background: #D44;
-color: white;
-}
-
-.red h2{
- color: #f89a9a;
-}
-
-.red p{
-    color: #f8fcf8;
-    font-size:  1.5em;
-    font-weight: 400;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.orange{
-    background: #f60;
-    color: white;
-}
-.orange h1{
-    color: white;
-}
-.orange h2{
-    color: #FFD2B3;
-}
-
 .wishlist-img{
     vertical-align: top;
     padding-right: 48px;
@@ -301,41 +271,6 @@ color: white;
     margin: auto;
     color: #fff;
     font-size: 20px;
-}
-
-.orange .ghost-button:hover{
-    color: #ffd2b3;
-    border: #ffd2b3 solid 2px;
-}
-
-
-.yellow{
-background: #efca2a;
-}
-
-
-.yellow h2{
-    color: #fafcb9;
-}
-
-.green{
-background: #3d3;
-}
-.cyan{
-    background: #0af;
-}
-.blue{
-background: #55f;
-}
-.purple{
-background: #a0f;
-}
-.rainbow{
-height: 5px;
-width:100%;
-background-image: url('rainbow.png');
-background-repeat: none;
-background-size: cover;
 }
 
 .flex-container {

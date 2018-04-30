@@ -18,7 +18,7 @@ h1{
     background-size: cover;
 }
 
-#section3, #section3 p, #section3 h3 {
+#section3 h4 {
     text-align: center;
 }
 
@@ -33,7 +33,7 @@ h1{
 }
 
 .icon {
-    color: #8DEDFF;
+    color: #FFF;
 }
 .icon-o {
     color: #f39c12;

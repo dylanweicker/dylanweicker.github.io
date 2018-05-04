@@ -8,19 +8,33 @@
 }
 
 
+#section0 h2{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style: italic;
+}
 
-#section2 h4, #section3 h4{
+
+#section2 h4, #section4 h4{
     text-align: left;
 }
 
-#section3 .col-md-2 h1{
+#section4 .col-md-2 h1{
     text-align: center;
     font-size: 5rem;
 }
 
 #section5{
     background-color: #253D4A;
-    background: url('../images/join-us.jpg');
+    /*background: url('../images/people.jpg');*/
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: cover;
+}
+
+#section6{
+    background-color: #253D4A;
+    /*background: url('../images/join-us.jpg');*/
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;

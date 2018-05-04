@@ -18,12 +18,15 @@ h1{
     background-size: cover;
 }
 
-#section2 h4{
-    text-align: left;
+
+#section0 h2{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style: italic;
 }
 
-#section3 h4 {
-    text-align: center;
+#section1 h4, #section3 h4{
+    text-align: left;
 }
 
 .row{

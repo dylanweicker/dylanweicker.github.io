@@ -3,7 +3,7 @@ body, p{
     color: white;
     font-family: 'Helvetica', 'Arial', 'Lato', sans-serif;
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .text-center p{
@@ -16,6 +16,16 @@ i{
     font-size: 8rem!important;
     margin-top: 50px;
     margin-bottom: 15px;
+}
+
+a:link, a:visited {
+    color: #FB8C00;
+    text-decoration:none;
+}
+
+a:hover, a:active {
+    color: #e67e22;
+    text-decoration:none;
 }
 
 
@@ -131,55 +141,42 @@ button, button:hover{
     box-shadow: none;
     border-right: 3px solid #1a2a33;
     border-bottom: 3px solid #154852;
+    padding: 12px;
+    border-radius: 0!important;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 10px;
 }
 
 .btn-lg{
-    margin-right: 32px;
+    margin-right: 32px!important;
+    padding: 12px;
 }
 
-.section .btn-primary{
-    background-color: #e67e22;
-    border-color: #e67e22;
+.section .btn-primary,
+.btn-default{
+    color: #fff;
+    background-color: #1E6876;
+    border-color: #1E6876
     margin-bottom: 16px;
+    border-color: #1E6876;
+    font-size: 12px;
+    font-weight: bolder;
 }
 
 .section .btn-primary:hover,
 .section .btn-primary:active,
 .section .btn-primary:focus,
-.section .btn-primary:focus:hover{
-    background-color: #FB8C00;
-    border-color: #FB8C00;
-}
-
-.btn-primary{
-    background-color: #1E6876;
-    border-color: #1E6876;
-    margin-bottom: 16px;
-}
-
-.btn-primary:hover,
-.btn-primary:active{
-    background-color: #2A8194;
-    border-color: #2A8194
-}
-
-
-.btn-default{
-    color: #fff;
-    background-color: #1E6876;
-    border-color: #1E6876;
-    margin-bottom: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
+.section .btn-primary:focus:hover,
 .btn-default:hover,
 .btn-default:active,
 .btn-default:focus,
 .btn-default:focus:active{
     color: #fff;
-    background-color: #2A8194;
-    border-color: #2A8194
+    background-color: #FB8C00;
+    border-color: #FB8C00;
+    -webkit-transition: ease-in-out 500ms; /* Safari */
+    transition: ease-in-out 500ms;
 }
 
 .btn-long{
@@ -281,14 +278,15 @@ a.fal, .footer a.fal:visited{
     padding: 0;
 }
 
-.credits{
+.footer .credits{
     font-size: 14px;
-    color: #ECF0F1;
+    color: #ddd;
     font-family: 'Open Sans', sans-serif;
+    padding-top: 4em;
     margin-bottom: 80px;
 }
 .credits a{
-    color: white;
+    color: #ECF0F1;
 }
 .credits a:hover{
     text-decoration: underline;

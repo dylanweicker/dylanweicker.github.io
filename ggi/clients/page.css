@@ -6,6 +6,13 @@
     background-size: cover;
 }
 
+#section0 h2{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+
 #section1{
     text-align: left;
 }

@@ -1,14 +1,36 @@
 .navbar-brand{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
     font-weight: normal;
     color: #fff!important;
     text-shadow: 1px 1px 1px #333;
+    position: absolute;
 }
 
 .navbar-brand strong{
     font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
     font-size: 3rem;
     font-weight: bolder;
+}
+
+.sandwich-nav span, span.nav-brand {
+    font-size: 2rem;
+    font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+    margin-right:8px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+span.nav-brand{
+    font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    position: relative;
+    top: -8px;
+}
+
+
+span.nav-brand {
+    padding-bottom: 15px;
 }
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
@@ -94,13 +116,6 @@ nav {
     display: none;
 }
 
-.sandwich-nav span{
-    font-size: 2rem;
-    font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
-    margin-right:8px;
-    text-transform: uppercase;
-    font-weight: normal;
-}
 
 
 @media screen and (max-width: 360px){

@@ -111,7 +111,6 @@ if(isset($_POST['email'])) {
     
     $organization = $_POST['organization']; // not required
     $project = $_POST['project']; // not required
-    $reference = $_POST['reference']; // not required
     $services = $_POST['services']; // not required
     $comments = $_POST['comments']; // not required
     $how_soon = $_POST['how-soon']; // not required

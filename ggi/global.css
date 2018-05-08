@@ -135,7 +135,7 @@ h4{
 
 
 /* ------BUTTONS ------- */
-button, button:hover{
+button, button:hover, .btn, .btn:hover{
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     box-shadow: none;
@@ -153,11 +153,20 @@ button, button:hover{
     padding: 12px;
 }
 
-.section .btn-primary,
-.btn-default{
+.section .btn-default{
     color: #fff;
     background-color: #1E6876;
     border-color: #1E6876
+    margin-bottom: 16px;
+    border-color: #1E6876;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #253D4A;
+    border-color: #253D4A
     margin-bottom: 16px;
     border-color: #1E6876;
     font-size: 12px;
@@ -184,6 +193,22 @@ button, button:hover{
 }
 
 
+/* --------- Table and Forms ------*/
+td{
+    padding: .5rem;
+}
+
+input[type=text], input[type=tel], input[type=email], textarea{
+    border-style: none; 
+    padding: 4px;
+    background-color: #fff;
+    box-shadow: none; 
+    color: #253D4A;
+}
+input[type=text]:focus,  input[type=tel]:focus, input[type=email]:focus, textarea:focus {
+    outline: 2px solid #FB8C00;
+}
+
 
 /* ------- Horizontal Rule -------*/
 hr {
@@ -203,9 +228,6 @@ hr {
 
 .icon-o {
     color: #e67e22;
-}
-.icon-b {
-    color: #3498db;
 }
 
 .container-small{
@@ -243,14 +265,14 @@ hr {
 }
 
 a.fal, .footer a.fal:visited{
-    color: #e67e22;
+    color: #FB8C00;
     margin-right: 48px;
     margin-left: -16px;
     text-decoration: none;
 }
 
 .footer a.fal:hover, .footer a.fal:active{
-    color: #FB8C00;
+    color: #e67e22;
     text-decoration: none;
 }
 
@@ -297,6 +319,7 @@ a.fal, .footer a.fal:visited{
 .text-muted{
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
+    color: #ddd;
 }
 
 

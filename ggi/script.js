@@ -1,3 +1,5 @@
+//NAVIGATION
+
 function toggleHiddenMenu(){
     if (window.innerWidth < 893){
         toggleDropDownMenu();
@@ -23,3 +25,12 @@ function openLongMenu(){
     sandwichBtn.style.display = 'none';
         
 }
+
+
+//REGISTRATION FORM
+function begin_process(){
+    document.getElementById("begin-process-button").style.display = 'none';
+    var process = document.getElementById("process");
+    process.style.display = 'block';
+}
+

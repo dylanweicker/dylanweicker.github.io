@@ -73,8 +73,8 @@
                 <!--pop down-->
                 <div id="hidden-menu" class="container-fluid" style="display: none;">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="../">Home</a></li>
-                        <li><a href="../associates/">Join Us</a></li>
+                        <li><a href="../">Home</a></li>
+                        <li class="active"><a href="../associates/">Join Us</a></li>
                         <li><a href="../clients/">Hire Us</a></li>
                         <li><a href="#contact-us">Contact Us</a></li>
                     </ul>
@@ -272,20 +272,109 @@
                         <h1>Register Today</h1>
                         <h2>Interested in joining the GGI Platform?</h2>
                         <p>
-                            You can register as an individual, a firm or both.  To begin the process, you can access a form through the following link.  We will be respond to you within the next three business days with a personalized link through which you can initially develop and later update, as needed, an overview of your education, skills and experience.  
+                            You can register as an individual, a firm or both.  To begin the process, you can fill out the form below. We will be respond to you within the next three business days with a personalized link through which you can initially develop and later update, as needed, an overview of your education, skills and experience.  
                         </p><p>
                             Any personalized registration information we collect from you will be used only for the purposes of identifying opportunities for us to work together.  It will not be shared with any other parties without your consent.  Our Privacy Policy is available <a href="../privacy%20policy/">here</a>.
                         </p>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="https://www.research.net/r/BGQG8Z5">
-                                <button class="btn-primary btn-lg">
-                                    Begin the Process
-                                </button>
-                            </a>
+                        <!--div class="row" id="begin-process-button">
+                            <div class="col-md-12">
+                                    <button class="btn-primary btn-lg" onclick="begin_process(); resizeHandler();">
+                                        Begin the Process
+                                    </button>
+                            </div>
+                        </div-->
+                        <div class="row" id="process">
+                            <form name="contactform" method="post" action="../associate-registration.php">
+                                
+                                <table width="100%">
+                                    <tr>
+                                         <td valign="top" style="width:200px;">
+                                            <label for="name">Name *</label>
+                                         </td>
+                                         <td valign="top">
+                                            <input  type="text" name="name" maxlength="50" size="30">
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="organization">Organization</label>
+                                         </td>
+                                         <td valign="top">
+                                            <input  type="text" name="organization" maxlength="50" size="30">
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="email">Email Address *</label>
+                                         </td>
+                                         <td valign="top">
+                                            <input  type="email" name="email" maxlength="80" size="30">
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="telephone">Telephone Number *</label>
+                                         </td>
+                                         <td valign="top">
+                                            <input  type="tel" name="telephone" maxlength="30" size="30">
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="registering-as">Registering as *</label>
+                                         </td>
+                                         <td valign="top">
+                                            <input type="radio" name="registering-as" value="an individual"> Individual<br>
+                                            <input type="radio" name="registering-a" value="a firm"> Firm<br>
+                                            <input type="radio" name="registering-a" value="both an individual and a firm"> Both<br>
+                                            <input type="radio" name="registering-a" value="not sure"> Not sure<br>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="expertise">Primary Area of Expertise or Interest *</label>
+                                         </td>
+                                         <td valign="top">
+                                            <textarea  name="expertise" maxlength="1000" cols="30" rows="3"></textarea>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="specific-opportunity">Do you have a specific opportunity to discuss with us?</label>
+                                         </td>
+                                          <td valign="top">
+                                            <input type="radio" name="specific-opportunity" value="yes">Yes<br>
+                                            <input type="radio" name="specific-opportunity" value="no" checked="true">No<br>
+                                         </td>
+                                    </tr>
+                                    <tr id="opportunity-description">
+                                         <td valign="top">
+                                            <label for="opportunity-description">If yes, please describe the opportunity</label>
+                                         </td>
+                                         <td valign="top">
+                                            <textarea  name="opportunity-description" maxlength="1000" cols="30" rows="3"></textarea>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td valign="top">
+                                            <label for="how-soon">How soon do you need us to get back to you?</label>
+                                         </td>
+                                         <td valign="top">
+                                            <textarea  name="how-soon" maxlength="1000" cols="30" rows="3"></textarea>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td>
+                                             <input class="btn btn-default btn-lg" type="submit" value="Submit">
+                                         </td> 
+                                         <td>
+                                             <p class="text-muted">* indicates a required field.</p>
+                                         </td> 
+                                    </tr>
+                                </table>
+                            </form>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>    
         </div>

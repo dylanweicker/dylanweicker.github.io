@@ -1,4 +1,8 @@
 /*------ text ------*/
+body{
+    background-color: #1E6876;
+}
+
 body, p{
     color: white;
     font-family: 'Helvetica', 'Arial', 'Lato', sans-serif;
@@ -173,10 +177,10 @@ button, button:hover, .btn, .btn:hover{
     font-weight: bolder;
 }
 
-.section .btn-primary:hover,
-.section .btn-primary:active,
-.section .btn-primary:focus,
-.section .btn-primary:focus:hover,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus:hover,
 .btn-default:hover,
 .btn-default:active,
 .btn-default:focus,

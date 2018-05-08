@@ -27,6 +27,10 @@ function openLongMenu(){
 }
 
 
+function goBack() {
+    window.history.back();
+}
+
 //REGISTRATION FORM
 function begin_process(){
     document.getElementById("begin-process-button").style.display = 'none';

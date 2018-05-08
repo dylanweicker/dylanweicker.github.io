@@ -170,9 +170,9 @@ if(isset($_POST['email'])) {
     }
  
 // create email headers
-$headers = "MIME-Version: 1.0" .
-"\r\n". "Content-type:text/html;charset=UTF-8" .
-"\r\n"'From: '.$email_from."\r\n".
+$headers = "MIME-Version: 1.0";
+$headers .= "\r\n". "Content-type:text/html;charset=UTF-8"."\r\n"; 
+$headers .= 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  

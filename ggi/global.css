@@ -200,6 +200,7 @@ button, button:hover, .btn, .btn:hover{
 /* --------- Table and Forms ------*/
 td{
     padding: .5rem;
+    text-align: left;
 }
 
 input[type=text], input[type=tel], input[type=email], textarea{

@@ -149,34 +149,36 @@ if(isset($_POST['email'])) {
     }  
     
     
-    $email_message = "". clean_string($name). " would like to register to be an Associate. \n\n\n" ;
+    $email_message = "". clean_string($name). " would like to register to be an Associate. <br><br><br>" ;
  
        
     // EDIT THE EMAIL AFTER TESTING
-    $email_to = "dylanweicker@gmail.com";
+    $email_to = "Associates@GGIPlatform.ca";
     $email_subject = "Associate Registration: " .clean_string($name);
  
-    $email_message .= "Name: ".clean_string($name)."\n";
+    $email_message .= "Name: ".clean_string($name)."<br>";
     if($organization){
-      $email_message .= "Organization: ".clean_string($organization)."\n";
+      $email_message .= "Organization: ".clean_string($organization)."<br>";
     }
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Telephone: ".clean_string($telephone)."\n\n";
+    $email_message .= "Email: ".clean_string($email_from)."<br>";
+    $email_message .= "Telephone: ".clean_string($telephone)."<br><br>";
     
-    $email_message .= "Registering As: " .clean_string($registering_as)."\n\n";
+    $email_message .= "Registering As: " .clean_string($registering_as)."<br><br>";
     
-    $email_message .= "Field of Expertise:\n" .clean_string($expertise)."\n\n";
+    $email_message .= "Field of Expertise:<br>" .clean_string($expertise)."<br><br>";
     
     if($specific_opportunity == 'yes'){
-      $email_message .= "Specific opportuntiy:\n".clean_string($opportunity_description)."\n\n";
+      $email_message .= "Specific opportuntiy:<br>".clean_string($opportunity_description)."<br><br>";
     }
     
     if(!strlen($how_soon) <2){
-      $email_message .= "Please contact back within:\n".clean_string($how_soon)."\n\n";
+      $email_message .= "Please contact back within:<br>".clean_string($how_soon)."<br><br>";
     }
  
 // create email headers
-$headers = 'From: '.$email_from."\r\n".
+$headers = "MIME-Version: 1.0";
+$headers .= "\r\n". "Content-type:text/html;charset=UTF-8"."\r\n"; 
+$headers .= 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  

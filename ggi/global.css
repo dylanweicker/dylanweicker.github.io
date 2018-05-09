@@ -147,7 +147,7 @@ button, button:hover, .btn, .btn:hover{
     padding: 12px;
 }
 
-.section .btn-default{
+.btn-default{
     color: #fff;
     background-color: #1E6876;
     border-color: #1E6876
@@ -165,6 +165,15 @@ button, button:hover, .btn, .btn:hover{
     border-color: #1E6876;
     font-size: 12px;
     font-weight: bolder;
+}
+
+
+.cta, 
+.cta:hover,
+.cta:focus, 
+.cta:active, 
+.cta:focus:active{
+    background-color: #e67e22;
 }
 
 .btn-primary:hover,
@@ -212,6 +221,7 @@ hr {
     background: #e67e22;
     border-radius: 2px;
     margin-bottom: 1.5rem;
+    border-top: none;
 }
 
 

@@ -139,34 +139,34 @@ if(isset($_POST['email'])) {
     }  
     
     
-    $email_message = "". clean_string($name). " would like to request a quote or more information. \n\n\n" ;
+    $email_message = "". clean_string($name). " would like to request a quote or more information. <br><br><br>" ;
  
        
     // EDIT THE EMAIL AFTER TESTING
-    $email_to = "dylanweicker@gmail.com";
+    $email_to = "sales@GGIPlatform.ca";
     $email_subject = "Quote or Info Request: " .clean_string($name);
  
-    $email_message .= "Name: ".clean_string($name)."\n";
+    $email_message .= "Name: ".clean_string($name)."<br>";
     if($organization){
-      $email_message .= "Organization: ".clean_string($organization)."\n";
+      $email_message .= "Organization: ".clean_string($organization)."<br>";
     }
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Telephone: ".clean_string($telephone)."\n\n";
+    $email_message .= "Email: ".clean_string($email_from)."<br>";
+    $email_message .= "Telephone: ".clean_string($telephone)."<br><br>";
     
     if(strlen($project) > 0){
-      $email_message .= "Project Description:\n". $project."\n\n";
+      $email_message .= "Project Description:<br>". $project."<br><br>";
     }
     
     if(strlen($comments) > 0){
-      $email_message .= "Questions or Comments:\n". $project."\n\n";
+      $email_message .= "Questions or Comments:<br>". $comments."<br><br>";
     }
     
     if($services == 'yes'){
-      $email_message .= "This client has explicitly requested more information about services.\n\n";
+      $email_message .= "<b>This client has explicitly requested more information about services.</b><br><br>";
     }
     
-    if(!strlen($how_soon) > 0){
-      $email_message .= "Please contact back within:\n".clean_string($how_soon)."\n\n";
+    if(strlen($how_soon) > 0){
+      $email_message .= "Please contact back within:\n".clean_string($how_soon)."<br><br>";
     }
  
 // create email headers

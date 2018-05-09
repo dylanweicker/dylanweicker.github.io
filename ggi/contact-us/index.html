@@ -18,19 +18,31 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sendEmail").click(function()
+             {
+                var subject = encodeURI(document.getElementById("subject").value);
+                var name = encodeURI(document.getElementById("name").value);
+                var email = encodeURI(document.getElementById("email").value);
+                var body = encodeURI(document.getElementById("body").value);
+                var mailto = "mailto:Info@GGIPlatform.ca?subject=" + subject + "&body="+ body + "%0D%0A%0D%0ACheers,%0D%0A"+ name + "%0D%0A"+ email;
+                var mail = document.createElement("a");
+                mail.href = mailto;
+                mail.click();
+             });
+        });
+    </script>
     
            
     <!-- symbols -->
-    <link rel="stylesheet" href="./icons/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Minion+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
     
     <!-- CSS -->
@@ -95,7 +107,7 @@
                         <li>Jaskaran Bedi, Associate Coordinator</li>
                         <li>The GGI Platform</li>
                         <li>778-379-5590 (ext. 5)</li>
-                        <li><a href="mailto:Jaskaran.Bedi@GGIPlatform.ca">Jaskaran.Bedi@GGIPlatform.ca</a></li>
+                        <li><a href="mailto:JB@GGIPlatform.ca">JB@GGIPlatform.ca</a></li>
                     </ul>
                 </div>
             </div> <div class="row space">
@@ -164,24 +176,23 @@
                 <div class="row space">
                     <div class="col-md-6">
                         <h1 style="margin-left: -15px; margin-bottom: 3rem;">Send an Email</h1>
-                        <form class="form-group contact-us" action="mailto:info@GGIPlatform.ca?subject=Web-Form%20Submission" method="post" enctype="text/plain">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name">
-                                    <input type="text" class="form-control" name="email" placeholder="Your Email">
-                                </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                <input type="text" class="form-control" id="email"  name="email" placeholder="Your Email">
+                                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <textarea class="form-control" rows="4" name="message" id="message" placeholder="Your Message"></textarea>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <textarea class="form-control" rows="4" name="body" id="body" placeholder="Your Message"></textarea>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <input id="mail-link" class="btn btn-default" type="submit" value="Send">
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button id="sendEmail" class="btn btn-default">Send Email</button>
                             </div>
-                        </form>
+                            </div>
                     </div>
                     
                     <div class="col-md-4 col-md-offset-1 text-center">

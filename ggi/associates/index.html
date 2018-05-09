@@ -41,11 +41,11 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fullpage').fullpage({
-                    anchors: ['top', 'challenges', 'help', "why", "collab", "testimonials", "register"],
-                    sectionsColor: [ 'undefined', '#1e6876', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
+                    anchors: ['top', 'challenges', 'help', "why", "collab", "testimonials", "register", "connect"],
+                    sectionsColor: [ 'undefined', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
                     navigation: true,
                     navigationPosition: 'right',
-                    navigationTooltips: ['Join Us', 'Challenges', 'How We Can Help', "Why Join?", "Collaborating", "Testimonials", "Register Today"]
+                    navigationTooltips: ['Join Us', 'Challenges', 'How We Can Help', "Why Join?", "Collaborate", "Testimonials", "Register Today", "Connect"]
                 });
             });
         </script>
@@ -98,7 +98,7 @@
                                     </button>
                                 </a>
                                 <a href="#register">
-                                    <button class="btn-default btn-lg">
+                                    <button class="btn-default btn-lg cta">
                                         Register Today
                                     </button>
                                 </a>
@@ -219,7 +219,7 @@
             <div class="section" id="section4">
                 <div class="container">
                     <div class="col-md-10">
-                     <h1>Collaborating</h1>
+                     <h1>Collaborate</h1>
                         <h2>Three ways we commonly work with GGI Associates</h2>
                         <div class="row">
                             <div class="col-md-2"><i class="fa fa-users fa-5x"></i></div>
@@ -269,7 +269,7 @@
 
              <div class="section" id="section6">
                 <div class="intro container">
-                    <div class="col-md-12 text-box">
+                    <div class="col-md-12">
                         <h1>Register Today</h1>
                         <h2>Interested in joining the GGI Platform?</h2>
                         <p>
@@ -329,7 +329,7 @@
                                                 <input type="radio" name="registering-as" value="an individual"> Individual<br>
                                                 <input type="radio" name="registering-a" value="a firm"> Firm<br>
                                                 <input type="radio" name="registering-a" value="both an individual and a firm"> Both<br>
-                                                <input type="radio" name="registering-a" value="not sure"> Not sure<br>
+                                                <input type="radio" name="registering-a" value="not sure" checked="true"> Not sure<br>
                                              </td>
                                         </tr>
                                         <tr>
@@ -345,8 +345,8 @@
                                                 <label for="specific-opportunity">Do you have a specific opportunity to discuss with us?</label>
                                              </td>
                                               <td valign="top">
-                                                <input type="radio" name="specific-opportunity" value="yes">Yes<br>
-                                                <input type="radio" name="specific-opportunity" value="no" checked="true">No<br>
+                                                <input type="radio" name="specific-opportunity" value="yes" checked="true">Yes<br>
+                                                <input type="radio" name="specific-opportunity" value="no" >No<br>
                                              </td>
                                         </tr>
                                         <tr id="opportunity-description">
@@ -367,7 +367,7 @@
                                         </tr>
                                         <tr>
                                              <td>
-                                                 <input class="btn btn-default btn-lg" type="submit" value="Submit">
+                                                 <input class="btn btn-primary btn-lg" type="submit" value="Submit">
                                              </td> 
                                              <td>
                                                  <p class="text-muted">* indicates a required field.</p>
@@ -378,8 +378,69 @@
                             </div>
                         </div>
                     </div>
+                 </div>
+            </div>
+        <div class="section footer" id="section7">
+		  <div class="intro container">
+            <h1>Connect</h1>
+                
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>Vancouver Office</h2>
+                        <ul class="no-bullet address">
+                            <li> Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>210-314 West Cordova</li>
+                            <li>Vancouver BC  V6B 1E8</li>
+                            <li>Canada</li>
+                            <li>Telephone - 778-379-5590</li>
+                            <li>Toll-free - (844)-584-9343</li>
+                            <li><a href="mailto:info@GGIPlatform.ca">info@GGIPlatform.ca</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Ottawa Office</h2>
+                        <ul class="no-bullet address">
+                            <li>Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>150 Metcalfe, Suite 900 </li>
+                            <li>Ottawa ON  K2P 1P1</li>
+                            <li>Canada</li>
+                            <li>Telephone - (613) 230-5577</li>
+                            <li>Toll-free - (800) 611-0511</li>
+                            <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>St. John's Office</h2>
+                        <ul class="no-bullet address">
+                            <li> Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>401 Empire Ave. </li>
+                            <li>St. John’s NL  A1E 1W6</li>
+                            <li>Canada</li>
+                            <li>Telephone - (709) 754-2065</li>
+                            <li>Toll-free - (855) 805-2065</li>
+                            <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>    
+                
+                <div class="row credits">
+                    <div class="col-sm-4">
+                        <a href="./privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                        © Goss Gilroy Inc. 2018<br>
+                        Site created by <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                    </div>
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <br><br>
+                    </div>
+                    <div class="col-sm-4 credits" style="padding-left: 0;">
+                        <b></b>
+                    </div>
+                </div>
+		      </div>
+		</div>
         </div>
     </body>
 </html>

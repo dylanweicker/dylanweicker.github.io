@@ -1,3 +1,7 @@
+.row{
+    padding: 2rem 0;
+}
+
 /* CUSTOM SECTIONS*/
 #section0{
     background-color: #253D4A;
@@ -15,8 +19,23 @@
 }
 
 
+#section1 .col-md-4{
+    margin: 2rem 0;
+}
+#section1 .row{
+    margin: 0;
+    padding: 0;
+}
+
+
 #section2 h4, #section4 h4{
     text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    #section2 h4, #section2 p, #section4 h4, #section4 p {
+        text-align: center;
+    }
 }
 
 #section4 .col-md-2 h1{
@@ -38,12 +57,4 @@
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;
-}
-
-#process{
-}
-
-
-.row{
-    padding: 2rem 0;
 }

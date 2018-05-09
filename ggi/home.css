@@ -1,15 +1,3 @@
-/* rule */
-hr{
-    margin: 4rem auto;
-}
-
-
-/*Headers*/
-h1{
-    font-size: 4rem;
-}
-
-
 /* CUSTOM SECTIONS*/
 #section0{
     background: url('./images/light-web.jpg');

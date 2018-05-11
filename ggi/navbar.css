@@ -55,6 +55,14 @@ nav {
     background: none;
 }
 
+.navbar li img{
+    height: 24px;
+    display: inline;
+    margin-right: 8px;
+    margin-top: -4px;
+    background: none;
+}
+
 .navbar-header {
     float: left;
 }

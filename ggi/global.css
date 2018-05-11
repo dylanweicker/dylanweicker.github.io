@@ -64,9 +64,10 @@ h3{
 
 h4{
     color: #FB8C00;
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 14;
+    font-weight: normal;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -192,7 +193,7 @@ button, button:hover, .btn, .btn:hover{
 }
 
 .btn-long{
-    width: 80%;
+    width: 100%;
 }
 
 

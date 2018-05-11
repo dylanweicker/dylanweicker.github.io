@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/ggi-fav-icon.jpg" />
+        <link rel="icon" type="image/x-icon" href="../../images/ggi-fav-icon.jpg" />
+        <title>GGI Platform</title>
+        <meta name="author" content="Dylan Weicker" />
+        <meta name="description" content="" />
+        <meta name="keywords"  content="" />
+        <meta name="Resource-type" content="Document" />
+        
+        <link rel="alternate" href="http://ggiplatform.com/associates" hreflang="en" />
+        <link rel="alternate" href="http://ggiplatform.com/fr/associates" hreflang="fr" />
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../vendors/scrolloverflow.js"></script>
+        <script type="text/javascript" src="../../jquery.fullPage.js"></script>
+        <script type="text/javascript" src="../../script.js"></script>
+
+
+        <!-- symbols -->
+        <link rel="stylesheet" href="../icons/css/font-awesome.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../../jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="../../navbar.css">
+        <link rel="stylesheet" type="text/css" href="../../global.css" />
+        <link rel="stylesheet" type="text/css" href="../../associates/page.css" />
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors: ['top', 'challenges', 'help', "why", "collab", "testimonials", "register", "connect"],
+                    sectionsColor: [ 'undefined', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
+                    navigation: true,
+                    navigationPosition: 'right',
+                    navigationTooltips: ['Join Us', 'Challenges', 'How We Can Help', "Why Join?", "Collaborate", "Testimonials", "Register Today", "Connect"]
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+
+                    <!-- brand -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="../"><img src="../../images/ggi-logo.png"><span class="nav-brand">GGI Platform</span></a>
+                    </div>
+                    <!--Navigation -->
+                    <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                        <li><a href="../">Home</a></li>
+                        <li  class="active"><a href="../associates/">Join Us</a></li>
+                        <li><a href="../clients/">Hire Us</a></li>
+                        <li><a href="../contact-us">Contact Us</a></li>
+                    </ul>
+
+                    <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                        <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <!--pop down-->
+                <div id="hidden-menu" class="container-fluid" style="display: none;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../">Home</a></li>
+                        <li class="active"><a href="../associates/">Join Us</a></li>
+                        <li><a href="../clients/">Hire Us</a></li>
+                        <li><a href="../contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+         </nav>
+
+        <div id="fullpage">
+
+            <div class="section " id="section0">
+                <div class="intro">
+                    <div class="container">
+                        <div class="col-md-8">
+                            <div class="text-box">
+                                <h2>You enjoy working independently but face some challenges.<br> We can help.</h2>
+                                <h1>Élargissez votre clientèle grâce à la Plateforme GGI</h1>
+                                <p>Find out more about how our services address some of the common challenges affecting consultants and how you can register as an associate with GGI.</p>
+                                <a href="#challenges">
+                                    <button class="btn-default btn-lg">
+                                        Find Out More &emsp; <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                                <a href="#register">
+                                    <button class="btn-default btn-lg cta">
+                                        Register Today
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section1">
+                <div class="intro container">
+                    <div class="col-md-10">
+                        <h1>Vos Obstacles </h1>
+                            <p>L’an dernier, nous avons rencontré de nombreux consultants qui travaillent dans de petits cabinets ou à titre indépendant. Vous nous avez dit que vous aimiez beaucoup l’autonomie, la souplesse et les autres avantages que cela vous procurait. Cependant, vous avez aussi parlé des frustrations et des obstacles auxquels vous êtes confrontés.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                            <i class="fas fa-search fa-5x"></i>
+                            <h4>Repérer les possibilités</h4>
+                                La recherche de possibilités prend beaucoup de temps et il faut toujours s’assurer de faire partie des bonnes listes.
+                            </div>
+                            <div class="col-md-4">
+                            <i class="far fa-file-alt fa-5x"></i>
+                            <h4>Rédiger les propositions</h4>
+                                Puisque les demandes de propositions sont de plus en plus complexes, le temps consacré à la rédaction ne cesse de s’allonger.
+                            </div>
+                            <div class="col-md-4">
+                            <i class="fas fa-chess fa-5x"></i>
+                            <h4>Solliciter des contrats importants</h4>
+                                Les grands cabinets sont mieux outillés pour démontrer qu’ils disposent des ressources et des antécédents nécessaires pour remporter les contrats importants.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+
+                            <i class="fa fa-users fa-5x"></i>
+                            <h4>Mettre sur pied des équipes</h4>
+                                Les clients veulent des équipes de consultants spécialisés, pas seulement des généralistes. Il est parfois difficile de trouver les personnes qui composeront l’équipe dont vous avez besoin.
+                            </div>
+                            <div class="col-md-4">                    
+                            <i class="fa fa-wrench fa-5x"></i>
+                            <h4>Accéder aux outils et à la technologie</h4>
+                                Des outils et des technologies avant-gardistes sont accessibles, mais ils sont parfois très dispendieux et très difficiles à mettre en place.
+                            </div>
+                            <div class="col-md-4">
+                                <i class="far fa-edit fa-5x"></i>
+                            <h4>Miser sur vos compétences principales</h4>
+                                Vous passez plus de temps que vous le voudriez à effectuer les recherches de base et l’administration de projets, et pas suffisamment sur les éléments qui ajoutent vraiment de la valeur.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section2">
+                <div class="intro container">
+                    <h1>How We Can Help</h1>
+                    <h2>La Plateforme GGI aborde ces enjeux et vous donne davantage de contrôle sur la façon dont vous travaillez et sur les projets que vous réalisez.</h2>
+                    <p>Here are six key ways the GGI Platform can help improve your practice:</p>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fa fa-users fa-5x"></i></div>
+                        <div class="col-md-8">
+                            <h4>Formez des équipes de projet gagnantes </h4>
+                            <p>La Plateforme GGI vous donnera accès à notre équipe d’exceptionnels consultants à l’interne et à notre réseau grandissant d’associés.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fas fa-sitemap fa-5x"></i></div>
+                        <div class="col-md-8">
+                            <h4>Obtenez davantage de contrats </h4>
+                            <p>La Plateforme vous aidera à repérer et à saisir des occasions, car vous avez accès à l’expertise et aux ressources de GGI en matière de rédaction de propositions.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fas fa-book fa-5x"></i></div>
+                        <div class="col-md-8">
+                            <h4>Travaillez sur des projets plus importants et plus complexes </h4>
+                            <p>Prenez part à nos équipes de projet et comptez sur la taille, les antécédents et la capacité de GGI pour connaître les prescriptions complexes en matière d’achats.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fas fa-wrench fa-5x"></i></div>
+                        <div class="col-md-8">
+                            <h4>Accédez à des services de recherche </h4>
+                            <p>Nous vous offrirons une vaste gamme de services de recherche, dont la prestation est plus rapide et plus économique que jamais.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="far fa-handshake fa-5x"></i></div>
+                        <div class="col-md-8">
+                            <h4>Accédez aux outils utilisés par les grands cabinets </h4>
+                            <p>Nous augmentons nos capacités dans des domaines allant de la gestion de projet, à la surveillance et à la visualisation en passant par l’analyse prédictive et l’analyse de textes, de médias sociaux et de mégadonnées. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="far fa-life-ring  fa-5x"></i></div>
+                        <div class="col-md-8">
+                            <h4>Obtenez davantage de soutien </h4>
+                            <p>Concentrez-vous sur ce que vous faites le mieux – la consultation – pendant que l’équipe GGI vous aide dans la gestion et l’administration des projets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section3">
+                <div class="intro container">
+                    <div class="col-md-10">
+                     <h1>Pourquoi vous joindre à la Plateforme GGI? </h1>
+                        <p>Nos associés sont des consultants, des évaluateurs, des gestionnaires supérieurs et d’autres personnes  ayant des compétences spécialisées et une expertise pertinente pour les clients. En vous joignant à nous, vous continuerez de profiter des avantages et du style de vie qu’offrent le travail autonome tout en bénéficiant des avantages qui sont associés au travail au sein d’un grand cabinet de consultants.   
+                        </p><p>
+                        Certains associés considèrent la Plateforme GGI simplement comme une source supplémentaire de travail. Toutefois, la plupart sont attirés par les possibilités de participer à de plus grands projets, d’accéder à des ressources et à des outils novateurs, d’obtenir de l’aide en marketing, en élaboration de propositions et en mise en œuvre de projets, et de devenir membre de la communauté GGI. Il n’y a aucuns frais ni aucune obligation associés au fait de devenir un associé GGI.
+                        </p><p>
+                        There is no cost to you of becoming a GGI Associate.  If you work on one of our projects, we negotiate the fees with you and typically apply a small markup when invoicing the client.  Where we assist you in obtaining or completing a project, we would negotiate the terms for those services with you.   
+                        </p><p>
+                        You make no commitment to work with us or to be a member of any of our project teams (we’ll first check with you before including you in a proposal or making client referrals). There are no restrictions whatsoever on your ability to pursue work on your own or work with other firms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section4">
+                <div class="container">
+                    <div class="col-md-10">
+                     <h1>Collaborate</h1>
+                        <h2>Trois façons dont nous travaillons habituellement avec les associés GGI</h2>
+                        <div class="row">
+                            <div class="col-md-2"><i class="fa fa-users fa-5x"></i></div>
+                        <div class="col-md-10">
+                            <h4>1.	Vous vous joignez à nos équipes de projet. </h4>
+                            <p>Nous communiquons avec vous quand vos compétences et votre expérience correspondent le mieux aux exigences du projet.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fa fa-handshake fa-5x"></i></div>
+                        <div class="col-md-10">
+                            <h4>Nous travaillons avec vous sur les projets que vous identifiez.</h4>
+                            <p>Nous vous aiderons à mettre sur pied une équipe de projet gagnante, à préparer des propositions et à mettre en œuvre des projets.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fa fa-puzzle-piece fa-5x"></i></div>
+                        <div class="col-md-10">
+                            <h4>Nous montons conjointement à l’assaut du marché avec vous.</h4>
+                            <p>Nous sommes des experts en matière de services de marketing à des clients potentiels.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section5">
+                <div class="intro container">
+                    <div class="slide" id="slide1">
+                        <div class="intro">
+                             <div class="col-md-10">
+                                 <h1>Testimonial</h1>
+                                 <h2>“Wow. I just got my management consulted and it was SO SIMPLE. I am blown away. You guys truly kick ass. Thanks for being so awesome. High fives!”</h2>
+                                 <p class="lead"><b>Dylan Weicker</b><br>Professional Cutie</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide2">
+                         <div class="col-md-10">
+                                 <h1>Testimonial</h1>
+                                 <h2>"Your leading-edge tools made it so simple. My last project was so much faster and easier to do than my previous ones. I just chose to work with the consultants in the GGI Platform's network of Associates and I was done. Thanks, guys!”</h2>
+                                 <p class="lead"><b>Mr. Weicker</b><br>CEO of Cool Kid &amp; Co.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="section" id="section6">
+                <div class="intro container">
+                    <div class="col-md-12">
+                        <h1>Register Today</h1>
+                        <h2>Interested in joining the GGI Platform?</h2>
+                        <p>
+                            You can register as an individual, a firm or both.  Fill out the form below. We will usually respond within the next three business days with a personalized link through which you can submit (and later update as needed) an overview of your education, skills and experience.  
+                        </p><p>
+                            Any personalized registration information we collect from you will be used only for the purposes of identifying opportunities for us to work together.  It will not be shared with any other parties without your consent.  Our Privacy Policy is available <a href="../privacy%20policy/">here</a>.
+                        </p>
+                        <!--div class="row" id="begin-process-button">
+                            <div class="col-md-12">
+                                    <button class="btn-primary btn-lg" onclick="begin_process(); resizeHandler();">
+                                        Begin the Process
+                                    </button>
+                            </div>
+                        </div-->
+                        <div class="row" id="process">
+                            <div class="col-md-12">
+                                <form name="contactform" method="post" action="../associate-registration.php">
+
+                                    <table width="100%">
+                                        <tr>
+                                             <td valign="top" style="width:200px;">
+                                                <label for="name">Name *</label>
+                                             </td>
+                                             <td valign="top">
+                                                <input  type="text" name="name" maxlength="50" size="30">
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="organization">Organization</label>
+                                             </td>
+                                             <td valign="top">
+                                                <input  type="text" name="organization" maxlength="50" size="30">
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="email">Email Address *</label>
+                                             </td>
+                                             <td valign="top">
+                                                <input  type="email" name="email" maxlength="80" size="30">
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="telephone">Telephone Number *</label>
+                                             </td>
+                                             <td valign="top">
+                                                <input  type="tel" name="telephone" maxlength="30" size="30">
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="registering-as">Registering as *</label>
+                                             </td>
+                                             <td valign="top">
+                                                <input type="radio" name="registering-as" value="an individual"> Individual<br>
+                                                <input type="radio" name="registering-a" value="a firm"> Firm<br>
+                                                <input type="radio" name="registering-a" value="both an individual and a firm"> Both<br>
+                                                <input type="radio" name="registering-a" value="not sure" checked="true"> Not sure<br>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="expertise">Primary Area of Expertise or Interest *</label>
+                                             </td>
+                                             <td valign="top">
+                                                <textarea  name="expertise" maxlength="1000" cols="30" rows="3"></textarea>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="specific-opportunity">Do you have a specific opportunity to discuss with us?</label>
+                                             </td>
+                                              <td valign="top">
+                                                <input type="radio" name="specific-opportunity" value="yes" checked="true">Yes<br>
+                                                <input type="radio" name="specific-opportunity" value="no" >No<br>
+                                             </td>
+                                        </tr>
+                                        <tr id="opportunity-description">
+                                             <td valign="top">
+                                                <label for="opportunity-description">If yes, please describe the opportunity</label>
+                                             </td>
+                                             <td valign="top">
+                                                <textarea  name="opportunity-description" maxlength="1000" cols="30" rows="3"></textarea>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td valign="top">
+                                                <label for="how-soon">How soon do you need us to get back to you?</label>
+                                             </td>
+                                             <td valign="top">
+                                                <textarea  name="how-soon" maxlength="1000" cols="30" rows="3"></textarea>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td>
+                                                 <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+                                             </td> 
+                                             <td>
+                                                 <p class="text-muted">* indicates a required field.</p>
+                                             </td> 
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        <div class="section footer" id="section7">
+		  <div class="intro container">
+            <h1>Connect</h1>
+                
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>Vancouver Office</h2>
+                        <ul class="no-bullet address">
+                            <li> Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>210-314 West Cordova</li>
+                            <li>Vancouver BC  V6B 1E8</li>
+                            <li>Canada</li>
+                            <li>Telephone - 778-379-5590</li>
+                            <li>Toll-free - (844)-584-9343</li>
+                            <li><a href="mailto:info@GGIPlatform.ca">info@GGIPlatform.ca</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Ottawa Office</h2>
+                        <ul class="no-bullet address">
+                            <li>Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>150 Metcalfe, Suite 900 </li>
+                            <li>Ottawa ON  K2P 1P1</li>
+                            <li>Canada</li>
+                            <li>Telephone - (613) 230-5577</li>
+                            <li>Toll-free - (800) 611-0511</li>
+                            <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>St. John's Office</h2>
+                        <ul class="no-bullet address">
+                            <li> Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>401 Empire Ave. </li>
+                            <li>St. John’s NL  A1E 1W6</li>
+                            <li>Canada</li>
+                            <li>Telephone - (709) 754-2065</li>
+                            <li>Toll-free - (855) 805-2065</li>
+                            <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row credits">
+                    <div class="col-sm-4">
+                        <a href="./privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                        © Goss Gilroy Inc. 2018<br>
+                        Site created by <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                    </div>
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <br><br>
+                    </div>
+                    <div class="col-sm-4 credits" style="padding-left: 0;">
+                        <b></b>
+                    </div>
+                </div>
+		      </div>
+		</div>
+        </div>
+    </body>
+</html>

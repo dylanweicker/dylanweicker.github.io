@@ -93,7 +93,7 @@ nav {
 
 .navbar-default{
     border:none;
-    box-shadow: 0px 0px 4px rgba(60, 60, 60, 250);
+    box-shadow: 0px 0px 1px rgba(42,129,148,.5);
 }
 
 .dropdown-menu{
@@ -148,6 +148,9 @@ nav {
     #hidden-menu{
         display: none!important;
     }
+}
+#hidden-menu{
+    border-bottom: 1px solid #e67e22;
 }
 
 #hidden-menu li,

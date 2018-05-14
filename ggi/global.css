@@ -107,17 +107,17 @@ h4{
     font-family: 'Open Sans Condensed';
 }
 
-.section h1, .jumbotron h1{
+.section h1{
     text-shadow: 1px 1px 1px #333;
 }
 
-.section h2, .jumbotron h2{
+.section h2{
     text-transform: none;
     text-shadow: 1px 1px 1px #333;
     font-weight: normal;
 }
 
-.section h3, .jumbotron h3{
+.section h3{
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
     font-weight: 400;

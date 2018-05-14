@@ -56,10 +56,10 @@ nav {
 }
 
 .navbar li img{
-    height: 24px;
+    height: 16px;
     display: inline;
-    margin-right: 8px;
-    margin-top: -4px;
+    margin-right: 5px;
+    margin-top: -1px;
     background: none;
 }
 

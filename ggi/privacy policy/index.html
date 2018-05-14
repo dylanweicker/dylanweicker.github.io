@@ -40,38 +40,36 @@
 
     <body>
        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                
-                <!-- brand -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="../"><img src="../images/ggi-logo.png"></a>
+                <div class="container-fluid">
+
+                    <!-- brand -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="../"><img src="../images/ggi-logo.png"><span class="nav-brand">GGI Platform</span></a>
+                    </div>
+                    <!--Navigation -->
+                    <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../associates/">Join Us</a></li>
+                        <li><a href="../clients/">Hire Us</a></li>
+                        <li><a href="../contact-us">Contact Us</a></li>
+                        <li><a href="../fr/associates"><img src="../images/french.png" height="20">français</a></li>
+                    </ul>
+
+                    <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                        <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+                    </ul>
                 </div>
-                
-                
-                <!--Navigation -->
-                <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../associates/">Join Us</a></li>
-                    <li><a href="../clients/">Hire Us</a></li>
-                    <li><a href="../contact-us/">Contact Us</a></li>
-                </ul>
-                
-                <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
-                    <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
-                </ul>
-            </div>
-            
-            <!--pop down-->
-            <div id="hidden-menu" class="container-fluid" style="display: none;">
-                <ul class="nav navbar-nav">
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../associates/">Join Us</a></li>
-                    <li><a href="../clients/">Hire Us</a></li>
-                    <li><a href="../contact-us/">Contact Us</a></li>
-                </ul>
-            </div>
-            
-        </nav>
+                <!--pop down-->
+                <div id="hidden-menu" class="container-fluid" style="display: none;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../associates/">Join Us</a></li>
+                        <li><a href="../clients/">Hire Us</a></li>
+                        <li><a href="../contact-us">Contact Us</a></li>
+                        <li><a href="../fr/privacy%20policy"><img src="../images/french.png" height="20">français</a></li>
+                    </ul>
+                </div>
+         </nav>
 
         <div class="section">
             <div class="container">

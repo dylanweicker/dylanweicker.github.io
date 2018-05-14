@@ -79,7 +79,7 @@ h4{
 }
 
 .text-box{
-    background: rgba(37,61,74,0.8);
+    background: rgba(37,61,74,0.95);
     padding: 2rem 4rem;
     color: white;
     text-align: left;
@@ -203,12 +203,14 @@ td{
     text-align: left;
 }
 
-input[type=text], input[type=tel], input[type=email], textarea{
+td  input[type=text], input[type=tel], input[type=email], textarea{
     border-style: none; 
     padding: 4px;
     background-color: #fff;
     box-shadow: none; 
     color: #253D4A;
+    width: 60%;
+    min-width: 190px;
 }
 input[type=text]:focus,  input[type=tel]:focus, input[type=email]:focus, textarea:focus {
     outline: 2px solid #FB8C00;

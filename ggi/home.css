@@ -8,8 +8,11 @@
 
 
 #section0 h2{
+    font-size: 18px;
+    line-height: 22px;
     padding-bottom: 0;
     font-style: italic;
+    font-weight: 300;
 }
 
 #section1 h4, #section3 h4{

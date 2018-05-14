@@ -4,15 +4,19 @@ ul.nomargin{
 
 #section0{
     background-color: #253D4A;
-    background: url('../images/hire-us.jpg');
+    background: url('../images/orange-arrow-bg.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;
 }
 
+
 #section0 h2{
+    font-size: 18px;
+    line-height: 22px;
     padding-bottom: 0;
     font-style: italic;
+    font-weight: 300;
 }
 
 

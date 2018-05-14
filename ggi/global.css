@@ -266,7 +266,7 @@ hr {
     text-align: left!important;
 }
 
-.footer p, .footer li{
+.footer p, .footer li, li.address{
     color: #ECF0F1;
     font-family: 'Open Sans', sans-serif;
     text-align: left;

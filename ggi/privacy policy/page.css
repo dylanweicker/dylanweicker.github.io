@@ -5,3 +5,12 @@ body{
 h1, h2, h3, h4{
     color: white;
 }
+
+h2{
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
+
+li{
+    text-align: left;
+}

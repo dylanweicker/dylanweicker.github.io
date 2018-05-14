@@ -1,6 +1,6 @@
 /* CUSTOM SECTIONS*/
 #section0{
-    background: url('./images/light-web.jpg');
+    background: url('./images/network-adjusted.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;
@@ -17,6 +17,21 @@
 
 #section1 h4, #section3 h4{
     text-align: left;
+}
+
+#section2{
+    background: url('./images/harbour-center.jpg');
+    background-repeat: no-repeat;
+    background-position: top; 
+    background-size: cover;
+}
+
+
+#section4{
+    background: url('./images/train.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: cover;
 }
 
 .row{

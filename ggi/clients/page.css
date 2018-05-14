@@ -62,6 +62,15 @@ ul.nomargin{
     text-align: left;
 }
 
+
+#section4{
+    background-color: #253D4A;
+    background: url('../images/mic.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: cover;
+}
+
 a{
     text-align: left;
 }

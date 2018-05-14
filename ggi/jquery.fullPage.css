@@ -220,11 +220,12 @@ html.fp-enabled,
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
-    opacity: .6;
+    opacity: 1;
     width: auto;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
+    text-shadow: 1px 1px 0px #253D4A;
 }
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {

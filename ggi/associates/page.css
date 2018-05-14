@@ -30,15 +30,26 @@
     padding: 0;
 }
 
+#section2 h4, #section2 p{
+    text-align: center;
+}
 
-#section2 h4, #section4 h4{
+
+#section4 h4{
     text-align: left;
 }
 
 @media only screen and (max-width: 768px) {
-    #section2 h4, #section2 p, #section4 h4, #section4 p {
+    #section4 h4, #section4 p {
         text-align: center;
     }
+}
+
+#section3{
+    background: url('../images/sky-scraper.jpg');
+    background-repeat: no-repeat;
+    background-position: middle; 
+    background-size: cover;
 }
 
 #section4 .col-md-2 h1{
@@ -48,7 +59,7 @@
 
 #section5{
     background-color: #253D4A;
-    /*background: url('../images/people.jpg');*/
+    background: url('../images/mic.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;

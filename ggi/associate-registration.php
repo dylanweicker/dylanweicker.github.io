@@ -153,7 +153,7 @@ if(isset($_POST['email'])) {
  
        
     // EDIT THE EMAIL AFTER TESTING
-    $email_to = "Associates@GGIPlatform.ca";
+    $email_to = "Associates@GGIplatform.ca";
     $email_subject = "Associate Registration: " .clean_string($name);
  
     $email_message .= "Name: ".clean_string($name)."<br>";

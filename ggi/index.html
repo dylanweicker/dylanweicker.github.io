@@ -4,9 +4,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
     <link rel="shortcut icon" type="image/x-icon" href="./images/ggi-fav-icon.jpg" />
     <link rel="icon" type="image/x-icon" href="./images/ggi-fav-icon.jpg" />
 	<title>GGI Platform</title>
+    
 	<meta name="author" content="Dylan Weicker" />
 	<meta name="description" content="" />
 	<meta name="keywords"  content="" />
@@ -16,17 +18,9 @@
     <link rel="alternate" href="http://GGIplatform.ca/fr" hreflang="fr" />
 
 
-	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="./navbar.css">
-	<link rel="stylesheet" type="text/css" href="./global.css" />
-	<link rel="stylesheet" type="text/css" href="./home.css" />
-    
-
-    
-           
     <!-- symbols -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
 
     <!-- Custom Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -41,18 +35,29 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
 
-
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./navbar.css">
+	<link rel="stylesheet" type="text/css" href="./global.css" />
+	<link rel="stylesheet" type="text/css" href="./home.css" />
+    
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors: ['welcome', 'overview', 'ggi', "why", "next-steps", "connect"],
-				sectionsColor: [ 'undefined', '#253D4A', 'undefined', '#006b77', 'undefined', '#253D4A',  '#253D4A'],
+				sectionsColor: [ '#006b77', '#253D4A', 'undefined', '#006b77', 'undefined', '#253D4A',  '#253D4A'],
 				navigation: true,
 				navigationPosition: 'right',
 				navigationTooltips: ['Welcome', 'Overview', 'GGI', "Benefits", "Next Steps", "Connect"]
 			});
 		});
 	</script>
+    
+    
 
 </head>
 <body>
@@ -100,16 +105,16 @@
                         <h2>Connecting clients with our network of associates, GGI’s in-house experts, and leading-edge tools, research and marketing capabilities</h2>
                         <a href="#overview">
                             <button class="btn-default btn-lg">
-                                Find Out More &emsp; <i class="fas fa-arrow-right"></i>
+                                Find Out More
                             </button>
                         </a>
                         <div style="display: inline-block">
-                            <a href="./associates/">
+                            <a href="./associates">
                                 <button  class="btn-default btn-lg cta">
                                     Join Us
                                 </button>
                             </a>
-                            <a href="./clients/">
+                            <a href="./clients">
                                 <button class="btn-default btn-lg cta">
                                     Hire Us
                                 </button>
@@ -183,18 +188,18 @@
                 <div class="col-md-2"><i class="fas fa-users fa-5x"></i></div>
                 <div class="col-md-8">
                     <h4>Clients</h4>
-                    <p>We are able to provide clients a wider range of innovative high-quality services, delivered quickly and cost-effectively, by a strong, diverse team of consultants tailored to their specific needs. </p>
+                    <p>We are able to provide clients a wider range of innovative high-quality services, tailored to their specific needs, delivered quickly and cost-effectively, by a strong, diverse team of consultants and researchers. </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-2"><i class="fas fa-briefcase fa-5x"></i></div>
                 <div class="col-md-8">
                     <h4>Associates</h4>
-                    <p>The GGI Platform enables our associates to participate in winning project teams, access specialized research services and tools, pursue new market opportunities, and focus on what they do best—consulting—while we assist with project management and administration.</p>
+                    <p>The GGI Platform enables our associates be part of the winning project teams, access specialized research services and tools, pursue new market opportunities, and focus on what they do best—consulting—while we assist with marketing, project management and administration, or any other services that they need.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2"><img src="./images/white-logo.png"></div>
+                <div class="col-md-2"><img src="./images/white-logo.png" width="80"></div>
                 <div class="col-md-8">
                     <h4>GGI</h4>
                     <p>The GGI Platform provides the critical mass we needed to make significant new investments in leading-edge tools and technologies and greatly expand our marketing and research capabilities.</p>
@@ -209,12 +214,20 @@
             <h1>Next Steps</h1>
                 <div class="row text-center" >
                     <div class="col-md-6" style="padding: 1rem 2.5rem">
-                        <button class="btn btn-long btn-default cta">Join Us</button><br>
-                        If you are interested in becoming an Associate and finding out what the GGI Platform could mean for you<br>
+                        <a href="./associates">
+                            <button class="btn btn-long btn-default cta">
+                                Join Us
+                            </button>
+                        </a>
+                        <p class="text-muted"> If you are interested in becoming an Associate and finding out what the GGI Platform could mean for you</p>
                     </div>
                     <div class="col-md-6 " style="padding: 1rem 2.5rem">
-                        <button class="btn btn-long btn-default cta">Hire Us</button><br>
-                        If you are interested in our services and finding out what the GGI Platform means for you
+                        <a href="./clients">
+                            <button class="btn btn-long btn-default cta">
+                                Hire Us
+                            </button><br>
+                        </a>
+                        <p class="text-muted">If you are interested in our services and finding out what the GGI Platform means for you</p>
                     </div>
                 </div>
             </div>

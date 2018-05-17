@@ -1,6 +1,6 @@
 /* CUSTOM SECTIONS*/
 #section0{
-    background: url('./images/network-adjusted.jpg');
+    background: url('./images/point-place.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;
@@ -28,7 +28,7 @@
 
 
 #section4{
-    background: url('./images/train.jpg');
+    background: url('./images/network-adjusted.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;
@@ -36,6 +36,12 @@
 
 .row{
     margin-top: 4rem;
+}
+
+p.text-muted{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 

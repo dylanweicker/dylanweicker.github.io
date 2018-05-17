@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/ggi-fav-icon.jpg" />
+    <link rel="icon" type="image/x-icon" href="../../../images/ggi-fav-icon.jpg" />
+	<title>GGI Platform</title>
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+
+
+
+    <!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../../script.js"></script>
+    
+           
+    <!-- symbols -->
+    <link rel="stylesheet" href="../icons/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+    
+    <!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../../../navbar.css">
+	<link rel="stylesheet" type="text/css" href="../../../global.css" />
+	<link rel="stylesheet" type="text/css" href="../../../clients/page.css" />
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../../"><img src="../../../images/ggi-logo.png"><span class="nav-brand">Plateforme GGI</span></a>
+            </div>
+            <!--Navigation -->
+           <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li><a href="../../">Page d'Accueil</a></li>
+                <li><a href="../../associates/">Rejoignez Nous</a></li>
+                <li class="active"><a href="../../clients/">Embauchez Nous</a></li>
+                <li><a href="../../contact-us">Contactez Nous</a></li>
+                <li><a href="../../../clients/request"><img src="../../../images/english.png" height="20">English</a></li>
+            </ul>
+
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li><a href="../../">Page d'Accueil</a></li>
+                <li><a href="../../associates/">Rejoignez Nous</a></li>
+                <li  class="active"><a href="../../clients/">Embauchez Nous</a></li>
+                <li><a href="../../contact-us">Contactez Nous</a></li>
+                <li><a href="../../../clients/request"><img src="../../../images/english.png" height="20">English</a></li>
+            </ul>
+        </div>
+     </nav>
+
+    <div class="section">
+		<div class="intro container">
+            <div class="col-md-10">
+                <h1>Demandez un devis ou plus d'informations</h1>
+                <h2>Vous voulez plus d'informations?</h2>
+                <p>N'hésitez pas à nous contacter si vous souhaitez en savoir plus sur nos services, envoyer une demande de propositions (RFP) ou recevoir un devis spécifique. Pour commencer le processus, vous pouvez remplir le formulaire ci-dessous. Nous vous répondrons dans les prochaines 48 heures.</p>
+                <p>Si vous avez une demande de propositions (RFP) ou un mandat, vous pouvez nous l'envoyer à <a href=mailto:info@GGIplatform.ca>info@GGIplatform.ca</a>.</p>
+                <p>Vous pouvez également visiter le <a href="../../contact-us/">Contactez nous</a> page pour les informations de contact direct.</p>
+                 <div class="row" id="process">
+                    <div class="col-md-12">
+                         <form name="contactform" method="post" action="../../../client-registration.php">
+
+                            <table width="100%">
+                                <tr>
+                                     <td valign="top" style="width:300px;">
+                                        <label for="name">Nom *</label>
+                                     </td>
+                                     <td valign="top">
+                                        <input  type="text" name="name" maxlength="50" size="30">
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="organization">Organization</label>
+                                     </td>
+                                     <td valign="top">
+                                        <input  type="text" name="organization" maxlength="50" size="30">
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="email">Adresse e-mail *</label>
+                                     </td>
+                                     <td valign="top">
+                                        <input  type="email" name="email" maxlength="80" size="30">
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="telephone">Numéro de téléphone *</label>
+                                     </td>
+                                     <td valign="top">
+                                        <input  type="tel" name="telephone" maxlength="30" size="30">
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="project">Avez-vous un projet spécifique en tête? Si oui, veuillez décrire le projet.</label>
+                                     </td>
+                                     <td valign="top">
+                                        <textarea  name="project" maxlength="1000" cols="30" rows="3"></textarea>
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="services">Voulez-vous plus d'informations sur nos services?</label>
+                                     </td>
+                                     <td valign="top">
+                                        <input type="radio" name="services" value="no" checked="true">Non <br>
+                                        <input type="radio" name="services" value="yes">Oui <br>
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="comments">Avez-vous d'autres questions ou commentaires?</label>
+                                     </td>
+                                     <td valign="top">
+                                        <textarea  name="comments" maxlength="1000" cols="30" rows="3"></textarea>
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td valign="top">
+                                        <label for="how-soon">Dans combien de temps avez-vous besoin de nous pour vous répondre?</label>
+                                     </td>
+                                     <td valign="top">
+                                        <textarea  name="how-soon" maxlength="1000" cols="30" rows="3"></textarea>
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                         <input class="btn btn-primary btn-lg" type="submit" value="soumettre">
+                                     </td> 
+                                     <td>
+                                         <p class="text-muted">* indique un champ obligatoire.</p>
+                                     </td> 
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section footer" id="section5">
+		<div class="intro container">
+            <h1>Relier</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Bureau de Vancouver</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>210-314 West Cordova</li>
+                        <li>Vancouver BC  V6B 1E8</li>
+                        <li>Canada</li>
+                        <li>Téléphone (778) 379-5590</li>
+                        <li>Le numéro vert (844) 584-9343</li>
+                        <li><a href="mailto:info@GGIplatform.ca">info@GGIplatform.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Bureau de Ottawa</h2>
+                    <ul class="no-bullet address">
+                        <li>Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>150 Metcalfe, Suite 900 </li>
+                        <li>Ottawa ON  K2P 1P1</li>
+                        <li>Canada</li>
+                        <li>Téléphone (613) 230-5577</li>
+                        <li>Le numéro vert (800) 611-0511</li>
+                        <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Bureau de St. John's</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>401 Empire Ave. </li>
+                        <li>St. John’s NL  A1E 1W6</li>
+                        <li>Canada</li>
+                        <li>Téléphone (709) 754-2065</li>
+                        <li>Le numéro vert (855) 805-2065</li>
+                        <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="col-sm-4">
+                    <a href="./privacy%20policy/"> <b>Politique de Confidentialité</b></a><br>
+                    © Goss Gilroy Inc. 2018<br>
+                    Site créé par <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                </div>
+                <div class="col-sm-4" style="padding-left: 0;">
+                    <br><br>
+                </div>
+                <div class="col-sm-4 credits" style="padding-left: 0;">
+                    <b></b>
+                </div>
+            </div>
+		</div>
+	</div>
+
+</body>
+</html>

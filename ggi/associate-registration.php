@@ -83,7 +83,7 @@ if(isset($_POST['email'])) {
  
     function died($error) {
         // your error code can go here
-        echo "<h1>Registration Failed</h1><p>";
+        echo "<h1>Sorry... Something went wrong.</h1><p>";
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
         echo "These errors appear below.<br /><br />";
         echo $error."<br /><br />";
@@ -186,7 +186,7 @@ $headers .= 'From: '.$email_from."\r\n".
  
 <!-- include your own success html here -->
 <h1>Registration Success</h1>
-<p>Thank you for contacting us. We will be in touch with you very soon.</p>
+<p>Thank you for contacting us. We will be in touch with you very soon.  We will usually respond within the next three business days with a personalized link through which you can submit (and later update as needed) an overview of your education, skills and experience.</p>
  <a href="./"><button class="btn btn-primary btn-lg">Return Home</button></a>
 <?php
  

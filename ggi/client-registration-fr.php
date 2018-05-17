@@ -53,14 +53,14 @@
 
                     <!-- brand -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="./"><img src="./images/ggi-logo.png"><span class="nav-brand">GGI Platform</span></a>
+                        <a class="navbar-brand" href="./"><img src="./images/ggi-logo.png"><span class="nav-brand">La Plateforme GGI</span></a>
                     </div>
                     <!--Navigation -->
                     <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
-                        <li><a href="./">Home</a></li>
-                        <li><a href="./associates/">Join Us</a></li>
-                        <li><a href="./clients/">Hire Us</a></li>
-                        <li><a href="./contact-us">Contact Us</a></li>
+                        <li><a href="./">Page d'accueil</a></li>
+                        <li><a href="./associates/">Rejoignez-nous</a></li>
+                        <li><a href="./clients/">Embauchez nous</a></li>
+                        <li><a href="./contact-us">Contactez nous</a></li>
                     </ul>
 
                     <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
@@ -70,10 +70,10 @@
                 <!--pop down-->
                 <div id="hidden-menu" class="container-fluid" style="display: none;">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="./">Home</a></li>
-                        <li><a href="./associates/">Join Us</a></li>
-                        <li><a href="./clients/">Hire Us</a></li>
-                        <li><a href="./contact-us">Contact Us</a></li>
+                        <li><a href="./">Page d'accueil</a></li>
+                        <li><a href="./associates/">Rejoignez-nous</a></li>
+                        <li><a href="./clients/">Embauchez nous</a></li>
+                        <li><a href="./contact-us">Contactez nous</a></li>
                     </ul>
                 </div>
          </nav>
@@ -83,12 +83,12 @@ if(isset($_POST['email'])) {
  
     function died($error) {
         // your error code can go here
-        echo "<h1>Sorry... Something went wrong.</h1><p>";
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
+        echo "<h1>Désolé, quelque chose s'est mal passé.</h1><p>";
+        echo "Nous sommes vraiment désolés, mais des erreurs ont été détectées avec le formulaire que vous avez envoyé. ";
+        echo "Ces erreurs apparaissent ci-dessous..<br /><br />";
         echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        echo "</p><button class='btn btn-lg btn-primary' onclick='goBack()'>Go Back</button>";
+        echo "Veuillez revenir en arrière et corriger ces erreurs.<br /><br />";
+        echo "</p><button class='btn btn-lg btn-primary' onclick='goBack()'>Revenir</button>";
         die();
     }
  
@@ -101,7 +101,7 @@ if(isset($_POST['email'])) {
         !isset($_POST['services']) ||
         !isset($_POST['comments']) ||
         !isset($_POST['how-soon'])) {
-        died('We are sorry, but there appears to be a problem with our form.');       
+        died('Nous sommes désolés, mais il semble y avoir un problème avec le formulaire que vous avez envoyé..');       
     }     
  
     $name = $_POST['name']; // required
@@ -118,15 +118,15 @@ if(isset($_POST['email'])) {
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
     if(!preg_match($email_exp,$email_from)) {
-      $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+      $error_message .= 'L\'adresse e-mail que vous avez saisie ne semble pas être valide.<br />';
     }
  
     if(strlen($name) < 4) {
-      $error_message .= 'The name you entered is too short. Please enter your full name.<br />';
+      $error_message .= 'Le nom que vous avez entré est trop court. S\'il vous plait entrez votre nom entier.<br />';
     }
  
     if(strlen($telephone) < 7) {
-      $error_message .= 'The telephone you entered does not appear to be valid.<br />';
+      $error_message .= 'Le téléphone que vous avez entré ne semble pas être valide.<br />';
     }
    
   if(strlen($error_message) > 0) {
@@ -139,7 +139,7 @@ if(isset($_POST['email'])) {
     }  
     
     
-    $email_message = "". clean_string($name). " would like to request a quote or more information. <br><br><br>" ;
+    $email_message = "". clean_string($name). " would like to request a quote or more information in French. <br><br><br>" ;
  
        
     // EDIT THE EMAIL AFTER TESTING
@@ -179,9 +179,9 @@ $headers .= 'From: '.$email_from."\r\n".
 ?>
  
 <!-- include your own success html here -->
-<h1>Request Successfully Submitted</h1>
-<p>Thank you for contacting us. We will be in touch with you very soon.</p>
- <a href="./"><button class="btn btn-primary btn-lg">Return Home</button></a>
+<h1>Demande soumise avec succès</h1>
+<p>Merci de nous contacter. Nous serons en contact avec vous très bientôt.</p>
+ <a href="./"><button class="btn btn-primary btn-lg">Retour à la page d'accueil</button></a>
 <?php
  
 }

@@ -53,14 +53,14 @@
 
                     <!-- brand -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="./"><img src="./images/ggi-logo.png"><span class="nav-brand">GGI Platform</span></a>
+                        <a class="navbar-brand" href="./"><img src="./images/ggi-logo.png"><span class="nav-brand">La Plateforme GGI</span></a>
                     </div>
                     <!--Navigation -->
                     <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
-                        <li><a href="./">Home</a></li>
-                        <li><a href="./associates/">Join Us</a></li>
-                        <li><a href="./clients/">Hire Us</a></li>
-                        <li><a href="./contact-us">Contact Us</a></li>
+                        <li><a href="./">Page d'accueil</a></li>
+                        <li><a href="./associates/">Rejoignez-nous</a></li>
+                        <li><a href="./clients/">Embauchez nous</a></li>
+                        <li><a href="./contact-us">Contactez nous</a></li>
                     </ul>
 
                     <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
@@ -70,10 +70,10 @@
                 <!--pop down-->
                 <div id="hidden-menu" class="container-fluid" style="display: none;">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="./">Home</a></li>
-                        <li><a href="./associates/">Join Us</a></li>
-                        <li><a href="./clients/">Hire Us</a></li>
-                        <li><a href="./contact-us">Contact Us</a></li>
+                        <li><a href="./">Page d'accueil</a></li>
+                        <li><a href="./associates/">Rejoignez-nous</a></li>
+                        <li><a href="./clients/">Embauchez nous</a></li>
+                        <li><a href="./contact-us">Contactez nous</a></li>
                     </ul>
                 </div>
          </nav>
@@ -83,12 +83,12 @@ if(isset($_POST['email'])) {
  
     function died($error) {
         // your error code can go here
-        echo "<h1>Sorry... Something went wrong.</h1><p>";
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
+        echo "<h1>Désolé, quelque chose s'est mal passé.</h1><p>";
+        echo "Nous sommes vraiment désolés, mais des erreurs ont été détectées avec le formulaire que vous avez envoyé. ";
+        echo "Ces erreurs apparaissent ci-dessous..<br /><br />";
         echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        echo "</p><button class='btn btn-lg btn-primary' onclick='goBack()'>Go Back</button>";
+        echo "Veuillez revenir en arrière et corriger ces erreurs.<br /><br />";
+        echo "</p><button class='btn btn-lg btn-primary' onclick='goBack()'>Revenir</button>";
         die();
     }
  
@@ -97,38 +97,48 @@ if(isset($_POST['email'])) {
         !isset($_POST['organization']) ||
         !isset($_POST['email']) ||
         !isset($_POST['telephone']) ||
-        !isset($_POST['project']) ||
-        !isset($_POST['services']) ||
-        !isset($_POST['comments']) ||
+        !isset($_POST['expertise']) ||
+        !isset($_POST['specific-opportunity']) ||
+        !isset($_POST['opportunity-description']) ||
         !isset($_POST['how-soon'])) {
-        died('We are sorry, but there appears to be a problem with our form.');       
+        died('Nous sommes désolés, mais il semble y avoir un problème avec le formulaire que vous avez envoyé..');       
     }     
  
     $name = $_POST['name']; // required
     $email_from = $_POST['email']; // required
     $telephone = $_POST['telephone']; // required
-    
+    if(isset($_POST['registering-as'])){
+        $registering_as = $_POST['registering-as']; // required
+    }
+    $expertise = $_POST['expertise']; // required
     
     $organization = $_POST['organization']; // not required
-    $project = $_POST['project']; // not required
-    $services = $_POST['services']; // not required
-    $comments = $_POST['comments']; // not required
+    $specific_opportunity = $_POST['specific-opportunity']; // not required
+    $opportunity_description = $_POST['opportunity-description']; // not required
     $how_soon = $_POST['how-soon']; // not required
  
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
     if(!preg_match($email_exp,$email_from)) {
-      $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+      $error_message .= 'L\'adresse e-mail que vous avez saisie ne semble pas être valide.<br />';
     }
  
     if(strlen($name) < 4) {
-      $error_message .= 'The name you entered is too short. Please enter your full name.<br />';
+      $error_message .= 'Le nom que vous avez entré est trop court. S\'il vous plait entrez votre nom entier.<br />';
     }
  
     if(strlen($telephone) < 7) {
-      $error_message .= 'The telephone you entered does not appear to be valid.<br />';
+      $error_message .= 'Le téléphone que vous avez entré ne semble pas être valide.<br />';
     }
-   
+ 
+    if(!isset($_POST['registering-as'])) {
+      $error_message .= 'Vous devez spécifier ce que vous enregistrez en tant que individu et / ou entreprise.<br />';
+    }
+    
+    if(strlen($expertise) < 2) {
+      $error_message .= 'Vous devez indiquer votre principal domaine d\'expertise ou d\'intérêt.<br />';
+    }
+ 
   if(strlen($error_message) > 0) {
     died($error_message);
   }
@@ -139,12 +149,12 @@ if(isset($_POST['email'])) {
     }  
     
     
-    $email_message = "". clean_string($name). " would like to request a quote or more information. <br><br><br>" ;
+    $email_message = "". clean_string($name). " would like to register to be an Associate. <br><br><br>" ;
  
        
     // EDIT THE EMAIL AFTER TESTING
-    $email_to = "sales@GGIPlatform.ca";
-    $email_subject = "Quote or Info Request: " .clean_string($name);
+    $email_to = "Associates@GGIplatform.ca";
+    $email_subject = "Associate Registration: " .clean_string($name);
  
     $email_message .= "Name: ".clean_string($name)."<br>";
     if($organization){
@@ -153,20 +163,16 @@ if(isset($_POST['email'])) {
     $email_message .= "Email: ".clean_string($email_from)."<br>";
     $email_message .= "Telephone: ".clean_string($telephone)."<br><br>";
     
-    if(strlen($project) > 0){
-      $email_message .= "Project Description:<br>". $project."<br><br>";
+    $email_message .= "Registering As: " .clean_string($registering_as)."<br><br>";
+    
+    $email_message .= "Field of Expertise:<br>" .clean_string($expertise)."<br><br>";
+    
+    if($specific_opportunity == 'yes'){
+      $email_message .= "Specific opportuntiy:<br>".clean_string($opportunity_description)."<br><br>";
     }
     
-    if(strlen($comments) > 0){
-      $email_message .= "Questions or Comments:<br>". $comments."<br><br>";
-    }
-    
-    if($services == 'yes'){
-      $email_message .= "<b>This client has explicitly requested more information about services.</b><br><br>";
-    }
-    
-    if(strlen($how_soon) > 0){
-      $email_message .= "Please contact back within:\n".clean_string($how_soon)."<br><br>";
+    if(!strlen($how_soon) <2){
+      $email_message .= "Please contact back within:<br>".clean_string($how_soon)."<br><br>";
     }
  
 // create email headers
@@ -179,9 +185,9 @@ $headers .= 'From: '.$email_from."\r\n".
 ?>
  
 <!-- include your own success html here -->
-<h1>Request Successfully Submitted</h1>
-<p>Thank you for contacting us. We will be in touch with you very soon.</p>
- <a href="./"><button class="btn btn-primary btn-lg">Return Home</button></a>
+<h1>Succès d'inscription</h1>
+<p>Merci de nous contacter. Nous serons en contact avec vous très bientôt.</p>
+ <a href="./"><button class="btn btn-primary btn-lg">Retour à la page d'accueil</button></a>
 <?php
  
 }

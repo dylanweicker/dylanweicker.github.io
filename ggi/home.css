@@ -1,8 +1,8 @@
 /* CUSTOM SECTIONS*/
 #section0{
-    background: url('./images/network-adjusted.jpg');
+    background: url('./images/homepage.jpg');
     background-repeat: no-repeat;
-    background-position: bottom; 
+    background-position: top center; 
     background-size: cover;
 }
 
@@ -28,7 +28,10 @@
 
 
 #section4{
-    background: url('./images/network-adjusted.jpg');
+    background: linear-gradient(
+      rgba(0, 107, 119, 0.15), 
+      rgba(0, 107, 119, 0.20)
+    ), url('./images/next-steps.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;

@@ -53,21 +53,3 @@ p.text-muted{
 .icon {
     color: #FFF;
 }
-
-@media only screen and (max-width: 1199px) {
-    .benefit-image {
-        display: none
-    }
-    .benefit-text {
-        display: block
-    }
-}
-
-@media only screen and (min-width: 1199px) {
-    .benefit-image {
-        display: block
-    }
-    .benefit-text {
-        display: none
-    }
-}

@@ -21,10 +21,6 @@
     font-weight: 300;
 }
 
-
-#section1 .col-md-4{
-    margin: 2rem 0;
-}
 #section1 .row{
     margin: 0;
     padding: 0;
@@ -69,6 +65,6 @@
     background-color: #253D4A;
     background: url('../images/pen.jpg');
     background-repeat: no-repeat;
-    background-position: bottom; 
+    background-position: center; 
     background-size: cover;
 }

@@ -53,9 +53,21 @@ p.text-muted{
 .icon {
     color: #FFF;
 }
-.icon-o {
-    color: #f39c12;
+
+@media only screen and (max-width: 1199px) {
+    .benefit-image {
+        display: none
+    }
+    .benefit-text {
+        display: block
+    }
 }
-.icon-b {
-    color: #3498db;
+
+@media only screen and (min-width: 1199px) {
+    .benefit-image {
+        display: block
+    }
+    .benefit-text {
+        display: none
+    }
 }

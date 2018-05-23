@@ -79,6 +79,26 @@ a{
     background-color: #253D4A;
     background: url('../images/pen.jpg');
     background-repeat: no-repeat;
-    background-position: bottom; 
+    background-position: center; 
     background-size: cover;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .service-image {
+        display: none
+    }
+    .service-text {
+        display: block
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .service-image {
+        display: block
+    }
+    .service-text {
+        display: none
+    }
 }

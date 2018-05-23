@@ -20,25 +20,6 @@ ul.nomargin{
 }
 
 
-
-#section1 .col-md-4{
-    margin: 2rem 0;
-}
-#section1 .row{
-    margin: 0;
-    padding: 0;
-}
-
-#section1{
-    text-align: left;
-}
-
-#section1 .icon{
-    text-align: center;
-    margin-top: 1rem;
-}
-
-
 #section2 h4{
     text-align: left;
 }

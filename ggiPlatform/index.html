@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./images/ggi-fav-icon.jpg" />
+    <link rel="icon" type="image/x-icon" href="./images/ggi-fav-icon.jpg" />
+	<title>GGI Platform</title>
+    
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+    
+    <link rel="alternate" href="http://GGIplatform.ca" hreflang="en" />
+    <link rel="alternate" href="http://GGIplatform.ca/fr" hreflang="fr" />
+
+
+    <!-- symbols -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    
+
+    <!-- Custom Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./vendors/scrolloverflow.js"></script>
+	<script type="text/javascript" src="./jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
+
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./navbar.css">
+	<link rel="stylesheet" type="text/css" href="./global.css" />
+    <link rel="stylesheet" type="text/css" href="./hover-image.css" />
+	<link rel="stylesheet" type="text/css" href="./home.css" />
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['welcome', 'overview', 'ggi', "why", "next-steps", "connect"],
+				sectionsColor: [ '#000816', '#253D4A', 'undefined', '#253D4A', 'undefined', '#253D4A'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Welcome', 'Overview', 'GGI', "Benefits", "Next Steps", "Connect"]
+			});
+		});
+	</script>
+    
+    
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./"><img src="./images/ggi-logo.png"><span class="nav-brand">GGI Platform</span></a>
+            </div>
+            <!--Navigation -->
+            <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li class="active"><a href="./">Home</a></li>
+                <li><a href="./associates/">Join Us</a></li>
+                <li><a href="./clients/">Hire Us</a></li>
+                <li><a href="./contact-us">Contact Us</a></li>
+                <li><a href="./fr"><img src="./images/french.png" height="20">français</a></li>
+            </ul>
+
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./">Home</a></li>
+                <li><a href="./associates/">Join Us</a></li>
+                <li><a href="./clients/">Hire Us</a></li>
+                <li><a href="./contact-us">Contact Us</a></li>
+                <li><a href="./fr"><img src="./images/french.png" height="20">français</a></li>
+            </ul>
+        </div>
+ </nav>
+
+<div id="fullpage">
+    
+	<div class="section" id="section0">
+		<div class="intro">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="text-box">
+                        
+                        <h1>Introducing The GGI Platform</h1>
+                        <h2>Connecting clients with our network of associates, GGI’s in-house experts, and leading-edge tools, research and marketing capabilities</h2>
+                        <a href="#overview">
+                            <button class="btn-default btn-lg">
+                                Find Out More
+                            </button>
+                        </a>
+                        <div style="display: inline-block">
+                            <a href="./associates">
+                                <button  class="btn-default btn-lg cta">
+                                    Join Us
+                                </button>
+                            </a>
+                            <a href="./clients">
+                                <button class="btn-default btn-lg cta">
+                                    Hire Us
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section1">
+		<div class="intro container">
+            <div class="col-md-11">
+                <h1>What is the GGI Platform?</h1>
+
+                <div class="row hover">
+                    <div class="col-md-6">
+                        <div class="hover-container">
+                            <div class="hover-media">
+                                <div class="hover-image teams">
+                                </div>
+                            </div>
+                            <div class="hover-text">
+                                <h4>Strong Diverse Project Teams</h4>
+                                <p>Clients want consulting teams with specialized skills, not just generalists.  The GGI Platform creates teams featuring the technical and subject matter skills that clients need, drawing from our associates and GGI’s own in-house experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="hover-container">
+                            <div class="hover-media">
+                                <div class="hover-image tech">
+                                </div>
+                            </div>
+                            <div class="hover-text">
+                                <h4>Leading-edge tools<br>and technology</h4>
+                                <p>Technology changes rapidly.  Through the GGI Platform, clients and associates gain access to advanced text, social media, big data and predictive analytics software as well as surveying, consultation, infographic and visualization tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row hover">
+                    
+                    <div class="col-md-4">
+                        <div class="hover-container">
+                            <div class="hover-media">
+                                <div class="hover-image marketing">
+                                </div>
+                            </div>
+                            <div class="hover-text">
+                                <h4>Effective marketing</h4>
+                                <p>We work closely with our associates to identify opportunities, joint market services to potential clients, and respond to RFPs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="hover-container">
+                            <div class="hover-media">
+                                <div class="hover-image management">
+                                </div>
+                            </div>
+                            <div class="hover-text">
+                                <h4>Robust project management</h4>
+                                <p>Our systems and tools ensure that we deliver services that meet our stringent standards for quality assurance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="hover-container">
+                            <div class="hover-media">
+                                <div class="hover-image research">
+                                </div>
+                            </div>
+                            <div class="hover-text">
+                                <h4>Extensive research capabilities</h4>
+                                <p>We have upgraded our capabilities to deliver a wider range of research services more quickly and cost-effectively than ever before. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- div class="row">
+                <div class="col-md-2"><i class="fas fa-users fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Strong, diverse project teams</h4>
+                    <p>Clients want consulting teams with specialized skills, not just generalists.  The GGI Platform creates teams featuring the technical and subject matter skills that clients need, drawing from our associates and GGI’s own in-house experts.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-wrench fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Leading-edge tools and technology</h4>
+                    <p>Technology changes rapidly.  Through the GGI Platform, clients and associates gain access to advanced text, social media, big data and predictive analytics software as well as surveying, consultation, infographic and visualization tools.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-book fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Extensive research capabilities</h4>
+                    <p>We have upgraded our capabilities to deliver a wider range of research services more quickly and cost-effectively than ever before. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-chart-line fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Effective marketing</h4>
+                    <p>We work closely with our associates to identify opportunities, joint market services to potential clients, and respond to RFPs.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-star fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Robust project management</h4>
+                    <p>Our systems and tools ensure that we deliver services that meet our stringent standards for quality assurance.</p>
+                </div>
+            </div -->
+            
+            
+        </div>
+	</div>
+    
+    
+	<div class="section" id="section2">
+        <div class="intro container">
+            <div class="col-md-10 text-box">
+                <h1>Who Is GGI?</h1>
+                <p>Since our establishment in 1981, Goss Gilroy Inc. (GGI) has grown into one of the leading independent management consulting firms in Canada. Through our offices across Canada, our team of 40 professionals, and our growing network of over 100 Associates, we deliver a wide range of consulting services to all levels of government, the non-profit sector, Indigenous communities and industry in each province and territory as well as internationally. </p><p>
+
+                      While the GGI Platform is a new initiative for us, it is one that is firmly rooted in the way we’ve always done business. Most of our services involve team members from outside of the firm and, in fact, many of our projects are led by our associates.  What has changed is that we recognize this isn't just a preferred way of doing business, it is now an essential part of our business. </p><p>
+
+                    To find out more about GGI itself, you can visit our website at <a href="http://www.ggi.ca" target="_blank">www.GGI.ca</a>.<br>
+                </p>
+            </div>
+		</div>
+	</div>
+	
+    <div class="section" id="section3">
+        <div class="intro container">
+		<h1>How the Platform Benefits our Clients, our Associates, and GGI</h1>
+        <div class="row benefit-text">
+                <div class="col-md-2"><i class="fas fa-users fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Clients</h4>
+                    <p>We are able to provide clients a wider range of innovative high-quality services, tailored to their specific needs, delivered quickly and cost-effectively, by a strong, diverse team of consultants and researchers. </p>
+                </div>
+            </div>
+            <div class="row benefit-text">
+                <div class="col-md-2"><i class="fas fa-briefcase fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Associates</h4>
+                    <p>The GGI Platform enables our associates be part of the winning project teams, access specialized research services and tools, pursue new market opportunities, and focus on what they do best—consulting—while we assist with marketing, project management and administration, or any other services that they need.</p>
+                </div>
+            </div>
+            <div class="row benefit-text">
+                <div class="col-md-2"><img src="./images/white-logo.png" width="80"></div>
+                <div class="col-md-8">
+                    <h4>GGI</h4>
+                    <p>The GGI Platform provides the critical mass we needed to make significant new investments in leading-edge tools and technologies and greatly expand our marketing and research capabilities.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="section footer" id="section4">
+		<div class="intro container">
+            <div class="col-sm-8 text-box">
+                
+            <h1>Next Steps</h1>
+                <div class="row text-center" >
+                    <div class="col-md-6" style="padding: 1rem 2.5rem">
+                        <a href="./associates">
+                            <button class="btn btn-long btn-default cta">
+                                Join Us
+                            </button>
+                        </a>
+                        <p class="text-muted"> If you are interested in becoming an Associate and finding out what the GGI Platform could mean for you</p>
+                    </div>
+                    <div class="col-md-6 " style="padding: 1rem 2.5rem">
+                        <a href="./clients">
+                            <button class="btn btn-long btn-default cta">
+                                Hire Us
+                            </button><br>
+                        </a>
+                        <p class="text-muted">If you are interested in our services and finding out what the GGI Platform means for you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section footer" id="section5">
+		<div class="intro container">
+            <h1>Connect</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Vancouver Office</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>210-314 West Cordova</li>
+                        <li>Vancouver BC  V6B 1E8</li>
+                        <li>Canada</li>
+                        <li>Telephone (778) 379-5590</li>
+                        <li>Toll-free (844) 584-9343</li>
+                        <li><a href="mailto:info@GGIplatform.ca">info@GGIplatform.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Ottawa Office</h2>
+                    <ul class="no-bullet address">
+                        <li>Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>150 Metcalfe, Suite 900 </li>
+                        <li>Ottawa ON  K2P 1P1</li>
+                        <li>Canada</li>
+                        <li>Telephone (613) 230-5577</li>
+                        <li>Toll-free (800) 611-0511</li>
+                        <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>St. John's Office</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>401 Empire Ave. </li>
+                        <li>St. John’s NL  A1E 1W6</li>
+                        <li>Canada</li>
+                        <li>Telephone (709) 754-2065</li>
+                        <li>Toll-free (855) 805-2065</li>
+                        <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="col-sm-4">
+                    <a href="./privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                    © Goss Gilroy Inc. 2018<br>
+                    Site created by <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                </div>
+                <div class="col-sm-4" style="padding-left: 0;">
+                    <br><br>
+                </div>
+                <div class="col-sm-4 credits" style="padding-left: 0;">
+                    <b></b>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

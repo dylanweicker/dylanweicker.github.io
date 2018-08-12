@@ -1,0 +1,58 @@
+/* CUSTOM SECTIONS*/
+#section0{
+    background: url('./images/global-network.jpg');
+    background-repeat: no-repeat;
+    background-position: center right; 
+    background-size: cover;
+}
+
+
+#section0 h2{
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+#section1 h4, #section3 h4{
+    text-align: left;
+}
+
+#section2{
+    background: url('./images/harbour-center.jpg');
+    background-repeat: no-repeat;
+    background-position: top; 
+    background-size: cover;
+}
+
+
+#section4{
+    background: linear-gradient(
+      rgba(0, 107, 119, 0.15), 
+      rgba(0, 107, 119, 0.20)
+    ), url('./images/next-steps.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: cover;
+}
+
+.row{
+    margin-top: 4rem;
+}
+
+p.text-muted{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* ICONS */
+.icon, .icon-o{
+    margin-top: 1rem;
+}
+
+.icon {
+    color: #FFF;
+}

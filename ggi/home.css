@@ -1,13 +1,19 @@
 /* CUSTOM SECTIONS*/
 #section0{
-    background: url('./images/Homepage.jpg');
+    background: url('./images/ottawa-canal.jpg');
     background-repeat: no-repeat;
-    background-position: top center; 
+    background-position: center right; 
+    background-size: cover;
+}
+#section2{
+    background: url('./images/global-network.jpg');
+    background-repeat: no-repeat;
+    background-position: center right; 
     background-size: cover;
 }
 
 
-#section0 h2{
+#section2 h2{
     font-size: 18px;
     line-height: 22px;
     padding-bottom: 0;
@@ -19,8 +25,8 @@
     text-align: left;
 }
 
-#section2{
-    background: url('./images/harbour-center.jpg');
+#section1{
+    background: url('./images/brick-walls.jpg');
     background-repeat: no-repeat;
     background-position: top; 
     background-size: cover;
@@ -55,4 +61,23 @@ p.text-muted{
 
 .icon {
     color: #FFF;
+}
+
+
+/* Insight Navigation */
+.insight-holder{
+    margin-top: 4rem;
+}
+
+.insight-nav, .insight-nav:visited {
+    color: white;
+    margin-right: 1rem;
+    padding-top: 9px;
+    font-style: italic;
+}
+
+.insight-nav.active, .insight-nav:visited:hover, .insight-nav:hover, .insight-nav:active, .insight-nav:hover:active {
+    color: #FB8C00;
+    padding-top: 6px;
+    border-top: 3px solid #FB8C00;    
 }

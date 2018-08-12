@@ -1,0 +1,20 @@
+.first {
+    background: url('./images/GGI_web_GGI-4.jpg');
+    background-repeat: no-repeat;
+    background-position: top; 
+    background-size: cover;
+    margin-top: 54px;
+}
+
+.white input {
+    width: 100%;
+}
+
+.bold{
+    margin-top: .5rem;
+    font-weight: bold;
+}
+
+.white .row{
+    margin-bottom: .5rem;
+}

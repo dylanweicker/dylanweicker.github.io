@@ -1,8 +1,7 @@
 .navbar-brand{
     font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
     font-weight: normal;
-    color: #fff!important;
-    text-shadow: 1px 1px 1px #333;
+    color: #1E6876!important;
     position: absolute;
 }
 
@@ -38,11 +37,11 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 }
 
 nav {
-    background: #253D4A;
+    background: #FFF;
 }
 
 .navbar, .navbar-default{
-    background-color: #253D4A!important;
+    background-color: #FFF!important;
     font-family: 'Open Sans', sans-serif;
     z-index: 1;
 }
@@ -78,25 +77,29 @@ nav {
 
 .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-nav>li>a:visited{
-    color: #ECF0F1;
-    border-bottom: 4px solid #253D4A;
+    color: #1E6876;
+    font-weight: bold;
+    border-bottom: 4px solid white;
+    /*border-bottom: 4px solid #253D4A;*/
 }
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:active
 {
-    background-color: #1E6876;
-    border-bottom: 4px solid #1E6876;
+    background-color: #FFF;
     transition: 300ms ease;
-    color: #FFF;
+    font-weight: bold;
+    color: #1E6876;
+    border-bottom: 4px solid #e67e22;
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:visited{
-    background-color: #2A8194;
-    border-bottom: 4px solid #e67e22;
-    color: #ECF0F1;
+    background-color: #FFF;
+    color: #e67e22;
+    font-weight: bold;
+    border-bottom: 4px solid white;
 }
 
 .navbar-default{
@@ -116,7 +119,7 @@ nav {
 
 .fa-bars{
     font-size: 22px!important;
-    color: white;
+    color: #1E6876;
     margin: 0;
 }
 

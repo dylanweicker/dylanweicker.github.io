@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="../images/ggi-fav-icon.jpg" />
+        <link rel="icon" type="image/x-icon" href="./images/ggi-fav-icon.jpg" />
+        <title>GGI Platform</title>
+        <meta name="author" content="Dylan Weicker" />
+        <meta name="description" content="" />
+        <meta name="keywords"  content="" />
+        <meta name="Resource-type" content="Document" />
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+        <script type="text/javascript" src="../jquery.fullPage.js"></script>
+        <script type="text/javascript" src="../script.js"></script>
+
+
+        <!-- symbols -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="../navbar.css">
+        <link rel="stylesheet" type="text/css" href="../global.css" />
+        <link rel="stylesheet" type="text/css" href="../hover-card.css" />
+        <link rel="stylesheet" type="text/css" href="./page.css" />
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors: ['top', 'challenges', 'help', "why", "collab", "testimonials", "register", "connect"],
+                    sectionsColor: [ 'undefined', '#253D4A', '#1e6876', 'undefined', '#253D4A', '#253D4A', '#1e6876', '#253D4A'],
+                    navigation: true,
+                    navigationPosition: 'right',
+                    navigationTooltips: ['Join Us', 'Challenges', 'How We Can Help', "Why Join?", "Collaborate", "Testimonials", "Register Today", "Connect"]
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+
+                    <!-- brand -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="../"><img src="../images/ggi-logo.png"><span class="nav-brand">GGI Platform</span></a>
+                    </div>
+                    <!--Navigation -->
+                    <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                        <li><a href="../">Home</a></li>
+                        <li  class="active"><a href="../associates/">Join Us</a></li>
+                        <li><a href="../clients/">Hire Us</a></li>
+                        <li><a href="../contact-us">Contact Us</a></li>
+                        <li><a href="../fr/associates"><img src="../images/french.png" height="20">français</a></li>
+                    </ul>
+
+                    <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                        <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <!--pop down-->
+                <div id="hidden-menu" class="container-fluid" style="display: none;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../">Home</a></li>
+                        <li class="active"><a href="../associates/">Join Us</a></li>
+                        <li><a href="../clients/">Hire Us</a></li>
+                        <li><a href="../contact-us">Contact Us</a></li>
+                        <li><a href="../fr/associates"><img src="../images/french.png" height="20">français</a></li>
+                    </ul>
+                </div>
+         </nav>
+
+        <div id="fullpage">
+
+            <div class="section " id="section0">
+                <div class="intro">
+                    <div class="container">
+                        <div class="col-md-8">
+                            <div class="text-box">
+                                
+                                <h1>Grow Your Consulting Practice With the GGI Platform</h1>
+                                <h2>You enjoy working independently but face some challenges.<br> We can help.</h2>
+                                <a href="#challenges">
+                                    <button class="btn-default btn-lg">
+                                        Find Out More
+                                    </button>
+                                </a>
+                                <a href="#register">
+                                    <button class="btn-default btn-lg cta">
+                                        Register Today
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section1">
+                <div class="intro container">
+                    <div class="col-md-11">
+                        <h1>Your Challenges</h1>
+                            <p>Over the past year, we've met with many consultants across Canada who work independently or in small firms. You've told us you really enjoy the independence, flexibility and other benefits that working independently provides. But, you've also highlighted some of the challenges you face.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fas fa-search fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>It's time consuming to track opportunities and make sure you're on the right lists.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Identifying Opportunities</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="far fa-file-alt fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>RFPs are increasingly complex, proposals take a long time to assemble.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Proposal Writing</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fas fa-chess fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                           <p>Large firms are better able to demonstrate they have the resources and track record needed to win the big, more complex projects.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Competing for Big Projects</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fa fa-users fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>Clients want teams of consultants with specialized skills, not just generalists. It can be hard to find the team members you need to meet the requirements.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Building Teams</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4"> 
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fa fa-wrench fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p> New and useful tools &amp; technologies are being introduced. But they can be very costly and difficult to implement.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Accessing Tools and Technology</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                 <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="far fa-edit fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>You spend more time than you'd like on basic research and project administration and not enough on areas where you really add value. </p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Focusing on Your Core Skills</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--div class="row">
+                            <div class="col-md-4">
+                                <i class="fas fa-search fa-5x"></i>
+                                <h4>Identifying Opportunities</h4>
+                                It's time consuming to track opportunities and make sure you're on the right lists.
+                            </div>
+                            <div class="col-md-4">
+                            <i class="far fa-file-alt fa-5x"></i>
+                            <h4>Proposal Writing</h4>
+                                RFPs are increasingly complex, proposals take a long time to assemble.
+                            </div>
+                            <div class="col-md-4">
+                            <i class="fas fa-chess fa-5x"></i>
+                            <h4>Competing for Big Projects</h4>
+                                Large firms are better able to demonstrate they have the resources and track record needed to win the big, more complex projects.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+
+                            <i class="fa fa-users fa-5x"></i>
+                            <h4>Building Teams</h4>
+                                <p>Clients want teams of consultants with specialized skills, not just generalists. It can be hard to find the team members you need to meet the requirements.</p>
+                            </div>
+                            <div class="col-md-4">                    
+                            <i class="fa fa-wrench fa-5x"></i>
+                            <h4>Accessing Tools and Technology</h4>
+                                New and useful tools & technologies are being introduced. But they can be very costly and difficult to implement.
+                            </div>
+                            <div class="col-md-4">
+                                <i class="far fa-edit fa-5x"></i>
+                            <h4>Focusing on Your Core Skills</h4>
+                                You spend more time than you'd like on basic research and project administration and not enough on areas where you really add value. 
+                            </div-->
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section2">
+                <div class="intro container">
+                    
+                    <div class="col-md-11">
+                        <h1>How We Can Help</h1>
+                        <h2>The GGI Platform gives you more control over the way you work and the projects you work on.</h2>
+                        <div class="row hover">
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fa fa-users fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>The GGI Platform can connect you with our in-house team of leading consultants and our growing network of associates. </p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Build winning project teams</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="far fa-handshake fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>The GGI Platform can help you identify and pursue opportunities, tapping into GGI's proposal writing expertise and resources.  </p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Close More Deals</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fas fa-cogs fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>Participate in our project teams and lean on GGI's size, track record and ability to navigate complex procurement requirements.  </p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Work on More Complex Projects</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="row  hover">
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fas fa-book fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>We can support you with a wide range of research services, delivered quickly and cost-effectively. </p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Access research capabilities</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fas fa-wrench fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>We've been upgrading our capabilities in areas ranging from project management, surveying, and visualization to text, social media, big data and predictive analytics.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Access the tools Large Firms Use</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-md-4">
+                                <div class="hover-card">
+                                    <div class="hover-card-top">
+                                        <div class="hover-card-icon">
+                                            <i class="fa fa-life-ring fa-5x"></i>
+                                        </div>
+                                        <div class="hover-card-text">
+                                            <p>Focus on what you do best &mdash; consulting &mdash; while the GGI team assists you with project management and administration.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hover-card-title">
+                                        <h4>Get More Support</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section3">
+                <div class="intro container">
+                    <div class="col-md-10 text-box">
+                     <h1>Why Join?</h1>
+                        <p>Our associates are experienced consultants, evaluators, senior managers, and others with specialized skills and expertise relevant to clients.  By joining the GGI Platform, you will continue to enjoy the benefits and lifestyle that comes with working independently while gaining access to benefits that come with working with a large consulting firm.   
+                        </p><p>
+                        Some associates look at the GGI Platform as simply an additional source of work. However, most are drawn by opportunities to pursue larger projects, access leading-edge tools and resources, get assistance in marketing, proposal development and project implementation, and become a member of the GGI community.  
+                        </p><p>
+                        There is no cost to you of becoming a GGI Associate.  If you work on one of our projects, we negotiate the fees with you and typically apply a markup when invoicing the client.  Where we assist you in obtaining or completing a project, we would negotiate the terms for those services with you.   
+                        </p><p>
+                        By joining the GGI Platform, you make no commitment to work with us or to be a member of any of our project teams (we’ll first check with you before including you in a proposal or making client referrals). There are no restrictions whatsoever on your ability to pursue work on your own or work with other firms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section4">
+                <div class="container">
+                    <div class="col-md-11">
+                         <h1>Collaborate</h1>
+                        <img src="../images/benefits.png" width=100% class="collab-image">
+                        <div class="collab-text">
+                            <h2>Three ways we commonly work with GGI Associates</h2>
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa fa-users fa-5x"></i></div>
+                            <div class="col-md-10">
+                                <h4>You join our project teams</h4>
+                                <p>Underlying the GGI Platform is a searchable associate database that we use to build project teams that meet specific client needs. We contact you when your skills/experience meet the project requirements.  Through the Platform, we can also link you directly to clients and other associates building their project teams. </p>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa fa-handshake fa-5x"></i></div>
+                                <div class="col-md-10">
+                                    <h4>We work with you on opportunities you identify</h4>
+                                    <p>We can help you to build winning project teams, prepare proposals, and implement projects.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"><i class="fa fa-puzzle-piece fa-5x"></i></div>
+                                <div class="col-md-10">
+                                    <h4>We joint market with you</h4>
+                                    <p>We can work with you on identifying opportunities across Canada and internationally, getting on bidding lists, and implementing a targeted marketing program. We are experts in marketing services to prospective clients. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section5">
+                <div class="intro container">
+                    <div class="slide" id="slide1">
+                        <div class="intro">
+                             <div class="col-md-10 text-box">
+                                 <h1>Testimonial</h1>
+                                 <h2>“We’ve partnered with GGI on a series of projects over the years and they are a pleasure to work with”</h2>
+                                 <p class="lead"><b></b><br>Long-time associate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide2">
+                         <div class="col-md-10 text-box">
+                                 <h1>Testimonial</h1>
+                                 <h2>"By working with GGI, I’ve been able to access assignments and assistance that I could not have on my own”</h2>
+                                 <p class="lead"><b></b><br>Long-time associate</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="section" id="section6">
+                <div class="intro container">
+                    <div class="col-md-10 text-left text-box">
+                        <h1>Register Today</h1>
+                        <p>
+                            You can register as an individual, a firm or both.  Click the button below to begin the process. </p><p>
+                            Any personalized registration information we collect from you will be used only for the purposes of identifying opportunities for us to work together.  It will not be shared with any other parties without your consent.  Our Privacy Policy is available <a href="../privacy%20policy/">here</a>.
+                        </p>
+                        <a href="./register/">
+                            <button class="btn-default btn-lg">
+                                Begin Registration
+                            </button>
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        <div class="section footer" id="section7">
+		  <div class="intro container">
+            <h1>Connect</h1>
+                
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>Vancouver Office</h2>
+                        <ul class="no-bullet address">
+                            <li> Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>210-314 West Cordova</li>
+                            <li>Vancouver BC  V6B 1E8</li>
+                            <li>Canada</li>
+                            <li>Telephone (778) 379-5590</li>
+                            <li>Toll-free (844) 584-9343</li>
+                            <li><a href="mailto:info@GGIplatform.ca">info@GGIplatform.ca</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Ottawa Office</h2>
+                        <ul class="no-bullet address">
+                            <li>Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>150 Metcalfe, Suite 900 </li>
+                            <li>Ottawa ON  K2P 1P1</li>
+                            <li>Canada</li>
+                            <li>Telephone (613) 230-5577</li>
+                            <li>Toll-free (800) 611-0511</li>
+                            <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>St. John's Office</h2>
+                        <ul class="no-bullet address">
+                            <li> Goss Gilroy Inc.</li>
+                            <li>Management Consultants</li>
+                            <li>401 Empire Ave. </li>
+                            <li>St. John’s NL  A1E 1W6</li>
+                            <li>Canada</li>
+                            <li>Telephone (709) 754-2065</li>
+                            <li>Toll-free (855) 805-2065</li>
+                            <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row credits">
+                    <div class="col-sm-4">
+                        <a href="../privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                        © Goss Gilroy Inc. 2018<br>
+                        Site created by <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                    </div>
+                    <div class="col-sm-4" style="padding-left: 0;">
+                        <br><br>
+                    </div>
+                    <div class="col-sm-4 credits" style="padding-left: 0;">
+                        <b></b>
+                    </div>
+                </div>
+		      </div>
+		</div>
+        </div>
+    </body>
+</html>

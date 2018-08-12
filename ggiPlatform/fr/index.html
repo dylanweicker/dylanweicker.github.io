@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/ggi-fav-icon.jpg" />
+    <link rel="icon" type="image/x-icon" href="../images/ggi-fav-icon.jpg" />
+	<title>GGI Platform</title>
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+
+    <link rel="alternate" href="http://ggiplatform.com/" hreflang="en" />
+    <link rel="alternate" href="http://ggiplatform.com/fr/" hreflang="fr" />
+
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+	<link rel="stylesheet" type="text/css" href="../global.css" />
+	<link rel="stylesheet" type="text/css" href="../home.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+
+    
+    <link rel="alternate" href="http://GGIplatform.ca" hreflang="en" />
+    <link rel="alternate" href="http://GGIplatform.ca/fr" hreflang="fr" />
+           
+    <!-- symbols -->
+    <link rel="stylesheet" href="../icons/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../home.css">
+
+    <!-- Custom Scripts -->
+    <script src="../script.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['welcome', 'overview', 'ggi', "why", "next-steps", "connect"],
+				sectionsColor: [ 'undefined', '#253D4A', '#1e6876', '#253D4A', '#1e6876', '#253D4A'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Bienvenue', 'résumé', 'GGI', "Avantages", "prochaines étapes", "Relier"]
+			});
+		});
+	</script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./"><img src="../images/ggi-logo.png"><span class="nav-brand">Plateforme GGI </span></a>
+            </div>
+            <!--Navigation -->
+            <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li class="active"><a href="./">Page d'Accueil</a></li>
+                <li><a href="./associates/">Rejoignez Nous</a></li>
+                <li><a href="./clients/">Embauchez Nous</a></li>
+                <li><a href="./contact-us">Contactez Nous</a></li>
+                <li><a href="../"><img src="../images/english.png" height="20">English</a></li>
+            </ul>
+
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./">Page d'Accueil</a></li>
+                <li><a href="./associates/">Rejoignez Nous</a></li>
+                <li><a href="./clients/">Embauchez Nous</a></li>
+                <li><a href="./contact-us">Contactez Nous</a></li>
+                <li><a href="../"><img src="../images/english.png" height="20">English</a></li>
+            </ul>
+        </div>
+ </nav>
+
+<div id="fullpage">
+    
+		<div class="section" id="section0">
+		<div class="intro">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="text-box">
+                        
+                        <h1>Présentation de la Plateforme GGI</h1>
+                        <h2>Nous connectons nos clients avec notre réseau de collaborateurs, les experts internes de GGI et les outils de pointe, les capacités de recherche et de marketing</h2>
+                        <a href="#overview">
+                            <button class="btn-default btn-lg">
+                                En savoir plus &emsp; <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </a>
+                        <div style="display: inline-block">
+                            <a href="./associates/">
+                                <button  class="btn-default btn-lg cta">
+                                    Rejoignez Nous
+                                </button>
+                            </a>
+                            <a href="./clients/">
+                                <button class="btn-default btn-lg cta">
+                                    Embauchez nous
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section1">
+		<div class="intro container">
+			<h1>Qu’est-ce que la Plateforme GGI? </h1>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-users fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Des équipes de projet fortes et diversifiées</h4>
+                    <p>Les clients veulent des équipes de consultants ayant des compétences spécialisées, pas seulement des généralistes. La plate-forme GGI crée des équipes présentant les compétences techniques et techniques dont les clients ont besoin, en tirant parti de nos collaborateurs et des experts internes de GGI.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-wrench fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Outils et technologie de pointe</h4>
+                    <p>La technologie change rapidement. Grâce à la plateforme GGI, les clients et les collaborateurs ont accès à des logiciels évolués de rédaction de textes, de médias sociaux, de données volumineuses et d'analyse prédictive, ainsi qu'à des outils d'arpentage, de consultation, d'infographie et de visualisation.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-book fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Capacités de recherche étendues</h4>
+                    <p>Nous avons amélioré nos capacités afin de proposer un plus large éventail de services de recherche plus rapidement et plus économiquement que jamais auparavant. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-chart-line fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Marketing efficace</h4>
+                    <p>Nous travaillons en étroite collaboration avec nos collaborateurs pour identifier des opportunités, des services de marché conjoints à des clients potentiels et répondre aux appels d'offres.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-star fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Gestion de projet robuste</h4>
+                    <p>Nos systèmes et outils garantissent que nous fournissons des services conformes à nos normes strictes en matière d'assurance qualité.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+    
+    
+	<div class="section" id="section2">
+        <div class="intro container">
+            <div class="col-md-11 text-box">
+                <h1>Qui Est GGI?</h1>
+                <p>Depuis notre création en 1981, Goss Gilroy Inc. (GGI) est devenu l’une des sociétés de gestion en conseil indépendante les plus importantes du Canada. Grâce à nos bureaux qui sont répartis partout au Canada, à notre équipe de 40 professionnels et à notre réseau grandissant de plus de 100 collaborateurs, nous offrons une vaste gamme de services de consultation à tous les ordres du gouvernement, aux organismes du secteur sans but lucratif, aux communautés autochtones et aux industries de toutes les provinces, de tous les territoires et d’ailleurs dans le monde. </p><p>
+
+                    Bien que la Plateforme GGI soit une nouvelle initiative pour nous, elle est fermement ancrée dans la façon dont nous avons toujours fait des affaires. La plupart de nos services font appel à des membres d’équipe de l’extérieur de la société et, en fait, bon nombre de nos projets sont dirigés par nos collaborateurs. Ce qui a changé, c’est que nous reconnaissons que cette initiative n’est pas seulement un moyen privilégié de faire des affaires, c’est maintenant une partie essentielle de nos activités. </p><p>
+
+                    Pour en savoir plus sur GGI lui-même, vous pouvez visiter notre site Web à <a href="http://www.ggi.ca">www.GGI.ca</a>. 
+                </p>
+            </div>
+		</div>
+	</div>
+	
+    <div class="section" id="section3">
+        <div class="intro container">
+		<h1>Comment la plateforme profite à nos clients, à nos collaborateurs et à GGI</h1>
+        <div class="row">
+                <div class="col-md-2"><i class="fas fa-users fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>Clients</h4>
+                    <p>Nous pouvons offrir à nos clients une gamme plus large de services innovants de haute qualité, livrés rapidement et de manière rentable, par une équipe de consultants forte et diversifiée, adaptée à leurs besoins spécifiques.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-briefcase fa-5x"></i></div>
+                <div class="col-md-8">
+                    <h4>collaborateurs</h4>
+                    <p>La plate-forme GGI permet à nos collaborateurs de participer à des équipes de projet gagnantes, d'accéder à des services et outils de recherche spécialisés, de rechercher de nouveaux débouchés et de se concentrer sur ce qu'ils font le mieux: consultation et gestion de projets.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><img src="../images/white-logo.png" width="80"></div>
+                <div class="col-md-8">
+                    <h4>GGI</h4>
+                    <p>La Plateforme GGI fournit la masse critique dont nous avions besoin pour effectuer de nouveaux investissements significatifs dans des outils et des technologies de pointe et élargir considérablement nos capacités de marketing et de recherche.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="section footer" id="section4">
+		<div class="intro container">
+            <div class="col-sm-8 text-box">
+                
+            <h1>Prochaines étapes</h1>
+                <div class="row text-center" >
+                    <div class="col-md-6" style="padding: 1rem">
+                        
+                        <a href="./associates/"><button class="btn btn-long btn-default cta">Rejoignez Nous</button></a><br>
+                        <p class="text-muted">Si vous souhaitez devenir collaborateur et découvrir ce que la Plateforme GGI pourrait signifier pour vous</p>
+                    </div>
+                    <div class="col-md-6 " style="padding: 1rem">
+                        
+                        <a href="./clients/"><button class="btn btn-long btn-default cta">Embauchez nous</button></a><p class="text-muted">
+                        Si vous êtes intéressé par nos services et découvrez ce que la plate-forme GGI signifie pour vous</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section footer" id="section5">
+		<div class="intro container">
+            <h1>Relier</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Bureau de Vancouver</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>210-314 West Cordova</li>
+                        <li>Vancouver BC  V6B 1E8</li>
+                        <li>Canada</li>
+                        <li>Téléphone (778) 379-5590</li>
+                        <li>Le numéro vert (844) 584-9343</li>
+                        <li><a href="mailto:info@GGIplatform.ca">info@GGIplatform.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Bureau de Ottawa</h2>
+                    <ul class="no-bullet address">
+                        <li>Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>150 Metcalfe, Suite 900 </li>
+                        <li>Ottawa ON  K2P 1P1</li>
+                        <li>Canada</li>
+                        <li>Téléphone (613) 230-5577</li>
+                        <li>Le numéro vert (800) 611-0511</li>
+                        <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Bureau de St. John's</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>401 Empire Ave. </li>
+                        <li>St. John’s NL  A1E 1W6</li>
+                        <li>Canada</li>
+                        <li>Téléphone (709) 754-2065</li>
+                        <li>Le numéro vert (855) 805-2065</li>
+                        <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="col-sm-4">
+                    <a href="./privacy%20policy/"> <b>Politique de Confidentialité</b></a><br>
+                    © Goss Gilroy Inc. 2018<br>
+                    Site créé par <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                </div>
+                <div class="col-sm-4" style="padding-left: 0;">
+                    <br><br>
+                </div>
+                <div class="col-sm-4 credits" style="padding-left: 0;">
+                    <b></b>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

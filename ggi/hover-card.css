@@ -38,6 +38,8 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .hover-card:hover .hover-card-top{
@@ -48,6 +50,8 @@
     backface-visibility: hidden;
     position: absolute;
     width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 
@@ -84,7 +88,6 @@
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    
     text-align: center;
 }
 /*

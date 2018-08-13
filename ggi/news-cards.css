@@ -34,6 +34,7 @@
 
 .card-block{
     padding: 8px;
+    padding-bottom: 24px;
     min-height: 208px;
     position: relative;
 }
@@ -75,7 +76,7 @@
     font-family: "Open Sans", sans-serif;
     position: absolute;
     bottom: 8px;
-    padding-right: 20px;
+    right: 20px;
     width: 100%;
     text-align: right;
     font-size: 16px;
@@ -120,7 +121,7 @@ i{
     margin-top: 10px;
 }
 
-.x{
+.modal-header h2.x{
     color: #E74C3C;
     position: absolute;
     right: 15px;
@@ -128,8 +129,17 @@ i{
     cursor: pointer;
     font-weight: bold;
 }
-.x:hover {
+.modal-header h2.x:hover {
     color: #F75C4C;
+}
+
+.modal .row{
+    margin: auto;
+}
+
+.modal h2{
+    margin: 0;
+    padding: 0;
 }
 
 ul{

@@ -336,7 +336,10 @@ a.fal, .footer a.fal:visited{
     padding-bottom: 8px;
 }
 
-
+/* MODALS */
+.modal-header h2, .modal-header p, .modal-body h2, .modal-body p, .modal-header, .modal-body{
+    color: #253D4A;
+}
 
 
 /* Overwriting styles for control arrows for slides

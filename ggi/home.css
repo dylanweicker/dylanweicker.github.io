@@ -26,9 +26,18 @@
 }
 
 #section1{
-    background: url('./images/brick-walls.jpg');
+    background: url('./images/lightbulbs.jpg');
     background-repeat: no-repeat;
-    background-position: top; 
+    background-position: bottom; 
+    background-size: cover;
+}
+
+
+
+#section3{
+    background:  url('./images/grey-blobs.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
     background-size: cover;
 }
 
@@ -37,7 +46,7 @@
     background: linear-gradient(
       rgba(0, 107, 119, 0.15), 
       rgba(0, 107, 119, 0.20)
-    ), url('./images/next-steps.jpg');
+    ), url('./images/grey-triangles.jpg');
     background-repeat: no-repeat;
     background-position: bottom; 
     background-size: cover;

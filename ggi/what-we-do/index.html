@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/ggi-fav-icon.jpg" />
+    <link rel="icon" type="image/x-icon" href="../images/ggi-fav-icon.jpg" />
+	<title>GGI</title>
+    
+	<meta name="author" content="Dylan Weicker" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+    
+    <link rel="alternate" href="http://GGI.ca/what-we-do" hreflang="en" />
+    <link rel="alternate" href="http://GGI.ca/fr/what-we-do" hreflang="fr" />
+
+
+    <!-- symbols -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    
+
+    <!-- Custom Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
+    
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+	<link rel="stylesheet" type="text/css" href="../global.css" />
+    <link rel="stylesheet" type="text/css" href="../hover-image.css" />
+    <link rel="stylesheet" type="text/css" href="../hover-card.css" />
+	<link rel="stylesheet" type="text/css" href="./what-we-do.css" />
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['overview', 'approach', 'services', 'past-clients', "past-projects", "connect"],
+				sectionsColor: [ '#000816', '#1E6876', '#253D4A', '#1E6876', 'undefined', '#253D4A'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Overview', 'Approach', 'Services', "Past Clients", "Past Projects", "Connect"]
+			});
+		});
+	</script>
+    
+    
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../"><img src="../images/ggi-logo.png"><span class="nav-brand">Goss Gilroy Inc.</span></a>
+            </div>
+            <!--Navigation -->
+            <ul id="long-nav" class="nav navbar-nav navbar-right long-nav">
+                <li><a href="../">Home</a></li>
+                <li  class="active"><a href="../what-we-do/">What We Do</a></li>
+                <li><a href="../why-us/">Why Us</a></li>
+                <li><a href="../work-with-us/">Work With Us</a></li>
+                <li><a href="../contact-us">Contact Us</a></li>
+                <li><a href="../fr/what-we-do"><img src="../images/french.png" height="20">français</a></li>
+            </ul>
+
+            <ul id="sandwich-btn" class="nav navbar-nav float-right sandwich-nav">
+                <li><a onclick="toggleHiddenMenu()"><span>Menu</span><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <!--pop down-->
+        <div id="hidden-menu" class="container-fluid" style="display: none;">
+            <ul class="nav navbar-nav">
+                <li><a href="./">Home</a></li>
+                <li  class="active"><a href="../what-we-do/">What We Do</a></li>
+                <li><a href="../why-us/">Why Us</a></li>
+                <li><a href="../work-with-us/">Work With Us</a></li>
+                <li><a href="../contact-us">Contact Us</a></li>
+                <li><a href="../fr/what-we-do"><img src="../images/french.png" height="20">français</a></li>
+            </ul>
+        </div>
+ </nav>
+
+<div id="fullpage">
+    
+	<div class="section" id="section0">
+		<div class="intro">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="text-box">
+                        <h1>DELIVERING LEADING-EDGE CONSULTING SERVICES IN A RAPIDLY CHANGING WORLD</h1>
+                        <p>Building on our proud history, we are working hard to continually improve and broaden the range of services that we provide to our clients. </p>
+                        <a href="#approach">
+                            <button class="btn-default btn-lg cta">
+                               Our Approach
+                            </button>
+                        </a>
+                        <a href="#services">
+                            <button class="btn-default btn-lg cta">
+                               Our Services
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="intro">
+            <div class="container">
+                <div class="col-md-10">
+                    <h1>Our Approach to Consulting</h1>
+                    <p>GGI’s approach to consulting services has been shaped by over 35 years of assignments with the public sector at the federal, provincial and municipal levels and in the private and non-profit sectors in Canada and internationally. In approaching management consulting assignments, GGI is committed to:</p>
+                    
+                    <div class="row hover">
+                         <div class="col-md-4">
+                            <div class="hover-card">
+                                <div class="hover-card-top">
+                                    <div class="hover-card-icon">
+                                        <i class="fas fa-search fa-5x"></i>
+                                    </div>
+                                    <div class="hover-card-text">
+                                        <p>Working with clients to identify clearly their information and service needs</p>
+                                    </div>
+                                </div>
+                                <div class="hover-card-title">
+                                    <h4>Identifying Needs</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="hover-card">
+                                <div class="hover-card-top">
+                                    <div class="hover-card-icon">
+                                        <i class="fas fa-database fa-5x"></i>
+                                    </div>
+                                    <div class="hover-card-text">
+                                        <p>Collecting and analyzing data and information with thoroughness and precision, using the best available methods</p>
+                                    </div>
+                                </div>
+                                <div class="hover-card-title">
+                                    <h4>Data Analysis</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="hover-card">
+                                <div class="hover-card-top">
+                                    <div class="hover-card-icon">
+                                        <i class="fas fa-file-alt fa-5x"></i>
+                                    </div>
+                                    <div class="hover-card-text">
+                                        <p>Developing well-supported reports capable of withstanding the feedback from internal and external stakeholders</p>
+                                    </div>
+                                </div>
+                                <div class="hover-card-title">
+                                    <h4>Developing Reports</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hover">
+                         <div class="col-md-4">
+                            <div class="hover-card">
+                                <div class="hover-card-top">
+                                    <div class="hover-card-icon">
+                                        <i class="far fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="hover-card-text">
+                                        <p>Providing fully bilingual facilitation services to help organizations plan and implement change</p>
+                                    </div>
+                                </div>
+                                <div class="hover-card-title">
+                                    <h4>Bilingual Services</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="hover-card">
+                                <div class="hover-card-top">
+                                    <div class="hover-card-icon">
+                                        <i class="far fa-thumbs-up fa-5x"></i>
+                                    </div>
+                                    <div class="hover-card-text">
+                                        <p>Developing and implementing solutions that are long-term, integrative, state-of-the-art and responsive to the broader context in which client organizations operate</p>
+                                    </div>
+                                </div>
+                                <div class="hover-card-title">
+                                    <h4>Implementing Solutions</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="hover-card">
+                                <div class="hover-card-top">
+                                    <div class="hover-card-icon">
+                                        <i class="fas fa-edit fa-5x"></i>
+                                    </div>
+                                    <div class="hover-card-text">
+                                        <p>Adhering to its internal peer-review process for large projects to ensure they meet and exceed client satisfaction</p>
+                                    </div>
+                                </div>
+                                <div class="hover-card-title">
+                                    <h4>Peer Reviews</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <p>Above all, GGI consultants know the differences between facts, findings, conclusions and recommendations and know how to make the linkages between data, information, knowledge and the results clients seek.</p>
+                    
+                </div>
+            </div>
+        </div>
+	</div>
+    
+    
+	<div class="section" id="section2">
+        <div class="intro">
+            <div class="container">
+                <div class="col-md-10">
+                    <h1>OUR SERVICES — WHAT WE CAN DO FOR YOU</h1>
+                    <p>If you have a research need, it is likely that either we have extensive experience in that area or one of our associates does. We can be the one-stop shop for your consulting needs.</p>
+                    
+                    <img src="../images/services.png" class="service-image" width="100%">
+                    <div class="col-md-6 service-text">
+                        <ul class="nomargin">
+                            <li>Applied Social Research</li>
+                            <li>Business Planning and Feasibility Studies</li>
+                            <li>Cluster/Economic Development</li>
+                            <li>Human Resource Development and Labour Market Research</li>
+                            <li>Innovation &amp; Commercialization</li>
+                            <li>Investment Attraction &amp; Trade Promotion</li>
+                            <li>Market Assessment and Marketing Strategies</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 service-text">
+                        <ul>
+                            <li>Organizational Development &amp; Reviews</li>
+                            <li>Policy Reviews and Analysis</li>
+                            <li>Process Reviews &amp; Reengineering</li>
+                            <li>Program Evaluation and Performance Measurement</li>
+                            <li>Public Consultation</li>
+                            <li>Risk Assessment</li>
+                            <li>Strategic Planning</li>
+                            <li>Workplace Investigations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+    <div class="section" id="section3">
+        <div class="intro">
+            <div class="container">
+                    <div class="slide" id="slide1">
+                    <div class="intro">
+                    <div class="col-md-11">
+                        <h1>Past Clients</h1>
+                         <div class="text-box">
+                             <h1>Federal Government</h1>
+                             Aboriginal Affairs and Northern Development Canada
+Agriculture and Agri-Food Canada
+Atlantic Canada Opportunities Agency
+Canada Border Services Agency
+Canada Revenue Agency
+Canada Information Office
+Canada Mortgage and Housing Corporation
+Canada School of Public Service
+Canadian Centre for Management Development
+Canadian Coast Guard
+Canadian Council for the Arts
+Canadian Food Inspection Agency
+Canadian Forces Grievance Board
+Canadian Heritage
+Canadian Human Rights Commission
+Canadian Institutes of Health Research
+Canadian Museum of Civilization
+Canadian Museum of Nature
+Canadian Nuclear Safety Commission
+Canadian Space Agency
+Canadian Tourism Commission
+Citizenship and Immigration Canada
+Correctional Service of Canada
+Defence Research and Development Canada
+Elections Canada
+Encounters with Canada
+Environment Canada
+Fisheries and Oceans Canada
+Finance Canada
+Foreign Affairs, Trade and Development Canada
+Health Canada
+Home Care Sector Study Corporation
+House of Commons
+Human Resources and Skills Development Canada
+Industry Canada
+Infrastructure Canada
+International Development Research Centre
+Justice Canada
+Library and Archives Canada
+National Capital Commission
+National Defence and the Canadian Armed Forces
+Natural Resources Canada
+National Research Council Canada
+Natural Sciences and Engineering Research Council of Canada
+National Search and Rescue Secretariat
+Office of Auditor General Canada
+Office of the Commissioner of Official Languages
+Parole Board of Canada
+Pension Appeals Board
+Parks Canada
+Passport Canada
+Pearson Peacekeeping Centre
+Privy Council Office
+Public Service Commission of Canada
+Public Health Agency of Canada
+Public Safety Canada
+Public Labour Relations Relations Board
+Public Works and Government Services Canada
+Royal Commission on Aboriginal Peoples
+Royal Canadian Mounted Police
+Social Sciences & Humanities Research Council of Canada
+Statistics Canada
+Supreme Court of Canada
+Transport Canada
+Transportation Safety Board of Canada
+Treasury Board of Canada Secretariat
+Veteran Affairs Canada
+Western Economic Diversification Canada
+                             
+                             <br>
+                             <div class="insight-holder">
+                                 <a href="#past-clients/0" class="insight-nav active">Federal Government</a>
+                                 <a href="#past-clients/1" class="insight-nav">Provincial Government</a>
+                                 <a href="#past-clients/2" class="insight-nav">Municiple Government</a>
+                                 <a href="#past-clients/3" class="insight-nav">Foreign Government</a>
+                                 <a href="#past-clients/4" class="insight-nav">UN Orgs</a>
+                                 <a href="#past-clients/5" class="insight-nav">Non-Government Orgs</a>
+                             </div>
+                             <div class="insight-holder">
+                                 <a href="#past-clients/6" class="insight-nav">Associations</a>
+                                 <a href="#past-clients/7" class="insight-nav">Crown Corporations</a>
+                                 <a href="#past-clients/8" class="insight-nav">Private Company</a>
+                                 <a href="#past-clients/9" class="insight-nav">Non-Profit Orgs</a>
+                                 <a href="#past-clients/10" class="insight-nav">University/College</a>
+                                 <a href="#past-clients/11" class="insight-nav">World Banks &amp; Int'l Orgs</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                     <div class="col-md-10 text-box">
+                         <h1>Provincial Government </h1>
+                         <br>
+                         <div class="insight-holder">
+                                 <a href="#past-clients/0" class="insight-nav">Federal Government</a>
+                                 <a href="#past-clients/1" class="insight-nav active">Provincial Government</a>
+                                 <a href="#past-clients/2" class="insight-nav">Municiple Government</a>
+                                 <a href="#past-clients/3" class="insight-nav">Foreign Government</a>
+                                 <a href="#past-clients/4" class="insight-nav">UN Orgs</a>
+                                 <a href="#past-clients/5" class="insight-nav">Non-Government Orgs</a>
+                             </div>
+                             <div class="insight-holder">
+                                 <a href="#past-clients/6" class="insight-nav">Associations</a>
+                                 <a href="#past-clients/7" class="insight-nav">Crown Corporations</a>
+                                 <a href="#past-clients/8" class="insight-nav">Private Company</a>
+                                 <a href="#past-clients/9" class="insight-nav">Non-Profit Orgs</a>
+                                 <a href="#past-clients/10" class="insight-nav">University/College</a>
+                                 <a href="#past-clients/11" class="insight-nav">World Banks &amp; Int'l Orgs</a>
+                             </div>
+                    </div>
+                </div>
+                <div class="slide" id="slide3">
+                     <div class="col-md-10 text-box">
+                         <h1>Municiple Government</h1>
+                        <br>
+                        <div class="insight-holder">
+                                 <a href="#past-clients/0" class="insight-nav">Federal Government</a>
+                                 <a href="#past-clients/1" class="insight-nav">Provincial Government</a>
+                                 <a href="#past-clients/2" class="insight-nav active">Municiple Government</a>
+                                 <a href="#past-clients/3" class="insight-nav">Foreign Government</a>
+                                 <a href="#past-clients/4" class="insight-nav">UN Orgs</a>
+                                 <a href="#past-clients/5" class="insight-nav">Non-Government Orgs</a>
+                             </div>
+                             <div class="insight-holder">
+                                 <a href="#past-clients/6" class="insight-nav">Associations</a>
+                                 <a href="#past-clients/7" class="insight-nav">Crown Corporations</a>
+                                 <a href="#past-clients/8" class="insight-nav">Private Company</a>
+                                 <a href="#past-clients/9" class="insight-nav">Non-Profit Orgs</a>
+                                 <a href="#past-clients/10" class="insight-nav">University/College</a>
+                                 <a href="#past-clients/11" class="insight-nav">World Banks &amp; Int'l Orgs</a>
+                             </div>
+                    </div>
+                </div>
+                <div class="slide" id="slide4">
+                     <div class="col-md-10 text-box">
+                         <h1>Foreign Government</h1>
+                        <br>
+                         <div class="insight-holder">
+                                 <a href="#past-clients/0" class="insight-nav ">Federal Government</a>
+                                 <a href="#past-clients/1" class="insight-nav">Provincial Government</a>
+                                 <a href="#past-clients/2" class="insight-nav">Municiple Government</a>
+                                 <a href="#past-clients/3" class="insight-nav active">Foreign Government</a>
+                                 <a href="#past-clients/4" class="insight-nav">UN Orgs</a>
+                                 <a href="#past-clients/5" class="insight-nav">Non-Government Orgs</a>
+                             </div>
+                             <div class="insight-holder">
+                                 <a href="#past-clients/6" class="insight-nav">Associations</a>
+                                 <a href="#past-clients/7" class="insight-nav">Crown Corporations</a>
+                                 <a href="#past-clients/8" class="insight-nav">Private Company</a>
+                                 <a href="#past-clients/9" class="insight-nav">Non-Profit Orgs</a>
+                                 <a href="#past-clients/10" class="insight-nav">University/College</a>
+                                 <a href="#past-clients/11" class="insight-nav">World Banks &amp; Int'l Orgs</a>
+                             </div>
+                    </div>
+                </div>
+                <div class="slide" id="slide5">
+                     <div class="col-md-10 text-box">
+                         <h1>UN Organizations</h1>
+                        <br>
+                         <div class="insight-holder">
+                                 <a href="#past-clients/0" class="insight-nav">Federal Government</a>
+                                 <a href="#past-clients/1" class="insight-nav">Provincial Government</a>
+                                 <a href="#past-clients/2" class="insight-nav">Municiple Government</a>
+                                 <a href="#past-clients/3" class="insight-nav">Foreign Government</a>
+                                 <a href="#past-clients/4" class="insight-nav active">UN Orgs</a>
+                                 <a href="#past-clients/5" class="insight-nav">Non-Government Orgs</a>
+                             </div>
+                             <div class="insight-holder">
+                                 <a href="#past-clients/6" class="insight-nav">Associations</a>
+                                 <a href="#past-clients/7" class="insight-nav">Crown Corporations</a>
+                                 <a href="#past-clients/8" class="insight-nav">Private Company</a>
+                                 <a href="#past-clients/9" class="insight-nav">Non-Profit Orgs</a>
+                                 <a href="#past-clients/10" class="insight-nav">University/College</a>
+                                 <a href="#past-clients/11" class="insight-nav">World Banks &amp; Int'l Orgs</a>
+                             </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    
+    <div class="section" id="section4">
+        <div class="intro container">
+		<div class="col-md-11">
+              <h1>Past Projects</h1>
+            </div>
+        </div>
+	</div>
+    <div class="section footer" id="section5">
+		<div class="intro container">
+            <h1>Connect</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Vancouver Office</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>210-314 West Cordova</li>
+                        <li>Vancouver BC  V6B 1E8</li>
+                        <li>Canada</li>
+                        <li>Telephone (778) 379-5590</li>
+                        <li>Toll-free (844) 584-9343</li>
+                        <li><a href="mailto:info@GGIplatform.ca">info@GGIplatform.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Ottawa Office</h2>
+                    <ul class="no-bullet address">
+                        <li>Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>150 Metcalfe, Suite 900 </li>
+                        <li>Ottawa ON  K2P 1P1</li>
+                        <li>Canada</li>
+                        <li>Telephone (613) 230-5577</li>
+                        <li>Toll-free (800) 611-0511</li>
+                        <li><a href="mailto:ggi@ggi.ca">ggi@ggi.ca</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2>St. John's Office</h2>
+                    <ul class="no-bullet address">
+                        <li> Goss Gilroy Inc.</li>
+                        <li>Management Consultants</li>
+                        <li>401 Empire Ave. </li>
+                        <li>St. John’s NL  A1E 1W6</li>
+                        <li>Canada</li>
+                        <li>Telephone (709) 754-2065</li>
+                        <li>Toll-free (855) 805-2065</li>
+                        <li><a href="mailto:gginfld@ggi.ca">gginfld@ggi.ca</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="col-sm-4">
+                    <a href="../privacy%20policy/"> <b>Privacy Policy</b></a><br>
+                    © Goss Gilroy Inc. 2018<br>
+                    Site created by <a href="http://dylanweicker.github.io"> Dylan Weicker</a>
+                </div>
+                <div class="col-sm-4" style="padding-left: 0;">
+                    <br><br>
+                </div>
+                <div class="col-sm-4 credits" style="padding-left: 0;">
+                    <b></b>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -4,7 +4,7 @@ body{
 }
 
 body, p{
-    color: white;
+    color: #253D4A;
     font-family: 'Helvetica', 'Arial', 'Lato', sans-serif;
     text-align: left;
     font-size: 16px;
@@ -79,7 +79,7 @@ h4{
 }
 
 .text-box{
-    background: rgba(37,61,74,0.95);
+    background: rgba(255,255,255,0.95);
     padding: 2rem 4rem;
     color: white;
     text-align: left;
@@ -98,7 +98,7 @@ h4{
 }
 .section h1, .first h1,
 .section h2, .first h2{
-    color: #FFF;
+    color: #253D4A;
     text-align: left;
 }
 
@@ -107,13 +107,8 @@ h4{
     font-family: 'Open Sans Condensed';
 }
 
-.section h1{
-    text-shadow: 1px 1px 1px #333;
-}
-
 .section h2{
     text-transform: none;
-    text-shadow: 1px 1px 1px #333;
     font-weight: normal;
 }
 
@@ -121,7 +116,6 @@ h4{
     font-family: 'Open Sans', sans-serif;
     text-transform: none;
     font-weight: 400;
-    font-size: 4rem;
     color: #fff;
     text-shadow: 1px 1px 1px #333;
     text-align: left;

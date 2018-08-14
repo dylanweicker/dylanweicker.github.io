@@ -63,7 +63,7 @@ p.text-muted{
     margin-top: 2rem;
 }
 
-.insight-nav, .insight-nav:visited {
+.insight-nav, .insight-nav:visited, .insight-nav:link {
     color: #253D4A;
     margin-right: 1rem;
     padding-top: 9px;
@@ -74,4 +74,30 @@ p.text-muted{
     color: #FB8C00;
     padding-top: 6px;
     border-top: 3px solid #FB8C00;    
+}
+
+h2{
+    margin-top: 2rem;
+}
+
+.row.client-list{
+    margin-top: 0;
+}
+
+ul.client-list{
+    margin: 0;
+    margin-left: 4px;
+    padding: 0;
+}
+
+.ul.client-list.last{
+    margin-bottom: 2rem;
+}
+
+ul.client-list li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #253D4A;
+    font-size: 12px;
 }

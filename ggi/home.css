@@ -86,7 +86,7 @@ p.text-muted{
     margin-top: 4rem;
 }
 
-.insight-nav, .insight-nav:visited {
+.insight-nav, .insight-nav:visited, .insight-nav:link {
     color: #253D4A;
     margin-right: 1rem;
     padding-top: 9px;

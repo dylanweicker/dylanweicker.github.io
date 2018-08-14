@@ -22,9 +22,10 @@ i{
     margin-bottom: 15px;
 }
 
-a:link, a:visited {
+a, a:link, a:visited {
     color: #FB8C00;
     text-decoration:none;
+    cursor: pointer;
 }
 
 a:hover, a:active {

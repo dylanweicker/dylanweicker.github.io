@@ -28,8 +28,8 @@ class Drawer{
         this.rotLeftHovered = false;
         this.rotLeft = new Image();
         this.rotLeftHover = new Image();
-        this.rotLeft.src = "./images/rotleft.png";
-        this.rotLeftHover.src = "./images/rotleftHover.png";
+        this.rotLeft.src = "./images/rotLeft.png";
+        this.rotLeftHover.src = "./images/rotLeftHover.png";
         this.rotLeftXMargin = 80;
         this.rotLeftYMargin = c.height-140;
         

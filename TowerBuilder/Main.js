@@ -54,15 +54,18 @@ function update() {
 }
 
 function checkPos(mouseEvent){
-    mouseX = mouseEvent.pageX;
-    mouseY = mouseEvent.pageY;
+    
+    var rect = canvas.getBoundingClientRect();
+    mouseX = mouseEvent.clientX - rect.left;
+    mouseY = mouseEvent.clientY - rect.top;
     hover = null;
     gameStateManager.onMouseMove();
 }
 
 function onClick(mouseEvent){
-    mouseX = mouseEvent.pageX;
-    mouseY = mouseEvent.pageY;
+    var rect = canvas.getBoundingClientRect();
+    mouseX = mouseEvent.clientX - rect.left;
+    mouseY = mouseEvent.clientY - rect.top;
     hover = null;
     gameStateManager.onClick();
 }

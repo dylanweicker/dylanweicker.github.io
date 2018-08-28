@@ -17,7 +17,7 @@ class GameStateManager{
         this.state = states.play;
         mouseHandler = new BuilderSelector(this.turn);
         this.drawer = drawer;
-        drawer.setPhase(this.turn, this.phase);
+        drawer.setPhase(this.turn, this.phase, this.state);
     }
     
     onMouseMove(){

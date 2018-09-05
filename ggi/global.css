@@ -44,7 +44,7 @@ h1, h2, h3, h4{
 }
 
 h1{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
     font-size: 3.5rem;
@@ -55,17 +55,17 @@ h2{
     font-weight: 400;
     margin-top: 0;
     padding-bottom: 10px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Open Sans';
 }
 
 h3{
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 h4{
-    color: #FB8C00;
-    font-size: 14;
+    font-size: 16;
+    color: #1E6876;
     font-weight: normal;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -136,6 +136,11 @@ button, button:hover, .btn, .btn:hover{
     text-transform: uppercase;
     border: none;
     margin-top: 10px;
+    font-size: 14px;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+    font-size: 14px;
 }
 
 .btn-lg{
@@ -149,7 +154,6 @@ button, button:hover, .btn, .btn:hover{
     border-color: #1E6876
     margin-bottom: 16px;
     border-color: #1E6876;
-    font-size: 12px;
     font-weight: bolder;
 }
 
@@ -159,30 +163,50 @@ button, button:hover, .btn, .btn:hover{
     border-color: #253D4A
     margin-bottom: 16px;
     border-color: #1E6876;
-    font-size: 12px;
+    font-weight: bolder;
+}
+
+button.high-em{
+    
+    color: #fff;
+    background-color: #e67e22;
+    border-color: #e67e22;
+    margin-bottom: 16px;
+    font-weight: bolder;
+    -webkit-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.12);
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.12);
+}
+
+
+button.low-em{
+    color: #e67e22;
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 16px;
     font-weight: bolder;
 }
 
 
-.cta, 
-.cta:hover,
-.cta:focus, 
-.cta:active, 
-.cta:focus:active{
-    background-color: #e67e22;
+button.high-em:hover,
+button.high-em:focus, 
+button.high-em:active, 
+button.high-em:focus:active{
+    background:rgba(230,126,34,0.9);
+    color: #fff;
 }
 
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:focus:hover,
-.btn-default:hover,
-.btn-default:active,
-.btn-default:focus,
-.btn-default:focus:active{
-    color: #fff;
-    background-color: #FB8C00;
-    border-color: #FB8C00;
+button.low-em:hover,
+button.low-em:active,
+button.low-em:focus,
+button.low-em:focus:hover,
+button.low-em:hover,
+button.low-em:active,
+button.low-em:focus,
+button.low-em:focus:active{
+    color: #e67e22;
+    background-color: rgba(230,126,34,0.1);
+    border-color: rgba(230,126,34,0.2);
     -webkit-transition: ease-in-out 500ms; /* Safari */
     transition: ease-in-out 500ms;
 }

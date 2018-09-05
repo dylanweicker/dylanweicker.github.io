@@ -35,7 +35,7 @@
 .card-block{
     padding: 8px;
     padding-bottom: 24px;
-    min-height: 208px;
+    min-height: 232px;
     position: relative;
 }
 
@@ -75,8 +75,8 @@
     color: #FB8C00;
     font-family: "Open Sans", sans-serif;
     position: absolute;
-    bottom: 8px;
-    right: 20px;
+    bottom: -4px;
+    right: 12px;
     width: 100%;
     text-align: right;
     font-size: 16px;

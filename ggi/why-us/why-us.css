@@ -1,0 +1,14 @@
+#section0 .row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#section0 {
+    background-image: url("../images/teal-shapes.jpg");
+    background-size: cover;
+}
+
+#section1 {
+    background-image: url("../images/ottawa-sunset.jpg");
+    background-size: cover;
+}

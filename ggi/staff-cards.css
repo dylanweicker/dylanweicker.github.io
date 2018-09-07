@@ -1,0 +1,72 @@
+.staff-card h2{
+    margin: 1rem;
+    padding: 0;
+}
+
+
+.staff-card{
+    margin: 1rem;
+    color: #253d4a;
+    overflow: hidden;
+    //width: 100%;
+    background: white;
+    -webkit-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+.staff-card-img-top{
+    width: 100%;
+    border-radius: 10%;
+}
+
+.staff-card-img-top img{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    cursor: pointer;
+}
+.staff-card-img-top img:hover{
+}
+
+.staff-card-block{
+    padding: 8px;
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 565px){
+
+}
+
+.staff-card-block button{
+    text-align: right;
+}
+
+.staff-card-block a{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FB8C00;
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    font-size: 16px;
+    outline: none!important;
+    z-index: 100;
+    margin: 0;
+}
+
+/* full width cells by default */
+.staff.gallery-cell {
+  width: 30%;
+}
+
+@media screen and ( min-width: 768px ) {
+  /* half-width cells for larger devices */
+  .staff.gallery-cell { width: 30%; }
+}

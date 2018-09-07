@@ -27,6 +27,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
 	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+    <script type="text/javascript" src="../vendors/flickity.pkgd.js"></script>
 	<script type="text/javascript" src="../script.js"></script>
 
     
@@ -42,23 +43,34 @@
     
     <!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../vendors/flickity.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../navbar.css">
 	<link rel="stylesheet" type="text/css" href="../global.css" />
     <link rel="stylesheet" type="text/css" href="../hover-image.css" />
     <link rel="stylesheet" type="text/css" href="../hover-card.css" />
+    <link rel="stylesheet" type="text/css" href="../staff-cards.css" />
 	<link rel="stylesheet" type="text/css" href="./why-us.css" />
     
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['values', 'history', 'staff', 'associates', "tools", "qa", "connect"],
-				sectionsColor: [ '#000816', '#1E6876', '#253D4A', '#1E6876', 'undefined', '#253D4A', '#253D4A'],
+				anchors: ['values', 'history', 'partners', 'staff', "tools", "qa", "connect"],
+				sectionsColor: [ '#6CB5C2', '#1E6876', '#253D4A', '#1E6876', 'undefined', '#253D4A', '#253D4A'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Values', 'History', 'Staff', "Associates", "Tools", "QA", "Connect"]
+				navigationTooltips: ['Values', 'History', 'Partners', "Staff", "Tools", "QA", "Connect"]
 			});
 		});
 	</script>
+    
+    <script type="text/javascript">
+        $('.main-gallery').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true
+        });
+    </script>
     
     
 
@@ -98,6 +110,23 @@
         </div>
  </nav>
 
+    <style>
+        .value-box{
+            background: white;
+            -webkit-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.2);
+            margin: 1rem;
+        }
+        .value-box h4{
+            margin: 1rem;
+            margin-bottom: 0;
+        }
+        .value-box p {
+            padding: 1rem;
+        }
+    </style>
+    
 <div id="fullpage">
     
 	<div class="section" id="section0">
@@ -105,6 +134,42 @@
             <div class="container">
                 <div class="text-box col-md-11">
                     <h1>Our Values</h1>
+                    <!--<div class="row">
+                        <div class="col-md-6">
+                            <div class="value-box">
+                                <img src="../images/team.jpg" width="100%" height="auto">
+                                <h4>Offering a Great Place to Work</h4>
+                                <p>GGI believes in a dynamic work environment that provides opportunities for staff fulfillment and development.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="value-box">
+                            <img src="../images/Hendrik.jpg" width="100%" height="auto">
+                            <h4>Committed to Service Excellence</h4>
+                            <p>GGI always keeps the clients’ needs at the centre of our work and delivers high quality products.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="value-box">
+                                <img src="../images/waterpipe.jpg" width="100%" height="auto">
+                                <h4>Doing Work of Social Significance</h4>
+                                <p>GGI is a collection of passionate individuals who contribute, through our work, to the public good in Canada and around the world.</p>   
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="value-box">
+                            <img src="../images/ConferenceOfCanada.jpg" width="100%" height="auto">
+                            <h4>Contributing to and Building our Community</h4>
+                            <p>GGI gives back to our community in many ways, including supporting our staff to volunteer with professional associations, openly sharing best practices with other professionals and embracing knowledge sharing through hybrid teams with our clients</p>
+                            </div>
+                        </div>
+                    </div>-->
+                    
+                    
                     <div class="row">
                         <div class="col-md-4">
                             <img src="../images/team.jpg" width="100%" height="auto">
@@ -169,8 +234,92 @@
 	<div class="section" id="section2">
         <div class="intro">
             <div class="container">
-                <div class="col-md-10">
-                    <h1>Staff</h1>
+                <div class="text-box col-md-11">
+                    <h1>Partners</h1>
+                    <div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Louise.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Louise Mailloux</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Sandy.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Sandy Moir</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Ken.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Ken Organ</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Hubert.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Hubert Paulmer</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Janice.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Janice Remai</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Simon.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Simon Roy</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Marie.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Marie Ryan</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Ted.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Ted Weicker</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                            
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Don.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Donald Hall</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,8 +329,110 @@
 	<div class="section" id="section3">
         <div class="intro">
             <div class="container">
-                <div class="col-md-10">
-                    <h1>Associates</h1>
+                <div class="text-box col-md-11">
+                    <h1>Senior Staff</h1>
+                    <div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Laura.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Laura Conroy</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Bea.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Bea Courtney</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Blank.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Sheila Dohoo Faure</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Tim.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Tim Dougas</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Blank.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Mike Eagen</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Blank.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Jim Gilroy</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Sarah.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Sarah Mills</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Hendrik.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Hendrik Sir&eacute; </h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                            
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Slavica.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Slavica Stevanovic</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Robert.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Robert Vendenberg</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                        <div class="staff gallery-cell">
+                            <div class="staff-card">
+                                <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                    <img src="../images/staff/Tasha.jpg">
+                                </div>
+                                <h2 class="staff-card-title">Tasha Truant</h2>
+                                <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Profile</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

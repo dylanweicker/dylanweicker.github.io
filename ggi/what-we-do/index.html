@@ -27,6 +27,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
 	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+    <script type="text/javascript" src="../vendors/flickity.pkgd.js"></script>
 	<script type="text/javascript" src="../script.js"></script>
 
     
@@ -42,10 +43,12 @@
     
     <!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../vendors/flickity.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../navbar.css">
 	<link rel="stylesheet" type="text/css" href="../global.css" />
     <link rel="stylesheet" type="text/css" href="../hover-image.css" />
     <link rel="stylesheet" type="text/css" href="../hover-card.css" />
+    <link rel="stylesheet" type="text/css" href="../staff-cards.css" />
 	<link rel="stylesheet" type="text/css" href="./what-we-do.css" />
     
 	<script type="text/javascript">
@@ -59,6 +62,15 @@
 			});
 		});
 	</script>
+    
+    <script type="text/javascript">
+        $('.main-gallery').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true
+        });
+    </script>
     
     
 
@@ -1056,10 +1068,89 @@
         </div>
 	</div>
     
+    <style>
+        .project-title{
+            min-height: 92px;
+            margin-bottom: 0;
+        }
+        .project-title h2{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .staff-card p{
+            margin: 0 1rem;
+        }
+    </style>
+    
     <div class="section" id="section4">
         <div class="intro container">
 		<div class="text-box col-md-11">
-              <h1>Past Projects</h1>
+              <h1>Past Projects and Publications</h1>
+                <p>Since being established in 1981 by GGI’s founding partners, we have successfully completed over 3500 projects, many of which were conducted for repeat clients. That’s a lot of projects for a lot of satisfied clients!</p>
+                <p>Below we present just a few of these projects and, where available, the link to the final deliverable we developed for them.</p>
+                <div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                    <div class="staff gallery-cell">
+                        <div class="staff-card">
+                            <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                <img src="../images/nunavik.jpg">
+                            </div>
+                            <div class="project-title"><h2 class="staff-card-title">Evaluation of Nunavik Youth Hockey Development Program</h2></div>
+                            <p>2017</p>
+                            <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="staff gallery-cell">
+                        <div class="staff-card">
+                            <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                <img src="../images/lake-winnipeg.jpg">
+                            </div>
+                            <div class="project-title"><h2 class="staff-card-title">Evaluation of Phase II of the Lake Winnipeg Basin Initiative</h2></div>
+                            <p>2017</p>
+                            <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="staff gallery-cell">
+                        <div class="staff-card">
+                            <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                <img src="../images/feddev.jpg">
+                            </div>
+                            <div class="project-title"><h2 class="staff-card-title">Review of Existing and Emerging Economic Clusters in Ontario</h2></div>
+                            <p>2016</p>
+                            <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="staff gallery-cell">
+                        <div class="staff-card">
+                            <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                <img src="../images/canada-sqaure.jpg">
+                            </div>
+                            <div class="project-title"><h2 class="staff-card-title">Evaluation of Industry Canada’s IRB Policy</h2></div>
+                            <p>2015</p>
+                            <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="staff gallery-cell">
+                        <div class="staff-card">
+                            <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                <img src="../images/UN.jpg">
+                            </div>
+                            <div class="project-title"><h2 class="staff-card-title">Exploratory Research For UNDP China</h2></div>
+                            <p>201</p>
+                            <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="staff gallery-cell">
+                        <div class="staff-card">
+                            <div class="staff-card-img-top"  data-toggle="modal" data-target="#don-modal"> 
+                                <img src="../images/cbsa-square.jpg">
+                            </div>
+                            <div class="project-title"><h2 class="staff-card-title">Evaluation of the CBSA’s Arming Initiative</h2></div>
+                            <p>2017</p>
+                            <a href="#" data-toggle="modal" data-target="#ces-modal"><button class="low-em">View Project</button></a>
+                        </div>
+                    </div>
+                </div>
+                <p>Please contact us to inquire whether we’ve done a project aligned with your needs. Chances are that we have!</p>
             </div>
         </div>
 	</div>

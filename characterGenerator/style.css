@@ -1,0 +1,78 @@
+body, html{
+}
+
+body, p, h1, h2, h3, h4, h5{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+p.no-space{
+    margin:0;
+}
+
+h1{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.text-muted{
+    color: hsl(0, 0, 0.3);
+}
+
+#main-content{
+    height: 100%;
+}
+
+#main-row{
+    height: 100%;
+}
+
+.main-col{
+    height: 80%;
+    padding: 12px;
+}
+
+.main-col-content{
+    height: 100%;
+    width: 100%;
+}
+
+.box-shadow{
+    box-shadow: 0 0 6px #ccc;
+}
+
+.content{
+    padding: 15px;
+}
+
+.next-container{
+    width:100%;
+    padding: 15px;
+}
+
+.next-container button{
+    position: absolute;
+    right: 12px;
+}
+
+.banner{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px -15px;
+    background-color: #eee;
+    padding: 8px;
+}
+.banner p{
+    margin: 12px;
+}
+
+img{
+    width: 30px;
+    height: auto;
+}
+
+img.full-width{
+    width: 100%;
+    height: auto;
+}
+
+

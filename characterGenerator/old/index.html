@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pathfinder Character Creation</title>
+        <link rel="icon" href="../images/rainbow-emoji.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="../images/rainbow-emoji.ico" type="image/x-icon"/>
+        <meta name="description" content="An interactive guide for creating a Pathfinder character.">
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript" src="abilities.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body onload="setupAbilities(); becomeHuman(); becomeFighter();">
+        
+		<!-- header class="red header">
+                <div class="content-no-vertical-padding">
+                    <div class="absolute-left" style="vertical-align: center;">
+                        <a href="../index.html"><img src="../images/dplogo.png"><b>Dylan Weicker</b></a>
+                    </div>
+                    <div class="absolute-right">
+                        <a href="#home" class="navigation"><i class="material-icons">home</i><p>home</p></a>
+                        <a  href="#goals" class="navigation"><i class="material-icons">assignment</i><p>goals</p></a>
+                        <a  href="#software" class="navigation"><i class="material-icons">laptop</i><p>software</p></a>
+                        <a href="#theatre" class="navigation"><i class="material-icons">local_play</i><p>theatre</p></a>
+                        <a href="#activism" class="navigation"><i class="material-icons">people</i><p>activism</p></a>
+                        <a href="#games" class="navigation"><i class="material-icons">casino</i><p>games</p></a><a href="#culture" class="navigation"><i class="material-icons">public</i><p>culture</p></a>
+                    </div>
+                </div>
+		</header-->
+        
+		<h1>Pathfinder Character Generator</h1>
+		<div class="content">
+			<div id="stepper-banner">
+				<div id="stepper-one" class="step active-step"><div class="stepper-circle">1</div>Abilities</div>
+				<div id="stepper-two" class="step inactive"><div class="stepper-circle">2</div>Race</div>
+				<div id="stepper-three" class="step inactive"><div class="stepper-circle">3</div>Class</div>
+				<div id="stepper-four" class="step inactive"><div class="stepper-circle">4</div>Skills</div>
+				<div id="stepper-five" class="step inactive"><div class="stepper-circle">5</div>Feats</div>
+				<div id="stepper-six" class="step inactive"><div class="stepper-circle">6</div>Equipment</div>
+			</div>
+			<div id="step-one">
+                <div class="box vertical-margin">
+                    <h4>Step One</h4>
+                    <h2>Ability Scores</h2>
+                    <div id="abilities-page-one">
+                        <center>
+                            <p>Your character has six ability scores that represent his or her most basic attributes.</p>
+
+                            <div class="flex space-between abilities">
+                                <div>
+                                    <img src="./images/strength.png">
+                                    Strength
+                                </div>
+                                <div>
+                                    <img src="./images/dexterity.png">
+                                    Dexterity
+                                </div>
+                                <div>
+                                    <img src="./images/constitution.png">
+                                    Constitution
+                                </div>
+                                <div>
+                                    <img src="./images/intelligence.png">
+                                    Intelligence
+                                </div>
+                                <div>
+                                    <img src="./images/wisdom.png">
+                                    Wisdom
+                                </div>
+                                <div>
+                                    <img src="./images/charisma.png">
+                                    Charisma
+                                </div>
+                            </div>
+
+                            <p>Thse ability scores represent your character's raw talent and prowess. These scores, and the modifiers they create, affect nearly every aspect of your character's skills and abilities.</p>
+                        </center>
+                        
+                        <div class="space-between flex">
+                            <div class="disabled ghost-button continue">
+                                <a>Previous</a>
+                            </div>
+                            <div class="right ghost-button continue">
+                                    <a onclick="displaySubstep(0,1);">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="abilities-page-two">
+                        <center>
+                        <p>You will receive a number of points to spend on increasing your character's basic ability scores</p>
+                        
+                        <div class="flex space-between abilities">
+                            <div style="flex: 1;">
+                                <img src="./images/ten.png">
+                                All ability scores start at a base value of 10.</div>
+                            <div style="flex: 1;">
+                                <img src="./images/increase.png">
+                                You can increase a score by spending some of your points.</div> 
+                            <div style="flex: 1;">
+                                <img src="./images/decrease.png">
+                                You can gain more points by decreasing an ability score.</div> 
+                            <div style="flex: 1;">
+                                <img src="./images/bar-graph.png">
+                                No score can be reduced below 7 or raised above 18.</div>
+                        </div>
+                        </center>
+                        
+                        <div class="space-between flex">
+                            <div class="ghost-button continue">
+                                <a onclick="displaySubstep(0,0);">Previous</a>
+                            </div>
+                            <div class="right ghost-button continue">
+                                    <a onclick="displaySubstep(0,2);">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="abilities-page-three">
+                        <center>
+                        <p>The campaign type determines the number of points you can spend on your ability scores.</p>
+                            <p><b>Select a campaign type.</b></p>
+                            <div class="flex space-between">
+                                <div id="low-fantasy" class="large-ghost-button ability-score-button" onclick="setMaxCost(10, 'low-fantasy');">
+                                    <img src="./images/low-fantasy.png"><br>
+                                    Low Fantasy<br>10 Points
+                                </div>
+                                <div id="standard-fantasy" class="large-ghost-button ability-score-button" onclick="setMaxCost(15, 'standard-fantasy');">
+                                    <img src="./images/standard-fantasy.png"><br>
+                                    Standard Fantasy<br> 15 Points
+                                </div>
+                                <div id="high-fantasy" class="large-ghost-button ability-score-button" onclick="setMaxCost(20, 'high-fantasy');">
+                                    <img src="./images/high-fantasy.png"><br>
+                                    High Fantasy <br> 20 Points
+                                </div>
+                                    <div id="epic-fantasy" class="large-ghost-button ability-score-button" onclick="setMaxCost(25, 'epic-fantasy');">
+                                    <img src="./images/epic-fantasy.png"><br>
+                                        Epic Fantasy <br>25 Points
+                                </div>
+                            </div>
+                            <p>Check with your game master to see what campaign type he or she is using. A standard campaign lets you spend 15 points.</p>
+                        </center>
+                        <div class="space-between flex">
+                            <div class="ghost-button continue">
+                               <a onclick="displaySubstep(0,1);">Previous</a>
+                            </div>
+                            <div class="right ghost-button continue">
+                                    <a onclick="displaySubstep(0,3);">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="abilities-page-four">
+                         <h2>Points Spent: <span id="total-cost">0</span>/<span id="max-cost">0</span></h2>
+                        
+                        <div class="flex space-between">
+                            <div class="all-abilities">
+                                <div class="one-ability" onmouseover="displayStrInfo();">
+                                    <h3>Strength</h3>
+                                    <div class="justify-center valign-middle flex">
+                                        <i class="material-icons" onclick="decStr();">remove</i>
+                                        <div class="bar-background">
+                                            <div class="bar str-bar"></div>
+                                        </div>
+                                        <i class="material-icons" onclick="incStr();">add</i>
+                                    </div>
+                                    <div class="score-info">
+                                        <div id="str-score">
+                                            Score: 10 (0)
+                                        </div>
+                                        <div id="str-cost">
+                                            Cost: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-ability" onmouseover="displayDexInfo();">
+                                    <h3>Dexterity</h3>
+                                    <div class="justify-center valign-middle flex">
+                                        <i class="material-icons" onclick="decDex();">remove</i>
+                                        <div class="bar-background">
+                                            <div class="bar dex-bar"></div>
+                                        </div>
+                                        <i class="material-icons" onclick="incDex();">add</i>
+                                    </div>
+                                    <div class="score-info">
+                                        <div id="dex-score">
+                                            Score: 10 (0)
+                                        </div>
+                                        <div id="dex-cost">
+                                            Cost: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-ability" onmouseover="displayConInfo();">
+                                    <h3>Constitution</h3>
+                                    <div class="justify-center valign-middle flex">
+                                        <i class="material-icons" onclick="decCon();">remove</i>
+                                        <div class="bar-background">
+                                            <div class="bar con-bar"></div>
+                                        </div>
+                                        <i class="material-icons" onclick="incCon();">add</i>
+                                    </div>
+                                    <div class="score-info">
+                                        <div id="con-score">
+                                            Score: 10 (0)
+                                        </div>
+                                        <div id="con-cost">
+                                            Cost: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-ability" onmouseover="displayIqInfo();">
+                                    <h3>Intelligence</h3>
+                                    <div class="justify-center valign-middle flex">
+                                        <i class="material-icons" onclick="decIq();">remove</i>
+                                        <div class="bar-background">
+                                            <div class="bar iq-bar"></div>
+                                        </div>
+                                        <i class="material-icons" onclick="incIq();">add</i>
+                                    </div>
+                                    <div class="score-info">
+                                        <div id="iq-score">
+                                            Score: 10 (0)
+                                        </div>
+                                        <div id="iq-cost">
+                                            Cost: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-ability" onmouseover="displayWisInfo();">
+                                    <h3>Wisdom</h3>
+                                    <div class="justify-center valign-middle flex">
+                                        <i class="material-icons" onclick="decWis();">remove</i>
+                                        <div class="bar-background">
+                                            <div class="bar wis-bar"></div>
+                                        </div>
+                                        <i class="material-icons" onclick="incWis();">add</i>
+                                    </div>
+                                    <div class="score-info">
+                                        <div id="wis-score">
+                                            Score: 10 (0)
+                                        </div>
+                                        <div id="wis-cost">
+                                            Cost: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-ability last" onmouseover="displayChaInfo();">
+                                    <h3>Charisma</h3>
+                                    <div class="justify-center valign-middle flex">
+                                        <i class="material-icons" onclick="decCha();">remove</i>
+                                        <div class="bar-background">
+                                            <div class="bar cha-bar"></div>
+                                        </div>
+                                        <i class="material-icons" onclick="incCha();">add</i>
+                                    </div>
+                                    <div class="score-info">
+                                        <div id="cha-score">
+                                            Score: 10 (0)
+                                        </div>
+                                        <div id="cha-cost">
+                                            Cost: 0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invisible-box">
+                                <div class="ability-info">
+                                    <div id="str-info">
+                                        <center><img src="./images/strength.png"></center>
+                                        <h2>Strength</h2>
+                                        <p>
+                                            Strength measures muscle and physical power. This ability is important for those who engage in hand-to-hand combat, such as fighters. Strength also sets the maximum amount of weight your character can carry.
+                                        </p>
+                                        <p>
+                                            You apply your character's Strength modifier to:
+                                            <li>Melee attack rolls</li>
+                                            <li>Damage rolls when using a melee or thrown weapon</li>
+                                            <li>Climb, Swim, and Strength checks</li>
+                                            <li>Strength checks (for breaking down doors and the like)</li>
+                                        </p>
+                                    </div>
+                                    <div id="dex-info">
+                                        <center><img src="./images/dexterity.png"></center>
+                                        <h2>Dexterity</h2>
+                                        <p>
+                                            Dexterity measures agility, reflexes, and balance. This ability is the most important one for rogues, but it's also useful for characters who wear light or medium armor or no armor at all. This ability is vital for characters seeking to excel with ranged weapons.
+                                        </p>
+                                        <p>
+                                            You apply your character's Dexterity modifier to:
+                                            <li>Ranged attack rolls</li>
+                                            <li>Armor class (Ability to avoid attacks)</li>
+                                            <li>Reflex saving throws</li>
+                                            <li>Acrobatics, Disable Device, Escape Artist, Fly, Ride, Sleight of Hand, and Stealth checks</li>
+                                        </p>
+                                    </div>
+                                    <div id="con-info">
+                                        <center><img src="./images/constitution.png"></center>
+                                        <h2>Constitution</h2>
+                                        <p>
+                                            Constitution represents your character's health and stamina. A Constitution bonus increases a character's hit points, so the ability is important for all classes.
+                                        </p>
+                                        <p>
+                                            You apply your character's Constitution modifier to:
+                                            <li>The number of hitpoints gained at each level</li>
+                                            <li>Fortitude saving throws, for resisting poison, disease, and similar threats.</li>
+                                        </p>
+                                    </div>
+                                    <div id="iq-info">
+                                        <center><img src="./images/intelligence.png"></center>
+                                        <h2>Intelligence</h2>
+                                        <p>
+                                            Intelligence determines how well your character learns and reasons. This ability is important for wizards because it affects their spellcasting ability in many ways.
+                                        </p>
+                                        <p>
+                                            You apply your character's Intelligence modifier to:
+                                            <li>The number of  languages your character knows</li>
+                                            <li>The number of skill points gained each level</li>
+                                            <li>Appraise, Craft, Knowledge, Linguistics, and Spellcraft checks</li>
+                                        </p>
+                                    </div>
+                                    <div id="wis-info">
+                                        <center><img src="./images/wisdom.png"></center>
+                                        <h2>Wisdom</h2>
+                                        <p>
+                                            Wisdom describes a character's willpower, common sense, awareness, and intuition. Wisdom is the most important ability for clerics. If you want your character to have acute senses, put a high score in Wisdom.
+                                        </p>
+                                        <p>
+                                            You apply your character's Wisdom modifier to:
+                                            <li>Will saving throws (for negating the effects of compulsions, charms, and other spells)</li>
+                                            <li>Heal, Perception, Profession, Sense Motive, and Survival checks</li>
+                                        </p>
+                                    </div>
+                                    <div id="cha-info">
+                                        <center><img src="./images/charisma.png"></center>
+                                        <h2>Charisma</h2>
+                                        <p>
+                                            Charisma measures a character's personality, personal magnetism, ability to lead, and appearance. It is important for clerics, since it affects their ability to channel energy.
+                                        </p>
+                                        <p>
+                                            You apply your character's Charisma modifier to:
+                                            <li>Bluff, Diplomacy, Disguise, Handle Animal, Intimidate, Perform, and Use Magic Device checks.</li>
+                                            <li>Checks that represent attempts to influence others.</li>
+                                            <li>Channel energy DCs for clerics attempting to harm undead foes.</li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-between flex">
+                            <div class="ghost-button continue">
+                                <a onclick="displaySubstep(0,2);">Previous</a>
+                            </div>
+                            <div id="finish-step-one" class="right ghost-button continue">
+                                <a onclick="next();">Next Step</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div id="step-two">
+                <div class="vertical-margin box">
+                    <h4>Step Two</h4>
+                    <h2>Race</h2>
+				    <div id="race-page-one">
+                        <center>
+                            <p>In fantasy roleplaying games, race is fundamental.</p>
+                            <p>Race mixes biology and culture, then translates those concepts into racial traits.  A race's traits, its history, its relations with other races, and its culture all frame your character. This is true whether you play to or against the stereotypes.</p>
+                            <p>To some players, choosing a race is simply a matter of finding which racial modifiers best fit a character's class. Yet there's so much more to race than that. By exploring the cultures and traditions of a character's race, we can better understand where she comes from and what makes her tick, thus immersing ourselves that much deeper in the campaign world.</p>
+                        </center>
+                         <div class="space-between flex">
+                            <div class="ghost-button continue">
+                                <a onclick="displaySubstep(0,4);">Previous</a>
+                            </div>
+                            <div class="right ghost-button continue">
+                                <a onclick="displaySubstep(1,1);">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="race-page-two">
+                        <div class="space-between flex">
+                            <div >
+                                <center>
+                                    <b>Select a Race</b>
+                                </center>
+                                <div class="space-between flex race-selection-card-holder">
+                                    <div id="dwarf-selection-card" class="race-selection-card selected-card box" onclick="becomeDwarf();">
+                                        <img src="../images/Dwarf.jpg">
+                                        <div class="shaded-bottom">
+                                            <h3>Dwarf</h3>
+                                        </div>
+                                    </div>
+                                    <div id="elf-selection-card" class="race-selection-card box" onclick="becomeElf();">
+                                        <img src="../images/Elf.jpg">
+                                        <div class="shaded-bottom">
+                                            <h3>Elf</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-between flex race-selection-card-holder">
+                                    <div id="halfling-selection-card" class="race-selection-card box" onclick="becomeHalfling();">
+                                        <img src="../images/Halfling.jpg">
+                                        <div class="shaded-bottom">
+                                            <h3>Halfling</h3>
+                                        </div>
+                                    </div>
+                                    <div id="human-selection-card" class="race-selection-card box" onclick="becomeHuman();">
+                                        <img src="../images/Human.jpg">
+                                        <div class="shaded-bottom">
+                                            <h3>Human</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="race-description-container" class="vertical-margin invisible-box">
+                                <div id="dwarf-description">
+                                    <h2>Dwarf</h2>
+                                    <div class="race-description">
+                                        <img src="images/humorless.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>Dwarves are a stoic but stern race.  More than any other race, dwarves have acquired a reputation as dour and humorless artisans
+                                            of the earth.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="race-description">
+                                        <img src="images/mountain.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>
+                                            It could be said that their history shapes the dark disposition of many dwarves.
+                                            They reside in high mountains and dangerous realms below the earth, ensconced in cities carved from the hearts of mountains.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="race-description">
+                                        <img src="images/war.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>
+                                             They are fiercely determined to repel the depredations of savage races and are constantly
+                                            at war with giants, goblins, and other such horrors.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="elf-description">
+                                    <h2>Elf</h2>
+                                    <div class="race-description">
+                                        <img src="images/dexterity.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>
+                                            Elves possess a graceful, slender physique that is accentuated by their long, pointed ears.
+                                            It is a mistake, however, to consider them weak or feeble, as the thin limbs of an elf can contain surprising power.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="race-description">
+                                        <img src="images/nature.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>
+                                            The long-lived elves are children of the natural world.
+                                            They seek to live in balance with the wild and understand it better than most other mortals.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="race-description">
+                                        <img src="images/magic.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>Elves also have an appreciation for the written word, magic, and painstaking research.
+                                            Their naturally keen minds and senses, combined with their inborn patience,
+                                            make them particularly suited to wizardry.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="halfling-description">
+                                <h2>Halfling</h2>
+                                <div class="race-description">
+                                    <img src="images/lucky.png">
+                                </div>
+                                <div class="race-description">
+                                    <p>Optimistic and cheerful by nature, blessed with uncanny luck, and driven by a powerful wanderlust,
+                                        halflings make up for their short stature with an abundance of bravado and curiosity.
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="race-description">
+                                    <img src="images/family.png">
+                                </div>
+                                <div class="race-description">
+                                    <p>
+                                        Rather than place their faith in empires or great causes,
+                                        many halflings prefer to focus on the simpler and humbler virtues of their families and local communities.
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="race-description">
+                                    <img src="images/gleeful.png">
+                                </div>
+                                <div class="race-description">
+                                    <p>
+                                        Halflings are inveterate opportunists. They firmly believe they can turn any situation to their advantage,
+                                        and sometimes gleefully leap into trouble without any solid plan to extricate themselves if things go awry.
+                                    </p>
+                                </div>
+                            </div>
+                                <div id="human-description">
+                                    <h2>Human</h2>
+                                    <div class="race-description">
+                                        <img src="images/humorless.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>Humans are perhaps the most diverse of all the common races, with a capacity for both great evil and boundless good.
+                                            Some humans assemble into vast barbaric hordes, while others build sprawling cities that cover miles.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="race-description">
+                                        <img src="images/castle.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>
+                                            Humans possess exceptional drive and a great capacity to endure and expand,
+                                            and as such are currently the dominant race in the world. Their empires and nations are vast, sprawling things.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <div class="race-description">
+                                        <img src="images/skills.png">
+                                    </div>
+                                    <div class="race-description">
+                                        <p>
+                                            In general, humans are known for their flexibility, ingenuity, and ambition. Other races sometimes envy humans their
+                                            seemingly limitless adaptability,
+                                            not so much biologically speaking but in their willingness to step beyond the known and press on to whatever might await them.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-between flex">
+                            <div class="ghost-button continue">
+                                <a onclick="displaySubstep(1,0);">Previous</a>
+                            </div>
+                            <div class="right ghost-button continue">
+                                <a onclick="displaySubstep(1,2);">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="race-page-three">
+                        <div id="race-content">
+                        <h2 id="race-name" class="race-name">Human</h2>
+                        <div id="racial-traits">
+                            <h3>Standard Traits</h3>
+                            <div class="trait-table">
+                                <div class="trait-row">
+                                    <div class="trait">
+                                        <b>Ability Score:</b> <span id="racial-ability-score"></span>
+                                    </div>
+                                </div>
+                                <div class="trait-row">
+                                    <div class="trait">
+                                        <b>Size:</b> <span id="racial-size"></span>
+                                    </div>
+                                    <div class="trait">
+                                        <b>Speed:</b> <span id="racial-speed"></span>
+                                    </div>
+                                    <div class="trait">
+                                        <b>Senses:</b> <span id="racial-senses"></span>
+                                    </div>
+                                </div>
+                                <div class="last trait-row">
+                                    <div class="trait">
+                                        <b>Languages:</b><span id="racial-languages"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="offensive-traits-container">
+                                <h3>Offensive Traits</h3>
+                                <div id="offensive-traits" class="trait-table">
+                                </div>
+                            </div>
+
+
+                            <div id="defensive-traits-container">
+                                <h3>Defensive Traits</h3>
+                                <div id="defensive-traits" class="trait-table">
+                                </div>
+                            </div>
+
+                            <div id="magical-traits-container">
+                                <h3>Magical Traits</h3>
+                                <div id="magical-traits" class="trait-table">
+                                </div>
+                            </div>
+
+                            <div id="skill-traits-container">
+                                <h3>Skill Traits</h3>
+                                <div id="skill-traits" class="trait-table">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="space-between flex">
+                            <div class="ghost-button continue">
+                                <a onclick="displaySubstep(1,1);">Previous</a>
+                            </div>
+                            <div class="right ghost-button continue">
+                                <a onclick="next();">Next Step</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+            </div>
+            <div id="step-three">
+                <div id="class-page-one">
+                    <div class="vertical-margin box">
+                        <h2>Step Three: Class</h2>
+                        <p>In fantasy roleplaying games, race is fundamental. It both provides a starting point for character creation and sets the tone for a character as it progresses. Race mixes biology and culture, then translates those concepts into racial traits.  A race's traits, its history, its relations with other races, and the culture that all of these things imply—all of these frame your character. This is true whether you play to or against the stereotypes. To some players, choosing a race is simply a matter of finding which racial modifiers best fit a character's class. Yet there's so much more to race than that. By exploring the cultures and traditions of a character's race, we can better understand where she comes from and what makes her tick, thus immersing ourselves that much deeper in the campaign world.</p>
+                    </div>
+                    <div class="space-between flex">
+                        <div id="cleric-selection-card" class="race-selection-card selected-card box" onclick="becomeCleric();">
+                            <img src="../images/Cleric.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Cleric</h3>
+                            </div>
+                        </div>
+                        <div id="fighter-selection-card" class="race-selection-card box" onclick="becomeFighter();">
+                            <img src="../images/Fighter.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Fighter</h3>
+                            </div>
+                        </div>
+                        <div id="rogue-selection-card" class="race-selection-card box" onclick="becomeRogue();">
+                            <img src="../images/Rogue.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Rogue</h3>
+                            </div>
+                        </div>
+                        <div id="wizard-selection-card" class="race-selection-card box" onclick="becomeWizard();">
+                            <img src="../images/Wizard.jpg">
+                            <div class="shaded-bottom">
+                                <h3>Wizard</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="space-between flex">
+                    <div id="class-content" class="main-content">
+						<div id="class-description-container" class="vertical-margin box">
+							<h2 id="class-name">Wizard</h2>
+							<p id="class-description">
+								These shrewd magic-users seek, collect, and covet esoteric knowledge, drawing on cultic arts to work wonders beyond the abilities of mere mortals. While some might choose a particular field of magical study and become masters of such powers, others embrace versatility, reveling in the unbounded wonders of all magic. In either case, wizards prove a cunning and potent lot, capable of smiting their foes, empowering their allies, and shaping the world to their every desire.
+							</p>
+						</div>
+						<div id="class-traits" class="vertical-margin box">
+							<h3>Standard Class Features</h3>
+                            <div class="trait-table">
+                                <div class="trait-row">
+                                    <div class="trait tooltip">
+                                        <b>Hit Points:</b> <span class="hp">7</span>
+										<span class="tooltiptext">the amount of damage your character can take</span>
+                                    </div>
+                                    <div class="trait tooltip">
+                                        <b>Melee Attack Bonus:</b> <span class="mab">0</span>
+										<span class="tooltiptext">a bonus to accuracy in hand-to-hand combat</span>
+                                    </div>
+                                    <div class="trait tooltip">
+                                        <b>Ranged Attack Bonus:</b> <span class="rab">0</span>
+										<span class="tooltiptext">a bonus to accuracy in ranged combat</span>
+                                    </div>
+                                </div>
+                                <div class="trait-row">
+                                    <div class="trait tooltip">
+                                        <b>Fortitude:</b> <span class="fort">+1</span>
+										<span class="tooltiptext">ability to resist poison and disease</span>
+                                    </div>
+                                    <div class="trait tooltip">
+                                        <b>Reflex:</b> <span class="ref">+3</span>
+										<span class="tooltiptext">ability to dodge unexpected hazards</span>
+                                    </div>
+                                    <div class="trait tooltip">
+                                        <b>Will:</b> <span class="will">+4</span>
+										<span class="tooltiptext">ability to resist mental influence</span>
+                                    </div>
+                                </div>
+                                <div class="trait-row">
+                                    <div class="trait tooltip">
+                                        <b>Skill Ranks:</b> <span class="skill-ranks">3</span>
+										<span class="tooltiptext">the amount of skills that you can train</span>
+                                    </div>
+									<div class="trait"></div>
+                                    <div class="trait tooltip">
+                                        <b>Starting Wealth:</b><span class="wealth">70 gp</span>
+										<span class="tooltiptext">the amount of equipment your character can afford</span>
+                                    </div>
+                                </div>
+                                <div class="last trait-row">
+                                    <div class="trait tooltip">
+                                        <b>Class Skills:</b> <span class="class-skills">Acrobatics, Appraise, Bluff, Climb, Craft, Diplomacy, Disable Device, Disguise, Escape Artist, Intimidate, Knowledge (dungeoneering), Knowledge (local), Linguistics, Perception, Perform, Profession, Sense Motive, Sleight of Hand, Stealth, Swim, Use Magic Device</span>
+										<span class="tooltiptext">these skills are easier to train than others</span>
+									</div>
+                                </div>
+                            </div>
+						</div>
+						<div id="fighter-traits" class="vertical-margin box">
+							<h3>Bonus Feat</h3>
+							<p>A fighter gets to select a bonus combat feat during in addition to the other feat(s) gained at level one. This will be done during step five of this character creator.</p>
+						</div>
+
+						<div id="rogue-traits" class="vertical-margin box">
+							<h3>Sneak Attack</h3>
+							<p>
+								The rogue's attack deals +1d6 extra damage anytime her target would be denied a Dexterity bonus to AC or when the rogue flanks her target.
+							</p>
+							<h3>Trap Finding</h3>
+							<p>
+								+1 to Perception skill checks made to locate traps and to Disable Device skill checks. A rogue can use Disable Device to disarm magic traps.
+							</p>
+						</div>
+
+						<div id="cleric-traits">
+                            <div  class="vertical-margin box">
+                                <h3>Channel Energy</h3>
+                            </div>
+                            <div  class="vertical-margin box">
+                                <h3>Deity</h3>
+                                <p>A cleric's deity influences her alignment, what magic she can perform, her values, and how others see her. A cleric chooses two domains from among those belonging to her deity.</p>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">LG</div>
+                                    <div class="deity-title">
+                                        <b>Iomedae</b>
+                                        <br>God of Justice and Honor</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">NG</div>
+                                    <div class="deity-title">
+                                        <b>Sarenrae</b>
+                                        <br>Godess of the Sun and Healing</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">NG</div>
+                                    <div class="deity-title">
+                                        <b>Shelyn</b>
+                                        <br>Godess of Beauty and Art</div>
+                                </div>
+                                <div class="selected deity-card">
+                                    <div class="deity-alignment">CG</div>
+                                    <div class="deity-title">
+                                        <b>Desna</b>
+                                        <br>Godess of Dreams and Travels</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">CG</div>
+                                    <div class="deity-title">
+                                        <b>Cayden Cailean</b>
+                                        <br>God of Alcohol and Freedom</div>
+                                </div>
+                                <div class="deity-card">
+                                    <div class="deity-alignment">CN</div>
+                                    <div class="deity-title">
+                                        <b>Calistria</b>
+                                        <br>Godess of Lust and Revenge</div>
+                                </div>
+                            </div>
+                            <div id="cleric-domain" class="vertical-margin box">
+                                <h3>Domains</h3>
+                                <p>Select two of the domains belonging to your deity. Each domain grants a domain power, as well as a bonus spell. A cleric gains one domain spell slot. Each day, a cleric can prepare one of the spells from her two domains in that slot. If a domain spell is not on the cleric spell list, a cleric can prepare it only in her domain spell slot. Domain spells cannot be used to cast spells spontaneously.</p>
+                                <div class="domain-card selected">
+                                    <div class="spell-title">
+                                        Chaos
+                                    </div>
+                                </div>
+                                <div class="domain-card">
+                                    <div class="spell-title">
+                                        Good
+                                    </div>
+                                </div>
+                                <div class="domain-card selected">
+                                    <div class="spell-title">
+                                        Charm
+                                    </div>
+                                </div>
+                                <div class="domain-card">
+                                    <div class="spell-title">
+                                        Luck
+                                    </div>
+                                </div>
+                                <div class="domain-card">
+                                    <div class="spell-title">
+                                        Travel
+                                    </div>
+                                </div>
+
+                                <h4>Chaos Domain</h4>
+                                <p>Your touch infuses life and weapons with chaos, and you revel in all things anarchic.</p>
+                                <div class="flex box">
+                                    <span style="margin-right: 20px;">
+                                        <b  style="margin-left: 10px;">Bonus Spell</b><br>
+                                        <div class="spell-card">
+                                            <div class="spell-title">
+                                                Protection from Law
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <b>Domain Power</b><br>
+                                        <i>Touch of Chaos: </i> You can imbue a target with chaos as a melee touch attack. For the next round, anytime the target rolls a d20, he must roll twice and take the less favorable result. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.<br>
+                                    </span>
+                                </div>
+
+
+                                <h4>Charm Domain</h4>
+                                <p>You can baffle and befuddle foes with a touch or a smile, and your beauty and grace are divine.</p><div class="flex box">
+                                    <span style="margin-right: 20px;">
+                                        <b  style="margin-left: 10px;">Bonus Spell</b><br>
+                                        <div class="spell-card">
+                                            <div class="spell-title">
+                                                Charm Person
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <b>Domain Power</b><br>
+                                        <i>Dazing Touch: </i> You can cause a living creature to become dazed for 1 round as a melee touch attack. Creatures with more Hit Dice than your cleric level are unaffected. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.<br>
+                                    </span>
+                                </div>
+                            </div>
+
+						</div>
+						<div id="wizard-traits" class="vertical-margin box">
+							<h3>Arcane Bond</h3>
+							<p>
+								Wizards form a powerful bond with an object or a creature. This bond can take one of two forms: a familiar or a bonded object. A familiar is a magical pet that enhances the wizard's skills and senses and can aid him in magic, while a bonded object is an item a wizard can use to cast additional spells or to serve as a magical item.
+							</p>
+							<center>
+								<div class="flex ghost-button space-between">
+									<a id="familiar-button" onclick="">Familiar</a>
+									<a id="bonded-item-button" onclick="">Bonded Item</a>
+								</div>
+							</center>
+							<div id="familiar">
+								<h4>Familiar</h4>
+								<center>
+									<div class="spell-card">
+										<div class="spell-title">
+											Cat<br>+3 Stealth
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Pig<br>+3 Diplomacy
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Raven<br>+3 Appraise<br>Can speak
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Hare<br>+4 Initiative
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Fox<br>+2 Reflex
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Rat<br>+2 Fortitude
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Hedgehog<br>+2 Will
+										</div>
+									</div>
+									<div class="spell-card">
+										<div class="spell-title">
+											Turtle<br>+1 AC
+										</div>
+									</div>
+								</center>
+							</div>
+							<h3>Cantrips</h3>
+							<p>Cantrips are level 0 spells. Preprared cantrips can be cast unlimitted times each day. You can prepare three cantrips per day from the following list:</p>
+							<div id="cantrips">
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="trait-side-bar vertical-margin box">
+                            <h3>Abilities</h3>
+                            <h4 id="str-score-mini">Str: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar str-bar"></div>
+                            </div>
+                            <h4 id="dex-score-mini">Dex: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar dex-bar"></div>
+                            </div>
+                            <h4 id="con-score-mini">Con: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar con-bar"></div>
+                            </div>
+                            <h4 id="iq-score-mini">Int: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar iq-bar"></div>
+                            </div>
+                            <h4 id="wis-score-mini">Wis: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar wis-bar"></div>
+                            </div>
+                            <h4 id="cha-score-mini">Cha: 10 (0)</h4>
+                            <div class="bar-background mini-bar">
+                                <div class="bar cha-bar"></div>
+                            </div>
+                        </div>
+
+						<div class="trait-side-bar vertical-margin box">
+                            <h3 class="race-name">Dwarf</h3>
+                            <h5>Languages</h5><p id="my-languages">Common, Dwarven, Orc</p>
+                            <h5>Traits</h5><p id="race-traits">Hatred, Greed, Stonebreaker, Hardy, Surefooted</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div id="step-four">
+
+			</div>
+			<div id="step-five">
+
+			</div>
+			<div id="step-six">
+			</div>
+
+		</div>
+		<footer>
+			<div class="footer">
+				<div class="footer-col">
+					<h3>
+                        About This App
+                    </h3>
+                    <p>
+                        This Pathfinder Character Creator is designed to allow a new player to quickly and easily create a first level character.
+                    </p>
+                    <p>
+                        I have been a Pathfinder fanatic since 2013 and I understand how overwhelming character creation can be for a first-timer. I created this app to ease the confusion of newbies and allow them to swiftly customize their first character.
+                    </p>
+                    <h3>
+                        Credits
+                    </h3>
+                    <p>
+					   The Pathfinder Roleplaying Game is created by Paizo and released under the Open Game License, meaning the core rules that drive the Pathfinder RPG system are available to anyone to use for free under the terms of the OGL.
+                    </p>
+                    <p>
+                        This character creation web application was designed and implemented wholly by Dylan Weicker.
+                    </p>
+				</div>
+				<div class="footer-col">
+                    <h3>
+                        About Me
+                    </h3>
+                    <p>My name is Dylan! I'm a 21 year-old computer science student from UBC. I have a huge interest in UI, software engineering, and table-top role playing. This app was created as a hobby-project in my free time.</p>
+                    <h3>
+                        Social Media
+                    </h3>
+                    <li><a href="https://facebook.com/dylan.weicker">Facebook</a></li>
+                    <li><a href="https://twitter.com/nifflr">Twitter</a></li>
+                    <li><a href="https://instagram.com/nifflr">Instagram</a></li>
+                    <li><a href="https://youtube.com/user/nifflr">Youtube</a></li>
+                    <li><a href="https://dylanpride.tumblr.com">Tumblr</a></li>
+                    <li><a href="https://www.linkedin.com/in/dylan-weicker-3b9809111">LinkedIn</a></li>
+                    <li><a href="https://github.com/DylanPride">GitHub</a></li>
+				</div>
+				<div class="footer-col">
+                    <h3>
+                        Site Map
+                    </h3>
+                    <a href="../">Home</a>
+                </div>
+			</div>
+		</footer>
+    </body>
+</html>

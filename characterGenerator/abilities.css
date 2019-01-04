@@ -1,0 +1,102 @@
+/*Abilities*/
+#select-abilities{
+    display: none;
+}
+
+.one-ability{
+    margin-bottom: 12px;
+}
+
+.one-ability:hover h3{
+	color: dodgerblue;
+}
+
+.one-ability:hover i{
+    color: dodgerblue;
+}
+
+.material-icons{
+	line-height: inherit !important;
+}
+
+.material-icons:hover {
+    color: orange !important;
+    cursor: pointer
+}
+
+.last{
+    border-bottom: none;
+}
+
+.bar-background{
+    width: 300px;
+    height: 15px;
+    border-radius: 10px;
+    background: #eee;
+    box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.06);
+    margin: 10px;
+}
+
+.mini-bar{
+	width: 80% !important;
+	margin: auto !important;
+}
+
+.bar{
+    height: 100%;
+    border-radius: 10px;
+	transition: 300ms linear;
+}
+
+/* TODO: turn these into classes; make a call to get all elements with that class and change width
+you can then reuse these bars as a reference throughout each step*/
+.str-bar{
+    background-color: #C66;
+    width: 50%;
+}
+.dex-bar{
+    background-color: #CC6;
+    width: 50%;
+}
+.con-bar{
+    background-color: #6c6;
+    width: 50%;
+}
+.iq-bar{
+    background-color: #6CC;
+    width: 50%;
+}
+.wis-bar{
+    background-color: #66C;
+    width: 50%;
+}
+.cha-bar{
+    background-color: #C6C;
+    width: 50%;
+}
+
+.str-text{
+    color: #C66;
+}
+.dex-text{
+    color: #CC6;
+}
+.con-text{
+    color: #6c6;
+}
+.iq-text{
+    color: #6CC;
+}
+.wis-text{
+    color: #66C;
+}
+.cha-text{
+    color: #C6C;
+}
+
+.score-info{
+    width: 100%;
+    padding: 0 0px;
+    display: flex;
+    justify-content: space-between;
+}

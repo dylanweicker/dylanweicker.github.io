@@ -3,6 +3,20 @@ function getAge(){
     return Math.floor((Date.now() - birthday)/ 31557600000);
 }
 
+function getMonths(fromDate) {
+    var toDate = new Date();
+    var months;
+    months = (toDate.getFullYear() - fromDate.getFullYear()) * 12;
+    console.log(months);
+    
+    months -= fromDate.getMonth() + 1;
+    console.log(months);
+    
+    months += toDate.getMonth() + 1;
+    console.log(months);
+    return months <= 0 ? 0 : months;
+}
+
 function viewCourses(){
     document.getElementById('course-summary').style.display = "block";
     document.getElementById('view-courses').style.display = "none";

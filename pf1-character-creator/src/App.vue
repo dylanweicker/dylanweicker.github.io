@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="header">
-      <img src="src/assets/pathfinder-logo.png" style="max-height: 80px; width: auto;">
+      <img :src="'src/assets/pathfinder-logo.png'" style="max-height: 80px; width: auto;">
       <h1>Pathfinder 1E Character Generator</h1>
       <ul class="progress-tracker">
         <li v-for="(step, index) in steps" v-bind:key="step" class="progress-step" :class="{'is-complete': index < currStep, 'is-active': index == currStep}">

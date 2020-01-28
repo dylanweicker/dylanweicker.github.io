@@ -1,0 +1,110 @@
+[ 
+	{
+		"name": "Bane",
+		"desc": "Enemies take –1 on attack rolls and saves against fear."
+	},
+	{
+		"name": "Bless",
+		"desc": "Allies gain +1 on attack rolls and saves against fear."
+	},
+	{
+		"name": "Bless Water",
+		"desc": "Makes holy water."
+	},
+	{
+		"name": "Cause Fear",
+		"desc": "One creature of 5 HD or less flees for 1d4 rounds."
+	},
+	{
+		"name": "Command",
+		"desc": "One subject obeys selected command for 1 round."
+	},
+	{
+		"name": "Comprehend Languages",
+		"desc": "You understand all spoken and written languages."
+	},
+	{
+		"name": "Cure Light Wounds",
+		"desc": "Cures 1d8 damage + 1/level (max +5)."
+	},
+	{
+		"name": "Curse Water",
+		"desc": "Makes unholy water."
+	},
+	{
+		"name": "Deathwatch",
+		"desc": "Reveals how near death subjects within 30 ft. are."
+	},
+	{
+		"name": "Cause Fear",
+		"desc": "One creature of 5 HD or less flees for 1d4 rounds."
+	},
+	{
+		"name": "Detect Chaos/Evil/Good/Law",
+		"desc": "Reveals creatures, spells, or objects of selected alignment."
+	},
+	{
+		"name": "Detect Undead",
+		"desc": "Reveals undead within 60 ft."
+	},
+	{
+		"name": "Divine Favor",
+		"desc": "You gain +1 per three levels on attack and damage rolls."
+	},
+	{
+		"name": "Doom",
+		"desc": "One subject takes –2 on attack rolls, damage rolls, saves, and checks."
+	},
+	{
+		"name": "Deathwatch",
+		"desc": "Reveals how near death subjects within 30 ft. are."
+	},
+	{
+		"name": "Endure Elements",
+		"desc": "Exist comfortably in hot or cold regions."
+	},
+	{
+		"name": "Entropic Shield",
+		"desc": "Ranged attacks against you have 20% miss chance."
+	},
+	{
+		"name": "Hide from Undead",
+		"desc": "Undead can't perceive one subject/level."
+	},
+	{
+		"name": "Inflict Light Wounds",
+		"desc": "Touch deals 1d8 damage +1/level (max +5)."
+	},
+	{
+		"name": "Magic Stone",
+		"desc": "Three stones gain +1 on attack, deal 1d6 +1 damage."
+	},
+	{
+		"name": "Magic Weapon",
+		"desc": "Weapon gains +1 bonus"
+	},
+	{
+		"name": "Obscuring Mist",
+		"desc": "Fog surrounds you."
+	},
+	{
+		"name": "Protection from Chaos/Evil/Good/Law",
+		"desc": "+2 to AC and saves, plus additional protection against selected alignment"
+	},
+	{
+		"name": "Remove Fear",
+		"desc": "Suppresses fear or gives +4 on saves against fear for one subject + one per four levels."
+	},
+	{
+		"name": "Sanctuary",
+		"desc": "Opponents can't attack you, and you can't attack."
+	},
+	{
+		"name": "Shield of Faith",
+		"desc": "Aura grants +2 or higher deflection bonus."
+	},
+	{
+		"name": "Summon Monster I",
+		"desc": "Summons extraplanar creature to fight for you."
+	}
+]

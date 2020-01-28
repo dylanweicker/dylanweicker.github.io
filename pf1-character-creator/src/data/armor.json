@@ -1,0 +1,65 @@
+[
+	{
+		"name": "Padded",
+		"type": "light",
+		"bonus": 1,
+		"cost": 5,
+		"dex": 8,
+		"acp": 0,
+		"weight": 10
+	},
+	{
+		"name": "Leather",
+		"type": "light",
+		"bonus": 2,
+		"cost": 10,
+		"dex": 6,
+		"acp": 0,
+		"weight": 15
+	},
+	{
+		"name": "Studded Leather",
+		"type": "light",
+		"bonus": 3,
+		"cost": 25,
+		"dex": 5,
+		"acp": -1,
+		"weight": 20
+	},
+	{
+		"name": "Chainshirt",
+		"type": "light",
+		"bonus": 4,
+		"cost": 100,
+		"dex": 4,
+		"acp": -2,
+		"weight": 25
+	},
+	{
+		"name": "Hide",
+		"type": "medium",
+		"bonus": 4,
+		"cost": 15,
+		"dex": 4,
+		"acp": -3,
+		"weight": 25
+	},
+	{
+		"name": "Scale mail",
+		"type": "medium",
+		"bonus": 5,
+		"cost": 50,
+		"dex": 3,
+		"acp": -4,
+		"weight": 30
+	},
+	{
+		"name": "Chainmail",
+		"type": "medium",
+		"bonus": 6,
+		"cost": 150,
+		"dex": 2,
+		"acp": -5,
+		"weight": 40
+	}
+]

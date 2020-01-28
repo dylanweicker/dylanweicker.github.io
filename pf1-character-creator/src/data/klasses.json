@@ -1,0 +1,315 @@
+{
+    "fighter": {
+        "name": "Fighter",
+        "description": "Fighters excel at combat—defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.",
+        "image": "fighter.png",
+        "hp": 10,
+        "bab": 1,
+        "fort": 2,
+        "ref": 0,
+        "will": 0,
+        "gold": 175,
+        "caster": false,
+        "skillPoints": 2,
+        "classSkills": [
+            "Climb",
+            "Craft", 
+            "Handle Animal", 
+            "Intimidate", 
+            "Dungeoneering", 
+            "Engineering",
+            "Profession", 
+            "Ride", 
+            "Survival",
+            "Swim"
+        ],
+        "armor": ["heavy", "shields", "tower shield"],
+        "weapons": ["simple", "martial"],
+        "proficiencyDescription": "A fighter is proficient with all simple and martial weapons and with all armor (heavy, light, and medium) and shields (including tower shields).",
+        "abilities": [
+            {
+                "name": "Heavy Armor Proficiency",
+                "description": "Ability to wear light, medium, and heavy armor"
+            },
+            {
+                "name": "Shield Proficiency",
+                "description": "Ability to use all sheilds (including the tower sheild)"
+            },
+            {
+                "name": "Bonus Feat",
+                "description": "At 1st level a fighter gains a bonus combat feat"
+            }
+        ]
+    },
+    "rogue": {
+        "name": "Rogue",
+        "description": "Rogues excel at moving about unseen and catching foes unaware. Their varied skills allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances, from unlocking doors and disarming traps to conning the dull-witted.",
+        "image": "rogue.png",
+        "hp": 8,
+        "bab": 0,
+        "fort": 0,
+        "ref": 2,
+        "will": 0,
+        "gold": 140,
+        "caster": false,
+        "skillPoints": 8,
+        "classSkills": [
+            "Acrobatics", 
+            "Appraise", 
+            "Bluff", "Climb", 
+            "Craft", 
+            "Diplomacy", 
+            "Disable Device", 
+            "Disguise", 
+            "Escape Artist", 
+            "Intimidate", 
+            "Knowledge (dungeoneering)", 
+            "Knowledge (local)", 
+            "Linguistics", 
+            "Perception", 
+            "Perform", 
+            "Profession", 
+            "Sense Motive", 
+            "Sleight of Hand", 
+            "Stealth", 
+            "Swim",  
+            "Use Magic Device"
+        ],
+        "armor": ["light"],
+        "weapons": ["simple", "hand crossbow", "rapier", "sap", "shorbow", "short sword"],
+        "proficiencyDescription": "Rogues are proficient with all simple weapons, plus the hand crossbow, rapier, sap, shortbow, and short sword. They are proficient with light armor, but not with shields.",
+        "abilities": [
+            {
+                "name": "Light Armor Proficiency",
+                "description": "Ability to wear light armor"
+            },
+            {
+                "name": "Sneak Attack",
+                "description": "Inflict 1d6 extra damage anytime your target would be denied a Dexterity bonus to AC, or when you flank your target"
+            },
+            {
+                "name": "Trap Finding",
+                "description": "+1 to Perception checks made to locate traps and +1 to Disable Device checks. You can use Disable Device to disarm magic traps."
+            }
+        ],
+        "skills": {
+			"Disable Device": 1
+		},
+		"conditionalBonuses": 
+        {
+            "Perception": {
+                "bonus": 1,
+                "condition": "to locate traps"
+            }
+        }
+    },
+    "paladin": {
+        "name": "Paladin",
+        "description": "Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting.",
+        "image": "paladin.png",
+        "hp": 10,
+        "bab": 1,
+        "fort": 2,
+        "ref": 0,
+        "will": 2,
+        "gold": 175,
+        "caster": false,
+        "skillPoints": 2,
+        "classSkills": [ 
+            "Craft", 
+            "Diplomacy",
+            "Handle Animal",
+            "Heal", 
+            "Knowledge (nobility)",
+            "Knowledge (religion)",
+            "Profession", 
+            "Ride",
+            "Sense Motive",
+            "Spellcraft"
+        ],
+        "armor": ["heavy", "medium", "light", "shields"],
+        "weapons": ["simple", "martial"],
+        "proficiencyDescription": "Paladins are proficient with all simple and martial weapons, with all types of armor (heavy, medium, and light), and with shields (except tower shields).",
+        "abilities": [
+            {
+                "name": "Heavy Armor Proficiency",
+                "description": "Ability to wear light, medium, and heavy armor"
+            },
+            {
+                "name": "Shield Proficiency",
+                "description": "Ability to use sheilds (except the tower sheild)"
+            },
+            {
+                "name": "Aura of Good",
+                "description": "have a faint aura of good"
+            },
+            {
+                "name": "Detect Evil",
+                "description": "As a move action, can determine if a creature or object is evil"
+            },
+            {
+                "name": "Smite Evil",
+                "description": "Gain a combat bonus against one evil creature per day"
+            }
+        ]
+    },
+    "cleric": {
+        "name": "Cleric",
+        "description": "More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies’ prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. ",
+        "image": "cleric.png",
+        "hp": 8,
+        "bab": 0,
+        "fort": 2,
+        "ref": 0,
+        "will": 2,
+        "gold": 140,
+        "caster": true,
+        "skillPoints": 2,
+        "classSkills": [
+            "Appraise", 
+            "Craft", 
+            "Diplomacy", 
+            "Heal",
+            "Intimidate", 
+            "Knowledge (arcana)", 
+            "Knowledge (history)", 
+            "Knowledge (nobility)", 
+            "Knowledge (planes)", 
+            "Knowledge (religion)", 
+            "Linguistics", 
+            "Profession", 
+            "Sense Motive"
+        ],
+        "armor": ["medium", "shields"],
+        "weapons": ["simple"],
+        "proficiencyDescription": "Clerics are proficient with all simple weapons, light armor, medium armor, and shields (except tower shields). Clerics are also proficient with the favored weapon of their deities.",
+        "abilities": [
+            {
+                "name": "Aura",
+                "description": "You have a powerful aura corresponding to your deity's alignment"
+            },
+            {
+                "name": "Domain",
+                "description": ""
+            },
+            {
+                "name": "Orisons",
+                "description": "You can prepare 3 orisons each day that you can cast any number of times that day."
+            },
+            {
+                "name": "Spellcasting",
+                "description": "You are able to cast level one cleric spells."
+            },
+            {
+                "name": "Channel Energy",
+                "description": "You can channel divine energy which affects the creatures within 30' of you."
+            }
+        ],
+        "spellsPerDay": {
+            "0": 3,
+            "1": 1
+        }
+    },
+    "sorcerer": {
+        "name": "Sorcerer",
+        "description": "Sorcerers excel at casting a selection of favored spells frequently, making them powerful battle mages. As they become familiar with a specific and ever-widening set of spells, sorcerers often discover new and versatile ways of making use of magics other spellcasters might overlook. Their bloodlines also grant them additional abilities, assuring that no two sorcerers are ever quite alike.",
+        "image": "sorcerer.png",
+        "hp": 6,
+        "bab": 0,
+        "fort": 0,
+        "ref": 2,
+        "will": 0,
+        "gold": 70,
+        "caster": true,
+        "skillPoints": 2,
+        "classSkills": [ 
+            "Appraise", 
+            "Bluff", 
+            "Craft", 
+            "Fly",
+            "Intimidate", 
+            "Knowledge (arcana)",
+            "Profession", 
+            "Spellcraft",
+            "Use Magic Device"
+        ],
+        "armor": [],
+        "weapons": ["simple"],
+        "proficiencyDescription": "Sorcerers are proficient with all simple weapons. They are not proficient with any type of armor or shield. Armor interferes with a sorcerer’s gestures, which can cause her spells with somatic components to fail.",
+        "abilities": [
+            {
+                "name": "Eschew Materials",
+                "description": "You can cast any spell with a material component costing 1 gp or less without needing that component."
+            },
+            {
+                "name": "Bloodline Power",
+                "description": ""
+            },
+            {
+                "name": "Cantrips",
+                "description": ""
+            },
+            {
+                "name": "Spellcasting",
+                "description": "Can spontaneously cast Sorcerer spells"
+            }
+        ]
+    },
+    "wizard": {
+        "name": "Wizard",
+        "description": "While universalist wizards might study to prepare themselves for any manner of danger, specialist wizards research schools of magic that make them exceptionally skilled within a specific focus. Yet no matter their specialty, all wizards are masters of the impossible and can aid their allies in overcoming any danger.",
+        "image": "wizard.png",
+        "hp": 6,
+        "bab": 0,
+        "fort": 0,
+        "ref": 0,
+        "will": 2,
+        "gold": 70,
+        "caster": true,
+        "skillPoints": 2,
+        "classSkills": [
+            "Appraise", 
+            "Craft", 
+            "Diplomacy", 
+            "Heal",
+            "Intimidate", 
+            "Knowledge (arcana)", 
+            "Knowledge (history)", 
+            "Knowledge (nobility)", 
+            "Knowledge (planes)", 
+            "Knowledge (religion)", 
+            "Linguistics", 
+            "Profession", 
+            "Sense Motive"
+        ],
+        "armor": [],
+        "weapons": ["club", "dagger", "heavy crossbow", "light crossbow", "quarterstaff"],
+        "proficiencyDescription": "Wizards are proficient with the club, dagger, heavy crossbow, light crossbow, and quarterstaff, but not with any type of armor or shield. Armor interferes with a wizard’s movements, which can cause his spells with somatic components to fail.",
+        "abilities": [
+            {
+                "name": "Wizard School",
+                "description": ""
+            },
+            {
+                "name": "Cantrips",
+                "description": ""
+            },
+            {
+                "name": "Spellcasting",
+                "description": "Can prepare an cast level one wizard spells"
+            },
+            {
+                "name": "Scribe Scroll",
+                "description": "Can write a scroll of a known cantrip or spell"
+            },
+            {
+                "name": "Arcane Bond",
+                "description": ""
+            }
+        ],
+        "spellsPerDay": {
+            "0": 3,
+            "1": 1
+        }
+    }
+}

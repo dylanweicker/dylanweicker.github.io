@@ -1,0 +1,226 @@
+{
+	"Appraise": {
+		"name": "Appraise",
+		"ability": "intelligence",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Bluff": {
+		"name": "Bluff",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Climb": {
+		"name": "Climb",
+		"ability": "strength",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Craft": {
+		"name": "Craft",
+		"ability": "intelligence",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Diplomacy": {
+		"name": "Diplomacy",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Disable Device": {
+		"name": "Disable Device",
+		"ability": "dexterity",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Disguise": {
+		"name": "Disguise",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Escape Artist": {
+		"name": "Escape Artist",
+		"ability": "dexterity",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Fly": {
+		"name": "Fly",
+		"ability": "dexterity",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Handle Animal": {
+		"name": "Handle Animal",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Heal": {
+		"name": "Heal",
+		"ability": "wisdom",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Intimidate": {
+		"name": "Intimidate",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (arcana)": {
+		"name": "Knowledge (arcana)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (dungeoneering)": {
+		"name": "Knowledge (dungeoneering)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (engineering)": {
+		"name": "Knowledge (engineering)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (local)": {
+		"name": "Knowledge (local)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (nature)": {
+		"name": "Knowledge (nature)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (nobility)": {
+		"name": "Knowledge (nobility)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (planes)": {
+		"name": "Knowledge (planes)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Knowledge (religion)": {
+		"name": "Knowledge (religion)",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Linguistics": {
+		"name": "Linguistics",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Perception": {
+		"name": "Perception",
+		"ability": "wisdom",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Perform": {
+		"name": "Perform",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Profession": {
+		"name": "Profession",
+		"ability": "wisdom",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Ride": {
+		"name": "Ride",
+		"ability": "dexterity",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Sense Motive": {
+		"name": "Sense Motive",
+		"ability": "wisdom",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Sleight of Hand": {
+		"name": "Sleight of Hand",
+		"ability": "dexterity",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Spellcraft": {
+		"name": "Spellcraft",
+		"ability": "intelligence",
+		"trainedOnly": true,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Stealth": {
+		"name": "Stealth",
+		"ability": "dexterity",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Survival": {
+		"name": "Survival",
+		"ability": "wisdom",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Swim": {
+		"name": "Swim",
+		"ability": "strength",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	},
+	"Use Magic Device": {
+		"name": "Use Magic Device",
+		"ability": "charisma",
+		"trainedOnly": false,
+		"classSkill": false,
+		"ranks": 0
+	}
+}

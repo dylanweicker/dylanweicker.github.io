@@ -1,0 +1,118 @@
+{
+	"combat": [
+		{
+			"name": "Agile Maneuvers",
+			"desc": "Use your Dex bonus when calculating your Combat Manuever Bonus"
+		},
+		{
+			"name": "Arcane Strike",
+			"desc": "+1 damage and weapons are considered magic",
+			"classes": ["Sorcerer", "Wizard"]
+		},
+		{
+			"name": "Catch Off-Guard",
+			"desc": "no penalties for improvised melee weapons"
+		},
+		{
+			"name": "Combat Expertise",
+			"desc": "Choose to take a –1 penalty on melee attacks to gain a +1 dodge bonus to your AC until your next turn.",
+			"int": 13
+		}
+	],
+	"skill": [
+		{
+			"name": "Acrobatic",
+			"desc": "+2 to Acrobatics and Fly Checks",
+			"skills": {
+				"Acrobatics": 2,
+				"Fly": 2
+			}
+		},
+		{
+			"name": "Alertness",
+			"desc": "+2 to Perception and Sense Motive Checks",
+			"skills": {
+				"Perception": 2,
+				"Sense Motive": 2
+			}
+		},
+		{
+			"name": "Animal Affinity",
+			"desc": "+2 to Handle Animal and Ride Checks",
+			"skills": {
+				"Handle Animal": 2,
+				"Ride": 2
+			}
+		},
+		{
+			"name": "Athletic",
+			"desc": "+2 to Climb and Swim Checks",
+			"skills": {
+				"Climb": 2,
+				"Swim": 2
+			}
+		},
+		{
+			"name": "Deceitful",
+			"desc": "+2 to Bluff and Disguise Checks",
+			"skills": {
+				"Bluff": 2,
+				"Disguise": 2
+			}
+		},
+		{
+			"name": "Deft Hands",
+			"desc": "+2 to Disable Device and Sleight of Hand Checks",
+			"skills": {
+				"Disable Device": 2,
+				"Sleight of Hand": 2
+			}
+		},
+		{
+			"name": "Magical Aptitude",
+			"desc": "+2 to Spellcraft and Use Magic Device Checks",
+			"skills": {
+				"Spellcraft": 2,
+				"Use Magic Device": 2
+			}
+		},
+		{
+			"name": "Persuasive",
+			"desc": "+2 to Diplomacy and Intimidate Checks",
+			"skills": {
+				"Diplomacy": 2,
+				"Intimidate": 2
+			}
+		},
+		{
+			"name": "Self-Sufficiant",
+			"desc": "+2 to Heal and Survival Checks",
+			"skills": {
+				"Heal": 2,
+				"Survival": 2
+			}
+		},
+		{
+			"name": "Stealthy",
+			"desc": "+2 to Escape Artist and Stealth Checks",
+			"skills": {
+				"Escape Artist": 2,
+				"Stealth": 2
+			}
+		}
+	],
+	"defense": [
+		{
+			"name": "Light Armor Proficiency",
+			"desc": "No penalties on attack rolls while wearing light armor"
+		},
+		{
+			"name": "Medium Armor Proficiency",
+			"desc": "No penalties on attack rolls while wearing medium armor"
+		},
+		{
+			"name": "Heavy Armor Proficiency",
+			"desc": "No penalties on attack rolls while wearing heavy armor"
+		}
+	]
+}

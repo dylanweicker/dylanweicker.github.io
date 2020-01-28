@@ -1,0 +1,11 @@
+{
+	"Good": {
+		"ability": {
+			"name": "Touch of Good",
+			"description": "You can touch a creature as a standard action, granting a +1 sacred bonus on attack rolls, skill checks, ability checks, and saving throws for 1 round."
+		},
+		"spell": {
+			"name": "Protection from Evil"
+		}
+	}
+}

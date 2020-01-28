@@ -1,0 +1,280 @@
+{
+	"human": {
+		"race": "human",
+		"plural": "humans",
+		"image" : "human.png",
+		"description": "Humans are perhaps the most diverse of all the common races, with a capacity for both great evil and boundless good. Some humans assemble into vast barbaric hordes, while others build sprawling cities that cover miles. Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world. Their empires and nations are vast, sprawling things. In general, humans are known for their flexibility, ingenuity, and ambition. Other races sometimes envy humans their seemingly limitless adaptability, not so much biologically speaking but in their willingness to step beyond the known and press on to whatever might await them.",
+		"abilities": { "strength": 0, "dexterity": 0, "constitution": 0, "intelligence": 0, "wisdom": 0, "charisma": 0 },
+		"freeAbility": true,
+		"size": "Medium",
+		"speed": 30,
+		"languages": ["Common"],
+		"bonusLanguages": ["Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Draconic", "Dwarven", "Elven", "Ignan", "Infernal ", "Giant", "Gnome", "Goblin", "Halfling", "Orc", "Sylvan", "Terran", "Undercommon"],
+		"racialTraits": [
+			{
+				"name": "Bonus Feat",
+				"desc": "Select one additional feat at 1st level"
+			},
+			{
+				"name": "Skilled",
+				"desc": "Gain one additional skill rank at each level"
+			}
+		],
+		"bonuses": {
+
+		}	
+	},
+	"half-elf": {
+		"race": "half-elf",
+		"plural": "half-elves",
+		"image" : "half-elf.png",
+		"description": "",
+		"abilities": { "strength": 0, "dexterity": 0, "constitution": 0, "intelligence": 0, "wisdom": 0, "charisma": 0 },
+		"freeAbility": true,
+		"size": "Medium",
+		"speed": 30,
+		"languages": ["Common", "Elven"],
+		"bonusLanguages": ["Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Draconic", "Dwarven", "Ignan", "Infernal ", "Giant", "Gnome", "Goblin", "Halfling", "Orc", "Sylvan", "Terran", "Undercommon"],
+		"racialTraits": [
+			{
+				"name": "Elven Immunities",
+				"desc": "Immune to magic sleep effects and +2 bonus on saving throws against enchantments"
+			},
+			{
+				"name": "Keen Senses",
+				"desc": "+2 bonus on Perception checks"
+			},
+			{
+				"name": "Adpatability",
+				"desc": "Gain Skill Focus as a bonus feat at 1st level"
+			},
+			{
+				"name": "Low Light Vision",
+				"desc": "Can see twice as far as humans in conditions of dim light"
+			}
+		],
+		"bonuses": {
+			"perception": 2
+		},
+		"conditionalBonuses": {
+			"saves": {
+				"bonus": 2,
+				"condition": "against enchantments"
+			}
+		}
+	},
+	"elf": {
+		"race": "elf",
+		"plural": "elves",
+		"image" : "elf.png",
+		"description": "Elves possess a graceful, slender physique that is accentuated by their long, pointed ears. It is a mistake, however, to consider them weak or feeble, as the thin limbs of an elf can contain surprising power. The long-lived elves are children of the natural world. They seek to live in balance with the wild and understand it better than most other mortals. Elves also have an appreciation for the written word, magic, and painstaking research. Their naturally keen minds and senses, combined with their inborn patience, make them particularly suited to wizardry.",
+		"abilities": { "strength": 0, "dexterity": 2, "constitution": -2, "intelligence": 2, "wisdom": 0, "charisma": 0 },
+		"freeAbility": false,
+		"size": "Medium",
+		"speed": 30,
+		"languages": ["Common", "Elven"],
+		"bonusLanguages": ["Celestial", "Draconic", "Gnoll", "Gnome", "Goblin", "Orc", "Sylvan"],
+		"racialTraits": [
+			{
+				"name": "Elven Immunities",
+				"desc": "Immune to magic sleep effects and +2 bonus on saving throws against enchantments"
+			},
+			{
+				"name": "Keen Senses",
+				"desc": "+2 bonus on Perception checks"
+			},
+			{
+				"name": "Elven Magic",
+				"desc": "+2 bonus on caster level checks made to overcome spell resistance. And +2 racial bonus on Spellcraft checks to identify the properties of magic items"
+			},
+			{
+				"name": "Elven Weapon Familiarity",
+				"desc": "Proficiency with longbows, longswords, rapiers, and shortbows, and treat any weapon with a the word \"elven\" in its name as a martial weapon."
+			},
+			{
+				"name": "Low Light Vision",
+				"desc": "Can see twice as far as humans in conditions of dim light"
+			}
+		],
+		"bonuses": {
+			"perception": 2
+		},
+		"conditionalBonuses": {
+			"spellcraft": {
+				"bonus": 2,
+				"condition": "to identify the properties of of magic items"
+			},
+			"casterLevel": {
+				"bonus": 2,
+				"condition": "to overcome spell resistance"
+			},
+			"saves": {
+				"bonus": 2,
+				"condition": "against enchantments"
+			}
+		},
+		"proficiencies": {
+			"weapon": ["longbow", "longsword", "rapier", "shortbow"]
+		}
+	},
+	"half-orc": {
+		"race": "half-orc",
+		"plural": "half-orcs",
+		"image" : "half-orc.png",
+		"description": "",
+		"abilities": { "strength": 0, "dexterity": 0, "constitution": 0, "intelligence": 0, "wisdom": 0, "charisma": 0 },
+		"freeAbility": true,
+		"size": "Medium",
+		"speed": 30,
+		"languages": ["Common", "Orc"],
+		"bonusLanguages": ["Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Draconic", "Dwarven", "Ignan", "Infernal ", "Giant", "Gnome", "Goblin", "Halfling", "Orc", "Sylvan", "Terran", "Undercommon"],
+		"racialTraits": [
+			{
+				"name": "Intimidating",
+				"desc": "+2 bonus on Intimidate checks"
+			},
+			{
+				"name": "Orc Ferocity",
+				"desc": "Once per day, when you are brought below 0 hit points but are not killed, you can fight on for 1 more round as if disabled. At the end of your next turn, unless brought to above 0 hit points, you immediately fall unconscious and begin dying."
+			},
+			{
+				"name": "Weapon Familiarity",
+				"desc": "Proficiency with greataxes and falchions and treat any weapon with the word \"orc\" in its name as a martial weapon."
+			},
+			{
+				"name": "Dark Vision",
+				"desc": "Can see in the dark up to 60 feet"
+			}
+		],
+		"bonuses": {
+			"intimidate": 2
+		},
+		"proficiencies": {
+			"weapon": ["greataxes", "falchions"]
+		}
+	},
+	"dwarf": {
+		"race": "dwarf",
+		"plural": "dwarves",
+		"image" : "dwarf.png",
+		"abilities": { "strength": 0, "dexterity": 0, "constitution": 2, "intelligence": 0, "wisdom": 2, "charisma": -2 },
+		"freeAbility": false,
+		"size": "Medium",
+		"speed": 20,
+		"languages": ["Common", "Dwarven"],
+		"bonusLanguages": ["Giant", "Gnome", "Goblin", "Orc", "Terran", "Undercommon"],
+		"racialTraits": [
+			{
+				"name": "Defensive Training",
+				"desc": "+4 dodge bonus to AC against giants"
+			},
+			{
+				"name": "Hardy",
+				"desc": "+2 bonus on saving throws against poison, spells, and spell-like abilities"
+			},
+			{
+				"name": "Stabilitiy",
+				"desc": "+4 racial bonus to Combat Maneuver Defense when resisting a bullrush or trip"
+			},
+			{
+				"name": "Greed",
+				"desc": "+2 racial bonus on Appraise checks made to determine the price of non-magical goods that contian precious metals or gemstones"
+			},
+			{
+				"name": "Stonecunning",
+				"desc": "+2 bonus on perception checks to notice unusual stonework"
+			},
+			{
+				"name": "Hatred",
+				"desc": "+1 bonus on attack rolls against orcs and goblins"
+			},
+			{
+				"name": "Dwarven Weapon Familiarity",
+				"desc": "Proficiency with battleaxes, heavy picks, and warhammers, and treat any weapon with the word \"dwarven\" in its name as a martial weapon."
+			},
+			{
+				"name": "Darkvision",
+				"desc": "Can see perfectly in the dark up to 60 feet."
+			}
+		],
+		"bonuses": {
+		},
+		"conditionalBonuses": {
+			"ac": {
+				"bonus": 4,
+				"condition": "against giants"
+			},
+			"saves": {
+				"bonus": 2,
+				"condition": "against poison, spells, and spell-like abilities"
+			},
+			"cmd": {
+				"bonus": 4,
+				"condition": "against bullrush or trip attempts"
+			},
+			"attack": {
+				"bonus": 1,
+				"condition": "against goblins and orcs"
+			},
+			"appraise": {
+				"bonus": 2,
+				"condition": "to determine the price of non-magical goods that contian precious metals or gemstones"
+			},
+			"perception": {
+				"bonus": 2,
+				"condition": "to notice unusual stonework"
+			}
+		},
+		"proficiencies": {
+			"weapon": ["battleaxe", "heavy pick", "warhammer"]
+		}
+	},
+	"halfling": {
+		"race": "halfling",
+		"plural": "halflings",
+		"image" : "halfling.png",
+		"abilities": { "strength": -2, "dexterity": 2, "constitution": 0, "intelligence": 0, "wisdom": 0, "charisma": 2 },
+		"freeAbility": false,
+		"size": "Small",
+		"speed": 20,
+		"languages": ["Common", "Halfling"],
+		"bonusLanguages": ["Dwarven", "Elven", "Gnome", "Goblin"],
+		"racialTraits": [
+			{
+				"name": "Halfling Luck",
+				"desc": "+1 on all saving throws"
+			},
+			{
+				"name": "Fearless",
+				"desc": "+2 on saving throws against fear (this stacks with Halfling Luck)"
+			},
+			{
+				"name": "Keen Senses",  
+				"desc": "+2 bonus on Perception checks"
+			},
+			{
+				"name": "Sure-Footed",
+				"desc": "+2 bonus on Acrobatics and Climb checks"
+			},
+			{
+				"name": "Weapon Familiarity",
+				"desc": "Proficiency with slings and treat any weapon with the word \"halfling\" in its name as a martial weapon"
+			}
+		],
+		"bonuses": {
+			"acrobatics": 2,
+			"climb": 2,
+			"perception": 2,
+			"saves": 1
+		},
+		"conditionalBonuses": {
+			"saves": {
+				"bonus": 2,
+				"condition": "against fear"
+			}
+		},
+		"proficiencies": {
+			"weapon": ["battleaxe", "heavy pick", "warhammer"]
+		}
+	}
+}

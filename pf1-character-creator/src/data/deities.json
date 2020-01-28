@@ -1,0 +1,44 @@
+{
+	"Torag": {
+		"name": "Torag",
+		"image": "torag.jpg",
+		"description": "As the god of protection and creation, Torag is opposed to destruction and aggressivness. The dwarves believe that Torag created the world at his great forge, striking it again and again with his hammer to get the shape he desired. As rocks tumbled and the sparks flew, the dwarves were born, made of stone with bellies full of fire.",
+		"portfolio": "Forge, Protection, Strategy",
+		"followers": "Dwarves",
+		"alignment": "LG",
+		"legalAlignments": ["LG", "NG", "LN"],
+		"domains": ["Artifice", "Earth", "Good", "Law", "Protection"],
+		"weapons": "Warhammer"
+	},
+	"Sarenrae" : {
+		"name": "Sarenrae",
+		"image": "sarenrae.png",
+		"description": "Sarenrae is one of the oldest gods in existance. Known to her faithful as the Dawnflower, the Healing Flame, and the Everlight, Sarenrae (pronounced SAER-en-ray[1]) is a goddess who teaches temperance and patience in all things. Compassion and peace are her greatest virtues, and if enemies of the faith can be redeemed, they should be.",
+		"portfolio": "Sun, Redemption, Honesty, Healing",
+		"followers": "Healers, farmers, redeemed evil-doers",
+		"alignment": "NG",
+		"legalAlignments": ["LG", "NG", "CG", "N"],
+		"domains": ["Fire", "Glory", "Good", "Healing", "Sun"],
+		"weapon": "Scimitar"
+	},
+	"Desna": {
+		"name": "Desna",
+		"image": "desna.png",
+		"alignment": "CG"
+	},
+	"Pharasma": {
+		"name": "Pharasma",
+		"image": "pharasma.jpg",
+		"alignment": "N"
+	},
+	"Calistria": {
+		"name": "Calistria",
+		"image": "calistria.jpg",
+		"alignment": "CN"
+	},
+	"Asmodeus": {
+		"name": "Asmodeus",
+		"image": "asmodeus.jpg",
+		"alignment": "LE"
+	}
+}

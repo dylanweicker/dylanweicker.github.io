@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <style>
+      .ui-draggable, .ui-droppable {
+        background-position: top;
+      }
+      body { 
+        margin: 0; 
+        height:100vh;
+        position: relative;
+      }
+
+      #ui-panel {
+        position: fixed;
+        width: 6rem;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.5);
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        color: white;
+      }
+
+      #ui-panel p {
+        margin-top: 0;
+        margin-bottom: 0.25rem;
+        font-size: 14px;
+      }
+
+      .ui-slider {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ui-panel">
+      <p>width</p>
+      <div id="width-slider"></div>
+      <p>length</p>
+      <div id="length-slider"></div>
+      <p>spacing</p>
+      <div id="spacing-slider"></div>
+      <p>saturation</p>
+      <div id="lightness-slider"></div>
+      <p>radius</p>
+      <div id="radius-slider"></div>
+      <p>speed</p>
+      <div id="speed-slider"></div>
+    </div>
+    <canvas id="myCanvas" style="width: 100vw; height: 100vh"></canvas>
+    <script>
+      var canvas;
+      var context;
+      var imageWidth;
+      var imageHeight;
+      var canvasHypotenuse;
+      var mousePos = {x: 0, y:0};
+
+      var spacing = 80;
+      var length = 64;
+      var width = 64;
+      var lightness = 50;
+      var radius = 25;
+      var speed = 5;
+
+      window.onload = init;
+      window.onresize = fixResolution;
+
+      function init(){
+
+        canvas = document.getElementById('myCanvas');
+        context = canvas.getContext('2d');
+        fixResolution();
+        
+        // Start the first frame request
+        window.requestAnimationFrame(gameLoop);
+
+        canvas.addEventListener('mousemove', function(evt) {
+            mousePos.x = parseInt(evt.clientX);
+            mousePos.y = parseInt(evt.clientY);
+        }, false);
+
+      $( function() {
+        $( "#width-slider" ).slider({
+          min: 2,
+          max: Math.sqrt(2 * canvasHypotenuse),
+          value: 8,
+          slide: function(event, ui){
+            width = ui.value * ui.value;
+          }
+        });
+        
+        $( "#length-slider" ).slider({
+          min: 2,
+          max: Math.sqrt(2 * canvasHypotenuse),
+          value: 8,
+          slide: function(event, ui){
+            length = ui.value * ui.value;
+          }
+        });
+
+        $( "#spacing-slider" ).slider({
+          min: 20,
+          max: 200,
+          value: 80,
+          slide: function(event, ui){
+            spacing = ui.value;
+          }
+        });
+        
+        $( "#lightness-slider" ).slider({
+          min: 0,
+          max: 100,
+          value: 50,
+          slide: function(event, ui){
+            lightness = ui.value;
+          }
+        });
+        
+        $( "#radius-slider" ).slider({
+          min: 0,
+          max: 200,
+          value: 175,
+          slide: function(event, ui){
+            radius = 200 - ui.value;
+          }
+        });
+        
+        $( "#speed-slider" ).slider({
+          min: 0,
+          max: 29,
+          value: 25,
+          slide: function(event, ui){
+            speed = 30 - ui.value;
+          }
+        });
+
+      } );
+      }
+
+      function fixResolution(){
+        let dpi = window.devicePixelRatio;
+        let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+        let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+        canvas.setAttribute('height', style_height * dpi);
+        canvas.setAttribute('width', style_width * dpi);
+        canvasHypotenuse = Math.sqrt(canvas.width * canvas.width + canvas.height * canvas.height);
+      }
+
+      function gameLoop(timeStamp){
+        draw();
+
+        // Keep requesting new frames
+        window.requestAnimationFrame(gameLoop);
+      }
+
+      function draw(){
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.lineWidth = width;
+
+        for (let x = spacing/2; x < canvas.width; x += spacing) {
+            for (let y = spacing/2; y < canvas.height; y+= spacing) {
+                let uv = getUnitVector(x, y, mousePos.x, mousePos.y);
+                context.strokeStyle = setColor(uv);
+                context.beginPath();
+                context.moveTo(x - (length/2) * uv.x, y - (length/2) * uv.y);
+                context.lineTo(x + (length/2) * uv.x, y + (length/2) * uv.y);
+                context.stroke();
+            }
+        }
+      }
+
+      function setColor(uv) {
+        let hue = (Math.atan2(uv.x, uv.y) * 180 / Math.PI) % 360;
+        let time = new Date().getTime() / speed;
+        hue = (hue + time % 360) % 360;
+        let relativeLength = (uv.l / canvasHypotenuse) * radius;
+        let color = "hsl(" + parseInt(hue) + ", " + lightness + "%, "+ (65 + relativeLength) +"%)";
+        return color;
+      }
+
+      function getUnitVector(x1, y1, x2, y2) {
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        let length = Math.sqrt(dx*dx + dy*dy);
+        return {x: dx/ length, y: dy / length, l: length}
+      }
+    </script>
+  </body>
+</html> 

@@ -55,7 +55,8 @@ export type Block =
   | { type: 'gallery'; albums: Album[]; empty: string }
   | { type: 'table'; heading?: [string, string]; rows: [string, string][] }
   | { type: 'list'; title?: string; ordered?: boolean; items: string[] }
-  | { type: 'shelfPicks'; count: number }
+  /** Box art from public/homepage/games/bgg-<bggId>.webp (downloaded by scripts/build-scene-assets.py) */
+  | { type: 'boardGames'; games: { bggId: number; name: string }[] }
   | { type: 'steam'; games: { appId: number; name: string; note: string }[] }
   | { type: 'construction'; text: string }
   | { type: 'actions'; actions: Action[] };
@@ -87,8 +88,8 @@ export const SITE = {
 export const homeIntro = {
   heading: 'A few of my favourite things',
   body: [
-    "I'm a software developer by day, a gamer by night, and a gay theatre nerd at all times.",
-    "I started teaching myself HTML while playing Neopets in 2003, and built my first website when I was eight. Ever since then I've wanted to be a web developer. But outside of web-development, I have a lot of other hobbies. Click around to learn more about them.",
+    "I built my first website when I was eight, after teaching myself HTML through Neopets in 2003. I've been making websites ever since, and eventually turned it into my career.",
+    "Outside of programming, I spend a lot of time playing games, performing improv, travelling and pursuing whatever else has caught my interest.",
   ],
 };
 
@@ -110,40 +111,38 @@ export const categories: HomeCategory[] = [
     label: 'Games',
     tagline: 'Board games, social deduction, TTRPGs, Steam.',
     file: 'games.html',
-    intro: 'I love games of all sorts, from heavy strategy board games to light party games. My favourite is Blood on the Clocktower, a hidden-role social deduction game. I also play D&D and Pathfinder, and run a bi-weekly Pathfinder 2e campaign. I also play a lot of PC games on Steam.',
+    intro: 'I spend a lot of my free time playing board games, video games and tabletop RPGs. I\'ve been the game master for many Pathfinder campaigns for years.',
     sections: [
       {
-        id: 'gm-screen',
-        title: 'Behind the GM Screen',
+        id: 'tabletop-roleplaying',
+        title: 'Tabletop Roleplaying',
         blocks: [
-          {
-            type: 'feature',
-            label: 'Now running',
-            title: 'Abomination Vaults',
-            subtitle: 'Pathfinder 2e · Game Master',
-            paragraphs: [
-              "A dungeon crawl beneath a haunted lighthouse, and the campaign I'm running right now. GMing scratches every itch I have: storytelling, improv, systems design, and doing far too many voices.",
-              'My players have a companion website I built, with characters, session logs, quests and an in-game calendar.',
-            ],
-            actions: [{ label: 'See the Abomination Vaults site', href: 'https://abominationvaults.dylanweicker.ca/' }],
-          },
           {
             type: 'text',
             paragraphs: [
-              "I've been on both sides of the screen. As a GM I love building worlds; as a player, my only job is to roll dice and make questionable decisions.",
+              'In a tabletop roleplaying game like Dungeons & Dragons or Pathfinder, each player plays one character, and the game master plays the world and everyone else in it. The GM sets the scene, the players say what they do, and the dice decide how it goes.',
+              'Running a game also scratches every itch I have: storytelling, improv, systems design, and doing far too many voices.',
+              "I've run and played several campaigns over the years: Curse of Strahd, Curse of the Crimson Throne, Kingmaker, and a bunch of homebrews.",
+              "Right now I'm running Abomination Vaults, a Pathfinder dungeon crawl beneath a haunted lighthouse, every other week. I built a companion site for my players, with their characters, session logs, quests and an in-game calendar.:",
             ],
           },
           {
-            type: 'list',
-            title: 'Other campaigns',
-            items: [
-              'Kingmaker (Pathfinder, GM): exploring, settling and ruling the Stolen Lands',
-              'Curse of the Crimson Throne (Pathfinder, GM): intrigue, plague and a very bad queen',
-              'Curse of Strahd (D&D 5e, player): gothic horror in Barovia',
-              'Waterdeep: Dragon Heist (D&D 5e, player): a city-wide treasure hunt',
-              'Homebrew campaigns (GM): worlds and stories of my own',
+            type: 'gallery',
+            albums: [
+              {
+                photos: [
+                  { src: '/homepage/games/abomination-vaults/session-1.webp', caption: 'The Unholy Burial Vault' },
+                  { src: '/homepage/games/abomination-vaults/session-2.webp', caption: "The Trapmaster's Gauntlet" },
+                  { src: '/homepage/games/abomination-vaults/session-3.webp', caption: 'The Exiled Prince' },
+                  { src: '/homepage/games/abomination-vaults/session-5.webp', caption: 'Behind the Rune Door' },
+                  { src: '/homepage/games/abomination-vaults/session-6.webp', caption: 'Dragonslayer' },
+                  { src: '/homepage/games/abomination-vaults/session-8.webp', caption: 'Corpselights' },
+                ],
+              },
             ],
+            empty: 'session scenes coming soon',
           },
+          { type: 'actions', actions: [{ label: 'See the Abomination Vaults site', href: 'https://abominationvaults.dylanweicker.ca/' }] },
         ],
       },
       {
@@ -155,10 +154,20 @@ export const categories: HomeCategory[] = [
             paragraphs: [
               "I'll happily play anything, from a quick party game to a strategy epic that eats the whole afternoon. If there's a game night, I'm in.",
               'My favourite is Blood on the Clocktower. Give me a table full of people who might be lying, and every game becomes a shared puzzle of claims, counter-claims and one very convincing Demon.',
-              'My shelf passed a hundred games a while ago. A few, picked at random:',
+              'My shelf passed a hundred games a while ago.',
             ],
           },
-          { type: 'shelfPicks', count: 6 },
+          {
+            type: 'boardGames',
+            games: [
+              { bggId: 240980, name: 'Blood on the Clocktower' },
+              { bggId: 167791, name: 'Terraforming Mars' },
+              { bggId: 30549, name: 'Pandemic' },
+              { bggId: 173346, name: '7 Wonders Duel' },
+              { bggId: 295947, name: 'Cascadia' },
+              { bggId: 225694, name: 'Decrypto' },
+            ],
+          },
           { type: 'actions', actions: [{ label: 'Pick a game from my shelf', href: 'https://games.dylanweicker.ca/' }] },
         ],
       },
@@ -169,7 +178,7 @@ export const categories: HomeCategory[] = [
           {
             type: 'text',
             paragraphs: [
-              "My library is all over the map, and my real weakness is any game with a build mode. Give me one and I'll lose an evening to floor plans and wallpaper.",
+              "My taste in games varies from survival horror, grand strategy, RPG, to anything where I can live the fantasy of being a homeowner. ",
             ],
           },
           {
@@ -177,11 +186,12 @@ export const categories: HomeCategory[] = [
             games: [
               { appId: 381210, name: 'Dead by Daylight', note: 'Surviving the trials, one terrified sprint at a time.' },
               { appId: 289070, name: 'Sid Meier’s Civilization VI', note: '"One more turn" has cost me a lot of sleep.' },
-              { appId: 413150, name: 'Stardew Valley', note: 'Quiet seasons on the farm.' },
+              { appId: 2707930, name: 'Palia', note: 'Cozy village life, and yes, I can build a house.' },
               { appId: 435150, name: 'Divinity: Original Sin 2', note: 'Turn-based chaos, where every fight ends with something on fire.' },
+              { appId: 413150, name: 'Stardew Valley', note: 'Quiet seasons on the farm.' },
+              { appId: 640820, name: 'Pathfinder: Kingmaker', note: 'Pathfinder, with someone else as the GM for once.' },
             ],
           },
-          pending('more favourites coming soon'),
           { type: 'actions', actions: [{ label: 'See my Steam profile', href: 'https://steamcommunity.com/id/nifflr/' }] },
         ],
       },
@@ -192,13 +202,13 @@ export const categories: HomeCategory[] = [
     label: 'Performance',
     tagline: "Improv, theatre, themed parties. Any excuse to put on a character.",
     file: 'performance.html',
-    intro: "I've also always had an interest in acting. I had an agent and was in commercials when I was just three years old. In highschool, I wrote a play for our class to perform, was cast in Little Shop of Horrors, and played the lead role in three plays, including Shakespeare's Macbeth. Now I'm an avid improviser, and I perform every week with a local improv troupe. Also, I frequently throw themed parties, and will commit to a costume for any excuse to put on a character.",
+    intro: "I've always had an interest in acting.",
     sections: [
       {
         id: 'improv',
         title: 'Improv',
         blocks: [
-          { type: 'text', paragraphs: ['Every week. Yes, and…'] },
+          { type: 'text', paragraphs: ['I\'m an avid improviser, and perform almost every week with a local improv troupe.'] },
           {
             type: 'gallery',
             albums: [
@@ -221,7 +231,7 @@ export const categories: HomeCategory[] = [
         blocks: [
           {
             type: 'text',
-            paragraphs: ['I spent years in amateur theatre and was in three plays, including the lead in Macbeth.'],
+            paragraphs: ["In high school, I wrote a play for our class and performed in several products, including Little Shop of Horrors, Therac-25, The Real Inspector Hound, and Macbeth."],
           },
           {
             type: 'cards',
@@ -253,7 +263,7 @@ export const categories: HomeCategory[] = [
     label: 'Travel',
     tagline: "Places I've been, things I've seen.",
     file: 'travel.html',
-    intro: 'I love exploring a new city: wandering its neighbourhoods, finding the good food, and getting a little lost on purpose.',
+    intro: 'Here are some of the places I\'ve travelled to over the years.',
     // Newest first. Each trip is one box titled with the place and year, listing the stops.
     sections: [
       trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford']),
@@ -276,7 +286,7 @@ export const categories: HomeCategory[] = [
   {
     id: 'cats',
     label: 'Cats',
-    tagline: "My biological children (don't question it).",
+    tagline: "Pebble and Milo, my biological children.",
     file: 'cats.html',
     intro: 'I have two little fur babies, Pebble and Milo.',
     sections: [
@@ -314,35 +324,21 @@ export const categories: HomeCategory[] = [
     intro: "The music I can't stop talking about, and the culture that comes with it.",
     sections: [
       {
-        id: 'born-this-way',
-        title: 'Born This Way',
-        blocks: [
-          {
-            type: 'feature',
-            label: 'Little Monster for life',
-            title: 'Lady Gaga',
-            paragraphs: [
-              "Little Monsters are Lady Gaga fans, and I'm a lifelong one. Pop music is one of my favourite things to talk about, so consider yourself warned.",
-            ],
-            actions: [{ label: 'Open Music', app: 'music' }],
-          },
-          pending('my ranked favourite Gaga albums and songs coming soon'),
-        ],
-      },
-      {
-        id: 'pop-hall-of-fame',
-        title: 'Pop Hall of Fame',
+        id: 'pop',
+        title: 'Pop Music',
         blocks: [
           {
             type: 'text',
-            paragraphs: ['My current rotation lives in the Music app: Gaga, Carly Rae Jepsen, MARINA, Katy Perry, Clean Bandit and more.'],
+            paragraphs: [
+              "I'm a little monster for life. I've been a Lady Gaga fan since The Fame, and she's still one of my favourite artists. I also listen to a lot of Chappell Roan, MARINA, Kesha and dance-pop from the late 2000s and early 2010s.",
+            ],
           },
-          pending('the full hall of fame (with strong opinions) coming soon'),
+          { type: 'actions', actions: [{ label: 'Open Music', app: 'music' }] },
         ],
       },
       {
         id: 'drag',
-        title: 'Supporting Local Royalty',
+        title: 'Local Drag Shows',
         blocks: [
           { type: 'text', paragraphs: ['Drag is one of my favourite art forms, and I try to catch shows whenever I can.'] },
           { type: 'gallery', albums: [], empty: 'photos from drag shows coming soon' },
@@ -394,6 +390,8 @@ export function blockText(b: Block): string[] {
       return [b.title ?? '', ...b.items];
     case 'steam':
       return b.games.flatMap((g) => [g.name, g.note]);
+    case 'boardGames':
+      return b.games.map((g) => g.name);
     default:
       return [];
   }

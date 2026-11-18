@@ -13,9 +13,11 @@ interface Props {
 
 const { path, title, description } = Astro.props;
 const content = await getSiteContent();
+// /about/ opens the same Welcome window as the home page, so it points search engines at /.
+const canonicalPath = path === '/about/' ? '/' : undefined;
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} canonicalPath={canonicalPath}>
   <link slot="head" rel="preload" as="image" href="/scene/background.webp" fetchpriority="high" />
   <a class="skip-link" href="#desktop">Skip to content</a>
   <Desktop client:load initialPath={path} content={content} />

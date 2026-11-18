@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { categories, thumbOf, type Action, type Block, type Card } from '@/data/homepage';
-import type { BoardGame, BoardGameCollection } from '@/lib/bgg';
 import { useSite } from './context';
 
 /** One renderer per block type (see Block in data/homepage.ts). */
@@ -54,8 +53,19 @@ export function BlockView({ block }: { block: Block }) {
         </>
       );
     }
-    case 'shelfPicks':
-      return <ShelfPicks count={block.count} />;
+    case 'boardGames':
+      return (
+        <ul className="hp-picks">
+          {block.games.map((g) => (
+            <li key={g.bggId}>
+              <a className="hp-photo" href={`https://boardgamegeek.com/boardgame/${g.bggId}`} target="_blank" rel="noopener">
+                <img src={`/homepage/games/bgg-${g.bggId}.webp`} alt="" loading="lazy" />
+                <span>{g.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      );
     case 'steam':
       return (
         <ul className="hp-steam">
@@ -215,43 +225,6 @@ function Gallery({ block }: { block: Extract<Block, { type: 'gallery' }> }) {
         </div>
       ))}
     </>
-  );
-}
-
-/** A few random box covers from the Game Shelf data (picked after mount so the server HTML stays stable). */
-function ShelfPicks({ count }: { count: number }) {
-  const { openApp } = useSite();
-  const [picks, setPicks] = useState<BoardGame[] | null>(null);
-  useEffect(() => {
-    let cancelled = false;
-    fetch('/data/boardgames.json')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d: BoardGameCollection | null) => {
-        if (cancelled || !d) return;
-        const pool = d.games.filter((g) => !g.expansion && g.thumbnail);
-        for (let i = pool.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [pool[i], pool[j]] = [pool[j], pool[i]];
-        }
-        setPicks(pool.slice(0, count));
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, [count]);
-  if (!picks?.length) return null;
-  return (
-    <ul className="hp-picks">
-      {picks.map((g) => (
-        <li key={g.id}>
-          <button type="button" className="hp-photo" title={g.name} onClick={() => openApp('boardgames')}>
-            <img src={g.thumbnail!} alt="" loading="lazy" />
-            <span>{g.name}</span>
-          </button>
-        </li>
-      ))}
-    </ul>
   );
 }
 

@@ -450,11 +450,6 @@
   border: 1px solid #ccc;
   background: #fff;
   box-shadow: 3px 3px 0 #99ccff;
-  transform: rotate(-1.5deg);
-}
-.hp-photos li:nth-child(even) .hp-photo,
-.hp-picks li:nth-child(even) .hp-photo {
-  transform: rotate(1.5deg);
 }
 .hp-photos img,
 .hp-picks img {
@@ -466,6 +461,10 @@
 .hp-picks img {
   object-fit: contain;
   background: #f4f8fc;
+}
+.hp-picks a.hp-photo {
+  cursor: pointer;
+  text-decoration: none;
 }
 .hp-photos .hp-photo span,
 .hp-picks .hp-photo span {

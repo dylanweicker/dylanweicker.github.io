@@ -5,10 +5,12 @@ interface Props {
   title: string;
   description: string;
   bodyClass?: string;
+  /** Path search engines should treat as this page's address, when it repeats another page */
+  canonicalPath?: string;
 }
 
-const { title, description, bodyClass } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const { title, description, bodyClass, canonicalPath } = Astro.props;
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>

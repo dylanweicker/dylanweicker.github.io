@@ -4,10 +4,10 @@ export const profile = {
   company: 'Qatalyst Research Group',
   location: 'Vancouver, BC',
   /** The Welcome hero's line under role · company · location, so it doesn't repeat them */
-  tagline: 'A full-stack developer building AI tools for researchers.',
+  tagline: 'A full-stack web developer building tools for researchers and consultants.',
   bio: [
-    'Qatalyst does research and evaluation for governments and non-profits, and I build the software behind it, such as AI tools that help our consultants write proposals and analyze the data they collect, as well as survey, reporting and dashboard platforms for our clients and internal staff. Most of it is built using Next.js, TypeScript, Postgres and LLMs.',
-    "Off the clock you'll find me performing improv, playing board games & Blood on the Clocktower, running a Pathfinder campaign, doing yoga, and hanging out with my cats.",
+    'I work at Qatalyst Research Group, a Canadian consulting firm that conducts research and evaluation for governments and non-profits. I develop our internal software, including AI tools for proposal writing and data analysis, as well as survey platforms, dashboards, and other web solutions for our clients. I mainly work with Next.js, TypeScript and PostgreSQL.',
+    "Outside of work, you'll find me performing improv, playing board games (especially Blood on the Clocktower), running a Pathfinder campaign, doing yoga, hanging out with my cats, or travelling the world.",
   ],
   /** The résumé's profile paragraph: the bio above, in a résumé's register */
   summary:

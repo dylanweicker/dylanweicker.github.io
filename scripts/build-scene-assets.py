@@ -11,6 +11,7 @@
 - homepage/**     -> public/homepage/**/<name>.webp (1400px) + <name>-thumb.webp (400px), for the
                      Interests site; EXIF (incl. GPS) is dropped. Reference them in src/data/homepage.ts.
 - Steam headers   -> public/homepage/games/steam-<appId>.jpg for every appId in src/data/homepage.ts
+- Board games     -> public/homepage/games/bgg-<bggId>.webp (400px) for every bggId in src/data/homepage.ts
 - icons/*.png     -> public/icons/<name>.webp, 256x256 (trimmed, centred on a square). The full-size
                      generated icons live in art/icons/; reference the .webp in src/data/apps.ts etc.
 
@@ -179,6 +180,31 @@ def steam_headers(data_file: Path, dest_dir: Path) -> None:
         print(f"{dest.relative_to(ROOT)}  {dest.stat().st_size // 1024} KB")
 
 
+
+BGG_COVER_PX = 400
+
+
+def bgg_covers(data_file: Path, snapshot_file: Path, dest_dir: Path) -> None:
+    """Download each featured board game's box art once (looked up by bggId in the Game Shelf
+    snapshot), so the site doesn't hotlink BoardGameGeek."""
+    import io
+    import json
+
+    games = {g["id"]: g for g in json.loads(snapshot_file.read_text(encoding="utf8"))["games"]}
+    ids = sorted(set(re.findall(r"bggId:\s*(\d+)", data_file.read_text(encoding="utf8"))))
+    for bgg_id in ids:
+        dest = dest_dir / f"bgg-{bgg_id}.webp"
+        if dest.exists():
+            continue
+        game = games.get(bgg_id)
+        if not game or not game.get("image"):
+            print(f"bgg {bgg_id}: not in the Game Shelf snapshot, skipped")
+            continue
+        req = urllib.request.Request(game["image"], headers={"User-Agent": "dylanweicker.github.io asset build"})
+        with urllib.request.urlopen(req, timeout=30) as res:
+            im = Image.open(io.BytesIO(res.read())).convert("RGB")
+        save(fit(im, BGG_COVER_PX), dest, quality=82)
+
 def main() -> None:
     bg = Image.open(SRC / "background.png").convert("RGB")
     save(bg, OUT / "background.webp", quality=92)
@@ -191,6 +217,7 @@ def main() -> None:
     if (SRC / "homepage").exists():
         homepage_photos(SRC / "homepage", ROOT / "public" / "homepage")
     steam_headers(ROOT / "src" / "data" / "homepage.ts", ROOT / "public" / "homepage" / "games")
+    bgg_covers(ROOT / "src" / "data" / "homepage.ts", ROOT / "src" / "data" / "boardgames.json", ROOT / "public" / "homepage" / "games")
     if (SRC / "icons").exists():
         app_icons(SRC / "icons", ROOT / "public" / "icons")
 

@@ -162,9 +162,7 @@
   text-align: center;
 }
 .hp__intro {
-  margin: 0 0 6px;
-  font-style: italic;
-  text-align: center;
+  margin: 10px 0 18px;
 }
 .hp__toc {
   margin: 0 0 12px;
@@ -256,11 +254,6 @@
   font: bold 14px/1.2 'Comic Sans MS', 'Comic Neue', cursive;
 }
 /* ---------- page blocks ---------- */
-.hp__tagline-big {
-  margin: 10px 0 6px;
-  color: #d6338a;
-  font: italic bold 14px/1.4 Georgia, 'Times New Roman', serif;
-}
 .hp-explore {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

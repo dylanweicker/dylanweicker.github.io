@@ -52,7 +52,6 @@ export function CategoryPage({ category }: { category: HomeCategory }) {
   return (
     <main className="hp__main">
       <h1 className="hp__h1">{category.label}</h1>
-      <p className="hp__tagline-big">{category.tagline}</p>
       <p className="hp__intro">{category.intro}</p>
       {category.sections.map((s) => (
         <section key={s.id} id={`hp-${s.id}`} className="hp__box hp__interest">

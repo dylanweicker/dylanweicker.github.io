@@ -70,6 +70,7 @@ export interface HomeSection {
 export interface HomeCategory {
   id: string;
   label: string;
+  /** Shown on the page's box in the home page's explore grid (not on the page itself) */
   tagline: string;
   /** Fake file name shown in the address bar */
   file: string;
@@ -87,22 +88,29 @@ export const homeIntro = {
   heading: 'A few of my favourite things',
   body: [
     "I'm a software developer by day, a gamer by night, and a gay theatre nerd at all times.",
-    "I started teaching myself HTML while playing Neopets in 2003, and built my first website when I was eight. Ever since then I've wanted to be a web developer. But outside of web-development, I have a lot of other hobbies.",
-    "I love games of all sorts, from heavy strategy board games to light party games. My favourite is Blood on the CLocktower, a hidden-role social deduction game. I also play D&D and Pathfinder, and run a bi-weekly Pathfinder 2e campaign. I also have play a lot of PC games on Steam.",
-    "I've also always had an interest in acting. I had an agent and was in commercials when I was just three years old. In highschool, I wrote a play for our class to perform, was cast in Little Shop of Horrors, and played the lead role in three plays, including Shakespeare's Macbeth. Now I'm an avid improviser, and I perform every week with a local improv troupe.",
-    "Click around to learn more about my hobbies and interests."
+    "I started teaching myself HTML while playing Neopets in 2003, and built my first website when I was eight. Ever since then I've wanted to be a web developer. But outside of web-development, I have a lot of other hobbies. Click around to learn more about them.",
   ],
 };
 
 const pending = (text: string): Block => ({ type: 'construction', text });
 
+/** A Travel page box: "2024 · Japan", the stops along the way, then its photos. Id e.g. 'japan-2024'. */
+const trip = (place: string, year: number, stops: string[] = []): HomeSection => ({
+  id: `${place.toLowerCase().replace(/[^a-z]+/g, '-')}-${year}`,
+  title: `${year} · ${place}`,
+  blocks: [
+    ...(stops.length ? [{ type: 'text', paragraphs: [stops.join(' · ')] } satisfies Block] : []),
+    { type: 'gallery', albums: [], empty: `photos from ${place} coming soon` },
+  ],
+});
+
 export const categories: HomeCategory[] = [
   {
     id: 'games',
     label: 'Games',
-    tagline: 'All sorts. Board games, roleplaying, social deduction, video games.',
+    tagline: 'Board games, social deduction, TTRPGs, Steam.',
     file: 'games.html',
-    intro: 'Games are my favourite way to spend time with people. A game night with friends is my idea of a perfect evening.',
+    intro: 'I love games of all sorts, from heavy strategy board games to light party games. My favourite is Blood on the CLocktower, a hidden-role social deduction game. I also play D&D and Pathfinder, and run a bi-weekly Pathfinder 2e campaign. I also have play a lot of PC games on Steam.',
     sections: [
       {
         id: 'gm-screen',
@@ -184,7 +192,7 @@ export const categories: HomeCategory[] = [
     label: 'Performance',
     tagline: "Improv, theatre, themed parties. Any excuse to put on a character.",
     file: 'performance.html',
-    intro: "I'm a performer at heart, whether that's on a stage, at a theme party, or at the karaoke mic.",
+    intro: "I've also always had an interest in acting. I had an agent and was in commercials when I was just three years old. In highschool, I wrote a play for our class to perform, was cast in Little Shop of Horrors, and played the lead role in three plays, including Shakespeare's Macbeth. Now I'm an avid improviser, and I perform every week with a local improv troupe. Also, I frequently throw themed parties, and will commit to a costume for any excuse to put on a character.",
     sections: [
       {
         id: 'improv',
@@ -246,48 +254,23 @@ export const categories: HomeCategory[] = [
     tagline: "Places I've been, things I've seen.",
     file: 'travel.html',
     intro: 'I love exploring a new city: wandering its neighbourhoods, finding the good food, and getting a little lost on purpose.',
+    // Newest first. Each trip is one box titled with the place and year, listing the stops.
     sections: [
-      {
-        id: 'trips',
-        title: 'Trips',
-        blocks: [
-          {
-            type: 'cards',
-            cards: [
-              { title: 'Japan', meta: ['Tokyo', 'Kyoto', 'Osaka', 'Hiroshima'], jumpTo: 'japan' },
-              { title: 'China', meta: ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Shanghai'], jumpTo: 'china' },
-              { title: 'Mexico', jumpTo: 'mexico' },
-              { title: 'United States', meta: ['New York', 'San Francisco'], jumpTo: 'usa' },
-              { title: 'Canada', meta: ['Montreal'], jumpTo: 'canada' },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'japan',
-        title: 'Japan',
-        blocks: [{ type: 'gallery', albums: [], empty: 'Tokyo, Kyoto, Osaka and Hiroshima photos coming soon' }],
-      },
-      {
-        id: 'china',
-        title: 'China',
-        blocks: [{ type: 'gallery', albums: [], empty: "Beijing, Xi'an, Chengdu, Chongqing and Shanghai photos coming soon" }],
-      },
-      {
-        id: 'mexico',
-        title: 'Mexico',
-        blocks: [{ type: 'gallery', albums: [], empty: 'Mexico photos coming soon' }],
-      },
-      {
-        id: 'usa',
-        title: 'United States',
-        blocks: [{ type: 'gallery', albums: [], empty: 'New York and San Francisco photos coming soon' }],
-      },
-      {
-        id: 'canada',
-        title: 'Canada',
-        blocks: [{ type: 'gallery', albums: [], empty: 'Montreal photos coming soon' }],
-      },
+      trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford']),
+      trip('Montreal', 2026),
+      trip('Kelowna', 2026),
+      trip('China', 2025, ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Zhangjiajie', 'Shanghai']),
+      trip('Japan', 2024, ['Tokyo', 'Hakone', 'Osaka', 'Nara', 'Kyoto', 'Hiroshima']),
+      trip('Mexico', 2023, ['Puerto Vallarta', 'Mexico City']),
+      trip('San Francisco', 2022),
+      trip('Egypt', 2021, ['Cairo', 'Alexandria', 'Luxor', 'Aswan', 'Hurghada']),
+      trip('Cuba', 2019, ['Havana', 'Las Terrazas', 'Viñales', 'Matanzas', 'Trinidad', 'Cienfuegos']),
+      trip('Beijing', 2019),
+      trip('Montreal', 2018),
+      trip('New York', 2018),
+      trip('Pemberton', 2017),
+      trip('Europe', 2013, ['Paris', 'Brussels', 'Amsterdam']),
+      trip('Europe', 2011, ['London', 'Paris', 'Rome']),
     ],
   },
   {

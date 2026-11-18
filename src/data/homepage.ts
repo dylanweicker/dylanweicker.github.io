@@ -110,7 +110,7 @@ export const categories: HomeCategory[] = [
     label: 'Games',
     tagline: 'Board games, social deduction, TTRPGs, Steam.',
     file: 'games.html',
-    intro: 'I love games of all sorts, from heavy strategy board games to light party games. My favourite is Blood on the CLocktower, a hidden-role social deduction game. I also play D&D and Pathfinder, and run a bi-weekly Pathfinder 2e campaign. I also have play a lot of PC games on Steam.',
+    intro: 'I love games of all sorts, from heavy strategy board games to light party games. My favourite is Blood on the Clocktower, a hidden-role social deduction game. I also play D&D and Pathfinder, and run a bi-weekly Pathfinder 2e campaign. I also play a lot of PC games on Steam.',
     sections: [
       {
         id: 'gm-screen',

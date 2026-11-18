@@ -1,0 +1,280 @@
+/* Taskbar, Start orb, Start menu, mobile dock (DESIGN.md §3.4, §4.2) */
+
+.taskbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: var(--taskbar-h);
+  padding: 0 8px 0 70px;
+  background: linear-gradient(180deg, rgba(40, 110, 170, 0.62), rgba(6, 62, 112, 0.72) 50%, rgba(4, 44, 84, 0.78));
+  backdrop-filter: blur(14px) saturate(1.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0 1px 0 rgba(143, 211, 255, 0.5);
+  color: #fff;
+}
+.taskbar::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 50% 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.06));
+  pointer-events: none;
+}
+
+/* Start orb: original DylanOS mark, rainbow ring + glossy sphere + "D" */
+.start-orb {
+  position: absolute;
+  left: 8px;
+  bottom: 2px;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rainbow);
+  background: conic-gradient(from 200deg, #ff6b6b, #ffb86b, #ffe36e, #7bd148, #3fe0d0, #2ba6f0, #b79cff, #ff6b6b);
+  box-shadow:
+    0 2px 8px rgba(0, 20, 50, 0.5),
+    0 0 0 1px rgba(6, 62, 112, 0.6);
+  cursor: pointer;
+  transition:
+    box-shadow 200ms ease-out,
+    transform 150ms ease-out;
+}
+.start-orb__inner {
+  position: absolute;
+  inset: 4px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 120%, #7fe6f0 0%, #2ba6f0 40%, #0b4f8f 85%);
+  box-shadow:
+    inset 0 -4px 10px rgba(63, 224, 208, 0.7),
+    inset 0 2px 2px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font: 700 24px/1 var(--font-display);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.8),
+    0 1px 2px rgba(0, 30, 60, 0.6);
+  overflow: hidden;
+}
+.start-orb__inner::before {
+  content: '';
+  position: absolute;
+  inset: 2px 6px 48% 6px;
+  border-radius: 50% 50% 45% 45%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+}
+.start-orb:hover,
+.start-orb[aria-expanded='true'] {
+  box-shadow:
+    0 0 18px 4px rgba(63, 224, 208, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+  transform: scale(1.04);
+}
+
+/* Taskbar window buttons */
+.task-list {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.task-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 170px;
+  min-width: 44px;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+  color: #fff;
+  font: 400 12.5px/1 var(--font-ui);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 1;
+}
+.task-btn span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task-btn img {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.task-btn:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(143, 211, 255, 0.15));
+  box-shadow: inset 0 0 10px rgba(143, 211, 255, 0.6);
+}
+.task-btn.is-active {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(143, 211, 255, 0.5), rgba(43, 166, 240, 0.25));
+  box-shadow: inset 0 0 12px rgba(63, 224, 208, 0.55);
+}
+
+.tray {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 34px;
+  padding: 0 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.tray__clock {
+  min-width: 56px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ---------------- Start menu ---------------- */
+.start-menu {
+  position: fixed;
+  left: 6px;
+  bottom: calc(var(--taskbar-h) + 6px);
+  z-index: 1001;
+  display: grid;
+  grid-template-columns: 250px 196px;
+  width: max-content;
+  max-height: calc(100vh - var(--taskbar-h) - 16px);
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(43, 120, 190, 0.7), rgba(6, 62, 112, 0.85));
+  backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow: 0 12px 40px rgba(0, 20, 50, 0.5);
+  animation: menu-up 160ms ease-out;
+}
+@keyframes menu-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.start-menu__apps {
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  border: 1px solid rgba(6, 62, 112, 0.4);
+  border-radius: 6px;
+  background: #fff;
+  overflow: auto;
+}
+.start-menu__app {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: none;
+  color: var(--color-ink);
+  font: 400 13.5px/1.2 var(--font-ui);
+  text-align: left;
+  cursor: pointer;
+}
+.start-menu__app img {
+  width: 32px;
+  height: 32px;
+}
+.start-menu__app:hover,
+.start-menu__app:focus-visible {
+  border-color: rgba(43, 166, 240, 0.5);
+  background: linear-gradient(180deg, #eaf7ff, #c9eaff);
+  box-shadow: none;
+}
+.start-menu__side {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 0 0 10px;
+  color: #fff;
+}
+.start-menu__user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: -34px 0 8px;
+}
+.start-menu__avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #dff4ff, #8fd3ff);
+  box-shadow: 0 2px 8px rgba(0, 20, 50, 0.5);
+}
+.start-menu__name {
+  font: 600 14px/1 var(--font-ui);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.start-menu__link {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.start-menu__link:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.1));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------- Mobile dock ---------------- */
+.dock {
+  display: none;
+}
+@media (max-width: 767px) {
+  .taskbar,
+  .start-menu {
+    display: none;
+  }
+  .dock {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 40;
+    display: flex;
+    justify-content: space-around;
+    height: 76px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(143, 211, 255, 0.45));
+    backdrop-filter: blur(16px) saturate(1.4);
+    box-shadow:
+      inset 0 1px 0 #fff,
+      0 8px 24px rgba(6, 62, 112, 0.3);
+  }
+  .dock .desk-icon {
+    width: 72px;
+    height: 60px;
+    padding: 0;
+    font-size: 11px;
+  }
+  .dock .desk-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}

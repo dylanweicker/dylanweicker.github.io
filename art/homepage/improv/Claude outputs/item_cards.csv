@@ -1,0 +1,41 @@
+Name,Cost (coins),Points,Corner icon,Effect
+Rough Map,1,1,1 boat,Exile this card to gain 3 compasses.
+Grappling Hook,2,2,1 car,Discard a card to draw 1 card and exile 1 card.
+Brush,3,3,1 car,"Gain 1 compass for each idol you have, up to 3."
+Parrot,2,2,1 boat,Discard a card to gain 1 jewel.
+Trowel,1,1,1 car,Pay 1 compass to gain 1 jewel.
+Horse,4,1,2 car,"Draw 1 card, gain 1 coin and gain 1 compass."
+Watch,1,1,1 boat,"Free action: gain 2 coins. OR: Pass to gain 3 coins."
+Torch,2,2,1 boat,Exile 1 card and gain 1 tablet.
+Whip,2,1,1 car,Exile this card to buy an artifact with a discount of 4 compasses.
+Pack Donkey,4,1,2 car,Draw 2 cards.
+Hat,1,1,1 boat,Free action: gain 1 coin and 1 compass.
+Tent,4,2,1 car,"Activate a site you occupy. If it is a tier 2 site, you must first pay 2 compasses."
+Gold Pan,1,1,2 boat,Free action: gain 2 coins.
+Flask,2,1,1 boat,Exile this card to draw 3 cards.
+Ostrich,3,1,2 car,"Draw 1 card. Then place an explorer, with a travel discount of 1 car."
+Journal,3,1,1 car + 1 boat,Exile this card to research with your notebook token for free.
+Chronometer,3,2,2 boat,"Free action: gain 1 coin and 1 compass. OR: Pass to gain 3 compasses."
+Revolver,4,1,2 boat,Pay 1 compass to overcome a guardian.
+Sea Turtle,3,1,2 boat,"Draw 1 card. Then place an explorer, with a travel discount of 1 boat."
+Bow and Arrows,2,2,1 car,"Gain 1 compass for each guardian on sites you occupy and each guardian you have overcome, up to 3."
+Automobile,3,3,2 car,Free action: gain 2 compasses.
+Sturdy Boots,1,1,2 car,"Gain 1 compass. Then place an explorer, with a travel discount of 2 boots."
+Axe,2,2,1 boat,Exile 1 card and gain 1 compass.
+Rope,2,1,1 boat,Discard a card to draw 2 cards.
+Dog,3,1,1 car,Gain 1 compass. Activate an unoccupied tier 0 site.
+Army Knife,3,1,1 car + 1 boat,"Choose two different options: exile 1 card, gain 1 coin, gain 1 compass, or gain 1 tablet."
+Bear Trap,2,1,1 car,Exile this card to overcome a guardian on a site not occupied by any other player.
+Precision Compass,4,1,1 boat,"Buy an artifact with a discount of 3 compasses. When choosing, include the top card of the artifact deck."
+Theodolite,3,1,1 boat,Gain 1 coin. Gain 1 compass for each of your explorers already placed on the board.
+Lantern,3,2,1 car,Activate any tier 0 site.
+Hot Air Balloon,2,1,1 plane,"Exile this card to place an explorer, with a travel discount of 1 plane. If discovering a new site, you also have a discount of 3 compasses."
+Aeroplane,4,3,2 plane,"Place an explorer, with a travel discount of 1 plane. If discovering a new site, you also have a discount of 2 compasses."
+Steam Boat,3,3,2 boat,Free action: gain 2 compasses.
+Pickaxe,1,1,1 car,Pay 1 compass to gain 1 tablet and 1 arrowhead.
+Fishing Rod,2,2,1 boat,"Buy an item with a discount of 3 coins. When choosing, include the top card of the item deck."
+Carrier Pigeon,2,1,1 boat,Free action: gain 2 tablets.
+Large Backpack,3,1,1 car,Gain 1 coin. Draw a card from the bottom of your deck.
+Airdrop,2,1,1 plane,Exile this card to gain an item to your hand.
+Machete,4,1,1 car,Exile 1 card and gain 2 compasses.
+Binoculars,4,1,1 boat,Activate any tier 1 site.

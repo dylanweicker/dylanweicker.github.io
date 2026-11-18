@@ -1,0 +1,769 @@
+/* Dylan's Interests: the 2006-style personal homepage inside the Interests browser.
+   Deliberately amateur layout (tiled background, WordArt, bevelled buttons, dashed boxes), in blue. */
+
+.hp {
+  min-height: 100%;
+  padding: 14px 10px 24px;
+  /* tiled little stars on pale blue */
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M12 4l1.6 4.4L18 10l-4.4 1.6L12 16l-1.6-4.4L6 10l4.4-1.6z' fill='%23ffffff' opacity='.95'/%3E%3Ccircle cx='36' cy='34' r='2' fill='%2366ccff'/%3E%3Ccircle cx='38' cy='10' r='1.3' fill='%23ff99cc'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #bfe3ff, #e3f4ff);
+  color: #1a2a3a;
+  font: 13px/1.55 Verdana, Tahoma, Geneva, sans-serif;
+}
+.hp__wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  border: 3px double #0066cc;
+  background: #fff;
+  box-shadow: 4px 4px 0 #99ccff;
+}
+.hp__header {
+  padding: 14px 10px 8px;
+  background: linear-gradient(180deg, #66ccff, #ccefff 55%, #b3dcff);
+  text-align: center;
+}
+.hp__title {
+  margin: 0;
+  color: #ffff66;
+  font: bold 38px/1.1 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive;
+  letter-spacing: 1px;
+  /* WordArt, basically */
+  text-shadow:
+    2px 2px 0 #0066cc,
+    -1px -1px 0 #0066cc,
+    1px -1px 0 #0066cc,
+    -1px 1px 0 #0066cc,
+    4px 4px 0 #003d80;
+}
+.gif-star {
+  display: inline-block;
+  color: #ffff00;
+  animation: gif-spin 2.4s linear infinite;
+}
+@keyframes gif-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hp__marquee {
+  overflow: hidden;
+  margin-top: 8px;
+  padding: 2px 0;
+  border: 1px dashed #0066cc;
+  background: #ffffcc;
+  color: #0055aa;
+  font: bold 12px/1.4 'Comic Sans MS', 'Comic Neue', cursive;
+  white-space: nowrap;
+}
+.hp__marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: gif-marquee 20s linear infinite;
+}
+.hp__marquee:hover span {
+  animation-play-state: paused;
+}
+@keyframes gif-marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Sidebar: chunky bevelled buttons straight out of an image-button generator */
+.hp__body {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  align-items: start;
+}
+.hp__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 100%;
+  padding: 12px 10px;
+  border-right: 2px solid #0066cc;
+  background: #d9eeff;
+}
+.hp__sidebar-title {
+  margin: 0 0 4px;
+  color: #0066cc;
+  font: bold 16px/1.2 'Comic Sans MS', 'Comic Neue', cursive;
+  text-align: center;
+  text-decoration: underline wavy #ff66b3;
+  text-underline-offset: 4px;
+}
+.hp__navgroup {
+  display: flex;
+  flex-direction: column;
+}
+.hp__navbtn {
+  width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+  border: 2px outset #66ccff;
+  background: linear-gradient(180deg, #ccf0ff, #3399ff);
+  color: #fff;
+  font: bold 13px/1.2 'Comic Sans MS', 'Comic Neue', cursive;
+  text-shadow: 1px 1px 0 #00447f;
+  cursor: pointer;
+}
+.hp__navbtn:hover {
+  background: linear-gradient(180deg, #ffffcc, #ffcc33);
+  color: #003366;
+  text-shadow: none;
+}
+.hp__navbtn:active,
+.hp__navbtn.is-on {
+  border-style: inset;
+  background: linear-gradient(180deg, #3399ff, #0055cc);
+  color: #ffff99;
+}
+.hp__rainbow {
+  height: 6px;
+  background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9933ff, #ff0000);
+  background-size: 200% 100%;
+  animation: gif-rainbow 3s linear infinite;
+}
+@keyframes gif-rainbow {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.hp__main {
+  min-width: 0;
+  padding: 14px 16px 6px;
+}
+.hp__box {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 2px dashed #3399ff;
+  background: #f5fbff;
+}
+.hp__box p {
+  margin: 0 0 8px;
+}
+.hp__h1 {
+  margin: 0 0 8px;
+  color: #0066cc;
+  font: bold 22px/1.25 'Comic Sans MS', 'Comic Neue', cursive;
+  text-decoration: underline wavy #ff66b3;
+  text-underline-offset: 5px;
+}
+.hp__h2 {
+  margin: -10px -12px 8px;
+  padding: 4px 10px;
+  background: linear-gradient(90deg, #0066cc, #33aaff);
+  color: #fff;
+  font: bold 15px/1.3 'Comic Sans MS', 'Comic Neue', cursive;
+}
+.hp__center {
+  text-align: center;
+}
+.hp__intro {
+  margin: 0 0 6px;
+  font-style: italic;
+  text-align: center;
+}
+.hp__toc {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-align: center;
+}
+.hp a {
+  color: #0000ee;
+}
+.hp a:hover {
+  background: #ffff99;
+  color: #ff0066;
+}
+.hp__tagline {
+  color: #d6338a;
+  font: italic bold 13px/1.4 Georgia, 'Times New Roman', serif;
+}
+.hp__subnav {
+  margin: 4px 0 4px 6px;
+  padding: 4px 6px 4px 14px;
+  border-left: 2px dotted #3399ff;
+  list-style: '» ';
+  font-size: 12px;
+}
+.hp__subnav li {
+  margin: 2px 0;
+}
+/* "web design is my passion": lovingly, deliberately misaligned */
+.hp__passion {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 6px 0 18px 37px;
+  padding: 14px 0 0 9px;
+  border: 3px ridge #c0c0c0;
+  background: linear-gradient(135deg, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9933ff);
+  line-height: 1;
+  overflow: hidden;
+}
+.hp__passion > span {
+  display: block;
+}
+.hp__passion-1 {
+  margin-left: 13px;
+  color: #ffff00;
+  font: bold 27px/1.1 'Comic Sans MS', 'Comic Neue', cursive;
+  text-shadow: 2px 2px 0 #000;
+  transform: rotate(-2deg);
+}
+.hp__passion-2 {
+  margin: 6px 0 0 104px;
+  color: #000080;
+  font: italic 40px/1 'Times New Roman', Times, serif;
+}
+.hp__passion-3 {
+  margin: 4px 0 0 3px;
+  color: #fff;
+  font: 48px/0.95 Papyrus, 'Herculanum', fantasy;
+  text-shadow:
+    3px 3px 0 #ff00ff,
+    -1px -1px 0 #000;
+  letter-spacing: 3px;
+}
+.hp__passion-catbtn {
+  position: absolute;
+  right: 11px;
+  top: 158px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transform: rotate(4deg);
+}
+.hp__passion-cat {
+  display: block;
+  width: 98px;
+  height: auto;
+  border: 2px solid #000;
+}
+.hp__meow {
+  position: absolute;
+  right: 70px;
+  top: 128px;
+  padding: 2px 8px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  background: #fff;
+  color: #000;
+  font: bold 14px/1.2 'Comic Sans MS', 'Comic Neue', cursive;
+}
+/* ---------- page blocks ---------- */
+.hp__tagline-big {
+  margin: 10px 0 6px;
+  color: #d6338a;
+  font: italic bold 14px/1.4 Georgia, 'Times New Roman', serif;
+}
+.hp-explore {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hp-explore__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+  padding: 8px 10px;
+  border: 2px outset #66ccff;
+  background: linear-gradient(180deg, #e6f7ff, #99d6ff);
+  color: #003366;
+  font: 12px/1.35 Verdana, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+.hp-explore__btn strong {
+  color: #0055cc;
+  font: bold 15px/1.2 'Comic Sans MS', 'Comic Neue', cursive;
+}
+.hp-explore__btn:hover {
+  background: linear-gradient(180deg, #ffffcc, #ffcc33);
+}
+.hp-explore__btn:active {
+  border-style: inset;
+}
+
+/* Feature: big picture + text */
+.hp-feature {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.hp-feature--noimg {
+  grid-template-columns: 1fr;
+  padding: 8px 12px;
+  border: 3px double #3399ff;
+  background: #eef8ff;
+}
+.hp-feature__label {
+  display: inline-block;
+  margin: 0 0 4px !important;
+  padding: 0 6px;
+  background: #ff66b3;
+  color: #fff;
+  font: bold 11px/1.6 Verdana, sans-serif;
+  text-transform: uppercase;
+}
+.hp-feature__title {
+  margin: 0 !important;
+  color: #0066cc;
+  font: bold 22px/1.2 'Comic Sans MS', 'Comic Neue', cursive;
+}
+.hp-feature__subtitle {
+  margin: 0 0 6px !important;
+  color: #555;
+  font-style: italic;
+}
+
+/* Cards */
+.hp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px;
+  margin: 4px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.hp-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px ridge #99ccff;
+  background: #fff;
+}
+.hp-card--featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  border-color: #ffcc33;
+  background: #fffdf0;
+}
+.hp-card__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.hp-card--featured .hp-card__photo {
+  flex: 0 0 220px;
+}
+.hp-card__body {
+  padding: 8px 10px;
+}
+.hp-card__body p {
+  margin: 0 0 6px;
+}
+.hp-card__title {
+  color: #0055cc;
+  font: bold 15px/1.3 'Comic Sans MS', 'Comic Neue', cursive;
+}
+.hp-card--featured .hp-card__title {
+  font-size: 20px;
+}
+.hp-card__jump {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #0000ee;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hp-card__subtitle {
+  color: #d6338a;
+  font-style: italic;
+}
+.hp-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.hp-card__meta span {
+  padding: 0 5px;
+  border: 1px solid #99ccff;
+  background: #eef8ff;
+  color: #003366;
+  font-size: 11px;
+}
+.hp-card__facts {
+  margin: 0 0 6px;
+  font-size: 12px;
+}
+.hp-card__facts dt {
+  display: inline;
+  font-weight: bold;
+}
+.hp-card__facts dd {
+  display: inline;
+  margin: 0;
+}
+.hp-card__spoiler span {
+  display: block;
+  margin-top: 4px;
+  padding: 4px 6px;
+  background: #f3f3f3;
+  font-size: 12px;
+}
+
+/* Photos: polaroids that open the lightbox */
+.hp-photo {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.hp-feature__img img {
+  display: block;
+  width: 100%;
+  border: 4px solid #fff;
+  box-shadow: 3px 3px 0 #99ccff;
+}
+.hp-album {
+  margin-bottom: 10px;
+}
+.hp-album__title {
+  margin: 0 0 4px !important;
+  color: #0066cc;
+  font: bold 14px/1.3 'Comic Sans MS', 'Comic Neue', cursive;
+}
+.hp-album__title small {
+  color: #667;
+  font: 11px Verdana, sans-serif;
+}
+.hp-photos,
+.hp-picks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin: 4px 0 10px;
+  padding: 4px;
+  list-style: none;
+}
+.hp-photos .hp-photo,
+.hp-picks .hp-photo {
+  padding: 5px 5px 3px;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 3px 3px 0 #99ccff;
+  transform: rotate(-1.5deg);
+}
+.hp-photos li:nth-child(even) .hp-photo,
+.hp-picks li:nth-child(even) .hp-photo {
+  transform: rotate(1.5deg);
+}
+.hp-photos img,
+.hp-picks img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.hp-picks img {
+  object-fit: contain;
+  background: #f4f8fc;
+}
+.hp-photos .hp-photo span,
+.hp-picks .hp-photo span {
+  display: block;
+  padding-top: 3px;
+  color: #333;
+  font: 11px/1.3 'Comic Sans MS', 'Comic Neue', cursive;
+  text-align: center;
+}
+
+/* Steam favourites */
+.hp-steam {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 4px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.hp-steam li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+.hp-steam a {
+  color: #0000ee;
+}
+.hp-steam img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3px;
+  border: 2px ridge #99ccff;
+}
+
+/* Tables and lists */
+.hp-table {
+  width: 100%;
+  margin: 4px 0 10px;
+  border: 2px ridge #99ccff;
+  border-collapse: collapse;
+  background: #fff;
+}
+.hp-table th,
+.hp-table td {
+  padding: 4px 8px;
+  border: 1px solid #cce4ff;
+  text-align: left;
+}
+.hp-table thead th {
+  background: #0066cc;
+  color: #fff;
+  font: bold 12px/1.4 Verdana, sans-serif;
+}
+.hp-table tbody th {
+  width: 35%;
+  color: #0055cc;
+}
+.hp-table tbody tr:nth-child(even) {
+  background: #eef8ff;
+}
+.hp-list__title {
+  margin: 0 0 2px !important;
+  font-weight: bold;
+}
+.hp-list {
+  margin: 0 0 10px;
+  padding-left: 22px;
+}
+
+/* Lightbox: a 2006 pop-up window */
+.hp-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(10, 30, 60, 0.45);
+}
+.hp-lightbox__win {
+  max-width: min(900px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  border: 3px double #0066cc;
+  background: #fff;
+  box-shadow: 6px 6px 0 #99ccff;
+  font: 13px/1.5 Verdana, sans-serif;
+}
+.hp-lightbox__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 4px 4px 10px;
+  background: linear-gradient(90deg, #0066cc, #33aaff);
+  color: #fff;
+  font: bold 14px/1.3 'Comic Sans MS', 'Comic Neue', cursive;
+}
+.hp-lightbox__bar button {
+  width: 24px;
+  height: 22px;
+  padding: 0;
+  border: 2px outset #ffb3b3;
+  background: linear-gradient(180deg, #ff9999, #e03c3c);
+  color: #fff;
+  font: bold 16px/1 Verdana, sans-serif;
+  cursor: pointer;
+}
+.hp-lightbox__img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 140px);
+  margin: 8px auto;
+}
+.hp-lightbox__nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 10px;
+}
+
+@container (max-width: 640px) {
+  .hp-card--featured {
+    flex-direction: column;
+  }
+  .hp-card--featured .hp-card__photo {
+    flex: none;
+  }
+  .hp-feature {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hp__links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.hp__applink {
+  padding: 4px 12px;
+  border: 2px outset #66ccff;
+  background: linear-gradient(180deg, #ccffff, #66ccff);
+  color: #003366;
+  font: bold 13px/1.3 'Comic Sans MS', 'Comic Neue', cursive;
+  cursor: pointer;
+}
+.hp__applink:hover {
+  background: linear-gradient(180deg, #ffffcc, #ffcc33);
+}
+.hp__applink:active {
+  border-style: inset;
+}
+.hp__link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #0000ee;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hp__link-btn:hover {
+  background: #ffff99;
+  color: #ff0066;
+}
+.hp__construction {
+  padding: 6px 8px;
+  border: 2px solid #000;
+  background: repeating-linear-gradient(-45deg, #ffcc00 0 12px, #222 12px 24px);
+  background-size: 34px 34px;
+  text-align: center;
+  animation: gif-stripes 1s linear infinite;
+}
+.hp__construction-label {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #000;
+  background: #ffcc00;
+  color: #000;
+  font: bold 12px/1.4 Verdana, sans-serif;
+}
+@keyframes gif-stripes {
+  to {
+    background-position: 34px 0;
+  }
+}
+.hp__top {
+  margin: 0 !important;
+  font-size: 11px;
+  text-align: right;
+}
+
+.hp__footer {
+  padding: 10px 12px 12px;
+  border-top: 2px solid #0066cc;
+  background: #e6f3ff;
+  font-size: 11px;
+  text-align: center;
+}
+.hp__footer p {
+  margin: 0 0 6px;
+}
+.hp__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.hp__counter {
+  display: block;
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: 11px Verdana, sans-serif;
+  text-align: center;
+  cursor: default;
+}
+.hp__secret {
+  margin: 6px 0 0;
+  padding: 4px 6px;
+  border: 1px dashed #ff66b3;
+  background: #fff0fa;
+  color: #a0005a;
+  font: bold 11px/1.4 'Comic Sans MS', 'Comic Neue', cursive;
+  text-align: center;
+}
+.hp__hidden-link {
+  margin-left: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  /* the same colour as the footer, so you have to go looking */
+  color: #e6f3ff;
+  font: inherit;
+  cursor: pointer;
+}
+.hp__hidden-link:hover,
+.hp__hidden-link:focus-visible {
+  color: #0000ee;
+}
+.hp__digits {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  gap: 1px;
+  vertical-align: middle;
+}
+.hp__digits span {
+  display: inline-block;
+  width: 12px;
+  padding: 1px 0;
+  background: #000;
+  color: #33ff33;
+  font: 13px/1 var(--font-retro);
+  text-align: center;
+}
+.hp__copyright {
+  color: #555;
+}
+
+@container (max-width: 640px) {
+  .hp__body {
+    grid-template-columns: 1fr;
+  }
+  .hp__sidebar {
+    flex-flow: row wrap;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 2px solid #0066cc;
+  }
+  .hp__navgroup,
+  .hp__sidebar > .hp__navbtn {
+    width: auto;
+  }
+  .hp__subnav,
+  .hp__counter {
+    display: none;
+  }
+  .hp__title {
+    font-size: 26px;
+  }
+}
+
+/* The browser's Stop button pauses every animation on the page */
+.ie__page.is-paused * {
+  animation-play-state: paused !important;
+}

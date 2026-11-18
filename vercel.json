@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.dylanweicker.ca" }],
+      "destination": "https://dylanweicker.ca/:path*",
+      "permanent": true
+    }
+  ]
+}

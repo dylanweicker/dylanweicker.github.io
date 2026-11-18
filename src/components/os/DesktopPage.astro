@@ -1,0 +1,22 @@
+---
+// One pre-rendered page per window route. The desktop island is server-rendered with that
+// window already open, so crawlers and link previews see the real content.
+import Base from '@/layouts/Base.astro';
+import Desktop from './Desktop';
+import { getSiteContent } from '@/lib/content';
+
+interface Props {
+  path: string;
+  title: string;
+  description: string;
+}
+
+const { path, title, description } = Astro.props;
+const content = await getSiteContent();
+---
+
+<Base title={title} description={description}>
+  <link slot="head" rel="preload" as="image" href="/scene/background.webp" fetchpriority="high" />
+  <a class="skip-link" href="#desktop">Skip to content</a>
+  <Desktop client:load initialPath={path} content={content} />
+</Base>

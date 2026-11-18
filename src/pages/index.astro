@@ -1,0 +1,7 @@
+---
+import DesktopPage from '@/components/os/DesktopPage.astro';
+import { appsById } from '@/data/apps';
+import { profile } from '@/data/profile';
+---
+
+<DesktopPage path="/" title={`${profile.name} · DylanOS`} description={appsById.about.description} />

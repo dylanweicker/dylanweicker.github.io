@@ -1,0 +1,52 @@
+---
+import Base from '@/layouts/Base.astro';
+---
+
+<Base title="Page not found · DylanOS" description="This page doesn't exist." bodyClass="error-page">
+  <div class="wallpaper" aria-hidden="true"></div>
+  <main class="error-dialog win is-focused" role="alertdialog" aria-labelledby="err-title" aria-describedby="err-desc">
+    <header class="win__titlebar">
+      <img class="win__icon" src="/icons/warning.png" alt="" width="18" height="18" />
+      <h1 id="err-title" class="win__title">DylanOS</h1>
+    </header>
+    <div class="win__body error-dialog__body">
+      <img src="/icons/dolphin.png" alt="" width="72" height="72" />
+      <div>
+        <p id="err-desc"><strong>DylanOS cannot find this page.</strong></p>
+        <p>The dolphin looked everywhere. Check the address, or head back to the desktop.</p>
+        <p><a class="gloss-btn" href="/">Back to the desktop</a></p>
+      </div>
+    </div>
+  </main>
+</Base>
+
+<style is:global>
+  .error-page .wallpaper {
+    background: #3aa7ee url('/scene/background.webp') center / cover;
+  }
+  .error-dialog {
+    position: fixed !important;
+    left: 50%;
+    top: 45%;
+    width: min(460px, calc(100vw - 32px));
+    translate: -50% -50%;
+    z-index: 2;
+  }
+  .error-dialog__body {
+    display: flex;
+    gap: 16px;
+    padding: 18px;
+  }
+  .error-dialog__body p {
+    margin: 0 0 10px;
+  }
+  @media (max-width: 767px) {
+    .error-dialog {
+      inset: auto !important;
+      left: 50% !important;
+      top: 45% !important;
+      width: min(460px, calc(100vw - 32px)) !important;
+      border-radius: 10px;
+    }
+  }
+</style>

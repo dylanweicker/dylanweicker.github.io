@@ -1,0 +1,302 @@
+/* Context menus, notifications and the shut-down screen */
+
+/* ---------------- Context menu (Vista style) ---------------- */
+.ctx-menu {
+  position: fixed;
+  z-index: 3000;
+  min-width: 210px;
+  padding: 3px;
+  border: 1px solid #97a5b9;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f1f6fb 0 28px, #fbfdff 28px);
+  box-shadow: 2px 4px 12px rgba(6, 62, 112, 0.3);
+  font: 400 13px/1 var(--font-ui);
+  animation: ctx-in 120ms ease-out;
+}
+@keyframes ctx-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+}
+.ctx-menu__item {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 6px 10px 6px 2px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: none;
+  color: var(--color-ink);
+  font: inherit;
+  text-align: left;
+  cursor: default;
+}
+.ctx-menu__item.is-primary {
+  font-weight: 700;
+}
+.ctx-menu__item:hover:not(:disabled),
+.ctx-menu__item:focus-visible {
+  border-color: #a8d8f8;
+  background: linear-gradient(180deg, #eef8ff, #cfeafd);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+.ctx-menu__item:disabled {
+  color: #9aa6b4;
+}
+.ctx-menu__check {
+  text-align: center;
+  color: var(--color-sky-700);
+}
+.ctx-menu__shortcut {
+  color: var(--color-ink-soft);
+  font-size: 12px;
+}
+.ctx-menu__sep {
+  height: 1px;
+  margin: 3px 2px 3px 30px;
+  background: #d5dde7;
+}
+
+/* ---------------- Notifications ---------------- */
+.notify-area {
+  position: fixed;
+  right: 12px;
+  bottom: calc(var(--taskbar-h) + 10px);
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  width: min(330px, calc(100vw - 24px));
+  pointer-events: none;
+}
+.notify-area > * {
+  pointer-events: auto;
+}
+
+/* Tray balloon tip */
+.balloon {
+  position: relative;
+  width: 100%;
+  padding: 10px 14px 10px 12px;
+  border: 1px solid #8fa5bd;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff, #e9f5ff);
+  box-shadow: 0 6px 18px rgba(6, 62, 112, 0.3);
+  color: var(--color-ink);
+  font-size: 12.5px;
+  animation: pop-in 220ms ease-out;
+}
+.balloon::after {
+  /* tail pointing at the tray */
+  content: '';
+  position: absolute;
+  right: 40px;
+  bottom: -9px;
+  width: 16px;
+  height: 16px;
+  background: #e9f5ff;
+  border-right: 1px solid #8fa5bd;
+  border-bottom: 1px solid #8fa5bd;
+  transform: rotate(45deg);
+}
+.balloon__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.balloon ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.balloon__hint {
+  margin: 6px 0 0;
+  color: var(--color-ink-soft);
+  font-size: 11.5px;
+  text-align: right;
+}
+
+/* "Dylan says" toast */
+.toast {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #7fa6c9;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #f4fbff, #d9effd);
+  box-shadow: 0 8px 22px rgba(6, 62, 112, 0.35);
+  animation: toast-up 320ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+.toast__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  background: linear-gradient(180deg, #8fd3ff, #2ba6f0 55%, #1b8fdb);
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  text-shadow: 0 1px 1px rgba(6, 62, 112, 0.6);
+}
+.toast__close {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  width: 22px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  color: inherit;
+  font: 600 16px/1 var(--font-ui);
+  cursor: pointer;
+}
+.balloon .toast__close {
+  color: var(--color-ink-soft);
+}
+.toast__close:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.toast__body {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  background: none;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+.toast__body strong {
+  display: block;
+  color: var(--color-sky-700);
+}
+.toast__body:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.toast__pic {
+  flex: none;
+  object-fit: cover;
+  border: 2px solid var(--color-grass-400);
+  border-radius: 8px;
+  background: #fff;
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(6px);
+  }
+}
+@keyframes toast-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+@media (max-width: 767px) {
+  .notify-area {
+    bottom: 100px;
+    z-index: 1500;
+  }
+  /* The tip describes mouse gestures; phones use the launcher */
+  .balloon {
+    display: none;
+  }
+}
+
+/* ---------------- Start menu power button ---------------- */
+.start-menu__power {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto; /* sits at the bottom of the side column */
+  padding: 6px 10px;
+  border: 1px solid rgba(120, 20, 10, 0.6);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f1a59a 0 45%, #d24b3a 50%, #e5786a);
+  color: #fff;
+  font: 600 13px/1 var(--font-ui);
+  text-shadow: 0 1px 1px rgba(120, 20, 10, 0.6);
+  cursor: pointer;
+  align-self: flex-end;
+}
+.start-menu__power:hover {
+  box-shadow: inset 0 0 8px rgba(255, 220, 150, 0.9);
+}
+.start-menu__power-icon {
+  font-size: 15px;
+}
+
+/* ---------------- Shut down ---------------- */
+.shutdown {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(63, 224, 208, 0.35), transparent 55%),
+    linear-gradient(180deg, #0b6fb8, #063e70 60%, #04294a);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 500ms ease-out;
+}
+.shutdown__orb {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 120%, #7fe6f0 0%, #2ba6f0 40%, #0b4f8f 85%) padding-box,
+    conic-gradient(from 200deg, #ff6b6b, #ffb86b, #ffe36e, #7bd148, #3fe0d0, #2ba6f0, #b79cff, #ff6b6b) border-box;
+  font: 700 38px/1 var(--font-display);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 40px rgba(63, 224, 208, 0.5);
+  animation: orb-breathe 2s ease-in-out infinite;
+}
+.shutdown__msg {
+  margin: 0;
+  font: 500 24px/1.3 var(--font-display);
+}
+/* Once it's safe to close the tab, the orb stops breathing */
+.shutdown.is-off .shutdown__orb {
+  animation: none;
+}
+.shutdown.is-off .shutdown__msg {
+  margin-bottom: 8px;
+}
+@keyframes orb-breathe {
+  50% {
+    transform: scale(0.92);
+    box-shadow: 0 0 70px rgba(63, 224, 208, 0.8);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.gloss-btn:disabled {
+  filter: grayscale(0.8) opacity(0.6);
+  cursor: default;
+  box-shadow: none;
+}

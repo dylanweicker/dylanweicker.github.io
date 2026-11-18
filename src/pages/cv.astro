@@ -1,0 +1,79 @@
+---
+import Base from '@/layouts/Base.astro';
+import { ResumeDoc } from '@/components/apps/ResumeDoc';
+import { profile } from '@/data/profile';
+import { getSiteContent } from '@/lib/content';
+
+const { work } = await getSiteContent();
+---
+
+<Base title={`${profile.name} · Résumé`} description={`Résumé of ${profile.name}, ${profile.role}.`} bodyClass="cv-page">
+  <main>
+    <p class="cv-actions">
+      <a href="/">← Back to DylanOS</a>
+      <button type="button" class="gloss-btn" onclick="window.print()">Print / Save as PDF</button>
+    </p>
+    <ResumeDoc work={work} />
+  </main>
+</Base>
+
+<style is:global>
+  body.cv-page {
+    overflow: auto;
+    background: linear-gradient(180deg, #bfe6ff, #f2faff 320px);
+  }
+  .cv-page main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+  .cv-page .resume {
+    padding: 40px 48px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(11, 111, 184, 0.2);
+  }
+  .cv-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 16px;
+  }
+  .cv-actions a {
+    color: var(--color-sky-700);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .cv-page .resume {
+      padding: 22px 18px;
+    }
+  }
+  @media print {
+    body.cv-page {
+      background: #fff;
+    }
+    .cv-page main {
+      padding: 0;
+    }
+    .cv-actions {
+      display: none;
+    }
+    .cv-page .resume {
+      padding: 0;
+      box-shadow: none;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .cv-page .resume h4 {
+      margin: 12px 0 4px;
+      break-after: avoid;
+    }
+    .cv-page .resume li {
+      break-inside: avoid;
+    }
+    .cv-page .resume a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+</style>

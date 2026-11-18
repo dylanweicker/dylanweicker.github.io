@@ -1,0 +1,14 @@
+# What `vercel deploy` uploads from this folder: only what `astro build` needs.
+# Source art (art/), the moodboard and the asset scripts stay on this machine.
+/*
+!/src
+!/public
+!/package.json
+!/package-lock.json
+!/astro.config.mjs
+!/tsconfig.json
+!/vercel.json
+
+# Stray dev-server caches that ended up inside public/
+public/**/.astro
+public/**/node_modules

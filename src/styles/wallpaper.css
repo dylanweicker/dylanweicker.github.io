@@ -1,0 +1,294 @@
+/* Wallpaper scene (DESIGN.md §3.5). See components/os/Wallpaper.tsx for the layering. */
+
+.wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #3aa7ee;
+  container-type: size;
+}
+
+/* The scene box behaves like `object-fit: cover` for the 1916×821 painting, so every layer inside
+   can be placed in the painting's own coordinates (%, or cqh = 1% of the scene's height). */
+.scene {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max(100cqw, 100cqh * 2.3337);
+  height: max(100cqh, 100cqw / 2.3337);
+  translate: -50% -50%;
+  container-type: size;
+}
+.scene__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Twinkles on the wave crests: a soft glow with a four-point star, centred exactly on the glint */
+.twinkle {
+  position: absolute;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 8%, rgba(200, 240, 255, 0.45) 22%, rgba(255, 255, 255, 0) 55%);
+  pointer-events: none;
+  opacity: 0;
+  animation: twinkle 3.6s ease-in-out infinite;
+}
+.twinkle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  clip-path: polygon(50% 0, 56% 44%, 100% 50%, 56% 56%, 50% 100%, 44% 56%, 0 50%, 44% 44%);
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.3) rotate(0deg);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1) rotate(30deg);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+}
+
+/* The painted sun is a button: poke it for a dolphin */
+.scene__sun {
+  position: absolute;
+  left: 78.8%;
+  top: 2%;
+  width: 18cqh;
+  height: 18cqh;
+  translate: -50% -50%;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 240, 0.45), rgba(255, 255, 255, 0) 65%);
+  cursor: pointer;
+  animation: sun-pulse 6s ease-in-out infinite;
+}
+.scene__sun:hover {
+  background: radial-gradient(circle, rgba(255, 255, 235, 0.9), rgba(255, 255, 255, 0) 70%);
+}
+@keyframes sun-pulse {
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+/* ---------------- The dolphin leap ---------------- */
+/* Everything below --leap-line is clipped away, so the sea hides the dolphin's way in and out. */
+.scene__above-water {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--leap-line);
+  overflow: hidden;
+  pointer-events: none;
+}
+.leap {
+  /* positions inside are set per leap, in scene pixels from the left edge */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.leap__dolphin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 11cqh;
+  aspect-ratio: 329 / 360;
+  opacity: 0;
+}
+.leap__dolphin img {
+  width: 100%;
+  height: 100%;
+  /* the art points nose-up-right; turn it to face along +x so the arc rotation steers it */
+  transform: rotate(48deg);
+  filter: drop-shadow(0 3px 5px rgba(6, 62, 112, 0.35));
+}
+.leap__splash {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 7cqh;
+  height: 5cqh;
+  opacity: 0;
+  transform-origin: 50% 100%;
+  background:
+    radial-gradient(ellipse 30% 60% at 28% 70%, rgba(255, 255, 255, 0.75), transparent 70%),
+    radial-gradient(ellipse 30% 60% at 72% 70%, rgba(255, 255, 255, 0.75), transparent 70%),
+    radial-gradient(ellipse 40% 95% at 50% 100%, rgba(255, 255, 255, 0.95) 0 30%, rgba(225, 246, 255, 0.6) 55%, transparent 78%);
+  filter: blur(0.6px);
+}
+.leap__sparkle {
+  position: absolute;
+  color: #fff;
+  font-size: 3cqh;
+  line-height: 1;
+  opacity: 0;
+  text-shadow:
+    0 0 8px var(--color-dolphin),
+    0 0 14px #fff;
+}
+
+/* ---------------- Underwater ---------------- */
+.scene__underwater {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  /* Only below the water surface, which curves down from the horizon (traced from the painting) */
+  mask-image: url('/scene/underwater-mask.svg');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+/* Single bubbles rise from the bottom of the screen; the mask fades them out as they reach the surface */
+.bubble {
+  position: absolute;
+  bottom: 0;
+  aspect-ratio: 1;
+  opacity: 0;
+  animation: bubble-rise linear infinite;
+  will-change: transform, opacity;
+}
+.bubble--far {
+  /* faint clusters further back, behind the fish */
+  filter: blur(0.5px) brightness(1.1);
+  animation-name: bubble-rise-far;
+}
+@keyframes bubble-rise-far {
+  0% {
+    transform: translateY(10cqh);
+    opacity: 0;
+  }
+  8%,
+  100% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-50cqh);
+  }
+}
+.bubble img {
+  width: 100%;
+  height: 100%;
+  animation: bubble-sway ease-in-out infinite alternate;
+}
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(8cqh);
+    opacity: 0;
+  }
+  5%,
+  100% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(-52cqh);
+  }
+}
+@keyframes bubble-sway {
+  from {
+    translate: -1.2cqh 0;
+  }
+  to {
+    translate: 1.2cqh 0;
+  }
+}
+
+/* Fish: two slices of the same sprite hinged at the tail joint. Rotating them in Y in opposite
+   directions under perspective swings the tail and head towards and away from the viewer. */
+.fish {
+  position: absolute;
+  left: 50%;
+  opacity: calc(1 - var(--haze) * 0.3);
+  filter: hue-rotate(var(--hue, 0deg)) saturate(calc(1 - var(--haze) * 0.35)) brightness(calc(1 + var(--haze) * 0.1))
+    blur(calc(var(--haze) * 1.2px));
+  animation: swim linear infinite;
+  will-change: transform;
+}
+@keyframes swim {
+  from {
+    transform: translateX(var(--from));
+  }
+  to {
+    transform: translateX(var(--to));
+  }
+}
+.fish__bob {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: fish-bob 5s ease-in-out infinite alternate;
+}
+@keyframes fish-bob {
+  from {
+    transform: translateY(-0.9cqh) rotate(-2deg);
+  }
+  to {
+    transform: translateY(0.9cqh) rotate(2deg);
+  }
+}
+.fish__3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 30cqh;
+}
+.fish__part {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.fish__tail {
+  animation-name: tail-wag;
+}
+.fish__head {
+  animation-name: head-yaw;
+}
+@keyframes tail-wag {
+  from {
+    transform: rotateY(34deg);
+  }
+  to {
+    transform: rotateY(-34deg);
+  }
+}
+@keyframes head-yaw {
+  from {
+    transform: rotateY(-9deg);
+  }
+  to {
+    transform: rotateY(9deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fish,
+  .bubble,
+  .twinkle {
+    display: none;
+  }
+  .scene__sun {
+    animation: none;
+  }
+}

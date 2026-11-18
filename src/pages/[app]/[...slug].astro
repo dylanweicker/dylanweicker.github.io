@@ -1,0 +1,32 @@
+---
+import type { GetStaticPaths } from 'astro';
+import DesktopPage from '@/components/os/DesktopPage.astro';
+import { apps } from '@/data/apps';
+import { getSiteContent } from '@/lib/content';
+import { categories } from '@/data/homepage';
+
+export const getStaticPaths = (async () => {
+  const content = await getSiteContent();
+  const appPages = apps.map((app) => ({
+    params: { app: app.id, slug: undefined },
+    props: { title: `${app.title} · Dylan Weicker`, description: app.description },
+  }));
+  const casePages = (['work', 'projects'] as const).flatMap((app) =>
+    content[app].map((item) => ({
+      params: { app, slug: item.slug },
+      props: { title: `${item.title} · Dylan Weicker`, description: item.summary },
+    })),
+  );
+  const homepagePages = categories.map((c) => ({
+    params: { app: 'homepage', slug: c.id },
+    props: { title: `${c.label} · Dylan's Interests · Dylan Weicker`, description: c.intro },
+  }));
+  return [...appPages, ...casePages, ...homepagePages];
+}) satisfies GetStaticPaths;
+
+const { title, description } = Astro.props;
+const { app, slug } = Astro.params;
+const path = slug ? `/${app}/${slug}/` : `/${app}/`;
+---
+
+<DesktopPage path={path} title={title} description={description} />

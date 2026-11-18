@@ -1,0 +1,19 @@
+---
+// Stand-alone Game Shelf, outside the desktop, for sharing with game-night friends.
+import Base from '@/layouts/Base.astro';
+import { BoardGameShelf } from '@/components/apps/BoardGameShelf';
+import { profile } from '@/data/profile';
+---
+
+<Base title={`${profile.name} · Game Shelf`} description="Dylan Weicker's board game collection: search, sort and filter by player count and length." bodyClass="shelf-page">
+  <main class="shelf-page__wrap">
+    <h1 class="shelf-page__title">Game Shelf</h1>
+    <div class="shelf-window">
+      <p class="shelf-window__intro">
+        These are the board games I own. Search, sort, or filter by player count and length to find something for game night, and
+        click any box for the details.
+      </p>
+      <BoardGameShelf client:load />
+    </div>
+  </main>
+</Base>

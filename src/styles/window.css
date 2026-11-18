@@ -1,0 +1,404 @@
+/* Desktop surface, icons and glass windows (DESIGN.md §3.4, §4.2–4.4) */
+
+.desktop {
+  position: fixed;
+  inset: 0 0 var(--taskbar-h) 0;
+  z-index: 1;
+  /* let clicks through to the wallpaper (the sun is a button) */
+  pointer-events: none;
+}
+.desktop > * {
+  pointer-events: auto;
+}
+
+/* ---------------- Desktop icons ---------------- */
+/* The layer spans the desktop but lets clicks through to the wallpaper (drag-select, right-click). */
+.desktop > .icon-grid {
+  pointer-events: none;
+}
+.icon-grid {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.desk-item {
+  position: absolute;
+  /* cells are 96×104 with a 12px margin (stores/desktop.ts); clamped so icons stay on screen */
+  left: min(calc(12px + var(--col) * 96px), 100% - 96px);
+  top: min(calc(12px + var(--row) * 104px), 100% - 104px);
+  pointer-events: auto;
+}
+.desk-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 92px;
+  height: 100px;
+  padding: 6px 4px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: #fff;
+  font: 500 12.5px/1.25 var(--font-ui);
+  text-align: center;
+  text-shadow:
+    0 1px 2px rgba(0, 25, 55, 0.95),
+    0 0 4px rgba(0, 25, 55, 0.85),
+    0 0 10px rgba(6, 62, 112, 0.6);
+  cursor: default;
+  user-select: none;
+  touch-action: manipulation;
+}
+.desk-icon img {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0 4px 4px rgba(6, 62, 112, 0.35));
+  -webkit-user-drag: none;
+}
+.desk-icon__label {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-wrap: anywhere;
+}
+.desk-icon__lock {
+  position: absolute;
+  top: 40px;
+  left: 54px;
+  font-size: 13px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+}
+.desk-icon:hover {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(143, 211, 255, 0.25));
+}
+.desk-icon.is-selected,
+.desk-icon:focus-visible {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(180deg, rgba(143, 211, 255, 0.6), rgba(43, 166, 240, 0.5));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.desk-icon:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+.desk-icon.is-dragging {
+  opacity: 0.7;
+}
+
+/* Drag-select rectangle */
+.marquee {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgba(143, 211, 255, 0.35), rgba(43, 166, 240, 0.25));
+  box-shadow:
+    inset 0 0 0 1px rgba(43, 166, 240, 0.6),
+    0 0 8px rgba(63, 224, 208, 0.4);
+  pointer-events: none !important;
+}
+
+/* ---------------- Windows ---------------- */
+.win {
+  position: absolute;
+  z-index: var(--z);
+  display: flex;
+  flex-direction: column;
+  padding: 0 7px 7px;
+  border: 1px solid rgba(11, 111, 184, 0.45);
+  border-radius: 10px;
+  /* Unfocused: static tinted glass (cheap) */
+  background: linear-gradient(180deg, rgba(214, 236, 252, 0.94), rgba(190, 222, 246, 0.94));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+    0 6px 20px rgba(11, 111, 184, 0.18);
+  animation: win-open 180ms ease-out;
+}
+.win.is-focused {
+  /* Focused: live blur (DESIGN.md §4.3) */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(183, 222, 250, 0.55));
+  backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.75),
+    var(--shadow-window);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .win.is-focused {
+    background: linear-gradient(180deg, rgba(225, 242, 255, 0.97), rgba(196, 228, 250, 0.97));
+  }
+}
+.win::before {
+  /* Wet gloss band across the frame top */
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 30px;
+  border-radius: 9px 9px 0 0;
+  background: var(--gloss);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.win.is-maximized {
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0;
+}
+/* Aero Snap: the glass outline showing where a window dragged to the top edge will maximize */
+.snap-preview {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(190, 225, 255, 0.18));
+  box-shadow:
+    inset 0 0 0 1px rgba(11, 111, 184, 0.3),
+    0 0 24px rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  animation: snap-preview-in 160ms ease-out;
+}
+@keyframes snap-preview-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snap-preview {
+    animation: none;
+  }
+}
+@keyframes win-open {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(8px);
+  }
+}
+
+.win__titlebar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 0 0 4px;
+  user-select: none;
+  touch-action: none;
+}
+.win__icon {
+  width: 18px;
+  height: 18px;
+}
+.win__title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font: 400 13px/1 var(--font-ui);
+  color: var(--color-ink);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 0 10px #fff, 0 0 4px #fff;
+}
+.win:not(.is-focused) .win__title {
+  color: var(--color-ink-soft);
+}
+
+/* Caption buttons: Vista-style joined glass pills */
+.win__controls {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 1px;
+  border: 1px solid rgba(6, 62, 112, 0.45);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.win__btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid rgba(6, 62, 112, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0 45%, rgba(190, 220, 245, 0.75) 50%, rgba(220, 238, 252, 0.8));
+  color: #24476b;
+  cursor: pointer;
+}
+.win__btn:first-child {
+  border-left: 0;
+}
+.win__btn:hover {
+  background: linear-gradient(180deg, #e9f8ff 0 45%, #7fd0ff 50%, #b8ecff);
+  box-shadow: inset 0 0 8px rgba(63, 224, 208, 0.8);
+}
+.win__btn--close {
+  width: 44px;
+  color: #fff;
+  background: linear-gradient(180deg, #f1a59a 0 45%, #d24b3a 50%, #e5786a);
+}
+.win__btn--close:hover {
+  background: linear-gradient(180deg, #ffbcb0 0 45%, #ea3a26 50%, #ff8a70);
+  box-shadow: inset 0 0 8px rgba(255, 220, 150, 0.9);
+}
+.win__btn svg {
+  width: 10px;
+  height: 10px;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7));
+}
+.win__btn--close svg {
+  filter: drop-shadow(0 1px 1px rgba(120, 20, 10, 0.6));
+}
+.win__back {
+  display: none;
+}
+
+.win__body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid rgba(11, 111, 184, 0.35);
+  border-radius: 3px;
+  background: var(--color-sky-50);
+  color: var(--color-ink);
+  font-size: 14px;
+  line-height: 1.55;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+/* Resize grips: invisible strips just inside the frame on the left, right and bottom */
+.win__resize {
+  position: absolute;
+  touch-action: none;
+}
+.win__resize--w,
+.win__resize--e {
+  top: 34px;
+  bottom: 14px;
+  width: 8px;
+  cursor: ew-resize;
+}
+.win__resize--w {
+  left: -3px;
+}
+.win__resize--e {
+  right: -3px;
+}
+.win__resize--s {
+  left: 14px;
+  right: 14px;
+  bottom: -3px;
+  height: 8px;
+  cursor: ns-resize;
+}
+.win__resize--sw,
+.win__resize--se {
+  bottom: -3px;
+  width: 18px;
+  height: 18px;
+}
+.win__resize--sw {
+  left: -3px;
+  cursor: nesw-resize;
+}
+.win__resize--se {
+  right: -3px;
+  cursor: nwse-resize;
+}
+.win.is-maximized .win__resize {
+  display: none;
+}
+
+/* ---------------- Mobile: home screen + full-screen sheets (§4.4) ---------------- */
+@media (max-width: 767px) {
+  .desktop {
+    inset: 0 0 92px 0;
+    /* above the dock, so full-screen sheets cover it */
+    z-index: 50;
+  }
+  .icon-grid {
+    inset: 20px 16px auto 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 4px;
+  }
+  .desktop > .icon-grid {
+    pointer-events: auto;
+  }
+  .desk-item {
+    position: static;
+  }
+  .desk-icon {
+    width: 100%;
+    height: auto;
+    padding: 4px 0;
+    font-size: 12px;
+  }
+  .desk-icon img {
+    width: 56px;
+    height: 56px;
+  }
+  .win {
+    position: fixed;
+    inset: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: calc(100 + var(--z));
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    animation: sheet-up 220ms ease-out;
+  }
+  .win__titlebar {
+    height: 48px;
+    padding: 0 8px;
+    background: linear-gradient(180deg, #8fd3ff 0%, #2ba6f0 52%, #1b8fdb 100%);
+    box-shadow: inset 0 -1px 0 rgba(6, 62, 112, 0.4);
+  }
+  .win__title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(6, 62, 112, 0.6);
+  }
+  .win__icon,
+  .win__controls,
+  .win__resize {
+    display: none;
+  }
+  .win__back {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 20px;
+  }
+  .win__titlebar::after {
+    /* balance the back button so the title stays centred */
+    content: '';
+    width: 40px;
+  }
+  .win__body {
+    border: 0;
+    border-radius: 0;
+  }
+}
+@keyframes sheet-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+}

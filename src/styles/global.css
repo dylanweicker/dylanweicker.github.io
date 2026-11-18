@@ -1,0 +1,288 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/source-sans-3';
+@import '@fontsource/silkscreen';
+@import './wallpaper.css';
+@import './window.css';
+@import './taskbar.css';
+@import './apps.css';
+@import './music.css';
+@import './homepage.css';
+@import './homepage-site.css';
+@import './shelf.css';
+@import './overlays.css';
+
+/* ------------------------------------------------------------------ */
+/* Tokens (DESIGN.md §3.2–3.3)                                         */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-sky-50: #f2faff;
+  --color-sky-100: #ddf2ff;
+  --color-sky-300: #8fd3ff;
+  --color-sky-500: #2ba6f0;
+  --color-sky-700: #0b6fb8;
+  --color-sky-900: #063e70;
+  --color-ink: #0e2a47;
+  --color-ink-soft: #3d5a78;
+  --color-aqua: #3fe0d0;
+  --color-grass-400: #7bd148;
+  --color-grass-600: #3e9e2a;
+  --color-sun: #ffe36e;
+  --color-dolphin: #ff8ad8;
+  --color-lilac: #b79cff;
+
+  --font-ui: 'Segoe UI', Selawik, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  /* Frutiger when the visitor has it installed (it needs a paid licence to serve on the web);
+     otherwise Source Sans 3, a free humanist sans with similar open shapes. */
+  --font-display: Frutiger, 'Frutiger LT Std', 'Frutiger Next LT', 'Neue Frutiger', 'Source Sans 3 Variable', var(--font-ui);
+  --font-retro: 'Silkscreen', ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: light;
+  --rainbow: linear-gradient(90deg, #ff6b6b, #ffb86b, #ffe36e, #7bd148, #3fe0d0, #2ba6f0, #b79cff);
+  --glass: rgba(255, 255, 255, 0.55);
+  --gloss: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.35) 48%,
+    rgba(255, 255, 255, 0) 52%
+  );
+  --shadow-window: 0 12px 40px rgba(11, 111, 184, 0.25), 0 2px 6px rgba(6, 62, 112, 0.18);
+  --focus-ring: 0 0 0 2px #fff, 0 0 0 4px var(--color-sky-500), 0 0 12px 4px rgba(63, 224, 208, 0.6);
+  --taskbar-h: 44px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-sky-300);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 10000;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-sky-700);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Glossy button (DESIGN.md §3.4)                                      */
+/* ------------------------------------------------------------------ */
+.gloss-btn {
+  --btn-a: var(--color-sky-300);
+  --btn-b: var(--color-sky-500);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid rgba(6, 62, 112, 0.45);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--btn-a), var(--btn-b));
+  color: #fff;
+  font: 600 14px/1.2 var(--font-ui);
+  text-shadow: 0 1px 1px rgba(6, 62, 112, 0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -6px 12px rgba(255, 255, 255, 0.25),
+    0 2px 6px rgba(11, 111, 184, 0.3);
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    box-shadow 150ms ease-out,
+    transform 80ms ease-out,
+    filter 150ms ease-out;
+}
+.gloss-btn::before {
+  content: '';
+  position: absolute;
+  inset: 1px 4px 50% 4px;
+  border-radius: 999px 999px 40% 40%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.15));
+  pointer-events: none;
+}
+.gloss-btn:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 14px rgba(63, 224, 208, 0.9),
+    0 2px 10px rgba(63, 224, 208, 0.55);
+}
+.gloss-btn:active {
+  transform: translateY(1px);
+  filter: brightness(0.92);
+}
+.gloss-btn--green {
+  --btn-a: #a6e57a;
+  --btn-b: var(--color-grass-600);
+}
+.gloss-btn--pink {
+  --btn-a: #ffc2ec;
+  --btn-b: #e85cbf;
+}
+.gloss-btn--light {
+  --btn-a: #ffffff;
+  --btn-b: var(--color-sky-100);
+  color: var(--color-sky-700);
+  text-shadow: none;
+}
+
+/* Rainbow progress bar, purely decorative */
+.rainbow-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--rainbow);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -3px 4px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+.rainbow-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 50% 0;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* Chips for tech stacks */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 111, 184, 0.25);
+  background: linear-gradient(180deg, #fff, var(--color-sky-100));
+  color: var(--color-sky-700);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Scrollbars: glossy blue Aqua capsules (Mac OS X, mid-2000s)          */
+/* ------------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+/* Smooth white groove (no stripes) */
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #d2d2d2 0%, #ececec 22%, #fdfdfd 50%, #f0f0f0 78%, #d6d6d6 100%);
+  box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.18);
+}
+::-webkit-scrollbar-track:horizontal {
+  background: linear-gradient(180deg, #d2d2d2 0%, #ececec 22%, #fdfdfd 50%, #f0f0f0 78%, #d6d6d6 100%);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.18);
+}
+/* Blue jelly capsule: deep edges, bright core, a hard white specular streak and a glowing cap */
+::-webkit-scrollbar-thumb {
+  min-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse 45% 12px at 50% 7px, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.55) 44%, rgba(255, 255, 255, 0) 50%),
+    radial-gradient(ellipse 60% 10px at 50% calc(100% - 4px), rgba(190, 240, 255, 0.9), rgba(190, 240, 255, 0) 100%),
+    linear-gradient(90deg, #0e48a8 0%, #2a7ae8 18%, #5fb0ff 45%, #9ad7ff 62%, #3a8cf0 82%, #0f4fb3 100%);
+  background-clip: padding-box;
+  box-shadow:
+    inset 0 0 0 1px rgba(5, 40, 100, 0.55),
+    0 0 1px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 40px;
+  background:
+    radial-gradient(ellipse 12px 45% at 7px 50%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.55) 44%, rgba(255, 255, 255, 0) 50%),
+    radial-gradient(ellipse 10px 60% at calc(100% - 4px) 50%, rgba(190, 240, 255, 0.9), rgba(190, 240, 255, 0) 100%),
+    linear-gradient(180deg, #0e48a8 0%, #2a7ae8 18%, #5fb0ff 45%, #9ad7ff 62%, #3a8cf0 82%, #0f4fb3 100%);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  box-shadow:
+    inset 0 0 0 1px rgba(5, 40, 100, 0.55),
+    inset 0 0 6px rgba(160, 230, 255, 0.9);
+}
+::-webkit-scrollbar-thumb:active {
+  box-shadow:
+    inset 0 0 0 1px rgba(5, 30, 80, 0.75),
+    inset 0 2px 5px rgba(0, 25, 70, 0.45);
+}
+/* Arrow buttons: one at each end, glossy white with a dark triangle */
+::-webkit-scrollbar-button:single-button {
+  display: block;
+  width: 15px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpath d='M7.5 5 11 10H4z' fill='%23383838'/%3E%3C/svg%3E") center / 15px 15px no-repeat, linear-gradient(90deg, #cfcfcf 0%, #f4f4f4 30%, #ffffff 50%, #ececec 75%, #c9c9c9 100%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpath d='M7.5 10 11 5H4z' fill='%23383838'/%3E%3C/svg%3E") center / 15px 15px no-repeat, linear-gradient(90deg, #cfcfcf 0%, #f4f4f4 30%, #ffffff 50%, #ececec 75%, #c9c9c9 100%);
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  width: 16px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpath d='M5 7.5 10 4v7z' fill='%23383838'/%3E%3C/svg%3E") center / 15px 15px no-repeat, linear-gradient(180deg, #cfcfcf 0%, #f4f4f4 30%, #ffffff 50%, #ececec 75%, #c9c9c9 100%);
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  width: 16px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpath d='M10 7.5 5 4v7z' fill='%23383838'/%3E%3C/svg%3E") center / 15px 15px no-repeat, linear-gradient(180deg, #cfcfcf 0%, #f4f4f4 30%, #ffffff 50%, #ececec 75%, #c9c9c9 100%);
+}
+::-webkit-scrollbar-button:single-button:active {
+  background-color: #b9cde4;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-corner {
+  background: #e6e6e6;
+}
+/* Firefox can't draw gradients in scrollbars; give it the same colours */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: #4f97e6 #e9edf1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

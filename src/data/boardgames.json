@@ -1,0 +1,5196 @@
+{
+ "username": "nifflr",
+ "games": [
+  {
+   "id": "173346",
+   "name": "7 Wonders Duel",
+   "year": 2015,
+   "thumbnail": "https://cf.geekdo-images.com/zdagMskTF7wJBPjX74XsRw__small/img/gV1-ckZSIC-dCxxpq1Y7GmPITzQ=/fit-in/200x150/filters:strip_icc()/pic2576399.jpg",
+   "image": "https://cf.geekdo-images.com/zdagMskTF7wJBPjX74XsRw__original/img/Ju836WNSaW7Mab9Vjq2TJ_FqhWQ=/0x0/filters:format(jpeg)/pic2576399.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 10,
+   "rating": 8.1,
+   "weight": 2.2,
+   "plays": 0,
+   "designers": [
+    "Antoine Bauza",
+    "Bruno Cathala"
+   ],
+   "mechanics": [
+    "End Game Bonuses",
+    "Income",
+    "Melding and Splaying",
+    "Modular Board",
+    "Multi-Use Cards",
+    "Once-Per-Game Abilities",
+    "Open Drafting",
+    "Score-and-Reset Game",
+    "Set Collection",
+    "Sudden Death Ending",
+    "Tags",
+    "Tech Trees / Tech Tracks",
+    "Track Movement",
+    "Tug of War",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Ancient",
+    "Card Game",
+    "City Building",
+    "Civilization",
+    "Economic"
+   ]
+  },
+  {
+   "id": "103343",
+   "name": "A Game of Thrones: The Board Game (Second Edition)",
+   "year": 2011,
+   "thumbnail": "https://cf.geekdo-images.com/M_7UvwZvuxBVjxdadsa5AA__small/img/ZQ9guRvmMgYfseBC3_xNscMOKKo=/fit-in/200x150/filters:strip_icc()/pic1077906.jpg",
+   "image": "https://cf.geekdo-images.com/M_7UvwZvuxBVjxdadsa5AA__original/img/3tv6H7jX5T9rqwuI84YZKZDBGcw=/0x0/filters:format(jpeg)/pic1077906.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "6"
+   ],
+   "minTime": 120,
+   "maxTime": 240,
+   "minAge": 14,
+   "rating": 7.5,
+   "weight": 3.7,
+   "plays": 0,
+   "designers": [
+    "Christian T. Petersen"
+   ],
+   "mechanics": [
+    "Advantage Token",
+    "Alliances",
+    "Area Majority / Influence",
+    "Area Movement",
+    "Auction / Bidding",
+    "Auction: Sealed Bid",
+    "Card Play Conflict Resolution",
+    "Events",
+    "Hand Management",
+    "Income",
+    "Negotiation",
+    "Order Counters",
+    "Player Elimination",
+    "Simultaneous Action Selection",
+    "Sudden Death Ending",
+    "Turn Order: Auction",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Bluffing",
+    "Fantasy",
+    "Negotiation",
+    "Novel-based",
+    "Political",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "399987",
+   "name": "A Message From the Stars",
+   "year": 2024,
+   "thumbnail": "https://cf.geekdo-images.com/frUdtDANyn4FbMypP2Lk1g__small/img/1I5KJjLj8qW3rffHnFKRkrOcRd8=/fit-in/200x150/filters:strip_icc()/pic7704592.jpg",
+   "image": "https://cf.geekdo-images.com/frUdtDANyn4FbMypP2Lk1g__original/img/vViufaoZ_7XApegF-S9Y0Wg1UTc=/0x0/filters:format(jpeg)/pic7704592.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 45,
+   "maxTime": 45,
+   "minAge": 11,
+   "rating": 7.3,
+   "weight": 2.6,
+   "plays": 0,
+   "designers": [
+    "Clarence Simpson"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Induction",
+    "Pattern Recognition",
+    "Spelling",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Number",
+    "Science Fiction",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "67877",
+   "name": "Anomia",
+   "year": 2010,
+   "thumbnail": "https://cf.geekdo-images.com/1gZRgquVpNQkykUEXjNwUA__small/img/xYJe-N2unyfI1aTNMx3M9sh-_ro=/fit-in/200x150/filters:strip_icc()/pic9642079.jpg",
+   "image": "https://cf.geekdo-images.com/1gZRgquVpNQkykUEXjNwUA__original/img/XcL-2ib7xAcwVXdOgQADtc5rhBo=/0x0/filters:format(jpeg)/pic9642079.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 10,
+   "rating": 6.7,
+   "weight": 1,
+   "plays": 0,
+   "designers": [
+    "Andrew Innes"
+   ],
+   "mechanics": [
+    "Pattern Recognition",
+    "Speed Matching"
+   ],
+   "categories": [
+    "Party Game",
+    "Real-time",
+    "Trivia",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "74",
+   "name": "Apples to Apples",
+   "year": 1999,
+   "thumbnail": "https://cf.geekdo-images.com/S5GzB_f2Re3kEDoSxqG5Ew__small/img/kJ1JQ_d9xEZ00sJ1dLvwyQYiQUA=/fit-in/200x150/filters:strip_icc()/pic213515.jpg",
+   "image": "https://cf.geekdo-images.com/S5GzB_f2Re3kEDoSxqG5Ew__original/img/K49MN0Ij_tZOgDK4znCUJGu6aU4=/0x0/filters:format(jpeg)/pic213515.jpg",
+   "expansion": false,
+   "minPlayers": 4,
+   "maxPlayers": 10,
+   "bestPlayers": [
+    "6",
+    "7",
+    "8"
+   ],
+   "minTime": 20,
+   "maxTime": 30,
+   "minAge": 12,
+   "rating": 5.7,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Matthew Kirby",
+    "Mark Alan Osterhaus"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Player Judge",
+    "Simultaneous Action Selection"
+   ],
+   "categories": [
+    "Card Game",
+    "Humor",
+    "Party Game",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "257499",
+   "name": "Arkham Horror (Third Edition)",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/09KeqyJEtu2qcskbtlOhqw__small/img/-xrcoiHjk6uaMY3dtwS_uYIrMog=/fit-in/200x150/filters:strip_icc()/pic5726297.jpg",
+   "image": "https://cf.geekdo-images.com/09KeqyJEtu2qcskbtlOhqw__original/img/H6qePV4xg2vrwXoWcOhAhIZUtSo=/0x0/filters:format(jpeg)/pic5726297.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 120,
+   "maxTime": 180,
+   "minAge": 14,
+   "rating": 7.7,
+   "weight": 3.4,
+   "plays": 0,
+   "designers": [
+    "Nikki Valens",
+    "Richard Launius",
+    "Kevin Wilson"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Dice Rolling",
+    "Modular Board",
+    "Point to Point Movement",
+    "Stat Check Resolution",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Fighting",
+    "Horror",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "230802",
+   "name": "Azul",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__small/img/ccsXKrdGJw-YSClWwzVUwk5Nh9Y=/fit-in/200x150/filters:strip_icc()/pic6973671.png",
+   "image": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__original/img/AkbtYVc6xXJF3c9EUrakklcclKw=/0x0/filters:format(png)/pic6973671.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 8,
+   "rating": 7.7,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Michael Kiesling"
+   ],
+   "mechanics": [
+    "End Game Bonuses",
+    "Grid Coverage",
+    "Open Drafting",
+    "Pattern Building",
+    "Set Collection",
+    "Square Grid",
+    "Tile Placement",
+    "Turn Order: Claim Action"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Renaissance"
+   ]
+  },
+  {
+   "id": "346965",
+   "name": "Azul: Queen's Garden",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/l-NBWJ1gIcfOCfrvAw8qvw__small/img/kvxUPoBvCzjV5r6poE29LFUQnSM=/fit-in/200x150/filters:strip_icc()/pic6389125.jpg",
+   "image": "https://cf.geekdo-images.com/l-NBWJ1gIcfOCfrvAw8qvw__original/img/VaPUWBlEE3Wg_QGYAsHxKV8mBkw=/0x0/filters:format(jpeg)/pic6389125.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 45,
+   "maxTime": 60,
+   "minAge": 10,
+   "rating": 7.4,
+   "weight": 2.9,
+   "plays": 0,
+   "designers": [
+    "Michael Kiesling"
+   ],
+   "mechanics": [
+    "End Game Bonuses",
+    "Pattern Building",
+    "Set Collection",
+    "Tile Placement",
+    "Turn Order: Claim Action"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Puzzle",
+    "Renaissance"
+   ]
+  },
+  {
+   "id": "287954",
+   "name": "Azul: Summer Pavilion",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/843kZ6WR0HfyXWEybA6L7A__small/img/sOiQSPo_DM7G1Om0PF1T2Z8ACcA=/fit-in/200x150/filters:strip_icc()/pic4930887.jpg",
+   "image": "https://cf.geekdo-images.com/843kZ6WR0HfyXWEybA6L7A__original/img/VtYGvhy_YCSw14FpV8FGzv0eMe4=/0x0/filters:format(jpeg)/pic4930887.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 8,
+   "rating": 7.6,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [
+    "Michael Kiesling"
+   ],
+   "mechanics": [
+    "End Game Bonuses",
+    "Open Drafting",
+    "Pattern Building",
+    "Set Collection",
+    "Tile Placement",
+    "Turn Order: Claim Action"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Puzzle"
+   ]
+  },
+  {
+   "id": "2397",
+   "name": "Backgammon",
+   "year": -3000,
+   "thumbnail": "https://cf.geekdo-images.com/PournqDRZ4mb9yFpJvAc_Q__small/img/AJeWF8FohhEjsbLUMu68f0xcZhk=/fit-in/200x150/filters:strip_icc()/pic9098768.jpg",
+   "image": "https://cf.geekdo-images.com/PournqDRZ4mb9yFpJvAc_Q__original/img/Ifrj-OZIhhfQCrWpC6Aqp2bEV-E=/0x0/filters:format(jpeg)/pic9098768.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 6.6,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "(Uncredited)"
+   ],
+   "mechanics": [
+    "Betting and Bluffing",
+    "Dice Rolling",
+    "Lose a Turn",
+    "Race",
+    "Roll / Spin and Move",
+    "Score-and-Reset Game",
+    "Static Capture",
+    "Track Movement"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Dice"
+   ]
+  },
+  {
+   "id": "143741",
+   "name": "BANG! The Dice Game",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/BLTFau1Ue-gjX6geQdYrjQ__small/img/IijBpyOQC760F6XIw34WT0ePqe4=/fit-in/200x150/filters:strip_icc()/pic2909713.jpg",
+   "image": "https://cf.geekdo-images.com/BLTFau1Ue-gjX6geQdYrjQ__original/img/3CcRDvDttHpWLP6wc_jZHufTfl4=/0x0/filters:format(jpeg)/pic2909713.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "6",
+    "7"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 8,
+   "rating": 6.9,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Michael Palm",
+    "Lukas Zach"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Die Icon Resolution",
+    "Hidden Roles",
+    "Player Elimination",
+    "Push Your Luck",
+    "Re-rolling and Locking",
+    "Team-Based Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "American West",
+    "Bluffing",
+    "Deduction",
+    "Dice",
+    "Fighting",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "228660",
+   "name": "Betrayal at Baldur's Gate",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/O6TfqmDWCkJvZPZw6pcxpg__small/img/LqmZdde9lw05eGIfxYJZiF1DaYs=/fit-in/200x150/filters:strip_icc()/pic6552099.png",
+   "image": "https://cf.geekdo-images.com/O6TfqmDWCkJvZPZw6pcxpg__original/img/tkQGqsTWjyxc46gblN31CRP4JU4=/0x0/filters:format(png)/pic6552099.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 7.1,
+   "weight": 2.6,
+   "plays": 0,
+   "designers": [
+    "Chris Dupuis",
+    "Mike Mearls"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Map Addition",
+    "Modular Board",
+    "Role Playing",
+    "Storytelling",
+    "Team-Based Game",
+    "Traitor Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Exploration",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "10547",
+   "name": "Betrayal at House on the Hill",
+   "year": 2004,
+   "thumbnail": "https://cf.geekdo-images.com/lqmt2Oti_qJS65XqHcB8AA__small/img/EDOmDbRhLy4za2PHkJ5IbhNxZmk=/fit-in/200x150/filters:strip_icc()/pic5146864.png",
+   "image": "https://cf.geekdo-images.com/lqmt2Oti_qJS65XqHcB8AA__original/img/7R6yYk8A2eUMmSDaxGjae5SceGI=/0x0/filters:format(png)/pic5146864.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 7,
+   "weight": 2.4,
+   "plays": 0,
+   "designers": [
+    "Bruce Glassco",
+    "Rob Daviau",
+    "Bill McQuillan",
+    "Mike Selinker",
+    "Teeuwynn Woodruff"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Map Addition",
+    "Modular Board",
+    "Player Elimination",
+    "Role Playing",
+    "Storytelling",
+    "Team-Based Game",
+    "Traitor Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Exploration",
+    "Horror"
+   ]
+  },
+  {
+   "id": "240980",
+   "name": "Blood on the Clocktower",
+   "year": 2022,
+   "thumbnail": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__small/img/cRCX-PIROiSFG5aLvwkn2O7tHsg=/fit-in/200x150/filters:strip_icc()/pic7009391.jpg",
+   "image": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg",
+   "expansion": false,
+   "minPlayers": 6,
+   "maxPlayers": 21,
+   "bestPlayers": [
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "minTime": 30,
+   "maxTime": 120,
+   "minAge": 15,
+   "rating": 8.3,
+   "weight": 3,
+   "plays": 0,
+   "designers": [
+    "Steven Medway"
+   ],
+   "mechanics": [
+    "Betting and Bluffing",
+    "Deduction",
+    "Hidden Roles",
+    "Negotiation",
+    "Prisoner's Dilemma",
+    "Rock-Paper-Scissors",
+    "Roles with Asymmetric Information",
+    "Team-Based Game",
+    "Traitor Game",
+    "Variable Player Powers",
+    "Voting"
+   ],
+   "categories": [
+    "Bluffing",
+    "Deduction",
+    "Murder / Mystery",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "260605",
+   "name": "Camel Up (Second Edition)",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/qnR2V3YsW963_JaVznBjsw__small/img/qNHZxa7oJCTdnYdyBsqHs__Owsk=/fit-in/200x150/filters:strip_icc()/pic8584959.jpg",
+   "image": "https://cf.geekdo-images.com/qnR2V3YsW963_JaVznBjsw__original/img/8F0hZUlnJ6X924xYr8u5wtamtng=/0x0/filters:format(jpeg)/pic8584959.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 8,
+   "rating": 7.5,
+   "weight": 1.5,
+   "plays": 0,
+   "designers": [
+    "Steffen Bogen"
+   ],
+   "mechanics": [
+    "Betting and Bluffing",
+    "Dice Rolling",
+    "Roll / Spin and Move",
+    "Track Movement",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Animals",
+    "Arabian",
+    "Dice",
+    "Racing"
+   ]
+  },
+  {
+   "id": "263918",
+   "name": "Cartographers",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/GifbnAmsA4lfEcDkeaC9VA__small/img/TTxZzwbna07hMcPQ0xaFtT10egE=/fit-in/200x150/filters:strip_icc()/pic4397932.png",
+   "image": "https://cf.geekdo-images.com/GifbnAmsA4lfEcDkeaC9VA__original/img/YzJORdIDNza8kmrY6KEU_h2p2Wo=/0x0/filters:format(png)/pic4397932.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 100,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 7.5,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Jordy Adan"
+   ],
+   "mechanics": [
+    "Bingo",
+    "Enclosure",
+    "End Game Bonuses",
+    "Grid Coverage",
+    "Paper-and-Pencil",
+    "Pattern Building",
+    "Simultaneous Action Selection",
+    "Solo / Solitaire Game",
+    "Square Grid",
+    "Take That",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Fantasy",
+    "Territory Building"
+   ]
+  },
+  {
+   "id": "295947",
+   "name": "Cascadia",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__small/img/tVSFjSxYEcw7sKj3unIIQV8kxoc=/fit-in/200x150/filters:strip_icc()/pic5100691.jpg",
+   "image": "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__original/img/B374C04Eip7fmQBGJzgiOTp-jyQ=/0x0/filters:format(jpeg)/pic5100691.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 7.9,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Randy Flynn"
+   ],
+   "mechanics": [
+    "Chaining",
+    "End Game Bonuses",
+    "Hexagon Grid",
+    "Line of Sight",
+    "Open Drafting",
+    "Pattern Building",
+    "Solo / Solitaire Game",
+    "Tile Placement",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Animals",
+    "Environmental"
+   ]
+  },
+  {
+   "id": "13",
+   "name": "Catan",
+   "year": 1995,
+   "thumbnail": "https://cf.geekdo-images.com/0XODRpReiZBFUffEcqT5-Q__small/img/SNVfF23OQafv3u8xdFolJnMkBoM=/fit-in/200x150/filters:strip_icc()/pic9156909.png",
+   "image": "https://cf.geekdo-images.com/0XODRpReiZBFUffEcqT5-Q__original/img/oRc0AomWA9ZtFqQDZiZbIyKE1j0=/0x0/filters:format(png)/pic9156909.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 10,
+   "rating": 7.1,
+   "weight": 2.3,
+   "plays": 0,
+   "designers": [
+    "Klaus Teuber"
+   ],
+   "mechanics": [
+    "Chaining",
+    "Dice Rolling",
+    "Hand Management",
+    "Hexagon Grid",
+    "Hidden Victory Points",
+    "Income",
+    "Market",
+    "Modular Board",
+    "Negotiation",
+    "Network and Route Building",
+    "Race",
+    "Random Production",
+    "Take That",
+    "Trading",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Economic",
+    "Negotiation"
+   ]
+  },
+  {
+   "id": "2807",
+   "name": "Catan: 5-6 Player Expansion",
+   "year": 1996,
+   "thumbnail": "https://cf.geekdo-images.com/tsDqjx3IqOl4r613Qh6-zQ__small/img/5e5rDr_YrtQysBlizqMnN0Z4Lic=/fit-in/200x150/filters:strip_icc()/pic8828033.jpg",
+   "image": "https://cf.geekdo-images.com/tsDqjx3IqOl4r613Qh6-zQ__original/img/-Hc9FbXGWAsQpI2EV_a9BD9wXPQ=/0x0/filters:format(jpeg)/pic8828033.jpg",
+   "expansion": true,
+   "minPlayers": 5,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5"
+   ],
+   "minTime": 120,
+   "maxTime": 120,
+   "minAge": 10,
+   "rating": 7,
+   "weight": 2.3,
+   "plays": 0,
+   "designers": [
+    "Klaus Teuber"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Hand Management",
+    "Modular Board",
+    "Network and Route Building",
+    "Trading"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Negotiation"
+   ]
+  },
+  {
+   "id": "27760",
+   "name": "Catan: Traders & Barbarians",
+   "year": 2007,
+   "thumbnail": "https://cf.geekdo-images.com/gdQ16uSwcjrLTfK6CgUZ6g__small/img/EonbUSgSX1xmhkUkdiAgPvGYyxI=/fit-in/200x150/filters:strip_icc()/pic8955011.png",
+   "image": "https://cf.geekdo-images.com/gdQ16uSwcjrLTfK6CgUZ6g__original/img/JE0WBWldol6PmNFyDLX0Hyi6aCk=/0x0/filters:format(png)/pic8955011.png",
+   "expansion": true,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 10,
+   "rating": 7,
+   "weight": 2.6,
+   "plays": 0,
+   "designers": [
+    "Klaus Teuber"
+   ],
+   "mechanics": [
+    "Auction / Bidding",
+    "Dice Rolling",
+    "Hand Management",
+    "Memory",
+    "Modular Board",
+    "Network and Route Building",
+    "Trading",
+    "Voting"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Negotiation",
+    "Transportation"
+   ]
+  },
+  {
+   "id": "239188",
+   "name": "Chronicles of Crime",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/1BMyuEwK0zV9005oYinYLw__small/img/QFzbDlFGzK3yRZNLnRr4YzHwEuY=/fit-in/200x150/filters:strip_icc()/pic4317519.jpg",
+   "image": "https://cf.geekdo-images.com/1BMyuEwK0zV9005oYinYLw__original/img/3OigysLof9HIk4jvV79Cm-tb-gY=/0x0/filters:format(jpeg)/pic4317519.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 12,
+   "rating": 7.5,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [
+    "David Cicurel"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Scenario / Mission / Campaign Game",
+    "Solo / Solitaire Game",
+    "Storytelling"
+   ],
+   "categories": [
+    "Adventure",
+    "Deduction",
+    "Murder / Mystery"
+   ]
+  },
+  {
+   "id": "300300",
+   "name": "Chronicles of Crime: 1400",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/oyTU673yivJK4wM6DsEb1A__small/img/YCFAaQJVMO41hrOay_n4jzwVNeI=/fit-in/200x150/filters:strip_icc()/pic5201597.jpg",
+   "image": "https://cf.geekdo-images.com/oyTU673yivJK4wM6DsEb1A__original/img/vhUthenkAIHpkRpUukYtrHrPc0c=/0x0/filters:format(jpeg)/pic5201597.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 12,
+   "rating": 7.7,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "David Cicurel",
+    "Wojciech Grajkowski"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Deduction",
+    "Scenario / Mission / Campaign Game",
+    "Storytelling"
+   ],
+   "categories": [
+    "Adventure",
+    "Deduction",
+    "Medieval",
+    "Murder / Mystery"
+   ]
+  },
+  {
+   "id": "266507",
+   "name": "Clank! Legacy: Acquisitions Incorporated",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/hc2NDafu5c24iLJh_IZmyg__small/img/8TA1Gn7jERN4yhtXD-xBCGk-QfM=/fit-in/200x150/filters:strip_icc()/pic4885780.png",
+   "image": "https://cf.geekdo-images.com/hc2NDafu5c24iLJh_IZmyg__original/img/1Fpyz7j7rTvMPRiDdPjn0Vf0m2k=/0x0/filters:format(png)/pic4885780.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 90,
+   "maxTime": 120,
+   "minAge": 13,
+   "rating": 8.5,
+   "weight": 2.7,
+   "plays": 0,
+   "designers": [
+    "Andy Clautice",
+    "Paul Dennen"
+   ],
+   "mechanics": [
+    "Deck, Bag, and Pool Building",
+    "Delayed Purchase",
+    "End Game Bonuses",
+    "Events",
+    "Legacy Game",
+    "Map Addition",
+    "Movement Points",
+    "Narrative Choice / Paragraph",
+    "Once-Per-Game Abilities",
+    "Open Drafting",
+    "Pick-up and Deliver",
+    "Player Elimination",
+    "Point to Point Movement",
+    "Push Your Luck",
+    "Scenario / Mission / Campaign Game",
+    "Set Collection",
+    "Variable Player Powers",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "129736",
+   "name": "Cockroach Poker Royal",
+   "year": 2012,
+   "thumbnail": "https://cf.geekdo-images.com/loNpxkO1sWM_Xs4Pk2AMgA__small/img/-Njqo9AWuBO_P0H94U_f1lJW1hA=/fit-in/200x150/filters:strip_icc()/pic4129570.jpg",
+   "image": "https://cf.geekdo-images.com/loNpxkO1sWM_Xs4Pk2AMgA__original/img/jM2Vk0_umdKL9hrsBK_ePnzqptk=/0x0/filters:format(jpeg)/pic4129570.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 15,
+   "maxTime": 25,
+   "minAge": 8,
+   "rating": 7,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Jacques Zeimet"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Set Collection",
+    "Single Loser Game"
+   ],
+   "categories": [
+    "Bluffing",
+    "Card Game",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "205158",
+   "name": "Codenames: Deep Undercover",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/QoX69AhT7gRvJ10t04K_Bw__small/img/_hMlTHv8HhRRytNqLkDaT1TYT5w=/fit-in/200x150/filters:strip_icc()/pic3119534.jpg",
+   "image": "https://cf.geekdo-images.com/QoX69AhT7gRvJ10t04K_Bw__original/img/JG4GrU7AOsU3Y-o-1qKYyw8V5_Q=/0x0/filters:format(jpeg)/pic3119534.jpg",
+   "expansion": false,
+   "minPlayers": 4,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "6",
+    "8"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 18,
+   "rating": 6.6,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Vlaada Chvátil"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Memory",
+    "Push Your Luck",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Card Game",
+    "Deduction",
+    "Mature / Adult",
+    "Party Game",
+    "Spies / Secret Agents",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "249821",
+   "name": "Codenames: Harry Potter",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/x8-fTrO1XwhctZIvoeVP3w__small/img/y_Og0FrMlpv-m6hD4pBz9jxLnew=/fit-in/200x150/filters:strip_icc()/pic4281839.jpg",
+   "image": "https://cf.geekdo-images.com/x8-fTrO1XwhctZIvoeVP3w__original/img/T7StAIkpucIPtSlghPhVI8Zkblc=/0x0/filters:format(jpeg)/pic4281839.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 11,
+   "rating": 6.4,
+   "weight": 1.6,
+   "plays": 0,
+   "designers": [
+    "Vlaada Chvátil",
+    "Scot Eaton"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Pattern Recognition",
+    "Push Your Luck"
+   ],
+   "categories": [
+    "Deduction",
+    "Movies / TV / Radio theme",
+    "Novel-based",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "198773",
+   "name": "Codenames: Pictures",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/TGHPcdYEnD3_QzMohEIrNw__small/img/0bZIFaJEW-3FquBb8jY-SqrrUx8=/fit-in/200x150/filters:strip_icc()/pic9206059.png",
+   "image": "https://cf.geekdo-images.com/TGHPcdYEnD3_QzMohEIrNw__original/img/BjCphUnm_GLYJ2I1VAkxqNiNTWk=/0x0/filters:format(png)/pic9206059.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "6"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 10,
+   "rating": 7.2,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Vlaada Chvátil"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Memory",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Card Game",
+    "Deduction",
+    "Party Game",
+    "Spies / Secret Agents"
+   ]
+  },
+  {
+   "id": "2719",
+   "name": "Connect Four",
+   "year": 1974,
+   "thumbnail": "https://cf.geekdo-images.com/I_ZPIWEvFlrMa8caT4UD-w__small/img/JR0u-AXmZpNrZpevcz3lrLPNDf4=/fit-in/200x150/filters:strip_icc()/pic859430.jpg",
+   "image": "https://cf.geekdo-images.com/I_ZPIWEvFlrMa8caT4UD-w__original/img/w93rimjstxQr4BVmaZ_Tl5pQGOw=/0x0/filters:format(jpeg)/pic859430.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 10,
+   "maxTime": 10,
+   "minAge": 6,
+   "rating": 5,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Ned Strongin",
+    "Howard Wexler"
+   ],
+   "mechanics": [
+    "Pattern Building"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Children's Game"
+   ]
+  },
+  {
+   "id": "131357",
+   "name": "Coup",
+   "year": 2012,
+   "thumbnail": "https://cf.geekdo-images.com/MWhSY_GOe2-bmlQ2rntSVg__small/img/vuR_0PCX1w2EkjO_LbchOHZPOwU=/fit-in/200x150/filters:strip_icc()/pic2016054.jpg",
+   "image": "https://cf.geekdo-images.com/MWhSY_GOe2-bmlQ2rntSVg__original/img/ayAAWBK1rAEumARNmROsOtvqW-4=/0x0/filters:format(jpeg)/pic2016054.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 13,
+   "rating": 7,
+   "weight": 1.4,
+   "plays": 0,
+   "designers": [
+    "Rikki Tahta"
+   ],
+   "mechanics": [
+    "Betting and Bluffing",
+    "Hidden Roles",
+    "Memory",
+    "Player Elimination",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Bluffing",
+    "Card Game",
+    "Deduction",
+    "Party Game",
+    "Political"
+   ]
+  },
+  {
+   "id": "891",
+   "name": "Cranium",
+   "year": 1998,
+   "thumbnail": "https://cf.geekdo-images.com/-RAQw4eCx3i__6ctz6-N9A__small/img/6zwKtSbuLcz8negvxaM4hRA6rBw=/fit-in/200x150/filters:strip_icc()/pic4994220.jpg",
+   "image": "https://cf.geekdo-images.com/-RAQw4eCx3i__6ctz6-N9A__original/img/Z1nfWJlFJQiirtkqCoMmoDbIQIE=/0x0/filters:format(jpeg)/pic4994220.jpg",
+   "expansion": false,
+   "minPlayers": 4,
+   "maxPlayers": 99,
+   "bestPlayers": [
+    "8"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 13,
+   "rating": 5.7,
+   "weight": 1.4,
+   "plays": 0,
+   "designers": [
+    "Whit Alexander",
+    "Richard Tait"
+   ],
+   "mechanics": [
+    "Acting",
+    "Line Drawing",
+    "Paper-and-Pencil",
+    "Roll / Spin and Move",
+    "Singing",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Party Game",
+    "Puzzle",
+    "Trivia",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "95234",
+   "name": "Cthulhu Gloom",
+   "year": 2011,
+   "thumbnail": "https://cf.geekdo-images.com/0NIPJMlzch7WpotTjqGykw__small/img/ujk5D2Jhrr2aEvR6coTP9ePAhRQ=/fit-in/200x150/filters:strip_icc()/pic1045316.jpg",
+   "image": "https://cf.geekdo-images.com/0NIPJMlzch7WpotTjqGykw__original/img/HjxJsD6u9oZAAx3VNtf_Plv1Yqk=/0x0/filters:format(jpeg)/pic1045316.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 13,
+   "rating": 6.4,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Keith Baker"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Storytelling",
+    "Take That"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Horror"
+   ]
+  },
+  {
+   "id": "150376",
+   "name": "Dead of Winter: A Crossroads Game",
+   "year": 2014,
+   "thumbnail": "https://cf.geekdo-images.com/g4mV4BH-ZrhMUVgil-yV1A__small/img/foFGN8KwmN8BaYNpolq0HcMba4M=/fit-in/200x150/filters:strip_icc()/pic3016500.jpg",
+   "image": "https://cf.geekdo-images.com/g4mV4BH-ZrhMUVgil-yV1A__original/img/NjrnSg1aeia8I4eETDU3I1Br7a8=/0x0/filters:format(jpeg)/pic3016500.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 13,
+   "rating": 7.4,
+   "weight": 3,
+   "plays": 0,
+   "designers": [
+    "Jonathan Gilmour-Long",
+    "Isaac Vega"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Area Movement",
+    "Dice Rolling",
+    "Hand Management",
+    "Narrative Choice / Paragraph",
+    "Push Your Luck",
+    "Scenario / Mission / Campaign Game",
+    "Semi-Cooperative Game",
+    "Storytelling",
+    "Trading",
+    "Traitor Game",
+    "Turn Order: Progressive",
+    "Variable Player Powers",
+    "Voting"
+   ],
+   "categories": [
+    "Bluffing",
+    "Deduction",
+    "Horror",
+    "Science Fiction",
+    "Zombies"
+   ]
+  },
+  {
+   "id": "225694",
+   "name": "Decrypto",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/hHZWXnUTMYDd_KTAM6Jwlw__small/img/O5XHaPOALYquS058qcXWVm5b_k4=/fit-in/200x150/filters:strip_icc()/pic3759421.jpg",
+   "image": "https://cf.geekdo-images.com/hHZWXnUTMYDd_KTAM6Jwlw__original/img/lL6QJ69UmZT7CeljUcjyA47b-e0=/0x0/filters:format(jpeg)/pic3759421.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "4",
+    "6"
+   ],
+   "minTime": 15,
+   "maxTime": 45,
+   "minAge": 12,
+   "rating": 7.8,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Thomas Dagenais-Lespérance"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Paper-and-Pencil",
+    "Targeted Clues",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Deduction",
+    "Party Game",
+    "Spies / Secret Agents",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "169654",
+   "name": "Deep Sea Adventure",
+   "year": 2014,
+   "thumbnail": "https://cf.geekdo-images.com/owyKXaa5SPB2HG9F_MueNQ__small/img/poEY0PMTpz4X_SOUaPjs6G7qr7o=/fit-in/200x150/filters:strip_icc()/pic3169827.png",
+   "image": "https://cf.geekdo-images.com/owyKXaa5SPB2HG9F_MueNQ__original/img/gOmpUB3hM7Ap9o-kDsV8ZVBVYXA=/0x0/filters:format(png)/pic3169827.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 6.9,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Jun Sasaki",
+    "Goro Sasaki"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Pick-up and Deliver",
+    "Push Your Luck",
+    "Roll / Spin and Move",
+    "Track Movement"
+   ],
+   "categories": [
+    "Dice",
+    "Exploration",
+    "Nautical",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "223321",
+   "name": "Detective: A Modern Crime Board Game",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/wJphcoCCYScWCNkE32D_hw__small/img/9FV7H95C0vPv_y60nitZVlMTTgc=/fit-in/200x150/filters:strip_icc()/pic5756205.jpg",
+   "image": "https://cf.geekdo-images.com/wJphcoCCYScWCNkE32D_hw__original/img/qSYnPWdXgggfxYvT03Oa32zSrh0=/0x0/filters:format(jpeg)/pic5756205.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 120,
+   "maxTime": 180,
+   "minAge": 16,
+   "rating": 7.6,
+   "weight": 2.7,
+   "plays": 0,
+   "designers": [
+    "Jakub Łapot",
+    "Przemysław Rymer",
+    "Ignacy Trzewiczek"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Narrative Choice / Paragraph",
+    "Scenario / Mission / Campaign Game",
+    "Solo / Solitaire Game",
+    "Storytelling",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Deduction",
+    "Murder / Mystery"
+   ]
+  },
+  {
+   "id": "39856",
+   "name": "Dixit",
+   "year": 2008,
+   "thumbnail": "https://cf.geekdo-images.com/J0PlHArkZDJ57H-brXW2Fw__small/img/QVwPXskFikQwBQlrdLJBAiRGgdg=/fit-in/200x150/filters:strip_icc()/pic6738336.jpg",
+   "image": "https://cf.geekdo-images.com/J0PlHArkZDJ57H-brXW2Fw__original/img/jt3kFCHJ3HJ2079dMLwipFZqdQg=/0x0/filters:format(jpeg)/pic6738336.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 7.2,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Jean-Louis Roubira"
+   ],
+   "mechanics": [
+    "Race",
+    "Simultaneous Action Selection",
+    "Singing",
+    "Storytelling",
+    "Targeted Clues",
+    "Voting"
+   ],
+   "categories": [
+    "Card Game",
+    "Humor",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "40834",
+   "name": "Dominion: Intrigue",
+   "year": 2009,
+   "thumbnail": "https://cf.geekdo-images.com/OGOmpi0GgwOwH2y28QgkuA__small/img/jnSHqOXWLN3PfdpCtnfjf44oTsA=/fit-in/200x150/filters:strip_icc()/pic460011.jpg",
+   "image": "https://cf.geekdo-images.com/OGOmpi0GgwOwH2y28QgkuA__original/img/VHMKsFZvoK2KKGZiLyoKZb_YhNQ=/0x0/filters:format(jpeg)/pic460011.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 13,
+   "rating": 7.7,
+   "weight": 2.4,
+   "plays": 0,
+   "designers": [
+    "Donald X. Vaccarino"
+   ],
+   "mechanics": [
+    "Deck, Bag, and Pool Building",
+    "Delayed Purchase",
+    "Hand Management",
+    "Open Drafting",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Card Game",
+    "Medieval"
+   ]
+  },
+  {
+   "id": "209418",
+   "name": "Dominion: Second Edition",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/4dmyKfqQm_uxA1-chh4JeQ__small/img/Td5CxjO0ZTIbwHNhk2ETEy1qYyg=/fit-in/200x150/filters:strip_icc()/pic3187001.jpg",
+   "image": "https://cf.geekdo-images.com/4dmyKfqQm_uxA1-chh4JeQ__original/img/5UxDHPldIiCb0uovIwzngR-jx5M=/0x0/filters:format(jpeg)/pic3187001.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 14,
+   "rating": 7.8,
+   "weight": 2.2,
+   "plays": 0,
+   "designers": [
+    "Donald X. Vaccarino"
+   ],
+   "mechanics": [
+    "Deck, Bag, and Pool Building",
+    "Delayed Purchase",
+    "Hand Management",
+    "Open Drafting",
+    "Take That",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Card Game",
+    "Medieval"
+   ]
+  },
+  {
+   "id": "405537",
+   "name": "DroPolter",
+   "year": 2023,
+   "thumbnail": "https://cf.geekdo-images.com/dK0nQKDFg5VDpKmvkAkIHg__small/img/7_IFcl8DCZ22KjFTjp_CLjrgOlM=/fit-in/200x150/filters:strip_icc()/pic8803328.png",
+   "image": "https://cf.geekdo-images.com/dK0nQKDFg5VDpKmvkAkIHg__original/img/AkxW8w56y9Ow4G9jd25Ry6TgcZo=/0x0/filters:format(png)/pic8803328.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 6,
+   "rating": 7.1,
+   "weight": 1,
+   "plays": 0,
+   "designers": [
+    "Paul Schulz"
+   ],
+   "mechanics": [
+    "Pattern Recognition",
+    "Real-Time"
+   ],
+   "categories": [
+    "Action / Dexterity"
+   ]
+  },
+  {
+   "id": "260300",
+   "name": "Dungeon Mayhem",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/faJfKYz6tG8JvDYqYHBjHg__small/img/JGJi0rrNusi2_aZ3d9SCN9wp4aw=/fit-in/200x150/filters:strip_icc()/pic5322689.jpg",
+   "image": "https://cf.geekdo-images.com/faJfKYz6tG8JvDYqYHBjHg__original/img/-DwgkWe6yIa2GAaf5VugWHMNrH4=/0x0/filters:format(jpeg)/pic5322689.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 10,
+   "maxTime": 10,
+   "minAge": 8,
+   "rating": 6.9,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Jordan Comar",
+    "Roscoe Wetlaufer"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Player Elimination",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting"
+   ]
+  },
+  {
+   "id": "307963",
+   "name": "Durian",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/QBwnHLJy8DRV2Mx-ZkB1_A__small/img/Pk2dokqgJ9hxgHHvZSadh4wKNog=/fit-in/200x150/filters:strip_icc()/pic5783560.png",
+   "image": "https://cf.geekdo-images.com/QBwnHLJy8DRV2Mx-ZkB1_A__original/img/_w1yjH6IWzL5doiA6rC54laKO_s=/0x0/filters:format(png)/pic5783560.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 7,
+   "bestPlayers": [
+    "5",
+    "6",
+    "7"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 7,
+   "rating": 6.9,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Masato Uesugi"
+   ],
+   "mechanics": [
+    "Deduction",
+    "Hand Management",
+    "Push Your Luck"
+   ],
+   "categories": [
+    "Animals",
+    "Bluffing",
+    "Card Game",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "148203",
+   "name": "Dutch Blitz",
+   "year": 1960,
+   "thumbnail": "https://cf.geekdo-images.com/ipuSaHTjxDpXAee-3vttiA__small/img/jw5BDMVYqffzOcB4F_MU2XC4BRI=/fit-in/200x150/filters:strip_icc()/pic336418.jpg",
+   "image": "https://cf.geekdo-images.com/ipuSaHTjxDpXAee-3vttiA__original/img/oyPs5ZLZb6e2g_8nA0uZAOKE4EM=/0x0/filters:format(jpeg)/pic336418.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 1,
+   "maxTime": 15,
+   "minAge": 8,
+   "rating": 6.8,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Werner Ernst George Muller"
+   ],
+   "mechanics": [
+    "Pattern Building",
+    "Race",
+    "Real-Time",
+    "Score-and-Reset Game",
+    "Speed Matching"
+   ],
+   "categories": [
+    "Card Game",
+    "Real-time"
+   ]
+  },
+  {
+   "id": "172225",
+   "name": "Exploding Kittens",
+   "year": 2015,
+   "thumbnail": "https://cf.geekdo-images.com/N8bL53-pRU7zaXDTrEaYrw__small/img/3tH4pIc1Udzkd0tXc6MgVQ59BC0=/fit-in/200x150/filters:strip_icc()/pic2691976.png",
+   "image": "https://cf.geekdo-images.com/N8bL53-pRU7zaXDTrEaYrw__original/img/0ciN1VZYifUd0qIDO0e8cGXmiss=/0x0/filters:format(png)/pic2691976.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 7,
+   "rating": 6.1,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Matthew Inman",
+    "Elan Lee",
+    "Shane Small"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Hot Potato",
+    "Player Elimination",
+    "Push Your Luck",
+    "Set Collection",
+    "Take That"
+   ],
+   "categories": [
+    "Animals",
+    "Card Game",
+    "Comic Book / Strip",
+    "Humor"
+   ]
+  },
+  {
+   "id": "385761",
+   "name": "Faraway",
+   "year": 2023,
+   "thumbnail": "https://cf.geekdo-images.com/u1cwi9BWSKsPxSkVO0BzbA__small/img/5G45GN8CE7pq38fJMMocmPtV4_U=/fit-in/200x150/filters:strip_icc()/pic7570101.png",
+   "image": "https://cf.geekdo-images.com/u1cwi9BWSKsPxSkVO0BzbA__original/img/jTY6_PRF6FrUgInfMajzobVy0S8=/0x0/filters:format(png)/pic7570101.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 25,
+   "maxTime": 25,
+   "minAge": 10,
+   "rating": 7.5,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Johannes Goupy",
+    "Corentin Lebrat"
+   ],
+   "mechanics": [
+    "Constrained Bidding",
+    "End Game Bonuses",
+    "Hand Management",
+    "Open Drafting",
+    "Selection Order Bid",
+    "Set Collection",
+    "Simultaneous Action Selection",
+    "Tags"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Puzzle"
+   ]
+  },
+  {
+   "id": "175324",
+   "name": "Fog of Love",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/FDOlU-KIv3iRKqHzC57-Qg__small/img/mIpM0XTT_9GvRvCAPmXfRG-sGtw=/fit-in/200x150/filters:strip_icc()/pic6353234.jpg",
+   "image": "https://cf.geekdo-images.com/FDOlU-KIv3iRKqHzC57-Qg__original/img/8QVHmUJv4t1bq_4mEiOQ6RHIXNM=/0x0/filters:format(jpeg)/pic6353234.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 17,
+   "rating": 6.6,
+   "weight": 2.2,
+   "plays": 0,
+   "designers": [
+    "Jacob Jaskov"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Hand Management",
+    "Role Playing",
+    "Semi-Cooperative Game",
+    "Simulation",
+    "Simultaneous Action Selection",
+    "Storytelling"
+   ],
+   "categories": [
+    "Bluffing",
+    "Card Game",
+    "Deduction"
+   ]
+  },
+  {
+   "id": "136063",
+   "name": "Forbidden Desert",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/OU26qQZoHJodxSFKiR5IzA__small/img/eDUA8LpBqRjlzJWJYIsIenpF_rA=/fit-in/200x150/filters:strip_icc()/pic1528722.jpg",
+   "image": "https://cf.geekdo-images.com/OU26qQZoHJodxSFKiR5IzA__original/img/8smpJMuHROyrbu8FP-EOLXjEi0w=/0x0/filters:format(jpeg)/pic1528722.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 45,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 7.1,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Matt Leacock"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Bias",
+    "Cooperative Game",
+    "Grid Movement",
+    "Hand Management",
+    "Map Deformation",
+    "Modular Board",
+    "Pick-up and Deliver",
+    "Solo / Solitaire Game",
+    "Square Grid",
+    "Tile Placement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Fantasy",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "329533",
+   "name": "Ghost Blitz The Dice Game",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/fmDbfV5dIn7RAsUOkDpOaw__small/img/_rR7yaKnOcytxgKh7ylgLjhlFPg=/fit-in/200x150/filters:strip_icc()/pic5955664.jpg",
+   "image": "https://cf.geekdo-images.com/fmDbfV5dIn7RAsUOkDpOaw__original/img/vZRZI9YFLgnUFbVDg3a6_-yBPwo=/0x0/filters:format(jpeg)/pic5955664.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "2",
+    "5"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 8,
+   "rating": 6.8,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Jacques Zeimet"
+   ],
+   "mechanics": [
+    "Pattern Recognition",
+    "Speed Matching"
+   ],
+   "categories": [
+    "Action / Dexterity",
+    "Dice",
+    "Real-time"
+   ]
+  },
+  {
+   "id": "174430",
+   "name": "Gloomhaven",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__small/img/veqFeP4d_3zNhFc3GNBkV95rBEQ=/fit-in/200x150/filters:strip_icc()/pic2437871.jpg",
+   "image": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 14,
+   "rating": 8.5,
+   "weight": 3.9,
+   "plays": 0,
+   "designers": [
+    "Isaac Childres"
+   ],
+   "mechanics": [
+    "Action Queue",
+    "Action Retrieval",
+    "Campaign / Battle Card Driven",
+    "Card Play Conflict Resolution",
+    "Communication Limits",
+    "Cooperative Game",
+    "Critical Hits and Failures",
+    "Deck Construction",
+    "Grid Movement",
+    "Hand Management",
+    "Hexagon Grid",
+    "Legacy Game",
+    "Line of Sight",
+    "Modular Board",
+    "Movement Points",
+    "Multi-Use Cards",
+    "Multiple Maps",
+    "Narrative Choice / Paragraph",
+    "Once-Per-Game Abilities",
+    "Player Elimination",
+    "Role Playing",
+    "Scenario / Mission / Campaign Game",
+    "Simultaneous Action Selection",
+    "Solo / Solitaire Game",
+    "Storytelling",
+    "Tags",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Exploration",
+    "Fantasy",
+    "Fighting",
+    "Miniatures"
+   ]
+  },
+  {
+   "id": "250337",
+   "name": "Gloomhaven: Forgotten Circles",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/qV0P8aviaET-qIIUCZnvmA__small/img/4t-2yn7uxNre3ZiRNHP4UTjIlsk=/fit-in/200x150/filters:strip_icc()/pic4066738.jpg",
+   "image": "https://cf.geekdo-images.com/qV0P8aviaET-qIIUCZnvmA__original/img/kYnNMdUTH-2S11GWm2mhulVpUDg=/0x0/filters:format(jpeg)/pic4066738.jpg",
+   "expansion": true,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 14,
+   "rating": 7.7,
+   "weight": 4.3,
+   "plays": 0,
+   "designers": [
+    "Isaac Childres",
+    "Marcel Dragomir"
+   ],
+   "mechanics": [
+    "Campaign / Battle Card Driven",
+    "Cooperative Game",
+    "Grid Movement",
+    "Hand Management",
+    "Hexagon Grid",
+    "Modular Board",
+    "Scenario / Mission / Campaign Game",
+    "Simultaneous Action Selection",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Adventure",
+    "Exploration",
+    "Fantasy",
+    "Fighting",
+    "Miniatures"
+   ]
+  },
+  {
+   "id": "284207",
+   "name": "Going, Going, Gone!: A High-Stakes Board Game",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/4gWbxruT102L1Tv0aD8m1w__small/img/S3mrBYub2NHIJZDojpwX4ymLjBg=/fit-in/200x150/filters:strip_icc()/pic7308725.jpg",
+   "image": "https://cf.geekdo-images.com/4gWbxruT102L1Tv0aD8m1w__original/img/vdXmGSFJI07bI00xRZgMP4ue_RQ=/0x0/filters:format(jpeg)/pic7308725.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 8,
+   "rating": 6.3,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Sarah Batten",
+    "Donald Dinwiddie"
+   ],
+   "mechanics": [
+    "Auction / Bidding",
+    "Roll / Spin and Move"
+   ],
+   "categories": [
+    "Negotiation"
+   ]
+  },
+  {
+   "id": "98778",
+   "name": "Hanabi",
+   "year": 2010,
+   "thumbnail": "https://cf.geekdo-images.com/JDVksMwfcqoem1k_xtZrOA__small/img/amCeCcEKhYGbVtDvpvIMnu3qTg0=/fit-in/200x150/filters:strip_icc()/pic2007286.jpg",
+   "image": "https://cf.geekdo-images.com/JDVksMwfcqoem1k_xtZrOA__original/img/5vNHZiTEhK4aRDuGXv5KImp9cmQ=/0x0/filters:format(jpeg)/pic2007286.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 25,
+   "maxTime": 25,
+   "minAge": 8,
+   "rating": 7,
+   "weight": 1.7,
+   "plays": 0,
+   "designers": [
+    "Antoine Bauza"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Hand Management",
+    "Memory",
+    "Ordering",
+    "Set Collection"
+   ],
+   "categories": [
+    "Card Game",
+    "Deduction",
+    "Memory"
+   ]
+  },
+  {
+   "id": "414317",
+   "name": "Harmonies",
+   "year": 2024,
+   "thumbnail": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__small/img/ln5eKAzhse2PIHvWn7bu-jiW_uk=/fit-in/200x150/filters:strip_icc()/pic8026369.png",
+   "image": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__original/img/_Rv8lSr3fC1oDRkrQleQW2H2yCs=/0x0/filters:format(png)/pic8026369.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 8,
+   "weight": 2,
+   "plays": 2,
+   "designers": [
+    "Johan Benvenuto"
+   ],
+   "mechanics": [
+    "Chaining",
+    "Hexagon Grid",
+    "Open Drafting",
+    "Pattern Building",
+    "Set Collection",
+    "Solo / Solitaire Game",
+    "Tile Placement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Animals",
+    "Environmental",
+    "Puzzle"
+   ]
+  },
+  {
+   "id": "14379",
+   "name": "Harry Potter and the Sorcerer's Stone Mystery at Hogwarts Game",
+   "year": 2000,
+   "thumbnail": "https://cf.geekdo-images.com/ZWhp_F7urEjoIVkQer-Hag__small/img/K3eCgtR75GOWLa7z4wzXZf2UVNo=/fit-in/200x150/filters:strip_icc()/pic2523082.jpg",
+   "image": "https://cf.geekdo-images.com/ZWhp_F7urEjoIVkQer-Hag__original/img/g4aW5W75Pv4sTJSfGf3M3NA0lyA=/0x0/filters:format(jpeg)/pic2523082.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 5.5,
+   "weight": 1.5,
+   "plays": 0,
+   "designers": [
+    "(Uncredited)"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Roll / Spin and Move"
+   ],
+   "categories": [
+    "Children's Game",
+    "Deduction",
+    "Fantasy",
+    "Movies / TV / Radio theme",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "5750",
+   "name": "Harry Potter and the Sorcerer's Stone: Trivia Game",
+   "year": 2000,
+   "thumbnail": "https://cf.geekdo-images.com/_B-5QUDENluudsyQRQy1Gg__small/img/quZ4kpV6VI93tAFdCpNgDBTx1fA=/fit-in/200x150/filters:strip_icc()/pic898647.jpg",
+   "image": "https://cf.geekdo-images.com/_B-5QUDENluudsyQRQy1Gg__original/img/i0mGiDrrzx3RBhlDEVjbInnfRdA=/0x0/filters:format(jpeg)/pic898647.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 8,
+   "rating": 5.3,
+   "weight": 1.4,
+   "plays": 0,
+   "designers": [
+    "Tyler Kenney"
+   ],
+   "mechanics": [
+    "Roll / Spin and Move"
+   ],
+   "categories": [
+    "Children's Game",
+    "Fantasy",
+    "Movies / TV / Radio theme",
+    "Novel-based",
+    "Trivia"
+   ]
+  },
+  {
+   "id": "218358",
+   "name": "Harry Potter: Magical Beasts Board Game",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/gs-wBq6lU8fXps7jJ0CbGA__small/img/px75uGpBnh6Arkdm8lTCa2md1rE=/fit-in/200x150/filters:strip_icc()/pic4480784.png",
+   "image": "https://cf.geekdo-images.com/gs-wBq6lU8fXps7jJ0CbGA__original/img/HCb09K5zXT-NQhjVN4sKqu8Ffl8=/0x0/filters:format(png)/pic4480784.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 0,
+   "maxTime": 0,
+   "minAge": 8,
+   "rating": 4.1,
+   "weight": 1,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Roll / Spin and Move",
+    "Set Collection"
+   ],
+   "categories": [
+    "Adventure",
+    "Fantasy",
+    "Movies / TV / Radio theme",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "182218",
+   "name": "Hoax (Second Edition)",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/pVXUvBICLtodCNphTGmNhQ__small/img/Fa0TwMLmszXabfY4BQQzTZCFSrE=/fit-in/200x150/filters:strip_icc()/pic2628115.jpg",
+   "image": "https://cf.geekdo-images.com/pVXUvBICLtodCNphTGmNhQ__original/img/rFWYeNI9JtS7Y9i8qGZMsHLxNLA=/0x0/filters:format(jpeg)/pic2628115.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 10,
+   "maxTime": 20,
+   "minAge": 14,
+   "rating": 5.9,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Bill Eberle",
+    "Edward Horn, Jr.",
+    "Jack Kittredge",
+    "Peter Olotka"
+   ],
+   "mechanics": [
+    "Memory",
+    "Voting"
+   ],
+   "categories": [
+    "Bluffing",
+    "Deduction",
+    "Murder / Mystery",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "193042",
+   "name": "Junk Art",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/5VDnpX_3ykgCjTJSmHdfCA__small/img/LLHF9t1MxB0m-NBe_C9cxAyIslA=/fit-in/200x150/filters:strip_icc()/pic2884509.jpg",
+   "image": "https://cf.geekdo-images.com/5VDnpX_3ykgCjTJSmHdfCA__original/img/jb13nJHqbMmoK0P9gpjGaVu8v3U=/0x0/filters:format(jpeg)/pic2884509.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4",
+    "5",
+    "6"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 7.3,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Jay Cormier",
+    "Sen-Foong Lim"
+   ],
+   "mechanics": [
+    "Bingo",
+    "Hand Management",
+    "I Cut, You Choose",
+    "Score-and-Reset Game",
+    "Stacking and Balancing"
+   ],
+   "categories": [
+    "Action / Dexterity",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "254640",
+   "name": "Just One",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/74haNunMBn85beBi-yIKwA__small/img/feIV-gqMeza43ycvxh6PGx4lA_w=/fit-in/200x150/filters:strip_icc()/pic8669313.png",
+   "image": "https://cf.geekdo-images.com/74haNunMBn85beBi-yIKwA__original/img/hA22qL6nZxchA8FMTIfhLMcI53I=/0x0/filters:format(png)/pic8669313.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 7,
+   "bestPlayers": [
+    "6",
+    "7"
+   ],
+   "minTime": 20,
+   "maxTime": 60,
+   "minAge": 8,
+   "rating": 7.6,
+   "weight": 1,
+   "plays": 0,
+   "designers": [
+    "Ludovic Roudy",
+    "Bruno Sautter"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Deduction",
+    "Paper-and-Pencil",
+    "Score-and-Reset Game"
+   ],
+   "categories": [
+    "Deduction",
+    "Party Game",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "351622",
+   "name": "Key Enigma: Calling Card",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/wGx5mB2uu9OVo_-pZS2rwQ__small/img/nfI2mfFmkW-R1zkSKzeb207uulQ=/fit-in/200x150/filters:strip_icc()/pic6601889.jpg",
+   "image": "https://cf.geekdo-images.com/wGx5mB2uu9OVo_-pZS2rwQ__original/img/6_E2LjEDsunDtBVKUSlhigpfCpA=/0x0/filters:format(jpeg)/pic6601889.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "1"
+   ],
+   "minTime": 480,
+   "maxTime": 960,
+   "minAge": 14,
+   "rating": 7.3,
+   "weight": 2,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Cooperative Game",
+    "Deduction",
+    "Solo / Solitaire Game",
+    "Storytelling"
+   ],
+   "categories": [
+    "Deduction",
+    "Exploration",
+    "Murder / Mystery",
+    "Puzzle",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "304983",
+   "name": "Key Enigma: Hack Forward",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/cR0EieoZedTEeIvKTTmzSg__small/img/AmzMpEr8_CTye_EBY8nzWgJa8Lc=/fit-in/200x150/filters:strip_icc()/pic5785905.jpg",
+   "image": "https://cf.geekdo-images.com/cR0EieoZedTEeIvKTTmzSg__original/img/dkVAWKhGaxrdjnoKgnDPtrJVviU=/0x0/filters:format(jpeg)/pic5785905.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 480,
+   "maxTime": 960,
+   "minAge": 14,
+   "rating": 8,
+   "weight": 3,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Cooperative Game",
+    "Deduction",
+    "Solo / Solitaire Game",
+    "Storytelling"
+   ],
+   "categories": [
+    "Murder / Mystery",
+    "Puzzle",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "357928",
+   "name": "Key Enigma: Kalinasu Adventure",
+   "year": 2022,
+   "thumbnail": "https://cf.geekdo-images.com/INvdvlHKsHUHT_OeqRzBBA__small/img/ZKXL_XrKaxOYZ92mQwuDKXjeX6Y=/fit-in/200x150/filters:strip_icc()/pic7034288.jpg",
+   "image": "https://cf.geekdo-images.com/INvdvlHKsHUHT_OeqRzBBA__original/img/0lD6BdfXUz8a7ivqWuyJpy51HhU=/0x0/filters:format(jpeg)/pic7034288.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "1"
+   ],
+   "minTime": 240,
+   "maxTime": 240,
+   "minAge": 14,
+   "rating": 7.5,
+   "weight": 3,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Deduction",
+    "Elapsed Real Time Ending",
+    "Scenario / Mission / Campaign Game"
+   ],
+   "categories": [
+    "Adventure",
+    "Puzzle"
+   ]
+  },
+  {
+   "id": "204602",
+   "name": "Kill The Unicorns",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/AHqYR-X_KolVNhAUtBNi4w__small/img/ybK-FdkWx8ubv7RV84TpB2dfUK0=/fit-in/200x150/filters:strip_icc()/pic6324606.png",
+   "image": "https://cf.geekdo-images.com/AHqYR-X_KolVNhAUtBNi4w__original/img/SleMqK0qUwtdMQ36-CcgsicclOE=/0x0/filters:format(png)/pic6324606.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 25,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 6.8,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Cyril Besnard",
+    "Loïc Chorvot",
+    "Alain Fondrille"
+   ],
+   "mechanics": [
+    "Auction / Bidding",
+    "Hand Management",
+    "Set Collection",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Animals",
+    "Bluffing",
+    "Card Game",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "70323",
+   "name": "King of Tokyo",
+   "year": 2011,
+   "thumbnail": "https://cf.geekdo-images.com/m_RzXpHURC0_xLkvRSR_sw__small/img/OfgWmkGJj5BgOO0zFHEtP5CHfbU=/fit-in/200x150/filters:strip_icc()/pic3043734.jpg",
+   "image": "https://cf.geekdo-images.com/m_RzXpHURC0_xLkvRSR_sw__original/img/hSvWgiRYJCTTuoLOWTW3c8sYtl8=/0x0/filters:format(jpeg)/pic3043734.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 7.1,
+   "weight": 1.5,
+   "plays": 0,
+   "designers": [
+    "Richard Garfield"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Die Icon Resolution",
+    "King of the Hill",
+    "Open Drafting",
+    "Player Elimination",
+    "Push Your Luck",
+    "Re-rolling and Locking",
+    "Take That"
+   ],
+   "categories": [
+    "Dice",
+    "Fighting",
+    "Movies / TV / Radio theme",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "275467",
+   "name": "Letter Jam",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/kBZGJlIqir1I_EVCr2nDbg__small/img/mSl669ndQnGcsmKfe0Yppc1XvbI=/fit-in/200x150/filters:strip_icc()/pic4853794.jpg",
+   "image": "https://cf.geekdo-images.com/kBZGJlIqir1I_EVCr2nDbg__original/img/lJRGF7RDvRfo3azopO3tryB6IcI=/0x0/filters:format(jpeg)/pic4853794.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "6"
+   ],
+   "minTime": 45,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 7.1,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Ondra Skoupý"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Spelling"
+   ],
+   "categories": [
+    "Card Game",
+    "Deduction",
+    "Party Game",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "129622",
+   "name": "Love Letter",
+   "year": 2012,
+   "thumbnail": "https://cf.geekdo-images.com/T1ltXwapFUtghS9A7_tf4g__small/img/GtNX7gCmGpw39Tr6JApWC3Aga5U=/fit-in/200x150/filters:strip_icc()/pic1401448.jpg",
+   "image": "https://cf.geekdo-images.com/T1ltXwapFUtghS9A7_tf4g__original/img/xIAzJY7rl-mtPStRZSqnTVsAr8Y=/0x0/filters:format(jpeg)/pic1401448.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 10,
+   "rating": 7.2,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Seiji Kanai"
+   ],
+   "mechanics": [
+    "Deduction",
+    "Hand Management",
+    "Player Elimination",
+    "Score-and-Reset Game",
+    "Take That"
+   ],
+   "categories": [
+    "Card Game",
+    "Deduction",
+    "Renaissance"
+   ]
+  },
+  {
+   "id": "259081",
+   "name": "Machi Koro Legacy",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/ubuO16efniJNHiM4YBR49Q__small/img/AyQGxSFoTMMm-jD8hu6XogkGtqs=/fit-in/200x150/filters:strip_icc()/pic4747785.png",
+   "image": "https://cf.geekdo-images.com/ubuO16efniJNHiM4YBR49Q__original/img/j82ywn6XJu2JNTQVjawo4vV9kcs=/0x0/filters:format(png)/pic4747785.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 6.9,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "JR Honeycutt",
+    "Masao Suganuma"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Legacy Game",
+    "Random Production",
+    "Scenario / Mission / Campaign Game"
+   ],
+   "categories": [
+    "City Building",
+    "Dice"
+   ]
+  },
+  {
+   "id": "231309",
+   "name": "Magic: The Gathering – Explorers of Ixalan",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/5eiwG6GBYsq96GUhEmoNxQ__small/img/9nu35g3fWWHa84uJ87Yarde_hNo=/fit-in/200x150/filters:strip_icc()/pic3902214.png",
+   "image": "https://cf.geekdo-images.com/5eiwG6GBYsq96GUhEmoNxQ__original/img/NrgN9Xplo2Fd0TF4C-bzEvEBg6g=/0x0/filters:format(png)/pic3902214.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 13,
+   "rating": 7.1,
+   "weight": 3,
+   "plays": 0,
+   "designers": [
+    "Bryan Hawley",
+    "Peter Lee",
+    "Yoni Skolnik",
+    "Gavin Verhey"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Player Elimination",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Exploration",
+    "Fantasy",
+    "Territory Building"
+   ]
+  },
+  {
+   "id": "159581",
+   "name": "Maskmen",
+   "year": 2014,
+   "thumbnail": "https://cf.geekdo-images.com/-wnV7DO4fH-xTnHucSvF0g__small/img/yTCn34kVw6BHYHYn9PclScwLt9A=/fit-in/200x150/filters:strip_icc()/pic3678408.png",
+   "image": "https://cf.geekdo-images.com/-wnV7DO4fH-xTnHucSvF0g__original/img/RFbaeJA-SA4OceW3Vk_dj6bv43w=/0x0/filters:format(png)/pic3678408.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 9,
+   "rating": 6.9,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Jun Sasaki",
+    "新澤 大樹 (Taiki Shinzawa)"
+   ],
+   "mechanics": [
+    "Ladder Climbing",
+    "Score-and-Reset Game"
+   ],
+   "categories": [
+    "Card Game",
+    "Sports"
+   ]
+  },
+  {
+   "id": "2392",
+   "name": "Mastermind",
+   "year": 1971,
+   "thumbnail": "https://cf.geekdo-images.com/im_XE341_hfKMchAeH6mtw__small/img/svbdyni5otrt0xyJbgsAsuBoEUM=/fit-in/200x150/filters:strip_icc()/pic1118956.jpg",
+   "image": "https://cf.geekdo-images.com/im_XE341_hfKMchAeH6mtw__original/img/8DHauNAVePanWVWT0zIgSkcFrHw=/0x0/filters:format(jpeg)/pic1118956.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 8,
+   "rating": 5.7,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Mordecai Meirowitz"
+   ],
+   "mechanics": [
+    "Deduction"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Deduction"
+   ]
+  },
+  {
+   "id": "318977",
+   "name": "MicroMacro: Crime City",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/bLL3P-G25nIUkFjHxfJfnw__small/img/XY_Z5rRJe3IPLRfOvWp70OM2B68=/fit-in/200x150/filters:strip_icc()/pic7632081.jpg",
+   "image": "https://cf.geekdo-images.com/bLL3P-G25nIUkFjHxfJfnw__original/img/HBEhgjfb0QcF9pFrdJ8VYhBapoU=/0x0/filters:format(jpeg)/pic7632081.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 15,
+   "maxTime": 45,
+   "minAge": 12,
+   "rating": 7.4,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Johannes Sich"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Deduction",
+    "Scenario / Mission / Campaign Game",
+    "Solo / Solitaire Game"
+   ],
+   "categories": [
+    "Deduction",
+    "Murder / Mystery"
+   ]
+  },
+  {
+   "id": "439950",
+   "name": "Mille Bornes Rush",
+   "year": 2024,
+   "thumbnail": "https://cf.geekdo-images.com/NytQX78azD3GhhE2CTA5bw__small/img/MXQhsJuYcRJOsEMwamvW1-q10H8=/fit-in/200x150/filters:strip_icc()/pic8728266.jpg",
+   "image": "https://cf.geekdo-images.com/NytQX78azD3GhhE2CTA5bw__original/img/Rosxl0KkquV8viRjzWQyk5Ve5IE=/0x0/filters:format(jpeg)/pic8728266.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 7,
+   "rating": 7.2,
+   "weight": 0,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Hand Management",
+    "Take That",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Card Game",
+    "Racing"
+   ]
+  },
+  {
+   "id": "284653",
+   "name": "Mind MGMT: The Psychic Espionage “Game.”",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/hYP-VIJGRFR8yB78-UN7Rg__small/img/e0Yk_RzMK0b7jwcoR96UeJpjy3c=/fit-in/200x150/filters:strip_icc()/pic5154610.jpg",
+   "image": "https://cf.geekdo-images.com/hYP-VIJGRFR8yB78-UN7Rg__original/img/3vUqoYuF2SrVU0n752sfU3bBhHc=/0x0/filters:format(jpeg)/pic5154610.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 13,
+   "rating": 7.8,
+   "weight": 2.9,
+   "plays": 0,
+   "designers": [
+    "Jay Cormier",
+    "Sen-Foong Lim"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Deduction",
+    "Grid Movement",
+    "Hidden Movement",
+    "Paper-and-Pencil",
+    "Point to Point Movement",
+    "Team-Based Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Comic Book / Strip",
+    "Deduction",
+    "Spies / Secret Agents"
+   ]
+  },
+  {
+   "id": "1923",
+   "name": "MindTrap",
+   "year": 1991,
+   "thumbnail": "https://cf.geekdo-images.com/4ZRf2XeJVjblIp6nFuIOoA__small/img/rOM5ycGCtYWgxud5AeyziHdIFf0=/fit-in/200x150/filters:strip_icc()/pic195749.jpg",
+   "image": "https://cf.geekdo-images.com/4ZRf2XeJVjblIp6nFuIOoA__original/img/h__G-Cqlz6VK1pKMKYpE5xFQCA8=/0x0/filters:format(jpeg)/pic195749.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 16,
+   "bestPlayers": [
+    "6"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 4.8,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Richard Fast"
+   ],
+   "mechanics": [
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Deduction",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "1927",
+   "name": "Munchkin",
+   "year": 2001,
+   "thumbnail": "https://cf.geekdo-images.com/J-ts3MW0UhDzs621TR6cog__small/img/8hVkpMC5pDLr6ARI_4gI4N3aF5M=/fit-in/200x150/filters:strip_icc()/pic1871016.jpg",
+   "image": "https://cf.geekdo-images.com/J-ts3MW0UhDzs621TR6cog__original/img/FbqPPCilgZKND2xmhWJgkfjZiYE=/0x0/filters:format(jpeg)/pic1871016.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 10,
+   "rating": 5.9,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Steve Jackson (I)"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Race",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Humor"
+   ]
+  },
+  {
+   "id": "146735",
+   "name": "Munchkin Adventure Time",
+   "year": 2014,
+   "thumbnail": "https://cf.geekdo-images.com/FxLaXO7qxynv5HgAVXbasA__small/img/gMqUOyO14NxatSCImf3ns5SJlG8=/fit-in/200x150/filters:strip_icc()/pic2020343.jpg",
+   "image": "https://cf.geekdo-images.com/FxLaXO7qxynv5HgAVXbasA__original/img/aq6EBrNqdEbnVdT1DPbdsXdRh6U=/0x0/filters:format(jpeg)/pic2020343.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3",
+    "4",
+    "5"
+   ],
+   "minTime": 60,
+   "maxTime": 120,
+   "minAge": 10,
+   "rating": 6.5,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Steve Jackson (I)",
+    "Andrew Wolf"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Hand Management",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Humor",
+    "Movies / TV / Radio theme"
+   ]
+  },
+  {
+   "id": "147949",
+   "name": "One Night Ultimate Werewolf",
+   "year": 2014,
+   "thumbnail": "https://cf.geekdo-images.com/rqLju4uaZq-G9z4g91aPPQ__small/img/viW0s_SZmeEo53dKbM84WbVjIaY=/fit-in/200x150/filters:strip_icc()/pic8783294.png",
+   "image": "https://cf.geekdo-images.com/rqLju4uaZq-G9z4g91aPPQ__original/img/eOxUlbCuix0lOjuyBYpjtIXVihc=/0x0/filters:format(png)/pic8783294.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 10,
+   "bestPlayers": [
+    "6",
+    "7",
+    "8"
+   ],
+   "minTime": 10,
+   "maxTime": 10,
+   "minAge": 8,
+   "rating": 7,
+   "weight": 1.4,
+   "plays": 0,
+   "designers": [
+    "Ted Alspach",
+    "Akihisa Okui"
+   ],
+   "mechanics": [
+    "Hidden Roles",
+    "Role Playing",
+    "Roles with Asymmetric Information",
+    "Traitor Game",
+    "Variable Player Powers",
+    "Voting"
+   ],
+   "categories": [
+    "Bluffing",
+    "Card Game",
+    "Deduction",
+    "Horror",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "30549",
+   "name": "Pandemic",
+   "year": 2008,
+   "thumbnail": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__small/img/oqViRj6nVxK3m36NluTxU1PZkrk=/fit-in/200x150/filters:strip_icc()/pic1534148.jpg",
+   "image": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__original/img/IsrvRLpUV1TEyZsO5rC-btXaPz0=/0x0/filters:format(jpeg)/pic1534148.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 45,
+   "maxTime": 45,
+   "minAge": 8,
+   "rating": 7.5,
+   "weight": 2.4,
+   "plays": 0,
+   "designers": [
+    "Matt Leacock"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Chaining",
+    "Contracts",
+    "Cooperative Game",
+    "Events",
+    "Hand Management",
+    "Multi-Use Cards",
+    "Point to Point Movement",
+    "Set Collection",
+    "Simulation",
+    "Solo / Solitaire Game",
+    "Tags",
+    "Trading",
+    "Variable Player Powers",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Medical",
+    "Travel"
+   ]
+  },
+  {
+   "id": "314040",
+   "name": "Pandemic Legacy: Season 0",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/y0x1zbkpUXjddzWWnhekYw__small/img/hj0jDCs-hKfkgqG-oOWu-kM-I6E=/fit-in/200x150/filters:strip_icc()/pic5581457.jpg",
+   "image": "https://cf.geekdo-images.com/y0x1zbkpUXjddzWWnhekYw__original/img/2VlfzwT4b8f1s2HqbilcjR-bM3I=/0x0/filters:format(jpeg)/pic5581457.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 45,
+   "maxTime": 60,
+   "minAge": 14,
+   "rating": 8.3,
+   "weight": 3.2,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Matt Leacock"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Cooperative Game",
+    "Hand Management",
+    "Legacy Game",
+    "Point to Point Movement",
+    "Scenario / Mission / Campaign Game",
+    "Set Collection",
+    "Tags",
+    "Trading",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Medical",
+    "Spies / Secret Agents"
+   ]
+  },
+  {
+   "id": "161936",
+   "name": "Pandemic Legacy: Season 1",
+   "year": 2015,
+   "thumbnail": "https://cf.geekdo-images.com/-Qer2BBPG7qGGDu6KcVDIw__small/img/NQQcjS31TO0DE246N9rpt0hd9eo=/fit-in/200x150/filters:strip_icc()/pic2452831.png",
+   "image": "https://cf.geekdo-images.com/-Qer2BBPG7qGGDu6KcVDIw__original/img/PlzAH7swN1nsFxOXbfUvE3TkE5w=/0x0/filters:format(png)/pic2452831.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 13,
+   "rating": 8.5,
+   "weight": 2.8,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Matt Leacock"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Cooperative Game",
+    "Hand Management",
+    "Legacy Game",
+    "Multi-Use Cards",
+    "Point to Point Movement",
+    "Scenario / Mission / Campaign Game",
+    "Set Collection",
+    "Tags",
+    "Trading",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Environmental",
+    "Medical"
+   ]
+  },
+  {
+   "id": "221107",
+   "name": "Pandemic Legacy: Season 2",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/Qtkb-UTvHa0-kxt_MK1nKw__small/img/MfKsnJUTx9IQV-o12Fahxx5IaDQ=/fit-in/200x150/filters:strip_icc()/pic3763549.jpg",
+   "image": "https://cf.geekdo-images.com/Qtkb-UTvHa0-kxt_MK1nKw__original/img/wJiRr7lBmWSKcRS3lPpvKIPMgQQ=/0x0/filters:format(jpeg)/pic3763549.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 14,
+   "rating": 8,
+   "weight": 3.2,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Matt Leacock"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Cooperative Game",
+    "Hand Management",
+    "Legacy Game",
+    "Pick-up and Deliver",
+    "Point to Point Movement",
+    "Scenario / Mission / Campaign Game",
+    "Set Collection",
+    "Tags",
+    "Trading",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Environmental",
+    "Exploration",
+    "Medical",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "271060",
+   "name": "Pathfinder Adventure Card Game: Core Set",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/A_Aw1RUxVA4TG11V2SFLSQ__small/img/w0MAz5-Tl_kyQEIDiiHM9lQlNdI=/fit-in/200x150/filters:strip_icc()/pic4711533.jpg",
+   "image": "https://cf.geekdo-images.com/A_Aw1RUxVA4TG11V2SFLSQ__original/img/W36JVAGGd1_by6zQLBckti2g0Cs=/0x0/filters:format(jpeg)/pic4711533.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "1",
+    "2"
+   ],
+   "minTime": 90,
+   "maxTime": 90,
+   "minAge": 13,
+   "rating": 7.6,
+   "weight": 3,
+   "plays": 0,
+   "designers": [
+    "Chad Brown",
+    "Keith Richmond",
+    "Aviva Schecterson",
+    "Mike Selinker",
+    "Liz Spain"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Deck, Bag, and Pool Building",
+    "Dice Rolling",
+    "Hand Management",
+    "Move Through Deck",
+    "Role Playing",
+    "Scenario / Mission / Campaign Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Card Game",
+    "Fantasy",
+    "Fighting"
+   ]
+  },
+  {
+   "id": "271061",
+   "name": "Pathfinder Adventure Card Game: Curse of the Crimson Throne Adventure Path",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/yh5g83opVCgKukHhbeouaA__small/img/6X1N4lxe5CVkwkEsx_a2QR_za8E=/fit-in/200x150/filters:strip_icc()/pic4711557.jpg",
+   "image": "https://cf.geekdo-images.com/yh5g83opVCgKukHhbeouaA__original/img/o-bJfQgkG3rXVUkd7wkYMRd2vTo=/0x0/filters:format(jpeg)/pic4711557.jpg",
+   "expansion": true,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 90,
+   "maxTime": 90,
+   "minAge": 13,
+   "rating": 8.4,
+   "weight": 3.3,
+   "plays": 0,
+   "designers": [
+    "Chad Brown",
+    "Keith Richmond",
+    "Aviva Schecterson",
+    "Mike Selinker",
+    "Liz Spain"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Deck, Bag, and Pool Building",
+    "Dice Rolling",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Adventure",
+    "Card Game",
+    "Fantasy",
+    "Fighting"
+   ]
+  },
+  {
+   "id": "140840",
+   "name": "Personally Incorrect",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/FBctEY9fJtIrk4hqbwhg2A__small/img/roixdL_YFGr5s0ati2grORqEagk=/fit-in/200x150/filters:strip_icc()/pic3206168.png",
+   "image": "https://cf.geekdo-images.com/FBctEY9fJtIrk4hqbwhg2A__original/img/-ML-vpQexE1vkjhpvag4WStcOd8=/0x0/filters:format(png)/pic3206168.png",
+   "expansion": false,
+   "minPlayers": 5,
+   "maxPlayers": 10,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 20,
+   "maxTime": 30,
+   "minAge": 18,
+   "rating": 5.5,
+   "weight": 1,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Hand Management",
+    "Simultaneous Action Selection",
+    "Voting"
+   ],
+   "categories": [
+    "Humor",
+    "Mature / Adult",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "427087",
+   "name": "Perspectives Blue",
+   "year": 2024,
+   "thumbnail": "https://cf.geekdo-images.com/p8jryPnPhTrhkC-OjarsKg__small/img/oaXIzXptE7PIJ0XLhWbolFxWd2Y=/fit-in/200x150/filters:strip_icc()/pic8371272.png",
+   "image": "https://cf.geekdo-images.com/p8jryPnPhTrhkC-OjarsKg__original/img/N6lIqpHqYx4sN49li7IMXk9WUXc=/0x0/filters:format(png)/pic8371272.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 90,
+   "maxTime": 90,
+   "minAge": 12,
+   "rating": 7.6,
+   "weight": 1.6,
+   "plays": 2,
+   "designers": [
+    "Matthew Dunstan",
+    "Dave Neale"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Deduction"
+   ],
+   "categories": [
+    "American West",
+    "Ancient",
+    "Deduction",
+    "Medieval",
+    "Murder / Mystery",
+    "Puzzle"
+   ]
+  },
+  {
+   "id": "284108",
+   "name": "Pictures",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/pR7dcr6bs5TIOHOhKIoe_A__small/img/YYa8rvA3RgJS6aT-HT2NRegGmuA=/fit-in/200x150/filters:strip_icc()/pic4946885.jpg",
+   "image": "https://cf.geekdo-images.com/pR7dcr6bs5TIOHOhKIoe_A__original/img/YGaDDOA-Jtr9eS60TNUx51J36Ds=/0x0/filters:format(jpeg)/pic4946885.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 20,
+   "maxTime": 30,
+   "minAge": 8,
+   "rating": 7.2,
+   "weight": 1,
+   "plays": 0,
+   "designers": [
+    "Christian Stöhr",
+    "Daniela Stöhr"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Deduction",
+    "Pattern Recognition"
+   ],
+   "categories": [
+    "Deduction",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "312786",
+   "name": "Poetry for Neanderthals",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/CDlBjXSPT-3Zyrj8ENBkvQ__small/img/0ON18UcLepuwPLhwkRtRUjhvAZ8=/fit-in/200x150/filters:strip_icc()/pic5702797.jpg",
+   "image": "https://cf.geekdo-images.com/CDlBjXSPT-3Zyrj8ENBkvQ__original/img/FgAyx5Q1pe7TyHsYskhbab_S_os=/0x0/filters:format(jpeg)/pic5702797.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 12,
+   "bestPlayers": [
+    "6",
+    "8"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 7,
+   "rating": 6.6,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Elan Lee"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Real-Time",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Humor",
+    "Party Game",
+    "Prehistoric",
+    "Real-time",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "244521",
+   "name": "Quacks",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/B1bLRWzTASZ-xx9NoAE79A__small/img/deG3pr-ORZ3JrGvQA-oQNrwh0l0=/fit-in/200x150/filters:strip_icc()/pic8780293.png",
+   "image": "https://cf.geekdo-images.com/B1bLRWzTASZ-xx9NoAE79A__original/img/HulJk6gFzp_bxl0wzc2XEMq8NLM=/0x0/filters:format(png)/pic8780293.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 45,
+   "maxTime": 45,
+   "minAge": 10,
+   "rating": 7.8,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Wolfgang Warsch"
+   ],
+   "mechanics": [
+    "Catch the Leader",
+    "Deck, Bag, and Pool Building",
+    "Delayed Purchase",
+    "Dice Rolling",
+    "Die Icon Resolution",
+    "Events",
+    "Neighbor Scope",
+    "Push Your Luck",
+    "Score-and-Reset Game",
+    "Simultaneous Action Selection",
+    "Track Movement",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Fantasy",
+    "Medieval"
+   ]
+  },
+  {
+   "id": "19370",
+   "name": "Quelf",
+   "year": 2005,
+   "thumbnail": "https://cf.geekdo-images.com/SfNSwt9FWMx3FHM5ljzicQ__small/img/ptsYJkAdBIcxLgDJTgGSFoZUs64=/fit-in/200x150/filters:strip_icc()/pic200936.jpg",
+   "image": "https://cf.geekdo-images.com/SfNSwt9FWMx3FHM5ljzicQ__original/img/maRraBf0pXoUE9Bz15_CJdots9I=/0x0/filters:format(jpeg)/pic200936.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "5",
+    "6"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 5.2,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Robb Earnest",
+    "Jeremy Fifer",
+    "Matthew Rivaldi"
+   ],
+   "mechanics": [
+    "Acting",
+    "Paper-and-Pencil",
+    "Singing",
+    "Storytelling"
+   ],
+   "categories": [
+    "Action / Dexterity",
+    "Humor",
+    "Party Game",
+    "Trivia"
+   ]
+  },
+  {
+   "id": "28143",
+   "name": "Race for the Galaxy",
+   "year": 2007,
+   "thumbnail": "https://cf.geekdo-images.com/-DOqixs8uwKUvvWPKI4f9w__small/img/xLs-ldTPwaADbvzkOpF0sgWzwck=/fit-in/200x150/filters:strip_icc()/pic5261714.jpg",
+   "image": "https://cf.geekdo-images.com/-DOqixs8uwKUvvWPKI4f9w__original/img/Vh-DCkTPa8OU45LaJdUywwhiYqE=/0x0/filters:format(jpeg)/pic5261714.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 30,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 7.7,
+   "weight": 3,
+   "plays": 0,
+   "designers": [
+    "Thomas Lehmann"
+   ],
+   "mechanics": [
+    "End Game Bonuses",
+    "Follow",
+    "Hand Management",
+    "Income",
+    "Market",
+    "Multi-Use Cards",
+    "Simultaneous Action Selection",
+    "Tags",
+    "Variable Phase Order"
+   ],
+   "categories": [
+    "Card Game",
+    "Civilization",
+    "Economic",
+    "Science Fiction",
+    "Space Exploration"
+   ]
+  },
+  {
+   "id": "237182",
+   "name": "Root",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__small/img/ACovMZzGGIsBRyEQXFnsT8282NM=/fit-in/200x150/filters:strip_icc()/pic4254509.jpg",
+   "image": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__original/img/E0s2LvtFA1L5YKk-_44D4u2VD2s=/0x0/filters:format(jpeg)/pic4254509.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 14,
+   "rating": 8.1,
+   "weight": 3.8,
+   "plays": 0,
+   "designers": [
+    "Cole Wehrle"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Action Queue",
+    "Action Retrieval",
+    "Area Majority / Influence",
+    "Area Movement",
+    "Dice Rolling",
+    "Hand Management",
+    "Multi-Use Cards",
+    "Negotiation",
+    "Point to Point Movement",
+    "Race",
+    "Sudden Death Ending",
+    "Take That",
+    "Variable Player Powers",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Animals",
+    "Fantasy",
+    "Negotiation",
+    "Territory Building",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "287220",
+   "name": "Root: The Clockwork Expansion",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/8eYz32wU81Nev8oSV2nuPg__small/img/YpjUbmzF7sX_qloO0WzPQLkmLXY=/fit-in/200x150/filters:strip_icc()/pic4909933.png",
+   "image": "https://cf.geekdo-images.com/8eYz32wU81Nev8oSV2nuPg__original/img/ngzJGRgAEEbq7h8327Ek8grJuC8=/0x0/filters:format(png)/pic4909933.png",
+   "expansion": true,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "1"
+   ],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 10,
+   "rating": 7.7,
+   "weight": 4,
+   "plays": 0,
+   "designers": [
+    "Benjamin Schmauss",
+    "Cole Wehrle"
+   ],
+   "mechanics": [
+    "Action Queue",
+    "Area Majority / Influence",
+    "Cooperative Game",
+    "Dice Rolling",
+    "Hand Management",
+    "Point to Point Movement",
+    "Solo / Solitaire Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "272638",
+   "name": "Root: The Exiles and Partisans Deck",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/ci78uqda8Oz40A7wozLGaA__small/img/D89paLyV9n6xE-NTQDRnn45MvHQ=/fit-in/200x150/filters:strip_icc()/pic6330375.png",
+   "image": "https://cf.geekdo-images.com/ci78uqda8Oz40A7wozLGaA__original/img/joHuZxT6XAMWr2jl-Kdd6QyQsRo=/0x0/filters:format(png)/pic6330375.png",
+   "expansion": true,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 0,
+   "maxTime": 0,
+   "minAge": 13,
+   "rating": 8.7,
+   "weight": 3.8,
+   "plays": 0,
+   "designers": [
+    "Cole Wehrle"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Point to Point Movement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Animals",
+    "Expansion for Base-game",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "241386",
+   "name": "Root: The Riverfolk Expansion",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/durhzLYyIypxg7CuVYe82Q__small/img/VianPUKU3XkBGeiqRm6x2IyeMGA=/fit-in/200x150/filters:strip_icc()/pic4252654.jpg",
+   "image": "https://cf.geekdo-images.com/durhzLYyIypxg7CuVYe82Q__original/img/xrLTlVUWtteTsoXmYLM2KM190DE=/0x0/filters:format(jpeg)/pic4252654.jpg",
+   "expansion": true,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 10,
+   "rating": 8.4,
+   "weight": 3.9,
+   "plays": 0,
+   "designers": [
+    "Cole Wehrle"
+   ],
+   "mechanics": [
+    "Area Majority / Influence",
+    "Area Movement",
+    "Cooperative Game",
+    "Dice Rolling",
+    "Hand Management",
+    "Race",
+    "Solo / Solitaire Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Animals",
+    "Expansion for Base-game",
+    "Fantasy",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "272637",
+   "name": "Root: The Underworld Expansion",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/LzZVgiX-d1nA_MSmZmH5tA__small/img/RlVbapd_2105eev01lqBqCA4tb0=/fit-in/200x150/filters:strip_icc()/pic4608840.jpg",
+   "image": "https://cf.geekdo-images.com/LzZVgiX-d1nA_MSmZmH5tA__original/img/QjducX9OMQbVZf6ei1bhuKRWlAs=/0x0/filters:format(jpeg)/pic4608840.jpg",
+   "expansion": true,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 90,
+   "minAge": 10,
+   "rating": 8.7,
+   "weight": 3.7,
+   "plays": 0,
+   "designers": [
+    "Patrick Leder",
+    "Cole Wehrle"
+   ],
+   "mechanics": [
+    "Action Queue",
+    "Area Majority / Influence",
+    "Betting and Bluffing",
+    "Dice Rolling",
+    "Hand Management",
+    "King of the Hill",
+    "Point to Point Movement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Animals",
+    "Expansion for Base-game",
+    "Fantasy",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "199561",
+   "name": "Sagrada",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/77OxPP4ckbOgK9sPg-6KDw__small/img/zCe7i6vc7LoJZDDnVUQQlU-uw4w=/fit-in/200x150/filters:strip_icc()/pic9374520.png",
+   "image": "https://cf.geekdo-images.com/77OxPP4ckbOgK9sPg-6KDw__original/img/oh6s7_lx_jMP0zvHK7RttbhQd5I=/0x0/filters:format(png)/pic9374520.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 14,
+   "rating": 7.5,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Adrian Adamescu",
+    "Daryl Andrews"
+   ],
+   "mechanics": [
+    "Contracts",
+    "Dice Rolling",
+    "End Game Bonuses",
+    "Grid Coverage",
+    "Open Drafting",
+    "Pattern Building",
+    "Set Collection",
+    "Solo / Solitaire Game",
+    "Turn Order: Progressive",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Dice",
+    "Puzzle"
+   ]
+  },
+  {
+   "id": "140729",
+   "name": "Say What You Meme",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/Y1ySmLA8GikIQ9c0vzmUDA__small/img/FyI09OMTo9RaT5aMm7-lKKDlN6M=/fit-in/200x150/filters:strip_icc()/pic1617914.jpg",
+   "image": "https://cf.geekdo-images.com/Y1ySmLA8GikIQ9c0vzmUDA__original/img/876iek-jKfpsUI2fcrfb9kj-WgA=/0x0/filters:format(jpeg)/pic1617914.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 10,
+   "bestPlayers": [],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 13,
+   "rating": 4.2,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "5th Door Designs"
+   ],
+   "mechanics": [
+    "Line Drawing",
+    "Paper-and-Pencil"
+   ],
+   "categories": [
+    "Party Game"
+   ]
+  },
+  {
+   "id": "19578",
+   "name": "Scene It? Harry Potter",
+   "year": 2005,
+   "thumbnail": "https://cf.geekdo-images.com/EWUP8bQ5xW5UcUeL6LzV6w__small/img/x9Y9w4ofXXsYoSJ7BaJ28Tu8MpQ=/fit-in/200x150/filters:strip_icc()/pic8299169.jpg",
+   "image": "https://cf.geekdo-images.com/EWUP8bQ5xW5UcUeL6LzV6w__original/img/4YlnkYZMpnmVyfgYLxZr2n1xoIQ=/0x0/filters:format(jpeg)/pic8299169.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 12,
+   "bestPlayers": [
+    "3",
+    "4",
+    "6"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 8,
+   "rating": 5.4,
+   "weight": 1.6,
+   "plays": 0,
+   "designers": [
+    "Craig Kinzer",
+    "Dave Long (I)"
+   ],
+   "mechanics": [
+    "Roll / Spin and Move"
+   ],
+   "categories": [
+    "Children's Game",
+    "Electronic",
+    "Fantasy",
+    "Movies / TV / Radio theme",
+    "Novel-based",
+    "Party Game",
+    "Trivia"
+   ]
+  },
+  {
+   "id": "291453",
+   "name": "SCOUT",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/cf0xxkevbwTGF3VUZymKjg__small/img/NUcMdmZ3_eA1YfIwL8iRgkZKaHw=/fit-in/200x150/filters:strip_icc()/pic6398727.png",
+   "image": "https://cf.geekdo-images.com/cf0xxkevbwTGF3VUZymKjg__original/img/vkElrRCPJxy7Q3TH9olpq20egA4=/0x0/filters:format(png)/pic6398727.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 9,
+   "rating": 7.8,
+   "weight": 1.4,
+   "plays": 0,
+   "designers": [
+    "Kei Kajino (梶野 桂)"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Ladder Climbing",
+    "Score-and-Reset Game"
+   ],
+   "categories": [
+    "Card Game"
+   ]
+  },
+  {
+   "id": "188834",
+   "name": "Secret Hitler",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/rAQ3hIXoH6xDcj41v9iqCg__small/img/xA2T7PiwN3Z8pwAksicoCOA1tf0=/fit-in/200x150/filters:strip_icc()/pic5164305.jpg",
+   "image": "https://cf.geekdo-images.com/rAQ3hIXoH6xDcj41v9iqCg__original/img/7oKwNUYakx3-vHUBLHWVuFNKfl4=/0x0/filters:format(jpeg)/pic5164305.jpg",
+   "expansion": false,
+   "minPlayers": 5,
+   "maxPlayers": 10,
+   "bestPlayers": [
+    "8",
+    "10"
+   ],
+   "minTime": 45,
+   "maxTime": 45,
+   "minAge": 13,
+   "rating": 7.5,
+   "weight": 1.7,
+   "plays": 0,
+   "designers": [
+    "Mike Boxleiter",
+    "Tommy Maranges",
+    "Max Temkin"
+   ],
+   "mechanics": [
+    "Hidden Roles",
+    "Player Elimination",
+    "Team-Based Game",
+    "Traitor Game",
+    "Voting"
+   ],
+   "categories": [
+    "Bluffing",
+    "Card Game",
+    "Deduction",
+    "Humor",
+    "Party Game",
+    "Political",
+    "Print & Play",
+    "Spies / Secret Agents"
+   ]
+  },
+  {
+   "id": "2375",
+   "name": "Sequence",
+   "year": 1982,
+   "thumbnail": "https://cf.geekdo-images.com/VosGBqkOjkhgC2QFS1o3_g__small/img/PNwWrQIQNo757BtoW6Hniy3P-cw=/fit-in/200x150/filters:strip_icc()/pic212893.jpg",
+   "image": "https://cf.geekdo-images.com/VosGBqkOjkhgC2QFS1o3_g__original/img/ZIc1p75HIEOIwtKy9ZIHsP2l0zQ=/0x0/filters:format(jpeg)/pic212893.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 12,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 10,
+   "maxTime": 30,
+   "minAge": 7,
+   "rating": 6.2,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Doug Reuter"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Pattern Building",
+    "Take That",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Abstract Strategy",
+    "Card Game"
+   ]
+  },
+  {
+   "id": "157969",
+   "name": "Sheriff of Nottingham",
+   "year": 2014,
+   "thumbnail": "https://cf.geekdo-images.com/BBgLFKUzr6tcKtlIM2JSFw__small/img/JD5L_XrtkaKINUj8ILZqFMGcTsE=/fit-in/200x150/filters:strip_icc()/pic2075830.jpg",
+   "image": "https://cf.geekdo-images.com/BBgLFKUzr6tcKtlIM2JSFw__original/img/fll2MuTBPVKb7fyBJ8D-4_c1XHM=/0x0/filters:format(jpeg)/pic2075830.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "5"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 14,
+   "rating": 7,
+   "weight": 1.7,
+   "plays": 0,
+   "designers": [
+    "Sérgio Halaban",
+    "André Zatz"
+   ],
+   "mechanics": [
+    "Betting and Bluffing",
+    "Bribery",
+    "Hand Management",
+    "Negotiation",
+    "Open Drafting",
+    "Role Playing",
+    "Set Collection"
+   ],
+   "categories": [
+    "Bluffing",
+    "Card Game",
+    "Humor",
+    "Medieval",
+    "Negotiation",
+    "Novel-based",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "373106",
+   "name": "Sky Team",
+   "year": 2023,
+   "thumbnail": "https://cf.geekdo-images.com/uXMeQzNenHb3zK7Hoa6b2w__small/img/WyPClajMWU9lV5BdCXiZnqdZgmU=/fit-in/200x150/filters:strip_icc()/pic7398904.jpg",
+   "image": "https://cf.geekdo-images.com/uXMeQzNenHb3zK7Hoa6b2w__original/img/mWOQnkpyYBorh_Y1-0Y2o-ew17k=/0x0/filters:format(jpeg)/pic7398904.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 10,
+   "rating": 8.1,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Luc Rémond"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Dice Rolling",
+    "Scenario / Mission / Campaign Game",
+    "Turn Order: Progressive",
+    "Variable Player Powers",
+    "Variable Set-up",
+    "Worker Placement with Dice Workers"
+   ],
+   "categories": [
+    "Aviation / Flight",
+    "Dice"
+   ]
+  },
+  {
+   "id": "329839",
+   "name": "So Clover!",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/8oipK9-ivkn53h7L5U2Yfg__small/img/cBKt41XFKkdphyqZItit4EIC45k=/fit-in/200x150/filters:strip_icc()/pic6588069.png",
+   "image": "https://cf.geekdo-images.com/8oipK9-ivkn53h7L5U2Yfg__original/img/KtvdQ2mT4ShhUaJekT9IvuOCvv8=/0x0/filters:format(png)/pic6588069.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 30,
+   "minAge": 10,
+   "rating": 7.6,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "François Romain"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game"
+   ],
+   "categories": [
+    "Party Game",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "223770",
+   "name": "Startups",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/Y23LsS9HxPgO0XT5RvtwTA__small/img/JQ6I0tZDYByNKmMSW0gsTiNulEQ=/fit-in/200x150/filters:strip_icc()/pic3678411.png",
+   "image": "https://cf.geekdo-images.com/Y23LsS9HxPgO0XT5RvtwTA__original/img/IJW2fhjS4x88hu8Aap8XHrMfcyg=/0x0/filters:format(png)/pic3678411.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 7,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 10,
+   "rating": 7.2,
+   "weight": 1.6,
+   "plays": 0,
+   "designers": [
+    "Jun Sasaki"
+   ],
+   "mechanics": [
+    "Area Majority / Influence",
+    "Hot Potato",
+    "Increase Value of Unchosen Resources",
+    "Investment",
+    "Score-and-Reset Game",
+    "Set Collection",
+    "Stock Holding"
+   ],
+   "categories": [
+    "Card Game",
+    "Economic"
+   ]
+  },
+  {
+   "id": "232822",
+   "name": "Stratego",
+   "year": 2011,
+   "thumbnail": "https://cf.geekdo-images.com/XpYLAj9aQ5fkg7MJyIiMug__small/img/4JX8gc7ubBjf6HHJbllvuOVhDdI=/fit-in/200x150/filters:strip_icc()/pic8210077.jpg",
+   "image": "https://cf.geekdo-images.com/XpYLAj9aQ5fkg7MJyIiMug__original/img/92IL5fJuSrR9668wnWPAg6CLOoQ=/0x0/filters:format(jpeg)/pic8210077.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 45,
+   "maxTime": 0,
+   "minAge": 8,
+   "rating": 6.5,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [],
+   "mechanics": [
+    "Grid Movement",
+    "Memory",
+    "Secret Unit Deployment",
+    "Square Grid"
+   ],
+   "categories": [
+    "Deduction",
+    "Science Fiction",
+    "Wargame"
+   ]
+  },
+  {
+   "id": "139443",
+   "name": "Superfight",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/4ih18dd_9SZv3yn-YazMIw__small/img/i2BNig3lkYu3MZPhzKRIygg7RJU=/fit-in/200x150/filters:strip_icc()/pic2933903.jpg",
+   "image": "https://cf.geekdo-images.com/4ih18dd_9SZv3yn-YazMIw__original/img/VOTdHizWmvwJnOFMw6YMWj5sJSg=/0x0/filters:format(jpeg)/pic2933903.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 20,
+   "bestPlayers": [
+    "4",
+    "5",
+    "6"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 8,
+   "rating": 5.8,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Jack Dire"
+   ],
+   "mechanics": [
+    "Storytelling",
+    "Voting"
+   ],
+   "categories": [
+    "Card Game",
+    "Comic Book / Strip",
+    "Fighting",
+    "Humor",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "133473",
+   "name": "Sushi Go!",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/Fn3PSPZVxa3YurlorITQ1Q__small/img/6XF493O0tSyLyZP5ArlcZrOTMXQ=/fit-in/200x150/filters:strip_icc()/pic1900075.jpg",
+   "image": "https://cf.geekdo-images.com/Fn3PSPZVxa3YurlorITQ1Q__original/img/5vRsn2TT9eJmq27i9HtLWKpB_xs=/0x0/filters:format(jpeg)/pic1900075.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 8,
+   "rating": 7,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Phil Walker-Harding"
+   ],
+   "mechanics": [
+    "Closed Drafting",
+    "End Game Bonuses",
+    "Hand Management",
+    "Score-and-Reset Game",
+    "Set Collection",
+    "Simultaneous Action Selection"
+   ],
+   "categories": [
+    "Card Game",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "1111",
+   "name": "Taboo",
+   "year": 1989,
+   "thumbnail": "https://cf.geekdo-images.com/TdOB9V-wTf0LenXk8QWo-A__small/img/FU6jPnm6yzKxH8au69ZAJwC2wpY=/fit-in/200x150/filters:strip_icc()/pic8377520.jpg",
+   "image": "https://cf.geekdo-images.com/TdOB9V-wTf0LenXk8QWo-A__original/img/mhYaJYFxGrVZaP7ZL08ZuFJj5Ak=/0x0/filters:format(jpeg)/pic8377520.jpg",
+   "expansion": false,
+   "minPlayers": 4,
+   "maxPlayers": 10,
+   "bestPlayers": [
+    "6",
+    "8"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 12,
+   "rating": 6.3,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Brian Hersch"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Party Game",
+    "Real-time",
+    "Word Game"
+   ]
+  },
+  {
+   "id": "27627",
+   "name": "Talisman: Revised 4th Edition",
+   "year": 2007,
+   "thumbnail": "https://cf.geekdo-images.com/PxQnAcYv74J-dJW_s6CHMA__small/img/Fzg4e1lL8MLxk6bSgHxKO2alffc=/fit-in/200x150/filters:strip_icc()/pic332870.jpg",
+   "image": "https://cf.geekdo-images.com/PxQnAcYv74J-dJW_s6CHMA__original/img/o0A1Lkuaqo1zBuMpGk6hsXb5dUY=/0x0/filters:format(jpeg)/pic332870.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 90,
+   "maxTime": 90,
+   "minAge": 13,
+   "rating": 6.5,
+   "weight": 2.2,
+   "plays": 0,
+   "designers": [
+    "John Goodenough",
+    "Robert Harris"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "Role Playing",
+    "Roll / Spin and Move",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Adventure",
+    "Exploration",
+    "Fantasy",
+    "Fighting"
+   ]
+  },
+  {
+   "id": "167791",
+   "name": "Terraforming Mars",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__small/img/BTxqxgYay5tHJfVoJ2NF5g43_gA=/fit-in/200x150/filters:strip_icc()/pic3536616.jpg",
+   "image": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__original/img/thIqWDnH9utKuoKVEUqveDixprI=/0x0/filters:format(jpeg)/pic3536616.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 120,
+   "maxTime": 120,
+   "minAge": 12,
+   "rating": 8.3,
+   "weight": 3.3,
+   "plays": 0,
+   "designers": [
+    "Jacob Fryxelius"
+   ],
+   "mechanics": [
+    "Closed Drafting",
+    "Contracts",
+    "End Game Bonuses",
+    "Hand Management",
+    "Hexagon Grid",
+    "Income",
+    "Solo / Solitaire Game",
+    "Tags",
+    "Take That",
+    "Tile Placement",
+    "Turn Order: Progressive",
+    "Variable Player Powers",
+    "Variable Set-up"
+   ],
+   "categories": [
+    "Civilization",
+    "Economic",
+    "Environmental",
+    "Industry / Manufacturing",
+    "Science Fiction",
+    "Space Exploration",
+    "Territory Building"
+   ]
+  },
+  {
+   "id": "410382",
+   "name": "That Escalated Quickly",
+   "year": 2024,
+   "thumbnail": "https://cf.geekdo-images.com/Q48cCZ5WDkxbOh2_Ee3zJQ__small/img/im4sjdG5MZRKdO4mXgHlm2Yikiw=/fit-in/200x150/filters:strip_icc()/pic9046728.jpg",
+   "image": "https://cf.geekdo-images.com/Q48cCZ5WDkxbOh2_Ee3zJQ__original/img/Ry4ASWsBoLOMAu8EPU6xy8HOmDc=/0x0/filters:format(jpeg)/pic9046728.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "5",
+    "6",
+    "7"
+   ],
+   "minTime": 15,
+   "maxTime": 15,
+   "minAge": 10,
+   "rating": 6.9,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Ian Clayman",
+    "Carol Mertz",
+    "Aurélien Picolet"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Ordering",
+    "Player Judge",
+    "Targeted Clues"
+   ],
+   "categories": [
+    "Deduction",
+    "Humor",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "324856",
+   "name": "The Crew: Mission Deep Sea",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/VuBqZ1sMaDAVVHF_OEJP4g__small/img/EdacXlcFZ06YK0-ZKa0oKwL4VCw=/fit-in/200x150/filters:strip_icc()/pic5988903.jpg",
+   "image": "https://cf.geekdo-images.com/VuBqZ1sMaDAVVHF_OEJP4g__original/img/jGWxczXC_VWZofeAmlO_DkB0hCI=/0x0/filters:format(jpeg)/pic5988903.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 10,
+   "rating": 8,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [
+    "Thomas Sing"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Deduction",
+    "Hand Management",
+    "Scenario / Mission / Campaign Game",
+    "Trick-taking"
+   ],
+   "categories": [
+    "Adventure",
+    "Card Game",
+    "Mythology",
+    "Nautical"
+   ]
+  },
+  {
+   "id": "284083",
+   "name": "The Crew: The Quest for Planet Nine",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/98LnQShydr11OBKS46xY-Q__small/img/et-fnuozyOdBOVL-5kSS3_7I8fw=/fit-in/200x150/filters:strip_icc()/pic5687013.jpg",
+   "image": "https://cf.geekdo-images.com/98LnQShydr11OBKS46xY-Q__original/img/Q-ZkgnuBu9OTBr7J3qnqPjqamAE=/0x0/filters:format(jpeg)/pic5687013.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 10,
+   "rating": 7.7,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Thomas Sing"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Deduction",
+    "Hand Management",
+    "Scenario / Mission / Campaign Game",
+    "Trick-taking"
+   ],
+   "categories": [
+    "Card Game",
+    "Science Fiction",
+    "Space Exploration"
+   ]
+  },
+  {
+   "id": "249381",
+   "name": "The Estates",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/AvC3AzHo8JlcvgKtQ3PDWA__small/img/eMsTjGHKNFzWiw7uNiOKDLtYcq4=/fit-in/200x150/filters:strip_icc()/pic4071903.jpg",
+   "image": "https://cf.geekdo-images.com/AvC3AzHo8JlcvgKtQ3PDWA__original/img/bLkTdJ11F1JN8zUU4dPjR0J3_2k=/0x0/filters:format(jpeg)/pic4071903.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 40,
+   "maxTime": 60,
+   "minAge": 10,
+   "rating": 7.4,
+   "weight": 2.3,
+   "plays": 0,
+   "designers": [
+    "Klaus Zoch"
+   ],
+   "mechanics": [
+    "Auction / Bidding",
+    "Auction: Once Around",
+    "Closed Economy Auction",
+    "Investment",
+    "Square Grid",
+    "Take That",
+    "Turn Order: Progressive"
+   ],
+   "categories": [
+    "City Building",
+    "Negotiation"
+   ]
+  },
+  {
+   "id": "125153",
+   "name": "The Gallerist",
+   "year": 2015,
+   "thumbnail": "https://cf.geekdo-images.com/ie1GSt1XV04sXQXt-3O1UQ__small/img/O0H84AvXp139U865gRLGiAo9-gA=/fit-in/200x150/filters:strip_icc()/pic2503200.png",
+   "image": "https://cf.geekdo-images.com/ie1GSt1XV04sXQXt-3O1UQ__original/img/59dZRZePEgtcupkRSA2zohZuHpM=/0x0/filters:format(png)/pic2503200.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 150,
+   "minAge": 13,
+   "rating": 8,
+   "weight": 4.2,
+   "plays": 0,
+   "designers": [
+    "Vital Lacerda"
+   ],
+   "mechanics": [
+    "Commodity Speculation",
+    "Contracts",
+    "Investment",
+    "Open Drafting",
+    "Point to Point Movement",
+    "Resource to Move",
+    "Set Collection",
+    "Solo / Solitaire Game",
+    "Victory Points as a Resource",
+    "Worker Placement",
+    "Worker Placement, Different Worker Types"
+   ],
+   "categories": [
+    "Economic"
+   ]
+  },
+  {
+   "id": "173090",
+   "name": "The Game",
+   "year": 2015,
+   "thumbnail": "https://cf.geekdo-images.com/g4pn1ieUKfIhERl5Ym6joQ__small/img/IRLfNA-yFg0etLOeNFp7QKFsea4=/fit-in/200x150/filters:strip_icc()/pic4203279.png",
+   "image": "https://cf.geekdo-images.com/g4pn1ieUKfIhERl5Ym6joQ__original/img/ZcwvBXraym0wfre1sm9t1d44BBA=/0x0/filters:format(png)/pic4203279.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 8,
+   "rating": 6.7,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Steffen Benndorf"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Hand Management",
+    "Solo / Solitaire Game"
+   ],
+   "categories": [
+    "Card Game",
+    "Number"
+   ]
+  },
+  {
+   "id": "339906",
+   "name": "The Hunger",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/P6xRtuVTPwR148SP4oIXGQ__small/img/BQeGzaIeQo--PHdB8r9aoP4UHmA=/fit-in/200x150/filters:strip_icc()/pic6218039.jpg",
+   "image": "https://cf.geekdo-images.com/P6xRtuVTPwR148SP4oIXGQ__original/img/ivfJXcTwNCdEcYj8XjsFbnV2UHY=/0x0/filters:format(jpeg)/pic6218039.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 60,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 7,
+   "weight": 2.3,
+   "plays": 1,
+   "designers": [
+    "Richard Garfield"
+   ],
+   "mechanics": [
+    "Contracts",
+    "Deck, Bag, and Pool Building",
+    "End Game Bonuses",
+    "Increase Value of Unchosen Resources",
+    "Movement Points",
+    "Open Drafting",
+    "Push Your Luck",
+    "Set Collection",
+    "Track Movement",
+    "Turn Order: Stat-Based"
+   ],
+   "categories": [
+    "Card Game",
+    "Horror"
+   ]
+  },
+  {
+   "id": "244992",
+   "name": "The Mind",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/q_JGK291hrhnhiRB0667oA__small/img/PUrzEmTo5kOcK5BOb4cbOOcH86I=/fit-in/200x150/filters:strip_icc()/pic3979766.png",
+   "image": "https://cf.geekdo-images.com/q_JGK291hrhnhiRB0667oA__original/img/8VjZEG278faO9JZwzce3v3EKssI=/0x0/filters:format(png)/pic3979766.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 8,
+   "rating": 6.7,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Wolfgang Warsch"
+   ],
+   "mechanics": [
+    "Communication Limits",
+    "Cooperative Game",
+    "Hand Management"
+   ],
+   "categories": [
+    "Card Game",
+    "Number"
+   ]
+  },
+  {
+   "id": "306709",
+   "name": "The Night Cage",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/txQ7QzbQz89AO5BmVv7OqA__small/img/sneKRoRyk2ylPHxapTVVu66XbH4=/fit-in/200x150/filters:strip_icc()/pic5331288.png",
+   "image": "https://cf.geekdo-images.com/txQ7QzbQz89AO5BmVv7OqA__original/img/sj4Qg_VXKyNZFLftFjRv7p4-RKk=/0x0/filters:format(png)/pic5331288.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 40,
+   "maxTime": 60,
+   "minAge": 14,
+   "rating": 7.1,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [
+    "Christopher Ryan Chan",
+    "Chris McMahon",
+    "Rosswell Saunders"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Grid Movement",
+    "Pieces as Map",
+    "Sudden Death Ending",
+    "Tile Placement"
+   ],
+   "categories": [
+    "Fantasy",
+    "Horror",
+    "Maze"
+   ]
+  },
+  {
+   "id": "279537",
+   "name": "The Search for Planet X",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/NItjtztEUAKOpaTWZddu9A__small/img/x8YD4cAVOAbSDsZbmKgU0-WQ9wI=/fit-in/200x150/filters:strip_icc()/pic5744928.jpg",
+   "image": "https://cf.geekdo-images.com/NItjtztEUAKOpaTWZddu9A__original/img/fr-JmerGdiEj6r9UM7F6laogGF0=/0x0/filters:format(jpeg)/pic5744928.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2",
+    "3"
+   ],
+   "minTime": 60,
+   "maxTime": 75,
+   "minAge": 13,
+   "rating": 7.9,
+   "weight": 2.4,
+   "plays": 0,
+   "designers": [
+    "Matthew O'Malley",
+    "Ben Rosset"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Deduction",
+    "End Game Bonuses",
+    "Paper-and-Pencil",
+    "Rondel",
+    "Solo / Solitaire Game",
+    "Turn Order: Time Track"
+   ],
+   "categories": [
+    "Deduction",
+    "Puzzle",
+    "Space Exploration"
+   ]
+  },
+  {
+   "id": "14996",
+   "name": "Ticket to Ride: Europe",
+   "year": 2005,
+   "thumbnail": "https://cf.geekdo-images.com/EQJZDO1Jq8KL-HxmWLwL-Q__small/img/XE-BFNwHZ0NZVko1pCj3gdFaGxY=/fit-in/200x150/filters:strip_icc()/pic9580918.jpg",
+   "image": "https://cf.geekdo-images.com/EQJZDO1Jq8KL-HxmWLwL-Q__original/img/LOC8D0q01ZRvZ6v1n7l8Zueos-E=/0x0/filters:format(jpeg)/pic9580918.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "4"
+   ],
+   "minTime": 30,
+   "maxTime": 60,
+   "minAge": 8,
+   "rating": 7.5,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Alan R. Moon"
+   ],
+   "mechanics": [
+    "Connections",
+    "Contracts",
+    "End Game Bonuses",
+    "Hand Management",
+    "Network and Route Building",
+    "Open Drafting",
+    "Push Your Luck",
+    "Set Collection"
+   ],
+   "categories": [
+    "Trains"
+   ]
+  },
+  {
+   "id": "16992",
+   "name": "Tsuro",
+   "year": 2005,
+   "thumbnail": "https://cf.geekdo-images.com/2V3d4ryhxkS3RoPtDrvpUw__small/img/NWgNhoxUIF7Lmj1apRkZQhFL6NU=/fit-in/200x150/filters:strip_icc()/pic875761.jpg",
+   "image": "https://cf.geekdo-images.com/2V3d4ryhxkS3RoPtDrvpUw__original/img/TP5U-O2eujPBK9IVmmifdfkWwdQ=/0x0/filters:format(jpeg)/pic875761.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "4",
+    "6"
+   ],
+   "minTime": 15,
+   "maxTime": 20,
+   "minAge": 8,
+   "rating": 6.7,
+   "weight": 1.2,
+   "plays": 0,
+   "designers": [
+    "Tom McMurchie"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Network and Route Building",
+    "Player Elimination",
+    "Tile Placement"
+   ],
+   "categories": [
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "140457",
+   "name": "Ultimate Werewolf: Inquisition",
+   "year": 2013,
+   "thumbnail": "https://cf.geekdo-images.com/e_djn_aJVG6KfiegGa6WLQ__small/img/ws4q9yIWKJD-CBMi-u53t9_uhwg=/fit-in/200x150/filters:strip_icc()/pic1616566.jpg",
+   "image": "https://cf.geekdo-images.com/e_djn_aJVG6KfiegGa6WLQ__original/img/wEP5VreGEVstd9P4su7HY65UogU=/0x0/filters:format(jpeg)/pic1616566.jpg",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 12,
+   "bestPlayers": [
+    "5",
+    "7"
+   ],
+   "minTime": 30,
+   "maxTime": 60,
+   "minAge": 8,
+   "rating": 6.5,
+   "weight": 1.7,
+   "plays": 0,
+   "designers": [
+    "Legend Dan Hoffman"
+   ],
+   "mechanics": [
+    "Player Elimination",
+    "Role Playing",
+    "Team-Based Game",
+    "Traitor Game",
+    "Variable Player Powers",
+    "Voting"
+   ],
+   "categories": [
+    "Deduction",
+    "Horror",
+    "Murder / Mystery"
+   ]
+  },
+  {
+   "id": "274637",
+   "name": "Unmatched: Battle of Legends, Volume One",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/4AlLbprNustr9G7pbkGRuw__small/img/nVkIL7RgCkFpBuxbJ3BfOxIJscU=/fit-in/200x150/filters:strip_icc()/pic4621579.jpg",
+   "image": "https://cf.geekdo-images.com/4AlLbprNustr9G7pbkGRuw__original/img/d7Z89SEv9T_HqPaYEomeKcFmgeA=/0x0/filters:format(jpeg)/pic4621579.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 9,
+   "rating": 7.7,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Justin D. Jacobson"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Player Elimination",
+    "Point to Point Movement",
+    "Team-Based Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Mythology",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "335764",
+   "name": "Unmatched: Battle of Legends, Volume Two",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/_N9ueJu-Vaq656p7HSI9sw__small/img/saT9Q9Z7ey5VG5Sk3OslOdWoCGM=/fit-in/200x150/filters:strip_icc()/pic6267930.jpg",
+   "image": "https://cf.geekdo-images.com/_N9ueJu-Vaq656p7HSI9sw__original/img/fa9W5Vt7oNkH2j33U6K7RMHwqlI=/0x0/filters:format(jpeg)/pic6267930.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2",
+    "4"
+   ],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 9,
+   "rating": 8.2,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [
+    "Noah Cohen",
+    "Rob Daviau",
+    "Justin D. Jacobson",
+    "Chris Leder",
+    "Brian Neff",
+    "Kevin Rodgers"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Team-Based Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Horror",
+    "Mythology",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "279645",
+   "name": "Unmatched: Bruce Lee",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/cf_wHvigAEd-BWqC9O37GA__small/img/3_qKfxM_c8s0sAZxaeBTBYu37Wg=/fit-in/200x150/filters:strip_icc()/pic4746270.jpg",
+   "image": "https://cf.geekdo-images.com/cf_wHvigAEd-BWqC9O37GA__original/img/s36O-Kf-FVCK4Q_7WjsfwiYKkPY=/0x0/filters:format(jpeg)/pic4746270.jpg",
+   "expansion": true,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 14,
+   "rating": 8.4,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Justin D. Jacobson"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Miniatures",
+    "Movies / TV / Radio theme"
+   ]
+  },
+  {
+   "id": "294484",
+   "name": "Unmatched: Cobble & Fog",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/iyIO6udRfIn0xM1rIxyO2g__small/img/oKVEm_nmurLwHbp9QPNNEyJkzeE=/fit-in/200x150/filters:strip_icc()/pic5056685.jpg",
+   "image": "https://cf.geekdo-images.com/iyIO6udRfIn0xM1rIxyO2g__original/img/PZBFIDjPGZddto7n5F5gP_2slUA=/0x0/filters:format(jpeg)/pic5056685.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 9,
+   "rating": 7.9,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Justin D. Jacobson",
+    "Chris Leder",
+    "Kevin Rodgers"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Movement Points",
+    "Player Elimination",
+    "Point to Point Movement",
+    "Resource to Move",
+    "Team-Based Game",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Horror",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "335386",
+   "name": "Unmatched: Deadpool",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/H3Zv6hbRQnrvLax8YpNrVA__small/img/50_QPBVAVWUyqlu3Ku4v2K0ZNZY=/fit-in/200x150/filters:strip_icc()/pic6086605.jpg",
+   "image": "https://cf.geekdo-images.com/H3Zv6hbRQnrvLax8YpNrVA__original/img/Ym208mUme3b_MSiLJbvrRTAn_Fk=/0x0/filters:format(jpeg)/pic6086605.jpg",
+   "expansion": true,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 14,
+   "rating": 7.9,
+   "weight": 2.2,
+   "plays": 0,
+   "designers": [
+    "Brad Andres",
+    "Noah Cohen",
+    "Rob Daviau",
+    "Justin D. Jacobson",
+    "Brian Neff",
+    "Tim Wiesch"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Card Game",
+    "Comic Book / Strip",
+    "Fantasy",
+    "Fighting",
+    "Miniatures",
+    "Movies / TV / Radio theme"
+   ]
+  },
+  {
+   "id": "284777",
+   "name": "Unmatched: Jurassic Park – InGen vs Raptors",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/qCMsj-DHIvGcynErPfiClQ__small/img/OfAUHSVLFF0n2MPas22UKDmJPaA=/fit-in/200x150/filters:strip_icc()/pic4854152.jpg",
+   "image": "https://cf.geekdo-images.com/qCMsj-DHIvGcynErPfiClQ__original/img/Pzl6PGk03m0SLKGObrtie3P-LHw=/0x0/filters:format(jpeg)/pic4854152.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 14,
+   "rating": 8.1,
+   "weight": 2.1,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Justin D. Jacobson"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Take That",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Animals",
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Movies / TV / Radio theme"
+   ]
+  },
+  {
+   "id": "325635",
+   "name": "Unmatched: Little Red Riding Hood vs. Beowulf",
+   "year": 2020,
+   "thumbnail": "https://cf.geekdo-images.com/7CFgBadtCNf5Mzi1nsrL2Q__small/img/4lOUXSXSvcnkbztxyVoaVqSCcoY=/fit-in/200x150/filters:strip_icc()/pic5822480.jpg",
+   "image": "https://cf.geekdo-images.com/7CFgBadtCNf5Mzi1nsrL2Q__original/img/Iv0VzhyEa74-sGfbtt9nwrRKZlw=/0x0/filters:format(jpeg)/pic5822480.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 9,
+   "rating": 8,
+   "weight": 2,
+   "plays": 0,
+   "designers": [
+    "Noah Cohen",
+    "Rob Daviau",
+    "Justin D. Jacobson",
+    "Brian Neff"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Mythology",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "274638",
+   "name": "Unmatched: Robin Hood vs. Bigfoot",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/5Fr8QPIazZRgEMnN2bwJ0g__small/img/wAEIsSjKsEHg_JVJ_adV6MvsJ4o=/fit-in/200x150/filters:strip_icc()/pic4621589.jpg",
+   "image": "https://cf.geekdo-images.com/5Fr8QPIazZRgEMnN2bwJ0g__original/img/si2jJWDVMO-EGy-r0RR7aVjLtO8=/0x0/filters:format(jpeg)/pic4621589.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 20,
+   "minAge": 9,
+   "rating": 7.9,
+   "weight": 1.9,
+   "plays": 0,
+   "designers": [
+    "Rob Daviau",
+    "Justin D. Jacobson"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fantasy",
+    "Fighting",
+    "Mythology",
+    "Novel-based"
+   ]
+  },
+  {
+   "id": "383469",
+   "name": "Unmatched: Sun's Origin",
+   "year": 2024,
+   "thumbnail": "https://cf.geekdo-images.com/i7n6LkRIskDq1438AgO0VA__small/img/MKki2AL73ECb89oSrynpLW6pJBI=/fit-in/200x150/filters:strip_icc()/pic7437242.jpg",
+   "image": "https://cf.geekdo-images.com/i7n6LkRIskDq1438AgO0VA__original/img/TN6iOwF4cCaGnNyK61R9E_uXXrU=/0x0/filters:format(jpeg)/pic7437242.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 4,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 20,
+   "maxTime": 40,
+   "minAge": 9,
+   "rating": 8.2,
+   "weight": 2,
+   "plays": 1,
+   "designers": [
+    "Rob Daviau",
+    "Justin D. Jacobson",
+    "Zack Mader",
+    "Jason Viddal"
+   ],
+   "mechanics": [
+    "Action Points",
+    "Campaign / Battle Card Driven",
+    "Card Play Conflict Resolution",
+    "Hand Management",
+    "Line of Sight",
+    "Point to Point Movement",
+    "Variable Player Powers"
+   ],
+   "categories": [
+    "Card Game",
+    "Fighting",
+    "Miniatures"
+   ]
+  },
+  {
+   "id": "234190",
+   "name": "Unstable Unicorns",
+   "year": 2017,
+   "thumbnail": "https://cf.geekdo-images.com/8_5xvpsrrX5JVzO7eBLSgw__small/img/fV4UWCHC1ImGFUN7lcJju9K8_zo=/fit-in/200x150/filters:strip_icc()/pic3912914.jpg",
+   "image": "https://cf.geekdo-images.com/8_5xvpsrrX5JVzO7eBLSgw__original/img/XkKaT-quh8xGl2uHD5zULSWTpuM=/0x0/filters:format(jpeg)/pic3912914.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "4",
+    "5"
+   ],
+   "minTime": 30,
+   "maxTime": 60,
+   "minAge": 8,
+   "rating": 6.2,
+   "weight": 1.5,
+   "plays": 0,
+   "designers": [
+    "Ramy Badie"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Set Collection",
+    "Take That"
+   ],
+   "categories": [
+    "Card Game",
+    "Humor",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "243567",
+   "name": "Unstable Unicorns: Dragons Expansion Pack",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/1UrxUGVpL0Ru0wxrFsxICA__small/img/y_E3EddYlTMDMXQ3W9GoDYssBYg=/fit-in/200x150/filters:strip_icc()/pic6088240.jpg",
+   "image": "https://cf.geekdo-images.com/1UrxUGVpL0Ru0wxrFsxICA__original/img/kn3PpGcBium2Cdo3YeRDmviDSYo=/0x0/filters:format(jpeg)/pic6088240.jpg",
+   "expansion": true,
+   "minPlayers": 2,
+   "maxPlayers": 8,
+   "bestPlayers": [
+    "5"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 14,
+   "rating": 7,
+   "weight": 1.3,
+   "plays": 0,
+   "designers": [
+    "Ramy Badie"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Set Collection",
+    "Take That"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Card Game",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "420033",
+   "name": "Vantage",
+   "year": 2025,
+   "thumbnail": "https://cf.geekdo-images.com/M0e9l-SHH2H4RMSAcnsDgg__small/img/TL_OB6SKLJpCM1u1MD4ddEAp9ic=/fit-in/200x150/filters:strip_icc()/pic8658546.jpg",
+   "image": "https://cf.geekdo-images.com/M0e9l-SHH2H4RMSAcnsDgg__original/img/nT1NtVviWxSBgVv5lvM4RmemITs=/0x0/filters:format(jpeg)/pic8658546.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "1",
+    "2"
+   ],
+   "minTime": 120,
+   "maxTime": 180,
+   "minAge": 14,
+   "rating": 8.2,
+   "weight": 2.3,
+   "plays": 0,
+   "designers": [
+    "Jamey Stegmaier"
+   ],
+   "mechanics": [
+    "Cooperative Game",
+    "Dice Rolling",
+    "Die Icon Resolution",
+    "Narrative Choice / Paragraph",
+    "Scenario / Mission / Campaign Game",
+    "Solo / Solitaire Game"
+   ],
+   "categories": [
+    "Adventure",
+    "Exploration",
+    "Fantasy",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "274364",
+   "name": "Watergate",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/iTBogxNFa3Ymh-6ST3srsw__small/img/5vZps-04NqSAuUC4e6-E9M96VxE=/fit-in/200x150/filters:strip_icc()/pic4768766.jpg",
+   "image": "https://cf.geekdo-images.com/iTBogxNFa3Ymh-6ST3srsw__original/img/ECgm53fEsB3eDVjZjgeejiZ__Qk=/0x0/filters:format(jpeg)/pic4768766.jpg",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 2,
+   "bestPlayers": [
+    "2"
+   ],
+   "minTime": 30,
+   "maxTime": 60,
+   "minAge": 12,
+   "rating": 7.7,
+   "weight": 2.3,
+   "plays": 0,
+   "designers": [
+    "Matthias Cramer"
+   ],
+   "mechanics": [
+    "Action / Event",
+    "Campaign / Battle Card Driven",
+    "Connections",
+    "Hand Management",
+    "Once-Per-Game Abilities",
+    "Take That",
+    "Tug of War"
+   ],
+   "categories": [
+    "Card Game",
+    "Political"
+   ]
+  },
+  {
+   "id": "262543",
+   "name": "Wavelength",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/z4fbPdmJg_5yphJEvql4ZA__small/img/bxLuHVLF-Y06jWRSKA-tuQ3YYcE=/fit-in/200x150/filters:strip_icc()/pic4552862.png",
+   "image": "https://cf.geekdo-images.com/z4fbPdmJg_5yphJEvql4ZA__original/img/bP1gM8RC-o5iz20_WazBaBNDHnU=/0x0/filters:format(png)/pic4552862.png",
+   "expansion": false,
+   "minPlayers": 2,
+   "maxPlayers": 12,
+   "bestPlayers": [
+    "6",
+    "8"
+   ],
+   "minTime": 30,
+   "maxTime": 45,
+   "minAge": 14,
+   "rating": 7.2,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Alex Hague",
+    "Justin Vickers",
+    "Wolfgang Warsch"
+   ],
+   "mechanics": [
+    "Race",
+    "Targeted Clues",
+    "Team-Based Game"
+   ],
+   "categories": [
+    "Party Game"
+   ]
+  },
+  {
+   "id": "339789",
+   "name": "Welcome to the Moon",
+   "year": 2021,
+   "thumbnail": "https://cf.geekdo-images.com/eCdiHCB9OobumwaGl4dbOQ__small/img/dyaAIesMyeQWUoLRA25Dj9MhruI=/fit-in/200x150/filters:strip_icc()/pic6204967.png",
+   "image": "https://cf.geekdo-images.com/eCdiHCB9OobumwaGl4dbOQ__original/img/U4DY7_OUE1XI1m1Fi0iubbf2sEI=/0x0/filters:format(png)/pic6204967.png",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 6,
+   "bestPlayers": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "minTime": 25,
+   "maxTime": 30,
+   "minAge": 10,
+   "rating": 7.8,
+   "weight": 2.5,
+   "plays": 0,
+   "designers": [
+    "Alexis Allard",
+    "Benoit Turpin"
+   ],
+   "mechanics": [
+    "Area Majority / Influence",
+    "Bingo",
+    "Narrative Choice / Paragraph",
+    "Paper-and-Pencil",
+    "Pattern Building",
+    "Race",
+    "Scenario / Mission / Campaign Game",
+    "Simultaneous Action Selection",
+    "Solo / Solitaire Game"
+   ],
+   "categories": [
+    "City Building",
+    "Science Fiction",
+    "Space Exploration"
+   ]
+  },
+  {
+   "id": "233867",
+   "name": "Welcome To...",
+   "year": 2018,
+   "thumbnail": "https://cf.geekdo-images.com/g4XmxyKhNVdhC3QPd1purQ__small/img/e3bCyIvM1IOGFYnKGj2jIn5mbKY=/fit-in/200x150/filters:strip_icc()/pic3761012.jpg",
+   "image": "https://cf.geekdo-images.com/g4XmxyKhNVdhC3QPd1purQ__original/img/pb6XFQZFUNOr6OPysOHB3usVDFk=/0x0/filters:format(jpeg)/pic3761012.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 100,
+   "bestPlayers": [
+    "3",
+    "4"
+   ],
+   "minTime": 25,
+   "maxTime": 25,
+   "minAge": 10,
+   "rating": 7.5,
+   "weight": 1.8,
+   "plays": 0,
+   "designers": [
+    "Benoit Turpin"
+   ],
+   "mechanics": [
+    "Bingo",
+    "Contracts",
+    "End Game Bonuses",
+    "Multi-Use Cards",
+    "Paper-and-Pencil",
+    "Pattern Building",
+    "Simultaneous Action Selection",
+    "Solo / Solitaire Game"
+   ],
+   "categories": [
+    "City Building"
+   ]
+  },
+  {
+   "id": "226610",
+   "name": "What Do You Meme?",
+   "year": 2016,
+   "thumbnail": "https://cf.geekdo-images.com/5Pmk8PrpMHPMg0hG8fJz9w__small/img/T830JjOnAOSjlcYZVlJRSowyx5I=/fit-in/200x150/filters:strip_icc()/pic3749720.png",
+   "image": "https://cf.geekdo-images.com/5Pmk8PrpMHPMg0hG8fJz9w__original/img/8X_WdT1i5IqsdwaOa4J7_u9OAo4=/0x0/filters:format(png)/pic3749720.png",
+   "expansion": false,
+   "minPlayers": 3,
+   "maxPlayers": 20,
+   "bestPlayers": [
+    "6"
+   ],
+   "minTime": 30,
+   "maxTime": 90,
+   "minAge": 17,
+   "rating": 5.1,
+   "weight": 1.1,
+   "plays": 0,
+   "designers": [
+    "Elie Ballas",
+    "Ben Kaplan",
+    "Elliot Tebele"
+   ],
+   "mechanics": [
+    "Hand Management",
+    "Player Judge",
+    "Simultaneous Action Selection"
+   ],
+   "categories": [
+    "Card Game",
+    "Humor",
+    "Mature / Adult",
+    "Party Game"
+   ]
+  },
+  {
+   "id": "266192",
+   "name": "Wingspan",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__small/img/VNToqgS2-pOGU6MuvIkMPKn_y-s=/fit-in/200x150/filters:strip_icc()/pic4458123.jpg",
+   "image": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__original/img/cI782Zis9cT66j2MjSHKJGnFPNw=/0x0/filters:format(jpeg)/pic4458123.jpg",
+   "expansion": false,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 40,
+   "maxTime": 70,
+   "minAge": 10,
+   "rating": 8,
+   "weight": 2.5,
+   "plays": 0,
+   "designers": [
+    "Elizabeth Hargrave"
+   ],
+   "mechanics": [
+    "Action Queue",
+    "Dice Rolling",
+    "End Game Bonuses",
+    "Hand Management",
+    "Open Drafting",
+    "Set Collection",
+    "Solo / Solitaire Game",
+    "Turn Order: Progressive"
+   ],
+   "categories": [
+    "Animals",
+    "Card Game",
+    "Educational",
+    "Environmental"
+   ]
+  },
+  {
+   "id": "290448",
+   "name": "Wingspan: European Expansion",
+   "year": 2019,
+   "thumbnail": "https://cf.geekdo-images.com/7izK8WM_bgtvBzxQvLGz-A__small/img/Q76pV0p00R8qkcS6o-nczJD7DCk=/fit-in/200x150/filters:strip_icc()/pic4982682.jpg",
+   "image": "https://cf.geekdo-images.com/7izK8WM_bgtvBzxQvLGz-A__original/img/NFkKrFCKJ1YUC1x7bpx-WVDhLq0=/0x0/filters:format(jpeg)/pic4982682.jpg",
+   "expansion": true,
+   "minPlayers": 1,
+   "maxPlayers": 5,
+   "bestPlayers": [
+    "3"
+   ],
+   "minTime": 40,
+   "maxTime": 70,
+   "minAge": 10,
+   "rating": 8.3,
+   "weight": 2.4,
+   "plays": 0,
+   "designers": [
+    "Elizabeth Hargrave"
+   ],
+   "mechanics": [
+    "Dice Rolling",
+    "End Game Bonuses",
+    "Hand Management",
+    "Open Drafting",
+    "Set Collection"
+   ],
+   "categories": [
+    "Expansion for Base-game",
+    "Animals",
+    "Economic",
+    "Educational"
+   ]
+  }
+ ]
+}

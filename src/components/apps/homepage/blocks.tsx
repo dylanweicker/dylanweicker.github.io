@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { categories, thumbOf, type Action, type Block, type Card } from '@/data/homepage';
+import { inPlace } from '@/lib/links';
 import { useSite } from './context';
 
 /** One renderer per block type (see Block in data/homepage.ts). */
@@ -235,10 +236,10 @@ export function ExploreGrid() {
     <ul className="hp-explore">
       {categories.map((c) => (
         <li key={c.id}>
-          <button type="button" className="hp-explore__btn" onClick={() => go(c.id)}>
+          <a className="hp-explore__btn" href={`/homepage/${c.id}/`} onClick={(e) => inPlace(e) && go(c.id)}>
             <strong>{c.label}</strong>
             <span>{c.tagline}</span>
-          </button>
+          </a>
         </li>
       ))}
     </ul>

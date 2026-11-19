@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import { structuredData } from '@/lib/structured-data';
 
 interface Props {
   title: string;
@@ -11,6 +12,7 @@ interface Props {
 
 const { title, description, bodyClass, canonicalPath } = Astro.props;
 const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
+const jsonLd = structuredData(Astro.site!, canonical.pathname === '/');
 ---
 
 <!doctype html>
@@ -28,6 +30,8 @@ const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="Dylan Weicker: site summary for AI tools" />
+    <script type="application/ld+json" set:html={jsonLd} />
     <slot name="head" />
   </head>
   <body class={bodyClass}>

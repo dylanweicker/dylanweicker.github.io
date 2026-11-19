@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
 import { apps, appsById } from '@/data/apps';
+import { profile } from '@/data/profile';
+import { appHref, inPlace } from '@/lib/links';
 import { parsePath, pathFor } from '@/lib/routes';
 import type { SiteContent } from '@/lib/types';
-import { createWindowStore, topWindow, useWindows, WindowStoreContext } from '@/stores/windows';
+import { createWindowStore, topWindow, useWindows, WindowStoreContext, type Win } from '@/stores/windows';
 import { AppView } from '../apps/AppView';
 import { ContentContext } from './content';
 import { DesktopIcons } from './DesktopIcons';
@@ -34,8 +36,18 @@ function titleFor(app: keyof typeof appsById | undefined) {
   return app ? `${appsById[app].title} · Dylan Weicker` : 'Dylan Weicker';
 }
 
+/** The page's one <h1> (for screen readers, crawlers and AI readers): what the focused window shows. */
+function headingFor(win: Win | undefined, content: SiteContent) {
+  if (!win) return `${profile.name} — DylanOS desktop`;
+  if (win.app === 'about') return `${profile.name} — ${profile.role}, ${profile.company}`;
+  const app = appsById[win.app];
+  const item = (win.app === 'work' || win.app === 'projects') && win.slug ? content[win.app].find((i) => i.slug === win.slug) : undefined;
+  return item ? `${item.title} — ${app.title} — ${profile.name}` : `${app.title} — ${profile.name}`;
+}
+
 function Shell() {
   const store = useContext(WindowStoreContext)!;
+  const content = useContext(ContentContext);
   const wins = useWindows((s) => s.wins);
   const open = useWindows((s) => s.open);
   const top = topWindow(wins);
@@ -80,7 +92,7 @@ function Shell() {
     <>
       <Wallpaper />
       <main id="desktop" className="desktop">
-        <h1 className="sr-only">Dylan Weicker — DylanOS desktop</h1>
+        <h1 className="sr-only">{headingFor(top, content)}</h1>
         <DesktopIcons />
 
         {wins.map((w) => (
@@ -97,10 +109,10 @@ function Shell() {
         {apps
           .filter((a) => a.dock && !a.hidden)
           .map((app) => (
-            <button key={app.id} type="button" className="desk-icon" onClick={() => open(app.id)}>
+            <a key={app.id} className="desk-icon" href={appHref(app.id)} onClick={(e) => inPlace(e) && open(app.id)}>
               <img src={app.icon} alt="" width={40} height={40} />
               {app.label ?? app.title}
-            </button>
+            </a>
           ))}
       </nav>
 

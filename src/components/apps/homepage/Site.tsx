@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { inPlace } from '@/lib/links';
 import { categories, SITE, type HomeCategory } from '@/data/homepage';
 import { HOME, useSite } from './context';
 import { CategoryPage, HomePage } from './pages';
@@ -32,27 +33,27 @@ export function Site({ current }: { current?: HomeCategory }) {
             <p id="hp-sidebar-title" className="hp__sidebar-title">
               My Interests
             </p>
-            <button
-              type="button"
+            <a
               className={`hp__navbtn${page === HOME ? ' is-on' : ''}`}
+              href="/homepage/"
               aria-current={page === HOME ? 'page' : undefined}
-              onClick={() => go(HOME)}
+              onClick={(e) => inPlace(e) && go(HOME)}
             >
               Home
-            </button>
+            </a>
             {categories.map((c) => {
               const on = page === c.id;
               return (
                 <div key={c.id} className="hp__navgroup">
-                  <button
-                    type="button"
+                  <a
                     className={`hp__navbtn${on ? ' is-on' : ''}`}
+                    href={`/homepage/${c.id}/`}
                     aria-current={on ? 'page' : undefined}
                     aria-expanded={on}
-                    onClick={() => go(c.id)}
+                    onClick={(e) => inPlace(e) && go(c.id)}
                   >
                     {c.label}
-                  </button>
+                  </a>
                   {on && (
                     <ul className="hp__subnav">
                       {c.sections.map((s) => (

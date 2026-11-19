@@ -40,7 +40,7 @@ export const apps: AppDef[] = [
     title: 'Welcome',
     icon: '/icons/hello.webp',
     width: 640,
-    height: 744,
+    height: 787,
     dock: true,
     description: 'Dylan Weicker — CTO and full-stack developer in Vancouver building AI tools for researchers.',
   },

@@ -9,6 +9,7 @@ const { work } = await getSiteContent();
 
 <Base title={`${profile.name} · Résumé`} description={`Résumé of ${profile.name}, ${profile.role}.`} bodyClass="cv-page">
   <main>
+    <h1 class="sr-only">{profile.name} — Résumé</h1>
     <p class="cv-actions">
       <a href="/">← Back to DylanOS</a>
       <button type="button" class="gloss-btn" onclick="window.print()">Print / Save as PDF</button>

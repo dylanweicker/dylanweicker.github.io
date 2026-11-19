@@ -8,6 +8,7 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from 'react';
 import { appsById } from '@/data/apps';
+import { appHref } from '@/lib/links';
 import {
   boundsOf,
   CELL_H,
@@ -141,7 +142,7 @@ export function DesktopIcons() {
   }, []);
 
   /** Mouse: click selects, drag moves the selection. Ctrl toggles, Shift adds. */
-  const onIconPointerDown = (e: ReactPointerEvent<HTMLButtonElement>, item: DeskItem) => {
+  const onIconPointerDown = (e: ReactPointerEvent<HTMLAnchorElement>, item: DeskItem) => {
     lastPointer.current = e.pointerType;
     if (e.button !== 0 || e.pointerType === 'touch' || isPhone()) return;
     const store = useDesktop.getState();
@@ -192,7 +193,7 @@ export function DesktopIcons() {
     setMenu({ kind: 'icon', x, y, id: item.id });
   };
 
-  const onIconKeyDown = (e: ReactKeyboardEvent<HTMLButtonElement>, item: DeskItem) => {
+  const onIconKeyDown = (e: ReactKeyboardEvent<HTMLAnchorElement>, item: DeskItem) => {
     const store = useDesktop.getState();
     const targets = store.selected.includes(item.id) ? store.selected : [item.id];
     const mod = e.ctrlKey || e.metaKey;
@@ -289,8 +290,10 @@ export function DesktopIcons() {
           } as CSSProperties;
           return (
             <li key={item.id} role="none" className="desk-item" style={style}>
-              <button
-                type="button"
+              {/* A link so crawlers can reach each app's page; clicks are handled here, never navigated. */}
+              <a
+                href={appHref(item.app)}
+                draggable={false}
                 role="option"
                 aria-selected={isSelected}
                 data-desk-id={item.id}
@@ -298,6 +301,7 @@ export function DesktopIcons() {
                 onPointerDown={(e) => onIconPointerDown(e, item)}
                 onClick={(e) => {
                   // Touch and phones open on tap; mice open on double-click; keyboard is handled in onKeyDown.
+                  e.preventDefault();
                   if (e.detail === 0) return;
                   if (lastPointer.current === 'touch' || isPhone()) open(item);
                 }}
@@ -319,7 +323,7 @@ export function DesktopIcons() {
                   </span>
                 )}
                 <span className="desk-icon__label">{item.name}</span>
-              </button>
+              </a>
             </li>
           );
         })}

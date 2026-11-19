@@ -1,6 +1,7 @@
 import type { AppId } from '@/data/apps';
 import { appsById } from '@/data/apps';
 import { profile } from '@/data/profile';
+import { appHref, inPlace } from '@/lib/links';
 import { useWindows } from '@/stores/windows';
 
 const TILES: AppId[] = ['work', 'projects', 'skills', 'homepage', 'resume', 'contact'];
@@ -19,15 +20,15 @@ export function AboutApp() {
           </p>
           <p className="welcome__tagline">{profile.tagline}</p>
           <div className="welcome__actions">
-            <button type="button" className="gloss-btn" onClick={() => open('work')}>
+            <a className="gloss-btn" href={appHref('work')} onClick={(e) => inPlace(e) && open('work')}>
               See my work
-            </button>
-            <button type="button" className="gloss-btn gloss-btn--green" onClick={() => open('resume')}>
+            </a>
+            <a className="gloss-btn gloss-btn--green" href={appHref('resume')} onClick={(e) => inPlace(e) && open('resume')}>
               Résumé
-            </button>
-            <button type="button" className="gloss-btn gloss-btn--pink" onClick={() => open('contact')}>
+            </a>
+            <a className="gloss-btn gloss-btn--pink" href={appHref('contact')} onClick={(e) => inPlace(e) && open('contact')}>
               Say hi
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -43,13 +44,13 @@ export function AboutApp() {
             const app = appsById[id];
             return (
               <li key={id}>
-                <button type="button" className="tile" onClick={() => open(id)}>
+                <a className="tile" href={appHref(id)} onClick={(e) => inPlace(e) && open(id)}>
                   <img src={app.icon} alt="" width={40} height={40} />
                   <span>
                     <strong>{app.label ?? app.title}</strong>
                     <small>{app.description}</small>
                   </span>
-                </button>
+                </a>
               </li>
             );
           })}

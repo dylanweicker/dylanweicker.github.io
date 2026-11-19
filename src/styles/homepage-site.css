@@ -98,7 +98,9 @@
   flex-direction: column;
 }
 .hp__navbtn {
+  display: block;
   width: 100%;
+  text-decoration: none;
   text-align: left;
   padding: 5px 10px;
   border: 2px outset #66ccff;
@@ -169,10 +171,11 @@
   font-size: 12px;
   text-align: center;
 }
-.hp a {
+/* Plain links only: the menu and page-grid links have their own button look */
+.hp a:not(.hp__navbtn, .hp-explore__btn) {
   color: #0000ee;
 }
-.hp a:hover {
+.hp a:not(.hp__navbtn, .hp-explore__btn):hover {
   background: #ffff99;
   color: #ff0066;
 }
@@ -274,6 +277,7 @@
   color: #003366;
   font: 12px/1.35 Verdana, sans-serif;
   text-align: left;
+  text-decoration: none;
   cursor: pointer;
 }
 .hp-explore__btn strong {

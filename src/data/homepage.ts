@@ -82,7 +82,7 @@ export interface HomeCategory {
 export const SITE = {
   name: "Dylan's World",
   host: 'http://www.dylansworld.home/',
-  marquee: '✦ hobbies & interests ✦ games · performance · travel · cats · pop music · yoga ✦ thanks for stopping by ✦',
+  marquee: '✦ hobbies & interests ✦ games · performance · travel · cats · pop culture · yoga ✦ thanks for stopping by ✦',
 };
 
 export const homeIntro = {
@@ -153,19 +153,19 @@ export const categories: HomeCategory[] = [
             type: 'text',
             paragraphs: [
               "I'll happily play anything, from a quick party game to a strategy epic that eats the whole afternoon. If there's a game night, I'm in.",
-              'My favourite is Blood on the Clocktower. Give me a table full of people who might be lying, and every game becomes a shared puzzle of claims, counter-claims and one very convincing Demon.',
-              'My shelf passed a hundred games a while ago.',
+              'My favourite is Blood on the Clocktower. I love to use deduction and social reads to sus out who\'s lying, or use my convincing charm and control the narrative to lead evil to a victory.',
+              'I own well over a hundred board games, so many that I\'ve run out of shelf space to put them all.',
             ],
           },
           {
             type: 'boardGames',
             games: [
               { bggId: 240980, name: 'Blood on the Clocktower' },
-              { bggId: 167791, name: 'Terraforming Mars' },
-              { bggId: 30549, name: 'Pandemic' },
+              { bggId: 237182, name: 'Root' },
+              { bggId: 420033, name: 'Vantage' },
               { bggId: 173346, name: '7 Wonders Duel' },
               { bggId: 295947, name: 'Cascadia' },
-              { bggId: 225694, name: 'Decrypto' },
+              { bggId: 254640, name: 'Just One' },
             ],
           },
           { type: 'actions', actions: [{ label: 'Pick a game from my shelf', href: 'https://games.dylanweicker.ca/' }] },
@@ -317,10 +317,10 @@ export const categories: HomeCategory[] = [
     ],
   },
   {
-    id: 'pop-music',
-    label: 'Pop Music',
-    tagline: 'Pop divas, pride, and world domination.',
-    file: 'pop-music.html',
+    id: 'pop-culture',
+    label: 'Pop Culture',
+    tagline: 'Pop music and local drag shows.',
+    file: 'pop-culture.html',
     intro: "The music I can't stop talking about, and the culture that comes with it.",
     sections: [
       {
@@ -332,6 +332,23 @@ export const categories: HomeCategory[] = [
             paragraphs: [
               "I'm a little monster for life. I've been a Lady Gaga fan since The Fame, and she's still one of my favourite artists. I also listen to a lot of Chappell Roan, MARINA, Kesha and dance-pop from the late 2000s and early 2010s.",
             ],
+          },
+          {
+            // Covers from Apple's iTunes catalogue, saved to art/homepage/pop-music/
+            type: 'gallery',
+            albums: [
+              {
+                photos: [
+                  { src: '/homepage/pop-music/born-this-way.webp', caption: 'Born This Way · Lady Gaga' },
+                  { src: '/homepage/pop-music/electra-heart.webp', caption: 'Electra Heart · MARINA' },
+                  { src: '/homepage/pop-music/artpop.webp', caption: 'ARTPOP · Lady Gaga' },
+                  { src: '/homepage/pop-music/midwest-princess.webp', caption: 'The Rise and Fall of a Midwest Princess · Chappell Roan' },
+                  { src: '/homepage/pop-music/mayhem.webp', caption: 'MAYHEM · Lady Gaga' },
+                  { src: '/homepage/pop-music/animal.webp', caption: 'Animal · Kesha' },
+                ],
+              },
+            ],
+            empty: 'album covers coming soon',
           },
           { type: 'actions', actions: [{ label: 'Open Music', app: 'music' }] },
         ],

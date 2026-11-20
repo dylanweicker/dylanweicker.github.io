@@ -111,7 +111,7 @@ function Shell() {
           .map((app) => (
             <a key={app.id} className="desk-icon" href={appHref(app.id)} onClick={(e) => inPlace(e) && open(app.id)}>
               <img src={app.icon} alt="" width={40} height={40} />
-              {app.label ?? app.title}
+              <span className="desk-icon__label">{app.label ?? app.title}</span>
             </a>
           ))}
       </nav>

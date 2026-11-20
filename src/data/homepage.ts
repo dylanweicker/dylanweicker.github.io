@@ -226,7 +226,7 @@ export const categories: HomeCategory[] = [
     label: 'Performance',
     tagline: "Improv, theatre, themed parties. Any excuse to put on a character.",
     file: 'performance.html',
-    intro: "I've always had an interest in acting.",
+    intro: "I've always had an interest in acting. If I weren't a web developer, I'd be an actor. I got started early. At three years old, I had an agent and was in commercials. As a kid I made home movies with my sister. In high school, I wrote a play for our class and performed in Little Shop of Horrors, and played the lead role in three plays: Therac-25, The Real Inspector Hound, and Macbeth. Now I fill my freetime with improv and costume parties.",
     sections: [
       {
         id: 'improv',
@@ -250,33 +250,10 @@ export const categories: HomeCategory[] = [
         ],
       },
       {
-        id: 'theatre',
-        title: 'My Theatrical Career™',
-        blocks: [
-          {
-            type: 'text',
-            paragraphs: ["In high school, I wrote a play for our class and performed in several products, including Little Shop of Horrors, Therac-25, The Real Inspector Hound, and Macbeth."],
-          },
-          {
-            type: 'cards',
-            cards: [
-              {
-                title: 'Macbeth',
-                subtitle: 'Macbeth (the lead)',
-                meta: ['William Shakespeare', 'Amateur theatre'],
-                text: 'The ambition, the murder, the descent into madness. I had a great time.',
-                featured: true,
-              },
-            ],
-          },
-          pending('the other two productions and photos coming soon'),
-        ],
-      },
-      {
         id: 'theme-parties',
-        title: 'Theme Parties & Costumes',
+        title: 'Costume Parties',
         blocks: [
-          { type: 'text', paragraphs: ['Any excuse to dress up. Give me a theme and I will commit to the costume.'] },
+          { type: 'text', paragraphs: ['Any excuse to put on a character. Give me a theme and I will commit to the costume.'] },
           { type: 'gallery', albums: [], empty: 'party photos coming soon' },
         ],
       },

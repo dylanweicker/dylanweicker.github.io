@@ -52,7 +52,8 @@ export type Block =
   | { type: 'text'; paragraphs: string[] }
   | { type: 'feature'; label?: string; title: string; subtitle?: string; image?: string; paragraphs: string[]; actions?: Action[] }
   | { type: 'cards'; cards: Card[] }
-  | { type: 'gallery'; albums: Album[]; empty: string }
+  /** hideCaptions: no text under the thumbnails; captions still give the alt text and the photo viewer's title */
+  | { type: 'gallery'; albums: Album[]; empty: string; hideCaptions?: boolean }
   | { type: 'table'; heading?: [string, string]; rows: [string, string][] }
   | { type: 'list'; title?: string; ordered?: boolean; items: string[] }
   /** Box art from public/homepage/games/bgg-<bggId>.webp (downloaded by scripts/build-scene-assets.py) */
@@ -95,15 +96,38 @@ export const homeIntro = {
 
 const pending = (text: string): Block => ({ type: 'construction', text });
 
-/** A Travel page box: "2024 · Japan", the stops along the way, then its photos. Id e.g. 'japan-2024'. */
-const trip = (place: string, year: number, stops: string[] = []): HomeSection => ({
+/** A Travel page box: "2024 · Japan", the stops along the way, then its photos (one album per stop,
+ * from art/homepage/travel/<id>/). Id e.g. 'japan-2024'. */
+const trip = (place: string, year: number, stops: string[] = [], albums: Album[] = []): HomeSection => ({
   id: `${place.toLowerCase().replace(/[^a-z]+/g, '-')}-${year}`,
   title: `${year} · ${place}`,
   blocks: [
     ...(stops.length ? [{ type: 'text', paragraphs: [stops.join(' · ')] } satisfies Block] : []),
-    { type: 'gallery', albums: [], empty: `photos from ${place} coming soon` },
+    { type: 'gallery', albums, empty: `photos from ${place} coming soon` },
   ],
 });
+
+/** /homepage/travel/<dir>/<name>-1.webp, -2, ... (name as lowercase letters, so "Xi'an" -> xian), one per caption. */
+const photos = (dir: string, name: string, captions: string[]): Photo[] =>
+  captions.map((caption, i) => ({
+    src: `/homepage/travel/${dir}/${name.toLowerCase().replace(/[^a-z]+/g, '')}-${i + 1}.webp`,
+    caption,
+  }));
+
+/** Cats page photos: /homepage/cats/<name>-1.webp, -2, ... one per caption (sources in art/homepage/cats/). */
+const catPhotos = (name: string, captions: string[]): Photo[] =>
+  captions.map((caption, i) => ({ src: `/homepage/cats/${name}-${i + 1}.webp`, caption }));
+
+/** A Cats page section's photos as one untitled gallery, captions hidden under the thumbnails. */
+const catGallery = (name: string, captions: string[]): Block => ({
+  type: 'gallery',
+  albums: [{ photos: catPhotos(name, captions) }],
+  empty: 'photos coming soon',
+  hideCaptions: true,
+});
+
+/** One stop's album, titled with the stop. A one-place trip uses an untitled album: { photos: photos(...) }. */
+const stop = (dir: string, title: string, captions: string[]): Album => ({ title, photos: photos(dir, title, captions) });
 
 export const categories: HomeCategory[] = [
   {
@@ -269,18 +293,44 @@ export const categories: HomeCategory[] = [
       trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford']),
       trip('Montreal', 2026),
       trip('Kelowna', 2026),
-      trip('China', 2025, ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Zhangjiajie', 'Shanghai']),
-      trip('Japan', 2024, ['Tokyo', 'Hakone', 'Osaka', 'Nara', 'Kyoto', 'Hiroshima']),
+      trip('China', 2025, ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Zhangjiajie', 'Shanghai'], [
+        // Captions stay one line on the narrowest (130px) tile: 20 characters at most ("Super Nintendo World" fits).
+        stop('china-2025', 'Beijing', ['Big Air Shougang', 'Shougang sunset', 'Red Chamber park']),
+        stop('china-2025', "Xi'an", ['Terracotta Army', 'Pagoda light show', "Xi'an City Wall"]),
+        stop('china-2025', 'Chengdu', ['Giant Panda Base', 'Tianfu Art Park', 'Hotpot']),
+        stop('china-2025', 'Chongqing', ['Raffles rooftop', 'Night skyline', 'Near Fuling']),
+        stop('china-2025', 'Zhangjiajie', ['Wulingyuan', 'Tianmen Mountain', '72 Qilou at night']),
+        stop('china-2025', 'Shanghai', ['Huangpu at dusk', 'Yu Garden', 'Waibaidu Bridge']),
+        stop('china-2025', 'Shanghai Disneyland', ['Adventure Isle', 'Zootopia', 'Castle at night']),
+      ]),
+      trip('Japan', 2024, ['Tokyo', 'Hakone', 'Osaka', 'Nara', 'Kyoto', 'Hiroshima'], [
+        stop('japan-2024', 'Tokyo', ['Kabukicho', 'teamLab', 'WB Studio Tour']),
+        stop('japan-2024', 'Hakone', ['Lake Ashi', 'Owakudani', 'Open-Air Museum']),
+        stop('japan-2024', 'Osaka', ['Osaka Castle', 'Super Nintendo World', 'Universal Studios']),
+        stop('japan-2024', 'Nara', ['Todai-ji', 'Nara deer', 'Isuien Garden']),
+        stop('japan-2024', 'Kyoto', ['Imperial Palace', 'Kyoto canal', 'Railway Museum']),
+        stop('japan-2024', 'Hiroshima', ['Floating torii', 'Miyajima', 'Orizuru Tower']),
+      ]),
       trip('Mexico', 2023, ['Puerto Vallarta', 'Mexico City']),
       trip('San Francisco', 2022),
-      trip('Egypt', 2021, ['Cairo', 'Alexandria', 'Luxor', 'Aswan', 'Hurghada']),
+      trip('Egypt', 2021, ['Cairo', 'Alexandria', 'Luxor', 'Aswan', 'Hurghada'], [
+        stop('egypt-2021', 'Cairo', ['Camels at Giza', 'Great Pyramid', 'Cairo Citadel']),
+        stop('egypt-2021', 'Alexandria', ["Pompey's Pillar", 'Alexander the Great', 'Mediterranean']),
+        stop('egypt-2021', 'Luxor', ['Balloons at dawn', 'Hatshepsut Temple', 'Karnak']),
+        stop('egypt-2021', 'Aswan', ['Abu Simbel', 'Philae Temple', 'Kiosk of Trajan']),
+        stop('egypt-2021', 'Hurghada', ['Quad biking', 'Camel ride', 'Red Sea']),
+      ]),
       trip('Cuba', 2019, ['Havana', 'Las Terrazas', 'Viñales', 'Matanzas', 'Trinidad', 'Cienfuegos']),
-      trip('Beijing', 2019),
+      trip('Beijing', 2018, [], [{ photos: photos('beijing-2018', 'Beijing', ['Great Wall', 'Forbidden City', "Bird's Nest", 'Beihai Park', 'Beijing Zoo', 'Cat café']) }]),
       trip('Montreal', 2018),
       trip('New York', 2018),
-      trip('Pemberton', 2017),
+      trip('Joffre Lake', 2017, [], [{ photos: photos('joffre-lake-2017', 'Joffre Lake', ['Lake day', 'Hula hooping', 'Cottage life']) }]),
       trip('Europe', 2013, ['Paris', 'Brussels', 'Amsterdam']),
-      trip('Europe', 2011, ['London', 'Paris', 'Rome']),
+      trip('Europe', 2011, ['London', 'Paris', 'Rome'], [
+        stop('europe-2011', 'London', ['Platform 9¾', 'Big Ben', 'Tower Bridge']),
+        stop('europe-2011', 'Paris', ['Eiffel Tower', 'Notre-Dame', 'Versailles']),
+        stop('europe-2011', 'Rome', ['Colosseum', 'Trevi Fountain', "St. Peter's"]),
+      ]),
     ],
   },
   {
@@ -297,22 +347,37 @@ export const categories: HomeCategory[] = [
           {
             type: 'cards',
             cards: [
-              { title: 'Pebble', subtitle: 'Queen of the Castle', text: 'Never leaves my side', facts: [] },
-              { title: 'Milo', subtitle: 'Dirty Rascal', text: 'Loves to be walked on a leash', facts: [] },
+              { title: 'Pebble', subtitle: 'Queen of the Castle', text: 'Never leaves my side', photo: '/homepage/cats/pebble-card.webp', facts: [] },
+              { title: 'Milo', subtitle: 'Dirty Rascal', text: 'Loves to be walked on a leash', photo: '/homepage/cats/milo-card.webp', facts: [] },
             ],
           },
-          pending('photos, favourite spots, toys and weird habits coming soon'),
         ],
+      },
+      {
+        id: 'pebble',
+        title: 'Pebble',
+        blocks: [catGallery('pebble', ['Couch queen', 'Party animal', 'Close-up', 'Supervising', 'Stuffie pile', 'Shark attack'])],
+      },
+      {
+        id: 'milo',
+        title: 'Milo',
+        blocks: [catGallery('milo', ['Tiny Milo', 'Toy time', 'Cone of shame', 'Nap time', 'If I fits, I sits', 'Desk nap'])],
       },
       {
         id: 'milos-adventures',
         title: "Milo's Adventures",
-        blocks: [{ type: 'gallery', albums: [], empty: "photos from Milo's walks coming soon" }],
+        blocks: [catGallery('walk', ['Out for a walk', 'Ready to go', 'Grass break', 'Sky gazing', 'Rock inspection', 'On patrol'])],
       },
       {
         id: 'together',
         title: 'Together',
-        blocks: [{ type: 'gallery', albums: [], empty: 'photos of the two of them coming soon' }],
+        blocks: [
+          catGallery('together', [
+            'Side by side', 'Bedtime', 'Headboard climber',
+            'Bird watching', 'Window seat', 'Upstairs, downstairs',
+            'Top bunk', 'Royal court', 'Matching caves',
+          ]),
+        ],
       },
     ],
   },

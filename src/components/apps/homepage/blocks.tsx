@@ -218,7 +218,7 @@ function Gallery({ block }: { block: Extract<Block, { type: 'gallery' }> }) {
               <li key={p.src}>
                 <button type="button" className="hp-photo" onClick={() => showPhotos(a.photos, i)}>
                   <img src={thumbOf(p.src)} alt={p.caption ?? ''} loading="lazy" />
-                  {p.caption && <span>{p.caption}</span>}
+                  {p.caption && !block.hideCaptions && <span>{p.caption}</span>}
                 </button>
               </li>
             ))}

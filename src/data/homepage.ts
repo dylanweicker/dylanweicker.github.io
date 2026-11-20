@@ -2,7 +2,7 @@ import type { AppId } from './apps';
 
 /*
  * "Dylan's World": the hobbies & interests section (the Interests app), presented as a 2006-style personal
- * homepage in a retro browser. Six pages, each made of sections, each section a list of typed blocks.
+ * homepage in a retro browser. Seven pages, each made of sections, each section a list of typed blocks.
  * Written in Dylan's own voice. Anything still missing shows an "under construction" sign until it's
  * filled in here.
  *
@@ -55,6 +55,8 @@ export type Block =
   /** hideCaptions: no text under the thumbnails; captions still give the alt text and the photo viewer's title */
   | { type: 'gallery'; albums: Album[]; empty: string; hideCaptions?: boolean }
   | { type: 'table'; heading?: [string, string]; rows: [string, string][] }
+  /** Each item: a name on its own line, with its details underneath (e.g. an artist and the shows I saw) */
+  | { type: 'entries'; items: { title: string; text: string }[] }
   | { type: 'list'; title?: string; ordered?: boolean; items: string[] }
   /** Box art from public/homepage/games/bgg-<bggId>.webp (downloaded by scripts/build-scene-assets.py) */
   | { type: 'boardGames'; games: { bggId: number; name: string }[] }
@@ -83,7 +85,7 @@ export interface HomeCategory {
 export const SITE = {
   name: "Dylan's World",
   host: 'http://www.dylansworld.home/',
-  marquee: '✦ hobbies & interests ✦ games · performance · travel · cats · pop culture · yoga ✦ thanks for stopping by ✦',
+  marquee: '✦ hobbies & interests ✦ games · performance · travel · cats · pop music · yoga · the gay agenda ✦ thanks for stopping by ✦',
 };
 
 export const homeIntro = {
@@ -107,16 +109,24 @@ const trip = (place: string, year: number, stops: string[] = [], albums: Album[]
   ],
 });
 
-/** /homepage/travel/<dir>/<name>-1.webp, -2, ... (name as lowercase letters, so "Xi'an" -> xian), one per caption. */
+/** /homepage/travel/<dir>/<name>-1.webp, -2, ... (name as plain lowercase letters, so "Xi'an" -> xian and
+ * "Viñales" -> vinales), one per caption. */
 const photos = (dir: string, name: string, captions: string[]): Photo[] =>
   captions.map((caption, i) => ({
-    src: `/homepage/travel/${dir}/${name.toLowerCase().replace(/[^a-z]+/g, '')}-${i + 1}.webp`,
+    src: `/homepage/travel/${dir}/${name.normalize('NFD').toLowerCase().replace(/[^a-z]+/g, '')}-${i + 1}.webp`,
     caption,
   }));
 
-/** Cats page photos: /homepage/cats/<name>-1.webp, -2, ... one per caption (sources in art/homepage/cats/). */
-const catPhotos = (name: string, captions: string[]): Photo[] =>
-  captions.map((caption, i) => ({ src: `/homepage/cats/${name}-${i + 1}.webp`, caption }));
+/** /homepage/<dir>/<name>-1.webp, -2, ... one per caption (sources in art/homepage/<dir>/). */
+const numbered = (dir: string, name: string, captions: string[]): Photo[] =>
+  captions.map((caption, i) => ({ src: `/homepage/${dir}/${name}-${i + 1}.webp`, caption }));
+
+/** Concert photos, one per artist: "Lady Gaga" -> /homepage/pop-music/concert-lady-gaga.webp */
+const concertPhotos = (artists: string[]): Photo[] =>
+  artists.map((artist) => ({ src: `/homepage/pop-music/concert-${artist.toLowerCase().replace(/[^a-z]+/g, '-')}.webp`, caption: artist }));
+
+/** Cats page photos: /homepage/cats/<name>-1.webp, -2, ... */
+const catPhotos = (name: string, captions: string[]): Photo[] => numbered('cats', name, captions);
 
 /** A Cats page section's photos as one untitled gallery, captions hidden under the thumbnails. */
 const catGallery = (name: string, captions: string[]): Block => ({
@@ -254,7 +264,22 @@ export const categories: HomeCategory[] = [
         title: 'Costume Parties',
         blocks: [
           { type: 'text', paragraphs: ['Any excuse to put on a character. Give me a theme and I will commit to the costume.'] },
-          { type: 'gallery', albums: [], empty: 'party photos coming soon' },
+          {
+            type: 'gallery',
+            albums: [
+              // Short captions so they stay on one line; the album title says what they are.
+              { title: 'Murder Mysteries', photos: numbered('parties', 'mystery', ['Fairy Tale', 'Christmas', 'Toga', 'Trailer Park']) },
+              {
+                title: 'Other Costume Parties',
+                photos: numbered('parties', 'party', [
+                  'Jhudora (Neopets)', 'Regina George', 'Carl from Up',
+                  'Shaggy & Scooby', 'Puss in Boots', 'Barbie Halloween',
+                  'Allidays', "New Year's Eve", 'The Traitors',
+                ]),
+              },
+            ],
+            empty: 'party photos coming soon',
+          },
         ],
       },
     ],
@@ -268,7 +293,7 @@ export const categories: HomeCategory[] = [
     // Newest first. Each trip is one box titled with the place and year, listing the stops.
     sections: [
       trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford']),
-      trip('Montreal', 2026),
+      trip('Montreal', 2026, [], [{ photos: photos('montreal-2026', 'Montreal', ['SOURCE by Plensa', 'Lachine Canal', 'Notre-Dame Basilica']) }]),
       trip('Kelowna', 2026),
       trip('China', 2025, ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Zhangjiajie', 'Shanghai'], [
         // Captions stay one line on the narrowest (130px) tile: 20 characters at most ("Super Nintendo World" fits).
@@ -288,8 +313,16 @@ export const categories: HomeCategory[] = [
         stop('japan-2024', 'Kyoto', ['Imperial Palace', 'Kyoto canal', 'Railway Museum']),
         stop('japan-2024', 'Hiroshima', ['Floating torii', 'Miyajima', 'Orizuru Tower']),
       ]),
-      trip('Mexico', 2023, ['Puerto Vallarta', 'Mexico City']),
+      trip('Vancouver Island', 2024, ['Coombs', 'Port Alberni'], [
+        { photos: photos('vancouver-island-2024', 'Vancouver Island', ['Coombs', 'Goats on the Roof', 'Cabin game night']) },
+      ]),
+      trip('Mexico City', 2023, [], [
+        { photos: photos('mexico-city-2023', 'Mexico City', ['Bellas Artes', 'Teotihuacan', 'Chapultepec Castle', 'Frida Kahlo Museum', 'Trotsky Museum', 'Museo Soumaya']) },
+      ]),
+      trip('Whistler', 2023, [], [{ photos: photos('whistler-2023', 'Whistler', ['Whistler gondola', 'Mountain trail', 'Olympic rings']) }]),
+      trip('Puerto Vallarta', 2023, [], [{ photos: photos('puerto-vallarta-2023', 'Puerto Vallarta', ['Foam party', 'Resort cats', 'Infinity pool']) }]),
       trip('San Francisco', 2022),
+      trip('China Beach', 2022, [], [{ photos: photos('china-beach-2022', 'China Beach', ['Juan de Fuca Strait', 'Glow-stick night', 'The camping crew']) }]),
       trip('Egypt', 2021, ['Cairo', 'Alexandria', 'Luxor', 'Aswan', 'Hurghada'], [
         stop('egypt-2021', 'Cairo', ['Camels at Giza', 'Great Pyramid', 'Cairo Citadel']),
         stop('egypt-2021', 'Alexandria', ["Pompey's Pillar", 'Alexander the Great', 'Mediterranean']),
@@ -297,12 +330,32 @@ export const categories: HomeCategory[] = [
         stop('egypt-2021', 'Aswan', ['Abu Simbel', 'Philae Temple', 'Kiosk of Trajan']),
         stop('egypt-2021', 'Hurghada', ['Quad biking', 'Camel ride', 'Red Sea']),
       ]),
-      trip('Cuba', 2019, ['Havana', 'Las Terrazas', 'Viñales', 'Matanzas', 'Trinidad', 'Cienfuegos']),
+      trip('Vancouver Island', 2021, ['Elk Falls', 'Nanaimo'], [
+        { photos: photos('vancouver-island-2021', 'Vancouver Island', ['Stacking river stones', 'Out for a hike', 'Codenames']) },
+      ]),
+      trip('Cuba', 2019, ['Havana', 'Las Terrazas', 'Viñales', 'Matanzas', 'Trinidad', 'Cienfuegos'], [
+        stop('cuba-2019', 'Havana', ['Revolution Square', 'Fusterlandia', 'El Capitolio']),
+        stop('cuba-2019', 'Las Terrazas', ['Botanical garden', 'Orchid house', 'Croton leaves']),
+        stop('cuba-2019', 'Viñales', ['Viñales Valley', 'Horseback ride', 'Tobacco barn']),
+        stop('cuba-2019', 'Matanzas', ['Bacunayagua Bridge', 'Pharmacy museum', 'Bellamar Caves']),
+        stop('cuba-2019', 'Trinidad', ['Bell tower view', 'Manaca Iznaga', 'Playa Ancón sunset']),
+        stop('cuba-2019', 'Cienfuegos', ['Rancho Luna beach', 'Palacio de Valle', 'Parque Martí']),
+      ]),
+      trip('Seattle', 2019, ['PaizoCon'], [{ photos: photos('seattle-2019', 'Seattle', ['PaizoCon 2019', 'Pike Place Market', 'Central Library']) }]),
+      trip('Montreal', 2018, [], [
+        { photos: photos('montreal-2018', 'Montreal', ['Just for Laughs', 'Circus acrobats', 'Fireworks', 'Gay Village', 'Board game exhibit', 'Grévin wax museum']) },
+      ]),
+      trip('New York', 2018, [], [
+        { photos: photos('new-york-2018', 'New York', ['Cursed Child', 'The Met', 'Keith Haring mural', 'Stonewall Inn', 'Mean Girls musical', 'House of Yes']) },
+      ]),
+      trip('Seattle', 2018, ['PaizoCon'], [{ photos: photos('seattle-2018', 'Seattle', ['PaizoCon 2018', 'Attendee badge', 'Rainbow of dice']) }]),
       trip('Beijing', 2018, [], [{ photos: photos('beijing-2018', 'Beijing', ['Great Wall', 'Forbidden City', "Bird's Nest", 'Beihai Park', 'Beijing Zoo', 'Cat café']) }]),
-      trip('Montreal', 2018),
-      trip('New York', 2018),
-      trip('Joffre Lake', 2017, [], [{ photos: photos('joffre-lake-2017', 'Joffre Lake', ['Lake day', 'Hula hooping', 'Cottage life']) }]),
-      trip('Europe', 2013, ['Paris', 'Brussels', 'Amsterdam']),
+      trip('Tofino', 2018, [], [{ photos: photos('tofino-2018', 'Tofino', ['Tree pose', 'Botanical gardens', 'Tofino mudflats']) }]),
+      trip('Pemberton', 2017, [], [{ photos: photos('pemberton-2017', 'Pemberton', ['Lake day', 'Hula hooping', 'Cottage life']) }]),
+      trip('Joffre Lake', 2016, [], [{ photos: photos('joffre-lake-2016', 'Joffre Lake', ['Cyan lake', 'Lakeside selfie', 'Cold swim']) }]),
+      trip('Seattle', 2016, ['PaizoCon'], [{ photos: photos('seattle-2016', 'Seattle', ['PaizoCon 2016', 'Painting miniatures']) }]),
+      // Hidden until photos turn up (only one Paris selfie survives, a 2013 Facebook profile picture):
+      // trip('Europe', 2013, ['Paris', 'Brussels', 'Amsterdam']),
       trip('Europe', 2011, ['London', 'Paris', 'Rome'], [
         stop('europe-2011', 'London', ['Platform 9¾', 'Big Ben', 'Tower Bridge']),
         stop('europe-2011', 'Paris', ['Eiffel Tower', 'Notre-Dame', 'Versailles']),
@@ -359,11 +412,11 @@ export const categories: HomeCategory[] = [
     ],
   },
   {
-    id: 'pop-culture',
-    label: 'Pop Culture',
-    tagline: 'Pop music and local drag shows.',
-    file: 'pop-culture.html',
-    intro: "The music I can't stop talking about, and the culture that comes with it.",
+    id: 'pop-music',
+    label: 'Pop Music',
+    tagline: "The music I love and the concerts I've seen.",
+    file: 'pop-music.html',
+    intro: "The music I can't stop talking about, and the concerts I've seen.",
     sections: [
       {
         id: 'pop',
@@ -396,11 +449,37 @@ export const categories: HomeCategory[] = [
         ],
       },
       {
-        id: 'drag',
-        title: 'Local Drag Shows',
+        id: 'concerts',
+        title: 'Concerts',
         blocks: [
-          { type: 'text', paragraphs: ['Drag is one of my favourite art forms, and I try to catch shows whenever I can.'] },
-          { type: 'gallery', albums: [], empty: 'photos from drag shows coming soon' },
+          {
+            type: 'gallery',
+            // Most seen first
+            albums: [{ photos: concertPhotos(['Lady Gaga', 'Tegan and Sara', 'MARINA', 'Allie X', 'Katy Perry', 'Melanie Martinez']) }],
+            empty: 'concert photos coming soon',
+          },
+          {
+            // Everyone I've seen live, most seen first, then each show (an opener's show is listed under them too)
+            type: 'entries',
+            items: (
+              [
+                ['Lady Gaga', ['The Born This Way Ball (2013)', 'artRAVE: The ARTPOP Ball (2014)', 'Cheek to Cheek Tour, with Tony Bennett (2015)', 'Joanne World Tour (2017)']],
+                ['Tegan and Sara', ['Ambleside Live (2013)', 'Prismatic World Tour, with Katy Perry (2014)', 'The Con X: Tour (2017)', 'Canada Together, Canada Day (2023)']],
+                ['MARINA', ['Neon Nature Tour (2015)', 'Love + Fear Tour (2019)', 'The Princess of Power Tour (2025)']],
+                ['Allie X', ['Shamir concert (2015)', 'CollXtion II Tour (2017)', 'Love + Fear Tour, with MARINA (2019)']],
+                ['Katy Perry', ['Prismatic World Tour (2014)', 'Witness: The Tour (2018)']],
+                ['Rihanna', ['Diamonds World Tour (2013)']],
+                ['fun.', ['Ambleside Live (2013)']],
+                ['Tony Bennett', ['Cheek to Cheek Tour, with Lady Gaga (2015)']],
+                ['Shamir', ['Shamir concert (2015)']],
+                ['Melanie Martinez', ['Cry Baby Tour (2016)']],
+                ['Halsey', ['Hopeless Fountain Kingdom World Tour (2017)']],
+                ['Carly Rae Jepsen', ['Witness: The Tour, with Katy Perry (2018)']],
+                ['Lorde', ['Melodrama World Tour (2018)']],
+                ['bbno$', ["Baby's Bonanza (2026)"]],
+              ] satisfies [string, string[]][]
+            ).map(([title, shows]) => ({ title, text: shows.join(' · ') })),
+          },
         ],
       },
     ],
@@ -421,6 +500,43 @@ export const categories: HomeCategory[] = [
             paragraphs: [
               'I go to yoga every week. After a few days at a keyboard, an hour of stretching and breathing resets everything, and I regularly discover muscles I did not know existed.',
             ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'gay-agenda',
+    label: 'The Gay Agenda™',
+    tagline: 'Local drag shows and Pride.',
+    file: 'gay-agenda.html',
+    intro: 'Item one: support local drag. Item two: never miss Pride.',
+    sections: [
+      {
+        id: 'drag',
+        title: 'Local Drag Shows',
+        blocks: [
+          { type: 'text', paragraphs: ['Drag is one of my favourite art forms, and I try to catch shows whenever I can.'] },
+          { type: 'gallery', albums: [], empty: 'photos from drag shows coming soon' },
+        ],
+      },
+      {
+        id: 'pride',
+        title: 'Pride',
+        blocks: [
+          { type: 'text', paragraphs: ["I've been going to Pride for over a decade, and I try to make it out every summer. The more rainbow, the better."] },
+          {
+            type: 'gallery',
+            albums: [
+              {
+                photos: numbered('pride', 'pride', [
+                  'Pride with friends', 'Pride 2015', "Mom's first Pride",
+                  'Pride 2018', 'Queer Film Festival', 'Pride 2024',
+                  'Pride 2025', 'Pride 2026', 'New West Pride',
+                ]),
+              },
+            ],
+            empty: 'photos coming soon',
           },
         ],
       },
@@ -447,6 +563,8 @@ export function blockText(b: Block): string[] {
       return b.rows.flat();
     case 'list':
       return [b.title ?? '', ...b.items];
+    case 'entries':
+      return b.items.flatMap((i) => [i.title, i.text]);
     case 'steam':
       return b.games.flatMap((g) => [g.name, g.note]);
     case 'boardGames':

@@ -539,6 +539,20 @@
   margin: 0 0 10px;
   padding-left: 22px;
 }
+/* A name on its own line, its details underneath (e.g. an artist, then the shows I saw) */
+.hp-entries {
+  margin: 4px 0 10px;
+}
+.hp-entries > div + div {
+  margin-top: 8px;
+}
+.hp-entries dt {
+  font-weight: bold;
+  color: #0055cc;
+}
+.hp-entries dd {
+  margin: 0 0 0 14px;
+}
 
 /* Lightbox: a 2006 pop-up window */
 .hp-lightbox {

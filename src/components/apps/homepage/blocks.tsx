@@ -54,6 +54,17 @@ export function BlockView({ block }: { block: Block }) {
         </>
       );
     }
+    case 'entries':
+      return (
+        <dl className="hp-entries">
+          {block.items.map((it) => (
+            <div key={it.title}>
+              <dt>{it.title}</dt>
+              <dd>{it.text}</dd>
+            </div>
+          ))}
+        </dl>
+      );
     case 'boardGames':
       return (
         <ul className="hp-picks">

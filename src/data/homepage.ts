@@ -292,9 +292,15 @@ export const categories: HomeCategory[] = [
     intro: 'Here are some of the places I\'ve travelled to over the years.',
     // Newest first. Each trip is one box titled with the place and year, listing the stops.
     sections: [
-      trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford']),
       trip('Montreal', 2026, [], [{ photos: photos('montreal-2026', 'Montreal', ['SOURCE by Plensa', 'Lachine Canal', 'Notre-Dame Basilica']) }]),
-      trip('Kelowna', 2026),
+      trip('Kelowna', 2026, [], [
+        { photos: photos('kelowna-2026', 'Kelowna', ['Kangaroo Creek Farm', 'Albino wallaby', 'Capybara', 'Off the Grid Winery', 'Game night', 'The crew']) },
+      ]),
+      trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford'], [
+        stop('ontario-2026', 'Toronto', ['CN Tower', 'Storm Crow Manor', 'Toronto Island']),
+        stop('ontario-2026', 'Niagara', ['Horseshoe Falls', 'In the mist', 'Upside-down house']),
+        stop('ontario-2026', 'Stratford', ['Stratford City Hall', 'The Tempest', 'The Hobbit']),
+      ]),
       trip('China', 2025, ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Zhangjiajie', 'Shanghai'], [
         // Captions stay one line on the narrowest (130px) tile: 20 characters at most ("Super Nintendo World" fits).
         stop('china-2025', 'Beijing', ['Big Air Shougang', 'Shougang sunset', 'Red Chamber park']),

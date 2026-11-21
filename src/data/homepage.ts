@@ -294,11 +294,11 @@ export const categories: HomeCategory[] = [
     sections: [
       trip('Montreal', 2026, [], [{ photos: photos('montreal-2026', 'Montreal', ['SOURCE by Plensa', 'Lachine Canal', 'Notre-Dame Basilica']) }]),
       trip('Kelowna', 2026, [], [
-        { photos: photos('kelowna-2026', 'Kelowna', ['Kangaroo Creek Farm', 'Albino wallaby', 'Capybara', 'Off the Grid Winery', 'Game night', 'The crew']) },
+        { photos: photos('kelowna-2026', 'Kelowna', ['Kangaroo Creek Farm', 'Albino kangaroo', 'Capybara', 'Off the Grid Winery', 'Critter Kitchen', 'The boys']) },
       ]),
       trip('Ontario', 2026, ['Toronto', 'Niagara', 'Stratford'], [
         stop('ontario-2026', 'Toronto', ['CN Tower', 'Storm Crow Manor', 'Toronto Island']),
-        stop('ontario-2026', 'Niagara', ['Horseshoe Falls', 'In the mist', 'Upside-down house']),
+        stop('ontario-2026', 'Niagara', ['Niagara Escapement', 'In the mist', 'Upside-down house']),
         stop('ontario-2026', 'Stratford', ['Stratford City Hall', 'The Tempest', 'The Hobbit']),
       ]),
       trip('China', 2025, ['Beijing', "Xi'an", 'Chengdu', 'Chongqing', 'Zhangjiajie', 'Shanghai'], [
@@ -327,7 +327,13 @@ export const categories: HomeCategory[] = [
       ]),
       trip('Whistler', 2023, [], [{ photos: photos('whistler-2023', 'Whistler', ['Whistler gondola', 'Mountain trail', 'Olympic rings']) }]),
       trip('Puerto Vallarta', 2023, [], [{ photos: photos('puerto-vallarta-2023', 'Puerto Vallarta', ['Foam party', 'Resort cats', 'Infinity pool']) }]),
-      trip('San Francisco', 2022),
+      trip('San Francisco', 2022, [], [
+        {
+          photos: photos('san-francisco-2022', 'San Francisco', [
+            'Drag at Oasis', 'SFMOMA', 'Musée Mécanique', 'Academy of Sciences', 'Alcatraz', 'Cable car', 'GLBT History Museum', 'Golden Gate Bridge', 'Painted Ladies',
+          ]),
+        },
+      ]),
       trip('China Beach', 2022, [], [{ photos: photos('china-beach-2022', 'China Beach', ['Juan de Fuca Strait', 'Glow-stick night', 'The camping crew']) }]),
       trip('Egypt', 2021, ['Cairo', 'Alexandria', 'Luxor', 'Aswan', 'Hurghada'], [
         stop('egypt-2021', 'Cairo', ['Camels at Giza', 'Great Pyramid', 'Cairo Citadel']),
